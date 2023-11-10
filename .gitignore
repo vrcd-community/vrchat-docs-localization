@@ -1,0 +1,15 @@
+node_modules/
+man/.vuepress/dist
+yarn.lock
+pnpm-lock.yaml
+.vercel
+cache
+dist
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

@@ -1,0 +1,29 @@
+<template>
+    <Banner title="成为一名 VRChat 创作者" subtitle="利用我们的工具和文档来学习，创作，分享。" />
+
+    <div class="links-group">
+        <HomeLinkButton text="开始入门" link="/creators.vrchat.com/getting-started" description="适合新老创作者。"
+            icon="/getting-started.png" />
+        <HomeLinkButton text="世界" link="/creators.vrchat.com/worlds/" description="构建从简单到复杂的体验和交流。" icon="/worlds.png" />
+        <HomeLinkButton text="虚拟形象" link="/creators.vrchat.com/avatars/" description="通过广泛的定制功能展现自我。" icon="/avatars.png" />
+    </div>
+</template>
+
+<script setup lang="ts">
+import Banner from './Banner.vue'
+import HomeLinkButton from './HomeLinkButton.vue';
+</script>
+
+<style scoped>
+.links-group {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+
+    margin: 0 15rem;
+}
+
+.links-group .button-container {
+    flex: 0 0 33.33333%;
+}
+</style>
