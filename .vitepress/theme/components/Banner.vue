@@ -15,13 +15,14 @@ defineProps<{
 <style scoped>
 .banner {
     background-image: url('/banner.jpg');
+    background-repeat: repeat;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     width: 100%;
-    padding: 5rem 0;
+    padding: 5rem 2rem;
 
     color: var(--vp-c-white);
 }

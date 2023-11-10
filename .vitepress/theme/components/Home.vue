@@ -20,7 +20,19 @@ import HomeLinkButton from './HomeLinkButton.vue';
     justify-items: center;
     flex-wrap: wrap;
 
-    margin: 0 15rem;
+    margin: 0 1rem;
+}
+
+@media screen and (min-width: 800px) {
+    .links-group {
+        margin: 0 5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .links-group {
+        margin: 0 15rem;
+    }
 }
 
 .links-group .button-container {
