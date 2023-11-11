@@ -86,6 +86,20 @@
 如果您有更好的建议，请 Fork 该仓库并创建 Pull Request。您也可以简单地以 "enhancement"（改进）为标签打开一个问题。
 别忘了给这个项目 Star！再次感谢！
 
+### 调试该项目
+
+#### 准备工作
+
+1. 确保你的电脑安装了 [Node.js v18 或更新的版本](https://nodejs.org/)
+2. 如果你之前没有开启过 Node.js 的 `Corepack` 功能，请在终端内运行 `corepack enable`
+3. 使用终端或编辑器打开该项目的目录，并输入 `yarn install` 安装依赖
+
+#### 开始调试
+
+要启动开发服务器，请在终端输入 `yarn run docs:dev`
+
+### 大致流程
+
 1. Fork 该仓库
 2. Clone 你的仓库 (`git clone <url to your repo>`)
 3. 创建你自己的分支 (`git checkout -b docs/amazingImprovement`)
