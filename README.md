@@ -86,6 +86,8 @@
 如果您有更好的建议，请 Fork 该仓库并创建 Pull Request。您也可以简单地以 "enhancement"（改进）为标签打开一个问题。
 别忘了给这个项目 Star！再次感谢！
 
+[贡献指南](contribution.md)
+
 ### 调试该项目
 
 #### 准备工作
