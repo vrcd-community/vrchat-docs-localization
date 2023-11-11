@@ -5,6 +5,7 @@ pnpm-lock.yaml
 .vercel
 cache
 dist
+dev-dist
 
 .pnp.*
 .yarn/*

@@ -3,9 +3,11 @@
 
     <div class="links-group">
         <HomeLinkButton text="开始入门" link="/creators.vrchat.com/getting-started" description="适合新老创作者。"
-            icon="/getting-started.png" />
-        <HomeLinkButton text="世界" link="/creators.vrchat.com/worlds/" description="构建从简单到复杂的体验和交流。" icon="/worlds.png" />
-        <HomeLinkButton text="虚拟形象" link="/creators.vrchat.com/avatars/" description="通过广泛的定制功能展现自我。" icon="/avatars.png" />
+            icon="/assets/getting-started.png" />
+        <HomeLinkButton text="世界" link="/creators.vrchat.com/worlds/" description="构建从简单到复杂的体验和交流。"
+            icon="/assets/worlds.png" />
+        <HomeLinkButton text="虚拟形象" link="/creators.vrchat.com/avatars/" description="通过广泛的定制功能展现自我。"
+            icon="/assets/avatars.png" />
     </div>
 </template>
 

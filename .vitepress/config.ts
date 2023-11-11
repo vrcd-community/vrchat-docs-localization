@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { vrcahtDocsSidebars, vrchatCreatorsDocsSidebar, vccDocsSidebar, udonSharpDocsSidebar } from './sidebars'
 
+import { VitePWA } from 'vite-plugin-pwa'
+
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lang: 'zh-CN',
@@ -115,5 +117,52 @@ export default defineConfig({
     // },
 
   },
+
+  vite: {
+    plugins: [
+      VitePWA({
+        registerType: 'autoUpdate',
+        devOptions: {
+          enabled: true
+        },
+        workbox: {
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,mp4,webp}']
+        },
+        manifest: {
+          name: 'VRChat 汉化文档中心',
+          short_name: 'VRChat 汉化文档中心',
+          description: 'VRChat 汉化文档中心',
+          theme_color: '#ffffff',
+          display: 'standalone',
+          display_override: ['window-controls-overlay', 'standalone'],
+          lang: 'zh',
+          icons: [
+            {
+              src: '/site-icons/icons/android-chrome-192x192.png',
+              sizes: '192x192',
+              type: 'image/png'
+            },
+            {
+              src: '/site-icons/icons/android-chrome-512-512.png',
+              sizes: '512x512',
+              type: 'image/png'
+            }
+          ],
+          shortcuts: [
+            {
+              name: 'VRChat 文档枢纽',
+              url: '/docs.vrchat.com/',
+              description: '您可以找到全面的指南和文档，帮助您尽快开始玩 VRChat，如果遇到困难，还可以获得支持。'
+            },
+            {
+              name: 'VRChat 创作者文档',
+              url: '/creators.vrchat.com/',
+              description: '利用我们的工具和文档来学习，创作，分享。'
+            }
+          ]
+        }
+      })
+    ]
+  }
 
 });

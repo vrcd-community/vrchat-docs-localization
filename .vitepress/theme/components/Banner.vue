@@ -14,7 +14,7 @@ defineProps<{
 
 <style scoped>
 .banner {
-    background-image: url('/banner.jpg');
+    background-image: url('/assets/banner.jpg');
     background-repeat: repeat;
 
     display: flex;
