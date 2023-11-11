@@ -7,7 +7,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'VRChat 汉化文档中心',
-  description: 'Vite & Vue powered static site generator.',
+  description: '一个 VRChat 官方文档简体中文本地化项目',
 
   lastUpdated: true,
   cleanUrls: true,
@@ -80,6 +80,7 @@ export default defineConfig({
           },
         ],
       },
+      { text: '关于本站', link: '/README' },
     ],
 
     sidebar: {
