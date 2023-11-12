@@ -50,6 +50,8 @@
 
 [![文档首页截图][product-screenshot]](https://example.com)
 
+[![海报][Poster]]
+
 我们正在铺设的是一条面向所有开发成员的极具吸引力的开发道路，以帮助具有语言困境的开发者获得更加便捷准确的汉化内容。不同于浏览器自带的翻译功能，我们对涉及开发，技术名词和语境有着更准确的把握和翻译准确度，包括图片/视频内容的全面本地化，与此同时也给各位提供更加包容多彩的开发者讨论环境。
 
 ### 目前的覆盖范围
@@ -152,3 +154,4 @@
 [license-shield]: https://img.shields.io/github/license/vrcd-community/vrchat-docs-localization.svg?style=for-the-badge
 [license-url]: https://github.com/vrcd-community/vrchat-docs-localization/blob/master/LICENSE.txt
 [product-screenshot]: screenshots.png
+[Poster]: poster.png
