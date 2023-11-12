@@ -38,11 +38,11 @@
 
 项目打开后，检查标题栏，确保以 `PC, Mac & Linux Standalone <DX11>` 结尾。如果不是，请转到 `文件 > 生成设置...`，选择 `PC, Mac & Linux Standalone`，然后单击左下角的 `切换平台`。
 
-如果您要为 VRChat 的 Meta Quest 或 Android 版本构建内容，您也应该为 Android 构建内容。详情请查看我们的 [Android 文档](../platforms/android/android.md)。
+如果您要为 VRChat 的 Meta Quest 或 Android 版本构建内容，您也应该为 Android 构建内容。详情请查看我们的 [Android 文档](/creators.vrchat.com/platforms/android/android.md)。
 
 ## 可选步骤 3 - 安装 SDK
 
-如果没有使用 VCC 设置项目，则需要安装 SDK。请通过 [VRChat Creator Companion](../../vcc.docs.vrchat.com/guides/getting-started.md) 安装。
+如果没有使用 VCC 设置项目，则需要安装 SDK。请通过 [VRChat Creator Companion](/vcc.docs.vrchat.com/guides/getting-started.md) 安装。
 
 如果出现任何错误，即使是全新的空项目，[请联系我们的支持团队](https://vrch.at/support)。
 
@@ -50,7 +50,7 @@
 
 要使用 SDK，您需要登录。为此，请导航至   `VRChat SDK > Show Control Panel > Authentication`。您可以在此登录您的 VRChat 账户。
 
-请记住，您的 VRChat 账户必须至少为 "新用户 (New User)"[信任等级](../../docs.vrchat.com/SYSTEM/vrchat-safety-and-trust-system.md) 才能上传内容。您不能使用 Steam、Oculus 或 Viveport 帐户上传内容。
+请记住，您的 VRChat 账户必须至少为 "新用户 (New User)"[信任等级](/docs.vrchat.com/SYSTEM/vrchat-safety-and-trust-system.md) 才能上传内容。您不能使用 Steam、Oculus 或 Viveport 帐户上传内容。
 
 ### 下一步是什么？
 
