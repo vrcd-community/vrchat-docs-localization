@@ -342,39 +342,39 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
 
 export function udonSharpDocsSidebar(): DefaultTheme.SidebarItem[] {
   return [
-    { text: 'UdonSharp', link: '/udonsharp.docs.vrchat.com/udonsharp' },
+    { text: 'UdonSharp', link: '/udonsharp.docs.vrchat.com/' },
     {
       text: 'Getting Started',
       collapsed: true,
       items: [
-        { text: 'Setup', link: '/udonsharp.docs.vrchat.com/getting-started/setup' },
-        { text: 'Examples', link: '/udonsharp.docs.vrchat.com/getting-started/examples' },
-        { text: 'Community Resources', link: '/udonsharp.docs.vrchat.c/getting-started/community-resources' },
-        { text: 'Configuration', link: '/udonsharp.docs.vrchat.com/getting-started/configuration' },
-        { text: 'Migration', link: '/udonsharp.docs.vrchat.com/getting-started/migration' },
-        { text: 'Frequently Asked Questions', link: '/udonsharp.docs.vrchat.com/getting-started/frequently-asked-questions' },
+        { text: 'Setup', link: '/udonsharp.docs.vrchat.com/setup' },
+        { text: 'Examples', link: '/udonsharp.docs.vrchat.com/examples' },
+        { text: 'Community Resources', link: '/udonsharp.docs.vrchat.com/community-resources' },
+        { text: 'Configuration', link: '/udonsharp.docs.vrchat.com/configuration' },
+        { text: 'Migration', link: '/udonsharp.docs.vrchat.com/migration' },
+        { text: 'Frequently Asked Questions', link: '/udonsharp.docs.vrchat.com/frequently-asked-questions' },
       ]
     },
     {
       text: 'Documentation',
       collapsed: true,
       items: [
-        { text: 'UdonSharp', link: '/udonsharp.docs.vrchat.com/documentation/udonsharp' },
-        { text: 'VRChat API', link: '/udonsharp.docs.vrchat.com/documentation/vrchat-api' },
-        { text: 'Events', link: '/udonsharp.docs.vrchat.com/documentation/events' },
-        { text: 'Editor Scripting', link: '/udonsharp.docs.vrchat.com/documentation/editor-scripting' },
+        { text: 'UdonSharp', link: '/udonsharp.docs.vrchat.com/udonsharp' },
+        { text: 'VRChat API', link: '/udonsharp.docs.vrchat.com/vrchat-api' },
+        { text: 'Events', link: '/udonsharp.docs.vrchat.com/events' },
+        { text: 'Editor Scripting', link: '/udonsharp.docs.vrchat.com/editor-scripting' },
       ]
     },
     {
-      text: 'Getting Started',
+      text: 'Extra',
       collapsed: true,
       items: [
-        { text: 'Random Tips & Performance Pointers', link: '/udonsharp.docs.vrchat.com/extra/random-tips-&-performance-pointers' },
-        { text: 'Runtime Exception Debugging', link: '/udonsharp.docs.vrchat.com/extra/runtime-exception-debugging' },
-        { text: 'Class Exposure Tree', link: '/udonsharp.docs.vrchat.com/extra/class-exposure-tree' },
-        { text: 'Networking Tips & Tricks', link: '/udonsharp.docs.vrchat.com/extra/networking-tips-&-tricks' },
-        { text: 'Using VRC Stations', link: '/udonsharp.docs.vrchat.com/extra/using-vrc-stations' },
-        { text: 'Exporting to Assembly Files', link: '/udonsharp.docs.vrchat.com/extra/exporting-to-assembly-files' },
+        { text: 'Random Tips & Performance Pointers', link: '/udonsharp.docs.vrchat.com/random-tips-&-performance-pointers' },
+        { text: 'Runtime Exception Debugging', link: '/udonsharp.docs.vrchat.com/runtime-exception-debugging' },
+        { text: 'Class Exposure Tree', link: '/udonsharp.docs.vrchat.com/class-exposure-tree' },
+        { text: 'Networking Tips & Tricks', link: '/udonsharp.docs.vrchat.com/networking-tips-&-tricks' },
+        { text: 'Using VRC Stations', link: '/udonsharp.docs.vrchat.com/using-vrc-stations' },
+        { text: 'Exporting to Assembly Files', link: '/udonsharp.docs.vrchat.com/exporting-to-assembly-files' },
       ]
     },
   ]
@@ -382,7 +382,7 @@ export function udonSharpDocsSidebar(): DefaultTheme.SidebarItem[] {
 
 export function vccDocsSidebar(): DefaultTheme.SidebarItem[] {
   return [
-    { text: 'Creator Companion', link: '/creators.vrchat.com/getting-started' },
+    { text: 'Creator Companion', link: '/vcc.docs.vrchat.com/' },
     {
       text: 'Guides',
       collapsed: true,
@@ -403,7 +403,7 @@ export function vccDocsSidebar(): DefaultTheme.SidebarItem[] {
       text: 'Package Manager',
       collapsed: true,
       items: [
-        { text: 'Package Manager', link: '/vcc.docs.vrchat.com/vpm/vpm' },
+        { text: 'Package Manager', link: '/vcc.docs.vrchat.com/vpm/' },
         { text: 'Templates', link: '/vcc.docs.vrchat.com/vpm/templates' },
         { text: 'Packages', link: '/vcc.docs.vrchat.com/vpm/packages' },
         { text: 'Migrating Projects', link: '/vcc.docs.vrchat.com/vpm/migrating' },
@@ -423,5 +423,63 @@ export function vccDocsSidebar(): DefaultTheme.SidebarItem[] {
     },
     { text: 'Legacy SDK', link: '/vcc.docs.vrchat.com/legacy-sdk' },
     { text: 'Roadmap', link: '/vcc.docs.vrchat.com/roadmap' },
+  ]
+}
+
+export function clientSimDocsSidebar(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: "Guides",
+      collapsed: true,
+      link: '/clientsim.docs.vrchat.com/guides/index.md',
+      items: [
+        { text: "Getting Started", link: "/clientsim.docs.vrchat.com/guides/getting-started.md" },
+      ]
+    },
+    {
+      text: "Systems",
+      collapsed: true,
+      link: '/clientsim.docs.vrchat.com/systems/index.md',
+      items: [
+        { text: "Architecture", link: "/clientsim.docs.vrchat.com/systems/architecture" },
+        { text: "Automated Testing", link: "/clientsim.docs.vrchat.com/systems/automated-testing" },
+        {
+          text: "Editor",
+          collapsed: true,
+          link: '/clientsim.docs.vrchat.com/systems/editor/index.md',
+          items: [
+            { text: "Editor Runtime Linker", link: "/clientsim.docs.vrchat.com/systems/editor/editor-runtime-linker.md" },
+            { text: "Helper Editors", link: "/clientsim.docs.vrchat.com/systems/editor/helper-editors.md" },
+            { text: "Settings Window", link: "/clientsim.docs.vrchat.com/systems/editor/settings-window.md" }
+          ]
+        },
+        {
+          text: "Runtime Systems",
+          collapsed: true,
+          link: '/clientsim.docs.vrchat.com/systems/runtime/index.md',
+          items: [
+            { text: "Blacklist Manager", link: "/clientsim.docs.vrchat.com/systems/runtime/blacklist-manager.md" },
+            { text: "Event Dispatcher", link: "/clientsim.docs.vrchat.com/systems/runtime/event-dispatcher.md" },
+            { text: "VRCSDK Helpers", link: "/clientsim.docs.vrchat.com/systems/runtime/helpers.md" },
+            { text: "Highlight Manager", link: "/clientsim.docs.vrchat.com/systems/runtime/highlight-manager.md" },
+            { text: "Input", link: "/clientsim.docs.vrchat.com/systems/runtime/input.md" },
+            { text: "InteractiveLayerProvider", link: "/clientsim.docs.vrchat.com/systems/runtime/interactive-layer-provider.md" },
+            { text: "Client Sim Main", link: "/clientsim.docs.vrchat.com/systems/runtime/main.md" },
+            { text: "Client Sim Menu", link: "/clientsim.docs.vrchat.com/systems/runtime/menu.md" },
+            { text: "Player Manager", link: "/clientsim.docs.vrchat.com/systems/runtime/player-manager.md" },
+            { text: "Player Spawner", link: "/clientsim.docs.vrchat.com/systems/runtime/player-spawner.md" },
+            { text: "Player", link: "/clientsim.docs.vrchat.com/systems/runtime/player.md" },
+            { text: "RuntimeLoader", link: "/clientsim.docs.vrchat.com/systems/runtime/runtime-loader.md" },
+            { text: "Scene Manager", link: "/clientsim.docs.vrchat.com/systems/runtime/scene-manager.md" },
+            { text: "Settings", link: "/clientsim.docs.vrchat.com/systems/runtime/settings.md" },
+            { text: "SyncedObjectManager", link: "/clientsim.docs.vrchat.com/systems/runtime/synced-object-manager.md" },
+            { text: "TooltipManager", link: "/clientsim.docs.vrchat.com/systems/runtime/tooltip-manager.md" },
+            { text: "UdonManager", link: "/clientsim.docs.vrchat.com/systems/runtime/udon-manager.md" },
+            { text: "Unity Event System", link: "/clientsim.docs.vrchat.com/systems/runtime/unity-event-system.md" }
+          ]
+        },
+        { text: "Script Execution Order", link: "/clientsim.docs.vrchat.com/systems/script-execution-order" },
+      ]
+    }
   ]
 }

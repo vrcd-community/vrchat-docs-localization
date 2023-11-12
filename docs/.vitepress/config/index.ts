@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { vrcahtDocsSidebars, vrchatCreatorsDocsSidebar, vccDocsSidebar, udonSharpDocsSidebar } from './sidebars'
+import { vrcahtDocsSidebars, vrchatCreatorsDocsSidebar, vccDocsSidebar, udonSharpDocsSidebar, clientSimDocsSidebar } from './sidebars'
 
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -44,47 +44,50 @@ export default defineConfig({
       {
         text: 'VRChat 创作者文档',
         items: [
-          {
-            text: 'VRChat 创作者文档',
-            items: [
-              { text: '主页', link: '/creators.vrchat.com/' },
-              { text: '世界', link: '/creators.vrchat.com/worlds/' },
-              { text: '虚拟形象', link: '/creators.vrchat.com/avatars/' },
-              { text: '更新', link: '/creators.vrchat.com/index.md' },
-            ],
-          },
-          {
-            text: 'UdonSharp',
-            items: [
-              { text: '主页', link: '/udonsharp.docs.vrchat.com/' },
-              { text: '文档', link: '/udonsharp.docs.vrchat.com/' },
-              { text: '更新', link: '/udonsharp.docs.vrchat.com/' },
-            ],
-          },
-          {
-            text: '创作者助手',
-            items: [
-              { text: '主页', link: '/vcc.docs.vrchat.com/' },
-              { text: '文档', link: '/vcc.docs.vrchat.com/' },
-              { text: '更新', link: '/vcc.docs.vrchat.com/' },
-              { text: '指南', link: '/vcc.docs.vrchat.com/' },
-            ],
-          },
-          {
-            text: 'ClientSim',
-            items: [
-              { text: '主页', link: '/clientsim.docs.vrchat.com/' },
-              { text: '文档', link: '/clientsim.docs.vrchat.com/' },
-              { text: '更新', link: '/clientsim.docs.vrchat.com/' },
-            ],
-          },
+          { text: '主页', link: '/creators.vrchat.com/' },
+          { text: 'SDK', link: '/creators.vrchat.com/sdk/' },
+          { text: '世界', link: '/creators.vrchat.com/worlds/' },
+          { text: '虚拟形象', link: '/creators.vrchat.com/avatars/' },
+          { text: '更新', link: '/creators.vrchat.com/index.md' },
+
+        ],
+      },
+      {
+        text: 'UdonSharp',
+        items: [
+          { text: '主页', link: '/udonsharp.docs.vrchat.com/' },
+          { text: '快速入门', link: '/udonsharp.docs.vrchat.com/setup' },
+          { text: '文档', link: '/udonsharp.docs.vrchat.com/udonsharp' },
+          { text: '更新', link: '/udonsharp.docs.vrchat.com/' },
+        ],
+      },
+      {
+        text: '创作者助手',
+        items: [
+          { text: '主页', link: '/vcc.docs.vrchat.com/' },
+          { text: '指南', link: '/vcc.docs.vrchat.com/guides/getting-started' },
+          { text: '包管理器', link: '/vcc.docs.vrchat.com/vpm/' },
+          { text: '工具', link: '/vcc.docs.vrchat.com/tools/vrc-quick-launcher' },
+          { text: '更新', link: '/vcc.docs.vrchat.com/' },
+        ],
+      },
+      {
+        text: 'ClientSim',
+        items: [
+          { text: '主页', link: '/clientsim.docs.vrchat.com/' },
+          { text: '指南', link: '/clientsim.docs.vrchat.com/guides/' },
+          { text: '系统', link: '/clientsim.docs.vrchat.com/systems/' },
+          { text: '更新', link: '/clientsim.docs.vrchat.com/' },
         ],
       },
     ],
 
     sidebar: {
       "/docs.vrchat.com/": vrcahtDocsSidebars(),
-      "/creators.vrchat.com/": vrchatCreatorsDocsSidebar()
+      "/creators.vrchat.com/": vrchatCreatorsDocsSidebar(),
+      "/udonsharp.docs.vrchat.com/": udonSharpDocsSidebar(),
+      "/vcc.docs.vrchat.com/": vccDocsSidebar(),
+      "/clientsim.docs.vrchat.com/": clientSimDocsSidebar(),
     },
 
     socialLinks: [
