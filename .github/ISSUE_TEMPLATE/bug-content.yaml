@@ -1,7 +1,7 @@
-name: Translation/翻译改进
-description: 提出对文档的翻译改进意见
-title: "[translation]: "
-labels: ["translation"]
+name: bug content/内容错误
+description: 翻译错误，图片视频链接引用错误等文档内容未正确呈现的现象
+title: "[bug]: "
+labels: ["bug"]
 projects: ["/SKPloft/Fixed-vrchat-docs-localization/", "/vrcd-community/vrchat-docs-localization/"]
 assignees:
   - octocat
