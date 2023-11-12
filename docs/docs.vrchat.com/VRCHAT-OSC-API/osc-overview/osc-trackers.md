@@ -57,7 +57,7 @@ VRChat 现在支持通过 OSC 接收追踪器数据，以便与我们现有的�
 
 <center>
 
-![img](../../img/osc-trackers-1.png)
+![img](/docs.vrchat.com/images/osc-trackers-1.png)
 
 </center>
 
@@ -86,7 +86,7 @@ VRChat 现在支持通过 OSC 接收追踪器数据，以便与我们现有的�
 
 <center>
 
-![img](../../img/osc-trackers-2.png)
+![img](/docs.vrchat.com/images/osc-trackers-2.png)
 
 </center>
 

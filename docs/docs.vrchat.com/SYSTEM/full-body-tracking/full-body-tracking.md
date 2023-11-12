@@ -98,7 +98,7 @@ VRChat 支持使用 Lighthouse 生态系统追踪器（如 [HTC Vive Trackers](h
 
 <center>
 
-![img](../img/full-body-tracking-1.png)
+![img](/docs.vrchat.com/images/full-body-tracking-1.png)
 
 *将髋关节向上移动到两条大腿骨建立的线上方。*
 
@@ -114,7 +114,7 @@ VRChat 支持使用 Lighthouse 生态系统追踪器（如 [HTC Vive Trackers](h
 
 <center>
 
-![img](../img/full-body-tracking-2.png)
+![img](/docs.vrchat.com/images/full-body-tracking-2.png)
 
 *正交侧视图/前视图。腿骨示例。小腿下方的骨骼是脚踝/脚。*
 
@@ -122,7 +122,7 @@ VRChat 支持使用 Lighthouse 生态系统追踪器（如 [HTC Vive Trackers](h
 
 <center>
 
-![img](../img/full-body-tracking-3.png)
+![img](/docs.vrchat.com/images/full-body-tracking-3.png)
 
 *正交顶视图。手臂骨骼示例。*
 

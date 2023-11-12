@@ -31,7 +31,7 @@ Currently, avatar scaling is operating in the player-controlled mode by default.
 ## Disabling player-controlled scaling via the website
 If you simply wish to disable the avatar scaling system in your world, you can log into the [My Worlds section of the VRChat Website](https://vrchat.com/home/content/worlds), select your world, toggle it off, and save your changes.
 
-![It's really easy!](/img/worlds/udon/website_avatar_scaling_enabled.png)
+![It's really easy!](/creators.vrchat.com/images/worlds/udon/website_avatar_scaling_enabled.png)
 
 When you disable avatar scaling via the website, the system is disabled for players in your world entirely. They will only be able to use your world at their default scale, and the menu components for avatar scaling will be disabled. 
 

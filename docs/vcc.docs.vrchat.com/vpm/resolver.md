@@ -1,6 +1,6 @@
 # Resolver
 
-![Package Resolver Window](/images/resolver.png)
+![Package Resolver Window](/vcc.docs.vrchat.com/images/resolver.png)
 
 ## Overview
 The Package Resolver is a Unity Editor tool which can download and install the packages required for a VPM project without the VCC.
@@ -15,11 +15,11 @@ It is added to every VPM-compatible project, either during Project Creation or M
 When you open up a VRChat Unity Project, the Resolver will check for any missing VPM packages. It does this by comparing your VPM Manifest (in Packages/vpm-manifest.json) to your projects Packages folder.
 If any items are misssing or do not match the versions specified, you will be shown this dialog:
 
-![VRChat Packages Missing](/images/resolver-missing.png)
+![VRChat Packages Missing](/vcc.docs.vrchat.com/images/resolver-missing.png)
 
 If you press "OK", the packages will be restored to your project. If you'd like to review them first, you can press "Show Me What's Missing", which will bring up a window like this:
 
-![Missing Package Specifics](/images/resolver-specifics.png)
+![Missing Package Specifics](/vcc.docs.vrchat.com/images/resolver-specifics.png)
 
 You can press "Resolve All" to restore all the packages to your project, which is the equivalent of pressing "OK" on the initial dialog.
 

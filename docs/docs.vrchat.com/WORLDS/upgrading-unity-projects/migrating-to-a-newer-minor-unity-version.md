@@ -44,9 +44,9 @@ VRChat 偶尔会更新 Unity 大版本。
 
 <center>
 
-![img](../img/migrating-to-a-newer-minor-unity-version-1.png)
+![img](/docs.vrchat.com/images/migrating-to-a-newer-minor-unity-version-1.png)
 
-![img](../img/migrating-to-a-newer-minor-unity-version-2.png)
+![img](/docs.vrchat.com/images/migrating-to-a-newer-minor-unity-version-2.png)
 
 </center>
 
@@ -72,7 +72,7 @@ SDK 可能会警告您使用了错误的版本，即使您 _知道_ 使用的是
 
 <center>
 
-![img](../img/migrating-to-a-newer-minor-unity-version-3.png)
+![img](/docs.vrchat.com/images/migrating-to-a-newer-minor-unity-version-3.png)
 
 </center>
 

@@ -13,14 +13,14 @@ Files with the extension .mid are processed as MIDI assets. To get started with 
 1. Drag and drop them somewhere into your Assets folder. The MIDI file must have the extension .mid, the audio file can be of any [type supported by Unity](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html) (.aif, .wav, .mp3, .ogg).
 2. Select the MIDI file and set its AudioClip to the matching audio file.
 
-![image](/img/worlds/midi-playback-214464414-32af9c18-c003-49ed-bd12-dd431367db56.png)
+![image](/creators.vrchat.com/images/worlds/midi-playback-214464414-32af9c18-c003-49ed-bd12-dd431367db56.png)
 
 3. It's imperative that the BPM for your MIDI file is set correctly. If the data seems like it doesn't match the audio, this is likely the issue. You can override the BPM here by toggling on "Override Bpm" and supplying the right value. Even better would be to edit your MIDI file and add the correct BPM.
 
 
 ## Component: VRCMidiPlayer
 
-![VRCMidiPlayer](/img/worlds/midi-playback-215556799-a546e119-afdb-441f-8019-70ee50b6c008.png)
+![VRCMidiPlayer](/creators.vrchat.com/images/worlds/midi-playback-215556799-a546e119-afdb-441f-8019-70ee50b6c008.png)
 
 This is the brains of the operation. It works similarly to an Audio Source but uses a Midi Asset instead. It sends MIDI [Note On](/worlds/udon/midi#midinoteon) and [Note Off](/worlds/udon/midi#midinoteoff) events to all target UdonBehaviours.
 
@@ -96,7 +96,7 @@ If you want to use a song with more than 4 channels, you can duplicate the grids
 Here's a breakdown of what happens in the MidiGrid Program.
 
 **Start Event:**
-![image](/img/worlds/midi-playback-214465917-450d04cc-e7ce-4551-a3cd-f4feddd124b2.png)
+![image](/creators.vrchat.com/images/worlds/midi-playback-214465917-450d04cc-e7ce-4551-a3cd-f4feddd124b2.png)
 
 On Start, it goes through each object in the `grids` array, finds the 'Image' component on its child, and sets its `enabled` value to `false`, effectively hiding all the Images to start.
 
@@ -104,7 +104,7 @@ It also waits 1 second after loading and then calls `Play()` on the VRCMidiPlaye
 
 **Note Events:**
 
-![image](/img/worlds/midi-playback-214465984-fea32000-04c3-42f3-bf7f-cef471d2b46f.png)
+![image](/creators.vrchat.com/images/worlds/midi-playback-214465984-fea32000-04c3-42f3-bf7f-cef471d2b46f.png)
 
 
 When it receives a `Midi Note On` event, it will loop through each entry in the `channels` array and check if the incoming note's channel matches one of the entries. If a match is found, that number is used as the `index` for the `grids` array to find the matching grid. The incoming note is run through `int.Remainder()` to find its index in the octave - a C will be 0, a C# will be 1, etc. This index is used to find the right child of the grid, and then set `enabled` on the 'Image' to `true`. Finally, the note's channel and note number are logged to the console. 

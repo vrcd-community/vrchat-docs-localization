@@ -68,7 +68,7 @@ UI有三个层级，分别是行动菜单、表情菜单和角色操纵菜单。
 
 <center>
 
-![img](../../img/action-menu-1.gif)
+![img](/docs.vrchat.com/images/action-menu-1.gif)
 
 </center>
 

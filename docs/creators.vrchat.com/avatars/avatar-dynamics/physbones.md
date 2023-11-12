@@ -19,7 +19,7 @@ Additionally, PhysBones can be interacted with by you and other people! If you'v
 
 Although not designed as such, PhysBones also serves as a reasonable cloth substitute until such time that we implement our own Cloth component.
 
-![](/img/avatars/physbones-ca9ee06-2022-05-04_18-23-09_Unity.png)
+![](/creators.vrchat.com/images/avatars/physbones-ca9ee06-2022-05-04_18-23-09_Unity.png)
 
 ## Versions
 
@@ -82,7 +82,7 @@ Version 1.1:
 > 
 > In fact, most PhysBones settings allow for the use of Curves! Learn how to use them and your PhysBones will look amazing!
 
-![physbones-054e326-2022-04-19_11-32-12_Unity.png](/img/avatars/physbones-054e326-2022-04-19_11-32-12_Unity.png)
+![physbones-054e326-2022-04-19_11-32-12_Unity.png](/creators.vrchat.com/images/avatars/physbones-054e326-2022-04-19_11-32-12_Unity.png)
 
 `Pull` - Amount of force used to return bones to their rest position.  
 `Spring` - Amount bones will wobble when trying to reach their rest position. Only available in Simplified Integration Type.  
@@ -115,19 +115,19 @@ Additionally, when configuring options for Limits, a visualization of those limi
 
 ### Angle
 
-![physbones-b7abe1f-2022-04-19_11-49-26_Unity.png](/img/avatars/physbones-b7abe1f-2022-04-19_11-49-26_Unity.png)
+![physbones-b7abe1f-2022-04-19_11-49-26_Unity.png](/creators.vrchat.com/images/avatars/physbones-b7abe1f-2022-04-19_11-49-26_Unity.png)
 
 `Angle` means the bone chain will be limited to some `Max Angle`, centered on an axis as defined by `Rotation`. This is visualized as a Cone in the Scene view.
 
 ### Hinge
 
-![physbones-b7723cc-2022-04-19_11-50-04_Unity.png](/img/avatars/physbones-b7723cc-2022-04-19_11-50-04_Unity.png)
+![physbones-b7723cc-2022-04-19_11-50-04_Unity.png](/creators.vrchat.com/images/avatars/physbones-b7723cc-2022-04-19_11-50-04_Unity.png)
 
 `Hinge` means that the bone chain will be limited to some `Max Angle` along the plane defined by the `Rotation`. This is visualized as a slice of a circle, similar to a pizza or a pie.
 
 ### Polar
 
-![physbones-824db3c-2022-04-19_11-51-22_Unity.gif](/img/avatars/physbones-824db3c-2022-04-19_11-51-22_Unity.gif)
+![physbones-824db3c-2022-04-19_11-51-22_Unity.gif](/creators.vrchat.com/images/avatars/physbones-824db3c-2022-04-19_11-51-22_Unity.gif)
 
 `Polar` is a bit more complicated. If you take a `Hinge` and sweep it across `Yaw` by some amount, you get a segment of a sphere in `Polar` coordinates. You can configure `Max Pitch` and `Max Yaw` to adjust the size of the segment, and use `Rotation` to define where that segment is located on the sphere. The visualization for `Polar` is especially helpful.
 
@@ -232,7 +232,7 @@ The bounding box only accounts for bones with collision and a radius greater tha
 
 Defines a collider that will affect PhysBones that are configured correctly.
 
-![](/img/avatars/physbones-ac38f46-2022-05-04_18-35-11_Unity.png)
+![](/creators.vrchat.com/images/avatars/physbones-ac38f46-2022-05-04_18-35-11_Unity.png)
 
 `Root Transform` - Transform where this collider is placed. If empty, we use this game object's transform.  
 `Shape Type` - Type of collision shape used by this collider. You can choose between a Sphere, Capsule, or Plane collider.  

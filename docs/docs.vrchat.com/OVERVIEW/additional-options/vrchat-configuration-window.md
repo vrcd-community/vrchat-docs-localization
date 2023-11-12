@@ -10,7 +10,7 @@
 
 <center>
 
-![img](../../img/vrchat-configuration-window-1.png)
+![img](/docs.vrchat.com/images/vrchat-configuration-window-1.png)
 
 </center>
 
@@ -18,7 +18,7 @@
 
 <center>
 
-![img](../../img/vrchat-configuration-window-2.png)
+![img](/docs.vrchat.com/images/vrchat-configuration-window-2.png)
 
 *您可以在这里调整角色的性能选项*
 
@@ -40,7 +40,7 @@
 
 <center>
 
-![img](../../img/vrchat-configuration-window-3.png)
+![img](/docs.vrchat.com/images/vrchat-configuration-window-3.png)
 
 </center>
 
@@ -52,7 +52,7 @@
 
 <center>
 
-![img](../../img/vrchat-configuration-window-4.png)
+![img](/docs.vrchat.com/images/vrchat-configuration-window-4.png)
 
 </center>
 
@@ -85,7 +85,7 @@ Oculus Quest 2 被设置为 4x MSAA。
 
 <center>
 
-![img](../../img/vrchat-configuration-window-5.png)
+![img](/docs.vrchat.com/images/vrchat-configuration-window-5.png)
 
 *PC VR 中的低品质设置*
 
@@ -95,7 +95,7 @@ Oculus Quest 2 被设置为 4x MSAA。
 
 <center>
 
-![img](../../img/vrchat-configuration-window-6.png)
+![img](/docs.vrchat.com/images/vrchat-configuration-window-6.png)
 
 *PC VR 中的中等品质设置*
 
@@ -105,7 +105,7 @@ Oculus Quest 2 被设置为 4x MSAA。
 
 <center>
 
-![img](../../img/vrchat-configuration-window-7.png)
+![img](/docs.vrchat.com/images/vrchat-configuration-window-7.png)
 
 *PC VR 中的高品质设置*
 
@@ -115,7 +115,7 @@ Oculus Quest 2 被设置为 4x MSAA。
 
 <center>
 
-![img](../../img/vrchat-configuration-window-8.png)
+![img](/docs.vrchat.com/images/vrchat-configuration-window-8.png)
 
 *PC VR 中的极致品质设置*
 
@@ -127,7 +127,7 @@ Oculus Quest只有一个图形配置文件。如下所示。
 
 <center>
 
-![img](../../img/vrchat-configuration-window-9.png)
+![img](/docs.vrchat.com/images/vrchat-configuration-window-9.png)
 
 *Quest 设置*
 

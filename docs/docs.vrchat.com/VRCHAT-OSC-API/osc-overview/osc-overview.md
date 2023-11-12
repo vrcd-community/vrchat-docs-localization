@@ -45,7 +45,7 @@
 
 <center>
 
-![img](../../img/osc-overview-1.png)
+![img](/docs.vrchat.com/images/osc-overview-1.png)
 
 </center>
 

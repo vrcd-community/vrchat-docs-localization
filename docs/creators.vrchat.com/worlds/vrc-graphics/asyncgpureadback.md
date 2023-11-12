@@ -34,7 +34,7 @@ When using VRCAsyncGpuReadback, there are 3 main steps that you need to follow:
 
 ## Udon Node Graph Example
 
-![asyncgpureadback-mu8QGGS.png](/img/worlds/asyncgpureadback-mu8QGGS.png)
+![asyncgpureadback-mu8QGGS.png](/creators.vrchat.com/images/worlds/asyncgpureadback-mu8QGGS.png)
 
 ## UdonSharp Example
 

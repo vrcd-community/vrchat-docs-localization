@@ -6,7 +6,7 @@ IK 2.0 是对 VRChat 追踪系统的全面改进。这包括支持更多追踪�
 
 <center>
 
-![img](../img/ik-20-features-and-options-1.png)
+![img](/docs.vrchat.com/images/ik-20-features-and-options-1.png)
 
 *这是新的 IK 2.0 设置屏幕。您可以在下方看到对多出来的按钮的完整解释。*
 
@@ -26,7 +26,7 @@ IK 2.0 是对 VRChat 追踪系统的全面改进。这包括支持更多追踪�
 
 <center>
 
-![img](../img/ik-20-features-and-options-2.gif)
+![img](/docs.vrchat.com/images/ik-20-features-and-options-2.gif)
 
 </center>
 
@@ -38,7 +38,7 @@ IK 2.0 是对 VRChat 追踪系统的全面改进。这包括支持更多追踪�
 
 <center>
 
-![img](../img/ik-20-features-and-options-3.gif)
+![img](/docs.vrchat.com/images/ik-20-features-and-options-3.gif)
 
 </center>
 
@@ -52,7 +52,7 @@ IK 2.0 是对 VRChat 追踪系统的全面改进。这包括支持更多追踪�
 
 <center>
 
-![img](../img/ik-20-features-and-options-4.png)
+![img](/docs.vrchat.com/images/ik-20-features-and-options-4.png)
 
 </center>
 

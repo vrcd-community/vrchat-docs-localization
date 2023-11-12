@@ -9,13 +9,13 @@ If your project is using [UdonSharp](https://udonsharp.docs.vrchat.com/), read o
 :::
 ## The Process
 1. Add your project to the Project Listing, and press Migrate.<br/>
-![Migrate Project](/images/migrate-button.png)
+![Migrate Project](/vcc.docs.vrchat.com/images/migrate-button.png)
 2. You have two options on how to migrate your project.
 - **Migrate a copy**:  Copies your project to a new folder named `ProjectName-Migrated`, with numbers at the end. Your old folder stays untouched.
 - **Migrate in place**: Your folder is upgraded without creating a copy. This is useful if you made your own backup, or if you use version control software such as [Git](https://git-scm.com/) or [Plastic](https://docs.unity3d.com/2019.4/Documentation/Manual/PlasticSCMPlugin.html). *Don't choose 'Migrate in place' unless you have a backup!*<br/>
-![Backup prompt](/images/migrate-project-backup.png)
+![Backup prompt](/vcc.docs.vrchat.com/images/migrate-project-backup.png)
 3. Confirm that you'd like to start the migration.
-![Backup prompt](/images/migrate-project-backup-2.png)
+![Backup prompt](/vcc.docs.vrchat.com/images/migrate-project-backup-2.png)
 4. All of the visible files from your project are copied over to the new folder except for:
     - `Library`
     - `Logs`

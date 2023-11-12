@@ -13,7 +13,7 @@
 
 您可以在“Project”选项卡中将您的搜索设置为“In Packages”或“All”，并搜索 VRCWorld Prefab 来找到它。
 
-![img](../img/creating-your-first-world-1.png)
+![img](/creators.vrchat.com/images/creating-your-first-world-1.png)
 
 ## Step 2 - 创建出生点
 
@@ -47,7 +47,7 @@
 
 在上传您的姓名之前，您需要向 VRChat SDK 提供有关您的世界的一些基本信息，例如其名称、容量或内容警告。
 
-![img](../img/creating-your-first-world-2.png)
+![img](/creators.vrchat.com/images/creating-your-first-world-2.png)
 
 - 世界名称 - 向所有人显示的世界名称。
 - 描述 - 这将显示在 VRChat 的“世界详细信息”页面和网站上。

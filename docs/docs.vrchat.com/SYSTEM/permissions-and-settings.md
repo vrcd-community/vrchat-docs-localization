@@ -12,7 +12,7 @@
 
 <center>
 
-![img](../img/permissions-and-settings-1.png)
+![img](/docs.vrchat.com/images/permissions-and-settings-1.png)
 
 </center>
 
@@ -20,7 +20,7 @@
 
 <center>
 
-![img](../img/permissions-and-settings-2.png)
+![img](/docs.vrchat.com/images/permissions-and-settings-2.png)
 
 </center>
 
@@ -36,7 +36,7 @@
 
 <center>
 
-![img](../img/permissions-and-settings-proof-1.png)
+![img](/docs.vrchat.com/images/permissions-and-settings-proof-1.png)
 
 </center>
 
@@ -44,7 +44,7 @@
 
 <center>
 
-![img](../img/permissions-and-settings-3.png)
+![img](/docs.vrchat.com/images/permissions-and-settings-3.png)
 
 </center>
 
@@ -52,7 +52,7 @@
 
 <center>
 
-![img](../img/permissions-and-settings-4.png)
+![img](/docs.vrchat.com/images/permissions-and-settings-4.png)
 
 </center>
 
@@ -60,7 +60,7 @@
 
 <center>
 
-![img](../img/permissions-and-settings-5.png)
+![img](/docs.vrchat.com/images/permissions-and-settings-5.png)
 
 </center>
 
@@ -68,7 +68,7 @@
 
 <center>
 
-![img](../img/permissions-and-settings-6.png)
+![img](/docs.vrchat.com/images/permissions-and-settings-6.png)
 
 </center>
 
@@ -76,7 +76,7 @@
 
 <center>
 
-![img](../img/permissions-and-settings-7.png)
+![img](/docs.vrchat.com/images/permissions-and-settings-7.png)
 
 </center>
 

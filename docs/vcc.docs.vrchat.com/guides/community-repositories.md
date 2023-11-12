@@ -13,23 +13,23 @@ If thats not the case - follow the steps below.
   - If you are not, scroll down and click "Check for Updates".
 - Press the "Packages" tab.
 
-![Packages Tab](/images/installed-repositories.png)
+![Packages Tab](/vcc.docs.vrchat.com/images/installed-repositories.png)
 
 - Press the "Add Repository" button.
 - In the field that appears, enter the URL of the repository you want to add.
 
-![Add listing field](/images/add-listing-field.png)
+![Add listing field](/vcc.docs.vrchat.com/images/add-listing-field.png)
 
 - Click "Add".
 - A popup will appear, showing you the information about the repository, a list of packages it contains.
 - If everything looks good, click the "I Understand, Add Repository" button.
 
-![Add listing modal](/images/add-listing-modal.png)
+![Add listing modal](/vcc.docs.vrchat.com/images/add-listing-modal.png)
 
 - The repository will be added to your list of installed repositories.
 - You should be able to navigate to any of your projects and see the packages from the new repository available in the list.
 
-![Added package](/images/add-listing-new-package.png)
+![Added package](/vcc.docs.vrchat.com/images/add-listing-new-package.png)
 
 ## Advanced Usage
 
@@ -43,7 +43,7 @@ VCC allows you to add custom headers to your requests. To do so, follow the step
 - Press the cogwheel icon next to the field.
 - A list of headers will appear, allowing you to add new ones.
 
-![Add request headers](/images/add-listing-field-headers.png)
+![Add request headers](/vcc.docs.vrchat.com/images/add-listing-field-headers.png)
 
 - Supply the required headers and click "Add".
 - Proceed with the repository addition as usual.
@@ -58,7 +58,7 @@ Every repository in the Installed Repositories list has a checkmark to the left 
 
 You can also toggle the enabled repositories on the project page by using the "Selected Repos" dropdown.
 
-![Selected Repos](/images/selected-repos.png)
+![Selected Repos](/vcc.docs.vrchat.com/images/selected-repos.png)
 
 ## How to Create your own Repositories
 

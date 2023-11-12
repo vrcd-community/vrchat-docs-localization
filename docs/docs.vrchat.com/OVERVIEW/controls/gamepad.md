@@ -6,6 +6,6 @@ VRChat 可以做到 XInput (Xbox 360, Xbox One, Xbox Series)，Playstation ( 4, 
 
 <center>
 
-![img](../../img/gamepad-1.png)
+![img](/docs.vrchat.com/images/gamepad-1.png)
 
 </center>

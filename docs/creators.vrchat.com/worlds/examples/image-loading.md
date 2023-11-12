@@ -10,7 +10,7 @@ Udon can load images from the internet and display them as UI elements or as tex
 This scene has a picture frame that automatically changes to show different images with matching captions. The images and captions are both hosted for free on GitHub Pages and are included in the GitHub repository above.
 
 <video loop="loop" autoplay="autoplay" muted>
-  <source src="/img/worlds/image-loader.mp4" type="video/mp4" />
+  <source src="/creators.vrchat.com/images/worlds/image-loader.mp4" type="video/mp4" />
     Your browser does not support the video tag.
 </video>
 

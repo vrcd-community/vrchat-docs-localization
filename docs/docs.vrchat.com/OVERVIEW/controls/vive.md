@@ -2,7 +2,7 @@
 
 <center>
 
-![img](../../img/vive-1.png)
+![img](/docs.vrchat.com/images/vive-1.png)
 
 </center>
 

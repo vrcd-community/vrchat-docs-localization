@@ -14,7 +14,7 @@
 
 <center>
 
-![img](../img/avatar-fallback-system-1.png)
+![img](/docs.vrchat.com/images/avatar-fallback-system-1.png)
 
 *此人的用户模型已被性能屏蔽。*
 
@@ -30,7 +30,7 @@
 
 <center>
 
-![img](../img/avatar-fallback-system-2.png)
+![img](/docs.vrchat.com/images/avatar-fallback-system-2.png)
 
 *此人的用户模型已被文件大小屏蔽。*
 
@@ -48,7 +48,7 @@
 
 <center>
 
-![img](../img/avatar-fallback-system-3.png)
+![img](/docs.vrchat.com/images/avatar-fallback-system-3.png)
 
 *用户模型不适用于您的平台。*
 
@@ -62,7 +62,7 @@
 
 <center>
 
-![img](../img/avatar-fallback-system-4.png)
+![img](/docs.vrchat.com/images/avatar-fallback-system-4.png)
 
 *由于某些错误，此人的用户模型未显示。*
 
@@ -74,7 +74,7 @@
 
 <center>
 
-![img](../img/avatar-fallback-system-5.png)
+![img](/docs.vrchat.com/images/avatar-fallback-system-5.png)
 
 *这个图标可能意味着一些神奇事情！*
 

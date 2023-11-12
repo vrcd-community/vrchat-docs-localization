@@ -57,7 +57,7 @@ VRoid Studio 以 .vrm 格式输出形象，Unity 本身并不支持该格式！�
 
 如果要从 3D 编辑器导入模型，请确保牢记坐标系之间的差异。例如，Blender 的默认坐标和单位系统与 Unity 不同。您必须从 Blender 按如下方式定义导出FBX文件：
 
-![](/img/avatars/creating-your-first-avatar-blender.png)
+![](/creators.vrchat.com/images/avatars/creating-your-first-avatar-blender.png)
 
 在你把模型导入到 `Assets` 文件夹之后，您需要确保其被正确设置，在 Inspector 的 Rig 选项卡下，确保 Animation Type 设置为 Humanoid。
 
@@ -78,13 +78,13 @@ VRoid Studio 以 .vrm 格式输出形象，Unity 本身并不支持该格式！�
 3. 搜索并选择 `VRC Avatar Descriptor`
 4. 修改设置，将会在下文详细说明
 
-![](/img/avatars/creating-your-first-avatar-Unity.png)
+![](/creators.vrchat.com/images/avatars/creating-your-first-avatar-Unity.png)
 
 ### 视角位置
 
 首先，您需要设置视角位置。这将是您的相机在 VRChat 中的位置。您可以在场景中将其直观地表示为一个小的白色球体。如果您的形象有一个头，那么视野的最佳位置是在眼睛之间。如果它没有头部，请将其放置在您认为合适的位置。
 
-![](/img/avatars/creating-your-first-avatar-Unity-1.png)
+![](/creators.vrchat.com/images/avatars/creating-your-first-avatar-Unity-1.png)
 
 ### 口型同步模式
 
@@ -106,7 +106,7 @@ Blend shapes/shape keys（根据您使用的软件命名）根据顶点位置修
 
 VRChat 通常可以自动检测您的化身的嘴型。如果没有，您可以从下拉列表中选择口型。
 
-![](/img/avatars/creating-your-first-avatar-Unity-2.png)
+![](/creators.vrchat.com/images/avatars/creating-your-first-avatar-Unity-2.png)
 
 `Viseme Blend Shape` 模式是让你的角色在说话的同时最常见的方法。
 

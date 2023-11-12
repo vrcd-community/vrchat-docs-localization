@@ -1,7 +1,7 @@
 # Player
 
 The ClientSim representation of a player has been split into many components compared to CyanEmu. Each component handles a different aspect of the player. Below you can see the hierarchy of both the Local and Remote player prefabs.
-![Local Player Hierarchy](/images/player-local-hierarchy.png)![Remote Player Hierarchy](/images/player-remote-hierarchy.png)
+![Local Player Hierarchy](/clientsim.docs.vrchat.com/images/player-local-hierarchy.png)![Remote Player Hierarchy](/clientsim.docs.vrchat.com/images/player-remote-hierarchy.png)
 
 ## ClientSimPlayer
 

@@ -22,7 +22,7 @@ If you create assets for other users, make sure to test them with these new SDKs
 The VCC also allows you to distribute packages using the new VPM format, making it even easier for your users to install and update your custom content. Read the [Packages](https://vcc.docs.vrchat.com/vpm/packages) page to learn more.
 
 ## What do I do if Webview2 is not installed correctly?
-![VRC Quick Launcher GUI](/images/webview2-error.png)
+![VRC Quick Launcher GUI](/vcc.docs.vrchat.com/images/webview2-error.png)
 The Creator Companion uses Webview2 to render its user interface. When you launch the Creator Companion, it will attempt to install it automatically.
 
 If you previously removed Microsoft Edge from your system, the Creator Companion may fail to launch correctly. WebView2 is usually installed alongside Microsoft Edge. 

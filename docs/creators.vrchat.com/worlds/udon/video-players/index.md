@@ -9,7 +9,7 @@ updatedAt: "2023-08-14T09:05:14.280Z"
 
 The easiest way to put a Video Player in your Udon world is by using one of the Prefabs, which you can find in `Packages/com.vrchat.worlds/Samples/UdonExampleScene/Prefabs/VideoPlayers`.
 
-![The two Video Player prefabs, ready to drop into your world.](/img/worlds/video-players-aae04e6-video-player-prefabs.png)
+![The two Video Player prefabs, ready to drop into your world.](/creators.vrchat.com/images/worlds/video-players-aae04e6-video-player-prefabs.png)
 
 Both of these prefabs will play a video of your choosing, synchronized for everyone in your world. They won't loop - the graph turns off looping for now to get sync to work. If you want them to loop, turn on 'Loop' and remove the UdonBehaviour.
 
@@ -80,4 +80,4 @@ When encoding your videos, we strongly recommend uploading a web-optimized versi
 - In HandBrake, tick the 'Web Optimized' checkbox.
 - Other software should have similar options for enabling fast start.
 
-![Enabling Fast Start](/img/worlds/video-players-dc8e54f-image.png)
+![Enabling Fast Start](/creators.vrchat.com/images/worlds/video-players-dc8e54f-image.png)

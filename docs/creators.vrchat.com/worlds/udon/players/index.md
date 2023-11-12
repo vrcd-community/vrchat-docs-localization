@@ -20,7 +20,7 @@ This page includes info on using some general nodes. Since there are so many thi
 ### IsValid
 *VRCPlayerApi, Boolean*
 Before you try to get or set anything on a Player, check whether IsValid returns true. If a player has left since you saved a reference to them, this will return False. For easier use on the graph, search for the generic "IsValid" method which works for any Object, since it gives you separate flows for True and False.
-![index-59fc2c8-player-isvalid.png](/img/worlds/index-59fc2c8-player-isvalid.png)
+![index-59fc2c8-player-isvalid.png](/creators.vrchat.com/images/worlds/index-59fc2c8-player-isvalid.png)
 
 ### EnablePickups
 *VRCPlayerApi, Boolean*

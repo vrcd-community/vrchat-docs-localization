@@ -32,13 +32,13 @@ When you open your Quick Menu, you'll see icons appear on top of the nameplates 
 
 The ranks are as follows:
 
-| Icon                                                  | Performance Rank | Description                                                                                                                                                                       |
-|-------------------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![image](/img/avatars/performance-rank/excellent.png) | Excellent        | This is as good as you can get! The "Gold Star on the Fridge" rank.                                                                                                               |
-| ![image](/img/avatars/performance-rank/good.png)      | Good             | Good enough! A great target to aim for.                                                                                                                                           |
-| ![image](/img/avatars/performance-rank/medium.png)    | Medium           | Don't let the name fool you, Medium is plenty good. If you're here and don't want to work any farther up, you're fine.                                                            |
-| ![image](/img/avatars/performance-rank/poor.png)      | Poor             | Could use some work.                                                                                                                                                              |
-| ![image](/img/avatars/performance-rank/very-poor.png) | Very Poor        | This avatar has some serious performance problems. Since this rank is unbounded, it is very possible that your performance is suffering as a result of this avatar being visible. |
+| Icon                                                                         | Performance Rank | Description                                                                                                                                                                       |
+| ---------------------------------------------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![image](/creators.vrchat.com/images/avatars/performance-rank/excellent.png) | Excellent        | This is as good as you can get! The "Gold Star on the Fridge" rank.                                                                                                               |
+| ![image](/creators.vrchat.com/images/avatars/performance-rank/good.png)      | Good             | Good enough! A great target to aim for.                                                                                                                                           |
+| ![image](/creators.vrchat.com/images/avatars/performance-rank/medium.png)    | Medium           | Don't let the name fool you, Medium is plenty good. If you're here and don't want to work any farther up, you're fine.                                                            |
+| ![image](/creators.vrchat.com/images/avatars/performance-rank/poor.png)      | Poor             | Could use some work.                                                                                                                                                              |
+| ![image](/creators.vrchat.com/images/avatars/performance-rank/very-poor.png) | Very Poor        | This avatar has some serious performance problems. Since this rank is unbounded, it is very possible that your performance is suffering as a result of this avatar being visible. |
 
 ## Viewing Detailed Avatar Stats
 If you click on a user with your Quick Menu open, you'll notice a new **"Show Avatar Stats"** button on the left side, displaying the icon of that user's Performance Rank.
@@ -47,7 +47,7 @@ If you click on a user with your Quick Menu open, you'll notice a new **"Show Av
 This graphic is out of date! Update pending.
 :::
 
-![image](/img/avatars/avatar-performance-ranking-system-05c612d-image_4.png)
+![image](/creators.vrchat.com/images/avatars/avatar-performance-ranking-system-05c612d-image_4.png)
 
 If you click this icon, you can view the detailed **Avatar Stats** of that avatar. You can get to this for your own avatar by going to your Avatar Menu, clicking one of your avatars, and clicking the **Avatar Stats** button in the bottom left of the screen.
 :::caution
@@ -55,7 +55,7 @@ If you click this icon, you can view the detailed **Avatar Stats** of that avata
 This graphic is out of date! Update pending.
 :::
 
-![avatar-performance-ranking-system-7a362c2-fixedTrogPerf.png](/img/avatars/avatar-performance-ranking-system-7a362c2-fixedTrogPerf.png)
+![avatar-performance-ranking-system-7a362c2-fixedTrogPerf.png](/creators.vrchat.com/images/avatars/avatar-performance-ranking-system-7a362c2-fixedTrogPerf.png)
 
 When you click the **Avatar Stats** button, you'll get a screen pop up with the details of avatar you're looking at, or your own avatar (if you clicked the button in the Avatar tab).
 :::caution
@@ -78,34 +78,34 @@ Bolded stats will cause the avatar to be fully blocked if they exceed the Minimu
 
 For example with the Minimum Displayed Performance Rank set to Poor an avatar with 9 Trail Renderers (Very Poor) will be displayed with all of its Trail Renderers removed. Refer to [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#section-minimum-displayed-performance-rank) for more information.
 
-| Avatar Quality             | Quality Description                                                                                                                       |
-| --------------------------| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Polygons                   | The polygon count of the model in question, counted in triangles.                                                                        |
-| Bounds Size                | The total size of the avatar. If this is really huge, that user probably has a large animation on the avatar that isn't showing all the time. Important note: Bounds Size will not cause the avatar to be blocked even if it is below the Minimum Displayed Performance Rank setting. |
-| Texture Memory             | The amount of memory estimated to be in use by the avatar's textures. These textures occupy space in both system RAM and in the video card's memory.                                                     |
-| Skinned Meshes             | The number of Skinned Mesh components on the avatar.                                                                                     |
-| Meshes                     | The number of non-Skinned Mesh components on the avatar.                                                                                 |
-| Material Slots             | The number of material slots on the avatar. Material slots are the slots on the mesh where you fit materials in. This is what counts toward Submesh creation, which incurs further draw calls. Keep in mind that Particle Systems will use one material slot, Particle System with trails use two, and Line Renderers use one material slot. |
-| Dynamic Bone Components    | The number of Dynamic Bone scripts on the avatar.                                                                                        |
-| Dynamic Bone Transforms    | The number of transforms animated by any given Dynamic Bone script on the avatar.                                                        |
-| Dynamic Bone Colliders     | The number of Dynamic Bone Collider scripts on the avatar.                                                                               |
-| Dynamic Bone Collision Check Count | The total number of DynamicBone transforms affected by the Dynamic Bone Collider scripts on the avatar. This can count transforms twice or more, because a single transform can be affected by multiple colliders. |
-| PhysBones Components       | The number of PhysBone components on the avatar.                                                                                          |
-| PhysBones Affected Transforms | The total number of transforms affected by PhysBones components on the avatar.                                                          |
-| PhysBones Colliders        | The number of PhysBone collider scripts on the avatar.                                                                                    |
-| PhysBones Collision Check Count | The sum of how many PhysBone transforms each collider can affect. This can count transforms twice or more, because a single transform can be affected by multiple colliders. |
-| Avatar Dynamics Contacts   | The number of Avatar Dynamics Contacts on the avatar.                                                                                     |
-| Animators                  | The number of Animators on the avatar. Important note: This will always be at least 1 due to the root animator being counted. This means that for the Excellent ranking, you can have no additional animators. |
-| Bones                      | The number of Bones in the avatar's rig.                                                                                                 |
-| Lights                     | The number of Light components on the avatar.                                                                                            |
-| Particle Systems           | The number of Particle System components on the avatar.                                                                                   |
-| Total Particles Active     | The sum of maxParticles across all particle systems on the avatar.                                                                        |
-| Mesh Particle Active Polys | The total number of polygons of Mesh Particles emitted by Particle Systems that are active. In other words, maxEmission * meshParticleVerts. |
-| Particle Trails Enabled    | If any Particle Systems on the avatar have Particle Trails enabled, this will be True.                                                   |
-| Particle Collision Enabled | If any Particle Systems on the avatar have Particle Collision enabled, this will be True.                                                |
-| Trail Renderers            | The number of Trail Renderers on the avatar.                                                                                             |
-| Line Renderers             | The number of Line Renderers on the avatar.                                                                                              |
-| Cloths                     | The total number of Cloth components on the avatar.                                                                                     |
+| Avatar Quality                     | Quality Description                                                                                                                                                                                                                                                                                                                          |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Polygons                           | The polygon count of the model in question, counted in triangles.                                                                                                                                                                                                                                                                            |
+| Bounds Size                        | The total size of the avatar. If this is really huge, that user probably has a large animation on the avatar that isn't showing all the time. Important note: Bounds Size will not cause the avatar to be blocked even if it is below the Minimum Displayed Performance Rank setting.                                                        |
+| Texture Memory                     | The amount of memory estimated to be in use by the avatar's textures. These textures occupy space in both system RAM and in the video card's memory.                                                                                                                                                                                         |
+| Skinned Meshes                     | The number of Skinned Mesh components on the avatar.                                                                                                                                                                                                                                                                                         |
+| Meshes                             | The number of non-Skinned Mesh components on the avatar.                                                                                                                                                                                                                                                                                     |
+| Material Slots                     | The number of material slots on the avatar. Material slots are the slots on the mesh where you fit materials in. This is what counts toward Submesh creation, which incurs further draw calls. Keep in mind that Particle Systems will use one material slot, Particle System with trails use two, and Line Renderers use one material slot. |
+| Dynamic Bone Components            | The number of Dynamic Bone scripts on the avatar.                                                                                                                                                                                                                                                                                            |
+| Dynamic Bone Transforms            | The number of transforms animated by any given Dynamic Bone script on the avatar.                                                                                                                                                                                                                                                            |
+| Dynamic Bone Colliders             | The number of Dynamic Bone Collider scripts on the avatar.                                                                                                                                                                                                                                                                                   |
+| Dynamic Bone Collision Check Count | The total number of DynamicBone transforms affected by the Dynamic Bone Collider scripts on the avatar. This can count transforms twice or more, because a single transform can be affected by multiple colliders.                                                                                                                           |
+| PhysBones Components               | The number of PhysBone components on the avatar.                                                                                                                                                                                                                                                                                             |
+| PhysBones Affected Transforms      | The total number of transforms affected by PhysBones components on the avatar.                                                                                                                                                                                                                                                               |
+| PhysBones Colliders                | The number of PhysBone collider scripts on the avatar.                                                                                                                                                                                                                                                                                       |
+| PhysBones Collision Check Count    | The sum of how many PhysBone transforms each collider can affect. This can count transforms twice or more, because a single transform can be affected by multiple colliders.                                                                                                                                                                 |
+| Avatar Dynamics Contacts           | The number of Avatar Dynamics Contacts on the avatar.                                                                                                                                                                                                                                                                                        |
+| Animators                          | The number of Animators on the avatar. Important note: This will always be at least 1 due to the root animator being counted. This means that for the Excellent ranking, you can have no additional animators.                                                                                                                               |
+| Bones                              | The number of Bones in the avatar's rig.                                                                                                                                                                                                                                                                                                     |
+| Lights                             | The number of Light components on the avatar.                                                                                                                                                                                                                                                                                                |
+| Particle Systems                   | The number of Particle System components on the avatar.                                                                                                                                                                                                                                                                                      |
+| Total Particles Active             | The sum of maxParticles across all particle systems on the avatar.                                                                                                                                                                                                                                                                           |
+| Mesh Particle Active Polys         | The total number of polygons of Mesh Particles emitted by Particle Systems that are active. In other words, maxEmission * meshParticleVerts.                                                                                                                                                                                                 |
+| Particle Trails Enabled            | If any Particle Systems on the avatar have Particle Trails enabled, this will be True.                                                                                                                                                                                                                                                       |
+| Particle Collision Enabled         | If any Particle Systems on the avatar have Particle Collision enabled, this will be True.                                                                                                                                                                                                                                                    |
+| Trail Renderers                    | The number of Trail Renderers on the avatar.                                                                                                                                                                                                                                                                                                 |
+| Line Renderers                     | The number of Line Renderers on the avatar.                                                                                                                                                                                                                                                                                                  |
+| Cloths                             | The total number of Cloth components on the avatar.                                                                                                                                                                                                                                                                                          |
 
 
 ## Avatar Performance Ranks - Value Maximums per Rank
@@ -130,9 +130,9 @@ On PC, the default Minimum Displayed Performance Rank level is set to "Very Poor
 Triangles (polygons) are a somewhat special case-- if you are 32k or less, you are marked as Excellent. Any number higher than 32,000 but lower than 70,001 will be marked as Good (unless some other stat pulls you down). If you exceed 70,000 polygons, the avatar will be marked as Very Poor immediately.
 
 | Avatar Quality                                                        | Excellent          | Good         | Medium       | Poor         |
-|-----------------------------------------------------------------------| ------------------ | ------------ | ------------ | ------------ |
+| --------------------------------------------------------------------- | ------------------ | ------------ | ------------ | ------------ |
 | Polygons                                                              | 32,000             | 70,000       | 70,000       | 70,000       |
-| Bounds Size[^1]                                                        | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
+| Bounds Size[^1]                                                       | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
 | Texture Memory                                                        | 40 MB              | 75 MB        | 110 MB       | 150 MB       |
 | Skinned Meshes                                                        | 1                  | 2            | 8            | 16           |
 | Meshes                                                                | 4                  | 8            | 16           | 24           |
@@ -185,28 +185,28 @@ If this cap is exceeded on Quest, all [Avatar Dynamics](/avatars/avatar-dynamics
 **"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Quest entirely.** Please keep this in mind when creating avatars for VRChat on the Oculus Quest.
 :::
 
-| Avatar Quality                                                                    | Excellent          | Good         | Medium       | Poor         |
-|-----------------------------------------------------------------------------------| ------------------ | ------------ | ------------ | ------------ |
-| Polygons                                                                          | 7,500              | 10,000       | 15,000       | 20,000       |
-| Bounds Size[^1]                                                                    | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
-| Texture Memory                                                                    | 10 MB              | 18 MB        | 25 MB        | 40 MB        |
-| Skinned Meshes                                                                    | 1                  | 1            | 2            | 2            |
-| Meshes                                                                            | 1                  | 1            | 2            | 2            |
-| Material Slots                                                                    | 1                  | 1            | 2            | 4            |
-| Animators                                                                         | 1                  | 1            | 1            | 2            |
-| Bones                                                                             | 75                 | 90           | 150          | 150          |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Components[^2]                                                           | 0                  | 4            | 6            | 8            |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms[^2]                                                  | 0                  | 16           | 32           | 64           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders[^2]                                                            | 0                  | 4            | 8            | 16           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count[^2]                                                | 0                  | 16           | 32           | 64           |
-| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)[^2]                                                       | 2                  | 4            | 8            | 16           |
-| Particle Systems                                                                  | 0                  | 0            | 0            | 2            |
-| Total Particles Active                                                            | 0                  | 0            | 0            | 200          |
-| Mesh Particle Active Polys                                                        | 0                  | 0            | 0            | 400          |
-| Particle Trails Enabled                                                           | False              | False        | False        | True         |
-| Particle Collision Enabled                                                        | False              | False        | False        | True         |
-| Trail Renderers                                                                   | 0                  | 0            | 0            | 1            |
-| Line Renderers                                                                    | 0                  | 0            | 0            | 1            |
+| Avatar Quality                                                            | Excellent          | Good         | Medium       | Poor         |
+| ------------------------------------------------------------------------- | ------------------ | ------------ | ------------ | ------------ |
+| Polygons                                                                  | 7,500              | 10,000       | 15,000       | 20,000       |
+| Bounds Size[^1]                                                           | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
+| Texture Memory                                                            | 10 MB              | 18 MB        | 25 MB        | 40 MB        |
+| Skinned Meshes                                                            | 1                  | 1            | 2            | 2            |
+| Meshes                                                                    | 1                  | 1            | 2            | 2            |
+| Material Slots                                                            | 1                  | 1            | 2            | 4            |
+| Animators                                                                 | 1                  | 1            | 1            | 2            |
+| Bones                                                                     | 75                 | 90           | 150          | 150          |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Components[^2]            | 0                  | 4            | 6            | 8            |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms[^2]   | 0                  | 16           | 32           | 64           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders[^2]             | 0                  | 4            | 8            | 16           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count[^2] | 0                  | 16           | 32           | 64           |
+| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)[^2]         | 2                  | 4            | 8            | 16           |
+| Particle Systems                                                          | 0                  | 0            | 0            | 2            |
+| Total Particles Active                                                    | 0                  | 0            | 0            | 200          |
+| Mesh Particle Active Polys                                                | 0                  | 0            | 0            | 400          |
+| Particle Trails Enabled                                                   | False              | False        | False        | True         |
+| Particle Collision Enabled                                                | False              | False        | False        | True         |
+| Trail Renderers                                                           | 0                  | 0            | 0            | 1            |
+| Line Renderers                                                            | 0                  | 0            | 0            | 1            |
 
 [^1]: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
 
@@ -233,32 +233,32 @@ You can choose to manage avatars based on their Avatar Performance Rank. This op
 
 When you choose a Performance Rank in this menu, all avatars that are below that level will have their components/display managed as described below.
 
-| Parameter                                                                         | Description                                                                                                          |
-| :-- |:---------------------------------------------------------------------------------------------------------------------|
-| Polygons                                                                          | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                     |
-| Bounds Size                                                                       | No change                                                                                                            |
-| Texture Memory                                                                    | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
-| Skinned Meshes                                                                    | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
-| Meshes                                                                            | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
-| Material Slots                                                                    | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
-| Physics Bone Components, Transforms, Colliders, CollisionCheckCount, or Contacts  | All PhysBone, PhysBone Collider,and Contact components removed                                                       |
-| Dynamic Bone Components or Transforms                                             | All Dynamic Bones components removed                                                                                 |
-| Dynamic Bone Colliders or Collision Check Count                                   | All Dynamic Bone Collider components removed                                                                         |
-| Animators                                                                         | All animators (aside from root animator) removed                                                                     |
-| Bones                                                                             | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
-| Lights                                                                            | All Lights removed                                                                                                   |
-| Particle Systems                                                                  | All Particle Systems removed                                                                                         |
-| Total Particles Active                                                            | All Particle Systems removed                                                                                         |
-| Mesh Particle Active Polys                                                        | All Particle Systems removed                                                                                         |
-| Particle Trails Enabled                                                           | All Particle Systems removed                                                                                         |
-| Particle Collision Enabled                                                        | All Particle Systems removed                                                                                         |
-| Trail Renderers                                                                   | All Trail Renderers removed                                                                                          |
-| Line Renderers                                                                    | All Line Renderers removed                                                                                           |
-| Cloths                                                                            | All Cloth components removed                                                                                         |
-| Total Cloth Vertices                                                              | All Cloth components removed                                                                                         |
-| Physics Colliders                                                                 | All Physics Colliders removed                                                                                        |
-| Physics Rigidbodies                                                               | All Physics Rigidbodies removed                                                                                      |
-| Audio Sources                                                                     | All Audio Sources removed                                                                                            |
+| Parameter                                                                        | Description                                                                              |
+| :------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+| Polygons                                                                         | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
+| Bounds Size                                                                      | No change                                                                                |
+| Texture Memory                                                                   | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
+| Skinned Meshes                                                                   | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
+| Meshes                                                                           | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
+| Material Slots                                                                   | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
+| Physics Bone Components, Transforms, Colliders, CollisionCheckCount, or Contacts | All PhysBone, PhysBone Collider,and Contact components removed                           |
+| Dynamic Bone Components or Transforms                                            | All Dynamic Bones components removed                                                     |
+| Dynamic Bone Colliders or Collision Check Count                                  | All Dynamic Bone Collider components removed                                             |
+| Animators                                                                        | All animators (aside from root animator) removed                                         |
+| Bones                                                                            | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
+| Lights                                                                           | All Lights removed                                                                       |
+| Particle Systems                                                                 | All Particle Systems removed                                                             |
+| Total Particles Active                                                           | All Particle Systems removed                                                             |
+| Mesh Particle Active Polys                                                       | All Particle Systems removed                                                             |
+| Particle Trails Enabled                                                          | All Particle Systems removed                                                             |
+| Particle Collision Enabled                                                       | All Particle Systems removed                                                             |
+| Trail Renderers                                                                  | All Trail Renderers removed                                                              |
+| Line Renderers                                                                   | All Line Renderers removed                                                               |
+| Cloths                                                                           | All Cloth components removed                                                             |
+| Total Cloth Vertices                                                             | All Cloth components removed                                                             |
+| Physics Colliders                                                                | All Physics Colliders removed                                                            |
+| Physics Rigidbodies                                                              | All Physics Rigidbodies removed                                                          |
+| Audio Sources                                                                    | All Audio Sources removed                                                                |
 
 ### Minimum Displayed Performance Rank on PC
 On VRChat for PC, the Minimum Displayed Performance Rank is set to "Very Poor" by default. This means that, by default, no avatars will have their components or display affected for performance reasons on PC. If you wish to change this, you can choose between "Medium", "Poor", or "Very Poor" options.

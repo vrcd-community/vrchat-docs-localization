@@ -8,7 +8,7 @@
 
 <center>
 
-![img](../img/vrchat-community-labs-1.png)
+![img](/docs.vrchat.com/images/vrchat-community-labs-1.png)
 
 </center>
 
@@ -20,7 +20,7 @@
 
 <center>
 
-![img](../img/vrchat-community-labs-2.png)
+![img](/docs.vrchat.com/images/vrchat-community-labs-2.png)
 
 </center>
 
@@ -30,7 +30,7 @@
 
 <center>
 
-![img](../img/vrchat-community-labs-3.png)
+![img](/docs.vrchat.com/images/vrchat-community-labs-3.png)
 
 </center>
 
@@ -40,7 +40,7 @@
 
 <center>
 
-![img](../img/vrchat-community-labs-4.png)
+![img](/docs.vrchat.com/images/vrchat-community-labs-4.png)
 
 </center>
 
@@ -50,7 +50,7 @@
 
 <center>
 
-![img](../img/vrchat-community-labs-5.png)
+![img](/docs.vrchat.com/images/vrchat-community-labs-5.png)
 
 </center>
 

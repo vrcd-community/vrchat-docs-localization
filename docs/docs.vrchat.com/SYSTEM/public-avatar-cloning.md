@@ -10,7 +10,7 @@
 
 <center>
 
-![img](../img/public-avatar-cloning-1.png)
+![img](/docs.vrchat.com/images/public-avatar-cloning-1.png)
 
 *别用那种眼神看我*
 
@@ -21,7 +21,7 @@
 
 <center>
 
-![img](../img/public-avatar-cloning-2.png)
+![img](/docs.vrchat.com/images/public-avatar-cloning-2.png)
 
 *( o ∀ ° )ﾉﾞ*
 

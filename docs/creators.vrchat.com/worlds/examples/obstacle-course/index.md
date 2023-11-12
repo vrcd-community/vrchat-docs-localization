@@ -22,12 +22,12 @@ Here are some easy things you can modify to get started:
 
 ## Move & Jump
 Open the Toolkit window from your menu bar by finding the "▶ Obstacle Course Toolkit" item and selecting "Open Window" from its dropdown. Open the "Power Ups" section and you can change the default Move and Jump powers for the world.
-![index-40a0a08-utility-change-defaults.png](/img/worlds/index-40a0a08-utility-change-defaults.png)
+![index-40a0a08-utility-change-defaults.png](/creators.vrchat.com/images/worlds/index-40a0a08-utility-change-defaults.png)
 
 ## Number of Players
 If you want to increase the number of players that can run through the course, just open the "Player Manager" section of the Utility Window and increase the number here. Make sure you change the number of players your world can handle when you publish your world to be half of this number!
-![index-985e270-number-of-players.png](/img/worlds/index-985e270-number-of-players.png)
+![index-985e270-number-of-players.png](/creators.vrchat.com/images/worlds/index-985e270-number-of-players.png)
 
 ## PowerUp Properties
 Back in the "Power Ups" section of the Utility Window, open the "PowerUps in Scene" section. Click on the name of a PowerUp and the Scene View will focus on it so you can see which one it is. Then you can change the _speed_, _jump_ and/or _duration_ fields to update the variables on that PowerUp.
-![index-f5481d9-powerups-in-scene.png](/img/worlds/index-f5481d9-powerups-in-scene.png)
+![index-f5481d9-powerups-in-scene.png](/creators.vrchat.com/images/worlds/index-f5481d9-powerups-in-scene.png)

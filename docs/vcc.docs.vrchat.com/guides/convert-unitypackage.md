@@ -19,22 +19,22 @@ We provide this tool to ease the transition. The steps below will guide you in m
 3. Open the new project in Unity.
 4. Import your package into this new project, into the Assets folder as you would if it were a .unitypackage-style project.
 
-    ![Imported Assets Folder](/images/package-maker/folder-imported.png)
+    ![Imported Assets Folder](/vcc.docs.vrchat.com/images/package-maker/folder-imported.png)
 
 5. Open the Package Maker Tool window from the menu option `VRChat SDK / Utilities / Package Maker`. 
 
-   ![Package Maker Window](/images/package-maker/window.png)
+   ![Package Maker Window](/vcc.docs.vrchat.com/images/package-maker/window.png)
 
 6. In the "Project" panel, find the parent folder with all your packages' assets from within the Assets folder, and Drag and drop it into the "Target Folder" field of the window.
 
-   ![Drag and Drop Assets Folder](/images/package-maker/drag-drop-folder.png)
+   ![Drag and Drop Assets Folder](/vcc.docs.vrchat.com/images/package-maker/drag-drop-folder.png)
 
 7. Enter an ID for your package in the Package Maker's "Package ID" field. The standard practice for is reverse domain notation like com.vrchat.packagename, using a domain you own. It needs to be unique across VRChat to play nice with other packages, so if you don't own a domain you can try your username.
 8. If your package requires any VRChat SDK packages, choose the most fitting one from the "Related VRChat Package" dropdown.
 9. Once you have a valid Target Folder and Package ID chosen, the "Convert Assets to Package" button will be enabled. Press it now.
 10. The tool will present a confirmation dialog about the permanent changes it's about to make. Read through them and confirm it to perform the migration or cancel it to go back and change something.
 
-   ![Confirmation Dialog](/images/package-maker/confirm.png)
+   ![Confirmation Dialog](/vcc.docs.vrchat.com/images/package-maker/confirm.png)
 
 11. After confirming, a progress bar will appear as the migration is performed. First, the tool will create the proper file and folder layout for your package within your project's "Packages" directory. Then it will move all the files into their corresponding folders. Anything that was in an "Editor" folder in your Assets, even if it was nested down several layers, will be moved into the top-level Editor folder in your package. All other files will be moved into the Runtime folder.
 12. If you have Auto-Refresh turned off in Unity, you will need to Refresh at this point by pressing Ctrl-R. At this point, your package _may_ be all migrated and properly working. You can safely remove the Package Maker Tool and related "PackageMakerWindowData.asset" file from your project.
@@ -44,7 +44,7 @@ If your project has errors at this point, you may need to do some [troubleshooti
 ## Customizing Your Package
 Once your package has been created, you can modify the Name, Description etc by selecting the 'package.json' file in the Project window from `Packages/YourPackageName/package.json`.
 
-![Manifest in the Inspector](/images/package-maker/manifest-inspector.png)
+![Manifest in the Inspector](/vcc.docs.vrchat.com/images/package-maker/manifest-inspector.png)
 
 You can change the Display Name (ie VRChat - Worlds instead of com.vrchat.worlds), version, description, unity package dependencies, etc. here. If you change the 'Name' of the package, then your Assembly References might break, since they refer to the name of your package entered when it was migrated.
 

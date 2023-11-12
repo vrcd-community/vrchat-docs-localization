@@ -2,7 +2,7 @@
 
 The VRC Quick Launcher is a tool that helps you launch multiple profiles in the same instance of VRChat while also providing an interface to modify the debug options. This avoids the issue of having tons of shortcuts.
 
-![VRC Quick Launcher GUI](/images/vrc-quick-launcher.png)
+![VRC Quick Launcher GUI](/vcc.docs.vrchat.com/images/vrc-quick-launcher.png)
 
 ## Features
   * Support for multiple VRChat exes to use for launching (will default to the Steam one if it exist) and will remember up to the last 10 used, this means you can easily access and use VRChat & VRChat - Dev for example.

@@ -9,7 +9,7 @@ Since the 1980s, MIDI has connected musical instruments in imaginative ways. We'
 
 >Read more about [MIDI on Wikipedia](https://en.wikipedia.org/wiki/MIDI).
 
-![image](/img/worlds/index-215557268-2d85f551-8fff-4990-a95a-c8a2d412d6a2.png)
+![image](/creators.vrchat.com/images/worlds/index-215557268-2d85f551-8fff-4990-a95a-c8a2d412d6a2.png)
 
 There are two ways to work with MIDI in your Udon worlds:
 - ## [Realtime](realtime-midi) data from an instrument plugged into your computer.

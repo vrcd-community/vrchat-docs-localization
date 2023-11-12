@@ -13,7 +13,7 @@ You can use MIDI devices to control your Udon world in realtime using MIDI Notes
 
 To get started with Midi in your scene, add a **VRC Midi Listener** component to one of your GameObjects.
 
-![VRCMidiListener](/img/worlds/realtime-midi-215557542-bf65a6ef-47d0-4e2f-8d39-337847db461c.png)
+![VRCMidiListener](/creators.vrchat.com/images/worlds/realtime-midi-215557542-bf65a6ef-47d0-4e2f-8d39-337847db461c.png)
 
 This component informs VRChat that you want to receive MIDI events and starts up the MIDI system if needed. **You need to select the events you want to receive** by pressing the 'Active Events' toggles to select them - no events are selected by default, so turn them on before you start testing. **You also need to choose an UdonBehaviour** that will receive these events by selecting it as the 'Behaviour' on the VRC Midi Listener. This UdonBehaviour can be on the same GameObject as the MIDI Listener, or any other object.
 
@@ -23,9 +23,9 @@ When you start your scene, you may notice a **VRCMidiHandler** GameObject that i
 
 You can test your MIDI events in the Unity Editor by selecting your device through the VRChat SDK. It is saved in your Editor preferences, so Unity will remember your device for every project.
 
-![Midi Utility Window](/img/worlds/realtime-midi-215557576-5414eb63-a857-4334-8a8c-05f3b6436773.png)
+![Midi Utility Window](/creators.vrchat.com/images/worlds/realtime-midi-215557576-5414eb63-a857-4334-8a8c-05f3b6436773.png)
 
-![Midi Utility Selector](/img/worlds/realtime-midi-215557616-8cc3fd99-0fe4-4564-9413-cc805708cf89.png)
+![Midi Utility Selector](/creators.vrchat.com/images/worlds/realtime-midi-215557616-8cc3fd99-0fe4-4564-9413-cc805708cf89.png)
 
 ## Device Selection - Runtime
 

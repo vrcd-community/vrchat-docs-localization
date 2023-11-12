@@ -16,10 +16,10 @@ Ok, you've made a simple remix of our demo parts, and you're now ready to add yo
 
 Here is the hierarchy of the Checkpoint prefab we include:
 
-![build-from-custom-parts-692d375-checkpoint-hierarchy.png](/img/worlds/build-from-custom-parts-692d375-checkpoint-hierarchy.png)
+![build-from-custom-parts-692d375-checkpoint-hierarchy.png](/creators.vrchat.com/images/worlds/build-from-custom-parts-692d375-checkpoint-hierarchy.png)
 
 ## Trigger Requirements
-![build-from-custom-parts-f72c567-checkpoint-inspector.png](/img/worlds/build-from-custom-parts-f72c567-checkpoint-inspector.png)
+![build-from-custom-parts-f72c567-checkpoint-inspector.png](/creators.vrchat.com/images/worlds/build-from-custom-parts-f72c567-checkpoint-inspector.png)
 
 :::note It's a Pattern!
 
@@ -27,7 +27,7 @@ The "Trigger" object on this prefab uses a pattern that you'll see repeated on n
 :::
 Your checkpoint needs a **Collider** on the **CourseTrigger** layer with _isTrigger_ turned on and an UdonBehaviour with the **OnPlayerDataEnter** program.
 
-![build-from-custom-parts-f896bef-checkpoint-inspector.png](/img/worlds/build-from-custom-parts-f896bef-checkpoint-inspector.png)
+![build-from-custom-parts-f896bef-checkpoint-inspector.png](/creators.vrchat.com/images/worlds/build-from-custom-parts-f896bef-checkpoint-inspector.png)
 
 This UdonBehaviour needs the following variables set:
 1. _fxPrefab_ should reference a Prefab which has some fun effects on it, and either the Udon Program **DestroyAfterXSeconds** or some other way that it destroys itself after some time.
@@ -68,7 +68,7 @@ The Utility Window lists your "Checkpoint Prefabs" for easily adding them to you
 Read through "Making Custom Checkpoints" above first to understand how the Trigger Collider system works, since it's the same for PowerUps. Once you've got a your Trigger Collider set up, you can work on the **PowerUp** program.
 
 ## PowerUp Program Requirements
-![build-from-custom-parts-c3ecfa0-speed-up-program.png](/img/worlds/build-from-custom-parts-c3ecfa0-speed-up-program.png)
+![build-from-custom-parts-c3ecfa0-speed-up-program.png](/creators.vrchat.com/images/worlds/build-from-custom-parts-c3ecfa0-speed-up-program.png)
 
 * First, make sure you have a Trigger Collider set up which calls "Trigger" on this UdonBehaviour.
 * _playerModsManager_ can be left alone, this will be injected when you create the PowerUp through the Utility window, or when you press "Refresh".
@@ -87,7 +87,7 @@ We've created two types of Hazard that you can work from - **Respawn** hazards a
 
 ## Respawn Hazards
 This is the most common Hazard in our demo course. It uses a Trigger Collider to Respawn the player to the last Checkpoint. You need a trigger collider set up to run the "Trigger" event on another object which has the **RespawnOnCourse** program on it.
-![build-from-custom-parts-752dc13-moving-wall-hazard.png](/img/worlds/build-from-custom-parts-752dc13-moving-wall-hazard.png)
+![build-from-custom-parts-752dc13-moving-wall-hazard.png](/creators.vrchat.com/images/worlds/build-from-custom-parts-752dc13-moving-wall-hazard.png)
 
 The RespawnOnCourse program will automatically have the _course_ variable set when you Refresh your UtilityWindow.
 
@@ -95,13 +95,13 @@ The RespawnOnCourse program will automatically have the _course_ variable set wh
 This hazard is made up of two parts, it's the most customized single-purpose Hazard we provide, as an example of extending our basic system to add functionality.
 
 ### HazardSpawner Program
-![build-from-custom-parts-3ab9259-hazardspawner.png](/img/worlds/build-from-custom-parts-3ab9259-hazardspawner.png)
+![build-from-custom-parts-3ab9259-hazardspawner.png](/creators.vrchat.com/images/worlds/build-from-custom-parts-3ab9259-hazardspawner.png)
 
 This program will spawn its _prefab_ every _delay_ seconds. It has a reference to _playerModsManager_ which will be injected when the Utility Window is Refreshed.
 When it spawns a Hazard, it will look for an UdonBehaviour on the new object, and set its _playerModsManager_ variable to the reference it has. This is needed so the spawned Hazard can reduce the player's speed.
 
 ### SpawnedHazard Program
-![build-from-custom-parts-a85b1af-barrel-hazard.png](/img/worlds/build-from-custom-parts-a85b1af-barrel-hazard.png)
+![build-from-custom-parts-a85b1af-barrel-hazard.png](/creators.vrchat.com/images/worlds/build-from-custom-parts-a85b1af-barrel-hazard.png)
 
 This prefab has a TriggerCollider on the "Trigger" child object which runs the event "HitPlayer" on the SpawnedHazard program. 
 
@@ -117,7 +117,7 @@ Since these prefabs are not created and managed through the Utility Window, it's
 Here are some other things you can play with:
 
 ## Score Fields
-![build-from-custom-parts-60cfc05-ScoreManager.png](/img/worlds/build-from-custom-parts-60cfc05-ScoreManager.png)
+![build-from-custom-parts-60cfc05-ScoreManager.png](/creators.vrchat.com/images/worlds/build-from-custom-parts-60cfc05-ScoreManager.png)
 
 If you want to change the look of the Score Fields or the number of scores that are shown, you can duplicated the "ScoreField" prefab, drop your new version into the "Score Object Prefab" slot in the "Score Manager" section of the Utility Window, and set the "Number of Scores to Show" to regenerate the UI that displays the scores.
 
@@ -130,7 +130,7 @@ If you want to change the camera angle, smoothing amount, etc of the Minimap, yo
 ## Advanced Stuff
 You can click on the new Course Asset you made in your Project pane to see its raw data, and access all kinds of stuff that you can change **_at your own risk_**, like the default Udon Programs. You can also modify the "Variable to Scene Object Lookup" section:
 
-![build-from-custom-parts-489afea-lookup.png](/img/worlds/build-from-custom-parts-489afea-lookup.png)
+![build-from-custom-parts-489afea-lookup.png](/creators.vrchat.com/images/worlds/build-from-custom-parts-489afea-lookup.png)
 
 This is where the UtilityWindow looks when it runs Refresh() to inject the right objects into UdonBehaviours. On the left are variable names, and on the right are the names of objects in the scene on which the correct Component can be found. Right now, the system supports finding and injecting these Component Types:
 * GameObject

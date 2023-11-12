@@ -7,7 +7,7 @@ updatedAt: "2019-10-28T19:23:09.636Z"
 sidebar_position: -1
 ---
 Setting up Unity to create Quest content is actually pretty straightforward. This image covers it pretty well:
-![setting-up-unity-for-creating-quest-content-1ac8b19-VRChat_QuestContent_QuickStart.png](/img/setting-up-unity-for-creating-quest-content-1ac8b19-VRChat_QuestContent_QuickStart.png)
+![setting-up-unity-for-creating-quest-content-1ac8b19-VRChat_QuestContent_QuickStart.png](/creators.vrchat.com/images/setting-up-unity-for-creating-quest-content-1ac8b19-VRChat_QuestContent_QuickStart.png)
 
 :::caution Requires Additional Setup
 

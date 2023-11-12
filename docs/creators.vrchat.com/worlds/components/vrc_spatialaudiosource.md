@@ -12,7 +12,7 @@ When added, `VRC_SpatialAudioSource` will automatically add a Unity `Audio Sourc
 
 This component can be used on both avatars and worlds.
 
-![image](/img/worlds/vrc_spatialaudiosource-1.png)
+![image](/creators.vrchat.com/images/worlds/vrc_spatialaudiosource-1.png)
 ## Unity Editor Interface
 
 The component generates two [Unity Gizmos](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Gizmos.html) that show:
@@ -23,13 +23,13 @@ The component generates two [Unity Gizmos](https://docs.unity3d.com/2019.4/Docum
 In addition, the `Audio Source` component generates a "Volumetric Radius" gizmo.
 
 Here's what the gizmos look like:
-![Component in this image is a bit out of date, but the gizmos are the same.](/img/worlds/vrc_spatialaudiosource-e975780-Unity_2019-07-09_11-51-13.png)
+![Component in this image is a bit out of date, but the gizmos are the same.](/creators.vrchat.com/images/worlds/vrc_spatialaudiosource-e975780-Unity_2019-07-09_11-51-13.png)
 The component contains tooltips for all properties. Hover over the name of the property to see a short description.
 
 ## Falloff Mechanics
 
 All units are in *meters*. Falloff of audio intensity is roughly inverse-square by default, as illustrated below:
-![](/img/worlds/vrc_spatialaudiosource-c969d41-crowhurst_basic_audio_vol1-39.gif)
+![](/creators.vrchat.com/images/worlds/vrc_spatialaudiosource-c969d41-crowhurst_basic_audio_vol1-39.gif)
 
 You can override the curve using the graph on the `Audio Source`. This curve determines the intensity of the audio at a given distance.
 
@@ -75,14 +75,14 @@ On avatars, it is best to disable and enable the Audio Source components rather 
 
 Here's the information converted into a two-column markdown table:
 
-| Property                         | Description     |
-| :-- | :-- |
-| Gain                             | An additional boost to volume. By default, world audio sources get a 10dB boost. Avatar audio sources are limited to a maximum gain of 10dB. |
-| Far                              | The far radius, in meters, where volume falls off to silence. By default, it is set to 40m. Avatar audio is limited to a maximum of 40m. <br /> Far only overrides an Audio Source curve if you turn on the "Use Spatializer Falloff" checkbox on VRC_SpatialAudioSource. |
-| Advanced: Near                   | The near radius, in meters, where volume begins to fall off. We recommend keeping this at zero for realism and effective spatialization. Defaults to 0m. <br /> Near only overrides an Audio Source curve if you turn on the "Use Spatializer Falloff" checkbox on VRC_SpatialAudioSource.  |                                                                                                                                                 |
-| Advanced: Volumetric Radius      | An audio source is normally simulated to be a point source, however changing this value allows the source to appear to come from a larger area. This should be used carefully and is mainly for distant audio sources that need to sound "large" as you move past them. <br /> The listener should not ever get close to the radius for best results. Keep this at zero unless you know what you're doing. Defaults to 0m. <br />  The value for Volumetric Radius should always be lower than Far. |
-| Advanced: Use AudioSource Volume Curve | Use the AudioSource's '3D Sound Settings' volume curve. If unchecked, use Inverse Square falloff. It is recommended to keep this disabled to ensure realistic and authentic spatialization. <br /> <br /> Defaults to False. |
-| Advanced: Enable Spatialization  | Uncheck this to disable the default inverse-square falloff curve and instead use the Audio Source's spatialization settings. <br /><br /> Defaults to True.|
+| Property                               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| :------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gain                                   | An additional boost to volume. By default, world audio sources get a 10dB boost. Avatar audio sources are limited to a maximum gain of 10dB.                                                                                                                                                                                                                                                                                                                                                        |
+| Far                                    | The far radius, in meters, where volume falls off to silence. By default, it is set to 40m. Avatar audio is limited to a maximum of 40m. <br /> Far only overrides an Audio Source curve if you turn on the "Use Spatializer Falloff" checkbox on VRC_SpatialAudioSource.                                                                                                                                                                                                                           |
+| Advanced: Near                         | The near radius, in meters, where volume begins to fall off. We recommend keeping this at zero for realism and effective spatialization. Defaults to 0m. <br /> Near only overrides an Audio Source curve if you turn on the "Use Spatializer Falloff" checkbox on VRC_SpatialAudioSource.                                                                                                                                                                                                          |  |
+| Advanced: Volumetric Radius            | An audio source is normally simulated to be a point source, however changing this value allows the source to appear to come from a larger area. This should be used carefully and is mainly for distant audio sources that need to sound "large" as you move past them. <br /> The listener should not ever get close to the radius for best results. Keep this at zero unless you know what you're doing. Defaults to 0m. <br />  The value for Volumetric Radius should always be lower than Far. |
+| Advanced: Use AudioSource Volume Curve | Use the AudioSource's '3D Sound Settings' volume curve. If unchecked, use Inverse Square falloff. It is recommended to keep this disabled to ensure realistic and authentic spatialization. <br /> <br /> Defaults to False.                                                                                                                                                                                                                                                                        |
+| Advanced: Enable Spatialization        | Uncheck this to disable the default inverse-square falloff curve and instead use the Audio Source's spatialization settings. <br /><br /> Defaults to True.                                                                                                                                                                                                                                                                                                                                         |
 
 ## Avatar Limitations
 You are permitted to adjust the fall-off curve on avatar-based `Audio Sources`. Simply set `Use AudioSource Volume Curve` to True, adjust the curve in the `Audio Source`, and VRChat will use that fall-off curve instead of the default inverse-square.

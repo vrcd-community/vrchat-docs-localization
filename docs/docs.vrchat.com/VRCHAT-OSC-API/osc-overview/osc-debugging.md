@@ -2,7 +2,7 @@
 
 <center>
 
-![img](../../img/osc-debugging-1.png)
+![img](/docs.vrchat.com/images/osc-debugging-1.png)
 
 </center>
 

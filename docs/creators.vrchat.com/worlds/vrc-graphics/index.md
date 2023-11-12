@@ -26,7 +26,7 @@ See: https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Graphics.Blit
 ### Minimap Example
 The version of the SDK installed by [the Creator Companion](https://vcc.docs.vrchat.com) includes an example scene that provides a performant Minimap as an example use of Graphics.Blit. You can open it from the Unity Menu Bar under VRChat SDK > Samples > Minimap. This example uses the Udon Graph, it's also available as [an UdonSharp example](https://assets.vrchat.com/sdkExamples/com.vrchat-examples.minimap-1.0.0.unitypackage).
 
-![index-aecb84d-minimap-example.png](/img/worlds/index-aecb84d-minimap-example.png)
+![index-aecb84d-minimap-example.png](/creators.vrchat.com/images/worlds/index-aecb84d-minimap-example.png)
 
 ### Meta Quest Exceptions
 

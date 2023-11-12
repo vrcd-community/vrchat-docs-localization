@@ -50,7 +50,7 @@ Generally speaking, using parameter drivers in station animators is not a suppor
 The default `VRCChair` prefab included in the SDK can be used on avatars to let other players "sit" on you. You can use this to make your avatar into a car, a dinner table that moves around, and more! An avatar can have up to 6 stations.
 
 When using stations on an avatar that you want to animate on or off, you need to toggle specific objects and components. 
-![image](/img/worlds/vrc_station-0adc923-av-station-fix.png)
+![image](/creators.vrchat.com/images/worlds/vrc_station-0adc923-av-station-fix.png)
 **Do not animate or disable the toggle in the red box. Only animate the toggles in the green boxes.** Since this involves disabling/enabling components and objects, this **must** be done in the FX layer.
 
 Attempting to work around this by enabling/disabling a parent object of the chair will also cause problems. You must explicitly animate the objects highlighted above in green.
@@ -59,19 +59,19 @@ Keep in mind that having avatar stations on by default (as in, having the green 
 
 # Parameters and Options
 
-| Parameter                    | Description                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Player Mobility              | Should the player be able to move, options include:                                                      |
-|                              | - Mobile: Allow users to move when seated in station                                                    |
-|                              | - Immobilize: Prevents user from moving                                                                 |
-|                              | - Immobilize For Vehicle: Same as Immobilized but optimized for moving stations                        |
-| Can Use Station From Station | If the user can switch stations when sitting in a station                                                |
+| Parameter                       | Description                                                                                             |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Player Mobility                 | Should the player be able to move, options include:                                                     |
+|                                 | - Mobile: Allow users to move when seated in station                                                    |
+|                                 | - Immobilize: Prevents user from moving                                                                 |
+|                                 | - Immobilize For Vehicle: Same as Immobilized but optimized for moving stations                         |
+| Can Use Station From Station    | If the user can switch stations when sitting in a station                                               |
 | Animation Controller (optional) | Used to override normal seating animations with a custom one.                                           |
-| Disable Station Exit         | If the user cannot exit the station by usual means, use triggers to unseat the user                      |
-| Seated                       | Is this a station that the user should be sitting in? See the details above to see what this indicates. |
-| Station Enter Player Location | Transform used to define where the user should be transported to when seated                             |
-| Station Exit Player Location  | Transform used to define where the user should be transported to when they are unseated                  |
-| Controls Object              | This is used for having a station where you can control an object, such as vehicles.                     |
+| Disable Station Exit            | If the user cannot exit the station by usual means, use triggers to unseat the user                     |
+| Seated                          | Is this a station that the user should be sitting in? See the details above to see what this indicates. |
+| Station Enter Player Location   | Transform used to define where the user should be transported to when seated                            |
+| Station Exit Player Location    | Transform used to define where the user should be transported to when they are unseated                 |
+| Controls Object                 | This is used for having a station where you can control an object, such as vehicles.                    |
 
 The table above represents the "Parameter" and "Description" columns of the information you provided.
 

@@ -6,7 +6,7 @@
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-1.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-1.png)
 
 </center>
 
@@ -30,7 +30,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-2.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-2.png)
 
 </center>
 
@@ -50,7 +50,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-3.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-3.png)
 
 </center>
 
@@ -75,7 +75,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-4.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-4.png)
 
 </center>
 
@@ -83,7 +83,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-5.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-5.png)
 
 </center>
 
@@ -91,7 +91,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-6.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-6.png)
 
 </center>
 
@@ -99,7 +99,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-7.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-7.png)
 
 </center>
 
@@ -107,7 +107,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-8.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-8.png)
 
 </center>
 
@@ -151,7 +151,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-9.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-9.png)
 
 </center>
 
@@ -161,7 +161,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 <center>
 
-![img](../img/vrchat-safety-and-trust-system-10.png)
+![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-10.png)
 
 </center>
 

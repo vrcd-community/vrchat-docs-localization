@@ -85,7 +85,7 @@ DataToken _Bool = true;
 ### Udon Graph
 
 In Udon Graph, you'll need to use the `DataToken Implicit` or `DataToken Constructor` nodes to create a DataToken with the value inside.  
-![data-tokens-7GAcVrY.png](/img/worlds/data-tokens-7GAcVrY.png)
+![data-tokens-7GAcVrY.png](/creators.vrchat.com/images/worlds/data-tokens-7GAcVrY.png)
 
 ## Getting values out of a Data Token
 
@@ -116,7 +116,7 @@ if (dictionary.TryGetValue("key", TokenType.String, out DataToken value))
 }
 ```
 
-![data-tokens-SqQqE5w.png](/img/worlds/data-tokens-SqQqE5w.png)
+![data-tokens-SqQqE5w.png](/creators.vrchat.com/images/worlds/data-tokens-SqQqE5w.png)
 
 Once you are sure that you have the right type, you can get the value out of the DataToken by accessing value properties such as `DataToken.Float` and `DataToken.Boolean`. Each type has it's own property which can be used to pull that specific type out.
 
@@ -159,7 +159,7 @@ if (dictionary.TryGetValue("key", TokenType.Float out DataToken value)) {
 }
 ```
 
-![data-tokens-zcqKePv.png](/img/worlds/data-tokens-zcqKePv.png)
+![data-tokens-zcqKePv.png](/creators.vrchat.com/images/worlds/data-tokens-zcqKePv.png)
 
 ## FAQ
 

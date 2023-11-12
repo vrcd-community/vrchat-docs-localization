@@ -39,7 +39,7 @@ The Package Manager makes it easy to update packages in existing projects.
 * Select a version to add that package to your project, or select the "+" icon on the right to automatically install the newest version.
 * If there is an update available, you can download it by clicking the "Latest Version" button.
 
-![Offical Package Listing](/images/official-packages.png)
+![Offical Package Listing](/vcc.docs.vrchat.com/images/official-packages.png)
 
 ## Migrate Old VRChat Projects (Legacy SDK)
 If you have existing SDK3 World or Avatar projects that use our [Legacy SDK](https://vcc.docs.vrchat.com/legacy-sdk), their VRChat SDKs can be automatically migrated to this new VPM-compatible format.
@@ -49,12 +49,12 @@ If you have existing SDK3 World or Avatar projects that use our [Legacy SDK](htt
 After adding your project to the list, click the 'Manage Project' button to open its details.
 * If this project is a `.unitypackage`-style SDK3 Worlds or Avatars project with an `Assets/VRCSDK` folder, a button will appear with the label "Migrate Project"
 
-![Migration Screen](/images/migrate-button.png)
+![Migration Screen](/vcc.docs.vrchat.com/images/migrate-button.png)
 
 * If the project is not recognized as a VRChat project, the button will not appear. Try opening the project to get the Creator Companion to recognize it.
 * Unsupported SDKs (SDK2) are not supported. 
 
-![Unsupported Project](/images/unsupported-project.png)
+![Unsupported Project](/vcc.docs.vrchat.com/images/unsupported-project.png)
 
 * If your project type is supported, click "Migrate Project" and kick back. This process can take a few minutes for a small project, and much longer for a large one. Once it's complete, you can manage your project's packages and open it via the Creator Companion.
 

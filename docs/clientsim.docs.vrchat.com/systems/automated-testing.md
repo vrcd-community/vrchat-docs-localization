@@ -10,7 +10,7 @@ ClientSim has many different tests to verify the behaviour of the program. The m
 
 Once added, Unity will import the tests and you will see them populated in the Test Runner Window.
 
-![Test Runner](/images/test-runner.png)
+![Test Runner](/clientsim.docs.vrchat.com/images/test-runner.png)
 
 ## Unit Tests
 

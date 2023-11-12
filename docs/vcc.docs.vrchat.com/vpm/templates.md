@@ -57,4 +57,4 @@ The only required fields are "name" and "displayName" for now. Note that "defaul
 4b. If this tool is not yet migrated to VPM and instead should live in the Assets folder, I can instead just copy it into `HypeWorld\Assets`. Everything in the Assets, Packages and ProjectSettings folders will be copied into my new project. Make sure that you *don't* include the file ProjectSettings/ProjectVersion.txt. This is not included in the World template but it will be in your ProjectSettings folder if you're copying files from an existing project.
 
 With that folder in place, your template should now show up on the right side of the Templates screen when choosing to create a New Project:
-![User Templates](/images/user-templates.png)
+![User Templates](/vcc.docs.vrchat.com/images/user-templates.png)

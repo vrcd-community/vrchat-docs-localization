@@ -10,7 +10,7 @@
 
 <center>
 
-![img](../img/adjusting-your-avatars-height-1.png)
+![img](/docs.vrchat.com/images/adjusting-your-avatars-height-1.png)
 
 </center>
 

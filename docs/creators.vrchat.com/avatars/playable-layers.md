@@ -114,7 +114,7 @@ You can now provide your own T-Pose!
 
 The T-Pose is used to determine various measurements of your avatar, especially for placement of your viewpoint (or view-ball). Viewpoint is dependent entirely on where your view-ball is when your avatar is in this T-Pose animation you provide.
 
-![Standard T-Pose - [Mixamo](https://www.mixamo.com)](/img/avatars/playable-layers-1.png)
+![Standard T-Pose - [Mixamo](https://www.mixamo.com)](/creators.vrchat.com/images/avatars/playable-layers-1.png)
 
 Secondly, it is important for the wrist alignment/twist. The way your wrists are lined up in relation to the palm-down position will affect how your controller twisting in space will turn your wrist and arm.
 

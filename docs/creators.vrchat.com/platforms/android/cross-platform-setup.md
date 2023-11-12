@@ -29,7 +29,7 @@ Keep in mind that any changes you make to one project, you should make to both. 
 For more complex or wider-reaching changes, you may have to re-duplicate the project, or be very careful with how duplicate the changes.
 ## Setting up for Quest
 Open your Quest project in Unity. Since it is a duplicate, you shouldn't have any changes. However, we're about to change that. Let's swap your build target to Android. Here's how to do that:
-![cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png](/img/cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png)
+![cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png](/creators.vrchat.com/images/cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png)
 
 There's some important notes here:
 - [You need to install Unity's Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html). Otherwise the option won't pop up.

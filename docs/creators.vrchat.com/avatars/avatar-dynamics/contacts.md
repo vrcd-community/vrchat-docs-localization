@@ -11,7 +11,7 @@ These are separate from standard Unity colliders. Contacts are broken down into 
 
 # VRCContactSender
 The Contact Sender component defines a volume of space that will send a Contact signal upon contact with a Contact Receiver.
-![contacts-59b6e82-2022-04-19_11-53-01_Unity.png](/img/avatars/contacts-59b6e82-2022-04-19_11-53-01_Unity.png)
+![contacts-59b6e82-2022-04-19_11-53-01_Unity.png](/creators.vrchat.com/images/avatars/contacts-59b6e82-2022-04-19_11-53-01_Unity.png)
 `Root Transform` - Transform where this contact is placed. If empty, we use this game object's transform.
 
 ## Shape
@@ -28,7 +28,7 @@ This section contains settings allowing you to adjust and define how this Contac
 `Collision Tags` - List of strings that specify what it can affect/be affected by. For a successful collision to occur, both the sender and receiver need at least one matching pair of strings. Collision tags are case sensitive.
 
 As an example, the tags below will cause the Sender to send a contact signal when they come into contact with the default Head [ContactReceiver](/avatars/avatar-dynamics/contacts#VRCContactReceiver) or any custom [ContactReceiver](/avatars/avatar-dynamics/contacts#VRCContactReceiver) with the tag `Face`-- note the capital F!
-![contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png](/img/avatars/contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png)
+![contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png)
 ## Standard Colliders
 A set of "Standard Colliders" are defined in the Avatar Descriptor, in a new section called “Colliders”. This section lets you define a number of standard colliders that exist on every avatar. These will be setup automatically if you don’t touch this, but they may also be tweaked to exactly fit your avatar. These colliders do not affect the performance rating.
 
@@ -46,7 +46,7 @@ These colliders act primarily as Contact Senders that other people can detect wi
 
 # VRCContactReceiver
 The Contact Receiver component defines a volume of space that will receive a Contact signal upon contact with a Contact Sender. It will then set an [Animator Parameter](/avatars/animator-parameters) in a certain way, as defined by the user.
-![contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png](/img/avatars/contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png)
+![contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png)
 `Root Transform` - Transform where this contact is placed. If empty, we use this game object's transform.
 
 ## Shape

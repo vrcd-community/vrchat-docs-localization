@@ -33,7 +33,7 @@ The Creator Companion requires our currently Supported Unity Version. If you hav
 
 If the Creator Companion cannot automatically find your installed Unity Editor, an error message will be shown. In the Creator Companion's settings page, you can use the 📁-button to browse for the Unity Editor you'd like to use. 
 
-![Browse for the Unity Editor](/images/browse-unity-editor.png)
+![Browse for the Unity Editor](/vcc.docs.vrchat.com/images/browse-unity-editor.png)
 
 ## Make New Projects
 

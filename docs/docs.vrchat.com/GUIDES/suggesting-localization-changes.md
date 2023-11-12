@@ -22,7 +22,7 @@ VRChat 目前已翻译到了其他语言，但尚未本地化。也就是说我�
 
 <center>
 
-![img](../img/suggesting-localization-changes-1.png)
+![img](/docs.vrchat.com/images/suggesting-localization-changes-1.png)
 
 </center>
 
@@ -32,7 +32,7 @@ VRChat 目前已翻译到了其他语言，但尚未本地化。也就是说我�
 
 <center>
 
-![img](../img/suggesting-localization-changes-2.png)
+![img](/docs.vrchat.com/images/suggesting-localization-changes-2.png)
 
 </center>
 
@@ -47,7 +47,7 @@ VRChat 目前已翻译到了其他语言，但尚未本地化。也就是说我�
 
 <center>
 
-![img](../img/suggesting-localization-changes-3.png)
+![img](/docs.vrchat.com/images/suggesting-localization-changes-3.png)
 
 </center>
 
@@ -55,7 +55,7 @@ VRChat 目前已翻译到了其他语言，但尚未本地化。也就是说我�
 
 <center>
 
-![img](../img/suggesting-localization-changes-4.png)
+![img](/docs.vrchat.com/images/suggesting-localization-changes-4.png)
 
 </center>
 
@@ -63,7 +63,7 @@ VRChat 目前已翻译到了其他语言，但尚未本地化。也就是说我�
 
 <center>
 
-![img](../img/suggesting-localization-changes-5.png)
+![img](/docs.vrchat.com/images/suggesting-localization-changes-5.png)
 
 </center>
 
@@ -78,7 +78,7 @@ Crowdin的翻译文本编辑器界面有四个分区：
 
 <center>
 
-![img](../img/suggesting-localization-changes-6.png)
+![img](/docs.vrchat.com/images/suggesting-localization-changes-6.png)
 
 </center>
 
@@ -92,7 +92,7 @@ Crowdin的翻译文本编辑器界面有四个分区：
 
 <center>
 
-![img](../img/suggesting-localization-changes-7.png)
+![img](/docs.vrchat.com/images/suggesting-localization-changes-7.png)
 
 </center>
 
