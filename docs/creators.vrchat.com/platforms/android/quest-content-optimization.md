@@ -17,7 +17,7 @@ There's also this [excellent video on optimizing your VR content by Lucas Rizzot
 
 As a final note, all items on this list are subject to change. In other words, we're not quite done nailing down restrictions and recommendations, so keep that in mind.
 ## Limit Enforcement
-The Oculus Quest has several hard (and soft) limits for content on avatars. Check out [Quest Content Limitations](/platforms/android/quest-content-limitations) to find out more, as well as our page [Avatar Performance Ranking System](/avatars/avatar-performance-ranking-system) for some more details on how blocking works.
+The Oculus Quest has several hard (and soft) limits for content on avatars. Check out [Quest Content Limitations](/creators.vrchat.com/platforms/android/quest-content-limitations) to find out more, as well as our page [Avatar Performance Ranking System](/creators.vrchat.com/avatars/avatar-performance-ranking-system) for some more details on how blocking works.
 
 If you upload an avatar or avatar world that features avatars greatly exceeding our recommendations, that world or avatar may be removed from public access.
 ## Unity Profiler
@@ -43,7 +43,7 @@ You should be aiming for a maximum of 5-8 MB. You cannot upload or wear/view ava
 ## Polygon Count
 Keeping polygon count low is very important on mobile platforms. Although the Quest is quite powerful for a mobile headset, its hardware does have limits. Keeping an eye on your polygon count is very important to keep performance high.
 
-These recommendations are technically enforced via our [Avatar Performance Ranking System](/avatars/avatar-performance-ranking-system).
+These recommendations are technically enforced via our [Avatar Performance Ranking System](/creators.vrchat.com/avatars/avatar-performance-ranking-system).
 
 **Worlds**
 
@@ -120,7 +120,7 @@ Ensure that the basic bone layout and hierarchy of your rigs are identical, incl
 
 Shaders are restricted for avatars in VRChat Quest, and you can only use the VRChat Mobile shaders included in the VRChat SDK.
 
-You can read about these variants on our [Quest Content Limitations](/platforms/android/quest-content-limitations) page.
+You can read about these variants on our [Quest Content Limitations](/creators.vrchat.com/platforms/android/quest-content-limitations) page.
 
 If you don't have a normal map for your avatar, don't use Bumped variants. It won't do anything for you, and you'll incur a little bit of a performance cost. Same for Specular.
 

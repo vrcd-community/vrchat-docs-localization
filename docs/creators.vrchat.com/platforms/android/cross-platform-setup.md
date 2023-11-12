@@ -42,14 +42,14 @@ You can reduce the time it takes to swap platforms by using Unity's Cache Server
 :::
 
 ## Fine-tuning and Optimization
-Now that you've got two separate projects set up appropriately, you'll need to start optimizing. **You cannot skip this.** Quest is a powerful headset, but not nearly as powerful as a typical VR-ready PC. You'll need to check out our [Quest Content Optimization](/platforms/android/quest-content-optimization) page to see what you need to do. For worlds this means baking lighting, lowering geometry complexity, avoiding transparency, and lowering texture resolution. For avatars, this means removal of excess components, excess bones, lowering geometry complexity, avoiding transparency, and reducing texture size.
+Now that you've got two separate projects set up appropriately, you'll need to start optimizing. **You cannot skip this.** Quest is a powerful headset, but not nearly as powerful as a typical VR-ready PC. You'll need to check out our [Quest Content Optimization](/creators.vrchat.com/platforms/android/quest-content-optimization) page to see what you need to do. For worlds this means baking lighting, lowering geometry complexity, avoiding transparency, and lowering texture resolution. For avatars, this means removal of excess components, excess bones, lowering geometry complexity, avoiding transparency, and reducing texture size.
 
 This will take a while, and is expected to be challenging. Optimizing for mobile hardware is difficult! Thankfully, there's a ton of resources out there, and even a cursory YouTube search for "optimizing Unity for mobile" reveals a ton of good content.
 
 You can also check out some of our documentation on optimizing content for Oculus Quest.
- - [Quest Content Optimization](/platforms/android/quest-content-optimization) 
- - [Quest Content Limitations](/platforms/android/quest-content-limitations) 
- - [Avatar Performance Ranking System](/avatars/avatar-performance-ranking-system) 
+ - [Quest Content Optimization](/creators.vrchat.com/platforms/android/quest-content-optimization) 
+ - [Quest Content Limitations](/creators.vrchat.com/platforms/android/quest-content-limitations) 
+ - [Avatar Performance Ranking System](/creators.vrchat.com/avatars/avatar-performance-ranking-system) 
 
 :::caution SyncVideoStream and SyncVideoPlayer Components
 
@@ -61,7 +61,7 @@ Although getting synced video playback working on Quest is an eventual goal, we 
 ## Uploading Content
 Once your world or avatar is ready, you can upload! This upload process is identical to the VRChat PC upload process, although the SDK will be a lot more aggressive with warning you about performance issues.
 
-**You need to upload your world or avatar to the same blueprint ID as you have for the VRChat PC version of the content.** Blueprint ID is defined by a [Pipeline Manager component](/sdk/vrcpipelinemanager) on a Game Object, which usually accompanies a VRC Scene Descriptor, typically on your VRCWorld prefab. Press the "Detach" button to edit the blueprint ID, and paste in the ID from the first version that you uploaded (you can also find this in the "Content Manager" tab of the VRChat SDK control panel).
+**You need to upload your world or avatar to the same blueprint ID as you have for the VRChat PC version of the content.** Blueprint ID is defined by a [Pipeline Manager component](/creators.vrchat.com/sdk/vrcpipelinemanager) on a Game Object, which usually accompanies a VRC Scene Descriptor, typically on your VRCWorld prefab. Press the "Detach" button to edit the blueprint ID, and paste in the ID from the first version that you uploaded (you can also find this in the "Content Manager" tab of the VRChat SDK control panel).
 
 The version you're uploading depends on the originating project's build target. If you're on a project set up for Android, it'll upload for Quest. If the build target is Windows, then you're uploading a PC version. That's basically it-- once you've uploaded, any client that views your content will talk to our servers a bit like this:
 

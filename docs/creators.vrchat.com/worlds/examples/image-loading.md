@@ -161,6 +161,6 @@ View the full source code for [SlideshowFrame.cs on GitHub](https://github.com/v
 
 :::tip Udon
 
-View the [main Image Loading docs page](/worlds/udon/image-loading) for full details on the Image Loading system, including domain and file limits.
+View the [main Image Loading docs page](/creators.vrchat.com/worlds/udon/image-loading) for full details on the Image Loading system, including domain and file limits.
 
 :::

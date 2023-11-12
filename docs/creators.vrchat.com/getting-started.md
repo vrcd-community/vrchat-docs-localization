@@ -14,8 +14,8 @@
 
 ## 世界创作
 
-要制作一个 VRChat 世界，您需要在 Unity 中使用典型的3D模型、材质和灯光构建一个场景。您可以使用 [Udon](./worlds/udon/udon.md)，我们的自定义脚本系统，添加交互性。Udon 可以用可视化的 [Udon Graph](./worlds/udon/udon.md) 或者用将 C# 代码编译为 Udon 的 [UdonSharp](../udonsharp.docs.vrchat.com/udonsharp.md) 来构建。您可以使用我们的[网络系统](./worlds/udon/networking/networking.md)来同步玩家之间的体验。
+要制作一个 VRChat 世界，您需要在 Unity 中使用典型的3D模型、材质和灯光构建一个场景。您可以使用 [Udon](/creators.vrchat.com/worlds/udon/.md)，我们的自定义脚本系统，添加交互性。Udon 可以用可视化的 [Udon Graph](/creators.vrchat.com/worlds/udon/.md) 或者用将 C# 代码编译为 Udon 的 [UdonSharp](../udonsharp.docs.vrchat.com/udonsharp.md) 来构建。您可以使用我们的[网络系统](/creators.vrchat.com/worlds/udon/networking/.md)来同步玩家之间的体验。
 
 ## 虚拟形象创作
 
-要制作一个VRChat虚拟形象，您必须首先创建或找到一个3D角色，然后确保它是[适配](./avatars/creating-your-first-avatar.md)VRChat  的。然后，您可以[将您的适配模型导入](./avatars/creating-your-first-avatar)到 Unity，并添加[表情和控制、虚拟形象动力学](./avatars/avatar-dynamics)等更多功能。
+要制作一个VRChat虚拟形象，您必须首先创建或找到一个3D角色，然后确保它是[适配](./avatars/creating-your-first-avatar.md)VRChat  的。然后，您可以[将您的适配模型导入](./avatars/creating-your-first-avatar)到 Unity，并添加[表情和控制、虚拟形象动力学](/creators.vrchat.com/avatars/avatar-dynamics/)等更多功能。

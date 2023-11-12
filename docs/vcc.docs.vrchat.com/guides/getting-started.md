@@ -26,7 +26,7 @@ To install Unity Hub, [follow these steps](https://learn.unity.com/tutorial/inst
 
 :::
 
-The Creator Companion is only fully-supported on Windows 10 (Windows 11 may work but is not fully tested). The [CLI has some functionality on Mac and Linux](/vpm/cli#mac-and-linux-support).
+The Creator Companion is only fully-supported on Windows 10 (Windows 11 may work but is not fully tested). The [CLI has some functionality on Mac and Linux](/vcc.docs.vrchat.com/vpm/cli#mac-and-linux-support).
 
 ### Unity Editor Versions
 The Creator Companion requires our currently Supported Unity Version. If you have Unity Hub installed, the Creator Companion can install it automatically for you.
@@ -44,7 +44,7 @@ To make a new project, just press "New" from the navigation bar on the left and 
 
 ## Migrate Existing Projects
 
-Migrating your existing projects is covered in detail in [VPM: Migrating Projects](/vpm/migrating).
+Migrating your existing projects is covered in detail in [VPM: Migrating Projects](/vcc.docs.vrchat.com/vpm/migrating).
 
 ## Updating Existing Projects
 

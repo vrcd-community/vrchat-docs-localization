@@ -7,7 +7,7 @@ You can open the window by going to `VRChat SDK > Udon Sharp > Class Exposure Tr
 - Red = Not exposed to Udon
 - Green = Exposed to Udon
 
-![Udon Type Exposure Tree](/images/type-exposure-tree.png)
+![Udon Type Exposure Tree](/udonsharp.docs.vrchat.com/images/type-exposure-tree.png)
 
 The **Show base members** toggle will show methods inherited from base classes that are exposed, for instance on things inheriting from `UnityEngine.Component`, this will show the `GetComponent<T>()` functions since they're defined on the base class.
 

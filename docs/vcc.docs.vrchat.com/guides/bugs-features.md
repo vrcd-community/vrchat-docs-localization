@@ -4,10 +4,10 @@ The Creator Companion is part of a wave of updates that were revealed at the sam
 
 
 Use [GitHub Issues - Creator Companion](https://github.com/vrchat-community/creator-companion/issues/new/choose)
-for issues with the [VRChat Creator Companion (VCC)](/), [Resolver](/vpm/resolver), [CLI](/vpm/cli) and [VRC Quick Launcher](/tools/vrc-quick-launcher).
+for issues with the [VRChat Creator Companion (VCC)](/), [Resolver](/vcc.docs.vrchat.com/vpm/resolver), [CLI](/vcc.docs.vrchat.com/vpm/cli) and [VRC Quick Launcher](/vcc.docs.vrchat.com/tools/vrc-quick-launcher).
 
 Use [GitHub Issues - UdonSharp](https://github.com/vrchat-community/udonsharp) for [UdonSharp](https://udonsharp.docs.vrchat.com) issues.
 
 Use [GitHub Issues - ClientSim](https://github.com/vrchat-community/clientsim) for [ClientSim](https://clientsim.docs.vrchat.com) issues.
 
-Use [GitHub Issues - VPM Package Maker](https://github.com/vrchat-community/vpm-package-maker/issues) for [VPM Package Maker](/guides/convert-unitypackage#package-maker-tool)
+Use [GitHub Issues - VPM Package Maker](https://github.com/vrchat-community/vpm-package-maker/issues) for [VPM Package Maker](/vcc.docs.vrchat.com/guides/convert-unitypackage#package-maker-tool)

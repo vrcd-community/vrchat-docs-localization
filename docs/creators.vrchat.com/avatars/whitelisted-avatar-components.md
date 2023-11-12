@@ -10,18 +10,18 @@ Here is a list of the components permitted on avatars. Any component not on this
 Custom scripts/components are not permitted on avatars, and will be removed at upload and runtime.
 :::caution Oculus Quest
 
-The Quest version of VRChat has some exceptions to this list. Check [here](/platforms/android/quest-content-limitations#components) for more info.
+The Quest version of VRChat has some exceptions to this list. Check [here](/creators.vrchat.com/platforms/android/quest-content-limitations#components) for more info.
 :::
 ## VRChat
 
 - VRCAvatarDescriptor 
 - PipelineManager
-- [VRCStation](/worlds/components/vrc_station)
-- [VRCPhysBone](/avatars/avatar-dynamics/physbones#vrcphysbone)
-- [VRCPhysBoneCollider](/avatars/avatar-dynamics/physbones#vrcphysbonecollider)
-- [VRCContactSender](/avatars/avatar-dynamics/contacts#vrccontactsender)
-- [VRCContactReceiver](/avatars/avatar-dynamics/contacts#VRCContactReceiver)
-- [VRCSpatialAudioSource](/worlds/components/vrc_spatialaudiosource#spatial-audio-on-avatars)
+- [VRCStation](/creators.vrchat.com/worlds/components/vrc_station)
+- [VRCPhysBone](/creators.vrchat.com/avatars/avatar-dynamics/physbones#vrcphysbone)
+- [VRCPhysBoneCollider](/creators.vrchat.com/avatars/avatar-dynamics/physbones#vrcphysbonecollider)
+- [VRCContactSender](/creators.vrchat.com/avatars/avatar-dynamics/contacts#vrccontactsender)
+- [VRCContactReceiver](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver)
+- [VRCSpatialAudioSource](/creators.vrchat.com/worlds/components/vrc_spatialaudiosource#spatial-audio-on-avatars)
 - [*VRC_IKFollower*](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated! You should use Constraints instead.
 
 ## Unity
@@ -79,7 +79,7 @@ If you discover a bug, please [let us know](https://feedback.vrchat.com).
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
 :::danger Dynamic Bone Deprecated
 
-Support for Dynamic Bone is deprecated. You should use [PhysBones](/avatars/avatar-dynamics/physbones) instead.
+Support for Dynamic Bone is deprecated. You should use [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) instead.
   
 :::
 

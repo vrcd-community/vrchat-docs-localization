@@ -24,7 +24,7 @@ If your project is using [UdonSharp](https://udonsharp.docs.vrchat.com/), read o
     - `Assets\VRChat Examples`
     - `Packages\com.vrchat.vrcsdk3`
     - `ProjectSettings\ProjectVersion.txt`
-    - Folders used by [Curated Community Packages](/vpm/curated-community-packages)
+    - Folders used by [Curated Community Packages](/vcc.docs.vrchat.com/vpm/curated-community-packages)
 5. From the Base Template included with the VCC, an `EditorSettings.asset` file is copied into your project, overwriting your old one to force an upgrade to Asset Database v2.
 6. A project manifest file called `package.json` is created if needed.
 7. The VRChat SDK "Base" package is added as an embedded package.
@@ -33,4 +33,4 @@ If your project is using [UdonSharp](https://udonsharp.docs.vrchat.com/), read o
 10. Once the process is complete, the Project will show up in the listing if it was successfully migrated.
 
 ### Special Package Migration
-We support automatic migration of the packages included in the [Curated Packages](/vpm/curated-community-packages) list - i.e.  UdonSharp, AudioLink, or GestureManager. If the legacy (`.unitypackage` extracted into `/Assets/`) versions of these packages are found in your project, they will be removed and replaced with the new versions.
+We support automatic migration of the packages included in the [Curated Packages](/vcc.docs.vrchat.com/vpm/curated-community-packages) list - i.e.  UdonSharp, AudioLink, or GestureManager. If the legacy (`.unitypackage` extracted into `/Assets/`) versions of these packages are found in your project, they will be removed and replaced with the new versions.

@@ -9,7 +9,7 @@ updatedAt: "2023-06-24T00:00:00.070Z"
 
 This UdonBehaviour example script allows you easily to override your world's avatar scaling settings.
 
-To learn how to write your own Udon script for avatar scaling, read our [avatar scaling documentation](/worlds/udon/players/player-avatar-scaling).
+To learn how to write your own Udon script for avatar scaling, read our [avatar scaling documentation](/creators.vrchat.com/worlds/udon/players/player-avatar-scaling).
 
 ![avatar-scaling-example-component.png](/creators.vrchat.com/images/worlds/udon/avatar-scaling-example-component.png)
 

@@ -43,7 +43,7 @@ This also applies to late-joiners. If you have 2 video players running in your w
 ## Supported Video Hosts
 To play a video, you need to provide a URL in the Video URL field when you set up your Video Player in the editor, or you can paste a URL into the VRCUrlInputField provided in the prefabs.
 
-A full list of our supported hosts is available at [Video Player Allowlist](/worlds/udon/video-players/www-whitelist). Some recommendations are below.
+A full list of our supported hosts is available at [Video Player Allowlist](/creators.vrchat.com/worlds/udon/video-players/www-whitelist). Some recommendations are below.
 :::note Disclaimer
 
 *The listings below do not constitute partnerships or endorsements*. These are services that are widely accessible and have been tested to work properly with VRChat video players.

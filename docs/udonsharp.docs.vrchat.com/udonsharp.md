@@ -3,19 +3,19 @@
 # Attributes
 All supported attributes in UdonSharp
 
-| | Attribute | | 
-|--- | --- | --- |
-|[Header](https://docs.unity3d.com/ScriptReference/HeaderAttribute.html)|[HideInInspector](https://docs.unity3d.com/ScriptReference/HideInInspector.html)|[NonSerialized](https://docs.microsoft.com/dotnet/api/system.nonserializedattribute)|
-|[SerializeField](https://docs.unity3d.com/ScriptReference/SerializeField.html)|[Space](https://docs.unity3d.com/ScriptReference/SpaceAttribute.html)|[Tooltip](https://docs.unity3d.com/ScriptReference/TooltipAttribute.html)|
-|[ColorUsage](https://docs.unity3d.com/ScriptReference/ColorUsageAttribute.html)|[GradientUsage](https://docs.unity3d.com/ScriptReference/GradientUsageAttribute.html)|[TextArea](https://docs.unity3d.com/ScriptReference/TextAreaAttribute.html)|
-|[UdonSynced](#udonsynced)|[DefaultExecutionOrder](#defaultexecutionorder)|[UdonBehaviourSyncMode](#udonbehavioursyncmode)|
-|[RecursiveMethod](#recursivemethod)|[FieldChangeCallback](#fieldchangecallback)|
+|                                                                                 | Attribute                                                                             |                                                                                      |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Header](https://docs.unity3d.com/ScriptReference/HeaderAttribute.html)         | [HideInInspector](https://docs.unity3d.com/ScriptReference/HideInInspector.html)      | [NonSerialized](https://docs.microsoft.com/dotnet/api/system.nonserializedattribute) |
+| [SerializeField](https://docs.unity3d.com/ScriptReference/SerializeField.html)  | [Space](https://docs.unity3d.com/ScriptReference/SpaceAttribute.html)                 | [Tooltip](https://docs.unity3d.com/ScriptReference/TooltipAttribute.html)            |
+| [ColorUsage](https://docs.unity3d.com/ScriptReference/ColorUsageAttribute.html) | [GradientUsage](https://docs.unity3d.com/ScriptReference/GradientUsageAttribute.html) | [TextArea](https://docs.unity3d.com/ScriptReference/TextAreaAttribute.html)          |
+| [UdonSynced](#udonsynced)                                                       | [DefaultExecutionOrder](#defaultexecutionorder)                                       | [UdonBehaviourSyncMode](#udonbehavioursyncmode)                                      |
+| [RecursiveMethod](#recursivemethod)                                             | [FieldChangeCallback](#fieldchangecallback)                                           |
 
 
 ## UdonSynced
 `[UdonSynced]` / `[UdonSynced(UdonSyncMode)]`
 
-*See [Synced Variables](/vrchat-api#synced-variables) for variables that can be synced.*
+*See [Synced Variables](/udonsharp.docs.vrchat.com/vrchat-api#synced-variables) for variables that can be synced.*
 
 ### Example
 ```cs
@@ -33,12 +33,12 @@ public class Example : UdonSharpBehaviour
 ### UdonSyncMode
 `UdonSharp.UdonSyncMode`
 
-| Name | Summary |
-| --- | --- |
-| NotSynced | |
-| None | No interpolation (Default) |
-| Linear | Lerp |
-| Smooth | *Some kind of smoothed syncing* |
+| Name      | Summary                         |
+| --------- | ------------------------------- |
+| NotSynced |                                 |
+| None      | No interpolation (Default)      |
+| Linear    | Lerp                            |
+| Smooth    | *Some kind of smoothed syncing* |
 
 ## UdonBehaviourSyncMode
 `[UdonBehaviourSyncMode]` / `[UdonBehaviourSyncMode(BehaviourSyncMode)]`
@@ -56,12 +56,12 @@ public class Example : UdonSharpBehaviour
 ### BehaviourSyncMode
 `UdonSharp.BehaviourSyncMode`
 
-| Name | Summary |
-| --- | --- |
-| Any | Nothing is enforced and the behaviours can be set to either sync type by the user. This is the default when no attribute is specified. |
-| None | Enforces no synced variables on the behaviour and hides the selection dropdown in the UI for the sync mode. Nothing is synced and SendCustomNetworkEvent will not work on the behaviour. |
-| Continuous | Synced variables will be updated automatically at a very frequent rate, but may not always reliably update to save bandwidth. |
-| Manual | Synced variables are updated manually by the user less frequently, but ensures that updates are reliable when requested. |
+| Name           | Summary                                                                                                                                                                                              |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Any            | Nothing is enforced and the behaviours can be set to either sync type by the user. This is the default when no attribute is specified.                                                               |
+| None           | Enforces no synced variables on the behaviour and hides the selection dropdown in the UI for the sync mode. Nothing is synced and SendCustomNetworkEvent will not work on the behaviour.             |
+| Continuous     | Synced variables will be updated automatically at a very frequent rate, but may not always reliably update to save bandwidth.                                                                        |
+| Manual         | Synced variables are updated manually by the user less frequently, but ensures that updates are reliable when requested.                                                                             |
 | NoVariableSync | Enforces that there are no synced variables on the behaviour, hides the sync mode selection dropdown, and allows you to use the behaviours on GameObjects that use either Manual or Continuous sync. |
 
 ## DefaultExecutionOrder

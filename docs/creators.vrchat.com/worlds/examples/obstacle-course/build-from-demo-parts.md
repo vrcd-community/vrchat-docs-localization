@@ -66,7 +66,7 @@ Select one of these checkpoints and the Scene View will move to focus on it. You
 At this point, you've extended or changed the course, and added some checkpoints - time for a test! Open the VRChat SDK Control Panel, sign into your account, and choose "Build & Test" to test out your course!
 :::note Build and Test
 
-If you have any problems launching your world or just want to learn more about local testing, check out the [Build and Test](/worlds/udon/using-build-test) docs.
+If you have any problems launching your world or just want to learn more about local testing, check out the [Build and Test](/creators.vrchat.com/worlds/udon/using-build-test) docs.
 :::
 # Add PowerUps
 Let's add some PowerUps to make things more interesting.
@@ -126,4 +126,4 @@ Once you're ready to invite your friends to help test your world, you can **Buil
 
 You need to be spend some time in VRChat before you can publish worlds. Learn more here: [FAQ](https://docs.vrchat.com/docs/frequently-asked-questions#why-cant-i-upload-content-yet)
 :::
-If you want to explore more options for Customizing your Obstacle Course, you can read on to [Build From Custom Parts](/worlds/examples/obstacle-course/build-from-custom-parts)
+If you want to explore more options for Customizing your Obstacle Course, you can read on to [Build From Custom Parts](/creators.vrchat.com/worlds/examples/obstacle-course/build-from-custom-parts)

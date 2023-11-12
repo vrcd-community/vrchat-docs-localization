@@ -62,7 +62,7 @@ You can also toggle the enabled repositories on the project page by using the "S
 
 ## How to Create your own Repositories
 
-If you are a creator who wants to publish your own packages for the community to use, you can create your own repository. You can find more information about how to do that in the [Creating a Package Listing](/guides/create-listing) section.
+If you are a creator who wants to publish your own packages for the community to use, you can create your own repository. You can find more information about how to do that in the [Creating a Package Listing](/vcc.docs.vrchat.com/guides/create-listing) section.
 
 ## Community Repository Storage Location
 

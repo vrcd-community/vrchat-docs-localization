@@ -23,7 +23,7 @@ You can get UdonSharp by using the [VRChat Creator Companion](https://vcc.docs.v
 - Add the project to the VCC, migrating it if necessary.
 - Select the project from the Projects listing screen.
 - In the Repo dropdown above the Package listings, ensure "Curated" is selected.
-![image](/images/repos-official-curated.png)
+![image](/udonsharp.docs.vrchat.com/images/repos-official-curated.png)
 - Find UdonSharp in the listed packages and press "Add".
 
 

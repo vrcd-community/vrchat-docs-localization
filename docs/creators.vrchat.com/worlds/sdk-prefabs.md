@@ -23,19 +23,19 @@ An example of how to create the ever-popular Mirror using Udon.
 Found in `Packages > VRChat SDK - Worlds > Samples > UdonExampleScene > Prefabs > VRCMirror`.
 
 ## VRCPortalMarker
-An example of how to use [VRC_PortalMarker](/worlds/components/vrc_portalmarker).
+An example of how to use [VRC_PortalMarker](/creators.vrchat.com/worlds/components/vrc_portalmarker).
 
 Found in `Packages > VRChat SDK - Worlds > Samples > UdonExampleScene > Prefabs > VRCPortalMarker`.
 
 This prefab **must** be at the root of your scene hierarchy for the portal's destination instance to be synced with other players.
 
 ## VRCWorld
-An example of how to use [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor) to define a VRChat World.
+An example of how to use [VRC_SceneDescriptor](/creators.vrchat.com/worlds/components/vrc_scenedescriptor) to define a VRChat World.
 
 Found in  `Packages > VRChat SDK - Worlds > Samples > UdonExampleScene > Prefabs > World`.
 
 ## VRCVideoSync
-An example of how to create an Udon-powered [Video Player](/worlds/udon/video-players/). 
+An example of how to create an Udon-powered [Video Player](/creators.vrchat.com/worlds/udon/video-players/). 
 
 Found in `Packages > VRChat SDK - Worlds > Samples > UdonExampleScene > Prefabs > VideoPlayers`.
 
@@ -46,7 +46,7 @@ Two examples exist:
 ## Simple Pen System
 An example of how to create an Udon-powered pen for drawing in 3D space!
 
-Documented here: [Simple Pen System](/worlds/examples/udon-example-scene/simple-pen-system)
+Documented here: [Simple Pen System](/creators.vrchat.com/worlds/examples/udon-example-scene/simple-pen-system)
 
 Found in `Packages > VRChat SDK - Worlds > Samples > UdonExampleScene > Prefabs > SimplePenSystem`.
 

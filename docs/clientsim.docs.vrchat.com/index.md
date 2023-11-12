@@ -34,7 +34,7 @@ The VRChat Client Simulator, or ClientSim for short, is a tool that enables you 
 - Test your world
 
 
-## Learn more about how all the systems work in the [Systems](systems) section
+## Learn more about how all the systems work in the [Systems](./systems/) section
 
 ### New Features in ClientSim compared to CyanEmu
 - Pickup manipulation through I, J, K, L, U, O, mouse scrolling and gamepad.

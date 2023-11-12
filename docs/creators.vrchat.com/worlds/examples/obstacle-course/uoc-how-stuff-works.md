@@ -185,4 +185,4 @@ On **CheckForDrop**, if the player has not yet exited the collider, it will set 
 # Misc
 
 ## Injection
-This project has a system to inject references to certain components. It is described [here](/worlds/examples/obstacle-course/build-from-custom-parts#advanced-stuff).
+This project has a system to inject references to certain components. It is described [here](/creators.vrchat.com/worlds/examples/obstacle-course/build-from-custom-parts#advanced-stuff).

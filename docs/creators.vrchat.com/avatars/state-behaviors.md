@@ -119,7 +119,7 @@ If modifying a synced parameter (anything defined in the VRCExpressionParameters
 
 However, Parameters only defined in the Animation Controller (aka, "local parameters") can still be modified by a parameter driver. Those values aren't clamped.
 
-You also cannot drive any of the [VRChat-defined Animator Parameters](/avatars/animator-parameters).
+You also cannot drive any of the [VRChat-defined Animator Parameters](/creators.vrchat.com/avatars/animator-parameters).
 
 Set, Add, Random, and Copy work for `float` and `int`. Set, Random, and Copy work for `bool`.
 

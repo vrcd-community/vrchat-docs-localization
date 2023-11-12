@@ -61,7 +61,7 @@ If the project is found, its type will be printed to the console.
 Returns a 0 if a project is found, and a 1 if it is not.
 
 ### resolve project
-Restores all VPM packages specified in the project's `vpm-manifest.json` file. This is done automatically by the [Resolver](/vpm/resolver) when you open a project in Unity, but you can also do it manually with this command.
+Restores all VPM packages specified in the project's `vpm-manifest.json` file. This is done automatically by the [Resolver](/vcc.docs.vrchat.com/vpm/resolver) when you open a project in Unity, but you can also do it manually with this command.
 
 ```console 
 vpm resolve project [<name>]
@@ -159,7 +159,7 @@ vpm remove package <packageName> [-p <project>] [-f]
 
 :::tip
 
-We also provide the templates as git repositories you can use directly. [Here's the guide](/guides/using-project-template-repos) with all the links and instructions.
+We also provide the templates as git repositories you can use directly. [Here's the guide](/vcc.docs.vrchat.com/guides/using-project-template-repos) with all the links and instructions.
 
 :::
 
@@ -337,7 +337,7 @@ However, we are working to make the vpm tool available to Mac and Linux users.
 
 :::tip
 
-If you're having trouble using the CLI on non-Windows platforms, you can check out our [Project Templates](/guides/using-project-template-repos) to get you started with the latest VRChat packages without relying on VCC.
+If you're having trouble using the CLI on non-Windows platforms, you can check out our [Project Templates](/vcc.docs.vrchat.com/guides/using-project-template-repos) to get you started with the latest VRChat packages without relying on VCC.
 
 :::
 

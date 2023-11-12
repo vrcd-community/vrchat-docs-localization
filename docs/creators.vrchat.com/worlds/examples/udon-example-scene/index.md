@@ -3,17 +3,17 @@ title: "Udon Example Scene"
 createdAt: "2021-05-13T19:15:33.839Z"
 updatedAt: "2021-10-07T17:09:09.342Z"
 ---
-This scene is ready to [Build & Test](/worlds/udon/using-build-test) or Publish, and it demonstrates many common interactive items.
+This scene is ready to [Build & Test](/creators.vrchat.com/worlds/udon/using-build-test) or Publish, and it demonstrates many common interactive items.
 
 ## Prefabs
 These objects show off some of the Prefabs included with the SDK which demonstrate default interactions with the VRChat components for Avatar Pedestals, Stations and Mirrors.
  ![](/creators.vrchat.com/images/worlds/udon-example-scene-prefab-scene.png)
 ### VRCWorld
 This prefab makes it easy to upload your Unity scene to VRChat. It has four components:
-- The [VRC Scene Descriptor](/worlds/components/vrc_scenedescriptor/) script, which defines basic properties of your world. It is required for every VRChat world.
-- The [VRC Pipeline Manager](/sdk/vrcpipelinemanager/) script, which contains the world ID. It is added automatically with the VRC Scene Descriptor.
+- The [VRC Scene Descriptor](/creators.vrchat.com/worlds/components/vrc_scenedescriptor) script, which defines basic properties of your world. It is required for every VRChat world.
+- The [VRC Pipeline Manager](/creators.vrchat.com/sdk/vrcpipelinemanager) script, which contains the world ID. It is added automatically with the VRC Scene Descriptor.
 - The VRCWorldSettings Udon Graph program, which allows you to change the movement speed of players in your world.
-- The [Avatar Scaling Settings](/worlds/examples/udon-example-scene/avatar-scaling-settings) Udon Graph program, which allows you to limit the avatar scale of players in your world.
+- The [Avatar Scaling Settings](/creators.vrchat.com/worlds/examples/udon-example-scene/avatar-scaling-settings) Udon Graph program, which allows you to limit the avatar scale of players in your world.
 
 If you'd like to use the VRCWorld prefab in your own Unity scene, you can find it in `\Packages\com.vrchat.worlds\Samples\UdonExampleScene\Prefabs\VRCWorld.prefab`.
 
@@ -52,7 +52,7 @@ These objects demonstrate different ways to sync variable values from the owner 
 The "Canvas" item has many UI items with synced variables:
 
 ### ButtonSyncOwner
-This is the first program described here which uses the [Manual Sync](/worlds/udon/networking#2-manual-variable) method. In the image below, you can see it has an OnClick() handler which calls UdonBehaviour.SendCustomEvent with a value of "OnClick". It's targeting the UdonBehaviour just below it, where it will run the custom event "OnClick". This is how UI Elements can run events on UdonBehaviours.
+This is the first program described here which uses the [Manual Sync](/creators.vrchat.com/worlds/udon/networking/#2-manual-variable) method. In the image below, you can see it has an OnClick() handler which calls UdonBehaviour.SendCustomEvent with a value of "OnClick". It's targeting the UdonBehaviour just below it, where it will run the custom event "OnClick". This is how UI Elements can run events on UdonBehaviours.
 ![Triggering Custom Events from Unity UI controls](/creators.vrchat.com/images/worlds/index-2c98f4e-onclick-manual-sync.png)
 In the Graph Program, the OnClick event checks whether the player who clicked is the Owner of the object. If they are, it increases the "clickCount" variable by 1 and then calls **RequestSerialization**, which signals Udon to update the data on this Manual-synced UdonBehaviour.
 ![OnClick ▸ If Owner ▸ Set clickCount to clickCount + 1 ▸ Serialize.](/creators.vrchat.com/images/worlds/index-f0a3ff2-bso-gaph.png)
@@ -67,7 +67,7 @@ This object uses a program very similar to **ButtonSyncOwner** above, but adds l
 This object builds on the now-familiar ButtonSync program to demonstrate how to easily change ownership of an Object. When a non-owner clicks on the button, it will assign them ownership, and then update the variable. This is useful when you want to change multiple variables, or do logic more complicated than simply incrementing a value.
 ![](/creators.vrchat.com/images/worlds/udon-example-scene-1372141-button-sync-become-owner.png)
 
-When changing ownership of an object, some logic is run to decide whether or not the transfer is allowed. You can learn more about that here: [Networking](/worlds/udon/networking#object-ownership). If you don't add any custom logic, all Requests for Ownership will be approved. The nodes below show a simple setup checks a boolean variable called 'someSpecialLogic' to decide whether the Transfer will be approved. You could build your own logic based on the 'requester', the 'newOwner', or both.
+When changing ownership of an object, some logic is run to decide whether or not the transfer is allowed. You can learn more about that here: [Networking](/creators.vrchat.com/worlds/udon/networking/#object-ownership). If you don't add any custom logic, all Requests for Ownership will be approved. The nodes below show a simple setup checks a boolean variable called 'someSpecialLogic' to decide whether the Transfer will be approved. You could build your own logic based on the 'requester', the 'newOwner', or both.
 ![Does someone want to be the new owner? Check 'someSpecialLogic' that you've updated elsewhere.](/creators.vrchat.com/images/worlds/index-91b3564-onOwnershipRequest.png)
 ### SliderSync
 ![](/creators.vrchat.com/images/worlds/udon-example-scene-080c991-syncSlider.png)
@@ -128,7 +128,7 @@ Note that the PlayerCollision events here will only fire locally for the player 
  This demo has a setup similar to PlayerCollision above, where it uses a Trigger Area to start other events. In this case, when a player enters the Trigger Area, the **SetActiveFromPlayerTrigger** program will turn on the *CollisionParticles* object. This object has a ParticleSystem which fires at the player with World Collision and Send Collision Messages turned on. The Udon Program **PlayerCollisionParticles** attached to this object will fire the **OnPlayerParticleCollision* events in the graph, which write the displayName of the affected player into the target text field.
 ![](/creators.vrchat.com/images/worlds/udon-example-scene-3266c29-onplayerparticlecollision.png)
 
-## [Udon Sync Player](/worlds/examples/udon-example-scene/udon-video-sync-player)
+## [Udon Sync Player](/creators.vrchat.com/worlds/examples/udon-example-scene/udon-video-sync-player)
 ![](/creators.vrchat.com/images/worlds/udon-example-scene-344ca0e-udonsyncplayer-scene.png)
 
 This setup demonstrates one way to use the Unity / AVPro video players to load and sync video playback. It's a big program, so we've separated it out to its own page.
@@ -144,11 +144,11 @@ The **UpdateCubes** event uses another **For** loop to step through each yes/no 
 
 ## ObjectPool
 ![These cubes will never be this neat again once they start dropping and bouncing around.](/creators.vrchat.com/images/worlds/index-474fac9-object-pool.png)
-The [Object Pool](/worlds/udon/networking/network-components#vrc-object-pool) is a component that helps you manage a collection of objects. It will automatically sync its objects' Active state. This example program will drop boxes from the sky one at a time into a stacked grid, and when you click on a box, it is removed and respawned from the sky.
+The [Object Pool](/creators.vrchat.com/worlds/udon/networking/network-components#vrc-object-pool) is a component that helps you manage a collection of objects. It will automatically sync its objects' Active state. This example program will drop boxes from the sky one at a time into a stacked grid, and when you click on a box, it is removed and respawned from the sky.
 
 To do this, the **ObjectPool** program runs a simple timer and tries to **Spawn** an object at a regular interval. Each *Pooled Box* in its Pool has a simple **Pooled Box** program which saves its initial position on Start, restores that position whenever it is Enabled (which happens when it is spawned by the pool), and returns each object when you click on it.
 
-## [Simple Pen System](/worlds/examples/udon-example-scene/simple-pen-system)
+## [Simple Pen System](/creators.vrchat.com/worlds/examples/udon-example-scene/simple-pen-system)
 Even a basic pen takes quite a bit of work, so this example gets its own page.
 
 ## ChooserContainer

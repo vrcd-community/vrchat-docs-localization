@@ -7,7 +7,7 @@ updatedAt: "2022-10-18T23:46:02.951Z"
 ---
 This is a list of Udon Nodes that are considered "Events".
 
-Events are used to detect actions and set off chains of action or logic. [Input Events](/worlds/udon/input-events)  have their own special page. To jump to an Event in the graph, click it in the Graph Sidebar.
+Events are used to detect actions and set off chains of action or logic. [Input Events](/creators.vrchat.com/worlds/udon/input-events)  have their own special page. To jump to an Event in the graph, click it in the Graph Sidebar.
 
 All below nodes have flow nodes where logic requires it.
 

@@ -20,7 +20,7 @@ If the `VRCPlayerApi` object is for a remote player, be aware that the remote pl
 
 ## OnAvatarEyeHeightChanged
 
-Returns a `VRCPlayerApi` object for the instigating player and a `float` describing their previous or previously synced eye height in meters. Called when a player has their eye height change via switching to another avatar or via the [avatar scaling system](/worlds/udon/players/player-avatar-scaling).
+Returns a `VRCPlayerApi` object for the instigating player and a `float` describing their previous or previously synced eye height in meters. Called when a player has their eye height change via switching to another avatar or via the [avatar scaling system](/creators.vrchat.com/worlds/udon/players/player-avatar-scaling).
 
 ### First avatar load
 When a local or remote user joins a world, the first previous eye height value received for that user may be `0`.
@@ -35,6 +35,6 @@ For remote players, you will receive this event every time a new eye height is s
 
 :::note More Info
 
-See [Player Avatar Scaling](/worlds/udon/players/player-avatar-scaling) for more info about this feature.
+See [Player Avatar Scaling](/creators.vrchat.com/worlds/udon/players/player-avatar-scaling) for more info about this feature.
 
 :::

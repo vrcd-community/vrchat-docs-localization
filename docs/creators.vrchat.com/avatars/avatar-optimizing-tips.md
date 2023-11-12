@@ -24,7 +24,7 @@ As a sidenote, the SDK's Build Control panel provides numbers of components on a
 ## Do not use Dynamic Bones!
 Dynamic Bones is a Unity Asset that you can purchase that allows you to define bones on your avatar's rig to move around as if they were hanging. You can also define static forces like gravity which can make hair fall more realistically. 
 
-Dynamic Bones is deprecated and will be removed eventually. Use [PhysBones](/avatars/avatar-dynamics/physbones) instead.
+Dynamic Bones is deprecated and will be removed eventually. Use [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) instead.
 
 VRChat will automatically convert Dynamic Bones to PhysBones at runtime.
 
@@ -46,7 +46,7 @@ Notably if you are using Cats Blender Plugin, it merges meshes automatically whe
 <iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F1fco-G2j0Jg%3Ffeature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1fco-G2j0Jg&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1fco-G2j0Jg%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube" width="854" height="480" scrolling="no" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe>
 
 ### ... except when you're using shapekeys!
-**There is an exception here!** Calculating shape keys can be expensive, especially on avatars with higher polygon counts (>32,000) or when running on lower-spec hardware (Quest). If all your shape keys are on your face, it can be beneficial to split your face mesh from your body mesh, and delete all shape keys from your body mesh. This can be a more advanced technique. Because you have more meshes, it may negatively affect your [Avatar Performance Rank](/avatars/avatar-performance-ranking-system), but in reality you'll be slightly more optimized. Remember, *the Perf Rank system isn't perfect*-- it is just a surface-level recommendation system.
+**There is an exception here!** Calculating shape keys can be expensive, especially on avatars with higher polygon counts (>32,000) or when running on lower-spec hardware (Quest). If all your shape keys are on your face, it can be beneficial to split your face mesh from your body mesh, and delete all shape keys from your body mesh. This can be a more advanced technique. Because you have more meshes, it may negatively affect your [Avatar Performance Rank](/creators.vrchat.com/avatars/avatar-performance-ranking-system), but in reality you'll be slightly more optimized. Remember, *the Perf Rank system isn't perfect*-- it is just a surface-level recommendation system.
 
 ## Reduce the amount of material slots you use
 Each additional material slot is also a draw call, which eats more processor time! If you have a lot of materials (more than 10), look into Texture Atlasing. With Community-created tools, atlasing is exceedingly easy. Check out the Materials video for more details.
@@ -118,7 +118,7 @@ For example, check out [Pumkin's Avatar Tools](https://github.com/rurre/PumkinsA
 
 The following software has not been authored by VRChat. Please read and respect the licensing provided with each individual product.
 
-[Unity](/sdk/current-unity-version) 
+[Unity](/creators.vrchat.com/sdk/current-unity-version) 
 [Blender](https://blender.org)
 [Cats Blender Plugin
 ](https://github.com/absolute-quantum/cats-blender-plugin)

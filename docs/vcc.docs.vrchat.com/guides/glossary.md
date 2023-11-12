@@ -32,7 +32,7 @@ The CLI wraps the VPM library and makes it available as a cross-platform program
 ## Repos
 Package Repositories
 
-[Repos](/vpm/repos) are listings of compatible packages that creators can use in their projects.
+[Repos](/vcc.docs.vrchat.com/vpm/repos) are listings of compatible packages that creators can use in their projects.
 
 ## Legacy Packages
 Now that we're using VPM Packages, we refer to the previous SDKs distributed with the .unitypackage format as Legacy Packages.

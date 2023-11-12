@@ -2,7 +2,7 @@
 
 All these settings can be found at `Edit > Project Settings > Udon Sharp`
 
-![Udon Sharp Settings](/images/udon-sharp-settings.png)
+![Udon Sharp Settings](/udonsharp.docs.vrchat.com/images/udon-sharp-settings.png)
 
 # Udon Sharp
 

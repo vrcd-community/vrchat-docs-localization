@@ -13,7 +13,7 @@ We created a special window to help manage all the special prefabs and programs 
 
 ### Checkpoint Prefabs
 ![image](/creators.vrchat.com/images/worlds/uoc-window-a05aa7a-checkpoint-prefabs.png)
-You can set all the prefabs you would like to use for your start gate, checkpoints and finish gate here. They can then be easily placed into your scene: [Add Checkpoints](/worlds/examples/obstacle-course/build-from-demo-parts#add-checkpoints).
+You can set all the prefabs you would like to use for your start gate, checkpoints and finish gate here. They can then be easily placed into your scene: [Add Checkpoints](/creators.vrchat.com/worlds/examples/obstacle-course/build-from-demo-parts#add-checkpoints).
 
 ### Checkpoints In Scene
 ![uoc-window-f588547-checkpoints-in-scene.png](/creators.vrchat.com/images/worlds/uoc-window-f588547-checkpoints-in-scene.png)
