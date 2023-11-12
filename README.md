@@ -139,6 +139,22 @@
 * **[Best-README-Template](https://github.com/othneildrew/Best-README-Template)** - 该文档的 README 基于该模板编写，为我们节省了大量的时间。
 * **你，和其他同样对 VRChat 中文社区做出贡献的创作者/玩家们** - 没有你们，也不会有该文档的出现
 
+## 免责声明
+
+本项目是一个无条件的公益项目。
+
+本项目是一个翻译至 VRChat 官方文档汉化中心。请注意，VRChat .Inc、利益相关方不一定核实了本网站上的文章与信息。
+
+所有本项目上的信息是源于独立的志愿玩家或团体的工作，藉以为 VRChat 中文社区的玩家与创作者们提供便于利用的信息源。
+
+### 商标与版权
+
+在 VRChat 汉化文档页面中提及、使用或引用的所有商标、服务商标、集体商标、版权、人格权或类似权利均归其各自的拥有者所有。VRChat 汉化文档中心与上述权利的所有者之间不存在任何认可（endorse）、附属（affiliate）或其他形式的关联。
+
+本项目中使用的所有图片，媒体源均来自于 VRChat .Inc 及其出品的游戏软件 VRChat 中，版权和所有权均为其拥有者所有。
+
+[VRChat 官方文档页](https://docs.vrchat.com/)
+
 <p align="right"><a href="#readme-top">返回顶部</a></p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
