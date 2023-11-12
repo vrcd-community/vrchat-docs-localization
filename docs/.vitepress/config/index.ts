@@ -80,7 +80,6 @@ export default defineConfig({
           },
         ],
       },
-      { text: '关于本站', link: '/README' },
     ],
 
     sidebar: {
