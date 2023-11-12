@@ -7,7 +7,7 @@ updatedAt: "2023-04-26T15:25:05.803Z"
 ---
 # VRC JSON
 
-[Data Dictionaries](/worlds/udon/data-containers/data-dictionaries) and [Data Lists](/worlds/udon/data-containers/data-lists) include functions to convert to and from JSON. A Data List is equivalent to a JSON array, and a JSON object is equivalent to a Data Dictionary with string keys.
+[Data Dictionaries](/creators.vrchat.com/worlds/udon/data-containers/data-dictionaries) and [Data Lists](/creators.vrchat.com/worlds/udon/data-containers/data-lists) include functions to convert to and from JSON. A Data List is equivalent to a JSON array, and a JSON object is equivalent to a Data Dictionary with string keys.
 
 See [Json documentation](https://www.json.org/json-en.html) for further details on the JSON schema itself. Everything in this page is relating to this particular implementation of the JSON schema.
 

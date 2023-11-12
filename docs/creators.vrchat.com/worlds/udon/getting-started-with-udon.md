@@ -7,7 +7,7 @@ hidden: false
 createdAt: "2020-03-05T18:58:47.878Z"
 updatedAt: "2022-11-16T00:16:00.902Z"
 ---
-If you don't know what Udon is, read [What is Udon](/worlds/udon) first. 
+If you don't know what Udon is, read [What is Udon](/creators.vrchat.com/worlds/udon/) first. 
 
 There are two ways for you to get started with Udon. You can use our [Creator Companion](https://vcc.docs.vrchat.com) to do so. 
 
@@ -42,7 +42,7 @@ Here are all the steps to get you started with Udon, as covered in the video abo
 
 3. Download the SDK.
 
-4. Install Unity Hub and current VRChat-compatible version if you don't have them yet. Check the Android Support box when installing Unity so you can make Quest-compatible worlds. Check the current VRChat compatible version on [this page](/sdk/current-unity-version)
+4. Install Unity Hub and current VRChat-compatible version if you don't have them yet. Check the Android Support box when installing Unity so you can make Quest-compatible worlds. Check the current VRChat compatible version on [this page](/creators.vrchat.com/sdk/current-unity-version)
 
 5. Install VRChat if you don't have it yet.
 

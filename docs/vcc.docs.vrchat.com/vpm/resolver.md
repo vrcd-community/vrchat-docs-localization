@@ -5,7 +5,7 @@
 ## Overview
 The Package Resolver is a Unity Editor tool which can download and install the packages required for a VPM project without the VCC.
 
-The Resolver uses the [VPM Library](/guides/glossary#vpm) under the hood - the same one that powers the [VCC](/guides/glossary#vcc), so it downloads packages and resolves dependencies in the same exact way.
+The Resolver uses the [VPM Library](/vcc.docs.vrchat.com/guides/glossary#vpm) under the hood - the same one that powers the [VCC](/vcc.docs.vrchat.com/guides/glossary#vcc), so it downloads packages and resolves dependencies in the same exact way.
 
 ## Getting It
 It is added to every VPM-compatible project, either during Project Creation or Migration. It is specifically excluded from the .gitignore placed in your project's Packages folder to ensure that it is present in your project to help with restoring it. It does not have a 'remove' button in the VCC because it should not be removed from your projects. But if it ever is - you can use the VCC to easily add it back in.

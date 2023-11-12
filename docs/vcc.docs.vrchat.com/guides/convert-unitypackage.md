@@ -7,7 +7,7 @@ You've made an Editor Tool, Prefab or something else which is meant to be used a
 ## Changes Needed
 In order to work as a VPM Package, your code and assets need some changes. The [Package Maker](#package-maker-tool) tool will handle a lot of this, but not everything:
 1. Be completely separated into Editor and Runtime folders. Anything that uses UnityEditor classes needs to be in the Editor folder.
-2. Have a [compatible Package Manifest](/vpm/packages#package-format) which includes the vpmDependencies for the related VRChat SDK packages.
+2. Have a [compatible Package Manifest](/vcc.docs.vrchat.com/vpm/packages#package-format) which includes the vpmDependencies for the related VRChat SDK packages.
 3. Replace any paths hardcoded to a path "Assets/YourPackageName" to use your Package path instead - see [Converting Asset Paths](#converting-asset-paths) below.
 4. Provide Assembly Definition files for all the scripts in your package.
 

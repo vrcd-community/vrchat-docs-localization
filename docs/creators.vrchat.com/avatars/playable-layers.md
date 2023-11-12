@@ -79,7 +79,7 @@ Animations in Gesture should _only_ affect transforms.
 
 The Action layer is for bone animations that will override all other layers, when you need to take over total control of the character. Basically, think AV2 "Emotes".
 
-This layer is **blended to zero by default.** Before you do anything in the action layer, you need to use the [Playable Layer Control State Behavior](/avatars/state-behaviors#playable-layer-control) to blend this layer up before transitioning to the actual action you're performing! Make sure you blend it back to zero when you're done.
+This layer is **blended to zero by default.** Before you do anything in the action layer, you need to use the [Playable Layer Control State Behavior](/creators.vrchat.com/avatars/state-behaviors#playable-layer-control) to blend this layer up before transitioning to the actual action you're performing! Make sure you blend it back to zero when you're done.
 
 Animations in Action should _only_ affect transforms.
 

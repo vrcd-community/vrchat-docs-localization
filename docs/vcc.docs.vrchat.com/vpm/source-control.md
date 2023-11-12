@@ -14,7 +14,7 @@ The VRChat SDK is technically only allowed to be distributed by VRChat and shoul
 * `ProjectSettings` folder
   * Required by Unity, contains all your project settings such as physics and tags.
 * `Packages` folder
-  * Required by Unity, contains your project manifest (Unity Package dependencies) as well as the [Resolver](/vpm/resolver) and VPM Manifest.
+  * Required by Unity, contains your project manifest (Unity Package dependencies) as well as the [Resolver](/vcc.docs.vrchat.com/vpm/resolver) and VPM Manifest.
 * `Packages\com.vrchat.core.vpm-resolver` folder
   * This tool can restore VPM packages into your project without the VCC.
 
@@ -25,4 +25,4 @@ The VRChat SDK is technically only allowed to be distributed by VRChat and shoul
 The VPM will add a `.gitignore` file into your project's `Packages` folder if it doesn't exist, and exclude every folder that starts with `com.vrchat.*` while adding an exclusion for the resolver by specifically including `com.vrchat.core.*`
 
 ## What Happens in a Freshly-Cloned Project
-When someone gets your project from source control, it will be missing some required packages if the creator has followed the above guidelines. The best thing to do at this point is simply open the project in Unity, and press "OK" in the dialog that offers to restore the missing packages - see [Resolver](resolver/#using-it).
+When someone gets your project from source control, it will be missing some required packages if the creator has followed the above guidelines. The best thing to do at this point is simply open the project in Unity, and press "OK" in the dialog that offers to restore the missing packages - see [Resolver](/vcc.docs.vrchat.com/vpm/resolver#using-it).

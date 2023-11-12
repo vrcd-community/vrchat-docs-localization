@@ -47,7 +47,7 @@ All that being said, **we do not recommend using 2D audio.** All real-world sour
 
 ## Spatial Audio on Avatars
 
-VRChat supports using `VRC_SpatialAudioSource` on avatars, albeit with some [limitations](/worlds/components/vrc_spatialaudiosource#section-avatar-limitations). These limitations are in place to prevent abuse and malicious sounds.
+VRChat supports using `VRC_SpatialAudioSource` on avatars, albeit with some [limitations](/creators.vrchat.com/worlds/components/vrc_spatialaudiosource#section-avatar-limitations). These limitations are in place to prevent abuse and malicious sounds.
 
 Other than these limitations, `VRC_SpatialAudioSource` works precisely the same on avatars as it does in worlds.
 :::danger Don't Forget to add a SpatialAudioSource!
@@ -92,7 +92,7 @@ However, as noted above, there are some limitations on `VRC_SpatialAudioSource` 
 - `Gain` cannot exceed 10db
 - `Far` cannot exceed 40m
 
-[Player Audio](/worlds/udon/players/player-audio) can override these settings.
+[Player Audio](/creators.vrchat.com/worlds/udon/players/player-audio) can override these settings.
 
 ### Curve Squashing
 

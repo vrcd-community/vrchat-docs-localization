@@ -7,7 +7,7 @@ A repo listing is served in JSON format, with a name, author and listing of pack
 
 Since each VPM-compatible package has a manifest file with all its info (package.json), we use that in this list. Each manifest is included as the **value** for the [version number](https://semver.org/), under the package name, which is listed as part of a **packages** object.
 
-Learn more about the [package manifest format](/vpm/packages#vpm-manifest-additions).
+Learn more about the [package manifest format](/vcc.docs.vrchat.com/vpm/packages#vpm-manifest-additions).
 
 Here is an example of a repo listing:
 
@@ -46,4 +46,4 @@ Here is an example of a repo listing:
 ```
 In the example above, the rest of each version's manifest would be listed, key by key, instead of "etc". To see a live example with full data, take a look at the [Official VRChat Packages repo](https://packages.vrchat.com/official).
 
-Note that you can omit the URL field if you are using a local repo listing file and adding it via the [CLI](/vpm/cli).
+Note that you can omit the URL field if you are using a local repo listing file and adding it via the [CLI](/vcc.docs.vrchat.com/vpm/cli).

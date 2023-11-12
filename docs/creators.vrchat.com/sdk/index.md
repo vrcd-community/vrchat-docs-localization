@@ -5,17 +5,17 @@
 下载 VRChat SDK 的方式有很多。
 
 - 点击 [此处](https://vrchat.com/download/vcc) 下载 [VRChat 创作者助手](https://vcc.docs.vrchat.com/)。这是最简单的入门方法。创作者助手可自动为您安装 Unity Editor、Worlds SDK 和 Avatars SDK。
-- 又或者，您也可以使用我们 [GitHub 上的模板项目](../../vcc.docs.vrchat.com/guides/using-project-template-repos.md)。如果您不使用创作者助手，还需要下载 [当前版本的 Unity](../sdk/current-unity-version.md)。我们强烈建议您使用 Unity Hub 下载 Unity，此处[可用](./current-unity-version.md)。
+- 又或者，您也可以使用我们 [GitHub 上的模板项目](../../vcc.docs.vrchat.com/guides/using-project-template-repos.md)。如果您不使用创作者助手，还需要下载 [当前版本的 Unity](/creators.vrchat.com/sdk/current-unity-version.md)。我们强烈建议您使用 Unity Hub 下载 Unity，此处[可用](./current-unity-version.md)。
 
 ## Step 0 - 安装 Unity
 
-如果您已经安装并运行了 Unity，则可跳至 [Step 1](./sdk.md#step-1---创建项目)。[Creator Companion](../../vcc.docs.vrchat.com/index.md) 会自动为您安装 Unity。
+如果您已经安装并运行了 Unity，则可跳至 [Step 1](/creators.vrchat.com/sdk/.md#step-1---创建项目)。[Creator Companion](../../vcc.docs.vrchat.com/index.md) 会自动为您安装 Unity。
 
-如果您想自己安装 Unity，请查看[当前支持的 Unity 版本](/official-creator-docs/sdk/current-unity-version)页面，并安装 VRChat 当前支持的 Unity 版本——最好使用 Unity Hub。
+如果您想自己安装 Unity，请查看[当前支持的 Unity 版本](/creators.vrchat.com/sdk/current-unity-version)页面，并安装 VRChat 当前支持的 Unity 版本——最好使用 Unity Hub。
 
 ## Step 1 - 创建项目
 
-对于我们的第一个项目，我们假定您正在为 Windows PC 构建内容。如果您想了解在 Quest 上为 VRChat 创建内容的过程，请查看 [为 Unity 配置 Quest 内容开发环境](../platforms/android/setting-up-unity-for-creating-quest-content.md)。
+对于我们的第一个项目，我们假定您正在为 Windows PC 构建内容。如果您想了解在 Quest 上为 VRChat 创建内容的过程，请查看 [为 Unity 配置 Quest 内容开发环境](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content.md)。
 
 一些小贴士：
 
@@ -24,7 +24,7 @@
 - 如果您知道如何使用版本控制软件，如 [Git](https://git-scm.com/) 或 [Plastic SCM](https://www.plasticscm.com/)，请使用它！它能让您很容易地回滚那些破坏您项目的更改。
 - 如果您不知道如何使用这些软件，那就应该学学！它们很棒。遗憾的是，Git 教程远远超出了我们文档的范围😰。
 
-如果愿意，您可以手动创建一个项目，但无论如何，您都需要使用 [Creator Companion](../../vcc.docs.vrchat.com/index.md) 来安装 SDK（除非您从我们的[模板仓库](https://vcc.docs.vrchat.com/guides/using-project-template-repos)开始安装）。
+如果愿意，您可以手动创建一个项目，但无论如何，您都需要使用 [Creator Companion](/vcc.docs.vrchat.com/index.md) 来安装 SDK（除非您从我们的[模板仓库](https://vcc.docs.vrchat.com/guides/using-project-template-repos)开始安装）。
 
 如果您使用的是 Unity Hub：
 
@@ -54,4 +54,4 @@
 
 ### 下一步是什么？
 
-您的项目已准备就绪！您可以查看 [创建世界](/official-creator-docs/worlds/) 或 [创建头像](/official-creator-docs/avatars/)。
+您的项目已准备就绪！您可以查看 [创建世界](/creators.vrchat.com/worlds/) 或 [创建头像](/creators.vrchat.com/avatars/)。

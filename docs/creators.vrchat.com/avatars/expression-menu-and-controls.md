@@ -44,7 +44,7 @@ FYI: we've included some default icons you can use in `VRCSDK/Assets3/Expression
 
 :::note Puppet Menu Sync
 
-The **Puppet** controls use [**IK Sync**](/avatars/animator-parameters#sync-types) when open. If you want sync that is as close as possible to your inputs for fast/quick movements, you should use a Puppet menu.
+The **Puppet** controls use [**IK Sync**](/creators.vrchat.com/avatars/animator-parameters#sync-types) when open. If you want sync that is as close as possible to your inputs for fast/quick movements, you should use a Puppet menu.
 
 **Button**/**Toggle** uses **Playable Sync** which updates on-demand, instead of continuously, and is appropriate for things you "turn on/off" but don't need highly precise syncing.
 

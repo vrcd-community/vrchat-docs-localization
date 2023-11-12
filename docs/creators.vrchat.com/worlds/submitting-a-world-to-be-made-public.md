@@ -26,7 +26,7 @@ Publishing your world will make it immediately available to all users that opt-i
 
 ## Avatar Worlds / All Avatar Pedestals in any World
 
-- **Avatars on pedestals are expected to be "reasonably optimized."** Check out our [Avatar Optimization Docs](/avatars/avatar-optimizing-tips) for more details.  
+- **Avatars on pedestals are expected to be "reasonably optimized."** Check out our [Avatar Optimization Docs](/creators.vrchat.com/avatars/avatar-optimizing-tips) for more details.  
   Avoid sharing very poor avatars. This applies to all worlds, not just avatar worlds. If avatars in your world have severe performance issues, your world may be removed from Public or Community Labs.
 - **If you upload a world with placeholder avatars and replace them with TOS-violating avatars after being made public, you will be suspended from submitting worlds for a month. You may be moderated in-app, depending on the offense severity.**
 - **If you have an avatar world, none of your avatars may violate TOS/Community Guidelines.**

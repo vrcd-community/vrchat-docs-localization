@@ -8,7 +8,7 @@ updatedAt: "2021-09-15T23:15:28.795Z"
 The following is the complete list of scripts usable within worlds. Components that are not in this list will not work.
 :::caution Oculus Quest
 
-The Quest version of VRChat has some exceptions to this list. Check [here](/platforms/android/quest-content-limitations#components) for more info.
+The Quest version of VRChat has some exceptions to this list. Check [here](/creators.vrchat.com/platforms/android/quest-content-limitations#components) for more info.
 :::
 ## Unity Components
 - WindZone
@@ -98,14 +98,14 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 
 ## VRChat Components
 - [*VRC_IKFollower*](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated. Use [Constraints](https://docs.unity3d.com/2019.4/Documentation/Manual/Constraints.html) instead! 
-- [VRC_AvatarPedestal](/worlds/components/vrc_avatarpedestal) 
-- [VRC_PortalMarker](/worlds/components/vrc_portalmarker) 
-- [VRC_MirrorReflection](/worlds/components/vrc_mirrorreflection) 
-- [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor)  
-- [VRC_SpatialAudioSource](/worlds/components/vrc_spatialaudiosource) 
-- [VRC_Station](/worlds/components/vrc_station) 
-- [VRC_UiShape](/worlds/components/vrc_uishape) 
-- [VRCPipelineManager](/sdk/vrcpipelinemanager) 
+- [VRC_AvatarPedestal](/creators.vrchat.com/worlds/components/vrc_avatarpedestal) 
+- [VRC_PortalMarker](/creators.vrchat.com/worlds/components/vrc_portalmarker) 
+- [VRC_MirrorReflection](/creators.vrchat.com/worlds/components/vrc_mirrorreflection) 
+- [VRC_SceneDescriptor](/creators.vrchat.com/worlds/components/vrc_scenedescriptor)  
+- [VRC_SpatialAudioSource](/creators.vrchat.com/worlds/components/vrc_spatialaudiosource) 
+- [VRC_Station](/creators.vrchat.com/worlds/components/vrc_station) 
+- [VRC_UiShape](/creators.vrchat.com/worlds/components/vrc_uishape) 
+- [VRCPipelineManager](/creators.vrchat.com/sdk/vrcpipelinemanager) 
 
 ## Dynamic Bone
 - DynamicBone

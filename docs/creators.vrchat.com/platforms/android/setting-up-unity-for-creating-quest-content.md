@@ -16,4 +16,4 @@ Setting up Unity to create Quest content is actually pretty straightforward. Thi
 :::
 If you're starting a brand new project, this won't take long at all. However, if you're converting a Windows platform project to an Android platform project, you will have to convert your assets appropriately. This can take quite a while for larger projects.
 
-For more details on best practices when working with dual-platform projects, read our documentation on [Cross-Platform Setup](/platforms/android/cross-platform-setup).
+For more details on best practices when working with dual-platform projects, read our documentation on [Cross-Platform Setup](/creators.vrchat.com/platforms/android/cross-platform-setup).

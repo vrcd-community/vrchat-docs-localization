@@ -7,13 +7,13 @@ You can interact with Players in your world through the VRCPlayerApi. Each Playe
 
 This page includes info on using some general nodes. Since there are so many things you can do with the VRCPlayerApi object, we've grouped some node info together on the following pages:
 
-* [Getting Players](/worlds/udon/players/getting-players)
-* [Player Positions](/worlds/udon/players/player-positions)
-* [Player Forces](/worlds/udon/players/player-forces)
-* [Player Collisions](/worlds/udon/players/player-collisions)
-* [Player Audio](/worlds/udon/players/player-audio)
-* [Player Avatar Scaling](/worlds/udon/players/player-avatar-scaling)
-* [Player Events](/worlds/udon/graph/event-nodes#player-events)
+* [Getting Players](/creators.vrchat.com/worlds/udon/players/getting-players)
+* [Player Positions](/creators.vrchat.com/worlds/udon/players/player-positions)
+* [Player Forces](/creators.vrchat.com/worlds/udon/players/player-forces)
+* [Player Collisions](/creators.vrchat.com/worlds/udon/players/player-collisions)
+* [Player Audio](/creators.vrchat.com/worlds/udon/players/player-audio)
+* [Player Avatar Scaling](/creators.vrchat.com/worlds/udon/players/player-avatar-scaling)
+* [Player Events](/creators.vrchat.com/worlds/udon/graph/event-nodes#player-events)
 
 ## Generally Useful Nodes
 
@@ -65,7 +65,7 @@ Makes the player get into the Station which is on the same GameObject as this Ud
 
 ### SimulationTime
 *float*
-The [simulation time](/worlds/udon/networking/network-components) of a player.
+The [simulation time](/creators.vrchat.com/worlds/udon/networking/network-components) of a player.
 
 ### UseLegacyLocomotion
 *VRCPlayerApi*

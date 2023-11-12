@@ -6,7 +6,7 @@ createdAt: "2020-06-22T21:33:24.495Z"
 updatedAt: "2023-02-25T17:04:17.127Z"
 ---
 # Interface
-The Udon Node Graph is the default interface for creation of Udon programs. This section goes over how to use it. If you want to dive right into examples, take a look at the [Udon Example Scene](/worlds/examples/udon-example-scene).
+The Udon Node Graph is the default interface for creation of Udon programs. This section goes over how to use it. If you want to dive right into examples, take a look at the [Udon Example Scene](/creators.vrchat.com/worlds/examples/udon-example-scene/).
 
 You can open up the Udon Graph window using the Menu Item under **VRChatSDK > Udon Graph**, or by clicking the **Open Udon Graph** button on an UdonBehaviour Component.
 ![The Udon Window](/creators.vrchat.com/images/worlds/index-a1d7f43-open-graph.png)
@@ -84,7 +84,7 @@ You can create variables of any type by pressing the **+** button in the Variabl
 Press the **Spacebar** to open up Quick Search, then type in the first few letters of the class you want to interact with.
 ![](/creators.vrchat.com/images/worlds/index-08df7d3-gameobject-search.png)
 
-This method of searching works best if you know Unity's basic classes and object types. There are other ways of searching, see: [Searching for nodes](/worlds/udon/graph/searching-for-nodes)
+This method of searching works best if you know Unity's basic classes and object types. There are other ways of searching, see: [Searching for nodes](/creators.vrchat.com/worlds/udon/graph/searching-for-nodes)
 
 # Compiling the Graph
 The graph automatically compiles in the background at regular variables. When this happens, you'll see a flash in the upper-right corner of your graph, and the Status box will turn green if things went well, or red if there's an issue. In either case, you can click on the Status box to see the Assembly Code that was generated, or the errors if there was a problem. 

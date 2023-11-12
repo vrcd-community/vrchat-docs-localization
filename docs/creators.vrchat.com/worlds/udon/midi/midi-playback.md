@@ -22,7 +22,7 @@ Files with the extension .mid are processed as MIDI assets. To get started with 
 
 ![VRCMidiPlayer](/creators.vrchat.com/images/worlds/midi-playback-215556799-a546e119-afdb-441f-8019-70ee50b6c008.png)
 
-This is the brains of the operation. It works similarly to an Audio Source but uses a Midi Asset instead. It sends MIDI [Note On](/worlds/udon/midi#midinoteon) and [Note Off](/worlds/udon/midi#midinoteoff) events to all target UdonBehaviours.
+This is the brains of the operation. It works similarly to an Audio Source but uses a Midi Asset instead. It sends MIDI [Note On](/creators.vrchat.com/worlds/udon/midi/#midinoteon) and [Note Off](/creators.vrchat.com/worlds/udon/midi/#midinoteoff) events to all target UdonBehaviours.
 
 ### Inspector Fields
 

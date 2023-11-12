@@ -2,7 +2,7 @@
 
 To get you started with VRChat content creation quickly, we provide a set of official Unity project templates.
 
-You can use them either via the [VCC Application](/guides/getting-started), the [CLI](/vpm/cli), or by downloading the repositories directly.
+You can use them either via the [VCC Application](/vcc.docs.vrchat.com/guides/getting-started), the [CLI](/vcc.docs.vrchat.com/vpm/cli), or by downloading the repositories directly.
 
 Currently we provide the following templates:
 
@@ -26,7 +26,7 @@ This template includes everything in the World Template above, plus [UdonSharp](
 
 :::tip
 
-We highly recommend you use the [VCC Application](/guides/getting-started) or the [CLI](/vpm/cli) to set up new projects using the official templates automatically.  
+We highly recommend you use the [VCC Application](/vcc.docs.vrchat.com/guides/getting-started) or the [CLI](/vcc.docs.vrchat.com/vpm/cli) to set up new projects using the official templates automatically.  
 But if you want to do it manually or cannot use these methods - follow the instructions below
 
 :::
@@ -52,4 +52,4 @@ Every template's README.md file contains more detailed instructions for creating
 
 ## User Templates
 
-Beyond official templates, you can also create your own! [See this guide](/vpm/templates#user-templates) to learn more about that.
+Beyond official templates, you can also create your own! [See this guide](/vcc.docs.vrchat.com/vpm/templates#user-templates) to learn more about that.

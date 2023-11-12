@@ -85,7 +85,7 @@ Beyond the packages provided by VRChat and the Curated creators - you can add yo
 You can do so in two ways:
 
 1. Add local packages that already exist on your computer. You can do so in the User Packages section of the Packages tab on the Settings page.
-2. Add community packages by installing a Community Repository. To add new repositories to the Creator Companion [take a look at this guide](/guides/community-repositories).
+2. Add community packages by installing a Community Repository. To add new repositories to the Creator Companion [take a look at this guide](/vcc.docs.vrchat.com/guides/community-repositories).
 
 ## Where can I ask more questions?
 Make sure to read the [VCC documentation](https://vcc.docs.vrchat.com/) to learn more about the Creator Companion.

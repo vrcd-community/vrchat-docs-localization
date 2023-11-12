@@ -23,11 +23,11 @@ This section contains settings that define the shape of the ContactSender.
 `Rotation` - Rotation offset from the root transform.
 
 ## Filtering
-This section contains settings allowing you to adjust and define how this ContactSender will interact with  [ContactReceivers](/avatars/avatar-dynamics/contacts#VRCContactReceiver).
+This section contains settings allowing you to adjust and define how this ContactSender will interact with  [ContactReceivers](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver).
 
 `Collision Tags` - List of strings that specify what it can affect/be affected by. For a successful collision to occur, both the sender and receiver need at least one matching pair of strings. Collision tags are case sensitive.
 
-As an example, the tags below will cause the Sender to send a contact signal when they come into contact with the default Head [ContactReceiver](/avatars/avatar-dynamics/contacts#VRCContactReceiver) or any custom [ContactReceiver](/avatars/avatar-dynamics/contacts#VRCContactReceiver) with the tag `Face`-- note the capital F!
+As an example, the tags below will cause the Sender to send a contact signal when they come into contact with the default Head [ContactReceiver](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver) or any custom [ContactReceiver](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver) with the tag `Face`-- note the capital F!
 ![contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png)
 ## Standard Colliders
 A set of "Standard Colliders" are defined in the Avatar Descriptor, in a new section called “Colliders”. This section lets you define a number of standard colliders that exist on every avatar. These will be setup automatically if you don’t touch this, but they may also be tweaked to exactly fit your avatar. These colliders do not affect the performance rating.
@@ -42,10 +42,10 @@ A set of "Standard Colliders" are defined in the Avatar Descriptor, in a new sec
   - Ring
   - Little
 
-These colliders act primarily as Contact Senders that other people can detect with their avatars. However, the finger and hand colliders are also used to create global [PhysBone](/avatars/avatar-dynamics/physbones) Colliders that can be used to affect other people’s PhysBones.
+These colliders act primarily as Contact Senders that other people can detect with their avatars. However, the finger and hand colliders are also used to create global [PhysBone](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Colliders that can be used to affect other people’s PhysBones.
 
 # VRCContactReceiver
-The Contact Receiver component defines a volume of space that will receive a Contact signal upon contact with a Contact Sender. It will then set an [Animator Parameter](/avatars/animator-parameters) in a certain way, as defined by the user.
+The Contact Receiver component defines a volume of space that will receive a Contact signal upon contact with a Contact Sender. It will then set an [Animator Parameter](/creators.vrchat.com/avatars/animator-parameters) in a certain way, as defined by the user.
 ![contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png)
 `Root Transform` - Transform where this contact is placed. If empty, we use this game object's transform.
 
@@ -59,7 +59,7 @@ This section contains settings that define the shape of the ContactReceiver.
 `Collision Tags` - List of strings that specify what it can affect/be affected by. For a successful collision to occur, both the sender and receiver need at least one matching pair of strings. Collision tags are case sensitive.
 
 ## Filtering
-This section contains settings allowing you to adjust and define how this ContactReceiver will interact with  [ContactSenders](/avatars/avatar-dynamics/contacts#VRCContactSender).
+This section contains settings allowing you to adjust and define how this ContactReceiver will interact with  [ContactSenders](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactSender).
 
 `Allow Self` - Allow this contact to be affected by yourself.
 `Allow Others` - Allow this contact to be affected by other people.

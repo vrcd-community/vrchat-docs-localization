@@ -9,7 +9,7 @@ Udon provides functions allowing world creators to
 - Permit or enforce avatar scaling features and parameters.
 - React to changes in player height.
 
-To see relevant events to use in concert with these functions, including "OnAvatarChanged" and "OnAvatarEyeHeightChanged", see [Avatar Events](/worlds/udon/avatar-events)
+To see relevant events to use in concert with these functions, including "OnAvatarChanged" and "OnAvatarEyeHeightChanged", see [Avatar Events](/creators.vrchat.com/worlds/udon/avatar-events)
 
 :::note Scaling and collision
 Please note that scaling an avatar to another size does **not** affect its collision with the environment -- just as uploading an avatar that you've scaled up in Unity would not do so.

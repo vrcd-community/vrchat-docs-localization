@@ -7,7 +7,7 @@ updatedAt: "2021-08-18T20:57:33.538Z"
 ---
 :::note Make a Simple Course First
 
-It's highly recommended to work with the Demo prefabs and Starter Scene first. Read through the instructions to [Build From Demo Parts](/worlds/examples/obstacle-course/build-from-demo-parts).
+It's highly recommended to work with the Demo prefabs and Starter Scene first. Read through the instructions to [Build From Demo Parts](/creators.vrchat.com/worlds/examples/obstacle-course/build-from-demo-parts).
 :::
 # Customizations
 Ok, you've made a simple remix of our demo parts, and you're now ready to add your own custom PowerUps, Hazards and more. Read on to learn how to make new prefabs that interact with the existing systems.
@@ -38,7 +38,7 @@ This UdonBehaviour needs the following variables set:
 
 :::note OnPlayerDataEnter details
 
-If you want to learn more about what's going on in this program, you can find the full documentation here: [OnPlayerDataEnter](/worlds/examples/obstacle-course/uoc-how-stuff-works#onplayerdataenter)
+If you want to learn more about what's going on in this program, you can find the full documentation here: [OnPlayerDataEnter](/creators.vrchat.com/worlds/examples/obstacle-course/uoc-how-stuff-works#onplayerdataenter)
 :::
 ## Checkpoint Program Requirements
 All the above setup just detects the player, creates an FX object, and then triggers an event on the _real_ program. In this case, that's a program called **Checkpoint** on an object called "UdonProgram". The program on the collider will try to run a program called "Trigger" on this UdonBehaviour. 
