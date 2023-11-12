@@ -1,27 +1,27 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["SKPloft/Fixed-vrchat-docs-localization/"]
+name: Translation/翻译改进
+description: 提出对文档的翻译改进意见
+title: "[translation]: "
+labels: ["translation"]
+projects: ["/SKPloft/Fixed-vrchat-docs-localization/", "/vrcd-community/vrchat-docs-localization/"]
 assignees:
   - octocat
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        感谢您抽出时间来填写这份建议表单!
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: 联系方式（可选）
+      description: 我们能通过何种方式联系到您？
+      placeholder: 例如：email@example.com，手机号等等
     validations:
       required: false
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
+      label: Version
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
       value: "A bug happened!"
