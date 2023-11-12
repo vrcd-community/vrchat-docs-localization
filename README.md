@@ -151,4 +151,4 @@
 [issues-url]: https://github.com/vrcd-community/vrchat-docs-localization/issues
 [license-shield]: https://img.shields.io/github/license/vrcd-community/vrchat-docs-localization.svg?style=for-the-badge
 [license-url]: https://github.com/vrcd-community/vrchat-docs-localization/blob/master/LICENSE.txt
-[product-screenshot]: screenshot.png
+[product-screenshot]: screenshots.png
