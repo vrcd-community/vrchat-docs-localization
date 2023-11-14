@@ -1,104 +1,93 @@
 # 制作您的第一个世界
 
-::: warning 🚧
-此页面的某些部分正在更新中。
-需要帮助吗？您可以通过[ discord.gg/vrchat ](https://discord.gg/vrchat)访问我们的 Discord 或通过[ ask.vrchat.com ](https://ask.vrchat.com/)访问我们的官方论坛
-:::
+> 🚧
+> 
+> 部分页面内容正在更新中。
+> 如果您需要帮助，请访问我们的 [Discord](https://discord.gg/vrchat) 或 [官方论坛](https://ask.vrchat.com)。
 
-在开始之前，请确保您有一个[加装了 SDK 插件的 Unity 项目](https://docs.vrchat.com/docs/setting-up-the-sdk)。
+在开始之前，请确保您已经设置了一个带有 SDK 的 [Unity 项目](../sdk)。
 
-## Step 1 - 设置场景
+## 第一步 - 设置场景
 
-您需要的第一个东西是一个场景。这可以是事先做好的内容也可以是一个崭新光洁的场景。打开场景后，您需要将 VRCWorld prefab 拖放到场景中。
+首先，您需要一个场景。这可以是一个预制过的现有场景，或者一个新场景。打开场景后，您需要将 VRCWorld 预制件拖放到您的场景中。
 
-您可以在“Project”选项卡中将您的搜索设置为“In Packages”或“All”，并搜索 VRCWorld Prefab 来找到它。
+您可以在“项目”选项卡中搜索 VRCWorld Prefab，并将搜索设置为 "In Packages" 或 "All" 。
 
-![img](/creators.vrchat.com/images/worlds/creating-your-first-world-b1946d4-Unity_4t4quWsgTY.png)
+![](../images/worlds/creating-your-first-world-b1946d4-Unity_4t4quWsgTY.png)
 
-## Step 2 - 创建出生点
+## 第二步 - 创建出生点
 
-现在，您需要在场景中部署至少一个可以用于出生点虚拟形象的点。在默认情况下，玩家将在您的 VRCWorld 物体坐标处出生点。这是最简单的部署方式，也是大多数用户的选择。
+现在，您需要在场景中设置至少一个玩家可以重生的点。默认情况下，玩家将在您的 "VRCWorld" 物体的位置出现。这是最简单的设置方式，也是大多数人的选择。
 
-如果您想部署其他出生点，请先在场景中创建一个空游戏物体，并将其放置在您希望用户出生的地方，然后将这个游戏物体添加到[ VRC_SceneDescriptor ](https://creators.vrchat.com/worlds/components/vrc_scenedescriptor)的 `spawn` 列表中。所有您自行部署的出生点都需要这样操作。
-如果您部署了多个出生点，您可以通过改变 Spawn Order（出生点顺序）这一属性来决定玩家的出生点顺序。
+如果您想创建额外的出生点，请创建一个空的 GameObject 并将其放置在您希望用户重生的位置。将 GameObject 添加到 [VRC_SceneDescriptor](./components/vrc_scenedescriptor.md) 中的 `spawns` 列表中。重复此操作以获得您想要的出生点数量。
 
-## Step 3 - Descriptor 的设置
+如果您有多个出生点，可以通过更改 Spawn Order 属性来选择玩家重生位置的顺序。
 
-您可以设置 [VRC_SceneDescriptor](https://creators.vrchat.com/worlds/components/vrc_scenedescriptor) 中的各种选项来更改世界的属性。以下是部分常用的功能。
+## 第三步 - Descriptor 的设置
 
-*Spawns* – 这是一个坐标数组，决定玩家进入世界时的出生点位置。默认情况下，玩家会在 Scene Descriptor 游戏物体的坐标原点处出生。
+您可以设置 [VRC_SceneDescriptor](./components/vrc_scenedescriptor.md)，这些设置会改变房间中的行为。以下是一些更重要的选项。
 
-*Respawn Height* 这是玩家重生及其拾取物重置或被摧毁时的-Y-轴高度。任何在这个Y值以下的物体都会被重置（如果是被配置过的对象，则销毁）。
+_Spawns_ - 这是一个坐标数组，决定玩家进入世界时的生成位置。默认情况下，玩家会在 "Scene Descriptor" 游戏物体的坐标处生成。
 
-*Reference Camera* - 在玩家进入房间时可以将玩家的（自定义）设置应用到上面的一个相机。通常用于调整相机裁切面及添加后处理。
+_Respawn Height_ - 这是玩家重生及其拾取物重置或被摧毁时的高度。任何在这个 Y 值以下的物体都会被重置（如果是被配置过的对象，则销毁）。
 
-您可以在 [VRC_SceneDescriptor](https://creators.vrchat.com/worlds/components/vrc_scenedescriptor) 上找到更多的功能。
+_Reference Camera_ - 在玩家进入房间时可以将玩家的（自定义）设置应用到上面的一个相机。通常用于调整相机裁切面及添加后处理效果。
 
-## Step 4 - 搭建场景
+更多设置可以在 [VRC_SceneDescriptor](./components/vrc_scenedescriptor.md) 页面上找到。
 
-让我们开始吧！请转到 `VRChat SDK > Show Control Panel > Builder` 。在这里您可以看到一些用于搭建场景、构建世界的选项。请按照下文进行操作：
+## 第四步 - 设置场景
 
-- 设置用于匹配 VRChat layer 的层。这是必要的步骤，否则您的世界可能无法正常运行。
-- 设置用于匹配 VRChat 的碰撞层矩阵。详情见上文，请勿跳过这一步！
+让我们开始吧！转到 `VRChat SDK > Show Control Panel > Builder` 在这里您可以看到一些用于搭建场景、构建世界的选项。继续执行这些操作：
+
+- 设置匹配 VRChat layer的层。这是必要的步骤，否则您的世界可能无法正常运行。
+- 设置匹配 VRChat 的碰撞层矩阵。详情见上文，请勿跳过这一步！
 - 运行时自动将 3D 空间化应用于 3D 音频源。如果您希望场景中的所有音频源都是空间化的，请使用此选项。
 - 将 3D 空间化应用于当前场景中的 3D 音频源。如果您以后想添加 2D 音频源（如背景音乐），则应使用它。
 
-## 第 5 步 - 在 SDK 构建面板中配置您的世界
+## 第五步 - 在 SDK 面板中配置您的世界
 
-在上传您的姓名之前，您需要向 VRChat SDK 提供有关您的世界的一些基本信息，例如其名称、容量或内容警告。
+在您可以上传您的世界之前，您需要向 VRChat SDK 提供一些关于您的世界的基本信息 - 比如其名称、玩家容量或内容警告。
 
-![VRChat SDK 世界构建面板](/creators.vrchat.com/images/worlds/build-panel-worlds-2023.png)
+![VRChat SDK 的世界构建面板。](../images/worlds/build-panel-worlds-2023.png)
 
-- 世界名称 - 向所有人显示的世界名称。
-- 描述 - 这将显示在 VRChat 的“世界详细信息”页面和网站上。
-- 内容警告 - 与 VRChat 的内容门控系统结合使用的警告。
-- 最大容量 - 您的世界中允许的最大玩家数量。
-    - 如果实例已达到其玩家容量，则无法加入新玩家。
-    - 实例创建者、世界创建者或组所有者始终可以加入，即使这会超出玩家容量。（除非他们没有进入/查看该实例的权限）
-- 建议容量 - 建议的玩家数量。
-    - 如果公共实例已达到其建议的容量，VRChat 将阻止更多玩家加入。该实例将停止出现在 VRChat 的公共实例列表中。
-    - 在某些情况下，如果玩家在 vrchat.com 上有直接邀请 URL，他们仍然可以尝试加入实例。
-- 标签 - 帮助用户在 VRChat 中找到您的世界的关键世界。
-- 世界调试 - 允许其他用户调试您的乌冬面代码。
-- 缩略图 - 世界预览图像。
+- Name - 您的世界向所有人显示的名称。
+- Description - 这将显示在 VRChat 和网页中的“世界详情”页面上。
+- Content Warnings - 与 VRChat 的 [内容限制系统](https://hello.vrchat.com/blog/content-gating) 配合使用的警告。
+- Max. Capacity（最大容量）- 您的世界允许的最大玩家数量。
+  - 如果房间达到其玩家容量上限，新玩家将无法加入。
+  - 房间创建者、世界创建者或组所有者将总是可以加入，即使这会超过玩家容量。（除非他们没有权限进入/看到该实例）
+- Rec. Capacity（推荐容量）- 您的世界推荐的最大玩家数量。
+  - 如果公共房间达到其推荐容量，VRChat 将尝试阻止更多玩家加入。房间将会停止出现在 VRChat 的公共房间列表中。
+  - 如果玩家在 vrchat.com 上有该房间的邀请链接，他们在某些情况下仍然可以尝试加入该房间。
+- Tags - 帮助用户在 VRChat 中找到您的世界的关键词。
+- World Debugging - 允许其他用户调试您的 Udon 代码。
+- Thumbnail - 您世界的预览图像。
 
-::: info 如果我的世界没有推荐的容量怎么办？
-如果您使用旧的 VRChast SDK 上传了 VRChat 世界，并且没有“推荐容量”，则玩家容量的工作方式会有所不同：
+::: info 如果我的世界没有推荐容量怎么办？
 
-- “推荐容量”将与您的玩家容量值相同
+如果您使用旧的 VRChat SDK 上传了您的世界，没有设置“推荐容量”，那么玩家容量的工作方式将有所不同：
 
-- “玩家容量”将是玩家容量值的两倍
+ - “推荐容量”将与您设置的玩家容量值相同
+ - “最大容量”将是您设置的玩家容量值的**两倍**
+ 
+ 例如：如果您将“玩家容量”设置为 10 并且没有设置“推荐容量”，那么您的_实际_“最大容量”将是 20。“玩家容量”有时被称为“软上限”，因此得名。
 
-例如：如果您将“玩家容量”设置为 10，但未设置“推荐容量”，则实际“玩家容量”将为 20。由于这个原因，“玩家容量”有时被称为“软上限”。
 :::
 
-## Step 5 - 构建您的世界
+## 第六步 - 构建和发布您的世界
 
-接下来您需要构建您的世界！您可以选择您首先要做的事情：您可以制作一个非上传的测试版本来测试您的世界，或者您可以直接将世界发布到 VRChat。在“ Test ”和“ Publish ”标题下您可以找到“ Last Build ”和“ New Build ”按钮。Last Build将最近运行的世界版本进行测试或上传。New Build则将新的世界放在一起进行测试或上传。
+接下来您需要构建世界！您需要首先选择您将要做的事情：您可以进行构建测试版本，以在不上传的情况下测试您的世界，或者直接将您的世界发布到 VRChat 中。在 "Offline Testing" 和 "Online Publishing" 标题下，您会找到 "Build" 或 "Last Build" 的按钮。"Last Build" 会将此世界的最后一个成功构建用于测试或上传。选择 "Build" 会将一个新世界重新构建起来进行测试或上传。 
 
-（可选项）
-如果您要测试您的世界，请按“ Test ”标题下的“ New Build ”按钮。这将构建世界的新版本，并在VRChat中启动世界。“ The Number of Clients ”选项用于要打开多个客户端以测试网络行为（如触发器）的情况。
-网址如下：
-https://docs.vrchat.com/docs/trigger-triggers
+_(可选)_  
+如果您希望测试您的世界，请您在测试标题下按 "Build & Test New Build" 按钮。这将立即重新构建构建您的世界，自动启动 VRChat 客户端并进入构建完成的世界用于测试。客户端数量选项用于当您想打开多个客户端以测试网络同步相关的行为时。
 
-现在，我们可以通过按“ Publish ”标题下的“ New Build ”按钮来构建和上传您的世界！这将构建您的世界并准备好上传。Unity 应进入Play模式，并且显示一个屏幕，您可以在其中输入有关上传内容的详细信息，其中包括：
+现在，我们可以通过按下发布标题下的 "Build and Upload" 按钮来构建并上传您的世界！这将构建您的世界并准备上传。请记住，您不被允许上传违反我们的[社区指南](https://vrchat.com/community-guidelines)或[服务条款](https://vrchat.com/legal)的内容到 VRChat 中。如果您执意这样做将导致我们对您做出管理行为。
 
-World name - 向所有人展示您的世界名称！
+上传您的世界后，它将立即在 VRChat 中可用！您应该能够在游戏中看到它，或者您可以通过 SDK 的内容管理器在 `VRChat SDK > Show Control Panel > Content Manager` 中看到它。
 
-Player capacity - 世界的软人数上限。如果在世界内的玩家人数高于软上限，则只有房主的好友才能加入。一旦玩家人数达到世界软上限的 2 倍，它就处于“硬上限”状态，其他用户无法加入。
+::: danger 世界上传失败
 
-世界创建者和房主不受“硬上限”的限制;在上述情况中即使有限制，他们也将被允许加入。在确定普通用户是否可以加入时，豁免用户仍包含在容量中。此外，将来“硬上限”可能会包含更多例外情况，因此不建议见过实例的容量限于任何特定数量的用户。
- 
-Description - 这些内容将显示在应用程序内页面和网站的“World Details”上。
- 
-Content Warnings - 敏感内容警告功能已被弃用，目前不再使用。您不能向VRChat上传违反我们的社区准则或服务条款的内容。这样做（即使您已选中敏感内容警告）也会经过审核操作。
-网址如下：
-https://vrchat.com/community-guidelines
-https://vrchat.com/legal
+如果您的世界上传失败，请[检查 Unity 的控制台](https://docs.unity3d.com/Manual/Console.html)以查看是否有任何错误。如果有，请在尝试再次构建您的世界之前解决它们。确保您已经阅读了 Unity 日志中的全部内容，并点击错误以查看更多信息。
 
-您还可以返回到Scene view并调整 VRCCam 摄像机，以使封面看起来很棒。
-
-输入完所有内容后，您必须确认您有权将内容上传到VRChat。在这之后，您可以单击“Upload”按钮。然后世界将上传到VRChat！完成后，您应该能够在游戏中看到它，或者通过VRChat SDK > Show Control Panel > Content Manager中的内容管理器看到。
-
-如果您的世界上传失败，请检查console面板以查看是否有任何错误，如果有，请在尝试再次构建您的世界之前解决它们。如果您需要帮助，请查看我们在 Discord 中发布的其他资料
-
+如果您需要帮助，请查看我们的其他文档、在[论坛](https://ask.vrchat.com/)中或在[Discord](https://discord.com/invite/vrchat)上提问。确保提供尽可能多的信息，例如 Unity 控制台的错误信息。
+:::
