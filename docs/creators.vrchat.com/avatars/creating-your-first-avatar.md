@@ -84,7 +84,7 @@ VRoid Studio 以 .vrm 格式输出形象，Unity 本身并不支持该格式！�
 当您说话时，您可以让您的形象的嘴（或其他任何东西）自动做出反应。 打开您形象下的`VRC Avatar Descriptor`，展开`LipSync`下拉菜单。一共有五种模式可供选择：
 
 #### Default 默认模式
-[![image](image "image")](http://blank "image")
+![]()
 
 按 "自动检测！"，VRChat SDK 将自动检测适当的口型同步模式。然后，该模式将切换到以下模式之一。
 
