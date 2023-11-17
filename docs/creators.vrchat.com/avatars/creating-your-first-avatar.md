@@ -1,6 +1,6 @@
 # 创建您的第一个形象
 ## 要求：首先设置好 SDK !
-在开始之前，请确保已经有一个[已安装SDK的 Unity 项目](https://creators.vrchat.com/sdk)。
+在开始之前，请确保已经有一个[已安装SDK的 Unity 项目](/creators.vrchat.com/sdk)。
 
 设置好 SDK 后，请查看我们的示例形象。打开形象项目，转到 `VRChat SDK > Samples > Avatar Dynamics Robot Avatar`。
 
@@ -62,7 +62,7 @@ VRoid Studio 以 .vrm 格式输出形象，Unity 本身并不支持该格式！�
 将模型放入资产中并进行正确导入设置后，接下来就可以将其放入场景中了。您可以将其拖入层级窗口或场景窗口中，来达到这个目的。我们建议一个场景只导入一个形象，并将其放置在 0, 0, 0 （原点）处。如果形象没有垂直于地面，请手动旋转到垂直于地面为止。此外，请确保形象不会太小或者不会大的超过 5x5x5m，您可以使用默认的体积为 1x1x1m 的 unity 默认立方体进行比较。
 
 ::: warning 形象优化
-优化您的形象非常重要，这样您就不会对自己和他人造成性能困扰。如果出现此类问题，SDK 会告知您。查看我们的[形象优化技巧](https://docs.vrchat.com/docs/avatar-optimizing-tips)来了解提高形象性能评级的方法。
+优化您的形象非常重要，这样您就不会对自己和他人造成性能困扰。如果出现此类问题，SDK 会告知您。查看我们的[形象优化技巧](/creators.vrchat.com/avatars/avatar-optimizing-tips)来了解提高形象性能评级的方法。
 :::
 
 ## 步骤 4 - 添加一个 Avatar Descriptor
@@ -114,7 +114,9 @@ Unity 会删除导入时为空的 Blend Shapes/Shape Keys，因此请确保您�
 如果您的形象只使用一个形态键来制作嘴部动画，请在此处进行配置。它的作用类似于 ·Jaw Flap Bone·，对`Jaw Blend Shape` 进行动画处理而不是对下巴骨骼进行动画处理。
 
 ##### Viseme Parameter Only
-如果您是高级创作者，您可以使用该模式，利用 VRChat 内置的[动画参数](https://docs.vrchat.com/docs/animator-parameters)控制您的形象对语音的反应。
+如果您是高级创作者，您可以使用该模式，利用 VRChat 内置的[动画参数](/creators.vrchat.com/avatars/animator-parameters)控制您的形象对语音的反应。
+
+![](/creators.vrchat.com/images/avatars/creating-your-first-avatar-3dfc191-Unity_YrUFLEWWDe.png)
 
 ### 第 5 步 - 转到 "构建 "选项卡/检查形象是否 OK
 接下来，我们要检查构建窗口中是否一切正常，为此，您需要打开 `VRChat SDK > Show Control Panel > Builder`，在控制面板中，您会看到形象的 GameObject，下方有一个 `Build & Publish` 按钮。在这中间，您会看到设置、内容标签、"整体性能 "评级、错误和警告。
@@ -124,7 +126,7 @@ Unity 会删除导入时为空的 Blend Shapes/Shape Keys，因此请确保您�
 只需按照 VRChat SDK 构建面板中的步骤操作即可：
 
 - 给您的形象起个名字。您还可以为其添加描述。
-- 确保用适当的内容标签标记您的形象，以符合VRChat 的[内容分级系统](http://blank)。
+- 确保用适当的内容标签标记您的形象，以符合VRChat 的[内容分级系统](https://hello.vrchat.com/blog/content-gating)。
 - 选择您形象的可见性。私人形象不能被其他 VRChat 用户克隆或使用。
 - 选择一个形象缩略图。您可以选择一幅图像或使用从 Unity 场景中截取的图像。
 - 阅读 "验证 "部分。其中包含许多有用的错误和警告。例如，SDK 可能会警告您的形象有太多面数，您可以通过优化网格来解决这个问题。如果无法优化网格，您可能需要返回并选择另一个模型。
@@ -138,9 +140,9 @@ Unity 会删除导入时为空的 Blend Shapes/Shape Keys，因此请确保您�
 您也可以不上传形象，直接测试形象。为此，请点击 "构建并测试"。您的形象将出现在 VRChat 形象菜单的 "其他 "部分。测试形象只能由您自己看到。要让其他玩家看到您的形象，您需要上传形象。
 
 ### 第 7 步 - 欣赏您的形象
-恭喜您创建了第一个形象！我们希望一切都能顺利。如果您需要任何帮助，请访问我们的["提问 "论坛](http://blank ""提问 "论坛")或[Discord 服务器](http://blank "Discord 服务器")。
+恭喜您创建了第一个形象！我们希望一切都能顺利。如果您需要任何帮助，请访问我们的["提问 "论坛](https://ask.vrchat.com/)或[Discord 服务器](https://discord.com/invite/vrchat)。
 
-创建和上传 VRChat 形象是一件既有趣又充满创意的事情。如果您想提高创建形象的技巧，请查看我们形象文档的[其他部分](http://blank "其他部分")。
+创建和上传 VRChat 形象是一件既有趣又充满创意的事情。如果您想提高创建形象的技巧，请查看我们形象文档的[其他部分](/creators.vrchat.com/avatars/index.md)。
 
 何不了解更多信息：
 
