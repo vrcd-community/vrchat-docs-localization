@@ -1,11 +1,11 @@
 ---
-title: "Avatar Dynamics"
+title: "动态化形象"
 sidebar_position: 0
 hidden: false
 createdAt: "2022-03-02T23:49:56.488Z"
 updatedAt: "2022-04-21T18:07:20.317Z"
 ---
-# 动态化形象
+
 动态化形象（Avatar Dynamics）是一套新功能，旨在创建形象之间有趣的互动。易知的是，这些功能非常强大，因此这里要介绍的内容有很多！
 
 动态化形象的两个主要功能是[ "物理骨骼"](/creators.vrchat.com/avatars/avatar-dynamics/physbones)（PhysBones）和 ["接触"](/creators.vrchat.com/avatars/avatar-dynamics/contacts)（Contacts）。
