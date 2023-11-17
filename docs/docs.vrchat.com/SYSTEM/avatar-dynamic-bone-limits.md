@@ -54,11 +54,11 @@
 | 最多受影响的转换值 | 如果虚拟形象具有比此处默认值更多的由动态骨骼带来的变换，则所有动态骨骼和动态骨骼碰撞体组件都将被禁用。 | 32     |
 | 最大碰撞检查值     | 如果虚拟形象的动态骨碰撞体检查数量多于此处列出的数量，则所有动态骨碰撞体组件都将被禁用。               | 8      |
 
-有关这些值确切指示内容的更详细说明，请查看我们关于[虚拟形象性能排名系统](../../creators.vrchat.com/avatars/avatar-performance-ranking-system.md)的文档。
+有关这些值确切指示内容的更详细说明，请查看我们关于[虚拟形象性能排名系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)的文档。
 
 默认限制与虚拟形象性能排名中的中排名匹配。因此，如果虚拟形象由于动态骨骼组件而被标记为“差”或“非常差”，它们将会被禁用。
 
-如果您发现自己的虚拟形象超出了这些限制，但仍希望开启默认设置的用户看到您的动态骨骼，请查看我们的[虚拟形象优化提示](../../creators.vrchat.com/avatars/avatar-optimizing-tips.md)。
+如果您发现自己的虚拟形象超出了这些限制，但仍希望开启默认设置的用户看到您的动态骨骼，请查看我们的[虚拟形象优化提示](/creators.vrchat.com/avatars/avatar-optimizing-tips.md)。
 
 ## 修改动态骨骼限制
 

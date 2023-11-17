@@ -58,7 +58,7 @@ VRChat 支持使用 Lighthouse 生态系统追踪器（如 [HTC Vive Trackers](h
 9. 同时单击控制器上的两个交互按钮（通常情况下为扳机）。
 10. 完成辽！
 
-如果您想使用过时的“传统”校准方法，可以使用 `--legacy-fbt-calibrate` [启动选项](../OVERVIEW/additional-options/launch-options.md)启动 VRChat。
+如果您想使用过时的“传统”校准方法，可以使用 `--legacy-fbt-calibrate` [启动选项](/docs.vrchat.com/OVERVIEW/additional-options/launch-options.md)启动 VRChat。
 
 1. 启动并进入 VRChat，同时佩戴全身追踪并单击快速菜单中的“校准”按钮进入校准模式。
 2. 将您自身与您的虚拟形象对齐，这样您就可以和它“合二为一”。

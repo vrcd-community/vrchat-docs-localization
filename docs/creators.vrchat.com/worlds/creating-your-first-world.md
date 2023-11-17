@@ -5,7 +5,7 @@
 > 部分页面内容正在更新中。
 > 如果您需要帮助，请访问我们的 [Discord](https://discord.gg/vrchat) 或 [官方论坛](https://ask.vrchat.com)。
 
-在开始之前，请确保您已经设置了一个带有 SDK 的 [Unity 项目](../sdk)。
+在开始之前，请确保您已经设置了一个带有 SDK 的 [Unity 项目](/creators.vrchat.com/sdk/)。
 
 ## 第一步 - 设置场景
 

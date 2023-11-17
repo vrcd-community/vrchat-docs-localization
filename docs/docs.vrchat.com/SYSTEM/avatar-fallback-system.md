@@ -1,6 +1,6 @@
 # 备用模型系统
 
-备用模型系统是一种让用户选择在该用户模型不兼容系统时，或者因为用户模型超出了允许的[最低用户模型性能等级](../../creators.vrchat.com/avatars/avatar-performance-ranking-system.md)时所显示的不同于“灰色机器人”占位符的备用用户模型，
+备用模型系统是一种让用户选择在该用户模型不兼容系统时，或者因为用户模型超出了允许的[最低用户模型性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)时所显示的不同于“灰色机器人”占位符的备用用户模型，
 
 ## 备用模型有什么作用？
 
@@ -20,11 +20,11 @@
 
 </center>
 
-此人的用户模型超出了您设置的[最低用户模型性能等级](../../creators.vrchat.com/avatars/avatar-performance-ranking-system.md)。用户模型的原始性能等级显示为内嵌图标。
+此人的用户模型超出了您设置的[最低用户模型性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)。用户模型的原始性能等级显示为内嵌图标。
 
 在这种情况下，您可以通过“显示用户模型”按钮选择显示用户模型。
 
-该用户模型的作者可以通过优化用户模型来解决这个问题。[用户模型性能等级系统](../../creators.vrchat.com/avatars/avatar-performance-ranking-system.md)文档页面包含性能等级的不同阈值的详细信息。
+该用户模型的作者可以通过优化用户模型来解决这个问题。[用户模型性能等级系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)文档页面包含性能等级的不同阈值的详细信息。
 
 #### 文件大小屏蔽
 
@@ -111,7 +111,7 @@
 这是一个快速上传可用的备用模型的过程，该用户模型将在所有当前可用的平台上运行。
 
 1. 创建您的备用模型。根据 Android/Quest 要求，它的性能等级必须为“良好”或“优秀”。
-2. 将此用户模型导入到安装了最新 VRCSDK 的新 Unity 项目中。此项目必须设置为上传到 Android/Quest。如果您不熟悉此内容，请查看[设置 Unity 以创建任务内容](../../creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content.md)。
+2. 将此用户模型导入到安装了最新 VRCSDK 的新 Unity 项目中。此项目必须设置为上传到 Android/Quest。如果您不熟悉此内容，请查看[设置 Unity 以创建任务内容](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content.md)。
 3. 设置用户模型并上传！
 4. 当您进入命名和信息界面时，将出现一个新的复选框，允许您将用户模型定义为备用模型。
 5. 上传！
@@ -160,7 +160,7 @@
 
 ### 上传备用模型
 
-小王决定要上传自己的自定义备用模型。他要么找到符合 Android/Quest [用户模型性能评级系统](../../creators.vrchat.com/avatars/avatar-performance-ranking-system.md)指标的良好用户模型，要么修改他当前的用户模型，使其与这些指标相匹配。
+小王决定要上传自己的自定义备用模型。他要么找到符合 Android/Quest [用户模型性能评级系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)指标的良好用户模型，要么修改他当前的用户模型，使其与这些指标相匹配。
 
 当小王上传他的用户模型时，他会将其导入到一个 Unity 项目中，其中已经安装了 VRCSDK，并设置为上传到 Android/Quest/Android。他上传了用户模型。上传对话框中会出现一个复选框，允许他将用户模型设置为备用候选项。**但是，还有一步！**
 

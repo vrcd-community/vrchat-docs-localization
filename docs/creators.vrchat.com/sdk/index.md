@@ -38,7 +38,7 @@
 
 项目打开后，检查标题栏，确保以 `PC, Mac & Linux Standalone <DX11>` 结尾。如果不是，请转到 `文件 > 生成设置...`，选择 `PC, Mac & Linux Standalone`，然后单击左下角的 `切换平台`。
 
-如果您要为 VRChat 的 Meta Quest 或 Android 版本构建内容，您也应该为 Android 构建内容。详情请查看我们的 [Android 文档](/creators.vrchat.com/platforms/android/android.md)。
+如果您要为 VRChat 的 Meta Quest 或 Android 版本构建内容，您也应该为 Android 构建内容。详情请查看我们的 [Android 文档](/creators.vrchat.com/platforms/android/)。
 
 ## 可选步骤 3 - 安装 SDK
 

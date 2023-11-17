@@ -8,4 +8,4 @@
 - 如果您遇到一些问题，请查看VRChat官网中的[知识库](http://help.vrchat.com/)
 - 您想创建世界还是虚拟形象？
   - 安装[创作者助手](https://vrchat.com/download/vcc)。
-  - 阅读[ VRChat 创作者文档](../../creators.vrchat.com/index.md)。
+  - 阅读[ VRChat 创作者文档](/creators.vrchat.com/index.md)。

@@ -54,7 +54,7 @@ updatedAt: "2022-05-03T19:31:41.007Z"
   这些标准碰撞器从上到下分别在头部，躯干，左右手，左右脚，左右手指（可单独设置食指，中指，无名指，小指）
   :::
 
-这些碰撞器主要作为触发器发送端，且可以被其他人使用的形象探测到。不过，手指和手掌碰撞器也可用于创建全局[物理骨骼](/creators.vrchat.com/avatars/avatar-dynamics/physbone)碰撞器，从而影响其他人的物理骨骼。
+这些碰撞器主要作为触发器发送端，且可以被其他人使用的形象探测到。不过，手指和手掌碰撞器也可用于创建全局[物理骨骼](/creators.vrchat.com/avatars/avatar-dynamics/physbones)碰撞器，从而影响其他人的物理骨骼。
 
 # VRCContactReceiver
 VRCContactReceiver 组件定义了一个空间体积，该体积在与  VRCContactSender 接触后将接收到一个触发器信号。

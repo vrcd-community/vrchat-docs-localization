@@ -1,6 +1,6 @@
 # 创建您的第一个形象
 ## 要求：首先设置好 SDK !
-在开始之前，请确保已经有一个[已安装SDK的 Unity 项目](/creators.vrchat.com/sdk)。
+在开始之前，请确保已经有一个[已安装SDK的 Unity 项目](/creators.vrchat.com/sdk/)。
 
 设置好 SDK 后，请查看我们的示例形象。打开形象项目，转到 `VRChat SDK > Samples > Avatar Dynamics Robot Avatar`。
 

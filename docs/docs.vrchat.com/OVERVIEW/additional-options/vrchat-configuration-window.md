@@ -44,7 +44,7 @@
 
 </center>
 
-此窗口允许您打开[形象动态骨骼限制](../../SYSTEM/avatar-dynamic-bone-limits.md)系统。默认情况下，它处于打开状态。
+此窗口允许您打开[形象动态骨骼限制](/docs.vrchat.com/SYSTEM/avatar-dynamic-bone-limits.md)系统。默认情况下，它处于打开状态。
 
 此选项在 Quest 中不可用，因为 Quest 无法显示动态骨骼。
 
