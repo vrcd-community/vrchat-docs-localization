@@ -24,11 +24,8 @@ concurrency:
 jobs:
   # Build job
   build:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: apperry/action-cached-lfs-checkout@c0616236fe56259b047ba97925bad9d8b644be88
@@ -37,8 +34,7 @@ jobs:
         uses: actions/setup-node@v4.0.0
         with:
           node-version: "18"
-          cache: "yarn"
-        
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
@@ -47,11 +43,11 @@ jobs:
 
       - name: Build
         run: yarn run docs:build
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: './docs/.vitepress/dist'
+          path: "./docs/.vitepress/dist"
 
   # Deployment job
   deploy:
