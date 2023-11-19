@@ -2,9 +2,11 @@ import { defineConfig } from 'vitepress'
 import { vrcahtDocsSidebars, vrchatCreatorsDocsSidebar, vccDocsSidebar, udonSharpDocsSidebar, clientSimDocsSidebar } from './sidebars'
 
 import { VitePWA } from 'vite-plugin-pwa'
+import { withPwa } from '@vite-pwa/vitepress'
+
 
 // refer https://vitepress.dev/reference/site-config for details
-export default defineConfig({
+export default withPwa(defineConfig({
   lang: 'zh-CN',
   title: 'VRChat 汉化文档中心',
   description: '一个 VRChat 官方文档简体中文本地化项目',
@@ -181,51 +183,93 @@ export default defineConfig({
 
   },
 
-  vite: {
-    plugins: [
-      VitePWA({
-        registerType: 'autoUpdate',
-        devOptions: {
-          enabled: true
+  pwa: {
+    outDir: '.vitepress/dist',
+    strategies: 'generateSW',
+    registerType: 'autoUpdate',
+    devOptions: {
+      enabled: true
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,mp4,webp,woff2}']
+    },
+    experimental: {
+      includeAllowlist: true,
+    },
+    manifest: {
+      name: 'VRChat 汉化文档中心',
+      short_name: 'VRChat 汉化文档中心',
+      description: 'VRChat 汉化文档中心',
+      theme_color: '#1fa588',
+      display: 'standalone',
+      display_override: ['window-controls-overlay', 'standalone'],
+      lang: 'zh',
+      start_url: '/',
+      dir: 'ltr',
+      orientation: 'natural',
+      categories: ['development', 'developer tools', 'documents', '开发', '开发工具', '文档'],
+      handle_links: 'preferred',
+      edge_side_panel: {
+        preferred_width: 480,
+      },
+      launch_handler: {
+        client_mode: ['navigate-existing', 'auto'],
+      },
+      screenshots: [
+        {
+          src: '/pwa/screenshot-wide.png',
+          form_factor: 'wide',
+          sizes: '1920x1006',
+          type: 'image/png',
+          label: '创作者文档首页'
         },
-        workbox: {
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,mp4,webp}']
+        {
+          src: '/pwa/screenshot-wide-doc.png',
+          form_factor: 'wide',
+          sizes: '1920x1006',
+          type: 'image/png',
+          label: '创作者文档入门文档'
         },
-        manifest: {
-          name: 'VRChat 汉化文档中心',
-          short_name: 'VRChat 汉化文档中心',
-          description: 'VRChat 汉化文档中心',
-          theme_color: '#ffffff',
-          display: 'standalone',
-          display_override: ['window-controls-overlay', 'standalone'],
-          lang: 'zh',
-          icons: [
-            {
-              src: '/site-icons/icons/android-chrome-192x192.png',
-              sizes: '192x192',
-              type: 'image/png'
-            },
-            {
-              src: '/site-icons/icons/android-chrome-512-512.png',
-              sizes: '512x512',
-              type: 'image/png'
-            }
-          ],
-          shortcuts: [
-            {
-              name: 'VRChat 文档枢纽',
-              url: '/docs.vrchat.com/',
-              description: '您可以找到全面的指南和文档，帮助您尽快开始玩 VRChat，如果遇到困难，还可以获得支持。'
-            },
-            {
-              name: 'VRChat 创作者文档',
-              url: '/creators.vrchat.com/',
-              description: '利用我们的工具和文档来学习，创作，分享。'
-            }
-          ]
+        {
+          src: '/pwa/screenshot-phone.png',
+          form_factor: 'narrow',
+          sizes: '390x844',
+          type: 'image/png',
+          label: '创作者文档首页'
+        },
+        {
+          src: '/pwa/screenshot-phone-doc.png',
+          form_factor: 'narrow',
+          sizes: '390x844',
+          type: 'image/png',
+          label: '创作者文档入门文档'
         }
-      })
-    ]
-  }
+      ],
+      icons: [
+        {
+          src: '/site-icons/icons/android-chrome-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: '/site-icons/icons/android-chrome-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ],
+      shortcuts: [
+        {
+          name: 'VRChat 文档枢纽',
+          url: '/docs.vrchat.com/',
+          description: '您可以找到全面的指南和文档，帮助您尽快开始玩 VRChat，如果遇到困难，还可以获得支持。'
+        },
+        {
+          name: 'VRChat 创作者文档',
+          url: '/creators.vrchat.com/',
+          description: '利用我们的工具和文档来学习，创作，分享。'
+        }
+      ]
+    }
+  },
 
-});
+}));

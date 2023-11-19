@@ -1934,7 +1934,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.9.0":
+"@types/node@npm:*":
+  version: 20.9.2
+  resolution: "@types/node@npm:20.9.2"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 8bab2870bfc02efc988c53dfb0149634f8feb824132cc7f20b36f3d55d89ef893e3a43d545524a5cb3a284f4ce68ae4181d75a4a39cee6b79c586d719e6b7461
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.9.0":
   version: 20.9.0
   resolution: "@types/node@npm:20.9.0"
   dependencies:
@@ -1963,6 +1972,15 @@ __metadata:
   version: 0.0.20
   resolution: "@types/web-bluetooth@npm:0.0.20"
   checksum: 2faa323e5c994e9468fff4675e3b6d35f3730eb4dc7c761d02267fb6246dbfd659fd8f3583db0872aae05b3ee139799c25655bbe79bf1b56c08c06e665db814b
+  languageName: node
+  linkType: hard
+
+"@vite-pwa/vitepress@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@vite-pwa/vitepress@npm:0.3.0"
+  peerDependencies:
+    vite-plugin-pwa: ">=0.17.0 <1"
+  checksum: 6194734755b00ce85ab397bb065504f93e15e24131f1309b12277afc195be9b43257b47c57d2bb06ed25ed2a822a17afddf4176c5815d80974baa058a4018cd2
   languageName: node
   linkType: hard
 
@@ -2471,9 +2489,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001541":
-  version: 1.0.30001561
-  resolution: "caniuse-lite@npm:1.0.30001561"
-  checksum: 94cfc8454c19d28828baf254771e0f3cf1828f95b0a85904d70a77b530873a041a735761091e3baf17ec90609250f887baa044b8ed2776368a46dd2e70f050d6
+  version: 1.0.30001563
+  resolution: "caniuse-lite@npm:1.0.30001563"
+  checksum: dab23d85ddba75c4230348a1e491bb95bb9978f6b9dd78df6445cce9aede18ef97a2a24ce54d02aff3c67169a021221aaa04711f13d469ab4f72a487aa36205c
   languageName: node
   linkType: hard
 
@@ -2666,9 +2684,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.535":
-  version: 1.4.581
-  resolution: "electron-to-chromium@npm:1.4.581"
-  checksum: a40ea2863c9b2e586987d67c87d3ebd819991e86e24fab862ca3a04a60d9e27490951a2fa7bf50d122f02b8ea14a14c5bdbaebe2a97fa95cacca70a27904cfd3
+  version: 1.4.588
+  resolution: "electron-to-chromium@npm:1.4.588"
+  checksum: a6b972d961416acbc2075c59760ba79b193d266d47deca8d04bbec44e6fc23b60a969d4ed6d1110f85fac05c96803e70e7c961da2146a4a92e31025bf031a51d
   languageName: node
   linkType: hard
 
@@ -2904,7 +2922,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.3.1":
+"fast-glob@npm:^3.3.2":
   version: 3.3.2
   resolution: "fast-glob@npm:3.3.2"
   dependencies:
@@ -4876,20 +4894,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:^0.16.7":
-  version: 0.16.7
-  resolution: "vite-plugin-pwa@npm:0.16.7"
+"vite-plugin-pwa@npm:^0.17.0":
+  version: 0.17.0
+  resolution: "vite-plugin-pwa@npm:0.17.0"
   dependencies:
     debug: "npm:^4.3.4"
-    fast-glob: "npm:^3.3.1"
+    fast-glob: "npm:^3.3.2"
     pretty-bytes: "npm:^6.1.1"
     workbox-build: "npm:^7.0.0"
     workbox-window: "npm:^7.0.0"
   peerDependencies:
-    vite: ^3.1.0 || ^4.0.0 || ^5.0.0-0
+    vite: ^3.1.0 || ^4.0.0 || ^5.0.0
     workbox-build: ^7.0.0
     workbox-window: ^7.0.0
-  checksum: 4b9506fa061942469f4206273a9c8a16ebb6a95218157a66d83383a5f9cab5f44687f84fc72f86525dd47397320e06ee66a1fa9f876288ccc177737ffc688e7b
+  checksum: ca51d9cff0acb4b25e952b05d41eed123ee7bc68e013351d9cefba1e5e1f6ca51a7b99c962f2b09001885d7db99fbf6d68a0d20935e07e0aef3a9b63d1db9908
   languageName: node
   linkType: hard
 
@@ -4970,8 +4988,9 @@ __metadata:
   dependencies:
     "@tsconfig/node18": "npm:^18.2.2"
     "@types/node": "npm:^20.9.0"
+    "@vite-pwa/vitepress": "npm:^0.3.0"
     "@vue/tsconfig": "npm:^0.4.0"
-    vite-plugin-pwa: "npm:^0.16.7"
+    vite-plugin-pwa: "npm:^0.17.0"
     vitepress: "npm:^1.0.0-rc.25"
   languageName: unknown
   linkType: soft

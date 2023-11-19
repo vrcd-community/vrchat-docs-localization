@@ -12,8 +12,9 @@
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
     "@types/node": "^20.9.0",
+    "@vite-pwa/vitepress": "^0.3.0",
     "@vue/tsconfig": "^0.4.0",
-    "vite-plugin-pwa": "^0.16.7",
+    "vite-plugin-pwa": "^0.17.0",
     "vitepress": "^1.0.0-rc.25"
   }
 }
