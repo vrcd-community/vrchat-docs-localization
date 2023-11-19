@@ -49,7 +49,7 @@ Debug menu 4 displays various stats about other users.
 ![world-debug-views-1232152-VRChat_SVxaMmgiLC.png](/creators.vrchat.com/images/worlds/world-debug-views-1232152-VRChat_SVxaMmgiLC.png)
 
 Debug menu 5 displays some graphs related to networking. They are unlabeled and mostly not useful.
-:::caution World debugging views above 5 are restricted
+::: warning World debugging views above 5 are restricted
 
 By default, only the world creator can access debug menus above 5. However, you can allow others to see it as well by enabling World Debugging in your world's settings on the website. Don't forget to click "Save Changes"! Other users will need to rejoin the world to be able to access this debug view after World Debugging gets enabled.
 :::

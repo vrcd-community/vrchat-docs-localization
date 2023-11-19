@@ -82,7 +82,7 @@ The following nodes are Under Review - not working, not recommended for use. We'
 * CombatSetup
 
 ## Language
-:::note
+::: info
 
 Switching Languages is not yet ready in the VRChat client, these methods will return example data until the full feature is launched. They will currently throw an exception when testing in ClientSim, as well.
 

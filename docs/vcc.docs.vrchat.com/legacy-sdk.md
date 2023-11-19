@@ -1,5 +1,5 @@
 # Legacy SDK
-:::caution
+::: warning
 Support for VRChat's legacy SDK ('`.unitypackage`' SDK) has ended with the start of 2023.
 * To create new projects, use the [Creator Companion](https://vcc.docs.vrchat.com/) or [a template](https://vcc.docs.vrchat.com/vpm/templates).
 * To update an old project, follow our [migration guide](https://vcc.docs.vrchat.com/vpm/migrating) by using the Creator Companion.

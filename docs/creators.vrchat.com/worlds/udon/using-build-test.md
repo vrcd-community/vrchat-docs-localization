@@ -7,7 +7,7 @@ hidden: false
 createdAt: "2020-08-21T19:34:22.325Z"
 updatedAt: "2023-02-16T22:38:16.295Z"
 ---
-:::note Prerequisites
+::: info Prerequisites
 
 Before you read this page, you should read [What is Udon](/creators.vrchat.com/worlds/udon/) and [Getting Started with Udon](/creators.vrchat.com/worlds/udon/getting-started-with-udon).
 :::
@@ -51,7 +51,7 @@ Your VRChat client should launch into a local copy of this world where you can r
 
 # Launching Multiple Clients
 In order to test Synced Variables and Custom Network Events, you need multiple people in the same world. The easiest way to accomplish this is to use the Builder tab to launch multiple clients. Close the VRChat client window you just launched if it's still open, and change the 'Number of Clients' to 2, then press Build and Test again. This time, Unity will open up two VRChat clients, with your same avatar in both of them. You can swap between the windows to control your two avatars, and even see yourself talking in both of them. Try playing with the Synced Variables area. The first avatar that loads in will be the Master of the instance and therefore Owner of those GameObjects, so they will be able to update the UI Elements, whereas the second avatar can only see the updates. The one exception in this scene is the 'SyncButtonAnyone' which transfers ownership to whoever clicks on it.
-:::danger Bug: Don't use the Chair when running Build & Test with multiple clients.
+::: danger Bug: Don't use the Chair when running Build & Test with multiple clients.
 
 There's an issue right now that all of your avatars will get 'sat' into the chair, and it will be difficult to get them out. We'll remove this warning when that's fixed. For now, you'll need to Publish the scene to test out Stations in your world.
 :::
@@ -65,7 +65,7 @@ You can also do this for clients you launch yourself, if you want to test with m
 VRChat.exe --watch-worlds --profile=0 --no-vr --enable-debug-gui --enable-sdk-log-levels --enable-udon-debug-logging -screen-width 1920 -screen-height 1080
 ```
 
-:::danger New 'Build & Test' Clients Don't Join Reloaded Worlds
+::: danger New 'Build & Test' Clients Don't Join Reloaded Worlds
 
 If you Build & Reload some clients, then choose 'Build & Test' to add more clients, they may not be joined into the right room. However, you can simply reduce the number of clients back to 0 and then 'Build & Reload' or 'Reload Last Build' in order to join them all together again.
 :::

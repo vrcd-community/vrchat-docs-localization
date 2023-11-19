@@ -15,7 +15,7 @@ The Creator Companion will check that Unity is installed on launch. If it is nee
 
 To install Unity Hub, [follow these steps](https://learn.unity.com/tutorial/install-the-unity-hub-and-editor).
 
-:::info
+::: info
 
 ### Unity Installation Issues
 

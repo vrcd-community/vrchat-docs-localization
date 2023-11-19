@@ -7,7 +7,7 @@ createdAt: "2020-08-05T22:29:37.898Z"
 updatedAt: "2023-02-06T14:15:33.627Z"
 ---
 When you create animations for your VRChat avatar, you'll utilize VRChat's 'Playable Layers.' They allow cleanly separate some things you might want to do with your avatar into their own animations - such as running, jumping, giving a thumbs-up, smiling, wagging your tail, and combinations of these.
-:::caution Unity Knowledge Required
+::: warning Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 :::
@@ -28,7 +28,7 @@ We have example Playable Layers available in the SDK. Depending on how you learn
 When you are running VRChat and you're wearing (or viewing) an Avatar 3.0 avatar, all of these Playable Layers are put together into a combined Animator. This Animator is the root, main animator of your avatar, and you can control any part of it. **This means that there is no reason to add any additional animators on your avatar.** 
 
 As an aside, you should never use the same controller in multiple Playable Layers. This may work for some setups, but it is **very** poor practice and will cause major issues as you expand the functionality of your avatar.
-:::danger Only Use Animation Controllers
+::: danger Only Use Animation Controllers
 
 We only support the use of Animation Controllers in Playable Layer slots. Do not use any other type of controller-- you will run into errors or will be unable to upload the content.
 :::
@@ -58,7 +58,7 @@ The Additive layer is meant for additive transform movement on top of humanoid b
 
 The Additive layer is special because it is _always_ set to "Additive" blending. In short, if you've got a transform that moves during locomotion, the Additive animation will "add" its animation on top. This can act really weirdly if you do crazy things to bones in Additive, so try to keep it pretty minimal.
 
-:::caution Additive First Layer Avatar Mask Ignored
+::: warning Additive First Layer Avatar Mask Ignored
 
 The first layer (base layer, 0th layer, etc)'s Avatar Mask is ignored. This is for internal masking purposes. You can still mask other layers, but any mask you apply to the first layer will be ignored.
 :::
@@ -92,7 +92,7 @@ The mask in the first FX layer, by default is empty, this will (at avatar init) 
 
 If you have non-muscle animations in your gestures (eg. your Gesture [mask](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AvatarMask.html) has any transforms checked at the bottom) those same transforms must be DISABLED in your FX mask. This will allow your Gesture animations to "show through" the FX layer.
 
-:::info Example
+::: info Example
 
 Let's say your avatar has the following setup:
 - You have a tail on your avatar (a chain of bones not part of humanoid hierarchy).

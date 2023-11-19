@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-08-05T22:30:32.065Z"
 updatedAt: "2023-04-07T14:38:34.913Z"
 ---
-:::caution Unity Knowledge Required
+::: warning Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 

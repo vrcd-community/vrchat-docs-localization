@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2017-09-23T03:26:49.590Z"
 updatedAt: "2023-03-10T15:12:26.161Z"
 ---
-:::caution
+::: warning
 
 **This guide is not meant to be the end-all, be-all of avatar optimization!** Optimizing your avatar properly requires pretty wide knowledge of a ton of things. We don't expect everyone to know everything.
 

@@ -110,7 +110,7 @@ Keeping bone count low is important to keep the cost of skinning calls low. If a
 Since Dynamic Bones is disabled on VRChat Quest, this means that there's no need for extra bones for dynamic bits. You'll want to merge the weights for those bones into their parents.
 
 A hard Bone limit will be established in the near future for VRChat Quest avatars.
-:::caution Matching Rigs
+::: warning Matching Rigs
 
 Ensure that the basic bone layout and hierarchy of your rigs are identical, including scale, rotation, and position. This especially applies to your root (usually hip) bone. Having a mismatch can result in strange behavior when viewing content cross-platform.
 :::

@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-09-10T18:56:07.748Z"
 updatedAt: "2023-03-09T22:55:53.659Z"
 ---
-:::note
+::: info
 
 VRChat on Quest can play videos from direct links to video files. These URLs typically end with a filename ending in a supported video type like http://something.com/video.mp4 or http://test.com/cats.webm. If you visit the link and see a whole website around a video, that link will probably not play on Android / Quest because the application that VRChat uses to resolve these links into videos does not run on Android.  Creators will need to move the video to a host that supports direct links, or find another way to work around this issue.
 
@@ -24,7 +24,7 @@ If a service is not on this list, it will not play unless "Allow Untrusted URLs"
 
 VRChat on Android will not play video if the host is not using HTTPS protocol.
 
-:::caution
+::: warning
 
 The example video player in the SDK will not handle cases in which the master has "Untrusted URLs" disabled, which will result in videos being unable to play. User-created video players may want to modify the Udon code to give sync ownership to the user requesting the video.
 :::
@@ -32,21 +32,21 @@ The example video player in the SDK will not handle cases in which the master ha
 ## Allowlisted Services
 The services listed below are inherently trusted and are permitted with our default URL allowlist. The resource being accessed (as in, the URL you enter into/use in the video player) must reside in the service domain listed next to the service name. This means that short-links may not work!
 
-:::note
+::: info
 
 *The listings below do not constitute partnerships or endorsements and may change at any time without notice*.
 :::
 
-| Service | Domain |
-| --- | --- |
-| --- | --- |
-| Soundcloud | `soundcloud.com` |
-| Facebook Video | `*.facebook.com` |
-| NicoNico | `*.nicovideo.jp` |
-| Twitch.TV | `*.twitch.tv` |
-| Vimeo | `*.vimeo.com` |
-| Youku | `*.youku.com` |
-| YouTube | `*.youtube.com`,`youtu.be` |
-| VRCDN | `*.vrcdn.live`,`*.vrcdn.video` |
-| Mixcloud | `mixcloud.com` |
-| Poly | `*.poly.jp` |
+| Service        | Domain                         |
+| -------------- | ------------------------------ |
+| ---            | ---                            |
+| Soundcloud     | `soundcloud.com`               |
+| Facebook Video | `*.facebook.com`               |
+| NicoNico       | `*.nicovideo.jp`               |
+| Twitch.TV      | `*.twitch.tv`                  |
+| Vimeo          | `*.vimeo.com`                  |
+| Youku          | `*.youku.com`                  |
+| YouTube        | `*.youtube.com`,`youtu.be`     |
+| VRCDN          | `*.vrcdn.live`,`*.vrcdn.video` |
+| Mixcloud       | `mixcloud.com`                 |
+| Poly           | `*.poly.jp`                    |

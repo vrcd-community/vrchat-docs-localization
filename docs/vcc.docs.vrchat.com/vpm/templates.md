@@ -13,7 +13,7 @@ This template includes the Base and World SDKs, ready for you to build and uploa
 ### UdonSharp
 This template includes everything in the World Template above, plus [UdonSharp](https://github.com/vrchat-community/UdonSharp) for writing your programs using a C#-like syntax.
 
-:::tip
+::: tip
 
 These templates are available automatically when you install the Creator Companion, but we also provide them as git repositories you can download and use directly.
 You can [read more about that here](/vcc.docs.vrchat.com/guides/using-project-template-repos).

@@ -8,7 +8,7 @@ updatedAt: "2022-11-15T23:12:29.563Z"
 Here is a list of the components permitted on avatars. Any component not on this list will be removed at runtime, and may prevent upload.
 
 Custom scripts/components are not permitted on avatars, and will be removed at upload and runtime.
-:::caution Oculus Quest
+::: warning Oculus Quest
 
 The Quest version of VRChat has some exceptions to this list. Check [here](/creators.vrchat.com/platforms/android/quest-content-limitations#components) for more info.
 :::
@@ -54,7 +54,7 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/crea
  For the wearer and their friends, camera components are disabled on load. Use an animation to enable the component. For non-friends of the wearer, camera components are removed completely on load.
 
 ## [Root Motion (FinalIK)](http://www.root-motion.com/finalikdox/html/index.html)
-:::caution FinalIK Components Modified
+::: warning FinalIK Components Modified
 
 VRChat has highly modified its implementation of FinalIK. As such, these components may not work as documented.
 
@@ -77,7 +77,7 @@ If you discover a bug, please [let us know](https://feedback.vrchat.com).
  Using this script on a humanoid avatar will break it.
 
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
-:::danger Dynamic Bone Deprecated
+::: danger Dynamic Bone Deprecated
 
 Support for Dynamic Bone is deprecated. You should use [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) instead.
   

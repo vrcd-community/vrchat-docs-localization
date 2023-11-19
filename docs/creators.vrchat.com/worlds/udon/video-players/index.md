@@ -13,7 +13,7 @@ The easiest way to put a Video Player in your Udon world is by using one of the 
 
 Both of these prefabs will play a video of your choosing, synchronized for everyone in your world. They won't loop - the graph turns off looping for now to get sync to work. If you want them to loop, turn on 'Loop' and remove the UdonBehaviour.
 
-:::note These are Synced Player EXAMPLES
+::: info These are Synced Player EXAMPLES
 
 You don't have to use the "UdonSyncPlayer" Udon Behaviours. You can use just the VRC Video Player component if you don't need the videos synced in your world. You can also make your own Sync Graphs using the provided one as a starting point or you can make one from scratch.
 
@@ -44,7 +44,7 @@ This also applies to late-joiners. If you have 2 video players running in your w
 To play a video, you need to provide a URL in the Video URL field when you set up your Video Player in the editor, or you can paste a URL into the VRCUrlInputField provided in the prefabs.
 
 A full list of our supported hosts is available at [Video Player Allowlist](/creators.vrchat.com/worlds/udon/video-players/www-whitelist). Some recommendations are below.
-:::note Disclaimer
+::: info Disclaimer
 
 *The listings below do not constitute partnerships or endorsements*. These are services that are widely accessible and have been tested to work properly with VRChat video players.
 :::

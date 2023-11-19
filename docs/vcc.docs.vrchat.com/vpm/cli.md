@@ -157,7 +157,7 @@ vpm remove package <packageName> [-p <project>] [-f]
 ## Templates
 [Templates](templates) are barebones VRChat projects which can be used as a starting point for new projects, pulling in your favorite packages, prefabs and tools to get running quickly.
 
-:::tip
+::: tip
 
 We also provide the templates as git repositories you can use directly. [Here's the guide](/vcc.docs.vrchat.com/guides/using-project-template-repos) with all the links and instructions.
 
@@ -335,7 +335,7 @@ Checks:
 The only fully-supported platform at the moment is Windows 10.
 However, we are working to make the vpm tool available to Mac and Linux users.
 
-:::tip
+::: tip
 
 If you're having trouble using the CLI on non-Windows platforms, you can check out our [Project Templates](/vcc.docs.vrchat.com/guides/using-project-template-repos) to get you started with the latest VRChat packages without relying on VCC.
 

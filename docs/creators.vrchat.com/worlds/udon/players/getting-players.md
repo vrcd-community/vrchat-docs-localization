@@ -10,7 +10,7 @@ These nodes are useful for getting an individual Player, a group of them, or all
 ### Networking.get LocalPlayer
 *VRCPlayerApi*
 
-:::note
+::: info
 
 Please note that this function is a member of the Networking class, but it is being included here.
 
@@ -63,7 +63,7 @@ Remove all tags that you've set on a Player.
 
 ### GetPlayersWithTag
 
-:::caution
+::: warning
 
 Not currently working. Returns a List, which is unavailable in Udon.
 

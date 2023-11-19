@@ -26,7 +26,7 @@ This repo publishes to [GitHub Pages](https://pages.github.com/) for free hostin
 
 2. Edit the images and captions in the "Web" directory. You can ignore or delete the `index.html` page, it's just there as an example to test the images and captions in a browser. You can keep the images named 1.jpg, etc to make it easier to use the prefab, or rename them and update the prefab URLs. 
 
-:::tip
+::: tip
 When the files in the "Web" directory are edited, the website is re-published. As long as the filenames stay the same (images are 1.jpg, 2.jpg, etc.), the URLs in the world will point to the newly published files. Republishing happens automatically through [an included GitHub Action](https://github.com/vrchat-community/examples-image-loading/actions/workflows/static.yml).
 :::
 3. Clone the repo to your computer.
@@ -151,7 +151,7 @@ If the Image downloads successfully, save a reference to it and then load it up 
 
 When each image is visited for the second+ time, it will be displayed from its saved Texture2D reference instead of loaded fresh, unless it failed to download the first time.
 
-:::tip Source Code
+::: tip Source Code
 View the full source code for [SlideshowFrame.cs on GitHub](https://github.com/vrchat-community/examples-image-loading/blob/main/Assets/_Project/Frame/SlideshowFrame.cs).
 :::
 
@@ -159,7 +159,7 @@ View the full source code for [SlideshowFrame.cs on GitHub](https://github.com/v
 
 * The first image doesn't have its caption loaded quickly enough, so it doesn't show until the first loop around.
 
-:::tip Udon
+::: tip Udon
 
 View the [main Image Loading docs page](/creators.vrchat.com/worlds/udon/image-loading) for full details on the Image Loading system, including domain and file limits.
 

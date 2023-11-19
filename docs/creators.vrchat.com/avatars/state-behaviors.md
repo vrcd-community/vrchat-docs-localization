@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-08-05T22:32:59.268Z"
 updatedAt: "2023-02-08T15:38:26.170Z"
 ---
-:::caution Unity Knowledge Required
+::: warning Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 :::
@@ -15,7 +15,7 @@ All state behaviors run on the first frame of the transition into that state.
 
 State behaviors *should* run no matter how long the state machine remains in the state containing the state behavior.
 
-:::caution
+::: warning
 
 The term "should" is deliberately used here, as in the [Unity documentation](https://docs.unity3d.com/2019.4/Documentation/Manual/StateMachineBehaviours.html) does not define any guarantee that state behaviors will execute given very small transition or state durations.
 
@@ -63,7 +63,7 @@ The view will remain set until some other state runs this State Behavior again a
 This behavior is executed when the delay time has elapsed.
 
 Animator Temporary Pose Space should **only** be used when the view height needs to update due to a posture change, like sitting or laying on the ground. It cannot be used to "scale" the avatar being worn, and will cause major breaking problems if used in this manner.
-:::danger
+::: danger
 
 This state behavior **will not execute** if the state this behavior is on is exited or interrupted before `Delay Time` elapses!
 :::
@@ -88,7 +88,7 @@ If you set all IK tracking points to Animation, your animation will play as the 
 - 3pt Tracking: Head, Left Hand, Right Hand
 - 6pt / FBT Tracking: Head, Left Hand, Right Hand, Hip, Left Foot, Right Foot
 
-:::note
+::: info
 
 All parts are IK-driven, aside from the Eyes and Eyelid, which are simulated. Mouth and Jaw are driven by visemes.
 
@@ -144,7 +144,7 @@ As the component points out, using Random may not produce the same result when r
 
 ### Copy
 Copy will set the value of the Source Parameter to the Destination Parameter. This can be used to set one float to match another float, to remap one float into a different range, or to convert between two different types entirely.
-:::caution
+::: warning
 
 VRChat's built-in parameters, such as `GestureLeftWeight`, **can** be specified but do not work as source parameters.
 :::

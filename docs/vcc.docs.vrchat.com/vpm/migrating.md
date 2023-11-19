@@ -4,7 +4,7 @@
 Projects created with the legacy `.unitypackage` SDKs can be migrated to the new system if they use the SDK3 Worlds or Avatars unitypackages (SDK2 not supported). They can be Unity 2017, 2018 or 2019 projects. The SDK must be in its original install location to be  detected - specifically, one of these must exist:
 * `Assets/Udon`
 * `VRCSDK/Plugins/VRCSDK3A.dll`
-:::caution
+::: warning
 If your project is using [UdonSharp](https://udonsharp.docs.vrchat.com/), read our [Known Issues](https://udonsharp.docs.vrchat.com/migration#known-issues) page.
 :::
 ## The Process

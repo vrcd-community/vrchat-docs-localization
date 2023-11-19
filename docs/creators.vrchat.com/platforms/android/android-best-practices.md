@@ -7,7 +7,7 @@ updatedAt: "2023-06-08T20:00:00.157Z"
 Making your VRChat worlds cross-platform is a great way of allowing more players to enjoy it. Most VRChat players are on Android, so it’s worth creating an Android of your VRChat world.
 
 However, mobile players and VR players will experience your world quite differently! In this guide, we’ll explain a few ways to make your mobile VRChat world more comfortable and enjoyable.
-:::info
+::: info
 
 VRChat is not available on Android _yet_.
 It is scheduled to release later this year.
@@ -21,7 +21,7 @@ Any worlds uploaded to Android are available on the Oculus Quest 2 and Android m
 
 To learn how to upload your world to Android, please refer to our [cross-platform setup documentation](https://creators.vrchat.com/platforms/android/cross-platform-setup).
 
-:::note
+::: info
 
 If you see the term ‘Quest’ in reference to the VRChat SDK, it generally applies to Android, too.
 

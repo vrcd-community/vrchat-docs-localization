@@ -39,7 +39,7 @@ DoubleSided
 Hidden //(this will hide the mesh from view if the shader is blocked, useful for things like raymarching effects.)
 ```
 Toon and Unlit can also be combined with Transparent, Cutout, Fade, and DoubleSided tags for more granular control. With Toon supporting such variations as DoubleSided Cutout.
-:::caution
+::: warning
 
 Please note that using Transparent or Fade tags with Toon will result in it falling back to Transparent Unlit. You might want to take that into account when picking fallback tags.
 :::

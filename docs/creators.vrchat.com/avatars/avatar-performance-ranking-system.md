@@ -12,7 +12,7 @@ This system is provided to inform users what is likely the most performance-heav
 It is also used to drive the [Minimum Displayed Performance Rank](/creators.vrchat.com/avatars/avatar-performance-ranking-system#section-minimum-displayed-performance-rank) system, which is a way for users to decide what avatars they wish to show based on their Performance Rank.
 
 **This system is not meant to be an end-all-be-all authority on avatar performance**, but is a good general guide to indicate if an avatar needs a bit more work to be performant.
-:::danger Perf Ranks are not the final word!
+::: danger Perf Ranks are not the final word!
 
 Although the Performance Rank system does as best as it can to judge the "worst case" scenario of an avatar's performance, there are many ways to have a well-optimized avatar appear as Very Poor, and have a FPS hog rank as Excellent.
 
@@ -42,7 +42,7 @@ The ranks are as follows:
 
 ## Viewing Detailed Avatar Stats
 If you click on a user with your Quick Menu open, you'll notice a new **"Show Avatar Stats"** button on the left side, displaying the icon of that user's Performance Rank.
-:::caution
+::: warning
 
 This graphic is out of date! Update pending.
 :::
@@ -50,7 +50,7 @@ This graphic is out of date! Update pending.
 ![image](/creators.vrchat.com/images/avatars/avatar-performance-ranking-system-05c612d-image_4.png)
 
 If you click this icon, you can view the detailed **Avatar Stats** of that avatar. You can get to this for your own avatar by going to your Avatar Menu, clicking one of your avatars, and clicking the **Avatar Stats** button in the bottom left of the screen.
-:::caution
+::: warning
 
 This graphic is out of date! Update pending.
 :::
@@ -58,7 +58,7 @@ This graphic is out of date! Update pending.
 ![avatar-performance-ranking-system-7a362c2-fixedTrogPerf.png](/creators.vrchat.com/images/avatars/avatar-performance-ranking-system-7a362c2-fixedTrogPerf.png)
 
 When you click the **Avatar Stats** button, you'll get a screen pop up with the details of avatar you're looking at, or your own avatar (if you clicked the button in the Avatar tab).
-:::caution
+::: warning
 
 This graphic is out of date! Update pending.
 :::
@@ -112,12 +112,12 @@ For example with the Minimum Displayed Performance Rank set to Poor an avatar wi
 Below, you'll find the limits for each of the Performance Ranks. If you go above these numbers for any category, you'll be bumped into the next rank.
 
 For example (on PC), if your avatar has 2 Skinned Meshes, your avatar will be ranked as Good, as that exceeds the rating for Excellent, but does not exceed the rating for Good. 
-:::caution All GameObjects and Components are counted!
+::: warning All GameObjects and Components are counted!
 
 All GameObjects and Components, **including those that are currently disabled**, count towards the Avatar Performance Rank.
 :::
 
-:::caution Mesh Read/Write Disabled
+::: warning Mesh Read/Write Disabled
 
 If you disable Mesh Read/Write on **any** mesh on the avatar (including particle systems), the "Polygons" count will read "Mesh Read/Write Disabled" and the avatar's Performance Rank will be immediately downgraded to "Very Poor" regardless of the actual triangle count on the avatar.
 
@@ -180,7 +180,7 @@ Notably, **there is a hard cap on [Avatar Dynamics](/creators.vrchat.com/avatars
 - 16 [Avatar Dynamics Contacts](/creators.vrchat.com/avatars/avatar-dynamics/contacts) 
 
 If this cap is exceeded on Quest, all [Avatar Dynamics](/creators.vrchat.com/avatars/avatar-dynamics/) components will be removed from the avatar, even if Show Avatar is enabled.
-:::danger
+::: danger
 
 **"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Quest entirely.** Please keep this in mind when creating avatars for VRChat on the Oculus Quest.
 :::
@@ -271,7 +271,7 @@ You cannot disable the Avatar Performance Rank Block system on Quest. In other w
 No matter what setting you choose, if the [Avatar Dynamics](/creators.vrchat.com/avatars/avatar-dynamics/) component limits are exceeded on Quest, all of those components will be removed. In short, there is a hard cap for Avatar Dynamics components on Quest avatars.
 
 ### Overriding Individual Avatars
-:::danger
+::: danger
 
 **"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Quest entirely.** Please keep this in mind when creating avatars for VRChat on the Oculus Quest.
 :::

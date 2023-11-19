@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2020-08-05T22:34:37.899Z"
 updatedAt: "2022-11-08T23:54:49.666Z"
 ---
-:::caution Unity Knowledge Required
+::: warning Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 
@@ -42,7 +42,7 @@ FYI: we've included some default icons you can use in `VRCSDK/Assets3/Expression
 * **Four Axis Puppet** - Opens an axis puppet menu that controls four float parameters depending on the joystick position.  The parameters are mapped in order, up, right, down, left. The float values are 0.0 to 1.0.
 * **Radial Puppet** - Open a radial puppet menu that controls a single float parameter, kind of like a progress bar that you can fill! The float value is 0.0 to 1.0.
 
-:::note Puppet Menu Sync
+::: info Puppet Menu Sync
 
 The **Puppet** controls use [**IK Sync**](/creators.vrchat.com/avatars/animator-parameters#sync-types) when open. If you want sync that is as close as possible to your inputs for fast/quick movements, you should use a Puppet menu.
 

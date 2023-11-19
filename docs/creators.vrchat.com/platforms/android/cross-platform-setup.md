@@ -10,7 +10,7 @@ Setting up a cross-platform world or avatar is actually quite straightforward! I
 If you need a bit more detail on how to do this properly (and easily), here's a short guide.
 ## Duplicating your Project (Deprecated)
 
-:::caution Asset Database v2
+::: warning Asset Database v2
 
 With the advent of Asset Database v2, swapping between platforms doesn't take nearly as long! Duplicating your project isn't really necessary anymore. You can skip this part.
 
@@ -35,7 +35,7 @@ There's some important notes here:
 - [You need to install Unity's Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html). Otherwise the option won't pop up.
 - Although you *can* swap back and forth between Windows and Android, **you probably don't want to do this.** It changes files around, you probably want to maintain a scaled-back version of your world for Quest, and...
 - It can take a **significant** amount of time to swap to the Android platform. Thankfully, if you maintain two separate projects, you only do this once. If your project is huge or has dozens of avatars, you'll probably want to just export the content you want as Prefabs or UnityPackages, and then create an empty Android project from scratch.
-:::note Local Cache Server
+::: info Local Cache Server
 
 You can reduce the time it takes to swap platforms by using Unity's Cache Server, which you can run locally. [Read more about the cache server here](https://docs.unity3d.com/2019.4/Documentation/Manual/CacheServer.html). Keep in mind this can take up a significant amount of disk space.
 
@@ -51,7 +51,7 @@ You can also check out some of our documentation on optimizing content for Oculu
  - [Quest Content Limitations](/creators.vrchat.com/platforms/android/quest-content-limitations) 
  - [Avatar Performance Ranking System](/creators.vrchat.com/avatars/avatar-performance-ranking-system) 
 
-:::caution SyncVideoStream and SyncVideoPlayer Components
+::: warning SyncVideoStream and SyncVideoPlayer Components
 
 Currently, neither SyncVideoStream nor SyncVideoPlayer is supported on Quest. Putting these into a Quest world will cause severe issues! Simply remove them from the Quest version. However,  having a video player only in the PC version can cause problems as well. If the Master of the instance is a Quest user, you'll run into further problems.
 
@@ -76,7 +76,7 @@ If an avatar isn't available for the platform you're on, you'll see a placeholde
 If a world isn't available for the platform you're on, you'll be unable to enter portals to that world or join it through the UI.
 
 **However**, if you join a world that has both Quest and PC versions, and the people in the instance have both Quest and PC versions of their avatars, you'll view the world appropriately for your platform and be able to hang out with everyone, with no issues!
-:::danger Armatures MUST be identical!
+::: danger Armatures MUST be identical!
 
 For avatars to work properly cross-platform, the armature path MUST be identical between the PC and Quest versions to essential bones like the head, hands, and feet. Additionally, the scale and rotation of the "root bone" (the first bone in the hierarchy) MUST be identical between versions.
 :::

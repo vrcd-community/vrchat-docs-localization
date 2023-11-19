@@ -40,7 +40,7 @@ Note that since the creator decides what type of Tracking Control to apply, the 
 
 Our example Seated controllers show this branching behavior and the proper transitions and State Behavior setup for applying a seated animation.
 
-:::caution Stations cannot create new Parameters via Drivers, only affect existing ones
+::: warning Stations cannot create new Parameters via Drivers, only affect existing ones
 
 Parameter driver [State Behaviors](/creators.vrchat.com/avatars/state-behaviors) in animators specified on stations will only be able to drive existing avatar parameters, not create new ones.
 

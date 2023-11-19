@@ -47,7 +47,7 @@ Get whether the player is touching the ground, which enables Jump.
 _takes a Vector3 World Position and Quaternion World Rotation_  
 Send a Player to a new spot and specified rotation, unless a Station does not allow it.
 
-:::note Teleporting other players
+::: info Teleporting other players
 
 TeleportTo only works with the [local player](/creators.vrchat.com/worlds/udon/players/getting-players#networkingget-localplayer). You can use [networking](/creators.vrchat.com/worlds/udon/networking/) to cause other players to teleport themselves. 
 

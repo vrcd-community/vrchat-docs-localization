@@ -50,7 +50,7 @@ All that being said, **we do not recommend using 2D audio.** All real-world sour
 VRChat supports using `VRC_SpatialAudioSource` on avatars, albeit with some [limitations](/creators.vrchat.com/worlds/components/vrc_spatialaudiosource#section-avatar-limitations). These limitations are in place to prevent abuse and malicious sounds.
 
 Other than these limitations, `VRC_SpatialAudioSource` works precisely the same on avatars as it does in worlds.
-:::danger Don't Forget to add a SpatialAudioSource!
+::: danger Don't Forget to add a SpatialAudioSource!
 
 If you don't add a `VRC_SpatialAudioSource` with your avatar audio sources, one will be added by the SDK with default settings.
 
@@ -60,7 +60,7 @@ If you use a pre-existing avatar-based `Audio Source` without a `VRC_SpatialAudi
 
 ## Component Properties
 
-:::caution Dynamic Adjustment at Runtime
+::: warning Dynamic Adjustment at Runtime
 
 Adjusting these properties via animations during runtime is not supported. These values are set at initialization.
 
@@ -68,7 +68,7 @@ Animating properties of the `Audio Source` should still work for properties that
 
 :::
 
-:::caution Disabling / Enabling Sound Sources
+::: warning Disabling / Enabling Sound Sources
 
 On avatars, it is best to disable and enable the Audio Source components rather than the entire GameObject.
 :::

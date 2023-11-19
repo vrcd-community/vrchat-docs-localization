@@ -11,7 +11,7 @@ The Udon Node Graph is the default interface for creation of Udon programs. This
 You can open up the Udon Graph window using the Menu Item under **VRChatSDK > Udon Graph**, or by clicking the **Open Udon Graph** button on an UdonBehaviour Component.
 ![The Udon Window](/creators.vrchat.com/images/worlds/index-a1d7f43-open-graph.png)
 
-:::caution Minimap
+::: warning Minimap
 
 The minimap has been removed! Now that you can search your graph by Group Name and Event Name, we felt the minimap was more distracting than helpful.
 :::
@@ -101,7 +101,7 @@ You can use Unity's Play Button to run your scene directly in the editor to test
 Use the VRChat SDK Window to do Local Testing. This takes slightly longer as it bundles your content into an offline world and launches the actual VRChat client to give you an Avatar that can Interact with objects and VRCPlayerAPI requests.
 ![The simplest way to test Sync features is to launch 2 local clients.](/creators.vrchat.com/images/worlds/index-32da932-local-testing-2.png)
 To test Synced variables and NetworkEvents, you'll need two clients - you can use the 'Number of Clients' field to launch up to 8 local clients that will launch in a private test world. They will all have the same DisplayName, but they'll otherwise be recognized as separate players so you can test out your interactions.
-:::danger Set Your Local Client Path
+::: danger Set Your Local Client Path
 
 If 'Force Non-VR' doesn't work for you, then switch to the 'Settings' tab of the VRChat SDK Window and set your VRChat Client Path to point at your actual VRChat installation.
 :::

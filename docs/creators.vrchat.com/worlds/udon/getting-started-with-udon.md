@@ -28,7 +28,7 @@ Here are all the steps to get you started with Udon using the Creator Companion.
 From there, you're ready to start!
 
 # Manual Setup
-:::caution
+::: warning
 
 This method is deprecated! You should use the Creator Companion.
 :::

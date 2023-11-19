@@ -14,7 +14,7 @@ Image Loading allows you to display images from the internet in your VRChat worl
 
 The SDK includes an easy-to-use `ImageDownload` script, or you can make your own script with the new `VRCImageDownloader` object.
 
-:::tip
+::: tip
 You can [view our Image Loader example](/creators.vrchat.com/worlds/examples/image-loading) to get started quickly.
 :::
 ## Before You Begin

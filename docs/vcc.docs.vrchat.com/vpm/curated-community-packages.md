@@ -9,7 +9,7 @@ To add a Curated Package to one of your projects, follow these steps:
 3. Browse the list of Curated Packages
 4. Click "Add" or "Update" to add the newest version of the package to your project
 
-:::caution
+::: warning
 When you migrate a project for the first time, the Creator Companion automatically looks for and removes old folders of Curated Community Packages. Make sure to move your files out of these folders before migrating!
 :::
 

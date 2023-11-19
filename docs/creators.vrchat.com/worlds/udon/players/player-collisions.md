@@ -19,7 +19,7 @@ If you want to detect when a player has entered or exited an area, your best bet
 To use these events, add an object with a collider and check the 'Trigger' box on the collider. A Trigger Collider lets objects and players pass through it and calls events when those objects have colliders. You can learn more about [Collision in the Unity Manual](https://docs.unity3d.com/2019.4/Documentation/Manual/CollidersOverview.html).
 
 
-:::note Edge Cases
+::: info Edge Cases
 
 There are some edge cases where one of these events could be skipped, like when a player teleports out of a collider, or is moving VERY fast. We'll add in handling in the future to catch these.
 :::
@@ -31,7 +31,7 @@ To detect events on these Colliders, you can use:
 - **OnPlayerCollisionStay** is called on frames while a player's capsule is inside a Collider.
 - **OnPlayerCollisionExit** is called when a player's capsule exits a Collider.
 
-:::caution OnPlayerCollision Events are for Moving Objects
+::: warning OnPlayerCollision Events are for Moving Objects
 
 These events WILL NOT be called when a player 'walks into' a stationary object. If you want to handle that, use a Trigger Collider.
 

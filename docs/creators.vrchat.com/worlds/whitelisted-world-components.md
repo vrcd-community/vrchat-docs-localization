@@ -6,7 +6,7 @@ createdAt: "2018-12-13T22:11:19.350Z"
 updatedAt: "2021-09-15T23:15:28.795Z"
 ---
 The following is the complete list of scripts usable within worlds. Components that are not in this list will not work.
-:::caution Oculus Quest
+::: warning Oculus Quest
 
 The Quest version of VRChat has some exceptions to this list. Check [here](/creators.vrchat.com/platforms/android/quest-content-limitations#components) for more info.
 :::
@@ -171,7 +171,7 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/crea
 - Shadow
 
 ## Post Processing Stack V2
-:::caution Post Processing Stack v1
+::: warning Post Processing Stack v1
 
 PPSv1 is not supported in either VRCSDK2 or VRCSDK3. It has been deprecated by Unity.
 :::

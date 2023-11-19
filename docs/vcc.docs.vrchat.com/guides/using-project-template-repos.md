@@ -24,7 +24,7 @@ This template includes everything in the World Template above, plus [UdonSharp](
 
 ## Usage
 
-:::tip
+::: tip
 
 We highly recommend you use the [VCC Application](/vcc.docs.vrchat.com/guides/getting-started) or the [CLI](/vcc.docs.vrchat.com/vpm/cli) to set up new projects using the official templates automatically.  
 But if you want to do it manually or cannot use these methods - follow the instructions below
@@ -44,7 +44,7 @@ But here is a quick general overview:
 - Click "OK" when asked to download required VRChat packages.
 - You should be set up and ready to go!
 
-:::info
+::: info
 
 Every template's README.md file contains more detailed instructions for creating and publishing the respective content.
 

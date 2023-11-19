@@ -9,7 +9,7 @@ sidebar_position: -1
 Setting up Unity to create Quest content is actually pretty straightforward. This image covers it pretty well:
 ![setting-up-unity-for-creating-quest-content-1ac8b19-VRChat_QuestContent_QuickStart.png](/creators.vrchat.com/images/setting-up-unity-for-creating-quest-content-1ac8b19-VRChat_QuestContent_QuickStart.png)
 
-:::caution Requires Additional Setup
+::: warning Requires Additional Setup
 
 [You need to install Unity's Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html). Otherwise the option won't pop up.
 
