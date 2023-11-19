@@ -7,6 +7,7 @@ import { withPwa } from '@vite-pwa/vitepress'
 
 // refer https://vitepress.dev/reference/site-config for details
 export default withPwa(defineConfig({
+  base: '/vrchat-docs-localization/',
   lang: 'zh-CN',
   title: 'VRChat 汉化文档中心',
   description: '一个 VRChat 官方文档简体中文本地化项目',
