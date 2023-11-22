@@ -1,95 +1,97 @@
----
-title: "Cross-Platform Setup"
-slug: "cross-platform-setup"
-sidebar_position: 0
-createdAt: "2019-04-09T22:29:12.157Z"
-updatedAt: "2022-10-26T22:10:52.879Z"
----
-Setting up a cross-platform world or avatar is actually quite straightforward! In short, all you have to do is use a duplicate project to build an Android version of the asset, and upload it to the same content ID as the VRChat PC asset. The client will manage which version it needs to download. 
+# 跨平台设置
 
-If you need a bit more detail on how to do this properly (and easily), here's a short guide.
-## Duplicating your Project (Deprecated)
+设置跨平台世界或虚拟形象实际上非常简单！您所要做的就是使用重复的项目来构建某某资产的 Android 版本，并将其上传为与 VRChat PC 资产相同的内容 ID。客户端会自动判断需要下载的资产版本是哪一个。
+
+如果您需要如何正确（轻松）执行此操作的更多详细信息，这里为您准备了一个简短的指南。
+
+## 复制您的项目（已过时）
 
 ::: warning Asset Database v2
+随着 Asset Database v2 的出现，在平台之间切换几乎不需要像之前那么长的时间！您也没有很大必要复制您的项目了。您可以选择跳过此部分。
 
-With the advent of Asset Database v2, swapping between platforms doesn't take nearly as long! Duplicating your project isn't really necessary anymore. You can skip this part.
-
-You can also use [EasyQuestSwitch](https://github.com/JordoVR/EasyQuestSwitch), which helps make switching even easier.
-
+您还可以使用 [EasyQuestSwitch](https://github.com/JordoVR/EasyQuestSwitch)，它可以使资产切换变得更加容易。
 :::
 
-We'll be making the assumption that you already have a VRChat PC project set up with your world or avatar. If this isn't the case, you'll need to set up and create your project for PC first. You could also build for Android/Quest first, but that's your call.
+我们先假设您已经有一个 VRChat PC 项目，其中有着您的世界或虚拟形象。如果您不是上述这种情况，您需要先设置和创建 PC 项目。您也可以先创建 Android/Quest 项目，随意即可。
 
-After you've got your project at the point where you want to build and upload for VRChat PC, go ahead and do so. This process is identical to our standard setup.
+在您得到能够由 VRChat PC 构建和上传的项目后，继续推进即可。此过程与标准构建和上传步骤相同。
 
-Once you've got your VRChat PC build up, you'll need to duplicate the project for the Quest (Android) version. To do this, close Unity, **copy your project folder, and paste the copy elsewhere.** Basically, you're duplicating your project. The location doesn't matter much, as long as they are separate and distinct projects. You might want to name the project something like `MyVRChatProject-Quest` just to keep organized.
+在您的 VRChat PC 内容被构建后，您需要将这一个项目复制用于 Quest（Android）项目版本的搭建。请先关闭 Unity，复制目标项目文件夹，然后将项目的副本粘贴到任意位置。您基本上是在进行复制您的项目的操作。复制项目的位置并不重要，只要它们能够是独立且不同的项目即可。您也许想把项目命名为 `我的 VRChat 项目名字-Quest` ？当然这么做只是为了让一切保持井然有序。
 
-Keep in mind that any changes you make to one project, you should make to both. If it is something simple like moving an object, you can simply move the object in one project, then copy/paste the transform values to the second project.
+请注意，对一个项目所做的任何更改，都应该同步到两个项目共同进行更改。如果只是移动游戏对象之类的简单操作，则只需在一个项目中进行移动，然后将转换值复制粘贴到另一个项目中即可。
 
-For more complex or wider-reaching changes, you may have to re-duplicate the project, or be very careful with how duplicate the changes.
-## Setting up for Quest
-Open your Quest project in Unity. Since it is a duplicate, you shouldn't have any changes. However, we're about to change that. Let's swap your build target to Android. Here's how to do that:
-![cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png](/creators.vrchat.com/images/cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png)
+对于更复杂或影响更广的更改，您可能需要重新复制项目，或者小心翼翼地进行复制更改操作。
 
-There's some important notes here:
-- [You need to install Unity's Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html). Otherwise the option won't pop up.
-- Although you *can* swap back and forth between Windows and Android, **you probably don't want to do this.** It changes files around, you probably want to maintain a scaled-back version of your world for Quest, and...
-- It can take a **significant** amount of time to swap to the Android platform. Thankfully, if you maintain two separate projects, you only do this once. If your project is huge or has dozens of avatars, you'll probably want to just export the content you want as Prefabs or UnityPackages, and then create an empty Android project from scratch.
-::: info Local Cache Server
+## 设置 Quest 环境
 
-You can reduce the time it takes to swap platforms by using Unity's Cache Server, which you can run locally. [Read more about the cache server here](https://docs.unity3d.com/2019.4/Documentation/Manual/CacheServer.html). Keep in mind this can take up a significant amount of disk space.
+在 Unity 中打开 Quest 项目。由于它是复制体，因此不应在这个项目进行任何更改。只不过我们即将颠覆这一局限。现在我们可以将构建目标直接交换到 Android 环境。操作方法如下：
 
+![img](../../img/cross-platform-setup-1.png)
+
+有一些重要的注意事项需要您关心：
+
+- [您需要安装 Unity 的 Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html)。否则该选项将不会弹出。
+- 虽然您可以在 Windows 和 Android 之间来回切换，**但您可能不会想这样去做**。它会直接改变文件，而您也许想要为 Quest 制作维护一个缩水版的世界，并且......
+- 将世界切换到 Android 平台可能需要**大量**时间。值得庆幸的是，如果您维护的世界项目是两个独立的项目，则您只需执行一次。如果您的项目很大或存着几十个虚拟形象，则您可能只想将所需的内容导出为预制件或 UnityPackages，然后从头开始创建一个空的 Android 项目。 
+
+::: tip 本地缓存服务器
+您可以使用 Unity 的缓存服务器（可在本地运行）来减少切换平台所需的时间。[您可以在此处阅读有关缓存服务器的更多信息](https://docs.unity3d.com/2019.4/Documentation/Manual/CacheServer.html)。请注意，这可能会占用大量磁盘空间。
 :::
 
-## Fine-tuning and Optimization
-Now that you've got two separate projects set up appropriately, you'll need to start optimizing. **You cannot skip this.** Quest is a powerful headset, but not nearly as powerful as a typical VR-ready PC. You'll need to check out our [Quest Content Optimization](/creators.vrchat.com/platforms/android/quest-content-optimization) page to see what you need to do. For worlds this means baking lighting, lowering geometry complexity, avoiding transparency, and lowering texture resolution. For avatars, this means removal of excess components, excess bones, lowering geometry complexity, avoiding transparency, and reducing texture size.
+## 微调和优化
 
-This will take a while, and is expected to be challenging. Optimizing for mobile hardware is difficult! Thankfully, there's a ton of resources out there, and even a cursory YouTube search for "optimizing Unity for mobile" reveals a ton of good content.
+现在您大概已经设置好了两个单独的项目，您需要开始优化工作了。**不要想着偷懒**。Quest 虽然是一款功能强大的头戴式设备，但它的性能远不如典型的 VR-ready PC 强大。您需要查看我们的 [Quest 内容优化](./quest-content-optimization.md)页面以了解您需要做的是些什么。对于世界来说，优化工作涉及到烘焙光照、降低几何体复杂性、避免透明度和降低纹理分辨率。对于虚拟形象来说，优化工作涉及到去除多余的组件、多余的骨骼、降低几何体的复杂性、避免透明度和降低纹理大小。
 
-You can also check out some of our documentation on optimizing content for Oculus Quest.
- - [Quest Content Optimization](/creators.vrchat.com/platforms/android/quest-content-optimization) 
- - [Quest Content Limitations](/creators.vrchat.com/platforms/android/quest-content-limitations) 
- - [Avatar Performance Ranking System](/creators.vrchat.com/avatars/avatar-performance-ranking-system) 
+这项操作会花掉相当一段时间，并且可能会很具有挑战性。针对移动设备进行优化是很困难的！值得庆幸的是网上有着大量的资源，即使是在 YouTube 上粗略搜索“优化Unity的移动版”，您也会发现大量的优质内容。
 
-::: warning SyncVideoStream and SyncVideoPlayer Components
+您还可以查看我们关于优化 Oculus Quest 内容的一些文档。
 
-Currently, neither SyncVideoStream nor SyncVideoPlayer is supported on Quest. Putting these into a Quest world will cause severe issues! Simply remove them from the Quest version. However,  having a video player only in the PC version can cause problems as well. If the Master of the instance is a Quest user, you'll run into further problems.
+- Quest 内容优化
+- Quest 内容限制
+- 虚拟形象性能排名系统
 
-Although getting synced video playback working on Quest is an eventual goal, we suggest not using them until we have official support on the platform.
+::: warning SYNCVIDEOSTREAM 和 SYNCVIDEOPLAYER 组件
+目前，Quest 不支持 SyncVideoStream 和 SyncVideoPlayer。将这些放入 Quest 世界会导致严重的问题！只需将它们从 Quest 版本中删除即可。但是，仅在 PC 版本中使用视频播放器也会导致问题。如果实例的 Master 是 Quest 用户，您将遇到更多问题。
 :::
 
-## Uploading Content
-Once your world or avatar is ready, you can upload! This upload process is identical to the VRChat PC upload process, although the SDK will be a lot more aggressive with warning you about performance issues.
+尽管在 Quest 上同步视频播放是最终目标，但我们建议在获得平台官方支持之前不要使用它们。
 
-**You need to upload your world or avatar to the same blueprint ID as you have for the VRChat PC version of the content.** Blueprint ID is defined by a [Pipeline Manager component](/creators.vrchat.com/sdk/vrcpipelinemanager) on a Game Object, which usually accompanies a VRC Scene Descriptor, typically on your VRCWorld prefab. Press the "Detach" button to edit the blueprint ID, and paste in the ID from the first version that you uploaded (you can also find this in the "Content Manager" tab of the VRChat SDK control panel).
+## 上传内容
 
-The version you're uploading depends on the originating project's build target. If you're on a project set up for Android, it'll upload for Quest. If the build target is Windows, then you're uploading a PC version. That's basically it-- once you've uploaded, any client that views your content will talk to our servers a bit like this:
+一旦您的世界或虚拟形象准备好，您就随时可以上传了！此上传过程与 VRChat PC 上传过程相同，但 SDK 会更加敏感地警告您相关性能问题的信息。
 
->"Hey, I'm an Oculus Quest and I want this content."
->"Ok, here's a Quest version."
+**您需要将世界或虚拟形象上传到与 VRChat PC 版内容相同的蓝图 ID**。蓝图 ID 由游戏对象上的[管线管理器组件](../../sdk/vrcpipelinemanager.md)决定，该组件通常附带 VRC Scene Descriptor，通常位于 VRCWorld 预制件上。点击“Detach”按钮编辑，然后在 蓝图ID 的位置粘贴您上传的那个版本项目的 ID（您也可以在 VRChat SDK 控制面板的“Content Manage”选项卡中找到它）。
 
->"Hey I'm a VRChat PC user and I want this content."
->"Ok, here's the VRChat PC version."
+您要上传的版本取决于原始项目的构建目标。如果您处理的原始项目是 Android 项目，则该项目将上传为 Quest 版本。如果构建目标是 Windows 项目，则将上传为 PC 版本。基本上就是这样——一旦您上传了，所有想查看您创建的内容的客户端都会像这样与我们的服务器交谈：
 
-If an avatar isn't available for the platform you're on, you'll see a placeholder avatar indicating what platform that user is on.
+> “嘿，我是 Oculus Quest，我想看看这个内容。” “好的，这是这项目的 Quest 版本。”
 
-If a world isn't available for the platform you're on, you'll be unable to enter portals to that world or join it through the UI.
+> “嘿，我是 VRChat PC 用户，我想看看这个内容。” “好的，这是这项目的 VRChat PC 版。”
 
-**However**, if you join a world that has both Quest and PC versions, and the people in the instance have both Quest and PC versions of their avatars, you'll view the world appropriately for your platform and be able to hang out with everyone, with no issues!
-::: danger Armatures MUST be identical!
+如果某个虚拟形象不适配于您所在的平台，您将看到一个占位符虚拟形象，指示该用户使用的虚拟形象所适配的平台。
 
-For avatars to work properly cross-platform, the armature path MUST be identical between the PC and Quest versions to essential bones like the head, hands, and feet. Additionally, the scale and rotation of the "root bone" (the first bone in the hierarchy) MUST be identical between versions.
+如果某个世界不适配于您所在的平台，您将无法进入该世界的房间或通过 UI 面板加入该世界。
+
+但是，如果您加入一个同时拥有 Quest 和 PC 版本的世界，并且房间中的人同时拥有 Quest 和 PC 版本的虚拟形象，您便可以根据您的平台看到相应的世界，并能够与所有人一起闲逛，莫得一点问题！
+
+::: danger 骨架（Armature）必须相同！
+要使虚拟形象在跨平台中正常工作，PC 和 Quest 版本之间的骨架路径必须与头部、手部和脚部等基本骨骼相同。此外，“根骨”（层次结构中的第一个骨骼）的缩放和旋转在版本之间必须相同。
 :::
-The rigging (armatures) between Quest and PC avatars must be mostly identical. If you want to remove non-essential bones like skirt/hair/etc bones for the Quest version, that's fine-- but do not change the base structure of the armature layout. Doing so will result in strange behavior when viewed across platforms.
 
-Most importantly, the "root bone" (as in, Hips) should be the first bone in the hierarchy after the Armature GameObject. To be specific, as long as the setup (scale, rotation) of the "root bones" is identical, you should have no problems.
-## Caveats
-We know that maintaining two **"separately optimized, but identical in content"** projects for PC and Quest isn't ideal, and the process is a bit of an exercise in repetition. However, this process gives you a massive amount of control, and lets you be quite creative with the different platforms while sticking to the appropriate level of optimization for whichever platform you're targeting.
+Quest 和 PC 虚拟形象之间的骨架（Armature）必须基本相同。如果您想在 Quest 版本中去除非必要的骨骼，如裙子/头发/等骨骼，那其实还行——但千万不要改变骨骼层级窗口（hierarchy）的基本结构。这样做会导致跨平台检查时出现一些灵异事件。
 
-We'll be looking into ways to improve this process over time, but keep in mind many of these limitations are due to the way projects are managed in Unity.
-## Tips
-- Your VRChat PC avatar can have all kinds of bells and whistles that the VRChat Quest avatar can't have. Depending on the platform, users will see whatever version is appropriate for their client.
-- You can be a bit creative with this as well-- you could have a high-poly world or avatar for PC users, and then a low-fi (but still stylish) version for Quest users.
-- Define a set of box colliders or a low-poly mesh collider for both the PC and Quest versions of the world and use that instead of a mesh collider. Parent the colliders to an empty GameObject at a specific coordinate, and if you update one project, you can copy/paste that object to the other project easily. That way you'll never see users on different platforms "float", and you won't have issues with expensive and complex high vertex count mesh colliders.
-- Remember, avoid transparency at all costs! It is quite expensive. 
-  - As an aside, yes, "alpha cutout" counts as transparency.
+最重要的是，“根骨”（如 Hips）应该是层级窗口（hierarchy）中仅次于骨骼游戏对象的第一根骨骼。只要“根骨”的设置（缩放、旋转）保持原样，就大概没有问题。
+
+## 警告
+
+我们都知道，为 PC 和 Quest 维护两个“**分别单独优化但内容相同**”的项目并不好过，而且这个过程有那么点重复。但是，此过程为您提供了大量的控制权，并让可以您在不同的平台上发挥创造力，同时守住对您目标平台的优化级别。
+
+随着时间的推移，我们将研究用于改进此过程的方法，但请记住，其中许多限制是由于在 Unity 中管理项目的方式限制造成的。
+
+## 技巧
+
+- 您的 VRChat PC 虚拟形象可以拥有 VRChat Quest 虚拟形象无法拥有的各种花里胡哨的东西。根据平台的不同，用户将看到适合其客户端的版本。
+- 您也可以在这方面发挥一点创意——您可以为 PC 用户提供一个高面数世界或虚拟形象，然后为 Quest 用户提供低面数（但仍然炫酷的）版本。
+- 为 PC 和 Quest 版本的世界整上一组箱体碰撞体或低多边形网格碰撞体，并使用它来代替网格碰撞体。将碰撞体绑到特定坐标处的空游戏对象的子集，在这时如果更新一个项目，您便可以轻松地将该对象复制粘贴到另一个项目。这样一来，您就永远不会看到不同平台用户之间的“微妙浮动”，也不会遇到极其消耗性能的高顶点数网格碰撞器的问题。
+- 请记住，您需要不惜一切代价避免材质透明度！这会烧掉很多的性能。
+  - 顺便说一句，是的，“alpha cutout”也算作透明度。
