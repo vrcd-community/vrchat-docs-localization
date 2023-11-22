@@ -1,19 +1,13 @@
----
-title: "Setting up Unity for Creating Quest Content"
-slug: "setting-up-unity-for-creating-quest-content"
-hidden: false
-createdAt: "2019-04-10T00:53:35.417Z"
-updatedAt: "2019-10-28T19:23:09.636Z"
-sidebar_position: -1
----
-Setting up Unity to create Quest content is actually pretty straightforward. This image covers it pretty well:
-![setting-up-unity-for-creating-quest-content-1ac8b19-VRChat_QuestContent_QuickStart.png](/creators.vrchat.com/images/setting-up-unity-for-creating-quest-content-1ac8b19-VRChat_QuestContent_QuickStart.png)
+# 设置 Unity 以创建 Quest 内容
 
-::: warning Requires Additional Setup
+设置 Unity 用于创建 Quest 内容实际上非常简单。这张图片可以很好地解释它：
 
-[You need to install Unity's Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html). Otherwise the option won't pop up.
+![img](../../img/setting-up-unity-for-creating-quest-content-1.png)
 
+::: warning 需要额外的设置
+您需要安装 [Unity 的 Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html)。否则该选项将不会弹出。
 :::
-If you're starting a brand new project, this won't take long at all. However, if you're converting a Windows platform project to an Android platform project, you will have to convert your assets appropriately. This can take quite a while for larger projects.
 
-For more details on best practices when working with dual-platform projects, read our documentation on [Cross-Platform Setup](/creators.vrchat.com/platforms/android/cross-platform-setup).
+如果您要开始制作一个全新的项目，这当然不会花费多长时间。但是，如果您要将 Windows 平台的项目转换为 Android 平台的项目，您则必须相应地进行转换资源的操作。对于较大的项目，这可能需要相当长的时间。
+
+有关使用双平台项目时的最佳实践的更多详细信息，请阅读有关[跨平台设置](./cross-platform-setup.md)的文档。
