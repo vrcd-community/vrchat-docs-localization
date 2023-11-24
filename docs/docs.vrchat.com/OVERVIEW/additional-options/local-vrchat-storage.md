@@ -15,7 +15,7 @@ VRChat 在本地存储了许多不同的数据。这个并不太详尽的列表�
 `OSC\` | OSC设置存储。存储使用OSC in VRChat所需的数据。 | 即使你不使用OSC,这里也可能存在数据。
 `LocalAvatarData\` | 角色参数存储。存储已使用过的角色的参数。
 `Tools\` | 额外应用程序。存储运行VRChat需要的其他应用程序。 | 目前,这里只包含视频URL解析器。
-`LocalPlayerModerations` | **本地存储的玩家调整信息**。存储对其他用户实行的“玩家调整”操作。 | 目前,仅存储“显示”和“隐藏角色”操作。<br>参见下文以了解文件格式。
+`LocalPlayerModerations` | **本地存储的玩家操作信息**。存储对其他用户实行的“玩家调整”操作。 | 目前,仅存储“显示”和“隐藏角色”操作。<br>参见下文以了解文件格式。
 
 ### LocalPlayerModerations 文件格式
 
@@ -43,4 +43,4 @@ VRChat 及其依赖项可能会在设备上的各种“temp”文件夹中存储
 
 ## Windows注册表
 
-VRChat通过[ Unity PlayerPrefs API ](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/PlayerPrefs.html)在 `HKCU\Software\VRChat\vrchat` 中存储各种玩家首选项。
+VRChat通过[ Unity PlayerPrefs API ](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/PlayerPrefs.html)在 `HKCU\Software\VRChat\vrchat` 中存储玩家各种首选项。
