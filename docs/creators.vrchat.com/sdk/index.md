@@ -48,9 +48,9 @@
 
 ## 第 4 步 - 登录
 
-要使用 SDK，您需要登录。为此，请导航至   `VRChat SDK > Show Control Panel > Authentication`。您可以在此登录您的 VRChat 账户。
+要使用 SDK，您需要登录。为此，请导航至   `VRChat SDK > Show Control Panel > Authentication`。您可以在此登录您的 VRChat 账号。
 
-请记住，您的 VRChat 账户必须至少为 "新用户 (New User)"[信任等级](/docs.vrchat.com/SYSTEM/vrchat-safety-and-trust-system.md) 才能上传内容。您不能使用 Steam、Oculus 或 Viveport 帐户上传内容。
+请记住，您的 VRChat 账号必须至少为 "新用户 (New User)"[信任等级](/docs.vrchat.com/SYSTEM/vrchat-safety-and-trust-system.md) 才能上传内容。您不能使用 Steam、Oculus 或 Viveport 帐户上传内容。
 
 ### 下一步是什么？
 

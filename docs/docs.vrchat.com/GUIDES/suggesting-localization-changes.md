@@ -15,9 +15,9 @@ VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也�
 
 ## 注册 Crowdin
 
-1. 点击[此链接](https://crowdin.com/project/vrchat-application/invite?h=bb57b789a39c353c3c401047afa228c41657827)注册 Crowdin 账户。可点击页面上的注册按钮来创建账户。
+1. 点击[此链接](https://crowdin.com/project/vrchat-application/invite?h=bb57b789a39c353c3c401047afa228c41657827)注册 Crowdin 账号。可点击页面上的注册按钮来创建账号。
 
-::: warning 🚧⭐注册时请使用您的 VRChat 用户名作为 Crowdin 用户名，也就是您登录 VRChat 时使用的账户名，而不是您的昵称。
+::: warning 🚧⭐注册时请使用您的 VRChat 用户名作为 Crowdin 用户名，也就是您登录 VRChat 时使用的账号名，而不是您的昵称。
 :::
 
 <center>
@@ -26,7 +26,7 @@ VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也�
 
 </center>
 
-2. 通过您注册时使用的电子邮箱验证账户。
+2. 通过您注册时使用的电子邮箱验证账号。
 3. 在 Crowdin 上的 "关于我 "中添加您的[VRChat user-id](https://help.vrchat.com/hc/en-us/articles/4408181867027-Account-Names-and-Identifiers-Usernames-Display-Names-and-User-IDs-)。
 - 设置 > 简介 > 关于我
 
@@ -41,7 +41,7 @@ VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也�
 
 ## 添加建议
 
-账户设置完成后，您就可以提出第一个翻译建议了！
+账号设置完成后，您就可以提出第一个翻译建议了！
 
 1. 在项目界面或主页上的项目选项卡下选择 VRChat Application 。
 
