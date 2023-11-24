@@ -26,7 +26,7 @@
 
 在 Unity 中打开 Quest 项目。由于它是复制体，因此不应在这个项目进行任何更改。只不过我们即将颠覆这一局限。现在我们可以将构建目标直接交换到 Android 环境。操作方法如下：
 
-![img](/creators.vrchat.com/img/cross-platform-setup-1.png)
+![img](/creators.vrchat.com/images/cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png)
 
 有一些重要的注意事项需要您关心：
 

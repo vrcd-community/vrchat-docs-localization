@@ -2,7 +2,7 @@
 
 设置 Unity 用于创建 Quest 内容实际上非常简单。这张图片可以很好地解释它：
 
-![img](/creators.vrchat.com/img/setting-up-unity-for-creating-quest-content-1.png)
+![img](/creators.vrchat.com/images/cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png)
 
 ::: warning 需要额外的设置
 您需要安装 [Unity 的 Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html)。否则该选项将不会弹出。
