@@ -1,9 +1,5 @@
 ---
 title: "Realtime Midi"
-slug: "realtime-midi"
-hidden: false
-createdAt: "2023-02-16T02:10:03.798Z"
-updatedAt: "2023-02-16T02:10:03.798Z"
 ---
 # Realtime Midi
 

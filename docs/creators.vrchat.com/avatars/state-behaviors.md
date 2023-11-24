@@ -1,10 +1,9 @@
 ---
 title: "State Behaviors"
-slug: "state-behaviors"
-hidden: false
-createdAt: "2020-08-05T22:32:59.268Z"
-updatedAt: "2023-02-08T15:38:26.170Z"
 ---
+
+# State Behaviors
+
 ::: warning Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).

@@ -1,10 +1,9 @@
 ---
 title: "Rig Requirements"
-slug: "rig-requirements"
-hidden: false
-createdAt: "2017-09-22T20:23:26.818Z"
-updatedAt: "2022-03-03T01:55:44.258Z"
 ---
+
+# Rig Requirements
+
 ::: warning
 
 This page is significantly out of date, but should still be mostly accurate.

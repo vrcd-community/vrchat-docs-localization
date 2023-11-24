@@ -1,10 +1,9 @@
 ---
 title: "VRC Mirror Reflection"
-slug: "vrc_mirrorreflection"
-hidden: false
-createdAt: "2017-07-06T06:10:45.478Z"
-updatedAt: "2022-08-17T20:23:01.162Z"
 ---
+
+# VRC Mirror Reflection
+
 Used for mirrors. An example can be found in the [SDK Prefabs](/creators.vrchat.com/worlds/sdk-prefabs#vrcmirror).
 
 | Parameter                 | Description                                                                                                                                                                                                                                   |

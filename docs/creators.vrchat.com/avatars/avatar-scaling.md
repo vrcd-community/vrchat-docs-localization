@@ -1,9 +1,5 @@
 ---
 title: "Avatar Scaling"
-slug: "avatar-scaling"
-hidden: false
-createdAt: "2023-07-26T15:58:00.000Z"
-updatedAt: "2023-07-26T15:58:00.000Z"
 ---
 
 # Technical Considerations around Avatar Scaling

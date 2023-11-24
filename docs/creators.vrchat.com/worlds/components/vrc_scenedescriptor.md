@@ -1,10 +1,9 @@
 ---
 title: "VRC Scene Descriptor"
-slug: "vrc_scenedescriptor"
-hidden: false
-createdAt: "2017-07-06T00:43:48.565Z"
-updatedAt: "2019-11-23T01:41:31.381Z"
 ---
+
+# VRC Scene Descriptor
+
 Describes your VRChat world. Required for every Unity scene you'd like to use as a VRChat world.
 
 | Parameter                       | Description                                                                                                                                                                              |

@@ -1,6 +1,9 @@
 ﻿---
 title: "Image Loading"
 ---
+
+# Image Loading
+
 Udon can load images from the internet and display them as UI elements or as textures on world objects. Our example world below demonstrates how the system works and how to use GitHub to host the images and captions.
 
 ## Example World

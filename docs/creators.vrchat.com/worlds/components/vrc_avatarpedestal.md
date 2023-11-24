@@ -1,10 +1,9 @@
 ---
 title: "VRC Avatar Pedestal"
-slug: "vrc_avatarpedestal"
-hidden: false
-createdAt: "2017-07-06T02:29:34.415Z"
-updatedAt: "2019-10-28T19:23:09.652Z"
 ---
+
+# VRC Avatar Pedestal
+
 Displays an avatar and allows users to switch into the avatar.
 Example can be found in the SDK as [VRCAvatarPedestal](/creators.vrchat.com/worlds/examples/udon-example-scene/#AvatarPedestal).
 

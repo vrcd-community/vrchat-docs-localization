@@ -1,15 +1,14 @@
 ---
 title: "UI Events"
-slug: "ui-events"
-hidden: false
-createdAt: "2020-09-10T18:40:43.256Z"
-updatedAt: "2021-11-12T01:19:47.826Z"
 ---
+
+# UI Events
+
 You can use Unity UI events to directly call methods for simple interactions, rather than building an UdonBehaviour. 
 ![ui-events-3c37d22-UIEventTarget.png](/creators.vrchat.com/images/worlds/ui-events-3c37d22-UIEventTarget.png)
 
 However, we've limited what can be called to this list:
-# Allowed UI Event Targets
+## Allowed UI Event Targets
 ### Animator
 * Play
 * PlayInFixedTime

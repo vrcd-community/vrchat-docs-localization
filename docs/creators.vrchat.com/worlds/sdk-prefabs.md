@@ -1,10 +1,9 @@
 ---
 title: "SDK Prefabs"
-slug: "sdk-prefabs"
-hidden: false
-createdAt: "2022-03-03T00:33:18.460Z"
-updatedAt: "2022-03-03T00:38:28.712Z"
 ---
+
+# SDK Prefabs
+
 This is a list of prefabs available in our SDKs!
 
 ## VRCAvatarPedestal

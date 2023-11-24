@@ -1,10 +1,9 @@
 ---
 title: "Supported Scripted Assets"
-slug: "supported-assets"
-hidden: false
-createdAt: "2017-08-06T01:53:56.686Z"
-updatedAt: "2023-02-24T00:48:47.712Z"
 ---
+
+# Supported Scripted Assets
+
 You can use certain external assets that use scripts in VRChat worlds.
 
 To see a list of precise components permitted in VRChat worlds, please see [Allowlisted World Components](/creators.vrchat.com/worlds/whitelisted-world-components). Most of these components (except TextMeshPro) are unavailable on Quest.

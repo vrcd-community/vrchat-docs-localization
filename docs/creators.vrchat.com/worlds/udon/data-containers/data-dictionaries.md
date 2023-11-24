@@ -1,9 +1,5 @@
 ---
 title: "Data Dictionaries"
-slug: "data-dictionaries"
-hidden: false
-createdAt: "2023-04-24T23:48:21.052Z"
-updatedAt: "2023-05-04T21:39:11.809Z"
 ---
 # Data Dictionaries
 

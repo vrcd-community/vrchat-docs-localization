@@ -1,11 +1,12 @@
 ---
 title: "Udon Node Graph"
-excerpt: "Learn how to use the Udon Node Graph to create Udon programs"
-sidebar_position: 0
-createdAt: "2020-06-22T21:33:24.495Z"
-updatedAt: "2023-02-25T17:04:17.127Z"
+description: "Learn how to use the Udon Node Graph to create Udon programs"
+
 ---
-# Interface
+
+# Udon Node Graph
+
+## Interface
 The Udon Node Graph is the default interface for creation of Udon programs. This section goes over how to use it. If you want to dive right into examples, take a look at the [Udon Example Scene](/creators.vrchat.com/worlds/examples/udon-example-scene/).
 
 You can open up the Udon Graph window using the Menu Item under **VRChatSDK > Udon Graph**, or by clicking the **Open Udon Graph** button on an UdonBehaviour Component.
@@ -22,7 +23,7 @@ Multiple Graphs can be opened simultaneously, and you can switch between them us
 
 You can close tabs, by clicking the X in the corner of the tab you want to close. Graph Tabs are not "real" tabs, and simply reopen each tab as you select them. This means switching tabs takes as long as opening Graphs.
 
-# Flow
+## Flow
 The Flow of your graph defines which nodes will run, and the order in which they'll do it.
 ![](/creators.vrchat.com/images/worlds/index-f9c508c-simple-branching.png)
 
@@ -41,7 +42,7 @@ In the graph above:
 
 It's ok if you don't know what **Sending a Custom Event** means yet. Learning to read the flow of a graph is the first step to understanding what they do.
 
-# Creating Nodes
+## Creating Nodes
 Nodes are the boxes that represent the methods you can trigger. Building a graph consists of creating and connecting nodes together to create a program.
 
 There are several ways to create nodes:
@@ -49,7 +50,7 @@ There are several ways to create nodes:
   * [Drag-and-Drop actions](#drag-and-drop-for-gameobjects-and-components)
   * [Search menus](#searching-for-nodes)
 
-## Hotkeys
+### Hotkeys
 Press and hold one of the following keys, then click anywhere on the graph to create the corresponding node:
 * `1` : float
 * `2` : Vector2
@@ -61,7 +62,7 @@ Press and hold one of the following keys, then click anywhere on the graph to cr
 * `b`: Branch
 * `shift+b` : Block 
 
-## Other Hotkeys:
+### Other Hotkeys:
 * Press and hold "C", then click on a constant to convert it into a variable.
 * Shift+A aligns selected nodes 
 * Press and hold Ctrl+G for quick grouping
@@ -75,29 +76,29 @@ If you want to add interactivity to a GameObject or Component, you can drag and 
 ![Easy way to get a reference to a Light component so you can play with it.](/creators.vrchat.com/images/worlds/index-6238d1e-light-component.jpg)
 Creating nodes via Drag and Drop this way creates Variables that are tied to your GameObject or Component, so you'll see a new variable appear in the Variables window, and a node which is actually a "Get Variable" node which is automatically set up to get your new Component.
 
-## Drag and Drop for Variables
+### Drag and Drop for Variables
 
 You can create variables of any type by pressing the **+** button in the Variables pane of the Graph Sidebar. Then you can drag and drop the variable name onto the graph to create a "Get Variable" node, hold the **Ctrl** key while dragging to make a "Set Variable" node, or hold the **Alt** key to make an "On Variable Changed" node.
 
-## Searching for Nodes
+### Searching for Nodes
 
 Press the **Spacebar** to open up Quick Search, then type in the first few letters of the class you want to interact with.
 ![](/creators.vrchat.com/images/worlds/index-08df7d3-gameobject-search.png)
 
 This method of searching works best if you know Unity's basic classes and object types. There are other ways of searching, see: [Searching for nodes](/creators.vrchat.com/worlds/udon/graph/searching-for-nodes)
 
-# Compiling the Graph
+## Compiling the Graph
 The graph automatically compiles in the background at regular variables. When this happens, you'll see a flash in the upper-right corner of your graph, and the Status box will turn green if things went well, or red if there's an issue. In either case, you can click on the Status box to see the Assembly Code that was generated, or the errors if there was a problem. 
 ![The status box shows 'OK' and we can see the Variables declared at the top of this Assembly.](/creators.vrchat.com/images/worlds/index-fc0a2c0-assembly.png)
-# Running the Graph
+## Running the Graph
 There are two ways to run the graphs in your scene before you upload them to VRChat.
 
-## Running In-Editor
+### Running In-Editor
 You can use Unity's Play Button to run your scene directly in the editor to test out some graphs. This will work for some simple methods and logic, but the following items won't work as expected:
 * Synced Variables & Networked Events
 * The VRCPlayerAPI object - using stations, triggering Interact events, anything involving Avatars
 
-## Running Build & Test
+### Running Build & Test
 Use the VRChat SDK Window to do Local Testing. This takes slightly longer as it bundles your content into an offline world and launches the actual VRChat client to give you an Avatar that can Interact with objects and VRCPlayerAPI requests.
 ![The simplest way to test Sync features is to launch 2 local clients.](/creators.vrchat.com/images/worlds/index-32da932-local-testing-2.png)
 To test Synced variables and NetworkEvents, you'll need two clients - you can use the 'Number of Clients' field to launch up to 8 local clients that will launch in a private test world. They will all have the same DisplayName, but they'll otherwise be recognized as separate players so you can test out your interactions.
@@ -108,5 +109,5 @@ If 'Force Non-VR' doesn't work for you, then switch to the 'Settings' tab of the
 
 ![](/creators.vrchat.com/images/worlds/index-6d24b40-client-path.png)
 
-# Uploading Your World
+## Uploading Your World
 You will be able to Build & Test as soon as you [make a VRChat Account](https://vrchat.com/home/register). In order to publish a world so others can visit, you need to spend some time in VRChat - visit worlds, make some friends and get inspired!

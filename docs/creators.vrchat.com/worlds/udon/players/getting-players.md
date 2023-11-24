@@ -1,10 +1,9 @@
 ---
 title: "Getting Players"
-slug: "getting-players"
-hidden: false
-createdAt: "2021-01-22T01:48:13.564Z"
-updatedAt: "2021-11-12T01:23:15.713Z"
 ---
+
+# Getting Players
+
 These nodes are useful for getting an individual Player, a group of them, or all of them.
 
 ### Networking.get LocalPlayer

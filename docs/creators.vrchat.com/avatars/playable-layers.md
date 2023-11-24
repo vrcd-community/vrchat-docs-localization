@@ -1,11 +1,10 @@
 ---
 title: "Playable Layers"
-slug: "playable-layers"
-excerpt: "Create simple or complex animations for your VRChat avatar"
-hidden: false
-createdAt: "2020-08-05T22:29:37.898Z"
-updatedAt: "2023-02-06T14:15:33.627Z"
+description: "Create simple or complex animations for your VRChat avatar"
 ---
+
+# Playable Layers
+
 When you create animations for your VRChat avatar, you'll utilize VRChat's 'Playable Layers.' They allow cleanly separate some things you might want to do with your avatar into their own animations - such as running, jumping, giving a thumbs-up, smiling, wagging your tail, and combinations of these.
 ::: warning Unity Knowledge Required
 

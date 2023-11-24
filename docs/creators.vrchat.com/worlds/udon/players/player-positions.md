@@ -1,10 +1,9 @@
 ---
 title: "Player Positions"
-slug: "player-positions"
-hidden: false
-createdAt: "2021-01-22T00:32:00.432Z"
-updatedAt: "2023-03-28T19:07:26.827Z"
 ---
+
+# Player Positions
+
 Here are the nodes relating to Players' positions. For nodes that deal with forces relating to Players, see [Player Forces](/creators.vrchat.com/worlds/udon/players/player-forces). 
 
 ### GetPosition

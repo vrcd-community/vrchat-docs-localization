@@ -1,9 +1,5 @@
 ---
 title: "VRCJSON"
-slug: "vrcjson"
-hidden: false
-createdAt: "2023-04-24T23:48:39.230Z"
-updatedAt: "2023-04-26T15:25:05.803Z"
 ---
 # VRC JSON
 

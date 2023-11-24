@@ -1,34 +1,33 @@
 ---
 title: "VRCGraphics"
-
-sidebar_position: 2
-createdAt: "2022-10-27T00:44:59.293Z"
-updatedAt: "2023-02-14T13:45:29.978Z"
 ---
-# Types
 
-## VRCShader
+# VRCGraphics
+
+## Types
+
+### VRCShader
 
 Overarching class for global shader setters. See [functions documented below](#vrcshaderpropertytoid) for more.
 
-## VRCGraphics
+### VRCGraphics
 
 Exposes a subset of Unity’s built-in \`Graphics\` class. See documented functions for more.
 
-# Exposed Functions
+## Exposed Functions
 
-## VRCGraphics.Blit()
+### VRCGraphics.Blit()
 
 Copies source texture into destination RenderTexture with a shader. Note that we do not allow you to supply a null destination.
 
 See: https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Graphics.Blit.html
 
-### Minimap Example
+#### Minimap Example
 The version of the SDK installed by [the Creator Companion](https://vcc.docs.vrchat.com) includes an example scene that provides a performant Minimap as an example use of Graphics.Blit. You can open it from the Unity Menu Bar under VRChat SDK > Samples > Minimap. This example uses the Udon Graph, it's also available as [an UdonSharp example](https://assets.vrchat.com/sdkExamples/com.vrchat-examples.minimap-1.0.0.unitypackage).
 
 ![index-aecb84d-minimap-example.png](/creators.vrchat.com/images/worlds/index-aecb84d-minimap-example.png)
 
-### Meta Quest Exceptions
+#### Meta Quest Exceptions
 
 VRCGraphics.Blit will not work on the Quest GPU unless you:
 
@@ -38,13 +37,13 @@ Turn off the depth on the target RenderTexture.
 
 Failing to do so will cause the operation to fail.
 
-## VRCGraphics.DrawMeshInstanced()
+### VRCGraphics.DrawMeshInstanced()
 
 Draw the same mesh multiple times using GPU instancing.
 
 See: https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Graphics.DrawMeshInstanced.html
 
-## VRCShader.PropertyToID()
+### VRCShader.PropertyToID()
 
 Use PropertyToID to get an ID based on a shader property name. Call this function only once during initialization, the ID can be reused and will not change, even between different materials and shaders.
 
@@ -52,7 +51,7 @@ Note that the property name must be prefixed with “\_Udon”, or be the litera
 
 See: https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Shader.PropertyToID.html
 
-## VRCShader.SetGlobal()
+### VRCShader.SetGlobal()
 
 Use the ID acquired with PropertyToID as a key and specify a value of the correct type. The value will be available in _all_ shaders in the world (including ones on avatars!) under the name passed into PropertyToID.
 
