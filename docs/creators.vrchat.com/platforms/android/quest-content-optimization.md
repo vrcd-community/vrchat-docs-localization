@@ -16,7 +16,7 @@ Lucas Rizzotto 还做出了一部[关于优化VR内容的精彩视频](https://w
 
 Oculus Quest 对虚拟形象上的内容有几个硬性（和软性）限制。您可以查看 [Quest 内容限制](/creators.vrchat.com/platforms/android/quest-content-limitations.md)以了解更多信息，以及我们的[虚拟形象性能排名系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)页面以了解有关限制系统运行原理的更多详细信息。
 
-如果您上传的虚拟形象或虚拟形象世界上的虚拟形象大大超出了我们的推荐范围，则该世界或虚拟形象可能会从公共访问中被移除。
+如果您上传的虚拟形象或虚拟形象世界上的虚拟形象大大超出了我们的推荐范围，则该世界或虚拟形象可能会被设为私有。
 
 ## Unity Profiler
 
