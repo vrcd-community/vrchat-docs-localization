@@ -28,7 +28,7 @@ VRChat *尚不适用于* Android。它将计划于今年晚些时候发布。
 
 您可以使用 [UdonSharp](/udonsharp.docs.vrchat.com/udonsharp.md) 来检测您世界中的 Android 玩家：
 
-```
+```c#
 public bool IsUsingPhoneOrTablet()
 {
   #if UNITY_ANDROID

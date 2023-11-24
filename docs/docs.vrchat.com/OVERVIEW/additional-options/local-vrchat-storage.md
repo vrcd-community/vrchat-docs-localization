@@ -19,7 +19,7 @@ VRChat 在本地存储了许多不同的数据。这个并不太详尽的列表�
 
 ### LocalPlayerModerations 文件格式
 
-```LocalPlayerModerations File Format
+```
 /*
 *  Storage line format:
 *   <key><padding><value><newline>
