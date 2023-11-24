@@ -77,7 +77,7 @@ VRChat默认并不会主动创建配置文件，您需要在 `%LocalAppdata%Low\
 ### [模型粒子系统限制](/docs.vrchat.com/SYSTEM/avatar-particle-system-limits.md)
 
 ::: tip
-📘此限制在Quest中默认生效，且不能被禁用。
+📘此限制在 Quest 中默认生效，且不能被禁用。
 :::
 
 为了防止滥用和大量使用粒子影响性能,在模型上使用的粒子系统可以被限制。单击标题以查看描述此系统的文档页面。
