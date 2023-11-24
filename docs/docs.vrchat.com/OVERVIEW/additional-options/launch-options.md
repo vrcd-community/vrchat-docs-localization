@@ -36,7 +36,7 @@ Oculus Quest 不支持以任何方式设置启动选项。
 | `--osc=inPort:outIP:outPort`  | 自定义输入和输出 OSC 信息的设置。<br>支持以下三种参数：<br>- inPort: VRChat客户端监听OSC信息输入的端口。<br>- outIP: OSC信息将会传到的IP地址。<br>- outPort: OSC消息将会被发送到的对应端口。                                                                                                                                                                                                                                                                                                                                                                                     |
 | `--affinity=<ARG>`            | 这个启动参数可以设置VRChat的线程亲和性，选择分配给VRChat的线程。`<ARG>`是一个位掩码,指示应该使用哪些线程。例如，`FFFF`选择前16个线程，`FF`选择前8个线程，等等。<br>**不要在非AMD CPU上使用此功能，它仅解决AMD CPU的跨CCX延迟问题**。如果误用,会导致严重的性能问题。<br>**大多数用户不需要使用此功能**。用户需要自行判断是否需要使用。<br>存在可以帮助您计算位掩码的[实用程序](https://bitsum.com/tools/cpu-affinity-calculator/)。<br>这个启动参数最适用于可以从限制进程到某些线程以减少内部延迟中受益的AMD CPU。<br>这是一个高级功能。如果您不确定是否需要使用到它，那么最好不要使用! |
 
-## 额外笔记
+## 额外的东西
 
 ### AMD的跨CCX延迟和核心亲和性
 

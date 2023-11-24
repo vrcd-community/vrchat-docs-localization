@@ -4,7 +4,7 @@
 
 ## 游玩VRChat
 
-进入和游玩[VRChat](https://vrchat.com/)都十分的简单！您只需要在您使用的平台上安装VRChat，然后点击开始游戏即可。VRChat会有一个内置的教程来引导您走进多彩的VRChat，教您了解游戏的控制、互动以及界面UI的使用等基础知识。
+进入和游玩 [VRChat](https://vrchat.com/) 都十分的简单！您只需要在您使用的平台上安装VRChat，然后点击开始游戏即可。VRChat会有一个内置的教程来引导您走进多彩的VRChat，教您了解游戏的控制、互动以及界面UI的使用等基础知识。
 
 如果您想看快速入门教程，您可以访问我们的[博客文章](https://medium.com/vrchat/stuck-inside-a-quick-guide-for-using-vrchat-to-stay-connected-f71430cf8a11)以了解如何速通 VRChat。
 

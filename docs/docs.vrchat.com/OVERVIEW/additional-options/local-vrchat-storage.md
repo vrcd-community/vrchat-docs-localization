@@ -43,4 +43,4 @@ VRChat 及其依赖项可能会在设备上的各种“temp”文件夹中存储
 
 ## Windows注册表
 
-VRChat 通过[ Unity PlayerPrefs API ](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/PlayerPrefs.html)在 `HKCU\Software\VRChat\vrchat` 中存储玩家的各种首选项。
+VRChat 通过[ Unity PlayerPrefs API ](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/PlayerPrefs.html)在 `HKCU\Software\VRChat\vrchat` 中存储玩家的各种设置项。

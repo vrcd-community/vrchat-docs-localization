@@ -121,7 +121,7 @@ Oculus Quest 2 被设置为 4x MSAA。
 
 </center>
 
-### 移动端品质（VRC Mobile）
+### 移动端专用（VRC Mobile）
 
 Oculus Quest 只有一个图形配置文件。如下所示。
 
