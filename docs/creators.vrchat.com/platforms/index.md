@@ -1,5 +1,3 @@
-﻿---
-title: "Platforms"
-sidebar_position: 1
----
-We support building content for Windows, for use in Desktop and VR alike. You can also build your content for Android, for use on the Oculus Quest 2 and our upcoming Android release.
+# 平台
+
+我们支持面向 Windows 的内容构建，以便在电脑和 VR 中使用。您还可以为 Android 构建内容，以便在 Oculus Quest 2 和我们即将发布的 Android 版本上使用。

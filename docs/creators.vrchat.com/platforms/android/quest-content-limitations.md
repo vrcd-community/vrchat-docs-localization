@@ -1,51 +1,49 @@
----
-title: "Quest Content Limitations"
-slug: "quest-content-limitations"
-hidden: false
-createdAt: "2019-05-15T01:40:38.749Z"
-updatedAt: "2022-07-04T09:34:33.253Z"
----
-This page will describe various limits in place for the Oculus Quest version of VRChat. These limitations are in place in the interest of performance, user safety, and discouraging malicious behavior.
+# Quest 内容限制
+本页将介绍 Oculus Quest 版本的 VRChat 的各种限制。这些限制是以性能、用户安全和阻止恶意行为考虑而设置的。
 
-Find more information about limited components on our [Quest Content Optimization](/creators.vrchat.com/platforms/android/quest-content-optimization) page.
-## Avatar-Specific Limitations
-Although the current version of VRChat does not implement a hard limit, **we may implement a hard limit for avatars based on triangle count, material counts, mesh counts, and other qualities in the future.** Please keep our recommendations in mind as described in [Quest Content Optimization](/creators.vrchat.com/platforms/android/quest-content-optimization). 
+在我们的 [Quest 内容优化](/creators.vrchat.com/platforms/android/quest-content-optimization.md)页面上可以找到有关有限组件的更多信息。
 
-Currently, if you upload an avatar or avatar world that features avatars exceeding our recommendations, that world or avatar may be removed from public access.
-## Shaders
-VRChat on Quest only permits the shaders provided with the latest SDK on avatars. The shaders are listed below with a short description and their inputs. This list may change, and we'll announce in our patch notes when new shaders are available.
+## 虚拟形象专属限制
 
-All of the shaders listed below are under `VRChat/Mobile` in the shader selection dialog.
+虽然当前版本的 VRChat 没有实行硬性限制，**但在未来我们可能会根据三角形数量、材质数量、网格数量和其他质量对虚拟形象实施硬性限制**。请将我们提供的建议牢记于心，如 [Quest 内容优化](/creators.vrchat.com/platforms/android/quest-content-optimization.md)中所述。
 
-**For performance reasons, make sure you always enable "Enable GPU Instancing" on your materials.** 
+目前，如果您上传的虚拟形象或虚拟形象世界含有超出我们推荐数据的虚拟形象，则该世界或虚拟形象可能会被设为私有。
 
-| Shader Name                   | Shader Description                                                                                                                                                                                                                                              |
-| :---------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standard Lite                 | A "Lite" version of Unity Standard. Supports diffuse, normal maps, metallic+smoothness maps, and optional emission maps. Channel mappings for relevant maps are identical to Unity Standard Metallic setup. The diffuse texture is tinted by the vertex colours |
-| Bumped Diffuse                | Diffuse but with a normal map. The diffuse texture is tinted by the vertex colours.                                                                                                                                                                             |
-| Bumped Mapped Specular        | Diffuse, but with a specular map (shininess) on the alpha channel. The diffuse texture is tinted by the vertex colours. Normal map also supported.                                                                                                              |
-| Diffuse                       | Just diffuse! The diffuse texture is tinted by the vertex colours.                                                                                                                                                                                              |
-| Matcap Lit                    | Diffuse, but with a matcap input. Can be used to simulate a shiny metal surface. The diffuse texture is tinted by the vertex colours.                                                                                                                           |
-| Toon Lit                      | Provides toon-like shading and shadows. Should be used on cartoon-like characters with flat colors. The diffuse texture is tinted by the vertex colours.                                                                                                        |
-| Particles/Additive            | Should be used on particles. Blends using Additive mode.                                                                                                                                                                                                        |
-| Particles/Multiply            | Should be used on particles. Blends using Multiply mode.                                                                                                                                                                                                        |
-| Lightmapped (Only for worlds) | A basic diffuse shader that supports lightmapping. This shader is only meant for use on worlds. It cannot be used on avatars. It does not support real-time lighting.                                                                                           |
-| Skybox (Only for worlds)      | This shader is an optimized skybox shader, meant for use in worlds.                                                                                                                                                                                             |
+## 着色器
 
-## Components
+VRChat Quest 版仅允许虚拟形象使用最新 SDK 提供的着色器。下面列出了可用着色器列表，并附有简短的说明及其输入类型。此列表可能会发生变更，当新的着色器可用时，我们将会在补丁中说明。
 
-The following components are not supported on Quest and will not work. This list may change. We'll note in the Patch Notes and updated documentation when these change.
+下面列出的所有着色器都包含在 `VRChat/Mobile` 着色器选择的选项框中。
 
-| Shader Name      | Shader Description                                                                                                                                                                                                                                                                                                                                                              |
-| :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Dynamic Bones    | Completely disabled in VRChat Quest. Use [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) instead!!                                                                                                                                                                                                                                                          |
-| Cloth            | Completely disabled in VRChat Quest.                                                                                                                                                                                                                                                                                                                                            |
-| Cameras          | Completely disabled on avatars in VRChat Quest. Permitted for use in Worlds. Be careful with overuse.                                                                                                                                                                                                                                                                           |
-| Lights           | Completely disabled on avatars in VRChat Quest.                                                                                                                                                                                                                                                                                                                                 |
-| Video Players    | Works with some limitations. Read more in [Video Players](/creators.vrchat.com/worlds/udon/video-players/).                                                                                                                                                                                                                                                                     |
-| Post-Processing  | Post processing systems are disabled completely in VRChat Quest. The GPU is not designed to handle these effects very well.                                                                                                                                                                                                                                                     |
-| Audio Sources    | Audio sources are disabled completely on avatars in VRChat Quest. Audio sources consume a significant amount of CPU resources and voices have priority.                                                                                                                                                                                                                         |
-| Physics Objects  | Rigidbodies, colliders, and joints are disabled completely on avatars in VRChat Quest. <br /> They are permitted in worlds, but you should be careful not to go overboard with them.                                                                                                                                                                                            |
-| Particle Systems | Particles are limited heavily on avatars in VRChat Quest, with settings mirroring the [Avatar Particle System Limits](https://docs.vrchat.com/docs/avatar-particle-system-limits) on PC.                                                                                                                                                                                        |
-| Constraints      | Constraints are disabled completely on avatars in VRChat Quest. There are no plans to enable them for Quest, as they have complex performance issues that are not solved by a soft or hard limit.<br /><br />Permitted for use in Worlds. Be careful with overuse, as they impact performance more than previously thought, especially with the limited resources of the Quest. |
-| FinalIK          | Custom FinalIK components are completely disabled on avatars in VRChat Quest.<br />FinalIK components are an unbounded source of resource usage. We do not currently plan to enable them on Quest.                                                                                                                                                                              |
+**出于性能原因，请确保您始终在材质上开启“启用 GPU 实例化”。**
+
+着色器名称 |	着色器说明
+-- | --
+Standard Lite（简易标准）	| Unity Standard 的“精简版”。支持漫反射、法线贴图、金属+平滑度贴图和可选的自发光贴图。相关贴图的通道映射与 Unity Standard Metallic 设置相同。漫反射纹理由顶点颜色决定并着色。
+Bumped Diffuse（凹凸漫反射）	| 是个漫反射，但同时带有法线贴图。漫反射纹理由顶点颜色决定并着色。
+Bumped Mapped Specular（凹凸贴图高光）	| 漫反射，但在 alpha 通道上有 Specular 贴图（高光）。漫反射纹理由顶点颜色决定并着色。而且还支持法线贴图。
+Diffuse（漫反射） |	只有漫反射！漫反射纹理由顶点颜色决定并着色。
+Matcap Lit（简易材质捕捉） |	漫反射，但带有 matcap 输入。可用于模拟闪亮的金属表面。漫反射纹理由顶点颜色决定并着色。
+Toon Lit（简易卡通）	| 提供近似于卡通的着色和阴影效果。应该用在颜色平整的卡通人物身上。漫反射纹理由顶点颜色决定并着色。
+Particles/Additive（粒子/加法）	| 应用于粒子。使用“Additive（加法）”模式进行混合。
+Particles/Multiply（粒子/乘法）	| 应用于粒子。使用“Multiply（乘法）”模式进行混合。
+Lightmapped (Only for worlds)【光照贴图（仅适用于世界）】	| 支持光照贴图的基础漫反射着色器。此着色器仅适用于世界。不能用于虚拟形象。并且它不支持实时光照。
+Skybox (Only for worlds)【天空盒（仅适用于世界）】	| 这个着色器是一个经过优化的天空盒着色器，仅适用于世界。
+
+## 组件
+
+Quest 不支持以下列表列出的组件，因此这些组件将无法正常工作。此列表可能会发生改动。当发生改动时，我们将在补丁和更新的文档中注明。
+
+着色器名称	| 着色器说明
+-- | --
+Dynamic Bones（动态骨骼） |	在 VRChat Quest 中完全禁用。请改用 [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones.md)！！
+Cloth（布料）	| 在 VRChat Quest 中完全禁用。
+Cameras（相机）	| 在 VRChat Quest 中的虚拟形象上完全禁用。但是允许在世界中使用。请勿将其过度使用。
+Lights（灯光）	| 在 VRChat Quest 中的虚拟形象上完全禁用。
+Video Players（视频播放器）	| 运行时将会附带有一些限制。在[视频播放器](/creators.vrchat.com/worlds/udon/video-players/index.md)文档中了解更多内容。
+Post-Processing（后处理）	| 后处理系统在 VRChat Quest 中完全禁用。GPU 的设计并不能很好地应对此类型的处理问题。
+Audio Sources（音频源）	| 在 VRChat Quest 中的虚拟形象上完全禁用音频源。音频源将消耗大量 CPU 资源，而语音质量显然需要被优先考虑。
+Physics Objects（物理对象）	| 在 VRChat Quest 中，刚体、碰撞体和关节在虚拟形象上完全禁用。<br>它们在世界中是被允许的，但您也需要注意不去过度使用它们。
+Particle Systems（粒子系统）	| 在VRChat Quest中，虚拟形象对粒子系统有着很大的限制，其设置照搬了 PC 上[虚拟形象粒子系统限制](/docs.vrchat.com/SYSTEM/avatar-particle-system-limits.md)。
+Constraints（约束）	| 在 VRChat Quest 中，对虚拟形象的约束是完全禁用的。我们完全没有打算为 Quest 启用它们，因为它们具有十分庞杂的性能问题，这些问题无法通过软限制或硬限制解决。<br>我们允许其在世界中使用。然而要小心避免过度使用，因为它们对性能的影响比以往想象的要大，尤其是在任务资源有限的情况下。
+FinalIK	| 自定义 FinalIK 组件在 VRChat Quest 中的虚拟形象上完全禁用。<br>FinalIK 组件会消耗大量的资源。我们目前不打算在 Quest 上启用它们。

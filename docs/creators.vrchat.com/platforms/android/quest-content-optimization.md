@@ -1,168 +1,185 @@
----
-title: "Quest Content Optimization"
-slug: "quest-content-optimization"
-hidden: false
-createdAt: "2019-04-08T23:52:28.397Z"
-updatedAt: "2023-02-03T01:02:49.409Z"
----
-Creating content for VRChat Quest is a challenge-- you have to create attractive, compelling content all the while keeping the content optimized for a mobile device. These are the same challenges that game developers must deal with while building for mobile. 
+# Quest 内容优化
 
-Here, we'll give you some general guidelines of what you need to keep in mind while building content for VRChat Quest.
+为 VRChat Quest 创建内容是一项充满挑战的任务——您必须一方面创建有吸引力、引人入胜的内容，另一方面将内容尽可能保真，外加针对移动设备进行的优化工作。这些都是游戏开发者在为移动设备构建内容时必须应对的挑战。
 
-The items below will apply to both avatars and worlds unless otherwise noted.
+在这里，我们将为您提供一些标准准则，为您解说在为 VRChat Quest 构建内容时需要牢记的事项。
 
-Unity has a guide for [Optimizing your VR/AR Experiences ](https://learn.unity.com/tutorial/optimizing-your-vr-ar-experiences) which has quite a lot of good points.
+除非另有说明，否则以下条例将同时适用于虚拟形象和世界搭建。
 
-There's also this [excellent video on optimizing your VR content by Lucas Rizzotto](https://www.youtube.com/watch?v=w0n4fuC4fNU)! It is very well done and covers a lot of what we cover here. **This video was not created by VRChat or for VRChat specifically, and as a fair warning, contains some harsh language.** A lot of the items in this post are covered in this video.
+Unity 有一个针对于[优化 VR/AR 体验](https://learn.unity.com/tutorial/optimizing-your-vr-ar-experiences)的指南，其中有很多地方讲的都很好。
 
-As a final note, all items on this list are subject to change. In other words, we're not quite done nailing down restrictions and recommendations, so keep that in mind.
-## Limit Enforcement
-The Oculus Quest has several hard (and soft) limits for content on avatars. Check out [Quest Content Limitations](/creators.vrchat.com/platforms/android/quest-content-limitations) to find out more, as well as our page [Avatar Performance Ranking System](/creators.vrchat.com/avatars/avatar-performance-ranking-system) for some more details on how blocking works.
+Lucas Rizzotto 还做出了一部[关于优化VR内容的精彩视频](https://www.youtube.com/watch?v=w0n4fuC4fNU)！视频质量十分出色，涵盖了我们在这里介绍的许多内容。**该视频并非由 VRChat 或专门为 VRChat 打造，外加一个小警告，视频中包含着一些生僻或难以理解的词汇**。此视频涵盖了这篇文章中的许多项目。
 
-If you upload an avatar or avatar world that features avatars greatly exceeding our recommendations, that world or avatar may be removed from public access.
+最后，此列表中的所有项目都可能在未来发生变动。换句话说，我们还没有完全定下这些限制内容和相应的建议，请牢记于心。
+
+## 执行限制
+
+Oculus Quest 对虚拟形象上的内容有几个硬性（和软性）限制。您可以查看 [Quest 内容限制](/creators.vrchat.com/platforms/android/quest-content-limitations.md)以了解更多信息，以及我们的[虚拟形象性能排名系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)页面以了解有关限制系统运行原理的更多详细信息。
+
+如果您上传的虚拟形象或虚拟形象世界上的虚拟形象大大超出了我们的推荐范围，则该世界或虚拟形象可能会被设为私有。
+
 ## Unity Profiler
-We strongly, strongly recommend that you check out the [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html). Using the profiler, you can quantify precise values for  various performance metrics for your world or avatar. Of particular interest is probably the number of draw calls in a scene, or the proportional amount of frame time a component uses. 
 
-Of course, the profiler on your powerful PC won't represent how a profiler on the Quest might look, but you can still see that X component is using a ton of frame time versus rendering, or etc. Its all relative!
+我们强烈建议您查看 [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html)的相关内容。使用性能分析器，您可以量化您的世界或虚拟形象的各种性能指标的精确值。特别值得关注的可能是场景中的绘制调用次数，或者组件使用的帧时间的比例。
 
-There's lots of tutorials on how to use the Unity Profiler out there, including two from Unity: [Profiler Overview for Beginners](https://unity3d.com/learn/tutorials/topics/interface-essentials/profiler-overview-beginners) and the [intermediate Introduction to the Profiler](https://unity3d.com/learn/tutorials/topics/interface-essentials/introduction-profiler). These tutorials were made for older versions of Unity, but still cover the basic concepts quite well.
-## File Size
-You've only got a limited amount of memory on mobile platforms, and keeping that in mind is extremely important. You can see the size of your assets once you've built the content (press "Build & Publish" in the SDK) and search your Editor log for "statistics". The pre-compressed size is what you're looking for.
+当然，功能强大的 PC Profiler 不会代表 Profiler 在 Quest 上的表现，但您仍然可以看到某某组件相对于渲染或者其他东西消耗了大量的帧率。这都是相对的！
 
-As a rule of thumb, avoid large (>1k) textures. They are the primary culprit of high memory usage. Utilization of vertex colors and flat colors can help greatly with reducing texture size.
+市面上有很多关于如何使用 Unity Profiler 的教程，其中有两篇来自 Unity：[Profiler 新手总览](https://unity3d.com/learn/tutorials/topics/interface-essentials/profiler-overview-beginners) 和[ Profiler 的中级索引](https://unity3d.com/learn/tutorials/topics/interface-essentials/introduction-profiler)。这些教程是针对旧版本 Unity 制作的，但仍然很好地涵盖了许多的基本概念。
 
-Please note that Crunch compression does _not_ help with in-memory size! Crunch compression only helps with download size. Your content package should be within the limits without Crunch.
+## 文件大小
 
-**Worlds**
+移动平台上的内存十分有限，这一点非常重要。构建内容后，您可以直接查看内容资产包的大小（在 SDK 中按“构建和发布”），并可以在编辑器日志中搜索 statistics （统计信息）。预压缩大小也许是您在寻找的内容。
 
-You cannot upload or access worlds that exceed 100MB in size after build-time compression for VRChat Quest.
+依照经验，您需要避免使用大（>1k）的纹理。它们往往是高内存使用率的罪魁祸首。仅使用顶点颜色和平面颜色十分有助于减小纹理大小。
 
-**Avatars**
+请注意，Crunch 压缩方法对内存占用没有任何帮助！Crunch 压缩方法仅有助于降低下载大小。您在上传和制作内容时应无视 Crunch 带来的文件大小改善效果。
 
-You should be aiming for a maximum of 5-8 MB. You cannot upload or wear/view avatars that exceed 10MB in size after build-time compression for VRChat Quest.
-## Polygon Count
-Keeping polygon count low is very important on mobile platforms. Although the Quest is quite powerful for a mobile headset, its hardware does have limits. Keeping an eye on your polygon count is very important to keep performance high.
+#### 世界
 
-These recommendations are technically enforced via our [Avatar Performance Ranking System](/creators.vrchat.com/avatars/avatar-performance-ranking-system).
+在经过 VRChat Quest 的运行时压缩后，您将无法上传或访问大小超过 100MB 的世界。
 
-**Worlds**
+#### 虚拟形象
 
-While building worlds, you should try to keep polygon count low. You want to leave room for the user's avatars as well. **We recommend that you budget approximately 50,000 triangles for your world in total.**
+此类型文件应该是最大 5-8 MB。在 VRChat Quest 的运行时压缩后，您会无法上传或使用/查看大小超过10MB的虚拟形象。
 
-**Avatars**
+## 面数量
 
-The same general rules apply for avatars that apply for worlds. Keep in mind that you may have 10 or more users in the same room, so you'll want to budget your triangle usage pretty heavily. **We recommend that you aim for under 10,000 triangles for your avatar.**
+在移动平台上，保持较低的面数非常重要。尽管 Quest 在一众一体机中功能算是十分强大，但它的硬件确确实实有局限性。密切关注面数优化对于保持高性能非常重要。
 
-**A hard polygon limit may be established in the near future for VRChat Quest avatars. It will not be much higher than 5,000 triangles, hence our suggestion.**
+这些建议通过我们的[虚拟形象性能排名系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)在技术上强制执行。
 
-This will be a challenge for avatar authors that prefer to import characters from various sources rather than create an avatar themselves. Decimation down to this level can be destructive, and you may need to look into techniques like retopologizing geometry to keep your polygon count low.
-## Mesh Count
-This applies to both worlds and avatars.
+#### 世界
 
-No matter what tool you use to do it, you should limit the number of meshes you use in your content. For static objects in worlds, this isn't so important (due to the need for occlusion culling) but for avatars, it is exceedingly important.
+在构建世界时，您应该尽量保持较低的多边形数量。您还需要为玩家的虚拟形象留出空间。我们建议您总共为您的世界预算大约 50,000 个三角形。
 
-You should only ever have one Skinned Mesh Renderer on your avatar. Any accessories or additions to your avatar should be done in 3D editing software like Blender, and merged into the original mesh. Any animations or movement should be handled via shape keys or bones.
+#### 虚拟形象
 
-A hard Mesh Count limit will be established in the near future for VRChat Quest avatars.
+适用于世界的规则同样普遍适用于虚拟形象。请记住，同一个房间中可能有 10 个或更多的玩家，因此您需要非常严格地预算三角面的使用情况。**我们建议您的虚拟形象面数低于 10000 个三角形**。
 
-For worlds, you should think in terms of "objects" in the world. A set of pots on the ground could be a single object, but you probably wouldn't want to merge the set of pots into the ground mesh. Otherwise, you might run into various optimization issues as well as difficulty with editing the world later on.
-## Materials
-Reducing material count is important for both avatars and worlds. Additional materials creates additional submeshes, which costs draw calls. Reducing the number of draw calls necessary to render your viewport is very important.
+**在不久的将来，我们可能会为 VRChat Quest 虚拟形象建立硬性面数限制。而这个限制不会比 5,000 个三角面高出多少，我们的建议如下**。
 
-**Worlds**
+对于喜欢通过各种来源导入玩家模型而不是选择自己创建一个的虚拟形象作者来说，这将是一个艰巨的挑战。低到这种程度的优化简化可能对模型具有破坏性，您可能需要研究重新拓扑等技术，以保持较低的面数。
 
-You should aim to have the minimal possible material count for your world. That being said, you can be a little less careful with the world than you are with avatars. Its best to think of your world as a collection of objects, and combine materials accordingly.
+## 面数
 
-For example, if you have a beach scene, a chair/umbrella/blanket set should probably be a single material on a single texture atlas. A set of rocks a little bit farther down the beach would be another material and texture. That way, you can separate out the object for occlusion culling purposes.
+这同时适用于世界和虚拟形象。
 
-Getting too aggressive with combining materials and atlasing in worlds results in some non-optimal behavior when Unity does batching and its own runtime optimization.
+无论您使用什么工具，您都应该限制内容中的面数。对于世界中的静态对象来说，这些限制并不是那么重要（因遮挡剔除的需要），但对于虚拟形象来说，这非常重要。
 
-**Avatars**
+您的虚拟形象上应该只有一个 Skinned Mesh Renderer （蒙皮网格渲染器）。虚拟形象的任何配件或添加都应在 Blender 等 3D 建模软件中完成，并且合并到原始网格中。任何动画或移动都应通过形态键或骨骼完成。
 
-You should be aiming for 1 material on your avatar, although having 2 in cases where you need a different shader variant may be permissible. Atlasing textures is essential.
+在不久的将来，我们将为 VRChat Quest 虚拟形象建立硬性面数限制。
 
-A hard Material limit will be established in the near future for VRChat Quest avatars.
+对世界来说，您应该从世界中的“对象”角度来思考这些问题。地面上的一组花盆可以是一个对象，但您可能并不会希望将这组花盆合并到地面网格中。否则，您可能会遇到各种优化问题以及在未来编辑世界的困难。
 
-**Avatars and Worlds**
+## 材质
 
-You should be enabling GPU Instancing on all of your materials. Although the actual use case of this is more complex and technical, it is best just to turn it on.
-## Textures
-Concerns for texture size apply evenly across both avatars and worlds, but keep in mind that avatar texture size should be reduced, as you'll have multiple avatars in a single instance (but only one world).
+减少材质数量对虚拟形象和世界都很重要。额外的材质会创建额外的子网格，这会消耗绘制所调用的算力资源。减少渲染画面所需的绘制调用次数（讲人话：提高帧数）非常重要。
 
-Keeping texture size low is important. You should aim for using 1k (1024x1024) resolution textures at maximum. You should also create efficiently packed atlases, allowing for more texture resolution in the same size.
+#### 世界
 
-Avatars cannot exceed 10MB in size after compression, and worlds cannot exceed 100MB after compression. Since most of this is usually texture data, you should keep your textures small and compress them. 
+您应该以使用尽可能少的材质数量为目标，为您的世界留出尽可能少的材质数量。话虽如此，在这方面您对世界优化的谨慎程度可以比虚拟形象优化宽松一点。我们建议您把您的世界想象成一个物体的集合，并相应地组合材质。
 
-Consider using Crunch compression, but keep in mind that this may break your avatars later on if a new Unity version employs an incompatible version of Crunch.
-## Lighting
-This section only applies for worlds.
+如果您有一个海滩场景，则成套的椅子/雨伞/毯子可能是单个纹理贴图集上的单个材质。离海滩稍远一点的一组岩石将是另一种材质和纹理。这样，您就可以分离出对象以进行遮挡剔除。
 
-Baking lighting for your world is **essential**. It is not unreasonable to write off real-time lights completely, as they are very expensive. Make extensive use of baked lighting and light probes. Keep your lightmap resolution low. Even with low lightmap resolution, lighting can look very good.
-## Occlusion Culling
-This section only applies for worlds.
+在场景中组合材质和贴图的行为如果过于激进可能会导致 Unity 在进行批处理和自己的运行时出现一些并非最优的的优化行为。
 
-Baking occlusion culling is exceedingly important. Doing so will allow the hardware to only render what it needs to, and ignore what you can't see. Setting up occlusion culling doesn't take long at all.
+#### 虚拟形象
 
-This is also the reason you don't want to be too aggressive in merging meshes in worlds-- if you've got some objects like a building set on some ground, you probably don't want to merge the building mesh into the ground mesh so you can cull out the building.
-## Bone Count
-Keeping bone count low is important to keep the cost of skinning calls low. If a bone isn't animated by an animation or by the rig, you should merge its weights into its parent and delete the original bone. Tools like [Cat's Blender Plugin](https://github.com/michaeldegroot/cats-blender-plugin) make this exceedingly easy.
+您应该努努力，力求最终在虚拟形象上只使用 1 种材质，当然在您需要不同着色器变化的情况下也可以使用 2 种材质。纹理图集是必不可少的。
 
-Since Dynamic Bones is disabled on VRChat Quest, this means that there's no need for extra bones for dynamic bits. You'll want to merge the weights for those bones into their parents.
+在不久的将来，我们将为 VRChat Quest 虚拟形象建立硬性材质限制。
 
-A hard Bone limit will be established in the near future for VRChat Quest avatars.
-::: warning Matching Rigs
+#### 虚拟形象和世界
 
-Ensure that the basic bone layout and hierarchy of your rigs are identical, including scale, rotation, and position. This especially applies to your root (usually hip) bone. Having a mismatch can result in strange behavior when viewing content cross-platform.
+您应该在所有材质上启用 GPU 实例化。尽管相关的实际用例只会更加复杂和专业，但您还是最好打开它。
+
+## 纹理
+
+对纹理大小的管控在虚拟形象和世界中都十分重要，但请记住，您应该减小虚拟形象纹理的大小，因为在单个房间中您将加载多个虚拟形象（但您只会加载一个世界）。
+
+保持较低的纹理尺寸十分重要。您的目标应该是最大使用 1k （1024x1024） 分辨率的纹理。您还应该创建高效打包图集，从而在相同尺寸下获得更高的纹理分辨率。
+
+虚拟形象压缩后大小不能超过10MB，世界压缩后不能超过100MB。由于其中大部分通常是纹理数据，因此您应保持较轻量的纹理并对其进一步进行压缩。
+
+您可以考虑使用 Crunch 压缩，但请记住，如果新的 Unity 版本使用了不兼容的 Crunch 版本，这在以后有可能会破坏您的虚拟形象。
+
+## 灯光
+
+此部分仅适用于世界。
+
+为您的世界提供烘焙照明至关重要。完全禁用实时灯光并非没有道理，因为它们非常烧性能。您需要广泛使用烘焙照明和光照探针，保持较低的光照贴图分辨率。即使光照贴图分辨率较低，照明效果也非常好。
+
+## 遮挡剔除
+
+此部分仅适用于世界。
+
+烘焙遮挡剔除非常重要。这样做将允许硬件仅渲染它需要的内容，而忽略您看不到的内容。设置遮挡剔除根本不需要很长时间。
+
+这也是您不应在世界中合并网格体时过于激进的原因之一——如果您做出了一些物体，比如在某个地面上设置的建筑物，您可能不想将建筑物网格体合并到地面网格体中，这样您就可以合规剔除建筑物。
+
+## 骨骼数量
+
+保持较低的骨骼数量对于降低换肤呼叫的成本非常重要。如果骨骼未通过动画或绑定进行动画处理，则应将其权重合并到其父骨骼中，并删除原始骨骼。例如 [Blender 的 Cat 插件](https://github.com/michaeldegroot/cats-blender-plugin)这样的工具可以使这变得更加容易。
+
+由于 VRChat Quest 禁用了动态骨骼，这也意味着动态位不需要额外的骨骼。您需要将这些骨骼的权重合并到它们的父骨中。
+
+在不久的将来，将为 VRChat Quest 虚拟形象建立硬性骨骼限制。
+
+::: warning 配对绑定
+确保绑定的基本骨骼布局和层次结构是相同的，包括比例、旋转和位置。这尤其适用于您的根部（通常是髋部）骨骼。在跨平台查看内容时，此些内容不匹配可能会致使奇怪的行为发生。
 :::
 
-## Shaders
-**Avatars**
+## 着色
 
-Shaders are restricted for avatars in VRChat Quest, and you can only use the VRChat Mobile shaders included in the VRChat SDK.
+#### 虚拟形象
 
-You can read about these variants on our [Quest Content Limitations](/creators.vrchat.com/platforms/android/quest-content-limitations) page.
+着色器仅限于 VRChat Quest 中的虚拟形象，您只能使用 VRChat SDK 中包含的 VRChat Mobile 着色器。
 
-If you don't have a normal map for your avatar, don't use Bumped variants. It won't do anything for you, and you'll incur a little bit of a performance cost. Same for Specular.
+您可以在我们的 [Quest 内容限制](/creators.vrchat.com/platforms/android/quest-content-limitations.md)页面上阅读有关这些着色器的信息。
 
-**Worlds**
+如果您的虚拟形象没有法线贴图，请不要使用 Bumped 着色器。它不会为您做任何事情，并且会产生些许性能成本。对高光也是一个道理。
 
-Shaders are not restricted for worlds in VRChat Quest. However, you should be *extremely careful* when writing and using custom shaders. Aim for performance above all else. If you're looking for a highly optimized basic world shader, use `Mobile/VRChat/Lightmapped` and bake your lighting.
+#### 世界
 
-You should avoid needing transparency completely. Alpha fill rate is a significant performance sink for mobile GPUs, so design around not having transparency whenever possible.
-## Other Components
+着色器不受 VRChat Quest 世界的限制。但是，在编写和使用自定义着色器时应格外小心。性能高于一切。如果您正在寻找经过高度优化了的基本世界着色器，请使用 `Mobile/VRChat/Lightmapped` 并烘焙您的光照。
 
-### Cloth
+您应该完全避免透明度的使用需求。Alpha 填充率是衡量移动设备 GPU 的一个重要性能指标，因此在设计场景时请尽可能不要有透明度。
 
-Cloth components are disabled completely in VRChat Quest.
+## 其他组件
 
-### Cameras
+### 布料
 
-Camera components are disabled on avatars in VRChat Quest.
+布料组件在 VRChat Quest 中被完全禁用。
 
-They are permitted in worlds, but you should be careful not to go overboard with them.
+### 相机
 
-### Lights
+在 VRChat Quest 中的虚拟形象上相机组件是被禁用的。
 
-Lights are disabled completely on avatars in VRChat Quest.
+它们在世界中是被允许的，但您也应该注意不要过度使用它们。
 
-### Post Processing (v1 and v2)
+### 灯光
 
-Post processing systems are disabled completely in VRChat Quest.
+VRChat Quest 中虚拟形象上的灯光会被完全禁用。
 
-### Audio Sources
+### 后处理（v1 和 v2）
 
-Audio sources are disabled completely on avatars in VRChat Quest.
+后处理系统在 VRChat Quest 中完全禁用。
 
-Audio sources are restricted in worlds in VRChat Quest.
+### 音频源
 
-### Rigidbodies, Colliders, and Joints
+在 VRChat Quest 中的虚拟形象上音频源是被完全禁用的。
 
-Rigidbodies, colliders, and joints are disabled completely on avatars in VRChat Quest.
+音频源在VRChat Quest的世界中也有着限制。
 
-They are permitted in worlds, but you should be careful not to go overboard with them.
+### 刚体、碰撞体和关节
 
-### Particles
+在 VRChat Quest 中，刚体、碰撞体和关节在虚拟形象上会被完全禁用。
 
-Particles are limited heavily on avatars in VRChat Quest.
+它们在世界中是被允许的，但您也应该注意不去过度使用它们。
 
-Numbers for limits pending.
+### 粒子
+
+在VRChat Quest中，粒子对虚拟形象有很大限制。
+
+限制数量待定中。
