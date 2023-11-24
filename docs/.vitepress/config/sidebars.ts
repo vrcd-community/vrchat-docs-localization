@@ -321,7 +321,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
       ]
     },
     {
-      text: '平台特异', link: '/creators.vrchat.com/platforms/',
+      text: '跨平台', link: '/creators.vrchat.com/platforms/',
       collapsed: true,
       items: [
         {
