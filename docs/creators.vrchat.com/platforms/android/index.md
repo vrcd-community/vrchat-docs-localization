@@ -6,8 +6,8 @@
 
 ## 指南
 
-[设置 Unity 以创作 Quest 内容](setting-up-unity-for-creating-quest-content.md) - 了解如何设置 Unity 以创作 Quest 内容。[Quest 内容优化](./quest-content-optimization.md) - 了解如何针对 Quest 正确优化内容。[跨平台设置](./cross-platform-setup.md) - 了解如何设置内容以实现跨平台兼容性。
+[设置 Unity 以创作 Quest 内容](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content.md) - 了解如何设置 Unity 以创作 Quest 内容。[Quest 内容优化](/creators.vrchat.com/platforms/android/quest-content-optimization.md) - 了解如何针对 Quest 正确优化内容。[跨平台设置](/creators.vrchat.com/platforms/android/cross-platform-setup.md) - 了解如何设置内容以实现跨平台兼容性。
 
 ## 信息
 
-[Quest 内容限制](./quest-content-limitations.md) - 了解在为 Quest 创作内容时需要牢记的一些限制。
+[Quest 内容限制](/creators.vrchat.com/platforms/android/quest-content-limitations.md) - 了解在为 Quest 创作内容时需要牢记的一些限制。
