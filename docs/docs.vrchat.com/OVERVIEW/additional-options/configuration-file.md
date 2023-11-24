@@ -102,7 +102,7 @@ VRChat默认并不会主动创建配置文件，您需要在 `%LocalAppdata%Low\
 | `camera_res_width`             | 调整通过相机拍摄出的图像像素宽度。<br>只有当在相机中选择配置文件分辨率才会生效。 | `1280` 到 `7680`                                                                                         |
 | `screenshot_res_height`        | 调整通过 `F12` 截图出的图像的像素高度。                                          | `720` 到 `2160`                                                                                          |
 | `screenshot_res_width`         | 调整通过 `F12` 截图出的图像的像素宽度。                                          | `1280` 到 `3840`                                                                                         |
-| `picture_output_folder`        | 定义通过VRChat游戏内相机拍摄出的图像的存储路径。                                     | 任何合法的路径。不要使用 `\` 用作路径中的符号，这在JSON中被定义为退出标志。请使用 `\\` 或者 `/` 来替代。 |
+| `picture_output_folder`        | 定义通过 VRChat 游戏内相机拍摄出的图像的存储路径。                                     | 任何合法的路径。不要使用 `\` 用作路径中的符号，这在JSON中被定义为退出标志。请使用 `\\` 或者 `/` 来替代。 |
 | `picture_output_split_by_date` | 如果为`false`,照片将直接被导出到输出文件夹，而不会按年月(YYYY-MM)进行分类。      | `true` （默认） 或 `false`                                                                               |
 
 ### 第一人称摄像头视野
