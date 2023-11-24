@@ -19,7 +19,7 @@
   <p align="center">
     一个 VRChat 文档汉化项目
     <br />
-    <a href="#"><strong>查看文档 »</strong></a>
+    <a href="https://docs.vrczh.org/"><strong>查看文档 »</strong></a>
     <br />
     <br />
     <a href="https://github.com/vrcd-community/vrchat-docs-localization">开始贡献</a>
@@ -48,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## 关于该项目
 
-[![文档首页截图][product-screenshot]](https://example.com)
+[![文档首页截图][product-screenshot]](https://docs.vrczh.org/)
 
 ![海报][Poster]
 
@@ -58,8 +58,11 @@
 
 - [VRChat 文档枢纽 - The VRChat Documentation Hub](https://docs.vrchat.com/)
 - [VRChat 创作者文档 - VRChat Creators Docs](https://creator.vrchat.com/)
+- [ClientSim 文档](https://clientsim.docs.vrchat.com/)
+- [UdonSharp 文档](https://udonsharp.docs.vrchat.com/)
+- [VCC 文档](https://vcc.docs.vrchat.com/)
 
-我们会在未来增加汉化的覆盖范围到其他官方工具链文档 (UdonSharp, ClientSim 等) 和社区优秀第三方项目的文档 (将会以单独项目的形式出现)
+我们会在未来增加汉化的覆盖范围到社区优秀第三方项目的文档 (将会以单独项目的形式出现)
 
 <p align="right"><a href="#readme-top">返回顶部</a></p>
 
@@ -75,8 +78,8 @@
 <!-- USAGE EXAMPLES -->
 ## 使用方法
 
-- 直接访问汉化文档地址: [https://example.com](https://example.com)
-- 在官方文档地址加上: `https://example.com` (如: `https://creators.vrchat.com/worlds/udon/networking/` => `https://example.com/creators.vrchat.com/worlds/udon/networking/`)
+- 直接访问汉化文档地址: [https://docs.vrczh.org/](https://docs.vrczh.org/)
+- 在官方文档地址加上: `https://docs.vrczh.org/` (如: `https://creators.vrchat.com/worlds/udon/networking/` => `https://docs.vrczh.org/creators.vrchat.com/worlds/udon/networking/`)
 
 <p align="right"><a href="#readme-top">返回顶部</a></p>
 
@@ -116,7 +119,11 @@
 <!-- LICENSE -->
 ## 许可证
 
-在 许可证待定 下分发，详细请见仓库内 `LICENSE` 文件。
+在 VRChat 汉化文档页面中提及、使用或引用的所有商标、服务商标、集体商标、版权、人格权或类似权利均归其各自的拥有者所有。VRChat 汉化文档中心与上述权利的所有者之间不存在任何认可（endorse）、附属（affiliate）或其他形式的关联。
+
+本项目中使用的所有图片，媒体源均来自于 VRChat .Inc 及其出品的游戏软件 VRChat 中，版权和所有权均为其拥有者所有。
+
+汉化后文档文本在 许可证待定 下分发，详细请见仓库内 `LICENSE` 文件。代码在 MIT 许可证下分发，详细请见仓库内 `LICENSE-CODE` 文件
 
 <p align="right"><a href="#readme-top">返回顶部</a></p>
 
