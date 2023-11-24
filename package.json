@@ -14,6 +14,9 @@
     "@types/node": "^20.9.0",
     "@vite-pwa/vitepress": "^0.3.0",
     "@vue/tsconfig": "^0.4.0",
+    "sharp": "^0.32.6",
+    "svgo": "^3.0.4",
+    "vite-plugin-image-optimizer": "^1.1.7",
     "vite-plugin-pwa": "^0.17.0",
     "vitepress": "^1.0.0-rc.25"
   }
