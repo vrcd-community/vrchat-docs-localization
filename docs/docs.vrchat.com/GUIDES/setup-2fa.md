@@ -71,7 +71,7 @@ VRChat的两步验证是为注册了VRChat账户的用户提供的。
 
 </center>
 
-[Authy](https://authy.com/download/) 是一个很好的两步验证应用，您可以在手机或电脑上运行它。此外，Authy 允许您使用只有您知道的加密密码将您的账户备份到他们的云端，所以您的 2FA 代码是安全的。如果您担心因为各种原因导致的数据丢失，这可能是最好的方法之一。（译者同样推荐[Microsoft Authenticator(微软两步验证器)](https://www.microsoft.com/zh-cn/security/mobile-authenticator-app)）
+[Authy](https://authy.com/download/) 是一个很好的两步验证应用，您可以在手机或电脑上运行它。此外，Authy 允许您使用只有您知道的加密密码将您的账户备份到他们的云端，所以您的 2FA 代码是安全的。如果您担心因为各种原因导致的数据丢失，这可能是最好的方法之一。（译者同样推荐[Microsoft Authenticator (微软两步验证器)](https://www.microsoft.com/zh-cn/security/mobile-authenticator-app)）
 
 点击"Next >"以进行下一步操作。
 

@@ -4,7 +4,7 @@
 这些信息通常只对高阶用户有参考价值，特别是只对在虚拟机中运行 VRChat 的用户有用。其中包含的术语对大多数用户来说可能无法识别或无用。
 :::
 
-::: danger ❗️VRChat 在虚拟机端的运行是不受支持的！
+::: danger ❗️VRChat 不支持在虚拟机中直接运行！
 **我们并不直接支持通过虚拟机使用 VRChat**，但我们还是做了一些研究，为那些选择尝试这么做的用户提供方便。
 
 **本文档的存在并不意味着我们支持直接在虚拟机中运行 VRChat。**本文或任何其他的方法都有可能随时失效。无论如何，我们都会努力保持本文档的更新。
@@ -84,7 +84,7 @@ dmidecode --type system`
   </sysinfo>
 ```
   
-对于 UUID 条目，您可以使用域 XML 顶部生成的虚拟机 UUID。域 XML 中的 UUID 和 `sysinfo` 中的 UUID 必须匹配，否则 libvirt 将发病。
+对于 UUID 条目，您可以使用域 XML 顶部生成的虚拟机 UUID。域 XML 中的 UUID 和 `sysinfo` 中的 UUID 必须匹配，否则 libvirt 将报错。
 
 此外，请将其添加到 `<os>` 组，以便使用这些新的系统参数：
 
@@ -92,7 +92,7 @@ dmidecode --type system`
 <os><smbios mode="sysinfo"/> <!
 ```
 ### QEMU
-如果您使用原始 QEMU 命令行启动虚拟机，只需在 `-cpu` 标志中添加vendor ID。例如
+如果您使用原始 QEMU 命令行启动虚拟机，只需在 `-cpu` 标志中添加 vendor ID。例如
 
 ```
 -cpu 'host,migratable=off,hypervisor=on,topoext=on,hv_relaxed,hv_reset,hv_runtime,hv_stimer,hv_synic,hv_time,hv_vapic,hv_vpindex,hv-frequencies,hv-avic,hv-vendor-id=0123456789AB,host-cache-info=on,apic=on,invtsc=on'
@@ -100,7 +100,7 @@ dmidecode --type system`
 
 `-cpu` 参数中可能已经包含了其他内容，在这种情况下，只需在最后添加 `,hv-vendor-id=0123756792CD` 即可，如上图所示。上述推荐设置不仅能实现 Hyper-V 的要求，还能确保 CPU L2/L3 缓存拓扑等更高阶的方法也能正确传递。
 
-您在这里也可以使用 hyper-v 直通模式：
+在这里,也可以使用 hyper-v 直通模式：
 
 ```
 -cpu host,migratable=off,hypervisor=on,invtsc=on,hv-time=on,hv-passthrough=on。
@@ -132,7 +132,7 @@ dmidecode --type system`
 
 您可能会注意到，其中有些内容与过去臭名昭著的 "NVIDIA 代码 43 "问题非常相似。这里唯一的区别是，隐藏 kvm 虚拟机监控程序（`kvm=off` 或 `<kvm><hidden state='on'/></kvm>` ）不是必需的（但这么做也无妨）。如果您以前曾使用过此类指南（如[https://passthroughpo.st/apply-error-43-workaround/](https://passthroughpo.st/apply-error-43-workaround/)）设置过虚拟机，那么带有 EAC 的 VRC 对您来说应该是可以直接运行的。
 
-在技术层面上，hyper-v vendor id 的作用是将客户机 `cpuid` 信息的 `0x40000000`地址处设置为其所提供的任何信息。这里的默认值是 "Microsoft HV"，EAC 会直接拒绝这个值。使用 hyper-v 直通模式时，此处将变成 "Linux KVM Hv"，它仍然会显示为一个虚拟机，但 EAC 不会对此作出任何反应。
+在技术层面上，hyper-v vendor ID 的作用是将客户机 `cpuid` 信息的 `0x40000000`地址处设置为其所提供的任何信息。这里的默认值是 "Microsoft HV"，EAC 会直接拒绝这个值。使用 hyper-v 直通模式时，此处将变成 "Linux KVM Hv"，它仍然会显示为一个虚拟机，但 EAC 不会对此作出任何反应。
 
 由于这不需要更改 `hypervisor` 标志，客户机（Windows NT）中的操作系统内核仍会将环境识别为虚拟机，并应用相应的性能增强措施。这也意味着客户机中的任务管理器会报告其运行在虚拟机中。在 KVM 环境中测试 EAC 时，这不会有什么影响。
 
