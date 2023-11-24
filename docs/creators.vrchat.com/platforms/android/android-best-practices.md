@@ -17,7 +17,7 @@ VRChat *尚不适用于* Android。它将计划于今年晚些时候发布。
 要了解如何将您的世界上传到 Android，请参阅我们的[跨平台设置](/creators.vrchat.com/platforms/android/cross-platform-setup.md)文档。
 
 ::: info 笔记
-如果您看到“Quest”一词指的是 VRChat SDK，它通常也适用于 Android。
+如果您在 VRChat SDK 相关内容看到 "Quest" 一词，它通常也适用于 Android 平台。
 
 例如：[EasyQuestSwitch](/vcc.docs.vrchat.com/vpm/curated-community-packages.md) 等现有工具非常适合跨平台开发。您并不真正需要一台 Meta Quest！
 :::
