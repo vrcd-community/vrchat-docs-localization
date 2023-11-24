@@ -329,10 +329,10 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
           collapsed: true,
           items: [
             { text: '为 Unity 设置 Quest 内容开发环境', link: '/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content' },
-            { text: 'Cross-Platform Setup', link: '/creators.vrchat.com/platforms/android/cross-platform-setup' },
-            { text: 'Mobile Best Practices', link: '/creators.vrchat.com/platforms/android/android-best-practices' },
-            { text: 'Quest Content Limitations', link: '/creators.vrchat.com/platforms/android/quest-content-limitations' },
-            { text: 'Quest Content Optimization', link: '/creators.vrchat.com/platforms/android/quest-content-optimization' },
+            { text: '跨平台设置', link: '/creators.vrchat.com/platforms/android/cross-platform-setup' },
+            { text: '移动端最佳实践', link: '/creators.vrchat.com/platforms/android/android-best-practices' },
+            { text: 'Quest 内容限制', link: '/creators.vrchat.com/platforms/android/quest-content-limitations' },
+            { text: 'Quest 内容优化', link: '/creators.vrchat.com/platforms/android/quest-content-optimization' },
           ]
         }
       ]
