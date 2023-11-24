@@ -106,11 +106,11 @@ dmidecode --type system`
 -cpu host,migratable=off,hypervisor=on,invtsc=on,hv-time=on,hv-passthrough=on。
 ```
 
-不过，[不建议使用 `hv-passthrough`](https://www.qemu.org/docs/master/system/i386/hyperv.html#supplementary-features)，因为该选项会激活 KVM 本身支持的所有 Hyper-V 权限（而不仅仅是硬件支持的权限）。
+不过，[不建议使用 `hv-passthrough`](https://www.qemu.org/docs/master/system/i386/hyperv.html#supplementary-features)，因为该选项会激活 KVM 本身支持的所有 Hyper-V 特性（而不仅仅是硬件支持的）。
 
 （注意：在这种情况下，（大概？）除了`hv-time` 之外，您不需要任何其他 `hv-foo` 参数，直通将处理其余参数）
 
-如 QEMU 文档所述，QEMU 还在所有类型的 SMBIOS 仿真处理中，支持使用多个 `-smbios type=#,...`条目。从头开始填写所有参数比较麻烦，但这很容易实现自动化。建议使用脚本从自己的硬件获取真实参数值：[https://gist.github.com/kiler129/5d437a37c07ac6eb1cdf0e595e488fd2](https://gist.github.com/kiler129/5d437a37c07ac6eb1cdf0e595e488fd2)。这样可以确保参数值与真实硬件相对应，并且不会出现不同用户间有完全相同参数的情况。使用脚本生成的命令行参数示例如下：
+如 QEMU 文档所述，QEMU 在所有类型的 SMBIOS 仿真处理中，支持使用多个 `-smbios type=#,...`条目。从头开始填写所有参数比较麻烦，不过这很容易实现自动化。建议使用脚本从自己的硬件获取真实参数值：[https://gist.github.com/kiler129/5d437a37c07ac6eb1cdf0e595e488fd2](https://gist.github.com/kiler129/5d437a37c07ac6eb1cdf0e595e488fd2)。这样可以确保参数值与真实硬件相对应，并且不会出现不同用户间有完全相同参数的情况。使用脚本生成的命令行参数示例如下：
 
 ```shell
 -smbios 'type=0,version=F31o,vendor=American Megatrends International,, LLC.,uefi=on,release=5.17,date=12/03/2020' \
@@ -124,7 +124,7 @@ dmidecode --type system`
 
 ### Proxmox/PVE
 
-确保在虚拟机的 "选项 "选项卡中将操作系统设置为 "Windows 7 "或更高版本。
+确保在虚拟机的 "选项 "选项卡中将操作系统设置为 "Windows 7 " 或更高版本。
 
 虽然严格来说与 EAC 无关，但在 Proxmox（以及任何其他虚拟机）中运行 VR 游戏需要一致且可预测的性能。Proxmox 专门针对游戏的性能调整教程可在 Proxmox 论坛上找到：[https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/](https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/)
 

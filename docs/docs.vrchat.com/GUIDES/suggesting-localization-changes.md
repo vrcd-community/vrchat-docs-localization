@@ -117,7 +117,7 @@ Crowdin的翻译文本编辑器界面有四个分区：
 
 #### 如果我的 VRChat 用户名在 Crowdin 被占用了怎么办？
 
-请务必在 Crowdin 的 "About Me"部分输入您的 VRChat User ID，以便我们确认您的身份。
+请务必在 Crowdin 的 "About Me" 部分输入您的 VRChat User ID，以便我们确认您的身份。
 
 #### 我没有看到某个单词/短语！
 
