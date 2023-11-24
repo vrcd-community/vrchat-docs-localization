@@ -210,7 +210,7 @@ VRChat的两步验证是为注册了VRChat账号的用户提供的。
 
 </center>
 
-然后，使用用户名和密码[登录VRChat网站](https://vrchat.com/home/login)。当您进入两步验证屏幕时，点击“使用恢复代码(Use a recovery code instead)”。
+然后，使用用户名和密码[登录VRChat网站](https://vrchat.com/home/login)。当您进入两步验证屏幕时，点击“使用恢复代码 (Use a recovery code instead)”。
 
 <center>
 
