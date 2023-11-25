@@ -124,9 +124,9 @@ dmidecode --type system`
 
 ### Proxmox/PVE
 
-确保在虚拟机的 "选项 "选项卡中将操作系统设置为 "Windows 7 " 或更高版本。
+确保在虚拟机的 "选项" 选项卡中将操作系统设置为 "Windows 7" 或更高版本。
 
-虽然严格来说与 EAC 无关，但在 Proxmox（以及任何其他虚拟机）中运行 VR 游戏需要一致且可预测的性能。Proxmox 专门针对游戏的性能调整教程可在 Proxmox 论坛上找到：[https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/](https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/)
+虽然严格来说与 EAC 无关，但在 Proxmox（以及任何其他虚拟机）中运行 VR 游戏需要一致且可预测的性能。Proxmox 上专门针对游戏的性能调整教程可在 Proxmox 论坛上找到：[https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/](https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/)
 
 ### 技术说明
 
