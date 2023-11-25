@@ -31,6 +31,6 @@
 | 扳机                                           | 选择/交互                                                                                                                |
 | 右摇杆                                         | 转向                                                                                                                     |
 | 左摇杆                                         | 移动                                                                                                                     |
-| 右摇杆下压                                     | 右侧[动作菜单](action-menu)                                                                                              |
-| 左摇杆下压                                     | 左侧[动作菜单](action-menu)                                                                                              |
-| 两侧扳机键+两侧菜单键                          | 启用安全模式，会将当前[安全等级](/docs.vrchat.com/SYSTEM/vrchat-safety-and-trust-system)转换为全部效果关闭的自定义模式。 |
+| 右摇杆下压                                     | 右侧[圆盘菜单](action-menu)                                                                                              |
+| 左摇杆下压                                     | 左侧[圆盘菜单](action-menu)                                                                                              |
+| 两侧扳机键+两侧菜单键                          | 启用安全模式，会将当前的[防护等级](/docs.vrchat.com/SYSTEM/vrchat-safety-and-trust-system)转换为全部效果均关闭的自定义等级。 |
