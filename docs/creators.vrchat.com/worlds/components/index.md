@@ -1,9 +1,8 @@
 ---
 title: "Scene Components"
-hidden: false
-createdAt: "2017-07-11T20:33:31.318Z"
-updatedAt: "2021-10-20T20:03:08.484Z"
 ---
+
+# Scene Components
 
 Every Unity scene you'd like to bring into VRChat requires a [VRC_SceneDescriptor](/creators.vrchat.com/worlds/components/vrc_scenedescriptor) component. The VRChat Worlds SDK contains various other components to allow your users to interact with your world, pick up objects, see themselves in a mirror, and more.
 

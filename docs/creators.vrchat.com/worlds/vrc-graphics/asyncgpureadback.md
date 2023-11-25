@@ -1,10 +1,9 @@
 ---
 title: "ASyncGPUReadback"
-slug: "asyncgpureadback"
-hidden: false
-createdAt: "2023-04-26T00:51:17.446Z"
-updatedAt: "2023-04-26T00:53:33.444Z"
 ---
+
+# ASyncGPUReadback
+
 AsyncGPUReadback in Unity is a feature that allows developers to copy data, such as a specific pixel's color, from textures on the GPU to code on the CPU. This function is similar to `Texture2D.GetPixels`except it does not block tasks on the main thread as it runs asynchronously.
 
 By performing the data transfer asynchronously, Unity ensures that the process does not negatively affect the application's frame rate and overall performance. AsyncGPUReadback helps developers avoid stalling the rendering pipeline, as the data transfer occurs in the background, parallel to the main thread.

@@ -1,10 +1,9 @@
 ---
 title: "Allowed Avatar Components"
-slug: "whitelisted-avatar-components"
-hidden: false
-createdAt: "2017-09-10T03:41:08.259Z"
-updatedAt: "2022-11-15T23:12:29.563Z"
 ---
+
+# Allowed Avatar Components
+
 Here is a list of the components permitted on avatars. Any component not on this list will be removed at runtime, and may prevent upload.
 
 Custom scripts/components are not permitted on avatars, and will be removed at upload and runtime.

@@ -1,17 +1,15 @@
 ---
 title: "Getting Started with Udon"
-slug: "getting-started-with-udon"
-excerpt: "Learn how to get set up to create Udon-powered Worlds in VRChat."
-sidebar_position: 0
-hidden: false
-createdAt: "2020-03-05T18:58:47.878Z"
-updatedAt: "2022-11-16T00:16:00.902Z"
+description: "Learn how to get set up to create Udon-powered Worlds in VRChat."
 ---
+
+# Getting Started with Udon
+
 If you don't know what Udon is, read [What is Udon](/creators.vrchat.com/worlds/udon/) first. 
 
 There are two ways for you to get started with Udon. You can use our [Creator Companion](https://vcc.docs.vrchat.com) to do so. 
 
-# Using the Creator Companion
+## Using the Creator Companion
 
 Here are all the steps to get you started with Udon using the Creator Companion.
 
@@ -27,7 +25,7 @@ Here are all the steps to get you started with Udon using the Creator Companion.
 
 From there, you're ready to start!
 
-# Manual Setup
+## Manual Setup
 ::: warning
 
 This method is deprecated! You should use the Creator Companion.

@@ -1,8 +1,9 @@
 ---
 title: "Udon Example Scene"
-createdAt: "2021-05-13T19:15:33.839Z"
-updatedAt: "2021-10-07T17:09:09.342Z"
 ---
+
+# Udon Example Scene
+
 This scene is ready to [Build & Test](/creators.vrchat.com/worlds/udon/using-build-test) or Publish, and it demonstrates many common interactive items.
 
 ## Prefabs

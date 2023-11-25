@@ -1,9 +1,5 @@
 ---
 title: "Data Tokens"
-slug: "data-tokens"
-hidden: false
-createdAt: "2023-04-24T23:48:30.309Z"
-updatedAt: "2023-04-25T00:01:54.599Z"
 ---
 # Data Tokens
 

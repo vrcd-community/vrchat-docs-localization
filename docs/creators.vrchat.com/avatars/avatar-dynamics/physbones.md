@@ -1,10 +1,9 @@
 ---
 title: "PhysBones"
-slug: "physbones"
-hidden: false
-createdAt: "2022-03-03T00:02:11.576Z"
-updatedAt: "2023-05-15T15:19:43.138Z"
 ---
+
+# PhysBones
+
 PhysBones is a set of components that lets you add secondary motion to avatars, permitting you to add motion to things like hair, tails, ears, clothing, and more! Using these well will make your avatar seem more dynamic and real.
 
 PhysBones is a replacement for Dynamic Bones. While both systems share a lot of concepts, there are some major differences with PhysBones, so not all avatars may directly translate over to VRChat’s system.

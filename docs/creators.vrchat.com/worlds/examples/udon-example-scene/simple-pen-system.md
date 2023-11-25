@@ -1,14 +1,13 @@
 ---
 title: "Simple Pen System"
-slug: "simple-pen-system"
-excerpt: "Simple is a relative term."
-hidden: false
-createdAt: "2021-05-14T00:44:52.076Z"
-updatedAt: "2021-05-20T23:00:49.470Z"
+description: "Simple is a relative term."
 ---
+
+# Simple Pen System
+
 The Simple Pen system consists of two programs - one for the Pen, and one for each Line that will be drawn
 
-# How the Pen and Lines Work Together
+## How the Pen and Lines Work Together
 
 ### Pen
 The pen has VRCPickup and VRCObjectSync components, which provide the basic pickup and sync functionality. The program itself is uses Continuous sync since that works well with these components.

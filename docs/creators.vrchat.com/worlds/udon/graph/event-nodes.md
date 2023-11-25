@@ -1,10 +1,9 @@
 ---
 title: "Event Nodes"
-slug: "event-nodes"
-hidden: false
-createdAt: "2020-03-20T20:08:22.541Z"
-updatedAt: "2022-10-18T23:46:02.951Z"
 ---
+
+# Event Nodes
+
 This is a list of Udon Nodes that are considered "Events".
 
 Events are used to detect actions and set off chains of action or logic. [Input Events](/creators.vrchat.com/worlds/udon/input-events)  have their own special page. To jump to an Event in the graph, click it in the Graph Sidebar.

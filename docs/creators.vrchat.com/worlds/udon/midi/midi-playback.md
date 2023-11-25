@@ -1,10 +1,9 @@
 ---
 title: "Midi Playback"
-slug: "midi-playback"
-hidden: false
-createdAt: "2023-02-16T02:12:05.772Z"
-updatedAt: "2023-02-16T02:12:05.772Z"
 ---
+
+# Midi Playback
+
 You can play back MIDI data along with an audio track to control anything you want in your Udon world. You can jump to the [Example Scene](#example-midiplaybackscene) to get started right away.
 
 ## Assets: MidiFile and AudioClip

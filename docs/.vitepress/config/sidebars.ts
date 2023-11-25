@@ -283,7 +283,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
             { text: 'Avatar Events', link: '/creators.vrchat.com/worlds/udon/avatar-events' },
             { text: 'Debugging Udon Projects', link: '/creators.vrchat.com/worlds/udon/debugging-udon-projects' },
             { text: 'Event Execution Order', link: '/creators.vrchat.com/worlds/udon/event-execution-order' },
-            { text: 'Image Loading', link: '/creators.vrchat.com/worlds/udon/event-execution-order' },
+            { text: 'Image Loading', link: '/creators.vrchat.com/worlds/udon/image-loading' },
             { text: 'Input Events', link: '/creators.vrchat.com/worlds/udon/input-events' },
             { text: 'String Loading', link: '/creators.vrchat.com/worlds/udon/string-loading' },
             { text: 'Udon Moderation Tool Guidelines', link: '/creators.vrchat.com/worlds/udon/udon-moderation-tool-guidelines' },

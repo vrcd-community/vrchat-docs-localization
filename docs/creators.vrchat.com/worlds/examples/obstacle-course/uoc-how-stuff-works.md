@@ -1,14 +1,13 @@
 ---
 title: "Obstacle Course: How Stuff Works"
-slug: "uoc-how-stuff-works"
-excerpt: "How all the different programs and custom editor scripts work together in the Udon Obstacle Course"
-hidden: false
-createdAt: "2021-08-10T19:42:13.400Z"
-updatedAt: "2021-08-18T20:57:54.974Z"
+description: "How all the different programs and custom editor scripts work together in the Udon Obstacle Course"
 ---
+
+# Obstacle Course: How Stuff Works
+
 Each system was designed to have a specific set of responsibilities, and to know about other systems as little as necessary. 
 
-# Overview
+## Overview
 * The **PlayerDataManager** assigns **PlayerData** objects to each player who enters the world.
 * When a **PlayerData** object enters the Start Gate **Checkpoint**, the **Course** they just entered starts tracking their time, and activates the next **Checkpoint**.
 * When the **PlayerData** object passes through the last **Checkpoint**, their time is added to the Scoreboard.
@@ -17,20 +16,20 @@ Each system was designed to have a specific set of responsibilities, and to know
 
 The following sections describe the programs and scripts that combine to make the whole experience.
 
-# Players
+## Players
 Each player who joins the world gets a 'PlayerData' object to manage their state and progress through a course. The **PlayerDataManager** assigns **PlayerData** objects, which can trigger **OnPlayerDataEnter** programs.
 
-## PlayerDataManager
+### PlayerDataManager
 You can find this program on the "PlayerDataManager" GameObject under the "Udon" object in the scene. It has two important public variables:
 **dataPool**: Reference to the VRC Object Pool component on the same object as this Manager. When a Player Joins the world, this manager will TryToSpawn a PlayerData object for them, and give them ownership.
 **followCam**: Reference to the camera that will follow above a Player as they run through the course. Set here so the PlayerDataManager can assign the reference to each PlayerData object when they are refreshed.
 
 When you change the 'Number of Players' option in the Toolkit Window, all the existing PlayerData objects will be removed from the scene, then new copies of them will be added as children of the PlayerDataManager. Each one will have its public variables set up properly, and the Object Pool will be updated to hold all the new PlayerData objects.
 
-## PlayerObject
+### PlayerObject
 The PlayerObject prefab has a Rigidbody and Capsule Collider component, which are needed to trigger PowerUps, Hazards, etc. It's on a custom layer **CoursePlayer** which only collides with **CourseTrigger** to interact with Hazards and PowerUps. It also has an UdonBehaviour with an important program on it:
 
-## PlayerData
+### PlayerData
 This program is the main connector between the player running the course and all the other systems. Its variables are:
 **timeElapsed**: Synced Float which is updated by the **Course** program when they cross the Finish Gate. When it changes, the owner of the PlayerData object will show this time on the scoreboard so they can see their latest time locally. The owner of the ScoreManager object will see this change and add the new time and displayName of the Player to the scoreboard.
 
@@ -48,7 +47,7 @@ This program is the main connector between the player running the course and all
 
 **followCam**: Reference to the CinemachineVirtualCamera which follows the player around the course. The program sets its own Transform as both the _follow_ and _lookAt_ targets for the camera, and changes the priority on this camera when _isRacing_ changes.
 
-## OnPlayerDataEnter
+### OnPlayerDataEnter
 This program is used on objects which should detect the **PlayerData** object entering its Trigger Collider. We use the custom layers **CoursePlayer** and **CourseTrigger** ensure that only certain objects will trigger this collider. When they do, it fires the internal event **OnPlayerDataEnter** to do a multitude of things. This program has the following variables:
 
 **fxPrefab**: A GameObject to spawn when on **Trigger**, meant to play a sound, show some particles, etc so the Player knows that something has happened.
@@ -71,10 +70,10 @@ When a **PlayerData** collider trigger entry is detected, this program does the 
 * If the _fxPrefab_ GameObject on this program was set (not left at default of 'self'), then we will **Instantiate** a copy of the prefab and set its position and rotation from the _fxSpawn_ variable.
 * If _deactivateOnTrigger_ is true, then we will set **this** GameObject to inactive.
 
-# Course & Checkpoints
+## Course & Checkpoints
 This is the heart of the project, the gates and checkpoints that you need to move through to complete the time trial.
 
-# Course
+## Course
 This program lives on the CourseManager object and manages the state of the time trial for the local player. It doesn't have any synced variables - it only knows about the Local Player who is running through it.
 
 On **Start**, it calls **Reset** to set itself up properly.
@@ -100,10 +99,10 @@ On **FinishRace**, we:
 
 On **Respawn**, we check whether the player _isRacing_. If so, we send them back to the transform position of the last checkpoint. If not, we teleport them down low enough that they will be respawned by the world, back at one of the original spawn points.
 
-## ObstacleCourseData
+### ObstacleCourseData
 This custom script just holds a reference to the **ObstacleCourseAsset** with all the info about your course like which prefabs to use, the number of players, the default speeds, etc. It's loaded by the Utility Window so you should have one in your scene. You should create your own so it's not overwritten if you update your project with a newer version of this package. Do this by duplicating an existing asset, which will ensure the default values are correct.
 
-## Checkpoint
+### Checkpoint
 The Checkpoint objects each have an index which represents their order in the time trial, this is automatically set when placing Checkpoints through the Utility Window or modifying their order. 
 They have a Trigger Collider with an **OnPlayerDataEnter** program which call into a **Checkpoint** program that we have on an object called "UdonProgram" in our example prefabs. The program is simple, with three possible events that can be triggered on it:
 
@@ -113,10 +112,10 @@ They have a Trigger Collider with an **OnPlayerDataEnter** program which call in
 
 **FinishRace** will simply call **FinishRace** on the **Course** program.
 
-# Score
+## Score
 What's a time trial without some friendly competition? The Score system syncs the names and times of the latest runs, as well as the best run so far in the instance.
 
-## ScoreManager
+### ScoreManager
 This program sits on an Object called "ScoreManager" under the "Udon" GameObject. It uses a queue system to process incoming scores and sync them. It doesn't actually have _any synced variables_ itself, relying on the *ScoreFields* to sync the values instead. These fields are automatically populated by the Utility Window when you change the Number of Scores to Show.
 
 On **Start**, this program calls its own **Render** event once.
@@ -133,13 +132,13 @@ On **ProcessNextScore**:
 * Set the value of _scoreToProcess_ to an empty string so its ready to process the next score that comes in. 
 * Send the **Render** event to everyone to update their score texture.
 
-## ScoreField
+### ScoreField
 This program uses a simple and effective pattern - it has a public synced variable called _log_. When log changes, it updates the text in the field to the new value. In this way, the values are synced and updated for everyone when the owner of the object updates it, which can be done easily from another program. In our case, we update this value from the **ScoreManager**.
 
-## HighScoreField
+### HighScoreField
 This program uses the same pattern as the score field above, but also has a synced _score_ float that can be used to compare scores and update only if the new score is better. It also has a "prefix" which is a string injected before any changes. In this case, the string "High Score:" is prepended to the incoming string.
 
-# PowerUps
+## PowerUps
 It's fun to offer speed and jump boosts for players looking to maximize their scores, You can also use speed and jump penalties as part of obstacles and hazards to give your players some choice in strategy. PowerUps are all placed as children of the "PlayerModsManager" object when you create them with the Utility Window. They also have the *PlayerModsManager* UdonBehaviour set on them automatically so they can apply their effects.
 
 They have a very simple program. It's called from an **OnPlayerDataEnter** program of course, and has a single **Trigger** event. Its variables are:
@@ -154,35 +153,35 @@ They have a very simple program. It's called from an **OnPlayerDataEnter** progr
 
 On **Trigger**, the program will set _speedToProcess_ on the **PlayerModsManager** if it's not 0, and it will set _jumpToProcess_ if it's not 0. In order to simplify the logic, we bundle the _amount_ and _duration_ values into a single Vector2, where the _x_ is amount and _y_ is duration.
 
-## PlayerModsManager
+### PlayerModsManager
 It's useful to have a central place to manage changes to a Player's abilities, especially when you consider that someone could run through a "Speed + 3" with a 2 second duration, and then a "Speed - 1" with a 3 second duration. In our program, speed mods cancel each other out, and jump mods cancel each other out. So in the example above, as soon as the Player triggered the "Speed- 1" PowerUp, they would reset to their default speed - 1, with a new 3 second timer running.
 
 The program works with a queue, like the **ScoreManager**. When _speedToProcess_ is changed, it will figure out the new speed to use, apply that to the VRCPlayerApi of the Local Player, and start a countdown based on the _effectDuration_ of the PowerUp. The program displays the mod on the user's HUD and fades it out along with the timing so they Player can intuitively understand how much time is left. When the timer runs out, it resets the target property on the VRCPlayerApi to the default value, which is why we store and set those here instead of in the "VRCWorldSettings" program.
 
-## DestroyAfterXSeconds
+### DestroyAfterXSeconds
 This simple program is useful for locally-instantiated objects, like the FX Prefabs created by **OnPlayerDataEnter** programs. It will ensure that the object destroys itself so you don't wind up with hundreds of old sound effects and particle systems sitting around.
 
-## PlayClipFromArray
+### PlayClipFromArray
 This program is useful for introducing some variety in your sounds, for use on FX Prefabs for example. Instead of a single AudioClip, you can set a group of them on this program and it will randomly choose one when it is created and play that one. Could also be useful for a Footsteps program.
 
-# Hazards
+## Hazards
 If you want to challenge your players, you can add a variety of hazards. We included a couple example programs, feel free to make your own!
 
-## Autorotate
+### Autorotate
 This program simply rotates the Transform on which it lives. You can adjust the _amount_ for each axis, which will be multiplied by Time.deltaTime to ensure it rotates smoothly. An animator would have better performance, but this works when you're experimenting.
 
-## SpawnedHazard
+### SpawnedHazard
 This hazard will reduce the speed of the Player who comes into contact with it. You can set _speedChange_ like you would on a PowerUp - the x is the amount to add to the Players' speed, and the y is the duration of the effect. To reduce a player's speed by 3 for 1 second, you would set _speedChange_ to (-3,1). They find the "PlayerModsManager" GameObject and UdonBehaviour by name when they are created - not very performant but it works.
 
-## HazardSpawner
+### HazardSpawner
 This program uses **SendCustomEventDelayedSeconds** to spawn hazards every _delay_ seconds. In our example project, we use slightly different delays to make a tricky hill of barrels for our players to dodge.
 
-## FallingBlock
+### FallingBlock
 This program is the only one we include that interacts with a player and doesn't use **OnPlayerDataEnter**. This is because we want to know when a Player Enters _and_ when they Exit, which isn't accounted for in that program. When a player enters, we use **SendCustomEventDelayedSeconds** to run **CheckForDrop** after _triggerTime_ seconds.
 
 On **CheckForDrop**, if the player has not yet exited the collider, it will set its Rigidbody to non-kinematic, causing it to fall (and the player along with it). It will then call **Reset** after _resetTime_ seconds.
 
-# Misc
+## Misc
 
-## Injection
+### Injection
 This project has a system to inject references to certain components. It is described [here](/creators.vrchat.com/worlds/examples/obstacle-course/build-from-custom-parts#advanced-stuff).

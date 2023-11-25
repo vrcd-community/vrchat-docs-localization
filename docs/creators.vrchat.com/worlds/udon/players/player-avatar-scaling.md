@@ -1,10 +1,9 @@
 ---
 title: "Player Avatar Scaling"
-slug: "player-avatar-scaling"
-hidden: false
-createdAt: "2023-06-22T01:23:45.678Z"
-updatedAt: "2023-07-19T01:23:45.678Z"
 ---
+
+# Player Avatar Scaling
+
 Udon provides functions allowing world creators to
 - Permit or enforce avatar scaling features and parameters.
 - React to changes in player height.

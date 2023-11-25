@@ -1,10 +1,9 @@
 ---
 title: "Expression Menu and Controls"
-slug: "expression-menu-and-controls"
-hidden: false
-createdAt: "2020-08-05T22:34:37.899Z"
-updatedAt: "2022-11-08T23:54:49.666Z"
 ---
+
+# Expression Menu and Controls
+
 ::: warning Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).

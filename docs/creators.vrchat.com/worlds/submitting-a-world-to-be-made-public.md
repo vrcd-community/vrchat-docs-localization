@@ -1,11 +1,9 @@
 ---
 title: "World Creation, Optimization, and Community Labs Tips"
-slug: "submitting-a-world-to-be-made-public"
-sidebar_position: -1
-hidden: false
-createdAt: "2018-12-29T00:05:06.003Z"
-updatedAt: "2023-04-21T14:54:14.165Z"
 ---
+
+# World Creation, Optimization, and Community Labs Tips
+
 Want to make your world public? You've come to the right place! You need to submit your world to **Community Labs**.
 
 There are a few things you should take into consideration before submitting your world to Community Labs. **Make sure you read all of this!** Failure to do so may result in your world being taken down, or never leaving Community Labs.

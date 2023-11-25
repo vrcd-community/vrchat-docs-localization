@@ -1,10 +1,9 @@
 ---
 title: "Special Nodes"
-slug: "special-nodes"
-hidden: false
-createdAt: "2020-03-20T20:08:24.110Z"
-updatedAt: "2021-09-13T22:30:33.143Z"
 ---
+
+# Special Nodes
+
 These are "Special" nodes. This includes flow control and special Udon features.
 
 ### Block

@@ -1,10 +1,9 @@
 ---
 title: "Allowlisted World Components"
-slug: "whitelisted-world-components"
-hidden: false
-createdAt: "2018-12-13T22:11:19.350Z"
-updatedAt: "2021-09-15T23:15:28.795Z"
 ---
+
+# Allowlisted World Components
+
 The following is the complete list of scripts usable within worlds. Components that are not in this list will not work.
 ::: warning Oculus Quest
 
