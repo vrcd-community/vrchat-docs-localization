@@ -39,7 +39,7 @@
   </features>
 ```
 
-同样，这不会影响性能。您可以保留其他设置，如 `hypervisor` , `topoext` 和 `invtsccpuid` 标志或 `hyper-v clock`（这些设置都有性能优势）。
+同样，这不会影响性能。您可以保留其他设置，如 `hypervisor` , `topoext` 和 `invtsccpuid` 标志或 `Hyper-V clock`（这些设置都有性能优势）。
 
 事实上，这里有一个小窍门：您可以将 Hyper-V 模式设置为直通模式，而无需添加 vendor_id 参数：
 
@@ -49,7 +49,7 @@
 </hyperv>
 ```
 
-这将启用您的当前版本的内核/QEMU *所有* 可用的 **hyper-v enlightenments** 特性，包括vendor ID，这也意味着 EAC 不会发病然后拒绝启动，但这个操作也会启用以前可能没有启用的其他功能，也就是说这很可能会 *提高* 您的性能！
+这将启用您的当前版本的内核/QEMU *所有* 可用的 **Hyper-V enlightenments** 特性，包括vendor ID，这也意味着 EAC 不会发病然后拒绝启动，但这个操作也会启用以前可能没有启用的其他功能，也就是说这很可能会 *提高* 您的性能！
 
 *“enlightenments”* 是 Hyper-V 对 "准虚拟化扩展 "的一种说法，即 Linux 内核或 QEMU 为 Windows 客户端提供的，用于增强虚拟环境中的性能或功能的接口。
 
@@ -100,7 +100,7 @@ dmidecode --type system`
 
 `-cpu` 参数中可能已经包含了其他内容，在这种情况下，只需在最后添加 `,hv-vendor-id=0123756792CD` 即可，如上图所示。上述推荐设置不仅能实现 Hyper-V 的要求，还能确保 CPU L2/L3 缓存拓扑等更高阶的方法也能正确传递。
 
-在这里,也可以使用 Hyper-v 直通模式：
+在这里,也可以使用 Hyper-V 直通模式：
 
 ```
 -cpu host,migratable=off,hypervisor=on,invtsc=on,hv-time=on,hv-passthrough=on。
@@ -132,7 +132,7 @@ dmidecode --type system`
 
 您可能会注意到，其中有些内容与过去臭名昭著的 "NVIDIA 代码 43 "问题非常相似。这里唯一的区别是，隐藏 kvm 虚拟机监控程序（`kvm=off` 或 `<kvm><hidden state='on'/></kvm>` ）不是必需的（但这么做也无妨）。如果您以前曾使用过此类指南（如[https://passthroughpo.st/apply-error-43-workaround/](https://passthroughpo.st/apply-error-43-workaround/)）设置过虚拟机，那么带有 EAC 的 VRC 对您来说应该是可以直接运行的。
 
-在技术层面上，Hyper-v vendor ID 的作用是将客户机 `cpuid` 信息的 `0x40000000`地址处设置为其所提供的任何信息。这里的默认值是 "Microsoft HV"，EAC 会直接拒绝这个值。使用 Hyper-v 直通模式时，此处将变成 "Linux KVM Hv"，它仍然会显示为一个虚拟机，但 EAC 不会对此作出任何反应。
+在技术层面上，Hyper-V vendor ID 的作用是将客户机 `cpuid` 信息的 `0x40000000`地址处设置为其所提供的任何信息。这里的默认值是 "Microsoft HV"，EAC 会直接拒绝这个值。使用 Hyper-V 直通模式时，此处将变成 "Linux KVM Hv"，它仍然会显示为一个虚拟机，但 EAC 不会对此作出任何反应。
 
 由于这不需要更改 `hypervisor` 标志，客户机（Windows NT）中的操作系统内核仍会将环境识别为虚拟机，并应用相应的性能增强措施。这也意味着客户机中的任务管理器会报告其运行在虚拟机中。在 KVM 环境中测试 EAC 时，这不会有什么影响。
 
@@ -166,13 +166,13 @@ void print_leaf(int leaf)
 int main()
 {
     // cf:
-    // https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/tlfs/feature-discovery
+    // https://docs.microsoft.com/en-us/virtualization/Hyper-V-on-windows/tlfs/feature-discovery
     // https://docs.microsoft.com/en-us/cpp/intrinsics/cpuid-cpuidex?view=msvc-170
 
     std::cout << "manufacturer id:" << std::endl;
     print_leaf(0); // Manufacturer ID
 
-    std::cout << "hyper-v id:" << std::endl;
+    std::cout << "Hyper-V id:" << std::endl;
     print_leaf(0x40000000); // Hypervisor CPUID Leaf Range
 
     return 0;
@@ -188,7 +188,7 @@ res0: 0x10 (►   )
 res1: 0x68747541 (Auth)
 res2: 0x444d4163 (cAMD)
 res3: 0x69746e65 (enti)
-hyper-v id:
+Hyper-V id:
 leaf: 0x40000000
 res0: 0x40000005 (♣  @)
 res1: 0x756e694c (Linu)

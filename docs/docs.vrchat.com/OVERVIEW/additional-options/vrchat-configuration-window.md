@@ -66,8 +66,8 @@
 
 Quest MSAA 是一个单独的功能。根据 Oculus 的建议：
 
-Oculus Quest 1 被设置为 2x MSAA。
-Oculus Quest 2 被设置为 4x MSAA。
+Oculus Quest 1 应设置为 2x MSAA。
+Oculus Quest 2 应设置为 4x MSAA。
 
 此设置无法更改。
 
