@@ -1,10 +1,9 @@
 ---
 title: "Obstacle Course Toolkit"
-slug: "uoc-window"
-hidden: false
-createdAt: "2021-08-10T19:19:18.669Z"
-updatedAt: "2021-08-18T20:56:44.155Z"
 ---
+
+# Obstacle Course Toolkit
+
 ![Obstacle Course Toolkit](/creators.vrchat.com/images/worlds/uoc-window-0a203a2-obstacle-course-toolkit.png)
 
 We created a special window to help manage all the special prefabs and programs in the project. Here's what you can do in each section:

@@ -1,10 +1,10 @@
 ---
 title: "Video Players"
-excerpt: "Play videos in your VRChat world"
-sidebar_position: 1
-createdAt: "2020-08-28T19:47:50.947Z"
-updatedAt: "2023-08-14T09:05:14.280Z"
+description: "Play videos in your VRChat world"
 ---
+
+# Video Players
+
 ## Using the Prefabs
 
 The easiest way to put a Video Player in your Udon world is by using one of the Prefabs, which you can find in `Packages/com.vrchat.worlds/Samples/UdonExampleScene/Prefabs/VideoPlayers`.

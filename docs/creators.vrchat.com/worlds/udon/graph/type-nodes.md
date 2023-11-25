@@ -1,10 +1,9 @@
 ---
 title: "Type Nodes"
-slug: "type-nodes"
-hidden: false
-createdAt: "2020-03-20T20:08:24.139Z"
-updatedAt: "2020-03-21T01:06:17.230Z"
 ---
+
+# Type Nodes
+
 These nodes are used to get references to certain types. All of them have one output of the type they're referring to.
 
 We are only including documentation for VRChat types here. For information on the Unity types Udon refers to, please see their documentation.

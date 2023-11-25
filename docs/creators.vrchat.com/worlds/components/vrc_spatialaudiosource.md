@@ -1,11 +1,10 @@
 ---
 title: "VRC Spatial Audio Source"
-slug: "vrc_spatialaudiosource"
-excerpt: "Creates a spatial audio source in VRChat"
-hidden: false
-createdAt: "2019-07-08T14:35:40.642Z"
-updatedAt: "2021-10-20T20:02:34.121Z"
+description: "Creates a spatial audio source in VRChat"
 ---
+
+# VRC Spatial Audio Source
+
 Use `VRC_SpatialAudioSource` to add 3D spatialization to a Unity `Audio Source`.
 
 When added, `VRC_SpatialAudioSource` will automatically add a Unity `Audio Source` component.

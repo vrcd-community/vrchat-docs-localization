@@ -1,9 +1,5 @@
 ---
 title: "Data Lists"
-slug: "data-lists"
-hidden: false
-createdAt: "2023-04-24T23:48:11.427Z"
-updatedAt: "2023-04-26T15:18:56.307Z"
 ---
 # Data Lists
 

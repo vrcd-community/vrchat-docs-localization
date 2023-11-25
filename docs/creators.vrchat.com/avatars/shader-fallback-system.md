@@ -1,10 +1,9 @@
 ---
 title: "Shader Blocking and Fallback System"
-slug: "shader-fallback-system"
-hidden: false
-createdAt: "2018-09-25T20:49:23.385Z"
-updatedAt: "2022-08-12T01:21:02.481Z"
 ---
+
+# Shader Blocking and Fallback System
+
 This page serves as a description of the Shader Blocking System, how it operates, and how shader authors can work with it so that their shader falls back gracefully when a user has Shaders blocked on an avatar using a given shader.
 
 ## VRChat 2021.4.2 Fallback System Upgrade

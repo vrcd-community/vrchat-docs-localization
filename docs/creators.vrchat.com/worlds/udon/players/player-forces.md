@@ -1,10 +1,9 @@
 ---
 title: "Player Forces"
-slug: "player-forces"
-hidden: false
-createdAt: "2021-01-22T00:32:15.132Z"
-updatedAt: "2021-01-22T01:07:11.156Z"
 ---
+
+# Player Forces
+
 Here are the nodes relating to forces that act on Players. For nodes that deal with Player positions, see [Player Positions](/creators.vrchat.com/worlds/udon/players/player-positions) 
 
 ::: info Local player only

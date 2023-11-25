@@ -1,11 +1,9 @@
 ---
 title: "Avatar Scaling Settings"
-slug: "avatar-scaling-settings"
-excerpt: "Configure avatar scaling in your world"
-hidden: true
-createdAt: "2023-06-24T00:00:00.076Z"
-updatedAt: "2023-06-24T00:00:00.070Z"
+description: "Configure avatar scaling in your world"
 ---
+
+# Avatar Scaling Settings
 
 This UdonBehaviour example script allows you easily to override your world's avatar scaling settings.
 

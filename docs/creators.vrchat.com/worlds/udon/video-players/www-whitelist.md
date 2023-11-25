@@ -1,10 +1,9 @@
 ---
 title: "Video Player Allowlist"
-slug: "www-whitelist"
-hidden: false
-createdAt: "2020-09-10T18:56:07.748Z"
-updatedAt: "2023-03-09T22:55:53.659Z"
 ---
+
+# Video Player Allowlist
+
 ::: info
 
 VRChat on Quest can play videos from direct links to video files. These URLs typically end with a filename ending in a supported video type like http://something.com/video.mp4 or http://test.com/cats.webm. If you visit the link and see a whole website around a video, that link will probably not play on Android / Quest because the application that VRChat uses to resolve these links into videos does not run on Android.  Creators will need to move the video to a host that supports direct links, or find another way to work around this issue.
