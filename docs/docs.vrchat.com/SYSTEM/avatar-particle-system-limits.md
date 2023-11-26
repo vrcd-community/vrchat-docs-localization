@@ -40,14 +40,14 @@
 -- | --
 `betas` |	添加或删除字符串“particle_system_limiter”将启用/禁用粒子限制器
 ps_max_particles | 单个粒子系统可以生成的最大粒子数
-`ps_max_emission`	| 允许单粒子系统的最大发射量
-ps_max_total_emission | 模型上所有粒子系统之间允许的最大发射
-`ps_mesh_particle_divider` | 网格粒子惩罚的计算方法是使用它们中的最高多边形网格除以此值，结果值除以粒子系统的最大粒子余量
+`ps_max_emission`	| 单个粒子系统允许的最大发射量
+ps_max_total_emission | 模型上所有粒子系统之间允许的最大发射粒子量
+`ps_mesh_particle_divider` | 网格粒子惩罚结果的计算方法是：使用它们中的最高多边形网格除以此值，结果值除以粒子系统的最大粒子余量
 ps_mesh_particle_poly_limit	| 在粒子系统上网格的最大多边形数
-`ps_collision_penalty_high` | 在粒子系统上高质量碰撞的惩罚，结果值除以粒子系统的最大粒子余量
-ps_collision_penalty_med | 在粒子系统上中等质量碰撞的惩罚，结果值除以粒子系统的最大粒子余量
-`ps_collision_penalty_low` | 在粒子系统上低质量碰撞的惩罚，结果值除以粒子系统的最大粒子余量
-ps_trails_penalty | 在粒子系统上启用尾迹的惩罚，结果值除以粒子系统的最大粒子余量
+`ps_collision_penalty_high` | 在粒子系统上的高质量碰撞惩罚参数，结果值除以粒子系统的最大粒子余量
+ps_collision_penalty_med | 在粒子系统上的中等质量碰撞惩罚参数，结果值除以粒子系统的最大粒子余量
+`ps_collision_penalty_low` | 在粒子系统上的低质量碰撞惩罚参数，结果值除以粒子系统的最大粒子余量
+ps_trails_penalty | 在粒子系统上启用尾迹惩罚，结果值除以粒子系统的最大粒子余量
 
 ## 修改 VRChat 粒子限制器配置
 
