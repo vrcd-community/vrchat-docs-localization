@@ -1,2 +1,2 @@
-# Blacklist Manager
-The BlacklistManager is an interface into Udon’s blacklist system. Its only job is to add an object’s hierarchy into the blacklist. This is used when spawning players through the [PlayerManager](player-manager.md) as well as spawning the ClientSim system itself.
+# 黑名单管理器
+黑名单管理器是Udon的黑名单系统的接口。它的唯一任务是将对象的层次结构添加到黑名单中。这在通过[PlayerManager](player-manager.md)生成玩家以及生成ClientSim系统本身时使用。
