@@ -251,7 +251,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
               ]
             },
             {
-              text: 'Networking', link: '/creators.vrchat.com/worlds/udon/networking/',
+              text: '网络', link: '/creators.vrchat.com/worlds/udon/networking/',
               collapsed: true,
               items: [
                 { text: 'Network Components', link: '/creators.vrchat.com/worlds/udon/networking/network-components' },

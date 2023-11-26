@@ -1,5 +1,5 @@
 # 世界
-在 VRChat 中，你可以创建并浏览由 Udon 编程语言驱动的自定义世界。
+在 VRChat 中，你可以浏览和创建由 Udon 编程语言驱动的自定义世界。
 
 你查看[创建你的第一个世界](/creators.vrchat.com/worlds/creating-your-first-world)页面获得入门指引。
 
