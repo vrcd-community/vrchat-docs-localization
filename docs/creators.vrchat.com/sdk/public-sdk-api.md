@@ -7,7 +7,7 @@ VRChat SDK 提供了一系列接口和方法，您可以使用它们来增强您
 - Packages > VRChat SDK - Worlds > Editor > VRCSDK > SDK3 > Public SDK API
 - Packages > VRChat SDK - Avatars > Editor > VRCSDK > SDK3A > Public SDK API
 
-然而，大多数事件和方法都是世界和模型 SDK 之间共享的，并且定义在 **基础 SDK Packages** 中。
+然而，大多数事件和方法都是世界和模型 SDK 之间共享的，并且定义在 **Base SDK Packages** 中。
 
 ## 目前有哪些是可用的？
 
@@ -18,17 +18,17 @@ VRChat SDK 提供了一系列接口和方法，您可以使用它们来增强您
 -  SDK 主面板的 OnEnable/OnDisable 事件
 - 构建开始/结束事件
 - 上传成功/错误事件
-- 构建、构建并测试，以及构建并上传方法
+- 构建、构建并测试 (Build & Test)，以及构建并上传 (Build & Upload) 的方法
 
 ::: info 笔记
-如果您在构建过程中遇到异常，您可以在接口定义中查看预期异常的列表。
+如果您在构建过程中遇到异常，您可以在接口定义中查看预期异常列表。
 :::
 
 ## 示例
 
 ### 获取构建器的实例
 
-连接到 `OnSdkPanelEnable` 将会确保 SDK 窗口被打开并且构建器已注册。然后您可以使用 `TryGetBuilder` 来获取您需要的构建器实例。
+使用 `OnSdkPanelEnable` 事件可以确保 SDK 窗口被打开并且构建器已注册。然后您可以使用 `TryGetBuilder` 来获取您需要的构建器实例。
 
 > 您可以在任何时候调用 `VRCSdkControlPanel.TryGetBuilder`，但如果 SDK 窗口没有打开或您尝试访问的构建器不可用，它将返回 `false` 。
 
@@ -49,7 +49,7 @@ private static void AddBuildHook(object sender, EventArgs e)
 
 ### 在构建前运行代码
 
-`OnSdkBuildStart` 在 SDK 启动构建过程之前运行，但在通过验证和构建请求回调之后。
+`OnSdkBuildStart` 在 SDK 完成验证和构建回调阶段后启动构建阶段之前运行。
 
 ```csharp
 [InitializeOnLoadMethod]
@@ -89,7 +89,7 @@ public static async void BuildSelectedAvatar()
 ```
 ## 注意
 ::: warning 注意
-如果您目前使用 reflection 来访问 SDK 内部，我们建议您尽快切换到 Public API。
+如果您目前使用反射来访问 SDK 内部，我们建议您尽快切换到 Public API。
 :::
 
 我们将尽最大努力提供一个稳定的 API，但它仍然可能在未来发生变动。我们建议利用 semver 来定义您的工具与哪个版本的 SDK 兼容。[在这里了解更多详情](../../vcc.docs.vrchat.com/vpm/packages.md)。

@@ -9,7 +9,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
         { text: '准备开始', link: '/docs.vrchat.com/OVERVIEW/getting-started' },
         { text: '常见问题', link: '/docs.vrchat.com/OVERVIEW/frequently-asked-questions' },
         {
-          text: '控制', link: '/docs.vrchat.com/OVERVIEW/controls/controls',
+          text: '控制器', link: '/docs.vrchat.com/OVERVIEW/controls/controls',
           collapsed: true,
           items: [
             { text: 'HTC Vive 手柄', link: '/docs.vrchat.com/OVERVIEW/controls/vive' },
@@ -17,7 +17,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
             { text: 'Valve Index 控制器', link: '/docs.vrchat.com/OVERVIEW/controls/valve-index' },
             { text: '键盘与鼠标', link: '/docs.vrchat.com/OVERVIEW/controls/keyboard-and-mouse' },
             { text: '手柄控制器', link: '/docs.vrchat.com/OVERVIEW/controls/gamepad' },
-            { text: '行动菜单', link: '/docs.vrchat.com/OVERVIEW/controls/action-menu' },
+            { text: '圆盘菜单', link: '/docs.vrchat.com/OVERVIEW/controls/action-menu' },
           ],
         },
         {
@@ -27,7 +27,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
             { text: '手势切换', link: '/docs.vrchat.com/OVERVIEW/additional-options/gesture-toggle' },
             { text: '启动选项', link: '/docs.vrchat.com/OVERVIEW/additional-options/launch-options' },
             { text: '配置文件', link: '/docs.vrchat.com/OVERVIEW/additional-options/configuration-file' },
-            { text: 'VRChat图像性能选项', link: '/docs.vrchat.com/OVERVIEW/additional-options/vrchat-configuration-window' },
+            { text: 'VRChat 图像性能选项', link: '/docs.vrchat.com/OVERVIEW/additional-options/vrchat-configuration-window' },
             { text: 'VRChat 本地存储', link: '/docs.vrchat.com/OVERVIEW/additional-options/local-vrchat-storage' },
           ],
         },
@@ -58,9 +58,9 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'VRChat 社区实验室', link: '/docs.vrchat.com/SYSTEM/vrchat-community-labs' },
         { text: 'VRChat 安全和信誉系统', link: '/docs.vrchat.com/SYSTEM/vrchat-safety-and-trust-system' },
-        { text: '虚拟形象动态骨骼限制', link: '/docs.vrchat.com/SYSTEM/avatar-dynamic-bone-limits' },
-        { text: '虚拟形象互动权限和设置', link: '/docs.vrchat.com/SYSTEM/permissions-and-settings' },
-        { text: '公开虚拟形象克隆', link: '/docs.vrchat.com/SYSTEM/public-avatar-cloning' },
+        { text: '模型的动态骨骼 (Dynamic Bones) 限制', link: '/docs.vrchat.com/SYSTEM/avatar-dynamic-bone-limits' },
+        { text: '模型互动权限和设置', link: '/docs.vrchat.com/SYSTEM/permissions-and-settings' },
+        { text: '公开模型克隆', link: '/docs.vrchat.com/SYSTEM/public-avatar-cloning' },
         {
           text: '全身追踪', link: '/docs.vrchat.com/SYSTEM/full-body-tracking/full-body-tracking',
           collapsed: true,

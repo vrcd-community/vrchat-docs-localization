@@ -18,4 +18,4 @@
 
 ## 虚拟形象创作
 
-要制作一个VRChat虚拟形象，您必须首先创建或找到一个3D角色，然后确保它是[适配](./avatars/creating-your-first-avatar.md)VRChat  的。然后，您可以[将您的适配模型导入](./avatars/creating-your-first-avatar)到 Unity，并添加[表情和控制、虚拟形象动力学](/creators.vrchat.com/avatars/avatar-dynamics/)等更多功能。
+要制作一个VRChat虚拟形象，您必须首先创建或找到一个3D角色，然后确保它是[适配](./avatars/creating-your-first-avatar.md)VRChat  的。然后，您可以[将您的适配模型导入](./avatars/creating-your-first-avatar)到 Unity，并添加[模型功能菜单、虚拟形象动态](/creators.vrchat.com/avatars/avatar-dynamics/)等更多功能。
