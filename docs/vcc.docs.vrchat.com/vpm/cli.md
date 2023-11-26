@@ -1,355 +1,353 @@
 
-# CLI
-The VRChat Package Manager is available as a Command Line Interface application, for advanced users and automation.
+# 命令行界面
+VRChat 包管理器提供了一个命令行界面应用程序，供高级用户和自动化使用。
 
-## Installation & Updating
-You'll need the [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) installed.
-Then just open a terminal and type:
+## 安装与更新
+你需要安装 [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)。
+然后只需打开一个终端并输入：
 
 ```console
 dotnet tool install --global vrchat.vpm.cli
 ```
 
-This will make it available at any command prompt just by typing `vpm`! You need the latest templates to make/migrate projects, so a great first thing to run is `vpm install templates` - more on that in the [install templates](#install-templates) section.
+这将使得你在任何命令提示符下只需输入 `vpm` 就可以使用它！你需要最新的模板来创建/迁移项目，因此一个很好的首次运行命令是 `vpm install templates` - 在 [安装模板](#install-templates) 部分有更多内容。
 
-You can always update the tool to the latest version with the command: 
+你可以始终使用以下命令将工具更新到最新版本：
 ```console
 dotnet tool update --global vrchat.vpm.cli
 ```
 
-You can uninstall it with the command:
+你可以使用以下命令来卸载它：
 ```console
 dotnet tool uninstall --global vrchat.vpm.cli
 ```
 
-To learn more about what's going on, read the [.NET Tool Docs](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools#install-a-global-tool).
+要了解更多信息，请阅读 [.NET 工具文档](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools#install-a-global-tool)。
 
-## Projects
-VRChat Projects are Unity projects which have the VRChat SDK in them.
-### new
-Creates a new VRChat project from a template
+## 项目
+VRChat 项目是包含 VRChat SDK 的 Unity 项目。
+### 新建
+从模板创建新的 VRChat 项目
 
 ```console
 vpm new <projectName> [template] [-p path]
 ```
 
-**Arguments**
+**参数**
 
-* **projectName**: The name for the new project. Will have numbers added to it if another project already exists with this name in the target directory.
+* **projectName**：新项目的名称。如果目标目录中已经存在具有此名称的其他项目，则会在其后添加数字。
 
-* **template**: Optional template to use. If you don't provide one, the barebones "Base" template will be used, which includes only the VRChat Base SDK package. You can use the name of one of the built-in templates, or provide an absolute path to your own template.
-  **built-in templates**: "Base", "World", "Avatar", "UdonSharp"
+* **template**：可选的模板。如果你没有提供，将使用只包含 VRChat Base SDK 包的基础 "Base" 模板。你可以使用内置模板的名称，或者提供你自己模板的绝对路径。
+  **内置模板**："Base", "World", "Avatar", "UdonSharp"
 
-* **path**: Optional absolute path to use when creating the project. If not provided, the current directory will be used.
+* **path**：创建项目时使用的可选绝对路径。如果未提供，将使用当前目录。
 
-### check project
-Checks whether a given name or path points to a compatible VRChat project.
+### 检查项目
+检查给定的名称或路径是否指向兼容的 VRChat 项目。
 
 ```console 
 vpm check project [<name>]
 ```
 
-**Arguments**
+**参数**
 
-* **name**: Optional name of the project to find. If not provided, the current directory will be checked.Otherwise, the following places will be searched:
-* Name as absolute path
-* Name as relative path from current directory
-* Name from list in settings stored as `userProjects`
+* **name**：可选的项目名称。如果未提供，将检查当前目录。否则，将在以下位置进行搜索：
+  * 绝对路径里的名称
+  * 当前目录的相对路径的名称
+  * 在 `userProjects` 中存储的设置列表中的名称
 
-If the project is found, its type will be printed to the console.
+如果找到了项目，其类型将被打印到控制台。
 
-Returns a 0 if a project is found, and a 1 if it is not.
+如果找到项目，返回 0，如果没有找到，返回 1。
 
-### resolve project
-Restores all VPM packages specified in the project's `vpm-manifest.json` file. This is done automatically by the [Resolver](/vcc.docs.vrchat.com/vpm/resolver) when you open a project in Unity, but you can also do it manually with this command.
+### 解析项目
+恢复项目的 `vpm-manifest.json` 文件中指定的所有 VPM 包。当你在 Unity 中打开一个项目时，[解析器](/vcc.docs.vrchat.com/vpm/resolver)会自动完成这个操作，但你也可以使用这个命令手动完成。
 
 ```console 
 vpm resolve project [<name>]
 ```
 
-**Arguments**
+**参数**
 
-* **name**: Optional name of the project to find. If not provided, the current directory will be checked.Otherwise, the following places will be searched:
-* Name as absolute path
-* Name as relative path from current directory
+* **name**：可选的项目名称。如果未提供，将检查当前目录。否则，将在以下位置进行搜索：
+  * 名称作为绝对路径
+  * 名称作为当前目录的相对路径
 
-If the project is found, its packages will be restored.
+如果找到了项目，其包将被恢复。
 
-Returns a 0 if the packages were successfully restored, and a 1 if they were not.
+如果包成功恢复，返回 0，如果没有恢复，返回 1。
 
-### migrate project
-Migrates projects created with the legacy .unitypackage SDKs to the new system if they use the SDK3 Worlds or Avatars unitypackages (SDK2 not supported). They can be Unity 2017, 2018 or 2019 projects. Will also migrate UdonSharp and CyanEmu to the new package-based versions.
+### 迁移项目
+如果他们使用 SDK3 Worlds 或 Avatars unitypackages（不支持 SDK2），将使用旧版 .unitypackage SDK 创建的项目迁移到新系统。他们可以是 Unity 2017、2018 或 2019 的项目。也将 UdonSharp 和 CyanEmu 迁移到新的基于包的版本。
 
 ```console 
 vpm migrate project [projectPath]
 ```
 
-**Arguments**
-* **projectPath**: The path to the unity project you want to migrate.
+**参数**
+* **projectPath**：你想要迁移的 Unity 项目的路径。
 
-**Options**
-* **--inplace**: Migrate project in place instead of creating a copy. Not recommended unless you have your own backup of the project
+**选项**
+* **--inplace**：在原地迁移项目，而不是创建一个副本。除非你有自己的项目备份，否则不推荐这样做。
 
-If the project is found and it can be migrated it will be automatically upgraded to the new system.
+如果找到了项目并且可以迁移，它将自动升级到新系统。
 
-Returns a 0 if a project is found and it can be migrated, and a 1 if it is not found or can't be migrated.
+如果找到了项目并且可以迁移，返回 0；如果未找到或无法迁移，返回 1。
 
-## Packages
-[Packages](packages) are code and assets in a portable format, stored in in zip files and pulled into your project by the VRChat Package Manager.
+## 包
+[包](packages) 是以便携格式存储在 zip 文件中的代码和资产，由 VRChat 包管理器拉入你的项目。
 
-### check package
-Reports the info from a package, or tells if you if it is not found/invalid.
+### 检查包
+报告来自包的信息，或者告诉你它是否未找到/无效。
 
 ```console 
 vpm check package <name>
 ```
 
-**Arguments**
+**参数**
 
-* **name**: The package to check. This can be the unique name of any package in the Official or Curated package listings, like `com.vrchat.worlds` or `com.vrchat.udonsharp`, or it can be a relative or absolute path to a local package.
+* **name**：要检查的包。这可以是官方或策划包列表中任何包的唯一名称，如 `com.vrchat.worlds` 或 `com.vrchat.udonsharp`，或者可以是本地包的相对或绝对路径。
 
-**Examples**
+**示例**
 * `vpm check package com.vrchat.avatars`
-  * Prints info about the official Avatars package
+  * 打印关于官方 Avatars 包的信息
 * `vpm check package "C:/MyPackages/MirrorExploder"`
-  * Prints info about the local package "MirrorExploder".
+  * 打印关于本地包 "MirrorExploder" 的信息。
 
-### add package
-Adds a VPM package to an existing Project
+### 添加包
+将 VPM 包添加到现有项目
 
 ```console 
 vpm add package <packageName> [-p <project>]
 ```
 
-**Arguments**
-* **packageName**: The package to add. This can be the unique name of any package in the Official or Curated package listings, like `com.vrchat.worlds` or `com.vrchat.udonsharp`, or it can be a relative or absolute path to a local package.
+**参数**
+* **packageName**：要添加的包。这可以是官方或策划包列表中任何包的唯一名称，如 `com.vrchat.worlds` 或 `com.vrchat.udonsharp`，或者可以是本地包的相对或绝对路径。
 
-**Options**
-* **-p|--project**: Specifies the project to which the package will be added. If no argument is provided, the method will look in the current directory. If provided, the value can be an absolute or relative path to a Unity Project, or the name of a project which you have added to your `userProjects` list. 
+**选项**
+* **-p|--project**：指定将添加包的项目。如果未提供参数，方法将在当前目录中查找。如果提供，该值可以是 Unity 项目的绝对或相对路径，或者是你已添加到 `userProjects` 列表中的项目的名称。
 
-**Examples**
+**示例**
 * `vpm add package com.vrchat.avatars`
-  * Adds the official Avatars package to the project in the current directory.
+  * 将官方 Avatars 包添加到当前目录中的项目。
 * `vpm add package "C:/MyPackages/MirrorExploder" "../MyProjectDir"`
-  * Adds my local package "MirrorExploder" to the project which is one directory up from the current working directory.
+  * 将我的本地包 "MirrorExploder" 添加到当前工作目录上一级的项目。
 
-### remove package
-Removes a VPM package from an existing Project
+### 移除包
+从现有项目中移除 VPM 包
 
 ```console 
 vpm remove package <packageName> [-p <project>] [-f]
 ```
 
-**Arguments**
-* **packageName**: The package to remove. This can be the unique name of any package in the project.
+**参数**
+* **packageName**：要移除的包。这可以是项目中任何包的唯一名称。
 
-**Options**
-* **-p|--project**: Specifies the project from which the package will be removed If no argument is provided, the method will look in the current directory. If provided, the value can be an absolute or relative path to a Unity Project.
+**选项**
+* **-p|--project**：指定将从中移除包的项目。如果未提供参数，方法将在当前目录中查找。如果提供，该值可以是 Unity 项目的绝对或相对路径。
+* **-f|--force**：即使这样做可能会破坏项目，也要移除包。
 
-* **-f|--force**: Removes a package even if doing so might break the project.
-
-**Examples**
+**示例**
 * `vpm remove package com.vrchat.clientsim`
-  * Removes the ClientSim package from the project in the current directory.
+  * 从当前目录中的项目移除 ClientSim 包。
 * `vpm remove package "com.vrchat.base" "../MyProjectDir" -f`
-  * Removes the VRChat Base package from the project which is one directory up from the current working directory, even though doing so will probably break the project.
+  * 即使这样做可能会破坏项目，也从当前工作目录上一级的项目中移除 VRChat Base 包。
 
-## Templates
-[Templates](templates) are barebones VRChat projects which can be used as a starting point for new projects, pulling in your favorite packages, prefabs and tools to get running quickly.
+## 模板
+[模板](templates) 是用作新项目起点的基础 VRChat 项目，可以快速拉取你喜欢的包、预制件和工具。
 
-::: tip
+::: 提示
 
-We also provide the templates as git repositories you can use directly. [Here's the guide](/vcc.docs.vrchat.com/guides/using-project-template-repos) with all the links and instructions.
+我们还提供了你可以直接使用的 git 仓库模板。[这里是指南](/vcc.docs.vrchat.com/guides/using-project-template-repos)，包含所有链接和说明。
 
 :::
 
-### install templates
-Installs the latest version of the VRChat templates to `AppData/Local/VRChatCreatorCompanion/VRCTemplates`, overwriting files that are there. Useful if you're using the CLI without having installed the VCC GUI. 
+### 安装模板
+将 VRChat 模板的最新版本安装到 `AppData/Local/VRChatCreatorCompanion/VRCTemplates`，覆盖那里的文件。如果你在没有安装 VCC GUI 的情况下使用 CLI，这将非常有用。
 
 ```console 
 vpm install templates
 ```
 
-Note that this will clear out the existing template first - user templates should be put into `AppData/Local/VRChatCreatorCompanion/Templates` instead.
+注意，这将首先清除现有的模板 - 用户模板应放入 `AppData/Local/VRChatCreatorCompanion/Templates` 中。
 
-### list templates
-Prints out the names and paths of the Official VRChat Templates, and the paths of the installed User Templates.
+### 列出模板
+打印出官方 VRChat 模板的名称和路径，以及已安装的用户模板的路径。
 
 ```console 
 vpm list templates
 ```
 
-### check template
-Reports the version from a template, or tells if you if it is not found/invalid.
+### 检查模板
+报告模板的版本，或者告诉你它是否未找到/无效。
 
 ```console 
 vpm check template <template>
 ```
 
-**Arguments**
+**参数**
 
-* **template**: The template to check. This can be the displayName of any built-in template or an absolute path to your own project template.
+* **template**：要检查的模板。这可以是任何内置模板的 displayName，或者是你自己的项目模板的绝对路径。
 
-**built-in templates**: "Base", "World", "Avatar", "UdonSharp"
+**内置模板**："Base", "World", "Avatar", "UdonSharp"
 
-## Repos
-Repos are listings of Packages. You always have access to the Official and Curated repos, and you can add your own Community repos.
+## 仓库
+仓库是包的列表。你总是可以访问官方和策划的仓库，你也可以添加你自己的社区仓库。
 
-### list repos
-Lists all the sources available for loading packages. This includes the Official and Curated package listing, as well as any User repos add to the Settings.
+### 列出仓库
+列出所有可用于加载包的源。这包括官方和策划的包列表，以及添加到设置中的任何用户仓库。
 
 ```console 
 vpm list repos
 ```
 
-### add repo
-Adds a local or remote repo of packages.
+### 添加仓库
+添加本地或远程的包仓库。
 
 ```console 
 vpm add repo <path> [--headers key:value key:value]
 ```
 
-**Arguments**
+**参数**
 
-* **path**: The path to add. It can be an absolute path to a local json file, or a url to a remote json file. If it's a local file, it must exist to be added. If it's a remote file, it must connect within 10 seconds of the request to be added.
+* **path**：要添加的路径。它可以是指向本地 json 文件的绝对路径，或者是指向远程 json 文件的 url。如果是本地文件，必须存在才能被添加。如果是远程文件，必须在请求后的10秒内连接才能被添加。
 
-**Options**
+**选项**
 
-* **-h|--headers**: Key/Value pairs to be added from command line. Some repo urls require different headers, and the option accounts for any number of headers. This is not necessary for explicit local paths, only for remote urls. Headers should be added following this pattern `<name>:<value>`. It should be noted that if the value has a space in it, wrap the header in quotes.
+* **-h|--headers**：从命令行添加的键/值对。一些仓库 url 需要不同的头部，此选项可适应任意数量的头部。对于明确的本地路径，这不是必需的，只对远程 url 必需。应按照 `<name>:<value>` 的模式添加头部。应注意，如果值中有空格，应将头部包裹在引号中。
 
 ```console
 vpm add repo https://test.com/index.json --headers "Authorization:Bearer my_token"
 ```
 
-Adds a repo found at `https://test.com/index.json` and will send along the Authorization header whenever it requests the listing.
+添加位于 `https://test.com/index.json` 的仓库，并在请求列表时发送 Authorization 请求头。
 
 ```console
 vpm add repo https://test.com/index.json -h "Authorization:Bearer my_token" Accept:text/html
 ```
 
-Adds a repo found at `https://test.com/index.json` and will send along the Authorization and Accept headers whenever it requests the listing.
+添加位于 `https://test.com/index.json` 的仓库，并在请求列表时发送 Authorization 和 Accept 请求头。
 
-Returns 0 if the repo was added and 1 if it was not.
+如果仓库被添加，返回 0；如果没有被添加，返回 1。
 
-### new repo
-Create a new json file for a package listing.
+### 新建仓库
+创建一个新的包列表的 json 文件。
 
 ```console 
 vpm new repo [path] [--name MyName] [--author email@domain.com]
 ``` 
 
-** Arguments**
+**参数**
 
-* **path**: The path at which to create the file, can be absolute or relative to current directory. If not provided, it will be created in the default sources directory (~User/AppData/Local/VRChatCreatorCompanion/Sources) and given a GUID name like `4d6ffbe7-fe91-449f-ae7e-c8688e315a83.json`.
+* **path**：创建文件的路径，可以是绝对路径，也可以是相对于当前目录的路径。如果未提供，它将在默认的源目录（~User/AppData/Local/VRChatCreatorCompanion/Sources）中创建，并给予一个 GUID 名称，如 `4d6ffbe7-fe91-449f-ae7e-c8688e315a83.json`。
 
-**Options**
-* **-n|--name**: The name for the source, like "VRChat Official Packages" or "Momo's Messy Mix"
-* **-a|--author**: An email address at which people can contact you with questions.
+**选项**
+* **-n|--name**：源的名称，如 "VRChat Official Packages" 或 "Momo's Messy Mix"
+* **-a|--author**：人们可以通过此电子邮件地址联系你提问。
 
-### remove single repo
-Removes the repo from your settings by id.
-Returns 0 if the repo was removed and 1 if it was not.
+### 移除单个仓库
+通过 id 从你的设置中移除仓库。
+如果仓库被移除，返回 0；如果没有被移除，返回 1。
 
-If the repo listing did not provide an explicit id - a url can be used in its place.
+如果仓库列表没有提供明确的 id - 可以使用 url 代替。
 
 ```console 
 vpm remove repo [id]
 ```
  
-### remove repos
-Removes all the repos from your settings.
-Returns 0 if the repos were removed and 1 if they weren't.
+### 移除所有仓库
+从你的设置中移除所有仓库。
+如果仓库被移除，返回 0；如果没有被移除，返回 1。
 
 ```console 
 vpm remove repos
 ```
 
-## Requirements
-The VCC and VPM require a few things to be installed in order to run properly. These commands can help you quickly get your machine or a cloud build set up.
+## 要求
+VCC 和 VPM 需要安装一些东西才能正常运行。这些命令可以帮助你快速设置你的机器或云构建。
 
-### check hub
-On Windows, checks if there is a registry key for the Unity Hub at `HKEY_LOCAL_MACHINE\SOFTWARE\Classes\unityhub\DefaultIcon`.
-On Mac, checks if there is a file at `/Applications/Unity Hub.app/Contents/MacOS/Unity Hub`.
+### 检查 hub
+在 Windows 上，检查是否在 `HKEY_LOCAL_MACHINE\SOFTWARE\Classes\unityhub\DefaultIcon` 有 Unity Hub 的注册表键。
+在 Mac 上，检查是否在 `/Applications/Unity Hub.app/Contents/MacOS/Unity Hub` 有文件。
 
 ```console 
 vpm check hub
 ```
 
-Returns 0 if it is found and 1 if it is not.
+如果找到则返回 0，如果未找到则返回 1。
 
-### install hub
-Installs Unity Hub 3.0 for Windows
+### 安装 hub
+为 Windows 安装 Unity Hub 3.0
 
 ```console 
 vpm install hub
 ```
 
-Specifically, it downloads the hub installer from 
+具体来说，它从以下位置下载了 hub 安装程序：
 ```console 
 https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe
 ``` 
-and runs it with the argument `/S` to install silently.
+并使用参数 `/S` 来静默安装。
 
-Returns 0 if the Hub was installed and 1 if it was not.
+如果 Hub 已安装，则返回 0；如果未安装，则返回 1。
 
-### check unity
-Checks if there is a valid installation of Unity installed at the path specified in the Settings as `pathToUnityExe`. If the Unity Hub is installed, runs the hub in a background process to list any Unity Editors using the args:
+### 检查 Unity
+检查在设置中指定为 `pathToUnityExe` 的路径是否有有效的 Unity 安装。如果安装了 Unity Hub，使用以下参数在后台进程中运行 Hub，列出任何 Unity 编辑器：
 ```console
 -- --headless editors -i
 ```
-Updates the Settings with the paths to the Unity Editors if found.
+如果找到，将更新设置中的 Unity 编辑器路径。
 
 ```console 
 vpm check unity
 ```
+如果在那里指定了兼容的 Unity 版本，则返回 0；如果没有，则返回 1。
 
-Returns 0 if a compatible version of Unity is specified there and 1 if it is not.
-
-### install unity
-Installs a compatible version of the Unity Editor for Windows with Android Build Support
+### 安装 Unity
+为 Windows 安装带有 Android 构建支持的兼容版本的 Unity 编辑器
 
 ```console 
 vpm install unity
 ```
 
-Specifically, it runs the Unity Hub with these args:
+具体来说，它使用以下参数运行 Unity Hub：
 ```console
 -- --headless install -v 2019.4.31f1 -c bd5abf232a62 -m android
 ``` 
 
 returns 0 if Unity was installed and 1 if it was not.
 
-### list unity
-Lists the Unity Editors found on the current system.
+### 列出 Unity
+列出当前系统上找到的 Unity 编辑器。
 
 ```console 
 vpm list unity
 ```
 
-Checks:
-* Windows Registry
-* Unity Hub (by running it with the args `-- --headless editors -i`
-* Subdirectories of the Unity Hub
+检查：
+* Windows 注册表
+* Unity Hub（通过使用参数 `-- --headless editors -i` 运行它）
+* Unity Hub 的子目录
 
-## Mac and Linux Support
-The only fully-supported platform at the moment is Windows 10.
-However, we are working to make the vpm tool available to Mac and Linux users.
+## Mac 和 Linux 支持
+目前唯一完全支持的平台是 Windows 10。
+然而，我们正在努力使 vpm 工具对 Mac 和 Linux 用户可用。
 
-::: tip
+::: tips
 
-If you're having trouble using the CLI on non-Windows platforms, you can check out our [Project Templates](/vcc.docs.vrchat.com/guides/using-project-template-repos) to get you started with the latest VRChat packages without relying on VCC.
+如果你在非 Windows 平台上使用 CLI 遇到问题，你可以查看我们的 [项目模板](/vcc.docs.vrchat.com/guides/using-project-template-repos)，以便在不依赖 VCC 的情况下开始使用最新的 VRChat 包。
 
 :::
 
-### Mac Setup
+### Mac 设置
 
-1. Follow the directions under [Installation & Updating](#installation--updating) above.
-2. Install [Unity Hub for Mac](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg) and then [Unity 2019.4.31f1](unityhub://2019.4.31f1/bd5abf232a62).
-3. Open a terminal and run [vpm install templates](#install-templates) to install the latest VRChat project templates.
-4. Run [vpm check hub](#check-hub) to find and save the location of Unity Hub. For now, we assume it has been installed to its default location of `/Applications/Unity Hub.app/Contents/MacOS/Unity Hub`. If this is not the case, you'll need to open your settings file and set the `pathToUnityHub` to the correct absolute path manually. Make sure to target the executable inside of the UnityHub.app as shown in the default path.
-5. Run [vpm check unity](#check-unity) to find and save the location of the Unity Editor. VPM will use the Hub to find and save the path(s), so make sure VPM can find the Hub first.
+1. 按照上面的 [安装和更新](#installation--updating) 部分的指示进行操作。
+2. 安装 [Mac 版 Unity Hub](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg) 然后安装 [Unity 2019.4.31f1](unityhub://2019.4.31f1/bd5abf232a62)。
+3. 打开终端并运行 [vpm install templates](#install-templates) 来安装最新的 VRChat 项目模板。
+4. 运行 [vpm check hub](#check-hub) 来查找并保存 Unity Hub 的位置。目前，我们假设它已经安装到其默认位置 `/Applications/Unity Hub.app/Contents/MacOS/Unity Hub`。如果不是这样，你需要手动打开你的设置文件，并将 `pathToUnityHub` 设置为正确的绝对路径。确保目标是 UnityHub.app 内的可执行文件，如默认路径所示。
+5. 运行 [vpm check unity](#check-unity) 来查找并保存 Unity 编辑器的位置。VPM 将使用 Hub 来查找并保存路径，所以请确保 VPM 首先可以找到 Hub。
 
-That's it! You should be able to [make new projects from templates](#new), [add packages to projects](#add-package) and most other functions. You can [file a Canny](https://vrchat.canny.io/creator-companion-beta) for any methods that don't work.
+就是这样！你应该能够[从模板创建新项目](#new)，[向项目添加包](#add-package)以及执行大多数其他功能。你可以[提交一个 Canny](https://vrchat.canny.io/creator-companion-beta) 来报告任何不起作用的方法。
 
-### Linux Setup
-The system is completely untested on Linux distributions at this point, but may work anyway due to the work done for the Mac version. The VPM will not be able to find your Unity Hub or Unity Editor paths however, so you'll need to update your settings.json file to set them manually for now.
+### Linux 设置
+目前，CLI 在 Linux 发行版上完全未经测试，但由于为 Mac 版本所做的工作，它可能仍然可以工作。然而，VPM 将无法找到你的 Unity Hub 或 Unity 编辑器路径，所以你现在需要手动更新你的 settings.json 文件来设置它们。

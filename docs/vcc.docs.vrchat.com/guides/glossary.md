@@ -1,41 +1,41 @@
-# Glossary
+# 术语表
 
-There are lots of different parts of the Creator Companion, and we often use acronyms to make it easier to write about them. Here they are with some basic explanations to help you understand how everything works together.
+创作者助手有很多不同的部分，我们经常使用缩写来简化表达。以下是一些基本的解释，帮助你理解所有的部分如何协同工作。
 
 ## VCC
-The VRChat Creator Companion
- 
-The Creator Companion is "the entry point for creating things in VRChat". It's a standalone application which you download and install. It helps you:
-* Install the specific version of Unity that VRChat development needs.
-* Create new projects
-* Manage your existing projects
-  * Find them on your drive
-  * Migrate them to the new format
-  * Update their Packages
-  * Make Backups
-* Learn about VRChat Creation
+VRChat 创作者助手
 
-Most of the functionality to create and manage your projects comes from the [VPM](#vpm), which is embedded in the VCC as a library.
+创作者助手是 "在 VRChat 中创建内容的入口"。它是一个你可以下载和安装的独立应用程序。它可以帮助你：
+* 安装 VRChat 开发所需的特定版本的 Unity。
+* 创建新项目
+* 管理你现有的项目
+  * 在你的硬盘上找到它们
+  * 将它们迁移到新格式
+  * 更新它们的包
+  * 创建备份
+* 了解 VRChat 内容创作领域
+
+创建和管理项目的大部分功能来自于 [VPM](#vpm)，它作为一个库嵌入到 VCC 中。
 
 ## VPM
-The VRChat Package Manager
+VRChat 包管理器
 
-The Package Manager is a library we've developed to manage packages for your VRChat Unity Projects.
+包管理器是我们开发的一个库，用于管理你的 VRChat Unity 项目的包。
 
-**Tech Specs**: The library is built against .NET Standard 2.0 so that it can function within Unity Projects using .NET Framework 4.x as well as native .NET Standard and Core Projects, like the [CLI](#cli).
+**技术规格**：该库是针对 .NET Standard 2.0 构建的，因此它可以在使用 .NET Framework 4.x 的 Unity 项目中，以及原生的 .NET Standard 和 Core 项目中运行，比如 [CLI](#cli)。
 
 ## CLI
-The VPM Command-Line Interface
+VPM 命令行接口
 
-The CLI wraps the VPM library and makes it available as a cross-platform program from the command line. This is useful for advanced users as well as CI systems that can automatically build projects in the cloud.
+CLI 将 VPM 库包装起来，并使其作为一个跨平台程序从命令行可用。这对于高级用户以及可以在云中自动构建项目的 CI 系统非常有用。
 
 ## Repos
-Package Repositories
+包仓库
 
-[Repos](/vcc.docs.vrchat.com/vpm/repos) are listings of compatible packages that creators can use in their projects.
+[Repos](/vcc.docs.vrchat.com/vpm/repos) 是兼容包的列表，创作者可以在他们的项目中使用。
 
-## Legacy Packages
-Now that we're using VPM Packages, we refer to the previous SDKs distributed with the .unitypackage format as Legacy Packages.
+## 旧版包
+现在我们使用 VPM 包，我们将以 `.unitypackage` 格式分发的旧版 SDK 称为旧版包。
 
-## VRChat Quick Launcher (VRCQL)
-The VRC Quick Launcher is a tool that helps you launch multiple profiles in the same instance of VRChat while also providing an interface to modify the debug options. This avoids the issue of having tons of shortcuts.
+## VRChat 快捷启动工具 (VRCQL)
+VRC 快捷启动工具可以帮助你在同一实例的 VRChat 中启动多个配置文件，同时也提供了一个修改调试选项的接口。这避免了需要创建大量快捷方式进行调试的问题。

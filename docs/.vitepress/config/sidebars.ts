@@ -36,9 +36,9 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: '指南',
       items: [
-        { text: '两步身份验证', link: '/docs.vrchat.com/GUIDES/setup-2fa' },
+        { text: '两步验证', link: '/docs.vrchat.com/GUIDES/setup-2fa' },
         { text: '提出本地化修改建议', link: '/docs.vrchat.com/GUIDES/suggesting-localization-changes' },
-        { text: '调整您的用户模型身高', link: '/docs.vrchat.com/GUIDES/adjusting-your-avatars-height' },
+        { text: '调整您的模型身高', link: '/docs.vrchat.com/GUIDES/adjusting-your-avatars-height' },
       ],
     },
     {
@@ -151,7 +151,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
       items: [
         { text: '构建管线回调 (Pipeline Callbacks) 和接口 (Interfaces)', link: '/creators.vrchat.com/sdk/build-pipeline-callbacks-and-interfaces' },
         { text: '当前支持的 Unity 版本', link: '/creators.vrchat.com/sdk/current-unity-version' },
-        { text: '迁移到更新的 Unity 大版本', link: '/creators.vrchat.com/sdk/migrating-to-a-newer-minor-unity-version' },
+        { text: '迁移到新的 Unity 大版本', link: '/creators.vrchat.com/sdk/migrating-to-a-newer-minor-unity-version' },
         { text: '公开 SDK API', link: '/creators.vrchat.com/sdk/public-sdk-api' },
         { text: 'SDK 疑难解答', link: '/creators.vrchat.com/sdk/sdk-troubleshooting' },
         { text: '升级 SDK', link: '/creators.vrchat.com/sdk/updating-the-sdk' },

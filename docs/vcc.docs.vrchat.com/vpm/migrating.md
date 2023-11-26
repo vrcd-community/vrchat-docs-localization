@@ -1,22 +1,22 @@
-# Migrating Projects
+# 迁移项目
 
-## Overview
-Projects created with the legacy `.unitypackage` SDKs can be migrated to the new system if they use the SDK3 Worlds or Avatars unitypackages (SDK2 not supported). They can be Unity 2017, 2018 or 2019 projects. The SDK must be in its original install location to be  detected - specifically, one of these must exist:
+## 概述
+如果使用 SDK3 世界或虚拟形象的 `.unitypackage` SDK 创建的项目，可以迁移到新系统（不支持 SDK2）。它们可以是 Unity 2017、2018 或 2019 的项目。SDK 必须在其原始安装位置才能被检测到 - 具体来说，必须存在以下之一：
 * `Assets/Udon`
 * `VRCSDK/Plugins/VRCSDK3A.dll`
 ::: warning
-If your project is using [UdonSharp](https://udonsharp.docs.vrchat.com/), read our [Known Issues](https://udonsharp.docs.vrchat.com/migration#known-issues) page.
+如果你的项目正在使用 [UdonSharp](https://udonsharp.docs.vrchat.com/)，请阅读我们的[已知问题](https://udonsharp.docs.vrchat.com/migration#known-issues)页面。
 :::
-## The Process
-1. Add your project to the Project Listing, and press Migrate.<br/>
-![Migrate Project](/vcc.docs.vrchat.com/images/migrate-button.png)
-2. You have two options on how to migrate your project.
-- **Migrate a copy**:  Copies your project to a new folder named `ProjectName-Migrated`, with numbers at the end. Your old folder stays untouched.
-- **Migrate in place**: Your folder is upgraded without creating a copy. This is useful if you made your own backup, or if you use version control software such as [Git](https://git-scm.com/) or [Plastic](https://docs.unity3d.com/2019.4/Documentation/Manual/PlasticSCMPlugin.html). *Don't choose 'Migrate in place' unless you have a backup!*<br/>
-![Backup prompt](/vcc.docs.vrchat.com/images/migrate-project-backup.png)
-3. Confirm that you'd like to start the migration.
-![Backup prompt](/vcc.docs.vrchat.com/images/migrate-project-backup-2.png)
-4. All of the visible files from your project are copied over to the new folder except for:
+## 迁移过程
+1. 将你的项目添加到项目列表中，然后点击迁移。<br/>
+![迁移项目](/vcc.docs.vrchat.com/images/migrate-button.png)
+2. 你有两种迁移项目的方式。
+- **迁移副本**：将你的项目复制到一个新文件夹，命名为 `ProjectName-Migrated`，末尾带有数字。你的旧文件夹保持不变。
+- **就地迁移**：你的文件夹将在不创建副本的情况下进行升级。这对于你已经做了自己的备份，或者你使用版本控制软件如 [Git](https://git-scm.com/) 或 [Plastic](https://docs.unity3d.com/2019.4/Documentation/Manual/PlasticSCMPlugin.html) 的情况非常有用。*除非你有备份，否则不要选择 '就地迁移'*！<br/>
+![备份提示](/vcc.docs.vrchat.com/images/migrate-project-backup.png)
+3. 确认你想要开始迁移。
+![备份提示](/vcc.docs.vrchat.com/images/migrate-project-backup-2.png)
+4. 你的项目中所有可见的文件都被复制到新文件夹，除了以下文件：
     - `Library`
     - `Logs`
     - `Assets\VRCSDK`
@@ -24,13 +24,13 @@ If your project is using [UdonSharp](https://udonsharp.docs.vrchat.com/), read o
     - `Assets\VRChat Examples`
     - `Packages\com.vrchat.vrcsdk3`
     - `ProjectSettings\ProjectVersion.txt`
-    - Folders used by [Curated Community Packages](/vcc.docs.vrchat.com/vpm/curated-community-packages)
-5. From the Base Template included with the VCC, an `EditorSettings.asset` file is copied into your project, overwriting your old one to force an upgrade to Asset Database v2.
-6. A project manifest file called `package.json` is created if needed.
-7. The VRChat SDK "Base" package is added as an embedded package.
-8. The project type is detected as LegacySDK3Avatar or LegacySDK3World, and the corresponding packages are added to the project manifest.
-9. If the above steps complete without error, a text file is created in the project called `migration-log.txt` with the output from the process. If there are errors, then a text file called `migration-log-error.txt` is created in the VCC log location (currently `AppData/Local/VRChatCreatorCompanion/Logs`). If you have errors, you can open up the project in Unity and try to fix them, often we've seen issues with prefabs and scripts that expect certain files to still be in the "Assets" folder, or that were written for Unity 2018.
-10. Once the process is complete, the Project will show up in the listing if it was successfully migrated.
+    - [精选社区包](/vcc.docs.vrchat.com/vpm/curated-community-packages)使用的文件夹
+5. 从 VCC 包含的基础模板中，`EditorSettings.asset` 文件被复制到你的项目中，覆盖你的旧文件以强制升级到 Asset Database v2。
+6. 如果需要，将创建一个名为 `package.json` 的项目清单文件。
+7. VRChat SDK "Base" 包被添加为嵌入式包。
+8. 项目类型被检测为 LegacySDK3Avatar 或 LegacySDK3World，并将相应的包添加到项目清单中。
+9. 如果上述步骤顺利地完成了，那么一个名为 `migration-log.txt` 的文本文件将在项目中创建，其中包含该过程的输出。如果有错误，那么一个名为 `migration-log-error.txt` 的文本文件将在 VCC 日志位置（当前为 `AppData/Local/VRChatCreatorCompanion/Logs`）创建。如果你有错误，你可以在 Unity 中打开项目并尝试修复它们，我们经常看到预制件和脚本的问题，这些预制件和脚本期望某些文件仍在 "Assets" 文件夹中，或者是为 Unity 2018 编写的。
+10. 一旦完成，如果项目成功迁移，它将出现在列表中。
 
-### Special Package Migration
-We support automatic migration of the packages included in the [Curated Packages](/vcc.docs.vrchat.com/vpm/curated-community-packages) list - i.e.  UdonSharp, AudioLink, or GestureManager. If the legacy (`.unitypackage` extracted into `/Assets/`) versions of these packages are found in your project, they will be removed and replaced with the new versions.
+### 特殊包迁移
+我们支持自动迁移包含在[精选包](/vcc.docs.vrchat.com/vpm/curated-community-packages)列表中的包 - 即 UdonSharp、AudioLink 或 GestureManager。如果在你的项目中找到这些包的旧版（`.unitypackage` 提取到 `/Assets/`）版本，它们将被移除并替换为新版本。
