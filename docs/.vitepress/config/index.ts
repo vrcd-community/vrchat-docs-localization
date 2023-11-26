@@ -22,7 +22,7 @@ export default withPwa(defineConfig({
 
     externalLinkIcon: true,
 
-    outlineTitle: '在该页',
+    outlineTitle: '该页目录',
     darkModeSwitchLabel: '外观',
     sidebarMenuLabel: '侧边栏',
     returnToTopLabel: '返回顶部',
