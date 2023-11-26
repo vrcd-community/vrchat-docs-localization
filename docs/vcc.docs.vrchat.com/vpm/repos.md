@@ -1,15 +1,15 @@
-# Repos
+# 仓库
 
-Repos are listings of compatible packages that creators can use in their projects.
+仓库是创作者可以在其项目中使用的兼容包的列表。
 
-## Format
-A repo listing is served in JSON format, with a name, author and listing of packages.
+## 格式
+仓库列表以 JSON 格式提供，包含名称、作者和包列表。
 
-Since each VPM-compatible package has a manifest file with all its info (package.json), we use that in this list. Each manifest is included as the **value** for the [version number](https://semver.org/), under the package name, which is listed as part of a **packages** object.
+由于每个 VPM 兼容的包都有一个包含所有信息的清单文件（package.json），我们在此列表中使用它。每个清单作为[版本号](https://semver.org/)的**值**包含在内，包名作为**packages**对象的一部分列出。
 
-Learn more about the [package manifest format](/vcc.docs.vrchat.com/vpm/packages#vpm-manifest-additions).
+了解更多关于[包清单格式](/vcc.docs.vrchat.com/vpm/packages#vpm-manifest-additions)。
 
-Here is an example of a repo listing:
+以下是一个仓库列表的示例：
 
 ```json
 {
@@ -44,6 +44,6 @@ Here is an example of a repo listing:
   }
 }
 ```
-In the example above, the rest of each version's manifest would be listed, key by key, instead of "etc". To see a live example with full data, take a look at the [Official VRChat Packages repo](https://packages.vrchat.com/official).
+在上述示例中，每个版本清单的其余部分将按键值逐一列出，而不是使用 "例如" 等含糊不清的字眼。要查看带有完整数据的实时示例，请查看 [官方 VRChat 包仓库](https://packages.vrchat.com/official)。
 
-Note that you can omit the URL field if you are using a local repo listing file and adding it via the [CLI](/vcc.docs.vrchat.com/vpm/cli).
+请注意，如果你正在使用本地仓库列表文件并通过 [CLI](/vcc.docs.vrchat.com/vpm/cli) 添加包，你可以省略 URL 字段。

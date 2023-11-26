@@ -1,28 +1,28 @@
-# Resolver
+# 解析器
 
-![Package Resolver Window](/vcc.docs.vrchat.com/images/resolver.png)
+![包解析器窗口](/vcc.docs.vrchat.com/images/resolver.png)
 
-## Overview
-The Package Resolver is a Unity Editor tool which can download and install the packages required for a VPM project without the VCC.
+## 概述
+包解析器是一个 Unity 编辑器工具，可以在没有 VCC 的情况下下载并安装 VPM 项目所需的包。
 
-The Resolver uses the [VPM Library](/vcc.docs.vrchat.com/guides/glossary#vpm) under the hood - the same one that powers the [VCC](/vcc.docs.vrchat.com/guides/glossary#vcc), so it downloads packages and resolves dependencies in the same exact way.
+解析器在底层使用 [VPM 库](/vcc.docs.vrchat.com/guides/glossary#vpm) - 这是驱动 [VCC](/vcc.docs.vrchat.com/guides/glossary#vcc) 的同一库，因此它以完全相同的方式下载包并解析依赖项。
 
-## Getting It
-It is added to every VPM-compatible project, either during Project Creation or Migration. It is specifically excluded from the .gitignore placed in your project's Packages folder to ensure that it is present in your project to help with restoring it. It does not have a 'remove' button in the VCC because it should not be removed from your projects. But if it ever is - you can use the VCC to easily add it back in.
+## 获取方式
+它被添加到每个 VPM 兼容的项目中，无论是在项目创建还是迁移期间。它被特别排除在你项目的 Packages 文件夹中的 .gitignore 文件之外，以确保它存在于你的项目中，帮助恢复它。在 VCC 中，它没有 'remove' 按钮，因为它不应该从你的项目中移除。但是，如果它被移除了 - 你可以使用 VCC 轻松地将其添加回来。
 
-## Using It
+## 如何使用
 
-When you open up a VRChat Unity Project, the Resolver will check for any missing VPM packages. It does this by comparing your VPM Manifest (in Packages/vpm-manifest.json) to your projects Packages folder.
-If any items are misssing or do not match the versions specified, you will be shown this dialog:
+当你打开一个 VRChat Unity 项目时，解析器会检查是否缺少任何 VPM 包。它通过比较你的 VPM 清单（在 Packages/vpm-manifest.json 中）和你的项目的 Packages 文件夹来实现这一点。
+如果有任何项目缺失或者与指定的版本不匹配，你将看到以下对话框：
 
-![VRChat Packages Missing](/vcc.docs.vrchat.com/images/resolver-missing.png)
+![VRChat 包缺失](/vcc.docs.vrchat.com/images/resolver-missing.png)
 
-If you press "OK", the packages will be restored to your project. If you'd like to review them first, you can press "Show Me What's Missing", which will bring up a window like this:
+如果你按 "OK"，这些包将被恢复到你的项目中。如果你想先查看它们，你可以按 "Show Me What's Missing"，这将弹出一个窗口，如下所示：
 
-![Missing Package Specifics](/vcc.docs.vrchat.com/images/resolver-specifics.png)
+![缺失的包具体信息](/vcc.docs.vrchat.com/images/resolver-specifics.png)
 
-You can press "Resolve All" to restore all the packages to your project, which is the equivalent of pressing "OK" on the initial dialog.
+你可以按 "Resolve All" 来恢复所有的包到你的项目中，这等同于在初始对话框上按 "OK"。
 
-If you want to select and resolve specific versions, you can change the target version for a single package from its dropdown, and press the "Resolve" button to the right of the package to restore that specific package and version. If that package requires additional packages, those other packages will also be restored. Note that if you press "Resolve All", the versions you selected will not be used (the Resolver will instead use the versions specified in your VPM Manifest).
+如果你想选择并解决特定版本，你可以从其下拉菜单中更改单个包的目标版本，并按包右侧的 "Resolve" 按钮来恢复该特定包和版本。如果该包需要额外的包，那么这些其他包也将被恢复。请注意，如果你按 "Resolve All"，你选择的版本将不会被使用（解析器将使用 VPM 清单中指定的版本）。
 
-You can press "Refresh" to have the Resolver compare your Packages directory against your manifest again, in case you updated something externally.
+你可以按 "Refresh" 让解析器再次比较你的 Packages 目录和你的清单，以防你在外部更新了一些内容。
