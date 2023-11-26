@@ -9,7 +9,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
         { text: '准备开始', link: '/docs.vrchat.com/OVERVIEW/getting-started' },
         { text: '常见问题', link: '/docs.vrchat.com/OVERVIEW/frequently-asked-questions' },
         {
-          text: '控制', link: '/docs.vrchat.com/OVERVIEW/controls/controls',
+          text: '控制器', link: '/docs.vrchat.com/OVERVIEW/controls/controls',
           collapsed: true,
           items: [
             { text: 'HTC Vive 手柄', link: '/docs.vrchat.com/OVERVIEW/controls/vive' },
@@ -17,7 +17,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
             { text: 'Valve Index 控制器', link: '/docs.vrchat.com/OVERVIEW/controls/valve-index' },
             { text: '键盘与鼠标', link: '/docs.vrchat.com/OVERVIEW/controls/keyboard-and-mouse' },
             { text: '手柄控制器', link: '/docs.vrchat.com/OVERVIEW/controls/gamepad' },
-            { text: '行动菜单', link: '/docs.vrchat.com/OVERVIEW/controls/action-menu' },
+            { text: '圆盘菜单', link: '/docs.vrchat.com/OVERVIEW/controls/action-menu' },
           ],
         },
         {
@@ -27,7 +27,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
             { text: '手势切换', link: '/docs.vrchat.com/OVERVIEW/additional-options/gesture-toggle' },
             { text: '启动选项', link: '/docs.vrchat.com/OVERVIEW/additional-options/launch-options' },
             { text: '配置文件', link: '/docs.vrchat.com/OVERVIEW/additional-options/configuration-file' },
-            { text: 'VRChat图像性能选项', link: '/docs.vrchat.com/OVERVIEW/additional-options/vrchat-configuration-window' },
+            { text: 'VRChat 图像性能选项', link: '/docs.vrchat.com/OVERVIEW/additional-options/vrchat-configuration-window' },
             { text: 'VRChat 本地存储', link: '/docs.vrchat.com/OVERVIEW/additional-options/local-vrchat-storage' },
           ],
         },
