@@ -292,7 +292,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
           ]
         },
         {
-          text: 'VRCGraphics', link: '/creators.vrchat.com/worlds/vrc-graphics/',
+          text: 'VRC图形特性', link: '/creators.vrchat.com/worlds/vrc-graphics/',
           collapsed: true,
           items: [
             { text: 'ASyncGPUReadback', link: '/creators.vrchat.com/worlds/vrc-graphics/asyncgpureadback' },
@@ -356,7 +356,7 @@ export function udonSharpDocsSidebar(): DefaultTheme.SidebarItem[] {
       ]
     },
     {
-      text: 'Documentation',
+      text: '文档',
       collapsed: true,
       items: [
         { text: 'UdonSharp', link: '/udonsharp.docs.vrchat.com/udonsharp' },
@@ -450,7 +450,7 @@ export function clientSimDocsSidebar(): DefaultTheme.SidebarItem[] {
           items: [
             { text: "Editor Runtime Linker", link: "/clientsim.docs.vrchat.com/systems/editor/editor-runtime-linker.md" },
             { text: "Helper Editors", link: "/clientsim.docs.vrchat.com/systems/editor/helper-editors.md" },
-            { text: "Settings Window", link: "/clientsim.docs.vrchat.com/systems/editor/settings-window.md" }
+            { text: "设置界面", link: "/clientsim.docs.vrchat.com/systems/editor/settings-window.md" }
           ]
         },
         {

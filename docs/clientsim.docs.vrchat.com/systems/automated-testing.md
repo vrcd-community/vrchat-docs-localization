@@ -1,6 +1,6 @@
-# Automated Testing
+# 自动化测试
 
-ClientSim has many different tests to verify the behaviour of the program. The majority of the tests are Integration tests, but support for Unit tests is available. See Unity’s TestRunner to view all tests. When importing ClientSim as a package, tests can be enabled by adding the following line to the project’s package manifest after the `“dependencies” :{}` section:
+ClientSim有许多不同的测试来验证程序的行为。大多数测试是集成测试，但也支持单元测试。请查看Unity的TestRunner以查看所有测试。当将ClientSim作为包导入时，可以通过在`“dependencies” :{}`部分后面的项目包清单中添加以下行来启用测试：
 ```json
 "testables": [
   "com.unity.inputsystem",
@@ -8,25 +8,25 @@ ClientSim has many different tests to verify the behaviour of the program. The m
 ]
 ```
 
-Once added, Unity will import the tests and you will see them populated in the Test Runner Window.
+一旦添加，Unity将导入测试，您将在Test Runner窗口中看到它们。
 
 ![Test Runner](/clientsim.docs.vrchat.com/images/test-runner.png)
 
-## Unit Tests
+## 单元测试
 
-ClientSim has a few Unit Tests that can verify items outside of Unity Playmode. More items can be refactored to split away from MonoBehaviours to be more Unit Testable.
+ClientSim有一些单元测试，可以验证Unity Playmode之外的项目。可以重构更多项目，以便从MonoBehaviours中分离出来，使其更适合单元测试。
 
-## Integration Tests
+## 集成测试
 
-ClientSim now has a full integration test framework that tests the majority of the features included. This framework allows for sending input events and listening for ClientSim events to verify if the proper action happened. This framework can also be used for worlds to verify specific behaviours, allowing users to create their own tests.
+ClientSim现在有一个完整的集成测试框架，可以测试包含的大多数功能。该框架允许发送输入事件并监听ClientSim事件，以验证是否发生了适当的操作。此框架也可用于验证特定行为的世界，允许用户创建自己的测试。
 
-### Test Setup
+### 测试设置
 
-Due to the nature of how ClientSim starts using the InitializeOnLoad, testing requires modifying Unity editor settings to properly validate behaviour. In the test environment, InitializeOnLoad happens before playmode starts. The default Unity setting has Domain Reloading enabled on entering playmode. This means that on switching to playmode, all variable data is cleared. In order to get around this, all ClientSim tests must run with Domain Reloading disabled. This is handled automatically for any test written that derives from either of the two test fixture base classes: ClientSimTestBase and ClientSimWorldTestBase. 
+由于ClientSim使用InitializeOnLoad启动的方式，测试需要修改Unity编辑器设置以正确验证行为。在测试环境中，InitializeOnLoad在播放模式开始之前发生。默认的Unity设置在进入播放模式时启用了Domain Reloading。这意味着在切换到播放模式时，所有变量数据都会被清除。为了解决这个问题，所有ClientSim测试必须在禁用Domain Reloading的情况下运行。这对于任何从两个测试夹具基类（ClientSimTestBase和ClientSimWorldTestBase）派生的测试都是自动处理的。
 
-### Test Helpers
+### 测试助手
 
-Both Integration Test Fixtures come with helper methods in verifying specific behaviour.
+两个集成测试夹具都带有帮助验证特定行为的方法。
 
 * **ClientSimTestHelpers** - This class contains helper methods to perform useful actions as well as listens to different ClientSim Events to verify actions have occurred.
 
