@@ -188,30 +188,30 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
       collapsed: true,
       items: [
         { text: '制作您的第一个世界', link: '/creators.vrchat.com/worlds/creating-your-first-world' },
-        { text: 'World Creation, Optimization, and Community Labs Tips', link: '/creators.vrchat.com/worlds/submitting-a-world-to-be-made-public' },
+        { text: '世界制作，优化，和社区实验室贴士', link: '/creators.vrchat.com/worlds/submitting-a-world-to-be-made-public' },
         {
-          text: 'Examples', link: '/creators.vrchat.com/worlds/examples/',
+          text: '示例', link: '/creators.vrchat.com/worlds/examples/',
           collapsed: true,
           items: [
-            { text: 'Image Loading', link: '/creators.vrchat.com/worlds/examples/image-loading' },
+            { text: '图片加载', link: '/creators.vrchat.com/worlds/examples/image-loading' },
             {
-              text: 'Obstacle Course', link: '/creators.vrchat.com/worlds/examples/obstacle-course/',
+              text: '越障挑战', link: '/creators.vrchat.com/worlds/examples/obstacle-course/',
               collapsed: true,
               items: [
-                { text: 'Obstacle Course: Build From Custom Parts', link: '/creators.vrchat.com/worlds/examples/obstacle-course/build-from-custom-parts' },
-                { text: 'Obstacle Course: Build From Demo Parts', link: '/creators.vrchat.com/worlds/examples/obstacle-course/build-from-demo-parts' },
-                { text: 'Obstacle Course: Flythrough', link: '/creators.vrchat.com/worlds/examples/obstacle-course/uoc-flythrough' },
-                { text: 'Obstacle Course: How Stuff Works', link: '/creators.vrchat.com/worlds/examples/obstacle-course/uoc-how-stuff-works' },
-                { text: 'Obstacle Course Toolkit', link: '/creators.vrchat.com/worlds/examples/obstacle-course/uoc-window' },
+                { text: '越障挑战: 从自定义部分开始构建', link: '/creators.vrchat.com/worlds/examples/obstacle-course/build-from-custom-parts' },
+                { text: '越障挑战: 从示例部分开始构建', link: '/creators.vrchat.com/worlds/examples/obstacle-course/build-from-demo-parts' },
+                { text: '越障挑战: 漫游视角', link: '/creators.vrchat.com/worlds/examples/obstacle-course/uoc-flythrough' },
+                { text: '越障挑战: 工作原理', link: '/creators.vrchat.com/worlds/examples/obstacle-course/uoc-how-stuff-works' },
+                { text: '越障挑战工具包', link: '/creators.vrchat.com/worlds/examples/obstacle-course/uoc-window' },
               ]
             },
             {
-              text: 'Udon Example Scene', link: '/creators.vrchat.com/worlds/examples/udon-example-scene/',
+              text: 'Udon 示例场景', link: '/creators.vrchat.com/worlds/examples/udon-example-scene/',
               collapsed: true,
               items: [
-                { text: 'Avatar Scaling Settings', link: '/creators.vrchat.com/worlds/examples/udon-example-scene/avatar-scaling-settings' },
-                { text: 'Simple Pen System', link: '/creators.vrchat.com/worlds/examples/udon-example-scene/simple-pen-system' },
-                { text: 'Udon Video Sync Player', link: '/creators.vrchat.com/worlds/examples/udon-example-scene/udon-video-sync-player' },
+                { text: '模型缩放设置 ', link: '/creators.vrchat.com/worlds/examples/udon-example-scene/avatar-scaling-settings' },
+                { text: '简易画笔系统', link: '/creators.vrchat.com/worlds/examples/udon-example-scene/simple-pen-system' },
+                { text: 'Udon 同步视频播放器', link: '/creators.vrchat.com/worlds/examples/udon-example-scene/udon-video-sync-player' },
               ]
             },
           ]
@@ -220,75 +220,75 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
           text: 'Udon', link: '/creators.vrchat.com/worlds/udon/',
           collapsed: true,
           items: [
-            { text: 'Getting Started with Udon', link: '/creators.vrchat.com/worlds/udon/getting-started-with-udon' },
+            { text: '入门 Udon', link: '/creators.vrchat.com/worlds/udon/getting-started-with-udon' },
             {
               text: 'Udon Node Graph', link: '/creators.vrchat.com/worlds/udon/graph/',
               collapsed: true,
               items: [
-                { text: 'Event Nodes', link: '/creators.vrchat.com/worlds/udon/graph/event-nodes' },
-                { text: 'Graph Elements', link: '/creators.vrchat.com/worlds/udon/graph/graph-elements' },
-                { text: 'Searching For Nodes', link: '/creators.vrchat.com/worlds/udon/graph/searching-for-nodes' },
-                { text: 'Special Nodes', link: '/creators.vrchat.com/worlds/udon/graph/special-nodes' },
-                { text: 'Type Nodes', link: '/creators.vrchat.com/worlds/udon/graph/type-nodes' },
+                { text: '事件节点', link: '/creators.vrchat.com/worlds/udon/graph/event-nodes' },
+                { text: '节点图元素 (Graph Elements)', link: '/creators.vrchat.com/worlds/udon/graph/graph-elements' },
+                { text: '查找节点', link: '/creators.vrchat.com/worlds/udon/graph/searching-for-nodes' },
+                { text: '特殊节点', link: '/creators.vrchat.com/worlds/udon/graph/special-nodes' },
+                { text: '类型 (Type) 节点', link: '/creators.vrchat.com/worlds/udon/graph/type-nodes' },
               ]
             },
             {
-              text: 'Data Containers', link: '/creators.vrchat.com/worlds/udon/data-containers/',
+              text: '数据容器 (Data Containers)', link: '/creators.vrchat.com/worlds/udon/data-containers/',
               collapsed: true,
               items: [
-                { text: 'Data Dictionaries', link: '/creators.vrchat.com/worlds/udon/data-containers/data-dictionaries' },
-                { text: 'Data Lists', link: '/creators.vrchat.com/worlds/udon/data-containers/data-lists' },
-                { text: 'Data Tokens', link: '/creators.vrchat.com/worlds/udon/data-containers/data-tokens' },
+                { text: '数据词典 (Data Dictionaries)', link: '/creators.vrchat.com/worlds/udon/data-containers/data-dictionaries' },
+                { text: '数据列表 (Data Lists)', link: '/creators.vrchat.com/worlds/udon/data-containers/data-lists' },
+                { text: '数据键值 (Data Tokens)', link: '/creators.vrchat.com/worlds/udon/data-containers/data-tokens' },
                 { text: 'VRC JSON', link: '/creators.vrchat.com/worlds/udon/data-containers/vrcjson' },
               ]
             },
             {
-              text: 'Midi in Udon', link: '/creators.vrchat.com/worlds/udon/midi/',
+              text: 'Udon 中的 Midi', link: '/creators.vrchat.com/worlds/udon/midi/',
               collapsed: true,
               items: [
-                { text: 'Midi Playback', link: '/creators.vrchat.com/worlds/udon/midi/midi-playback' },
-                { text: 'Realtime Midi', link: '/creators.vrchat.com/worlds/udon/midi/realtime-midi' },
+                { text: 'Midi 播放 (Midi Playback)', link: '/creators.vrchat.com/worlds/udon/midi/midi-playback' },
+                { text: '实时 Midi (Realtime Midi)', link: '/creators.vrchat.com/worlds/udon/midi/realtime-midi' },
               ]
             },
             {
               text: '网络', link: '/creators.vrchat.com/worlds/udon/networking/',
               collapsed: true,
               items: [
-                { text: 'Network Components', link: '/creators.vrchat.com/worlds/udon/networking/network-components' },
-                { text: 'Network Specs and Tips', link: '/creators.vrchat.com/worlds/udon/networking/network-details' },
-                { text: 'Network ID Utility', link: '/creators.vrchat.com/worlds/udon/networking/network-id-utility' },
+                { text: '网络组件', link: '/creators.vrchat.com/worlds/udon/networking/network-components' },
+                { text: '网络规范和贴士 (Network Specs and Tips)', link: '/creators.vrchat.com/worlds/udon/networking/network-details' },
+                { text: '网络 ID 工具 (Network ID Utility)', link: '/creators.vrchat.com/worlds/udon/networking/network-id-utility' },
               ]
             },
             {
-              text: 'Player API', link: '/creators.vrchat.com/worlds/udon/players/',
+              text: '玩家 API', link: '/creators.vrchat.com/worlds/udon/players/',
               collapsed: true,
               items: [
-                { text: 'Getting Players', link: '/creators.vrchat.com/worlds/udon/players/getting-players' },
-                { text: 'Player Audio', link: '/creators.vrchat.com/worlds/udon/players/player-audio' },
-                { text: 'Player Avatar Scaling', link: '/creators.vrchat.com/worlds/udon/players/player-avatar-scaling' },
-                { text: 'Player Collisions', link: '/creators.vrchat.com/worlds/udon/players/player-collisions' },
-                { text: 'Player Forces', link: '/creators.vrchat.com/worlds/udon/players/player-forces' },
-                { text: 'Player Positions', link: '/creators.vrchat.com/worlds/udon/players/player-positions' },
+                { text: '获取玩家', link: '/creators.vrchat.com/worlds/udon/players/getting-players' },
+                { text: '玩家语音', link: '/creators.vrchat.com/worlds/udon/players/player-audio' },
+                { text: '玩家模型缩放', link: '/creators.vrchat.com/worlds/udon/players/player-avatar-scaling' },
+                { text: '玩家碰撞体 (Player Collisions)', link: '/creators.vrchat.com/worlds/udon/players/player-collisions' },
+                { text: '玩家物理 (Player Forces)', link: '/creators.vrchat.com/worlds/udon/players/player-forces' },
+                { text: '玩家位置', link: '/creators.vrchat.com/worlds/udon/players/player-positions' },
               ]
             },
-            { text: 'Using Build & Test', link: '/creators.vrchat.com/worlds/udon/using-build-test' },
+            { text: '使用构建 & 测试', link: '/creators.vrchat.com/worlds/udon/using-build-test' },
             {
-              text: 'Video Players', link: '/creators.vrchat.com/worlds/udon/video-players/',
+              text: '视频播放器', link: '/creators.vrchat.com/worlds/udon/video-players/',
               collapsed: true,
               items: [
-                { text: 'Video Player Allowlist', link: '/creators.vrchat.com/worlds/udon/video-players/www-whitelist' },
+                { text: '视频播放器链接白名单', link: '/creators.vrchat.com/worlds/udon/video-players/www-whitelist' },
               ]
             },
-            { text: 'Animation Events', link: '/creators.vrchat.com/worlds/udon/animation-events' },
-            { text: 'Avatar Events', link: '/creators.vrchat.com/worlds/udon/avatar-events' },
-            { text: 'Debugging Udon Projects', link: '/creators.vrchat.com/worlds/udon/debugging-udon-projects' },
-            { text: 'Event Execution Order', link: '/creators.vrchat.com/worlds/udon/event-execution-order' },
-            { text: 'Image Loading', link: '/creators.vrchat.com/worlds/udon/image-loading' },
-            { text: 'Input Events', link: '/creators.vrchat.com/worlds/udon/input-events' },
-            { text: 'String Loading', link: '/creators.vrchat.com/worlds/udon/string-loading' },
+            { text: '动画事件', link: '/creators.vrchat.com/worlds/udon/animation-events' },
+            { text: '模型 (Avatar) 事件', link: '/creators.vrchat.com/worlds/udon/avatar-events' },
+            { text: '调试 Udon 项目', link: '/creators.vrchat.com/worlds/udon/debugging-udon-projects' },
+            { text: '事件执行顺序', link: '/creators.vrchat.com/worlds/udon/event-execution-order' },
+            { text: '网络图片加载', link: '/creators.vrchat.com/worlds/udon/image-loading' },
+            { text: '玩家输入事件', link: '/creators.vrchat.com/worlds/udon/input-events' },
+            { text: '网络文本加载', link: '/creators.vrchat.com/worlds/udon/string-loading' },
             { text: 'Udon Moderation Tool Guidelines', link: '/creators.vrchat.com/worlds/udon/udon-moderation-tool-guidelines' },
-            { text: 'UI Events', link: '/creators.vrchat.com/worlds/udon/ui-events' },
-            { text: 'World Debug Views', link: '/creators.vrchat.com/worlds/udon/world-debug-views' },
+            { text: 'UI 事件', link: '/creators.vrchat.com/worlds/udon/ui-events' },
+            { text: '世界调试视图', link: '/creators.vrchat.com/worlds/udon/world-debug-views' },
           ]
         },
         {
@@ -300,7 +300,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
           ]
         },
         {
-          text: 'Scene Components', link: '/creators.vrchat.com/worlds/components/',
+          text: '场景组件', link: '/creators.vrchat.com/worlds/components/',
           collapsed: true,
           items: [
             { text: 'VRC Avatar Pedestal', link: '/creators.vrchat.com/worlds/components/vrc_avatarpedestal' },
@@ -314,10 +314,10 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
             { text: 'VRC Ui Shape', link: '/creators.vrchat.com/worlds/components/vrc_uishape' },
           ]
         },
-        { text: 'Unity Layers in VRChat', link: '/creators.vrchat.com/worlds/layers' },
-        { text: 'SDK Prefabs', link: '/creators.vrchat.com/worlds/sdk-prefabs' },
-        { text: 'Supported Scripted Assets', link: '/creators.vrchat.com/worlds/supported-assets' },
-        { text: 'Allowlisted World Components', link: '/creators.vrchat.com/worlds/whitelisted-world-components' },
+        { text: 'VRChat 的 Unity 图层', link: '/creators.vrchat.com/worlds/layers' },
+        { text: 'SDK 预制件', link: '/creators.vrchat.com/worlds/sdk-prefabs' },
+        { text: '支持的脚本资源', link: '/creators.vrchat.com/worlds/supported-assets' },
+        { text: '世界组件白名单', link: '/creators.vrchat.com/worlds/whitelisted-world-components' },
       ]
     },
     {
