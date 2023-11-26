@@ -38,7 +38,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
       items: [
         { text: '两步身份验证', link: '/docs.vrchat.com/GUIDES/setup-2fa' },
         { text: '提出本地化修改建议', link: '/docs.vrchat.com/GUIDES/suggesting-localization-changes' },
-        { text: '调整您的用户模型身高', link: '/docs.vrchat.com/GUIDES/adjusting-your-avatars-height' },
+        { text: '调整您的模型身高', link: '/docs.vrchat.com/GUIDES/adjusting-your-avatars-height' },
       ],
     },
     {
@@ -58,9 +58,9 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'VRChat 社区实验室', link: '/docs.vrchat.com/SYSTEM/vrchat-community-labs' },
         { text: 'VRChat 安全和信誉系统', link: '/docs.vrchat.com/SYSTEM/vrchat-safety-and-trust-system' },
-        { text: '虚拟形象动态骨骼限制', link: '/docs.vrchat.com/SYSTEM/avatar-dynamic-bone-limits' },
-        { text: '虚拟形象互动权限和设置', link: '/docs.vrchat.com/SYSTEM/permissions-and-settings' },
-        { text: '公开虚拟形象克隆', link: '/docs.vrchat.com/SYSTEM/public-avatar-cloning' },
+        { text: '模型的动态骨骼 (Dynamic Bones) 限制', link: '/docs.vrchat.com/SYSTEM/avatar-dynamic-bone-limits' },
+        { text: '模型互动权限和设置', link: '/docs.vrchat.com/SYSTEM/permissions-and-settings' },
+        { text: '公开模型克隆', link: '/docs.vrchat.com/SYSTEM/public-avatar-cloning' },
         {
           text: '全身追踪', link: '/docs.vrchat.com/SYSTEM/full-body-tracking/full-body-tracking',
           collapsed: true,
