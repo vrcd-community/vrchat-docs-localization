@@ -17,7 +17,7 @@ VRChat SDK 从技术上讲只允许由 VRChat 分发，不应该提交到源代�
   * Unity 所需，包含你的项目清单（Unity 包依赖项）以及 [解析器](/vcc.docs.vrchat.com/vpm/resolver) 和 VPM 清单。
 * `Packages\com.vrchat.core.vpm-resolver` 文件夹
   * 这个工具可以在没有 VCC 的情况下将 VPM 包恢复到你的项目中。
-  
+  0
 ### 排除：
 * 所有 VPM 包（在 `Packages/` 中），除了解析器
 * 典型的临时/缓存文件夹，如 `Library`，`Temp` 等。

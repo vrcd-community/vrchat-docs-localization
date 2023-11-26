@@ -10,14 +10,14 @@ VRChat 包管理器提供了一个命令行界面应用程序，供高级用户�
 dotnet tool install --global vrchat.vpm.cli
 ```
 
-这将使得你在任何命令提示符下只需输入 `vpm` 就可以使用它！你需要最新的模板来创建/迁移项目，因此一个很好的首次运行命令是 `vpm install templates` - 在 [安装模板](#install-templates) 部分有更多内容。
+这将使得你在任何终端下只需输入 `vpm` 就可以使用它！你需要最新的模板来创建/迁移项目，因此在首次运行时推荐输入 `vpm install templates` 来安装模板体验更多功能 - 在 [安装模板](#install-templates) 部分有更多内容。
 
-你可以始终使用以下命令将工具更新到最新版本：
+将工具更新到最新版本：
 ```console
 dotnet tool update --global vrchat.vpm.cli
 ```
 
-你可以使用以下命令来卸载它：
+你始终可以使用以下命令来卸载它：
 ```console
 dotnet tool uninstall --global vrchat.vpm.cli
 ```

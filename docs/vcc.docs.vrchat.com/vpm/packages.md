@@ -38,7 +38,7 @@ VPM（VRChat 包管理器）使用与 [Unity 包管理器](https://docs.unity3d.
 ## 包格式
 VPM 格式遵循 Unity 包格式，并进行了一些添加。我们建议你首先阅读关于[自定义包](https://docs.unity3d.com/2019.4/Documentation/Manual/CustomPackages.html)的官方文档，以熟悉这些内容。
 
-我们使用相同的必需的[包清单](https://docs.unity3d.com/2019.4/Documentation/Manual/upm-manifestPkg.html)文件，但有一些重要的区别：
+我们使用相同的必需[包清单](https://docs.unity3d.com/2019.4/Documentation/Manual/upm-manifestPkg.html)文件，但有一些重要的区别：
 
 ### VPM 包清单
 VPM 包清单与常规 Unity 清单有一些区别：

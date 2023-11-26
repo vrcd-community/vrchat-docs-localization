@@ -1,13 +1,17 @@
 # 迁移项目
 
 ## 概述
+
 如果使用 SDK3 世界或虚拟形象的 `.unitypackage` SDK 创建的项目，可以迁移到新系统（不支持 SDK2）。它们可以是 Unity 2017、2018 或 2019 的项目。SDK 必须在其原始安装位置才能被检测到 - 具体来说，必须存在以下之一：
 * `Assets/Udon`
 * `VRCSDK/Plugins/VRCSDK3A.dll`
+
 ::: warning
 如果你的项目正在使用 [UdonSharp](https://udonsharp.docs.vrchat.com/)，请阅读我们的[已知问题](https://udonsharp.docs.vrchat.com/migration#known-issues)页面。
 :::
+
 ## 迁移过程
+
 1. 将你的项目添加到项目列表中，然后点击迁移。<br/>
 ![迁移项目](/vcc.docs.vrchat.com/images/migrate-button.png)
 2. 你有两种迁移项目的方式。
@@ -33,4 +37,5 @@
 10. 一旦完成，如果项目成功迁移，它将出现在列表中。
 
 ### 特殊包迁移
+
 我们支持自动迁移包含在[精选包](/vcc.docs.vrchat.com/vpm/curated-community-packages)列表中的包 - 即 UdonSharp、AudioLink 或 GestureManager。如果在你的项目中找到这些包的旧版（`.unitypackage` 提取到 `/Assets/`）版本，它们将被移除并替换为新版本。

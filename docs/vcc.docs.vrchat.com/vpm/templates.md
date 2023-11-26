@@ -2,7 +2,7 @@
 模板用于创建预装了 VRChat 包和设置的新 Unity 项目。
 
 ## 官方模板
-创作者伴侣包含三个模板：
+创作者助手包含三个模板：
 
 ### Avatar
 此模板包括基础和 Avatar SDK，你可以使用 [Avatars 3.0](https://docs.vrchat.com/docs/avatars-30) 构建和上传 Avatar。
@@ -15,7 +15,7 @@
 
 ::: tip
 
-这些模板在你安装创作者伴侣时会自动提供，但我们也将它们作为 git 仓库提供，你可以直接下载和使用。
+这些模板在你安装创作者助手时会自动提供，但我们也将它们作为 git 仓库提供，你可以直接下载和使用。
 你可以在[这里阅读更多相关信息](/vcc.docs.vrchat.com/guides/using-project-template-repos)。
 
 :::
