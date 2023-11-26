@@ -1,8 +1,8 @@
 # 手势切换
 
-手势开关是在[行动菜单](/docs.vrchat.com/OVERVIEW/controls/action-menu.md)中的一个选项，您也可以在 SteamVR 的控制器绑定界面中进行自定义设置。
+手势开关是在[功能菜单](/docs.vrchat.com/OVERVIEW/controls/action-menu.md)中的一个选项，您也可以在 SteamVR 的控制器绑定界面中进行自定义设置。
 
-默认情况下，它处于**打开状态**。启用手势切换后，VRChat 会尝试将您当前的手指姿态与[标准VRChat手势](/docs.vrchat.com/OVERVIEW/controls/valve-index.md)进行匹配。
+默认情况下，它处于**打开状态**。启用手势切换后，VRChat 会尝试将您当前的手指姿态与[标准 VRChat 手势](/docs.vrchat.com/OVERVIEW/controls/valve-index.md)进行匹配。
 
 ## Avatar 2.0
 

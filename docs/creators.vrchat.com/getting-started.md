@@ -7,7 +7,7 @@
 ## 快速入门
 
 1. 下载并安装[创作者助手](https://vrchat.com/download/vcc)。
-2. 如果没有安装 Unity，创作者助手会帮助您下载 Unity Hub，安装 Unity 2019.4.31f1，并[创建一个 Unity 账户](https://id.unity.com/account/new)。
+2. 如果没有安装 Unity，创作者助手会帮助您下载 Unity Hub，安装 Unity 2019.4.31f1，并[创建一个 Unity 账号](https://id.unity.com/account/new)。
 3. 使用创作者助手创建一个新的世界或虚拟形象项目，并用 Unity 打开它。
 4. 在 Unity 中构建您的世界或虚拟形象，并使用SDK控制面板在 VRChat 中测试它。
 5. 准备好后，使用控制面板将您的世界或虚拟形象发布到 VRChat！

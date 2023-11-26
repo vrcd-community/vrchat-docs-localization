@@ -1,4 +1,4 @@
-# 迁移到更新的 Unity 大版本
+# 迁移到新的 Unity 大版本
 
 VRChat 偶尔会更新 Unity 大版本。
 
@@ -12,7 +12,7 @@ VRChat 偶尔会更新 Unity 大版本。
 
 检查[当前支持的 Unity 版本](/creators.vrchat.com/sdk/current-unity-version)并通过 Unity Hub 安装新版本的 Unity。
 
-虽然我们在该页面上列出了独立安装程序，但我们 *非常建议* 您应该使用 Hub。在这些步骤中，我们假设您使用的是 Hub。
+虽然我们在该页面上列出了独立安装程序，但我们 *非常建议* 您使用 Hub。在这些步骤中，我们假设您使用的是 Hub。
 
 ### 第 2 步 - 制作项目副本
 
