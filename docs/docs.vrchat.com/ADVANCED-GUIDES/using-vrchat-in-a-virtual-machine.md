@@ -166,7 +166,7 @@ void print_leaf(int leaf)
 int main()
 {
     // cf:
-    // https://docs.microsoft.com/en-us/virtualization/Hyper-V-on-windows/tlfs/feature-discovery
+    // https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/tlfs/feature-discovery
     // https://docs.microsoft.com/en-us/cpp/intrinsics/cpuid-cpuidex?view=msvc-170
 
     std::cout << "manufacturer id:" << std::endl;
