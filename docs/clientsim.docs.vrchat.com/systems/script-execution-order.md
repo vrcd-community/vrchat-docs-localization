@@ -11,6 +11,6 @@
 | 0 | UdonBehaviour | 将更新事件发送到Udon程序。 |
 | 1 | UdonInput | 这必须在UdonBehaviour.Update之后发生以确保正确的事件顺序。 |
 | 10000 | ClientSimBaseInput | 更新当前帧的输入事件的tick。只需要确保测试和播放模式在处理输入时表现相同。 |
-| 30000 | PlayerStationManager | 尽可能晚地更新站点上玩家的位置，以便所有其他脚本有时间先评估。 |
+| 30000 | PlayerStationManager | 尽可能晚的更新站点上玩家的位置，以便所有其他脚本有时间先评估。 |
 | 30001 | TooltipManager | 在确定玩家位置后更新Tooltip视觉的位置。 |
 | 31000 | PostLateUpdater | 将VRChat的PostLateUpdate事件发送到UdonBehaviours。 |

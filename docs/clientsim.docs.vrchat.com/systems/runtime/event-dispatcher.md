@@ -1,3 +1,3 @@
-# Event Dispatcher and Events
+# 事件调度器和事件
 
-The EventDispatcher is responsible for notifying other systems when specific events happen within ClientSim. A behaviour can subscribe to an event type or send an event of specific type to all of ClientSim without knowing what will handle it. The EventDispatcher is just a collection of event types paired with event handlers. This method decouples the different systems in ClientSim without needing to create a direct dependency. All events sent must extend the IClientSimEvent interface, but can contain any data needed with the event.
+事件调度器负责在ClientSim内部发生特定事件时通知其他系统。一个行为可以订阅一个事件类型，或者向ClientSim的所有部分发送一个特定类型的事件，而无需知道谁将处理它。事件调度器只是一个事件类型与事件处理器配对的集合。这种方法在不需要创建直接依赖的情况下解耦了ClientSim中的不同系统。所有发送的事件必须扩展IClientSimEvent接口，但可以包含事件所需的任何数据。
