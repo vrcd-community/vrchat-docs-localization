@@ -292,7 +292,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
           ]
         },
         {
-          text: 'VRC图形特性', link: '/creators.vrchat.com/worlds/vrc-graphics/',
+          text: 'VRCGraphics', link: '/creators.vrchat.com/worlds/vrc-graphics/',
           collapsed: true,
           items: [
             { text: 'ASyncGPUReadback', link: '/creators.vrchat.com/worlds/vrc-graphics/asyncgpureadback' },
