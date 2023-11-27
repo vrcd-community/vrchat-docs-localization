@@ -19,7 +19,7 @@
 ### 控制器
 
 - [BrainFlowsIntoVRChat](https://github.com/ChilloutCharles/BrainFlowsIntoVRChat)：BrainFlow 代码可通过 OSC 将大脑的放松和专注度指标发送至 vrchat 模型参数。（Python）
-- [bci-workshop](https://github.com/ChilloutCharles/bci-workshop)：用大脑控制你的模型（Python）
+- [bci-workshop](https://github.com/ChilloutCharles/bci-workshop)：用大脑控制您的模型（Python）
 - [OSC_To_keypress_Console](https://github.com/Salvesti/OSC_To_keypress_Console/)：将 OSC 转换为按按键，反之亦然。(C#)
 - [VRChat 热键 OSC](https://gitlab.com/ameliend/vrchat-hotkeys-osc)：通过键盘热键控制模型参数。（Python）
 

@@ -1,3 +1,3 @@
-# Systems
+# 内部系统
 
-This documentation includes details on how the systems within ClientSim work if you'd like to understand them better, troubleshoot them or contribute to this Project! Choose a topic on the left to get started.
+本文档包含了关于 ClientSim 内部系统的详细信息，如果您想更好地理解它们，对它们进行故障排除或者为这个项目做出贡献，那么这些信息将会很有用！选择左侧的一个主题开始阅读。

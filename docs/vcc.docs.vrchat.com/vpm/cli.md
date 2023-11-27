@@ -3,21 +3,21 @@
 VRChat 包管理器提供了一个命令行界面应用程序，供高级用户和自动化使用。
 
 ## 安装与更新
-你需要安装 [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)。
+您需要安装 [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)。
 然后只需打开一个终端并输入：
 
 ```console
 dotnet tool install --global vrchat.vpm.cli
 ```
 
-这将使得你在任何终端下只需输入 `vpm` 就可以使用它！你需要最新的模板来创建/迁移项目，因此在首次运行时推荐输入 `vpm install templates` 来安装模板体验更多功能 - 在 [安装模板](#install-templates) 部分有更多内容。
+这将使得您在任何终端下只需输入 `vpm` 就可以使用它！您需要最新的模板来创建/迁移项目，因此在首次运行时推荐输入 `vpm install templates` 来安装模板体验更多功能 - 在 [安装模板](#install-templates) 部分有更多内容。
 
 将工具更新到最新版本：
 ```console
 dotnet tool update --global vrchat.vpm.cli
 ```
 
-你始终可以使用以下命令来卸载它：
+您始终可以使用以下命令来卸载它：
 ```console
 dotnet tool uninstall --global vrchat.vpm.cli
 ```
@@ -37,7 +37,7 @@ vpm new <projectName> [template] [-p path]
 
 * **projectName**：新项目的名称。如果目标目录中已经存在具有此名称的其他项目，则会在其后添加数字。
 
-* **template**：可选的模板。如果你没有提供，将使用只包含 VRChat Base SDK 包的基础 "Base" 模板。你可以使用内置模板的名称，或者提供你自己模板的绝对路径。
+* **template**：可选的模板。如果您没有提供，将使用只包含 VRChat Base SDK 包的基础 "Base" 模板。您可以使用内置模板的名称，或者提供您自己模板的绝对路径。
   **内置模板**："Base", "World", "Avatar", "UdonSharp"
 
 * **path**：创建项目时使用的可选绝对路径。如果未提供，将使用当前目录。
@@ -61,7 +61,7 @@ vpm check project [<name>]
 如果找到项目，返回 0，如果没有找到，返回 1。
 
 ### 解析项目
-恢复项目的 `vpm-manifest.json` 文件中指定的所有 VPM 包。当你在 Unity 中打开一个项目时，[解析器](/vcc.docs.vrchat.com/vpm/resolver)会自动完成这个操作，但你也可以使用这个命令手动完成。
+恢复项目的 `vpm-manifest.json` 文件中指定的所有 VPM 包。当您在 Unity 中打开一个项目时，[解析器](/vcc.docs.vrchat.com/vpm/resolver)会自动完成这个操作，但您也可以使用这个命令手动完成。
 
 ```console 
 vpm resolve project [<name>]
@@ -85,20 +85,20 @@ vpm migrate project [projectPath]
 ```
 
 **参数**
-* **projectPath**：你想要迁移的 Unity 项目的路径。
+* **projectPath**：您想要迁移的 Unity 项目的路径。
 
 **选项**
-* **--inplace**：在原地迁移项目，而不是创建一个副本。除非你有自己的项目备份，否则不推荐这样做。
+* **--inplace**：在原地迁移项目，而不是创建一个副本。除非您有自己的项目备份，否则不推荐这样做。
 
 如果找到了项目并且可以迁移，它将自动升级到新系统。
 
 如果找到了项目并且可以迁移，返回 0；如果未找到或无法迁移，返回 1。
 
 ## 包
-[包](packages) 是以便携格式存储在 zip 文件中的代码和资产，由 VRChat 包管理器拉入你的项目。
+[包](packages) 是以便携格式存储在 zip 文件中的代码和资产，由 VRChat 包管理器拉入您的项目。
 
 ### 检查包
-报告来自包的信息，或者告诉你它是否未找到/无效。
+报告来自包的信息，或者告诉您它是否未找到/无效。
 
 ```console 
 vpm check package <name>
@@ -125,7 +125,7 @@ vpm add package <packageName> [-p <project>]
 * **packageName**：要添加的包。这可以是官方或策划包列表中任何包的唯一名称，如 `com.vrchat.worlds` 或 `com.vrchat.udonsharp`，或者可以是本地包的相对或绝对路径。
 
 **选项**
-* **-p|--project**：指定将添加包的项目。如果未提供参数，方法将在当前目录中查找。如果提供，该值可以是 Unity 项目的绝对或相对路径，或者是你已添加到 `userProjects` 列表中的项目的名称。
+* **-p|--project**：指定将添加包的项目。如果未提供参数，方法将在当前目录中查找。如果提供，该值可以是 Unity 项目的绝对或相对路径，或者是您已添加到 `userProjects` 列表中的项目的名称。
 
 **示例**
 * `vpm add package com.vrchat.avatars`
@@ -154,16 +154,16 @@ vpm remove package <packageName> [-p <project>] [-f]
   * 即使这样做可能会破坏项目，也从当前工作目录上一级的项目中移除 VRChat Base 包。
 
 ## 模板
-[模板](templates) 是用作新项目起点的基础 VRChat 项目，可以快速拉取你喜欢的包、预制件和工具。
+[模板](templates) 是用作新项目起点的基础 VRChat 项目，可以快速拉取您喜欢的包、预制件和工具。
 
 ::: 提示
 
-我们还提供了你可以直接使用的 git 仓库模板。[这里是指南](/vcc.docs.vrchat.com/guides/using-project-template-repos)，包含所有链接和说明。
+我们还提供了您可以直接使用的 git 仓库模板。[这里是指南](/vcc.docs.vrchat.com/guides/using-project-template-repos)，包含所有链接和说明。
 
 :::
 
 ### 安装模板
-将 VRChat 模板的最新版本安装到 `AppData/Local/VRChatCreatorCompanion/VRCTemplates`，覆盖那里的文件。如果你在没有安装 VCC GUI 的情况下使用 CLI，这将非常有用。
+将 VRChat 模板的最新版本安装到 `AppData/Local/VRChatCreatorCompanion/VRCTemplates`，覆盖那里的文件。如果您在没有安装 VCC GUI 的情况下使用 CLI，这将非常有用。
 
 ```console 
 vpm install templates
@@ -179,7 +179,7 @@ vpm list templates
 ```
 
 ### 检查模板
-报告模板的版本，或者告诉你它是否未找到/无效。
+报告模板的版本，或者告诉您它是否未找到/无效。
 
 ```console 
 vpm check template <template>
@@ -187,12 +187,12 @@ vpm check template <template>
 
 **参数**
 
-* **template**：要检查的模板。这可以是任何内置模板的 displayName，或者是你自己的项目模板的绝对路径。
+* **template**：要检查的模板。这可以是任何内置模板的 displayName，或者是您自己的项目模板的绝对路径。
 
 **内置模板**："Base", "World", "Avatar", "UdonSharp"
 
 ## 仓库
-仓库是包的列表。你总是可以访问官方和策划的仓库，你也可以添加你自己的社区仓库。
+仓库是包的列表。您总是可以访问官方和策划的仓库，您也可以添加您自己的社区仓库。
 
 ### 列出仓库
 列出所有可用于加载包的源。这包括官方和策划的包列表，以及添加到设置中的任何用户仓库。
@@ -243,10 +243,10 @@ vpm new repo [path] [--name MyName] [--author email@domain.com]
 
 **选项**
 * **-n|--name**：源的名称，如 "VRChat Official Packages" 或 "Momo's Messy Mix"
-* **-a|--author**：人们可以通过此电子邮件地址联系你提问。
+* **-a|--author**：人们可以通过此电子邮件地址联系您提问。
 
 ### 移除单个仓库
-通过 id 从你的设置中移除仓库。
+通过 id 从您的设置中移除仓库。
 如果仓库被移除，返回 0；如果没有被移除，返回 1。
 
 如果仓库列表没有提供明确的 id - 可以使用 url 代替。
@@ -256,7 +256,7 @@ vpm remove repo [id]
 ```
  
 ### 移除所有仓库
-从你的设置中移除所有仓库。
+从您的设置中移除所有仓库。
 如果仓库被移除，返回 0；如果没有被移除，返回 1。
 
 ```console 
@@ -264,7 +264,7 @@ vpm remove repos
 ```
 
 ## 要求
-VCC 和 VPM 需要安装一些东西才能正常运行。这些命令可以帮助你快速设置你的机器或云构建。
+VCC 和 VPM 需要安装一些东西才能正常运行。这些命令可以帮助您快速设置您的机器或云构建。
 
 ### 检查 hub
 在 Windows 上，检查是否在 `HKEY_LOCAL_MACHINE\SOFTWARE\Classes\unityhub\DefaultIcon` 有 Unity Hub 的注册表键。
@@ -335,7 +335,7 @@ vpm list unity
 
 ::: tips
 
-如果你在非 Windows 平台上使用 CLI 遇到问题，你可以查看我们的 [项目模板](/vcc.docs.vrchat.com/guides/using-project-template-repos)，以便在不依赖 VCC 的情况下开始使用最新的 VRChat 包。
+如果您在非 Windows 平台上使用 CLI 遇到问题，您可以查看我们的 [项目模板](/vcc.docs.vrchat.com/guides/using-project-template-repos)，以便在不依赖 VCC 的情况下开始使用最新的 VRChat 包。
 
 :::
 
@@ -344,10 +344,10 @@ vpm list unity
 1. 按照上面的 [安装和更新](#installation--updating) 部分的指示进行操作。
 2. 安装 [Mac 版 Unity Hub](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg) 然后安装 [Unity 2019.4.31f1](unityhub://2019.4.31f1/bd5abf232a62)。
 3. 打开终端并运行 [vpm install templates](#install-templates) 来安装最新的 VRChat 项目模板。
-4. 运行 [vpm check hub](#check-hub) 来查找并保存 Unity Hub 的位置。目前，我们假设它已经安装到其默认位置 `/Applications/Unity Hub.app/Contents/MacOS/Unity Hub`。如果不是这样，你需要手动打开你的设置文件，并将 `pathToUnityHub` 设置为正确的绝对路径。确保目标是 UnityHub.app 内的可执行文件，如默认路径所示。
+4. 运行 [vpm check hub](#check-hub) 来查找并保存 Unity Hub 的位置。目前，我们假设它已经安装到其默认位置 `/Applications/Unity Hub.app/Contents/MacOS/Unity Hub`。如果不是这样，您需要手动打开您的设置文件，并将 `pathToUnityHub` 设置为正确的绝对路径。确保目标是 UnityHub.app 内的可执行文件，如默认路径所示。
 5. 运行 [vpm check unity](#check-unity) 来查找并保存 Unity 编辑器的位置。VPM 将使用 Hub 来查找并保存路径，所以请确保 VPM 首先可以找到 Hub。
 
-就是这样！你应该能够[从模板创建新项目](#new)，[向项目添加包](#add-package)以及执行大多数其他功能。你可以[提交一个 Canny](https://vrchat.canny.io/creator-companion-beta) 来报告任何不起作用的方法。
+就是这样！您应该能够[从模板创建新项目](#new)，[向项目添加包](#add-package)以及执行大多数其他功能。您可以[提交一个 Canny](https://vrchat.canny.io/creator-companion-beta) 来报告任何不起作用的方法。
 
 ### Linux 设置
-目前，CLI 在 Linux 发行版上完全未经测试，但由于为 Mac 版本所做的工作，它可能仍然可以工作。然而，VPM 将无法找到你的 Unity Hub 或 Unity 编辑器路径，所以你现在需要手动更新你的 settings.json 文件来设置它们。
+目前，CLI 在 Linux 发行版上完全未经测试，但由于为 Mac 版本所做的工作，它可能仍然可以工作。然而，VPM 将无法找到您的 Unity Hub 或 Unity 编辑器路径，所以您现在需要手动更新您的 settings.json 文件来设置它们。

@@ -2,7 +2,7 @@
 
 ![ClientSim 在 Unity 编辑器中](/clientsim.docs.vrchat.com/images/editor-screenshot.png)
 
-VRChat 客户端模拟器，简称 ClientSim，是一个工具，使你能够直接在 Unity 中测试你的 VRChat SDK3 世界！你可以查看所有对象的状态以直接验证事物。
+VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直接在 Unity 中测试您的 VRChat SDK3 世界！您可以查看所有对象的状态以直接验证事物。
 
 ## 功能
 
@@ -23,16 +23,16 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使你能够直
 
 > 注意：使用 VRChat 创作者伴侣的公开 Beta 版本，安装将会更加简单，即将推出™
 >
-- 在你的项目中，打开 Unity 包管理器，点击 + 按钮并选择 '从 git URL 添加包...'。
-    - 输入 `https://github.com/vrchat/packages.git?path=/packages/com.vrchat.base#vcc`。然后等待包导入，或者如果你关闭了自动刷新，按 Ctrl+R 刷新。
+- 在您的项目中，打开 Unity 包管理器，点击 + 按钮并选择 '从 git URL 添加包...'。
+    - 输入 `https://github.com/vrchat/packages.git?path=/packages/com.vrchat.base#vcc`。然后等待包导入，或者如果您关闭了自动刷新，按 Ctrl+R 刷新。
     - 再次点击 + 按钮并添加此 git url：`https://github.com/vrchat/packages.git?path=/packages/com.vrchat.worlds#vcc`
-    - 最后一次按 + 按钮并添加此 url：`https://github.com/vrchat-community/ClientSim.git?path=/ClientSim_UnityProject/Packages/com.vrchat.ClientSim#issue-12-make-docs`
+    - 最后再点一次 + 按钮并添加此 url：`https://github.com/vrchat-community/ClientSim.git?path=/ClientSim_UnityProject/Packages/com.vrchat.ClientSim#issue-12-make-docs`
 
 ### 入门
 
-- 打开你的 VRChat 世界场景
+- 打开您的 VRChat 世界场景
 - 在 Unity 中按播放
-- 测试你的世界
+- 测试您的世界
 
 
 ## 在 [系统](./systems/) 部分了解所有系统的工作方式
@@ -42,7 +42,7 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使你能够直
 - 输入基于键盘布局而不是特定键。
 - 本地和远程玩家现在都有类人形的头像，支持头像骨骼（但不包括完整的 Avatar 系统）。
 - 直接查看和设置玩家数据 - 运动值，语音和头像音频设置，战斗健康度。
-- 按住 tab 键解锁鼠标 - 这样你可以突出显示偏离中心的对象。
+- 按住 tab 键解锁鼠标 - 这样您可以突出显示偏离中心的对象。
 - 当 UI 元素可以进行交互时，显示指针。
 - 新的运行时选项：作为非主体开始，反转鼠标，显示工具提示，改变玩家规模，设置目标帧率，延迟开始以模拟加载。
 - 新的播放模式菜单，带有更新的样式，玩家信息和设置按钮。
@@ -51,7 +51,7 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使你能够直
 - 更新工具提示位置以匹配客户端。
 - 更好的游戏手柄支持。
 - 支持禁用域重载以无延迟进入播放模式 - 注意，Unity 有一个 bug，如果它们没有设置为 "Editor and Runtime"，则会导致 UI 事件失败。
-- 自动化测试 - 你需要特别启用这个功能，所以它不会影响你的项目。文档即将发布。
+- 自动化测试 - 您需要特别启用这个功能，所以它不会影响您的项目。文档即将发布。
 
 ### 已知问题
 
@@ -63,7 +63,7 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使你能够直
 ## 版权
 
 版权所有 (c) 2021 VRChat
-查看 License.md 以获取完整的使用信息
+查看 License.md 以获取完整的版权信息
 
 ## 致谢
 

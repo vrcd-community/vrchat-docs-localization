@@ -46,4 +46,4 @@
 ```
 在上述示例中，每个版本清单的其余部分将按键值逐一列出，而不是使用 "例如" 等含糊不清的字眼。要查看带有完整数据的实时示例，请查看 [官方 VRChat 包仓库](https://packages.vrchat.com/official)。
 
-请注意，如果你正在使用本地仓库列表文件并通过 [CLI](/vcc.docs.vrchat.com/vpm/cli) 添加包，你可以省略 URL 字段。
+请注意，如果您正在使用本地仓库列表文件并通过 [CLI](/vcc.docs.vrchat.com/vpm/cli) 添加包，您可以省略 URL 字段。

@@ -24,7 +24,7 @@ ClientSim现在有一个完整的集成测试框架，可以测试包含的大�
 
 由于ClientSim使用InitializeOnLoad启动的方式，测试需要修改Unity编辑器设置以正确验证行为。在测试环境中，InitializeOnLoad在播放模式开始之前发生。默认的Unity设置在进入播放模式时启用了Domain Reloading。这意味着在切换到播放模式时，所有变量数据都会被清除。为了解决这个问题，所有ClientSim测试必须在禁用Domain Reloading的情况下运行。这对于任何从两个测试夹具基类（ClientSimTestBase和ClientSimWorldTestBase）派生的测试都是自动处理的。
 
-### 测试助手
+### ClientSimTestHelper
 
 两个集成测试夹具都带有帮助验证特定行为的方法。
 

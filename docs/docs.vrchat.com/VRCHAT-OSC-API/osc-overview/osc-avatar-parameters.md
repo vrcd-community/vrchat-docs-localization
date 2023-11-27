@@ -10,11 +10,11 @@
 
 ## 模型参数和配置文件
 
-总体思路是，在地址 `/avatar/parameters/name` 输入的值将赋值给名字相匹配的形象参数。因此，`/avatar/parameters/VRCEmote` 将赋值给默认的 VRCEmote 参数（如果你保留这个参数的话），你的形象就会开始挥手、跳舞等。下面是一个非常简单的 TouchOSC 文档，可以完全做到这一点：[vrc-emote.tosc](https://github.com/vrchat-community/osc/raw/main/files/touch-osc/vrc-emote.tosc)
+总体思路是，在地址 `/avatar/parameters/name` 输入的值将赋值给名字相匹配的形象参数。因此，`/avatar/parameters/VRCEmote` 将赋值给默认的 VRCEmote 参数（如果您保留这个参数的话），您的形象就会开始挥手、跳舞等。下面是一个非常简单的 TouchOSC 文档，可以完全做到这一点：[vrc-emote.tosc](https://github.com/vrchat-community/osc/raw/main/files/touch-osc/vrc-emote.tosc)
 
 为使您能对 "模型参数 "进行更多操作，我们会自动生成可编辑的配置文件，以便进行自定义。请注意，使用 "构建与测试 "功能时，配置文件不会保存到硬盘中，因此您可以使用 OSC，但在上传形象之前不会看到配置文件。
 
-当你载入一个已发布的 "形象 "时，将检查你的本地存储是否有已经存储了匹配该形象 ID 的 OSC 配置文件（它在 `~\AppData\LocalLow\VRChat\VRChat\OSC\{userId}\Avatars\{avatarId}.json` 里）。
+当您载入一个已发布的 "形象 "时，将检查您的本地存储是否有已经存储了匹配该形象 ID 的 OSC 配置文件（它在 `~\AppData\LocalLow\VRChat\VRChat\OSC\{userId}\Avatars\{avatarId}.json` 里）。
 
 下面是一个实际的完整路径例子：
 
@@ -55,7 +55,7 @@ C:\Users\Momo\AppData\LocalLow\VRChat\VRChat\OSC\usr_9381c776-ce11-4def-9331-6ff
 }
 ```
 
-为了便于阅读，形象的名字也包括在内，但其只有其 ID 被实际上在OSC中使用（文件名里也是一样）。请注意，上面的 VelocityZ 输入端口留空了，因为它只有输入功能。此外，我还更改了 Face 的输出地址和类型，以展示一个对于配置的更改如何帮助你直接控制另一个应用程序 -- 在本例中，更改 Face 参数将通过地址"/ableton/trackselect "向 Ableton Live 发送值，而 Ableton 期望使用 Float，因此我们要求 VRChat 对其进行即时转换。
+为了便于阅读，形象的名字也包括在内，但其只有其 ID 被实际上在OSC中使用（文件名里也是一样）。请注意，上面的 VelocityZ 输入端口留空了，因为它只有输入功能。此外，我还更改了 Face 的输出地址和类型，以展示一个对于配置的更改如何帮助您直接控制另一个应用程序 -- 在本例中，更改 Face 参数将通过地址"/ableton/trackselect "向 Ableton Live 发送值，而 Ableton 期望使用 Float，因此我们要求 VRChat 对其进行即时转换。
 
 完整配置如右：[example-avatar-config.json](https://github.com/vrchat-community/osc/raw/main/files/avatar-parameters/configs/example-avatar-config.json "example-avatar-config.json")
 

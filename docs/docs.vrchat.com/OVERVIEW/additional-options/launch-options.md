@@ -29,7 +29,7 @@ Oculus Quest 不支持以任何方式设置启动选项。
 | `--fps=X`                     | 将帧率限制固定为X。在桌面端，它默认为 90。在 VR 模式下，默认的帧率限制将取决于头显最高支持的帧率。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `--enable-debug-gui`          | 启用调试菜单快捷键，在[键盘与鼠标](/docs.vrchat.com/OVERVIEW/controls/keyboard-and-mouse)文档中查看对应的快捷键。                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `--enable-sdk-log-levels`     | 启用大量的额外日志记录。<br>**警告**：这将会让您的日志文件变得**非常**大！<br>使用这个选项可能会因为日益增大的日志文件而降低您的性能，不要将它持续开启！                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `--enable-udon-debug-logging` | 在客户端中启用 Udon 堆内存和堆栈转储。通常只在编辑器中启用。**警告**：这将会让你的日志文件在存在问题的Udon世界中变得非常大！<br>使用这个选项可能会因为日益增大的日志文件而降低您的性能，不要一直打开它！                                                                                                                                                                                                                                                                                                                                                                           |
+| `--enable-udon-debug-logging` | 在客户端中启用 Udon 堆内存和堆栈转储。通常只在编辑器中启用。**警告**：这将会让您的日志文件在存在问题的Udon世界中变得非常大！<br>使用这个选项可能会因为日益增大的日志文件而降低您的性能，不要一直打开它！                                                                                                                                                                                                                                                                                                                                                                           |
 | `--midi=deviceName`           | 强制 MIDI 驱动搜索包含指定 `deviceName` （设备名称）的已连接 MIDI 设备,支持部分匹配和忽略大小写。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `--watch-worlds`              | 监视 VRChat SDK 构建世界的位置，并自动加入任何用 VRChat SDK 创建的新的本地世界。<br>查看[创建与测试](/creators.vrchat.com/worlds/udon/using-build-test.md)（翻译中）                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `--watch-avatars`             | 监视 VRChat SDK 构建模型的位置。如果正在使用的测试模型进行了更新，将会自动切换为更新后的版本。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -46,7 +46,7 @@ Oculus Quest 不支持以任何方式设置启动选项。
 
 > 如果您正在使用多 CCX 的 AMD CPU(大多数1000/2000/3000系列和一部分5000/7000系列)，可以使用`--affinity`启动参数限制仅使用第一个 CCX 以减少核心间的通信延迟并获得不错的帧率提升。
 > 
-> 可以在[这里](https://en.wikipedia.org/wiki/List\_of\_AMD\_Ryzen\_processors)查看 CPU 的“核心配置”。如果x前的数字不是1（CCX 数量），你可能会从亲和性限制中受益。注意x后的数字（每个 CCX 中的核心数量）并在下面查找理想的亲和性字符串：
+> 可以在[这里](https://en.wikipedia.org/wiki/List\_of\_AMD\_Ryzen\_processors)查看 CPU 的“核心配置”。如果x前的数字不是1（CCX 数量），您可能会从亲和性限制中受益。注意x后的数字（每个 CCX 中的核心数量）并在下面查找理想的亲和性字符串：
 > 
 > 2: `--affinity=F` (建议换一个更好的 CPU，这个线程数设置亲和性可能帮助不大，因为仅限制两个物理核心)<br>
 > 3: `--affinity=3F`<br>
@@ -54,7 +54,7 @@ Oculus Quest 不支持以任何方式设置启动选项。
 > 6: `--affinity=FFF`<br>
 > 8: `--affinity=FFFF`<br>
 > 
-> 在低端机型上还有一些很少见的例外(假设您没有关闭SMT...如果你问了，那就表示您没有)，但这些例外最坏的情况便是使这种解决方案效果变差，而并不是有害的。
+> 在低端机型上还有一些很少见的例外(假设您没有关闭SMT...如果您问了，那就表示您没有)，但这些例外最坏的情况便是使这种解决方案效果变差，而并不是有害的。
 
 ## Unity引擎的启动选项
 
@@ -71,4 +71,4 @@ Oculus Quest 不支持以任何方式设置启动选项。
 
 如果您看到了这里。请确保您通过左上角选择器观察自己配置的是否是[当前支持的 Unity 版本](/creators.vrchat.com/sdk/current-unity-version.md)。
 
-请注意，大多数 `Force`（强制）启动选项会导致无法使用 VRChat，请尽量不要使用它们，除非你知道自己在做什么。
+请注意，大多数 `Force`（强制）启动选项会导致无法使用 VRChat，请尽量不要使用它们，除非您知道自己在做什么。

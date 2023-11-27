@@ -50,7 +50,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: 'VRCHAT QUEST',
       items: [
-        { text: '为 Oculus Quest 创建 VRChat 内容', link: '/creators.vrchat.com/platforms/android/' },
+        { text: '为 Oculus Quest 创建内容', link: '/creators.vrchat.com/platforms/android/' },
       ],
     },
     {
@@ -361,7 +361,7 @@ export function udonSharpDocsSidebar(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'UdonSharp', link: '/udonsharp.docs.vrchat.com/udonsharp' },
         { text: 'VRChat API', link: '/udonsharp.docs.vrchat.com/vrchat-api' },
-        { text: 'Events', link: '/udonsharp.docs.vrchat.com/events' },
+        { text: '事件', link: '/udonsharp.docs.vrchat.com/events' },
         { text: 'Editor Scripting', link: '/udonsharp.docs.vrchat.com/editor-scripting' },
       ]
     },

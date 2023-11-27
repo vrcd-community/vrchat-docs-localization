@@ -12,38 +12,38 @@
 
 - **DataContainers！** 为 Udon 提供列表，字典和 JSON！
   - 添加了 DataLists 和 DataDictionaries，为 Udon 提供了类似于 Lists 和 Dictionaries 的功能。
-    - 列表和字典通常需要支持泛型，而 Udon 不支持它们，所以这是通过首先将你的数据放入 DataTokens 中来完成的，这些 DataTokens 能够存储任何值。
+    - 列表和字典通常需要支持泛型，而 Udon 不支持它们，所以这是通过首先将您的数据放入 DataTokens 中来完成的，这些 DataTokens 能够存储任何值。
   - 添加了 VRCJSON，一个帮助类，可以将 JSON 字符串（例如从 [远程字符串加载](https://docs.vrchat.com/docs/string-loading) 接收到的）转换为 DataLists 和 DataDictionaries，反之亦然。
   - [阅读 Data Containers / VRCJSON 文档页面](https://docs.vrchat.com/v2023.2.2/docs/data-containers-vrcjson) 以了解更多。
 
-- **AsyncGPUReadback！** 这允许你从 GPU 和着色器读取数据，而不会产生重大的性能损失
+- **AsyncGPUReadback！** 这允许您从 GPU 和着色器读取数据，而不会产生重大的性能损失
   - 添加了 `VRCAsyncGPUReadback.Request` 函数和相应的 `OnAsyncGpuReadbackComplete` 事件
   - 这些可以在不产生太大性能影响的情况下，将数据从 GPU 读取到 CPU 内存中，但需要延迟一帧或更多帧的数据
   - 查看 [ASyncGPUReadback](https://docs.vrchat.com/v2023.2.2/docs/asyncgpureadback) 的文档以获取更多信息。
 
 ### 改进
 
-- **Squishy PhysBones！** 你现在可以实现 PhysBones，它们可以 "squish" 或压缩，而不是拉伸！
-  - 要设置 Squishy PhysBone，将你的 PhysBone 组件切换到版本 1.1 并调整 "Max Squish" 值。
-  - **所有的 PhysBones 现在都有版本了！** 你可以在 PhysBone 组件中更改版本。这样做是为了让我们能够安全地添加新功能。
+- **Squishy PhysBones！** 您现在可以实现 PhysBones，它们可以 "squish" 或压缩，而不是拉伸！
+  - 要设置 Squishy PhysBone，将您的 PhysBone 组件切换到版本 1.1 并调整 "Max Squish" 值。
+  - **所有的 PhysBones 现在都有版本了！** 您可以在 PhysBone 组件中更改版本。这样做是为了让我们能够安全地添加新功能。
     - 旧的 PhysBones 自动在版本 1.0 上。1.0 包括 SquishyBones。
     - 重力和刚度的变化在版本 1.1 上。下面还有一些其他的变化。
     - **所有版本都将得到维护。** 1.0 不会被弃用，但它是功能锁定的，不会添加新功能。每次我们添加一个新的 "破坏性" 功能，我们都会增加版本。
-  - PhysBones 1.1：**重力和刚度的行为不同，如果你从 1.0 升级，需要新的值。**
+  - PhysBones 1.1：**重力和刚度的行为不同，如果您从 1.0 升级，需要新的值。**
     - 重力现在是骨头在静止时应该直接指向世界空间上/下的比例。
     - 刚度现在是骨头试图保持在其先前方向的比例。
-    - 以前，这些值是你需要与拉力因子平衡的直接力。我们认为这应该更直接，更容易使用。
+    - 以前，这些值是您需要与拉力因子平衡的直接力。我们认为这应该更直接，更容易使用。
     - 这些变化也是为了支持添加到组件的新功能所必需的。
   - **已添加 Max Squish 值。** 这是骨头可以缩小的百分比。
     - 已添加 `_Squish` 参数。它的工作方式类似于 `_Stretch` 参数。
   - PhysBones 1.1：**已添加 Stretch Motion 值。** 这是运动影响骨头拉伸或压缩的比例。
   - 现在可以折叠 VRCPhysBone 组件 UI 中的值类别。
-    - 类别还包括一个帮助按钮，它将带你到该主题的在线文档。
+    - 类别还包括一个帮助按钮，它将带您到该主题的在线文档。
   - [PhysBones](https://docs.vrchat.com/v2023.2.2/docs/physbones) 文档将在 PhysBones 1.1 和 Squishy PhysBones 的公开测试期间更新。
   - 网络 ID 工具现在适用于 Avatar 项目中的 PhysBones
     - 这个工具允许在不同平台上的虚拟形象之间同步 PhysBones，即使它们有不同的 GameObject 层次结构
-      - 这个高级工具只有在你的 PC 和 Quest 虚拟形象有不同的层次结构时才有用！
-      - 如果你不知道为什么要这样做，你不需要担心这个。
+      - 这个高级工具只有在您的 PC 和 Quest 虚拟形象有不同的层次结构时才有用！
+      - 如果您不知道为什么要这样做，您不需要担心这个。
     - [查看完整文档以获取更多信息](https://docs.vrchat.com/v2023.2.2/docs/network-id-utility)
 
 ### 自 3.2.0-beta.1 以来的变化
@@ -59,8 +59,8 @@
 
 #### 扩展方法
 我们已经将一些扩展方法移动到 VRC.Core 命名空间。
-如果你正在使用 `Transform.Reset()` 方法，你应该改用 `VRC.Core.ExtensionMethods.Reset(Transform t)`。
-以下是你应该做的其他类似的变化：
+如果您正在使用 `Transform.Reset()` 方法，您应该改用 `VRC.Core.ExtensionMethods.Reset(Transform t)`。
+以下是您应该做的其他类似的变化：
 - `Transform.GetHierarchyPath` > `VRC.Core.ExtensionMethods.GetHierarchyPath(Transform t, Transform relativeTransform)`
 - `Transform.GetShortHierarchyPath` > `VRC.Core.ExtensionMethods.GetShortHierarchyPath(Transform t, Transform relativeTransform)`
 - `GameObject.GetOrAddComponent` > `VRC.Core.ExtensionMethods.GetOrAddComponent(GameObject go)`
@@ -68,10 +68,10 @@
 
 #### 程序集移动
 
-PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代码中现在引用 `VRC.SDK3A` 程序集。[这里有一个修复示例](https://github.com/BlackStartx/VRC-Gesture-Manager/pull/22)。
+PhysBoneGrabHelper 已经移动到其他程序集，您可能需要在您的代码中现在引用 `VRC.SDK3A` 程序集。[这里有一个修复示例](https://github.com/BlackStartx/VRC-Gesture-Manager/pull/22)。
 
 #### 不适用于公共使用的变更
-此外，我们对以下类进行了一些更改，这些类并不被视为 SDK 的公共 API 的一部分，你应尽快停止使用它们。
+此外，我们对以下类进行了一些更改，这些类并不被视为 SDK 的公共 API 的一部分，您应尽快停止使用它们。
 我们将在五月底前发布一份列出我们 SDK 中所有排除项的文档。
 - `ApiCacheEditor`
 - `VRC.Core.ApiCache`
@@ -110,7 +110,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代�
 
 ### 新功能
 
-* 约束现在在虚拟形象的性能统计中被计数。它们目前不会影响你的性能排名。
+* 约束现在在虚拟形象的性能统计中被计数。它们目前不会影响您的性能排名。
 * 为虚拟形象添加了对 "VelocityMagnitude" 动画属性的支持。
 * 为 VRCPhysBone 添加了 "Snap To Hand" 选项。启用后，抓取骨骼时，它会对准用户的手，否则抓取会有偏移，除非被拖动，否则不会初始移动。
 * 为 VRCPhysBones 添加了 "Reset When Disabled" 选项。启用后，当组件被禁用时，骨骼将重置到它们的休息位置。
@@ -118,7 +118,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代�
   * 允许碰撞
   * 允许抓取
   * 允许摆姿势
-* 纹理 VRAM 使用现在计入你的虚拟形象的总体性能评级。
+* 纹理 VRAM 使用现在计入您的虚拟形象的总体性能评级。
 * 添加了设置虚拟形象参数以不同步的能力，解决了 [从表达菜单控制不同步参数](https://vrchat.canny.io/avatar-30/p/feedback-control-the-not-sync-parameters-from-expressions-menu) 的问题。
 * Udon 现在可以访问临时 RenderTextures，以及通过 [VRCGraphics](https://docs.vrchat.com/docs/vrcgraphics) 为 RenderTexture，Texture2D，Texture3D 和 Sprite 提供构造函数。
 
@@ -132,11 +132,11 @@ PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代�
 
 ### 其他更改
 
-* 在 UdonBehaviours 的 OnDeserialization() 方法中添加了 OnDeserializationResult 参数。这使你能够查看此数据发送和接收的时间。
+* 在 UdonBehaviours 的 OnDeserialization() 方法中添加了 OnDeserializationResult 参数。这使您能够查看此数据发送和接收的时间。
 
 ## 3.1.11
 
-从这个版本开始，我们将不再发布解压到你的 `Assets` 文件夹的传统 `.unitypackage` 文件。此页面将作为 SDK 的更新日志！
+从这个版本开始，我们将不再发布解压到您的 `Assets` 文件夹的传统 `.unitypackage` 文件。此页面将作为 SDK 的更新日志！
 
 ### 概述
 
@@ -155,7 +155,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代�
 * UdonBehaviours 的 Unity 检查器现在会检测缺失的 `VRCUrlInputField` 变量，并提供重新加载 SDK 的选项，以防这个组件没有正确加载。关闭了[这个 Canny](https://feedback.vrchat.com/sdk-bug-reports/p/vrc-url-input-field-component-missing-from-project-randomly)。（这是一个已知问题，将在我们可以升级到 Unity 2020 或更高版本时修复。）
 * 修复了在从通用切换到人形骨架时，虚拟形象描述符中 FX 层重复的问题。
 * 修复了 Unity 无限重载程序集卡住的问题。
-* 将你可以从 SDK 窗口进行构建和测试的客户端数量限制在最少 0 个和最多 8 个。
+* 将您可以从 SDK 窗口进行构建和测试的客户端数量限制在最少 0 个和最多 8 个。
 
 ### 其他更改
 
@@ -166,7 +166,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代�
 
 ### 已知问题
 
-* 如果你在 Midi 播放器中更改 midi 轨道，而可视化器是打开的，那么可视化器不会更新到新的轨道，除非它被关闭然后重新打开。
+* 如果您在 Midi 播放器中更改 midi 轨道，而可视化器是打开的，那么可视化器不会更新到新的轨道，除非它被关闭然后重新打开。
 
 ## 3.1.9
 * 世界 - VRCSDK3-WORLD-2022.10.18.19.47_Public.unitypackage
@@ -184,16 +184,16 @@ PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代�
     * `=` : float equality comparison
     * `Shift+B` : Block
   * 按住 `C`，然后点击一个常量将其转换为变量
-    * 你也可以通过右键点击常量来做到这一点
+    * 您也可以通过右键点击常量来做到这一点
   * `Ctrl+G` 快速分组
   * `L+Click` 记录选定节点的值
   * `Shift+A` 对齐节点
   * 按住 `Shift+F`，然后点击一个输出数组类型的节点，自动生成 ForEach 循环
   * 上述大多数操作也可以通过右键菜单完成
-* 添加了一个新的顶部栏，显示当前打开的图，并在你打开更多图时向其打开新的 "标签"
-  * 你可以使用 X 按钮关闭每个标签
+* 添加了一个新的顶部栏，显示当前打开的图，并在您打开更多图时向其打开新的 "标签"
+  * 您可以使用 X 按钮关闭每个标签
 * 侧边栏中的事件/组条目可点击，便于快速导航
-* 在顶部添加了搜索栏，允许你搜索你的活动图
+* 在顶部添加了搜索栏，允许您搜索您的活动图
   * 按 `Ctrl+F` 将焦点移动到搜索栏
   * 输入至少 3 个字母后激活搜索
   * 当有多个搜索结果时，按 Enter 将在它们之间跳转
@@ -241,14 +241,14 @@ PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代�
   * VRCShader.SetGlobalInteger
   * VRCShader.SetGlobalTexture
   * VRCShader.SetGlobalColor
-* VRCShader 函数在某些情况下接受字符串输入（主要是纹理名称）。对于这些输入，你必须使用 _Udon 前缀
+* VRCShader 函数在某些情况下接受字符串输入（主要是纹理名称）。对于这些输入，您必须使用 _Udon 前缀
   * 有一个例外。VRCShader 函数也会接受精确的字符串 _AudioTexture，以适应现有的广泛使用的社区创建的 AudioLink 系统
 
 ## 3.1.7
 
 没有匹配的 .unitypackage 版本
 
-* 在尝试获取长度之前，检查场景描述符是否有空的生成对象，修复了手动向你的世界添加场景描述符时的问题。
+* 在尝试获取长度之前，检查场景描述符是否有空的生成对象，修复了手动向您的世界添加场景描述符时的问题。
 * 在加载示例场景之前提示用户保存他们的场景，修复了[这个 Canny 问题](https://feedback.vrchat.com/sdk-bug-reports/p/switching-to-the-example-scene-deletes-unsaved-changes)。
 
 ## 3.1.6
@@ -274,7 +274,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代�
   * VRCShader.SetGlobalInteger
   * VRCShader.SetGlobalTexture
   * VRCShader.SetGlobalColor
-* VRCShader 函数在某些情况下接受字符串输入（主要是纹理名称）。对于这些输入，你必须使用 _Udon 前缀
+* VRCShader 函数在某些情况下接受字符串输入（主要是纹理名称）。对于这些输入，您必须使用 _Udon 前缀
   * 有一个例外。VRCShader 函数也会接受精确的字符串 _AudioTexture，以适应现有的广泛使用的社区创建的 AudioLink 系统
 
 ## 3.1.6-beta.1
@@ -285,7 +285,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，你可能需要在你的代�
 ---
 
 - 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。文档已更新：https://docs.vrchat.com/docs/playable-layers#fx
-- 所有输入字段都将弹出键盘，我们添加了一个组件，如果你不希望在字段上使用这个功能，可以禁用它
+- 所有输入字段都将弹出键盘，我们添加了一个组件，如果您不希望在字段上使用这个功能，可以禁用它
 - 添加了自定义镜像天空盒和清除标志的能力
 - 添加了几个与图形和着色器操作相关的新 Udon 节点：
   - `VRCGraphics.DrawMeshInstanced`

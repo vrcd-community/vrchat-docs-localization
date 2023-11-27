@@ -10,7 +10,7 @@
     <div class="links-group links-group-extra">
         <HomeLinkButton text="UdonSharp" link="/udonsharp.docs.vrchat.com/" description="一个把 C# 代码编译为 UdonAssembly 的编译器。" />
         <HomeLinkButton text="创作者助手" link="/vcc.docs.vrchat.com/" description="创建 VRChat 内容的新起点。" />
-        <HomeLinkButton text="ClientSim" link="/clientsim.docs.vrchat.com/" description="一个允许你在 Unity 内测试 VRChat 世界的工具。" />
+        <HomeLinkButton text="ClientSim" link="/clientsim.docs.vrchat.com/" description="一个允许您在 Unity 内测试 VRChat 世界的工具。" />
     </div>
 </template>
 
