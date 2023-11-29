@@ -55,7 +55,7 @@
 	}
 }
 ```
-4b. 如果这个工具还没有迁移到 VPM，而是应该放在 Assets 文件夹中，我可以将它复制到 `HypeWorld\Assets` 中。Assets、Packages 和 ProjectSettings 文件夹中的所有内容都将被复制到我的新项目中。确保您*不*包含文件 ProjectSettings/ProjectVersion.txt。这不包含在 World 模板中，但如果您从现有项目中复制文件，它将在您的 ProjectSettings 文件夹中。
+4b. 如果这个工具还没有迁移到 VPM，而是应该放在 Assets 文件夹中，您可以将它复制到 `HypeWorld\Assets` 中。Assets、Packages 和 ProjectSettings 文件夹中的所有内容都将被复制到您的新项目中。确保您*排除*文件 ProjectSettings/ProjectVersion.txt。这不包含在 World 模板中，但如果您从现有项目中复制文件，它将在您的 ProjectSettings 文件夹中。
 
-有了这个文件夹，当选择创建新项目时，您的模板现在应该会出现在模板屏幕的右侧：
+有了这个文件夹，当选择创建新项目时，您的模板现在应该会出现在模板功能界面的右侧：
 ![用户模板](/vcc.docs.vrchat.com/images/user-templates.png)

@@ -347,7 +347,7 @@ vpm list unity
 4. 运行 [vpm check hub](#check-hub) 来查找并保存 Unity Hub 的位置。目前，我们假设它已经安装到其默认位置 `/Applications/Unity Hub.app/Contents/MacOS/Unity Hub`。如果不是这样，您需要手动打开您的设置文件，并将 `pathToUnityHub` 设置为正确的绝对路径。确保目标是 UnityHub.app 内的可执行文件，如默认路径所示。
 5. 运行 [vpm check unity](#check-unity) 来查找并保存 Unity 编辑器的位置。VPM 将使用 Hub 来查找并保存路径，所以请确保 VPM 首先可以找到 Hub。
 
-就是这样！您应该能够[从模板创建新项目](#new)，[向项目添加包](#add-package)以及执行大多数其他功能。您可以[提交一个 Canny](https://vrchat.canny.io/creator-companion-beta) 来报告任何不起作用的方法。
+就是这样！您应该能够[从模板创建新项目](#new)，[向项目添加包](#add-package)以及执行大多数其他功能。您可以[提交一个 Canny](https://vrchat.canny.io/creator-companion-beta) 来报告任何不起作用的功能。
 
 ### Linux 设置
-目前，CLI 在 Linux 发行版上完全未经测试，但由于为 Mac 版本所做的工作，它可能仍然可以工作。然而，VPM 将无法找到您的 Unity Hub 或 Unity 编辑器路径，所以您现在需要手动更新您的 settings.json 文件来设置它们。
+目前，CLI 在 Linux 发行版上完全未经测试，但由于为 Mac 版本所做的工作，它可能仍然可以工作。然而，VPM 将无法自动寻找您的 Unity Hub 或 Unity 编辑器路径，所以您现在需要手动更新您的 settings.json 文件来设置它们。

@@ -22,7 +22,7 @@ VRChat 包管理器
 
 包管理器是我们开发的一个库，用于管理您的 VRChat Unity 项目的包。
 
-**技术规格**：该库是针对 .NET Standard 2.0 构建的，因此它可以在使用 .NET Framework 4.x 的 Unity 项目中，以及原生的 .NET Standard 和 Core 项目中运行，比如 [CLI](#cli)。
+**技术规格**：该库是针对 .NET Standard 2.0 构建的，因此它可以在使用 .NET Framework 4.x 的 Unity 项目，以及原生的 .NET Standard 和 Core 项目中运行，比如 [CLI](#cli)。
 
 ## CLI
 VPM 命令行接口
