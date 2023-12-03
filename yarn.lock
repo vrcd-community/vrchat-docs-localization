@@ -1770,6 +1770,49 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdit/plugin-align@npm:^0.7.4":
+  version: 0.7.4
+  resolution: "@mdit/plugin-align@npm:0.7.4"
+  dependencies:
+    "@mdit/plugin-container": "npm:0.7.4"
+    "@types/markdown-it": "npm:^13.0.7"
+  peerDependencies:
+    markdown-it: ^13.0.2
+  peerDependenciesMeta:
+    markdown-it:
+      optional: true
+  checksum: 0608604e031c615f1e0e4fadbe33461a862feb9475ca0a3525e7d10bc1f2299510c5ce8b96dfa239a214f2a93102851f908f711da92a82830e3a7910e3cfe244
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-container@npm:0.7.4":
+  version: 0.7.4
+  resolution: "@mdit/plugin-container@npm:0.7.4"
+  dependencies:
+    "@types/markdown-it": "npm:^13.0.7"
+  peerDependencies:
+    markdown-it: ^13.0.2
+  peerDependenciesMeta:
+    markdown-it:
+      optional: true
+  checksum: 4009555c2ca08e81ce6337b91b78b8afab55a7865b7348a5e338e53b8072e1d284bcff0813ede6c786b8d81eeb27169a57ba98b45d35d16ff861fee3c0512083
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-figure@npm:^0.7.4":
+  version: 0.7.4
+  resolution: "@mdit/plugin-figure@npm:0.7.4"
+  dependencies:
+    "@types/markdown-it": "npm:^13.0.7"
+  peerDependencies:
+    markdown-it: ^13.0.2
+  peerDependenciesMeta:
+    markdown-it:
+      optional: true
+  checksum: 7e1b86ef01495b86a8a2dd91e0a4070a0ebbb914acb03bf01112d010ececd49bed8243af14bc5fc2e2430f6047f5d2bfda788cf3ffb7b5f0d81ad2d819ba4b60
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1924,6 +1967,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/markdown-it-footnote@npm:^3":
+  version: 3.0.3
+  resolution: "@types/markdown-it-footnote@npm:3.0.3"
+  dependencies:
+    "@types/markdown-it": "npm:*"
+  checksum: 18c6c8e659d4b05bb5ca6661cbbcc2af95014e6696ea1061642bba4dcef301664a5c8e4e82a53c0c826f019877a6469e86493a2e9971e4e985148f2da1635f55
+  languageName: node
+  linkType: hard
+
+"@types/markdown-it@npm:*, @types/markdown-it@npm:^13.0.7":
+  version: 13.0.7
+  resolution: "@types/markdown-it@npm:13.0.7"
+  dependencies:
+    "@types/linkify-it": "npm:*"
+    "@types/mdurl": "npm:*"
+  checksum: fb9fe249e5542e1cce5d7b006125cd976dc9a1d093ef2639e6e35fbc5fce47aacc2f166f2678b1cbe27939f1f05f85e5b7b9e363269b59834cf7431d8461f48d
+  languageName: node
+  linkType: hard
+
 "@types/markdown-it@npm:^13.0.4":
   version: 13.0.6
   resolution: "@types/markdown-it@npm:13.0.6"
@@ -1998,6 +2060,13 @@ __metadata:
     vite: ^4.0.0
     vue: ^3.2.25
   checksum: 81369bb259b9deb9299f9f5197abd2ff799bd1c04eccac8a6db8b1873a83d5a92fe49bf0a933ffd942b849ead507a99e56dafc1b2a2436a574eb29f58cfdc54c
+  languageName: node
+  linkType: hard
+
+"@vrcd-community/markdown-it-video@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@vrcd-community/markdown-it-video@npm:1.1.1"
+  checksum: ccc0e99ff5e545ac40a7bbbb4d07a3b688f67430de86a474560e793b274600ab25724f48cd3f4f845e72e066b2efd4d231cc34bbce5bc4e9017fad723e28d9b0
   languageName: node
   linkType: hard
 
@@ -4028,6 +4097,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-it-abbr@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "markdown-it-abbr@npm:1.0.4"
+  checksum: ee7d5ec4a99f17433f0071c9a8e16e8b79e3dd8ce89618a6d6e3aa1d04120965906d17e4cba1de5b29b3d1938b04d33693b936df0dd6fc1f093177b9625b95de
+  languageName: node
+  linkType: hard
+
+"markdown-it-block-embed@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "markdown-it-block-embed@npm:0.0.3"
+  checksum: 73ffdb5d12a9d8fab1e2e92dbfd8df30f2f6a5d16c42a04085366588e4cf5fb534c3129a5f14d4f86034a275a1315cf9833eae1d14595539810ba89bee778e32
+  languageName: node
+  linkType: hard
+
+"markdown-it-footnote@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "markdown-it-footnote@npm:3.0.3"
+  checksum: 0e319295da1f7ad3d970e931f46c53f94beba313516df5d5da8cf9d6039a1c6fab1e4993e8f32b516d55b58d2e2c6d071090a97f46e734aaffbe8443ce54f7a5
+  languageName: node
+  linkType: hard
+
+"markdown-it-mark@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "markdown-it-mark@npm:3.0.1"
+  checksum: cb9d8bee158440938e615d9f2866b6ee3b98666aba7d4c1a78d9df2e0c121a23f2c9172d1f92680883eae9229794a5e6e7e15e76bfd151fadf8be2299330905f
+  languageName: node
+  linkType: hard
+
+"markdown-it-sub@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "markdown-it-sub@npm:1.0.0"
+  checksum: 8b5a71a11f718d787e591e22ed028adc789ba62dac6ca0e22a4714c9533868431a4227dbefb921be39ad3388c25fa019d9a510dffed865811ebcb2cbecbbf53d
+  languageName: node
+  linkType: hard
+
+"markdown-it-sup@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "markdown-it-sup@npm:1.0.0"
+  checksum: 9e593acb8c79dbb917645affde3c46ecb50baa59c740ffe4ecc7bfa470b5b746338f12c65219d6c4112f9f2b01b68cbd151aaabbac878f34e07c7120e5959324
+  languageName: node
+  linkType: hard
+
 "mdn-data@npm:2.0.28":
   version: 2.0.28
   resolution: "mdn-data@npm:2.0.28"
@@ -5553,10 +5664,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vrchat-docs-localization@workspace:."
   dependencies:
+    "@mdit/plugin-align": "npm:^0.7.4"
+    "@mdit/plugin-figure": "npm:^0.7.4"
     "@tsconfig/node18": "npm:^18.2.2"
+    "@types/markdown-it-footnote": "npm:^3"
     "@types/node": "npm:^20.9.0"
     "@vite-pwa/vitepress": "npm:^0.3.0"
+    "@vrcd-community/markdown-it-video": "npm:^1.1.1"
     "@vue/tsconfig": "npm:^0.4.0"
+    markdown-it-abbr: "npm:^1.0.4"
+    markdown-it-block-embed: "npm:^0.0.3"
+    markdown-it-footnote: "npm:^3.0.3"
+    markdown-it-mark: "npm:^3.0.1"
+    markdown-it-sub: "npm:^1.0.0"
+    markdown-it-sup: "npm:^1.0.0"
     sharp: "npm:^0.32.6"
     svgo: "npm:^3.0.4"
     vite-plugin-image-optimizer: "npm:^1.1.7"
