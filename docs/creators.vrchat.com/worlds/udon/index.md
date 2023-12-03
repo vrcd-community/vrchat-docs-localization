@@ -21,7 +21,7 @@
 
 ::: details YouTube 源视频
 ::: danger 该视频内容已经过期，不符合现在的安装 SDK 流程
-<iframe width="620" height="380" src="https://www.youtube-nocookie.com/embed/8gXzBTqlP6I?si=NnVnXdNeR6o3gDLy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+@[youtube](https://www.youtube.com/watch?v=8gXzBTqlP6I)
 :::
 
 - 如果你更喜欢看文字教程，可以自己阅读我们的 [开始使用 Udon](https://creators.vrchat.com/worlds/udon/getting-started-with-udon) 页面。
