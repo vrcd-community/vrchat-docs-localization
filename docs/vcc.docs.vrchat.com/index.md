@@ -3,7 +3,7 @@
 ## What Is It?
 The VRChat Creator Companion (VCC) is the new Entry Point for creating things for VRChat! It currently includes our new [VRChat Package Manager (VPM)](vpm/), and houses official packages, community packages, learning resources, tools, and more!
 
-<iframe width="100%" class="ratio-16-by-9" src="https://www.youtube-nocookie.com/embed/0u1g0TYoJsU" title="YouTube video player" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+@[youtube](https://www.youtube.com/watch?v=0u1g0TYoJsU)
 
 ## Download It
 The Creator Companion is available at [https://vrchat.com/home/download](https://vrchat.com/home/download). You can always download the latest version from this direct url as well: [https://vrchat.com/download/vcc](https://vrchat.com/download/vcc).

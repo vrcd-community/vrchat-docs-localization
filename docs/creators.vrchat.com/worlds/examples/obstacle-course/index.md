@@ -2,7 +2,8 @@
 title: "Obstacle Course"
 ---
 # Overview
-<iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fid3VqPUy_rY%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Did3VqPUy_rY&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fid3VqPUy_rY%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube" width="854" height="480" scrolling="no" title="YouTube embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe>
+
+@[youtube](https://www.youtube.com/watch?v=id3VqPUy_rY)
 
 This project was created for our second World Jam, and serves as a fun starter kit for a Time Trial game world!
 

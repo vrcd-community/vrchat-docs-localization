@@ -10,12 +10,13 @@
 ## 总览：Udon 的网络系统是怎么工作的
 
 ::: details Youtube 源视频
-<iframe width="650" height="380" src="https://www.youtube-nocookie.com/embed/Mb6ZYBEhxiI?si=mcsfXwkM1qMYdkod" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+@[youtube](https://www.youtube.com/watch?v=Mb6ZYBEhxiI)
 :::
 ::: info
 BiliBili 搬运版本有 CC 字幕，受限于 BiliBili 平台限制，仅 BiliBili 网站或客户端可显示字幕。
 :::
-<iframe src="//player.bilibili.com/player.html?bvid=BV1Zj41127zo&page=1" width="690" height="380" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+@[bilibili](//player.bilibili.com/player.html?bvid=BV1Zj41127zo)
 
 Udon 网络系统的三个主要概念分别为 **变量（Variables）**、**事件（Events）**和**所有者（Ownership）**
 

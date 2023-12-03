@@ -21,7 +21,9 @@ You can [read more about that here](/vcc.docs.vrchat.com/guides/using-project-te
 :::
 
 ## User Templates
-<iframe width="100%" class="ratio-16-by-9" src="https://www.youtube-nocookie.com/embed/_hK7FIJ1gTU" title="YouTube video player" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+
+@[youtube](https://www.youtube.com/watch?v=_hK7FIJ1gTU)
+
 You can also add your own templates to easily start projects with your favorite packages, tools and prefabs. The easiest way to do this is to build from one of the included templates. Here's an example of how to do that for a World template where we include an imaginary tool called `HypeGenerator`. 
 
 1. Copy the folder `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\VRCTemplates\World` to `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\Templates` (use your actual drive letter if it's different than C).
