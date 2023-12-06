@@ -1,2 +1,2 @@
-# Player Manager
-The PlayerManager system is responsible for VRCPlayerApi data during ClientSim’s runtime. This system handles creating and destroying players, managing who is the current master, and sending the related [Events](event-dispatcher.md) such as OnPlayerJoin, OnPlayerLeft, and OnNewMaster. The PlayerManager is similar to how it was in CyanEmu, but this time is an instanced class rather than static. Most of the VRCPlayerApi SDK hooks are linked to static functions within this class.
+# 玩家管理器
+玩家管理器负责在 ClientSim 运行时处理 VRCPlayerApi 数据。这个系统处理创建和销毁玩家的相关事件，管理当前的主要玩家，并发送相关的[事件](event-dispatcher.md)，如 OnPlayerJoin、OnPlayerLeft 和 OnNewMaster。玩家管理器的实现与 CyanEmu 中的实现类似，但在这里它是一个实例类而不是静态类。大多数 VRCPlayerApi SDK 钩子都链接到这个类中的静态函数。

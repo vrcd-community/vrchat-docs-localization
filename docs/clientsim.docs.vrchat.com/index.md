@@ -8,7 +8,7 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直
 
 - 在 Unity 中调试所有内容。
 - 在 Play 模式下检查 Udon 变量。
-- 桌面玩家控制器。
+- 桌面玩家控制
 - 抓取 Pickups，使用 Interacts，UI 和 Stations。
 - 在 Play 上删除 EditorOnly 对象。
 
@@ -17,11 +17,11 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直
 ### 要求
 
 - Unity 2019.4.29-31
-- [VRChat Base](https://github.com/vrchat/packages/tree/main/packages/com.vrchat.base) 和 [Worlds](https://github.com/vrchat/packages/tree/main/packages/com.vrchat.worlds) SDKs 的包版本
+- [VRChat Base](https://github.com/vrchat/packages/tree/main/packages/com.vrchat.base) 和 [Worlds](https://github.com/vrchat/packages/tree/main/packages/com.vrchat.worlds) SDKs 的合适版本
 
 ### 安装
 
-> 注意：使用 VRChat 创作者伴侣的公开 Beta 版本，安装将会更加简单，即将推出™
+> 注意：可以试试使用即将推出的 VRChat 创作者助手公开 Beta 版本，安装将会更加简单。
 >
 - 在您的项目中，打开 Unity 包管理器，点击 + 按钮并选择 '从 git URL 添加包...'。
     - 输入 `https://github.com/vrchat/packages.git?path=/packages/com.vrchat.base#vcc`。然后等待包导入，或者如果您关闭了自动刷新，按 Ctrl+R 刷新。
@@ -31,7 +31,7 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直
 ### 入门
 
 - 打开您的 VRChat 世界场景
-- 在 Unity 中按播放
+- 在 Unity 中按下播放按钮
 - 测试您的世界
 
 

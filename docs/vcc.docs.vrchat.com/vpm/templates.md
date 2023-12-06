@@ -20,15 +20,15 @@
 
 :::
 
-## User Templates
+## 用户模板
 
 @[youtube](https://www.youtube.com/watch?v=_hK7FIJ1gTU)
 
-You can also add your own templates to easily start projects with your favorite packages, tools and prefabs. The easiest way to do this is to build from one of the included templates. Here's an example of how to do that for a World template where we include an imaginary tool called `HypeGenerator`. 
+你也可以添加自己的模板，以便轻松地使用你喜欢的包、工具和预制开始项目。最简单的方法是从其中一个包含的模板构建。这是一个我们在世界模板中包含一个名为 `HypeGenerator` 的虚构工具的例子。
 
-1. Copy the folder `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\VRCTemplates\World` to `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\Templates` (use your actual drive letter if it's different than C).
-2. Rename the folder from `World` to something descriptive like `HypeWorld`.
-3. Modify HypeWorld\package.json:
+1. 将文件夹 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\VRCTemplates\World` 复制到 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\Templates`（如果实际的驱动器字母不是 C，使用你的实际驱动器字母）。
+2. 将文件夹从 `World` 重命名为描述性的名称，如 `HypeWorld`。
+3. 修改 HypeWorld\package.json：
 
 ```json
 {
