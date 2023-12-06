@@ -4,6 +4,13 @@ import { vrcahtDocsSidebars, vrchatCreatorsDocsSidebar, vccDocsSidebar, udonShar
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { withPwa } from '@vite-pwa/vitepress'
 
+// @ts-expect-error
+import markdownItAbbr from 'markdown-it-abbr'; // @ts-expect-error
+import markdownItMark from 'markdown-it-mark'; // @ts-expect-error
+import markdownItVideo from '@vrcd-community/markdown-it-video';
+import markdownItFootnote from 'markdown-it-footnote';
+import { align } from "@mdit/plugin-align";
+import { figure } from "@mdit/plugin-figure";
 
 // refer https://vitepress.dev/reference/site-config for details
 export default withPwa(defineConfig({
@@ -142,7 +149,42 @@ export default withPwa(defineConfig({
       dangerLabel: '危险',
       infoLabel: '信息',
       detailsLabel: '详细信息'
-    }
+    },
+
+    config(md) {
+      md.use(markdownItAbbr)
+        .use(markdownItMark)
+        .use(markdownItVideo, {
+          youtube: {
+            nocookie: true,
+            width: 'auto',
+            height: 'auto'
+          },
+          bilibili: {
+            width: 'auto',
+            height: 'auto'
+          },
+          vimeo: {
+            width: 'auto',
+            height: 'auto'
+          },
+          vine: {
+            width: 'auto',
+            height: 'auto'
+          },
+          prezi: {
+            width: 'auto',
+            height: 'auto'
+          },
+          osf: {
+            width: 'auto',
+            height: 'auto'
+          },
+        })
+        .use(markdownItFootnote)
+        .use(align)
+        .use(figure)
+    },
   },
 
   vite: {

@@ -20,14 +20,15 @@
 
 :::
 
-## 用户模板
+## User Templates
 
-<iframe width="100%" class="ratio-16-by-9" src="https://www.youtube-nocookie.com/embed/_hK7FIJ1gTU" title="YouTube video player" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
-您也可以添加自己的模板，以便轻松地启动带有您喜欢的包、工具和预设的项目。最简单的方法是从其中一个包含的模板构建。以下是一个示例，说明如何为包含一个名为 `HypeGenerator` 的虚构工具的 World 模板执行此操作。
+@[youtube](https://www.youtube.com/watch?v=_hK7FIJ1gTU)
 
-1. 将文件夹 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\VRCTemplates\World` 复制到 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\Templates`（如果实际驱动器字母与 C 不同，请使用实际驱动器字母）。
-2. 将文件夹从 `World` 重命名为描述性的名称，如 `HypeWorld`。
-3. 修改 HypeWorld\package.json：
+You can also add your own templates to easily start projects with your favorite packages, tools and prefabs. The easiest way to do this is to build from one of the included templates. Here's an example of how to do that for a World template where we include an imaginary tool called `HypeGenerator`. 
+
+1. Copy the folder `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\VRCTemplates\World` to `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\Templates` (use your actual drive letter if it's different than C).
+2. Rename the folder from `World` to something descriptive like `HypeWorld`.
+3. Modify HypeWorld\package.json:
 
 ```json
 {

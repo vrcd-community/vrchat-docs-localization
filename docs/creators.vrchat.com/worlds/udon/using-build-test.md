@@ -10,7 +10,8 @@ description: "Learn how to get set up to create Udon-powered Worlds in VRChat."
 Before you read this page, you should read [What is Udon](/creators.vrchat.com/worlds/udon/) and [Getting Started with Udon](/creators.vrchat.com/worlds/udon/getting-started-with-udon).
 :::
 
-<iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fvideoseries%3Flist%3DPLe9XHNvXcouQjg5GULWGLj1tMzeythnQi%26start%3D0&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D8yaQY0arCnc&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F8yaQY0arCnc%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube" width="854" height="480" scrolling="no" title="YouTube embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe>
+@[youtube](https://www.youtube.com/watch?v=8yaQY0arCnc)
+
 Some simple things in your world will work just by pressing 'Play' in the Editor - mouse events, timers, things that don't need interaction from avatars or networking. For a lot of the interesting functionality, you're going to need to make a build of your world that runs in the actual VRChat Client.
 
 ## Open the UdonExampleScene

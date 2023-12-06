@@ -3,7 +3,7 @@
 ## 它是什么？
 VRChat 创作者助手（VCC）是为 VRChat 创建内容的新工具！它目前包括我们新的 [VRChat 包管理器（VPM）](vpm/)，并包含官方包、社区包、学习资源、工具等等！
 
-<iframe width="100%" class="ratio-16-by-9" src="https://www.youtube-nocookie.com/embed/0u1g0TYoJsU" title="YouTube video player" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+@[youtube](https://www.youtube.com/watch?v=0u1g0TYoJsU)
 
 ## 如何下载它
 创作者助手可以在 [https://vrchat.com/home/download](https://vrchat.com/home/download) 下载。您也可以通过这个直接的 URL 下载最新版本：[https://vrchat.com/download/vcc](https://vrchat.com/download/vcc)。
