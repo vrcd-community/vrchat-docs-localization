@@ -1,32 +1,32 @@
-# VRCSDK Helpers
+# VRCSDK助手
 
-The Helper components are added to an object to help with handling the behavior of VRC SDK components. The role of these components remains the same compared to CyanEmu and Phase 2, although some logic not specific to the function of the object itself has been stripped out. As an example, in CyanEmu the CyanEmuPickupHelper script handled the logic for holding pickups. Now this behavior has been moved outside the pickup helper class, and into the pickup management system. The PickupHelper code now only provides data for how the PlayerHand should handle the pickup.
+助手组件被添加到对象上，以帮助处理VRC SDK组件的行为。这些组件的角色与CyanEmu和Phase 2相比保持不变，尽管一些与对象功能本身无关的逻辑已被剥离出来。例如，在CyanEmu中，CyanEmuPickupHelper脚本处理了持有拾取物的逻辑。现在，这种行为已经从拾取助手类中移出，并移入拾取管理系统。PickupHelper代码现在只提供有关PlayerHand应如何处理拾取物的数据。
 
-Helper classes may also extend interfaces that are used in ClientSim. There are two categories of interfaces: [Usables](#usable-interfaces) and [Handlers](#handler-interfaces). 
+助手类也可能扩展在ClientSim中使用的接口。有两类接口：[可用接口](#可用接口)和[处理器接口](#处理器接口)。
 
-## Usable Interfaces
+## 可用接口
 
-Usable interfaces normally end in “able”, and represent items that can be used somehow within ClientSim. They provide information on how they can be used, but do not include the methods to use them.
+可用接口通常以“able”结尾，代表在ClientSim中可以某种方式使用的项目。它们提供了如何使用它们的信息，但不包括使用它们的方法。
 
-| Name                       | Description                                                      |
+| 名称                       | 描述                                                      |
 |----------------------------|------------------------------------------------------------------|
-| IClientSimInteractable     | Represents an object that can be interacted with                 |
-| IClientSimPickupable       | Represents an object that can be picked up, Extends Interactable |
-| IClientSimStation          | Represents an object that the player can use to sit              |
-| IClientSimSyncable         | Represents an object that can have an owner                      |
-| IClientSimPositionSyncable | Represents an object that syncs its position, Extends Syncable   |
+| IClientSimInteractable     | 代表可以与之交互的对象                 |
+| IClientSimPickupable       | 代表可以被拾取的对象，扩展Interactable |
+| IClientSimStation          | 代表玩家可以使用的坐下的对象              |
+| IClientSimSyncable         | 代表可以有所有者的对象                      |
+| IClientSimPositionSyncable | 代表同步其位置的对象，扩展Syncable   |
 
-## Handler Interfaces
+## 处理器接口
 
-Using these two interface types, the Helper classes are ways of wrapping VRChat SDK component information to provide it to ClientSim.
+使用这两种接口类型，助手类是包装VRChat SDK组件信息以提供给ClientSim的方式。
 
-| Name                       | Description                                                      |
+| 名称                       | 描述                                                      |
 |----------------------------|------------------------------------------------------------------|
-| PositionSyncedHelperBase   | Helper for VRCObjectSync,  Extends PositionSyncedHelperBase. Syncable, PositionSyncable, RespawnHandler |
-| ObjectSyncHelper| Helper for VRCObjectSync, Extends PositionSyncedHelperBase. Syncable, PositionSyncable, RespawnHandler |
-| UdonHelper          | Helper for UdonBehaviour, Extends PositionSyncedHelperBase. Syncable, PositionSyncable, RespawnHandler, Interactable, PickupHandler, StationHandler, SyncableHandler |
-| PickupHelper     | Helper for VRCPickup. Pickupable |
-| StationHelper | Helper for VRCStation. Implements IClientSimStation |
-| ObjectPoolHelper| Helper for VRCObjectPool. Syncable |
-| CombatSystemHelper | Helper for Udon CombatSetup. Implements IVRC_Destructible. Helper component is added to the player object directly when initialized. |
-| SpatialAudioHelper | Helper for VRCSpatialAudioSource |
+| PositionSyncedHelperBase   | VRCObjectSync的助手，扩展PositionSyncedHelperBase。Syncable，PositionSyncable，RespawnHandler |
+| ObjectSyncHelper| VRCObjectSync的助手，扩展PositionSyncedHelperBase。Syncable，PositionSyncable，RespawnHandler |
+| UdonHelper          | UdonBehaviour的助手，扩展PositionSyncedHelperBase。Syncable，PositionSyncable，RespawnHandler，Interactable，PickupHandler，StationHandler，SyncableHandler |
+| PickupHelper     | VRCPickup的助手。Pickupable |
+| StationHelper | VRCStation的助手。实现IClientSimStation |
+| ObjectPoolHelper| VRCObjectPool的助手。Syncable |
+| CombatSystemHelper | Udon CombatSetup的助手。实现IVRC_Destructible。初始化时直接添加到玩家对象的助手组件。 |
+| SpatialAudioHelper | VRCSpatialAudioSource的助手 |

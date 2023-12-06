@@ -1,6 +1,6 @@
-# HighlightManager
+# 高亮管理器
 
-The HighlightManager will take an object and display an outline highlight effect for that object. This system wraps VRChat’s HighlightFX class. HighlightFX only takes a single renderer, whereas the HighlightManager takes a GameObject. Matching how VRChat handles highlighting objects, all renderers on the object and on its children are used for highlighting. Renderers that are disabled, have a null mesh, or are part of a static batch are ignored. If an object has no valid renderers, then a Highlight Proxy is used based on the first collider on the object. The Highlight Proxy will copy the transform values of the original mesh and also apply the collider size and scale to make it appear that the collider is being highlighted. The HighlightManager is used to visualize the results from the [PlayerRaycaster](player.md#playerraycaster) system. There is no set limit to the number of objects that can be highlighted, but only 2 objects are expected to be highlighted at once through ClientSim, one object per player hand. The HighlightManager links to the VRCSDK API for InputManager.EnableObjectHighlight. This hook only takes in renderers though and does not go through the full steps of finding children objects and creating proxies. 
+高亮管理器会接收一个对象，并为该对象显示轮廓高亮效果。此系统包装了VRChat的HighlightFX类。HighlightFX只接受一个渲染器，而高亮管理器接受一个游戏对象。与VRChat处理高亮对象的方式相匹配，对象及其子对象上的所有渲染器都用于高亮。禁用的渲染器，具有空网格的渲染器，或者是静态批处理的一部分的渲染器将被忽略。如果一个对象没有有效的渲染器，那么将使用基于对象上的第一个碰撞器的高亮代理。高亮代理将复制原始网格的变换值，并应用碰撞器的大小和比例，使其看起来像是高亮了碰撞器。高亮管理器用于可视化[玩家射线投射器](player.md#playerraycaster)系统的结果。可以高亮的对象数量没有设定限制，但通过ClientSim预计一次只能高亮两个对象，每个玩家手一个对象。高亮管理器链接到VRCSDK API的InputManager.EnableObjectHighlight。这个钩子只接受渲染器，不会经过查找子对象和创建代理的完整步骤。
 
-> [!NOTE]
-> The HighlightManager currently shows only a preview for how the object will look on Quest. A style matching Windows systems is forthcoming.
+> [!注意]
+> 高亮管理器目前只显示对象在Quest上的预览样式。匹配Windows系统的样式即将推出。

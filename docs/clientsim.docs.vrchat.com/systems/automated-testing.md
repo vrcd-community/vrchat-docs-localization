@@ -1,6 +1,6 @@
-# Automated Testing
+# 自动化测试
 
-ClientSim has many different tests to verify the behaviour of the program. The majority of the tests are Integration tests, but support for Unit tests is available. See Unity’s TestRunner to view all tests. When importing ClientSim as a package, tests can be enabled by adding the following line to the project’s package manifest after the `“dependencies” :{}` section:
+ClientSim有许多不同的测试来验证程序的行为。大多数测试是集成测试，但也支持单元测试。请查看Unity的TestRunner以查看所有测试。当将ClientSim作为包导入时，可以通过在`“dependencies” :{}`部分后面的项目包清单中添加以下行来启用测试：
 ```json
 "testables": [
   "com.unity.inputsystem",
@@ -8,75 +8,75 @@ ClientSim has many different tests to verify the behaviour of the program. The m
 ]
 ```
 
-Once added, Unity will import the tests and you will see them populated in the Test Runner Window.
+一旦添加，Unity将导入测试，您将在Test Runner窗口中看到它们。
 
 ![Test Runner](/clientsim.docs.vrchat.com/images/test-runner.png)
 
-## Unit Tests
+## 单元测试
 
-ClientSim has a few Unit Tests that can verify items outside of Unity Playmode. More items can be refactored to split away from MonoBehaviours to be more Unit Testable.
+ClientSim有一些单元测试，可以验证Unity Playmode之外的项目。可以重构更多项目，以便从MonoBehaviours中分离出来，使其更适合单元测试。
 
-## Integration Tests
+## 集成测试
 
-ClientSim now has a full integration test framework that tests the majority of the features included. This framework allows for sending input events and listening for ClientSim events to verify if the proper action happened. This framework can also be used for worlds to verify specific behaviours, allowing users to create their own tests.
+ClientSim现在有一个完整的集成测试框架，可以测试包含的大多数功能。该框架允许发送输入事件并监听ClientSim事件，以验证是否发生了适当的操作。此框架也可用于验证特定行为的世界，允许用户创建自己的测试。
 
-### Test Setup
+### 测试设置
 
-Due to the nature of how ClientSim starts using the InitializeOnLoad, testing requires modifying Unity editor settings to properly validate behaviour. In the test environment, InitializeOnLoad happens before playmode starts. The default Unity setting has Domain Reloading enabled on entering playmode. This means that on switching to playmode, all variable data is cleared. In order to get around this, all ClientSim tests must run with Domain Reloading disabled. This is handled automatically for any test written that derives from either of the two test fixture base classes: ClientSimTestBase and ClientSimWorldTestBase. 
+由于ClientSim使用InitializeOnLoad启动的方式，测试需要修改Unity编辑器设置以正确验证行为。在测试环境中，InitializeOnLoad在播放模式开始之前发生。默认的Unity设置在进入播放模式时启用了Domain Reloading。这意味着在切换到播放模式时，所有变量数据都会被清除。为了解决这个问题，所有ClientSim测试必须在禁用Domain Reloading的情况下运行。这对于任何从两个测试夹具基类（ClientSimTestBase和ClientSimWorldTestBase）派生的测试都是自动处理的。
 
-### Test Helpers
+### ClientSimTestHelper
 
-Both Integration Test Fixtures come with helper methods in verifying specific behaviour.
+两个集成测试夹具都带有帮助验证特定行为的方法。
 
-* **ClientSimTestHelpers** - This class contains helper methods to perform useful actions as well as listens to different ClientSim Events to verify actions have occurred.
+* **ClientSimTestHelpers** - 这个类包含了一些有用的方法，以及监听不同的ClientSim事件来验证是否发生了操作。
 
-* **ClientSimTestInput** - This class allows the user to set the value of any Desktop based Input event.
+* **ClientSimTestInput** - 这个类允许用户设置任何基于桌面的输入事件的值。
 
 ### ClientSimTestBase
 
-Tests fixtures that derive from this class are for testing individual prefabs and not for testing entire worlds. On test begin, ClientSim’s default behaviour is disabled. It is possible to load a world or spawn a prefab, but ClientSim must be started manually. Depending on the order, behaviour will be different compared to starting ClientSim normally through playmode. 
+从这个类派生的测试夹具用于测试单个预制件，而不是测试整个世界。在测试开始时，ClientSim的默认行为被禁用。可以加载一个世界或生成一个预制件，但必须手动启动ClientSim。根据顺序，行为将与通过播放模式正常启动ClientSim有所不同。
 
-1. If a world or prefab is loaded before starting ClientSim, then any VRC SDK component will not link into ClientSim and start as if ClientSim is disabled. Player spawn points will work as expected in this case as the VRC_SceneDescriptor is needed to start ClientSim and spawn a player.
-2. If a world or prefab is loaded after starting ClientSim, then all VRC SDK components will initialize with ClientSim behaviours as in normal playmode. In this case though, the player will have already spawned and will not be placed at the loaded world’s spawn point. 
+1. 如果在启动ClientSim之前加载了一个世界或预制件，那么任何VRC SDK组件都不会链接到ClientSim，并且会像ClientSim被禁用一样启动。在这种情况下，玩家的生成点将按预期工作，因为需要VRC_SceneDescriptor来启动ClientSim并生成玩家。
+2. 如果在启动ClientSim之后加载了一个世界或预制件，那么所有VRC SDK组件将以正常播放模式中的ClientSim行为进行初始化。但在这种情况下，玩家已经生成，并且不会被放置在加载的世界的生成点。
 
-The majority of ClientSim tests are written in this format. A scene with the minimum components needed to start ClientSim is loaded, ClientSim is started, and then from there the tests perform what is needed, such as calling the appropriate SDK API or spawning prefabs while simulating input events. 
+大多数ClientSim测试都是以这种格式编写的。加载了一个包含启动ClientSim所需的最少组件的场景，启动ClientSim，然后从那里进行测试，如调用适当的SDK API或生成预制件，同时模拟输入事件。
 
-Here is the list of integration tests:
+以下是集成测试的列表：
 
-#### Initialization Tests
-* Test the behaviour of ClientSim startup given different settings and initial scene objects.
+#### 初始化测试
+* 测试ClientSim在不同设置和初始场景对象下的启动行为。
 
-#### Helper Tests
-* Test the behaviour of various ClientSim SDK helper classes. AudioSpatializer, AVProVideoPlayer, ObjectPool, ObjectSync, Udon component without program, UIShape.
+#### 辅助测试
+* 测试各种ClientSim SDK辅助类的行为。AudioSpatializer，AVProVideoPlayer，ObjectPool，ObjectSync，没有程序的Udon组件，UIShape。
 
-#### Interact Tests
-* Test the interact system for handling interactable objects. Note that since Udon cannot be properly included in packages due to needing external references and are compiled often, this test uses a mock interactable object script
+#### 交互测试
+* 测试交互系统处理可交互对象的能力。请注意，由于Udon需要外部引用并且经常编译，因此无法在包中正确包含，此测试使用模拟可交互对象脚本。
 
-#### Pickup Tests
-* Test the interaction system, player hand, and input on different pickup situations.
+#### 拾取测试
+* 测试交互系统、玩家手和输入在不同拾取情况下的行为。
 
-#### Player Api Tests
-* Test behaviour for all exposed methods relating to VRCPlayerApi
+#### 玩家API测试
+* 测试所有与VRCPlayerApi相关的公开方法的行为。
 
-#### Player Controller Tests
-* Test Player locomotion settings.
+#### 玩家控制器测试
+* 测试玩家的移动设置。
 
-#### Station Tests
-* Tests using stations and expected behaviour with them.
+#### 站点测试
+* 测试使用站点和预期的站点行为。
 
-#### UI Tests
-* Test interactions with Unity UI using the VRC_UIShape component.
+#### UI测试
+* 使用VRC_UIShape组件测试与Unity UI的交互。
 
 ### ClientSimWorldTestBase
 
-Test fixtures that derive from this class are for testing full worlds and verifying the startup of ClientSim for the given world. The test is required to load a given world in the setup phase of the test, and then ClientSim will start normally as it would outside of the test environment by entering playmode. Due to ClientSim being started normally, only one test may be run at a time as playmode is only started once for all tests. If multiple tests are run together, they will all immediately fail with a warning mentioning that only one test can run at a time.
+从这个类派生的测试夹具用于测试完整的世界，并验证给定世界的ClientSim的启动。测试需要在测试的设置阶段加载给定的世界，然后ClientSim将正常启动，就像在测试环境外通过进入播放模式一样。由于ClientSim正常启动，因此一次只能运行一个测试，因为所有测试只启动一次播放模式。如果同时运行多个测试，它们将立即失败，并显示警告，只能一次运行一个测试。
 
-Three World tests are provided by default:
-#### No world descriptor
-* Test that ClientSim will fail to start if a scene is loaded without a world descriptor
+默认提供了三个世界测试：
+#### 没有世界描述符
+* 如果加载了没有世界描述符的场景，测试ClientSim将无法启动。
 
-#### Two Players
-* Start ClientSim normally in a basic world, spawn a remote player and verify all data on both players.
+#### 两个玩家
+* 在基本世界中正常启动ClientSim，生成一个远程玩家，并验证两个玩家的所有数据。
 
 #### WorldTestExample
-* This is an example test showing what it would be like for a user to write tests for their world. Test is included as a Sample for the ClientSim package and must be imported. Test shows how one would verify a simple “Puzzle” world.
+* 这是一个示例测试，展示了用户为他们的世界编写测试的情况。测试包含在ClientSim包的样本中，必须导入。测试展示了如何验证一个简单的“谜题”世界。

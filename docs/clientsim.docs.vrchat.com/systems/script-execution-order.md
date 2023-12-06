@@ -1,16 +1,16 @@
-# Script Execution Order
+# 脚本执行顺序
 
-| Execution Order | System Name          | Description                                                                                                                                                    |
-|-----------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| -Infinity       | UnityInputSystem     | Unity InputSystem updates before all MonoBehaviours. Input from user buttons are sent to ClientSimInput and events are dispatched.                             |
-| -3000           | TrackingProvider     | Input is checked to update the TrackignProvider. For example: Desktop head X rotation.                                                                         |
-| -3000           | PlayerController     | Update Player position before raycasting.                                                                                                                      |
-| -2000           | PlayerRaycaster      | Update the position of the PlayerHands to TrackingProvider hand data. Raycast to find interactables in the world. This must happen before EventSystems update. |
-| -1000           | Unity Event System   | Send mouse events to interact with UI. Order cannot be changed.                                                                                                |
-| 0               | ClientSimBehaviours  |                                                                                                                                                                |
-| 0               | UdonBehaviour        | Send Update Events to Udon Programs.                                                                                                                           |
-| 1               | UdonInput            | This must happen after UdonBehaviour.Update to ensure proper event order.                                                                                      |
-| 10000           | ClientSimBaseInput   | Update current frame tick for Input Events. Only needed to ensure tests and playmode act the same relating to when Input is processed.                         |
-| 30000           | PlayerStationManager | Update the position of players on a station as late as possible so all other scripts have had time to evaluate first.                                          |
-| 30001           | TooltipManager       | Update the position of Tooltip visuals after finalizing the player's position.                                                                                 |
-| 31000           | PostLateUpdater      | VRChat's PostLateUpdate event sent to UdonBehaviours.                                                                                                          |
+| 执行顺序 | 系统名称 | 描述 |
+|---|---|---|
+| -Infinity | UnityInputSystem | Unity InputSystem在所有MonoBehaviours之前更新。用户按钮的输入被发送到ClientSimInput并分派事件。 |
+| -3000 | TrackingProvider | 检查输入以更新TrackingProvider。例如：桌面头部X旋转。 |
+| -3000 | PlayerController | 在光线投射之前更新玩家位置。 |
+| -2000 | PlayerRaycaster | 将PlayerHands的位置更新为TrackingProvider手部数据。光线投射以找到世界中的可交互物体。这必须在EventSystems更新之前发生。 |
+| -1000 | Unity Event System | 发送鼠标事件以与UI交互。顺序不能更改。 |
+| 0 | ClientSimBehaviours |  |
+| 0 | UdonBehaviour | 将更新事件发送到Udon程序。 |
+| 1 | UdonInput | 这必须在UdonBehaviour.Update之后发生以确保正确的事件顺序。 |
+| 10000 | ClientSimBaseInput | 更新当前帧的输入事件的tick。只需要确保测试和播放模式在处理输入时表现相同。 |
+| 30000 | PlayerStationManager | 尽可能晚的更新站点上玩家的位置，以便所有其他脚本有时间先评估。 |
+| 30001 | TooltipManager | 在确定玩家位置后更新Tooltip视觉的位置。 |
+| 31000 | PostLateUpdater | 将VRChat的PostLateUpdate事件发送到UdonBehaviours。 |

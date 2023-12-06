@@ -1,93 +1,96 @@
-# Frequently Asked Questions
-## What does 'VCC' mean?
-**V**RChat **C**reator **C**ompanion. It's the official tool for creating and updating Unity projects for VRChat. Read more about the Creator Companion on our [glossary page](https://vcc.docs.vrchat.com/guides/glossary/). 
-## Why is my project missing packages? Or why can't I create a backup?
-The most common cause we've seen for this is that **the path to your project is longer than Windows can handle**.
-* Try creating your project at a path with fewer overall characters, like
-  `C:\Projects\My Project` rather than
+# 常见问题解答
+## 'VCC' 是什么意思？
+**V**RChat **C**reator **C**ompanion。这是用于创建和更新 VRChat Unity 项目的官方工具。在我们的[术语表页面](https://vcc.docs.vrchat.com/guides/glossary/)上阅读更多关于创作者助手的信息。
+
+## 为什么我的项目缺少包？或者为什么我无法创建备份？
+我们发现的最常见原因是**您的项目路径超过了 Windows 可处理的长度**。
+* 尝试在路径字符较少的地方创建您的项目，比如
+  `C:\Projects\My Project` 而不是
   `C:\Users\Username\Documents\Projects\VRChat\NewStuff\2022\My very very very very very very very very very very very very very very very very very long project`
-* Alternatively, [enable Win32 long paths in your Windows settings](https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=registry#enable-long-paths-in-windows-10-version-1607-and-later). (This setting is disabled by default in Windows and may lead to issues in older software.)
-## What are the benefits of the Creator Companion?
-The Creator Companion makes VRChat world or avatar creation more accessible and faster. It can automatically install the Unity Editor and Hub, download the VRChat SDKs and create and update your projects.
-Starting in 2023, new [VRChat SDK](https://docs.vrchat.com/docs/choosing-your-sdk) updates will only be available through the Creator Companion. If you'd like to use VRChat's newest SDK features in new or existing projects, [use the VCC](https://vcc.docs.vrchat.com/guides/getting-started/).
-## Where did my scene go? Why is it blank?
-After migration, Unity may show you a blank scene (with a `Main Camera` and `Directional Light`). Your scene is *probably* still there - Browse your `/Assets/` folder to find it.
-Some folders are **not** copied during migration. If your scene was previously saved as the SampleScene or the UdonExampleScene, you must first save it to your `/Assets/` folder before migration. Read about [Migrating Projects](https://vcc.docs.vrchat.com/vpm/migrating) to learn more.
-## Should I import legacy SDK packages `VRCSDK3[...].unitypackage` with the Creator Companion?
-No. VRChat SDK packages are managed by the VCC. Importing VRChat's Legacy SDK into a VCC project may break it. Read our [Getting Started](https://vcc.docs.vrchat.com/guides/getting-started) page to learn more about how the VCC imports the VRChat SDK.
-For users who prefer the Legacy style of setting up the SDK, we provide `VRChat-Worlds-SDK-[...].unitypackage` files on our websites. These files can only be used for new projects and are fully compatible with the Creator Companion.
-## Can I still use `.unitypackage` files for custom assets?
-Yes. The VCC changes how the VRChat SDK is imported, but `.unitypackage` legacy packages can still be distributed and imported as before. Keep in mind that old legacy packages may not work in newer versions of the SDK.
-If you create assets for other users, make sure to test them with these new SDKs to discover and fix any compatibility issues. You may need to create new versions of your assets if you're referencing VRChat's built-in assets, or if your Udon programs use older versions of [UdonSharp](https://udonsharp.docs.vrchat.com).
-The VCC also allows you to distribute packages using the new VPM format, making it even easier for your users to install and update your custom content. Read the [Packages](https://vcc.docs.vrchat.com/vpm/packages) page to learn more.
+* 或者，[在您的 Windows 设置中启用 Win32 长路径](https://learn.microsoft.com/zh-cn/windows/win32/fileio/maximum-file-path-limitation?tabs=registry#enable-long-paths-in-windows-10-version-1607-and-later)。（这个设置在 Windows 中默认是禁用的，可能会导致旧软件出现问题。）
 
-## What do I do if Webview2 is not installed correctly?
-![VRC Quick Launcher GUI](/vcc.docs.vrchat.com/images/webview2-error.png)
-The Creator Companion uses Webview2 to render its user interface. When you launch the Creator Companion, it will attempt to install it automatically.
+## 创作者助手有什么好处？
+创作者助手使 VRChat 世界或头像创建更加容易和快速。它可以自动安装 Unity 编辑器和 Hub，下载 VRChat SDK 并创建和更新您的项目。
+从 2023 年开始，新的 [VRChat SDK](https://docs.vrchat.com/docs/choosing-your-sdk) 更新将只通过创作者助手提供。如果您想在新的或现有的项目中使用 VRChat 的最新 SDK 功能，[使用 VCC](https://vcc.docs.vrchat.com/guides/getting-started/)。
 
-If you previously removed Microsoft Edge from your system, the Creator Companion may fail to launch correctly. WebView2 is usually installed alongside Microsoft Edge. 
+## 我的场景去哪了？为什么是空白的？
+迁移后，Unity 可能会显示一个空白场景（带有 `Main Camera` 和 `Directional Light`）。您的场景*可能*还在那里 - 浏览您的 `/Assets/` 文件夹找到它。
+一些文件夹在迁移过程中**不会**被复制。如果您的场景之前被保存为 SampleScene 或 UdonExampleScene，您必须在迁移之前先将其保存到您的 `/Assets/` 文件夹。阅读关于[迁移项目](https://vcc.docs.vrchat.com/vpm/migrating)的内容了解更多。
 
-This can usually be fixed by properly reinstalling Webview2. If Microsoft Edge runs correctly, then the Creator Companion should work correctly, too.
+## 我应该使用创作者助手导入旧版 SDK 包 `VRCSDK3[...].unitypackage` 吗？
+不应该。VRChat SDK 包由 VCC 管理。将 VRChat 的旧版 SDK 导入到 VCC 项目可能会破坏它。阅读我们的 [入门指南](https://vcc.docs.vrchat.com/guides/getting-started) 页面，了解更多关于 VCC 如何导入 VRChat SDK 的信息。
+对于更喜欢旧版设置 SDK 的用户，我们在我们的网站上提供 `VRChat-Worlds-SDK-[...].unitypackage` 文件。这些文件只能用于新项目，并且与创作者助手完全兼容。
 
-Download links
+## 我还可以使用 `.unitypackage` 文件导入自定义资产吗？
+可以。VCC 改变了 VRChat SDK 的导入方式，但 `.unitypackage` 旧版包仍可以像以前一样分发和导入。请注意，兼容旧版 SDK 的旧版包可能无法在 SDK 的新版本中工作。
+如果您为其他用户创建资产，确保使用这些新的 SDK 测试它们，以发现并修复任何兼容性问题。如果您引用了 VRChat 的内置资产，或者您的 Udon 程序使用了 [UdonSharp](https://udonsharp.docs.vrchat.com) 的旧版本，您可能需要创建相关资产的新版本。
+VCC 还允许您使用新的 VPM 格式分发包，使您的用户安装和更新您的自定义内容更加容易。阅读 [Packages](https://vcc.docs.vrchat.com/vpm/packages) 页面了解更多。
+
+## 如果 Webview2 没有正确安装，我应该怎么做？
+![VRC 快捷启动工具 GUI](/vcc.docs.vrchat.com/images/webview2-error.png)
+创作者助手使用 Webview2 来渲染其用户界面。当您启动创作者助手时，它会尝试自动安装。
+
+如果您之前从您的系统中移除了 Microsoft Edge，创作者助手可能无法正确启动。WebView2 通常与 Microsoft Edge 一起安装。
+
+通常可以通过正确地重新安装 Webview2 来解决这个问题。如果 Microsoft Edge 运行正常，那么创作者助手也应该能正常工作。
+
+下载链接
 - Webview2: https://developer.microsoft.com/en-us/microsoft-edge/webview2
 - Microsoft Edge: https://www.microsoft.com/en-us/edge
 
-## I just installed Unity Hub and Unity. Why is Unity not launching?
+## 我刚安装了 Unity Hub 和 Unity。为什么 Unity 没有启动？
 
-If you've installed Unity Hub but never launched it, your license may not have been activated. Unity cannot run without a valid license. It may try to launch, but silently fail.
+如果您已经安装了 Unity Hub 但从未启动过，您的许可证可能尚未激活。没有有效许可证，Unity 无法运行。它可能会尝试启动，但会默默失败。
 
-[Click here](https://support.unity.com/hc/en-us/articles/211438683-How-do-I-activate-my-license-) to learn how to activate your Personal license. (It's free!)
+[点击这里](https://support.unity.com/hc/en-us/articles/211438683-How-do-I-activate-my-license-) 学习如何激活您的个人许可证。（它是免费的！）
 
-If Unity is still failing to launch, you may want to view Unity's or Unity Hub's log files to find more information. [Here's how.](https://docs.unity3d.com/Manual/LogFiles.html)
+如果 Unity 仍然无法启动，您可能需要查看 Unity 或 Unity Hub 的日志文件以获取更多信息。[这是方法。](https://docs.unity3d.com/Manual/LogFiles.html)
 
-## Where do I find the Creator Companion's log files?
-The Creator Companion's logs can be found in:
-- In the 'Logs' tab
-- In the 'Settings' tab -> Files and Folders -> Logs
-- In the folder `C:\Users\[Your Name]\AppData\Local\VRChatCreatorCompanion\Logs`
+## 我在哪里可以找到创作者助手的日志文件？
+创作者助手的日志可以在以下位置找到：
+- 在 'Logs' 标签页
+- 在 'Settings' 标签页 -> Files and Folders -> Logs
+- 在文件夹 `C:\Users\[Your Name]\AppData\Local\VRChatCreatorCompanion\Logs`
 
-Every time to start the Creator Companion, it will create a log file like this:
-`20230307T025652-log.txt`(Year, month, day, hours, minutes, seconds)
+每次启动创作者助手，它都会创建一个像这样的日志文件：
+`20230307T025652-log.txt`（年，月，日，小时，分钟，秒）
 
-## How can I change where the Creator Companion will be installed?
-You can use the command line to run the Installer with the `/DIR` argument to set its location if needed. For example, if I wanted to install the 2.1.3 version to my "F" drive, I could run the following command from the folder where the Setup file is located:
+## 我如何更改创作者助手将要安装的位置？
+如果需要，您可以使用命令行运行带有 `/DIR` 参数的安装程序来设置其安装位置。例如，如果我想将 2.1.3 版本安装到我的 "F" 驱动器，我可以从存放 Setup 文件的文件夹运行以下命令：
 ```cmd
 VRChat_CreatorCompanion_Setup_2.1.3.exe /DIR = "F:/CreatorCompanion"
 ```
 
-## What do I do if I'm stuck on the Requirements Screen?
+## 如果我被卡在了`Requirements`屏幕上，我该怎么办？
 
-Outdated versions of the Creator Companion may get stuck on the 'Requirements' screen. This usually happens if your settings file may be corrupted, or a package listing may have been downloaded incorrectly.
+过时的创作者助手版本可能会被卡在 'Requirement' 屏幕上。这通常发生在您的设置文件可能被损坏，或者包列表可能下载不正确的情况下。
 ![image](https://user-images.githubusercontent.com/737888/204419137-d4a3a4ee-5035-4540-a27a-f871531bee7c.png)
-To fix this, please download the newest version of the Creator Companion at https://vrchat.com/download/vcc and follow the steps below.
+要解决这个问题，请在 https://vrchat.com/download/vcc 下载创作者助手的最新版本，并按照以下步骤操作。
 
-## What do I do if my settings file is invalid?
-If your settings file is corrupted (either through manual editing or through a bug), the Creator Companion may not launch correctly. You may see an error message, or the Creator Companion may fail to launch.
+## 如果我的设置文件无效，我该怎么办？
+如果您的设置文件被损坏（无论是通过手动编辑还是发生了 bug），创作者助手可能无法正确启动。您可能会看到一个错误消息，或者创作者助手可能无法启动。
 
-You can find the settings file at `%LocalAppData%\VRChatCreatorCompanion\settings.json` or at `C:\Users\You\AppData\Local\VRChatCreatorCompanion\settings.json`.
+您可以在 `%LocalAppData%\VRChatCreatorCompanion\settings.json` 或 `C:\Users\You\AppData\Local\VRChatCreatorCompanion\settings.json` 找到设置文件。
 
-To fix it, you may need to delete your `settings.json` file.
-1. Close the VCC.
-2. Open the folder `%LocalAppData%\VRChatCreatorCompanion\` 
-    - For example:  `C:\Users\Username\AppData\Local\VRChatCreatorCompanion\`
-3. Delete `settings.json`.
-4. Open the VCC.
-    - This should automatically recreate `settings.json`.
-    - Your preferences and project list will be reset.
+要修复它，您可能需要删除您的 `settings.json` 文件。
+1. 关闭 VCC。
+2. 打开文件夹 `%LocalAppData%\VRChatCreatorCompanion\` 
+  - 例如：`C:\Users\Username\AppData\Local\VRChatCreatorCompanion\`
+3. 删除 `settings.json`。
+4. 打开 VCC。
+  - 这应该会自动重新创建 `settings.json`。
+  - 您的偏好设置和项目列表将被重置。
 
-If your settings file was corrupted, please submit a [bug report](https://github.com/vrchat-community/creator-companion/issues/new?assignees=&labels=&template=bug_report.md&title=%5BBUG%5D) and send us your `settings.json`.
+## 如何向创作者助手添加更多包？
 
-## How to add more packages to the Creator Companion?
+除了 VRChat 和创作者们提供的包，您还可以向创作者助手添加自己的包。
 
-Beyond the packages provided by VRChat and the Curated creators - you can add your own packages to the Creator Companion.
+您可以通过两种方式来做到这一点：
 
-You can do so in two ways:
+1. 添加已经存在于您的计算机上的本地包。您可以在设置页面的包标签下的用户包部分进行此操作。
+2. 通过安装社区仓库来添加社区包。要向创作者助手添加新的仓库，[请参阅此指南](/vcc.docs.vrchat.com/guides/community-repositories)。
 
-1. Add local packages that already exist on your computer. You can do so in the User Packages section of the Packages tab on the Settings page.
-2. Add community packages by installing a Community Repository. To add new repositories to the Creator Companion [take a look at this guide](/vcc.docs.vrchat.com/guides/community-repositories).
+## 我在哪里可以提问？
+确保阅读 [VCC 文档](https://vcc.docs.vrchat.com/)，了解更多关于创作者助手的信息。
 
-## Where can I ask more questions?
-Make sure to read the [VCC documentation](https://vcc.docs.vrchat.com/) to learn more about the Creator Companion.
-
-Please submit bug reports and feature requests to our [GitHub issue tracker](https://vcc.docs.vrchat.com/guides/bugs-features/). If you'd like to talk to other creators about the VCC, head to the official [VRChat Discord server](https://discord.com/invite/vrchat).
+请将错误报告和功能请求提交到我们的 [GitHub 问题跟踪器](https://vcc.docs.vrchat.com/guides/bugs-features/)。如果您想与其他创作者讨论 VCC，可以前往官方的 [VRChat Discord 服务器](https://discord.com/invite/vrchat)。

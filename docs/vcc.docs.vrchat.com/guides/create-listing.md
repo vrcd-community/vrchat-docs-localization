@@ -1,50 +1,48 @@
-# Creating a Package Listing
+# 创建包列表
 
-You can create and share your own custom package listings, including your own packages as well as open source packages from the community.
-
-<!-- Don't forget sync this caution with vpm/packages.md -->
+您可以创建并分享您自己的自定义包列表，包括您自己的包以及来自社区的开源包。
 
 ::: warning
 
-Do not remove old versions of your VPM packages after publishing them.
-Removing old versions will break projects using [source control](https://vcc.docs.vrchat.com/vpm/source-control).
+发布后不要删除您的 VPM 包的旧版本!
+删除旧版本将破坏使用[版本控制](https://vcc.docs.vrchat.com/vpm/source-control)的项目。
 
 :::
 
-## Using GitHub
+## 使用 GitHub
 
-The easiest way to publish packages and listings is with [GitHub](https://github.com/). You can do everything you need with a free account. If you use another source control service or just want to roll your own approach, see [Using Your Own Services](#using-your-own-services) below.
+发布包和列表的最简单方法是使用 [GitHub](https://github.com/)。您可以使用免费账户完成所有需要的操作。如果您使用其他版本控制服务，或只是想自己实现一个，参见下面的[使用您自己的服务](#using-your-own-services)。
 
-### 1. Create a New Listing Repo
+### 1. 创建一个新的列表仓库
 
-Press [![Use This Template](https://user-images.githubusercontent.com/737888/185467681-e5fdb099-d99f-454b-8d9e-0760e5a6e588.png)](https://github.com/vrchat-community/template-package-listing/generate)
-to start a new GitHub project based on the official Package Listing Template, and follow the directions there to finish creating your own version. Then you just need to modify the source.json file to point to the packages you want to list.
+点击 [![Use This Template](https://user-images.githubusercontent.com/737888/185467681-e5fdb099-d99f-454b-8d9e-0760e5a6e588.png)](https://github.com/vrchat-community/template-package-listing/generate)
+开始一个基于官方包列表模板的新 GitHub 项目，并按照那里的指示完成创建您自己版本的操作。然后您只需要修改 source.json 文件，指向您想要列出的包。
 
-### 2. Choose a Compatible GitHub Repository
-You must choose a VPM-compatible package which is hosted on GitHub, and uses the [official release automation](https://github.com/vrchat-community/template-package/blob/main/.github/workflows/release.yml) we publish as part of our [Package Template](https://github.com/vrchat-community/template-package). If you've already got your sights set on one of these, skip to [Add Repos to your Listing Source](#3-add-repos-to-your-listing-source).
+### 2. 选择一个兼容的 GitHub 仓库
+您必须选择一个托管在 GitHub 上的、兼容 VPM 的包，并使用我们作为[包模板](https://github.com/vrchat-community/template-package)的一部分发布的[自动化配置](https://github.com/vrchat-community/template-package/blob/main/.github/workflows/release.yml)。如果您已经找到了，跳到[将仓库添加到您的列表源](#3-add-repos-to-your-listing-source)。
 
-#### 2A. Adding Automation to an Existing Repo
-The easiest way to get started is to use the [Package Template](https://github.com/vrchat-community/template-package) repo to make a new package from scratch. However, it's pretty easy to add automation to an existing repo.
+#### 2A. 向现有仓库添加自动化
+开始的最简单方法是使用[包模板](https://github.com/vrchat-community/template-package)仓库从头开始创建一个新包。然而，向现有仓库添加自动化也很简单。
 
-1. Add the [release](https://github.com/vrchat-community/template-package/blob/main/.github/workflows/release.yml) GitHub action to your repo at `.github/workflows/release.yml`. You'll know it's in the right place if you can click on the "Actions" tab in your repo and see an action called "Build Release".
-2. Follow the instructions under [Setting up Automation](https://github.com/vrchat-community/template-package#-setting-up-the-automation).
-3. Create at least one compatible Release by running the "Build Release" action from your Actions tab.
+1. 将 [release](https://github.com/vrchat-community/template-package/blob/main/.github/workflows/release.yml) GitHub action 添加到您的仓库，位置为 `.github/workflows/release.yml`。如果您可以在您的仓库中点击 "Actions" 标签并看到一个名为 "Build Release" 的 action，那么它就在正确的位置。
+2. 按照 [设置自动化](https://github.com/vrchat-community/template-package#-setting-up-the-automation) 下的指示进行操作。
+3. 通过从您的 Actions 标签页运行 "Build Release" 的 action，创建至少一个兼容的 Release。
 
-### 3. Add Repos to your Listing Source
-Edit the `source.json` file to add the packages to include.
+### 3. 将仓库添加到您的列表源
+编辑 `source.json` 文件以添加要包含的包。
 
-To include packages which are hosted on GitHub and have VPM-compatible Releases through using one of our templates, you can simply edit the "githubRepos" array, replacing the example "vrchat-community/clientsim" entry with new listings using the format "owner/repository".
+要包含托管在 GitHub 上并通过使用我们的模板具有 VPM 兼容的 Releases 的包，您可以简单地编辑 "githubRepos" 数组，用新的列表替换示例 "vrchat-community/clientsim" 条目，格式为 "owner/repository"。
 
-To include packages which are hosted somewhere else, you'll edit the 'packages' array. 
-1. Change the entry for "com.vrchat.udonsharp" to the ID of the target package.
-2. Delete the existing urls from the 'releases' array in this first entry, and add the actual download link.
+要包含托管在其他地方的包，您需要编辑 'packages' 数组。
+1. 将 "com.vrchat.udonsharp" 的条目更改为目标包的 ID。
+2. 从这个第一条目的 'releases' 数组中删除现有的 urls，并添加实际的下载链接。
 
-### 4. Run the Build Repo Listing Action
-This should happen automatically whenever you edit source.json directly on GitHub on your main branch, or push changes to source.json to your main branch.
+### 4. 运行构建仓库列表的 Action
+每当您直接在 GitHub 的主分支上编辑 source.json，或者将对 source.json 的更改推送到您的主分支时，这应该会自动发生。
 
-## Using Your Own Services
+## 使用您自己的服务
 
-Take a look at the [example listing](https://vrchat-community.github.io/template-package/index.json). In order to be valid, you need the following fields:
+请参考 [示例列表](https://vrchat-community.github.io/template-package/index.json)。为了使列表有效，您需要以下字段：
 
 * name
 * author
@@ -54,6 +52,6 @@ Take a look at the [example listing](https://vrchat-community.github.io/template
   * {package id}
     * versions
     * {version string in SemVer}
-      * {valid VPM manifest} _(the full contents of `package.json)_
+      * {valid VPM manifest} _(完整的 `package.json` 内容)_
 
-If you serve these from a publicly accessible URL, the Creator Companion will be able to read it and provide the packages listed inside.
+如果您将这些内容发布到公开可访问的 URL ，创作者助手将能够读取它并提供在列表中的包

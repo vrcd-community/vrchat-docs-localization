@@ -1,69 +1,70 @@
 # ClientSim
 
-![ClientSim in Unity Editor](/clientsim.docs.vrchat.com/images/editor-screenshot.png)
+![ClientSim 在 Unity 编辑器中](/clientsim.docs.vrchat.com/images/editor-screenshot.png)
 
-The VRChat Client Simulator, or ClientSim for short, is a tool that enables you to test your VRChat SDK3 Worlds directly in Unity! You can look at the state of all objects to verify things directly.
+VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直接在 Unity 中测试您的 VRChat SDK3 世界！您可以查看所有对象的状态以直接验证事物。
 
-## Features
+## 功能
 
-- Debug everything in Unity.
-- Inspect Udon variables in Play Mode.
-- Desktop player controller.
-- Grab Pickups, use Interacts, UI and Stations.
-- Delete EditorOnly objects on Play.
-## Setup
+- 在 Unity 中调试所有内容。
+- 在 Play 模式下检查 Udon 变量。
+- 桌面玩家控制
+- 抓取 Pickups，使用 Interacts，UI 和 Stations。
+- 在 Play 上删除 EditorOnly 对象。
 
-### Requirements
+## 设置
+
+### 要求
 
 - Unity 2019.4.29-31
-- Package versions of [VRChat Base](https://github.com/vrchat/packages/tree/main/packages/com.vrchat.base) and [Worlds](https://github.com/vrchat/packages/tree/main/packages/com.vrchat.worlds) SDKs
+- [VRChat Base](https://github.com/vrchat/packages/tree/main/packages/com.vrchat.base) 和 [Worlds](https://github.com/vrchat/packages/tree/main/packages/com.vrchat.worlds) SDKs 的合适版本
 
-### Installing
+### 安装
 
-> Note: this will be much easier soon with the Open Beta release of the VRChat Creator Companion, Coming Soon™
+> 注意：可以试试使用即将推出的 VRChat 创作者助手公开 Beta 版本，安装将会更加简单。
 >
-- In your project, open the Unity Package Manager, click the + button and choose 'Add package from git URL...'.
-    - Put in `https://github.com/vrchat/packages.git?path=/packages/com.vrchat.base#vcc`. Then wait as the package imports or press Ctrl+R to refresh if you have auto-refresh turned off.
-    - Click the + button again and add this git url: `https://github.com/vrchat/packages.git?path=/packages/com.vrchat.worlds#vcc`
-    - Press the + button one last time and add this url: `https://github.com/vrchat-community/ClientSim.git?path=/ClientSim_UnityProject/Packages/com.vrchat.ClientSim#issue-12-make-docs`
+- 在您的项目中，打开 Unity 包管理器，点击 + 按钮并选择 '从 git URL 添加包...'。
+    - 输入 `https://github.com/vrchat/packages.git?path=/packages/com.vrchat.base#vcc`。然后等待包导入，或者如果您关闭了自动刷新，按 Ctrl+R 刷新。
+    - 再次点击 + 按钮并添加此 git url：`https://github.com/vrchat/packages.git?path=/packages/com.vrchat.worlds#vcc`
+    - 最后再点一次 + 按钮并添加此 url：`https://github.com/vrchat-community/ClientSim.git?path=/ClientSim_UnityProject/Packages/com.vrchat.ClientSim#issue-12-make-docs`
 
-### Getting started
+### 入门
 
-- Open your VRChat world scene
-- Press play in Unity
-- Test your world
+- 打开您的 VRChat 世界场景
+- 在 Unity 中按下播放按钮
+- 测试您的世界
 
 
-## Learn more about how all the systems work in the [Systems](./systems/) section
+## 在 [系统](./systems/) 部分了解所有系统的工作方式
 
-### New Features in ClientSim compared to CyanEmu
-- Pickup manipulation through I, J, K, L, U, O, mouse scrolling and gamepad.
-- Input based on keyboard layout isntead of specific keys.
-- Local and Remote player now have humanoid avatars, avatar bones supported (but not full Avatar systems).
-- View and set player data directly - Locomotion values, voice and avatar audio settings, combat health.
-- Unlock mouse by holding tab - you can highlight off-center objects this way.
-- Pointer displays when a UI element can be interacted with.
-- New runtime options: start as non-master, invert mouse, show tooltips, change player scale, set target framerate, delay start to simulate loading.
-- New playmode menu with updated style, player info and settings buttons.
-- New buttons in the Settings Window to update Project Settings, no longer happens without user consent.
-- Mesh highlighting that matches Android.
-- Tooltip location updated to match client.
-- Better gamepad support.
-- Support for Disabled Domain Reload to enter playmode without delay - note that there is a Unity bug that causes UI Events to fail if they're not set to "Editor and Runtime".
-- Automated Testing - you need to specifically enable this so it won't affect your project. Documentation forthcoming.
+### ClientSim 相比于 CyanEmu 的新特性
+- 通过 I、J、K、L、U、O、鼠标滚动和游戏手柄进行 Pickup 操作。
+- 输入基于键盘布局而不是特定键。
+- 本地和远程玩家现在都有类人形的头像，支持头像骨骼（但不包括完整的 Avatar 系统）。
+- 直接查看和设置玩家数据 - 运动值，语音和头像音频设置，战斗健康度。
+- 按住 tab 键解锁鼠标 - 这样您可以突出显示偏离中心的对象。
+- 当 UI 元素可以进行交互时，显示指针。
+- 新的运行时选项：作为非主体开始，反转鼠标，显示工具提示，改变玩家规模，设置目标帧率，延迟开始以模拟加载。
+- 新的播放模式菜单，带有更新的样式，玩家信息和设置按钮。
+- 在设置窗口中的新按钮，用于更新项目设置，不再在未经用户同意的情况下发生。
+- 与 Android 匹配的网格突出显示。
+- 更新工具提示位置以匹配客户端。
+- 更好的游戏手柄支持。
+- 支持禁用域重载以无延迟进入播放模式 - 注意，Unity 有一个 bug，如果它们没有设置为 "Editor and Runtime"，则会导致 UI 事件失败。
+- 自动化测试 - 您需要特别启用这个功能，所以它不会影响您的项目。文档即将发布。
 
-### Known Issues
+### 已知问题
 
-- Manually changing Unity Project settings to enable the new input system may not properly allow input. Users should use the buttons in the ClientSim Settings Window.
-- Physics.RaycastNonAlloc sometimes does not return colliders that have moved and do not have rigidbodies.
-- On exiting playmode may throw exceptions occasionally due to order in which objects are destroyed.
-- Highlight shader does not work on Mac (Metal).
+- 手动更改 Unity 项目设置以启用新的输入系统可能无法正确允许输入。用户应使用 ClientSim 设置窗口中的按钮。
+- Physics.RaycastNonAlloc 有时不返回已移动且没有刚体的碰撞器。
+- 退出播放模式可能会偶尔抛出异常，因为对象被销毁的顺序。
+- 高亮着色器在 Mac（Metal）上无法工作。
 
-## Copyright
+## 版权
 
-Copyright (c) 2021 VRChat
-See License.md for full usage information
+版权所有 (c) 2021 VRChat
+查看 License.md 以获取完整的版权信息
 
-## Credits
+## 致谢
 
-Based on [CyanEmu](https://github.com/CyanLaser/CyanEmu) by [CyanLaser](https://github.com/CyanLaser), who also made this version.
+基于 [CyanLaser](https://github.com/CyanLaser/CyanEmu) 制作的 [CyanEmu](https://github.com/CyanLaser)，此版本也由 [CyanLaser](https://github.com/CyanLaser) 制作。

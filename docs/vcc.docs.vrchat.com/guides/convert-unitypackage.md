@@ -1,85 +1,87 @@
-# Converting Assets to a VPM Package
+# 将现有资源转换为 VPM 包
 
-## Starting Point
+## 开始之前
 
-You've made an Editor Tool, Prefab or something else which is meant to be used alongside the VRChat SDK. You distribute it as a .unitypackage or .zip file which you and other users import into their projects after importing all the related SDK packages like the Worlds SDK and UdonSharp.
+您已经制作了一个编辑器工具、预制件或其他一些应与 VRChat SDK 一起使用的东西。您将其作为 .unitypackage 或 .zip 文件分发，您和其他用户在导入所有相关的 SDK 包（如 Worlds SDK 和 UdonSharp）后导入到他们的项目中。
 
-## Changes Needed
-In order to work as a VPM Package, your code and assets need some changes. The [Package Maker](#package-maker-tool) tool will handle a lot of this, but not everything:
-1. Be completely separated into Editor and Runtime folders. Anything that uses UnityEditor classes needs to be in the Editor folder.
-2. Have a [compatible Package Manifest](/vcc.docs.vrchat.com/vpm/packages#package-format) which includes the vpmDependencies for the related VRChat SDK packages.
-3. Replace any paths hardcoded to a path "Assets/YourPackageName" to use your Package path instead - see [Converting Asset Paths](#converting-asset-paths) below.
-4. Provide Assembly Definition files for all the scripts in your package.
+## 需要的更改
 
-## Package Maker Tool
+为了转换成 VPM 包，您的代码和资源需要进行一些更改。[包制作器](#package-maker-tool)工具将处理其中的大部分内容，但并非所有：
+1. 相关资需要手动分离到 `Editor` 和 `Runtime`文件夹。使用 UnityEditor 类的任何内容都需要在 `Editor` 文件夹中。
+2. 具有[兼容的包清单](/vcc.docs.vrchat.com/vpm/packages#package-format)，其中包括相关 VRChat SDK 包的 `vpmDependencies`。
+3. 将任何硬编码到 "Assets/YourPackageName" 路径的路径替换为使用您的包路径 - 请参见下面的[转换资源路径](#converting-asset-paths)。
+4. 为包中的所有脚本提供程序集定义文件。
 
-We provide this tool to ease the transition. The steps below will guide you in making a new Project to create and manage a VPM-compatible package from existing assets.
-1. Visit the [VPM Package Template repository on GitHub](https://github.com/vrchat-community/template-package) and press "Use this Template" to create a new package repository under your own account.
-2. Clone the repo using git, or download it from Code > Download zip.
-3. Open the new project in Unity.
-4. Import your package into this new project, into the Assets folder as you would if it were a .unitypackage-style project.
+## 包制作器工具
 
-    ![Imported Assets Folder](/vcc.docs.vrchat.com/images/package-maker/folder-imported.png)
+我们提供这个工具来简化过渡。以下步骤将指导您如何创建一个新项目，以从现有资产创建和管理一个兼容 VPM 的包。
 
-5. Open the Package Maker Tool window from the menu option `VRChat SDK / Utilities / Package Maker`. 
+1. 访问 [GitHub 上的 VPM 包模板仓库](https://github.com/vrchat-community/template-package)，并点击 "Use this Template" 在您自己的账户下创建一个新的包仓库。
+2. 使用 git 克隆仓库，或从 Github 的 Code > Download zip 下载它。
+3. 在 Unity 中打开新项目。
+4. 将您的包导入到这个新项目的 Assets 文件夹中，就像它是一个 `.unitypackage` 样式的项目一样。
 
-   ![Package Maker Window](/vcc.docs.vrchat.com/images/package-maker/window.png)
+    ![导入 Assets 文件夹](/vcc.docs.vrchat.com/images/package-maker/folder-imported.png)
 
-6. In the "Project" panel, find the parent folder with all your packages' assets from within the Assets folder, and Drag and drop it into the "Target Folder" field of the window.
+5. 从菜单选项 `VRChat SDK / Utilities / Package Maker` 打开包制作器工具窗口。
 
-   ![Drag and Drop Assets Folder](/vcc.docs.vrchat.com/images/package-maker/drag-drop-folder.png)
+   ![包制作器窗口](/vcc.docs.vrchat.com/images/package-maker/window.png)
 
-7. Enter an ID for your package in the Package Maker's "Package ID" field. The standard practice for is reverse domain notation like com.vrchat.packagename, using a domain you own. It needs to be unique across VRChat to play nice with other packages, so if you don't own a domain you can try your username.
-8. If your package requires any VRChat SDK packages, choose the most fitting one from the "Related VRChat Package" dropdown.
-9. Once you have a valid Target Folder and Package ID chosen, the "Convert Assets to Package" button will be enabled. Press it now.
-10. The tool will present a confirmation dialog about the permanent changes it's about to make. Read through them and confirm it to perform the migration or cancel it to go back and change something.
+6. 在 "Project" 面板中，找到所有您的包资产的父文件夹，从 Assets 文件夹中拖放到窗口的 "Target Folder" 字段中。
 
-   ![Confirmation Dialog](/vcc.docs.vrchat.com/images/package-maker/confirm.png)
+   ![拖放 Assets 文件夹](/vcc.docs.vrchat.com/images/package-maker/drag-drop-folder.png)
 
-11. After confirming, a progress bar will appear as the migration is performed. First, the tool will create the proper file and folder layout for your package within your project's "Packages" directory. Then it will move all the files into their corresponding folders. Anything that was in an "Editor" folder in your Assets, even if it was nested down several layers, will be moved into the top-level Editor folder in your package. All other files will be moved into the Runtime folder.
-12. If you have Auto-Refresh turned off in Unity, you will need to Refresh at this point by pressing Ctrl-R. At this point, your package _may_ be all migrated and properly working. You can safely remove the Package Maker Tool and related "PackageMakerWindowData.asset" file from your project.
+7. 在包制作器的 "Package ID" 字段中为您的包输入一个 ID。标准做法是使用您拥有的域的反向域名表示法，如 com.vrchat.packagename。它需要在 VRChat 中是唯一的，以便与其他包友好相处，所以如果您没有域名，那么您可以尝试使用您的用户名。
+8. 如果您的包需要任何 VRChat SDK 包，从 "Related VRChat Package" 下拉菜单中选择最合适的一个。
+9. 一旦您选择了一个有效的目标文件夹和包 ID，"Convert Assets to Package" 按钮将被启用。现在按下它。
+10. 工具将显示一个关于它即将进行的永久性更改的确认对话框。阅读它们并确认执行迁移，或取消返回并更改某些内容。
 
-If your project has errors at this point, you may need to do some [troubleshooting](#troubleshooting-migration-issues).
+   ![确认对话框](/vcc.docs.vrchat.com/images/package-maker/confirm.png)
 
-## Customizing Your Package
-Once your package has been created, you can modify the Name, Description etc by selecting the 'package.json' file in the Project window from `Packages/YourPackageName/package.json`.
+11. 确认后，迁移时将出现一个进度条。首先，工具将在您的项目的 "Packages" 目录中为您的包创建适当的文件和文件夹布局。然后它将把所有文件移动到相应的文件夹。您的 Assets 中的任何 "Editor" 文件夹中的内容，即使它是嵌套在几层下，也将被移动到您的包的顶级 Editor 文件夹中。所有其他文件将被移动到 Runtime 文件夹。
+12. 如果您在 Unity 中关闭了自动刷新，您需要在这个时候按 Ctrl-R 刷新。此时，您的包 _可能_ 已经全部迁移并正常工作。您可以安全地从您的项目中移除包制作器工具和相关的 "PackageMakerWindowData.asset" 文件。
+
+如果您的项目在这个时候有错误，您可能需要做一些[故障排除](#troubleshooting-migration-issues)工作。
+
+## 自定义您的包
+一旦您的包被创建，您可以通过在项目窗口中选择 'package.json' 文件来修改名称、描述等，路径为 `Packages/YourPackageName/package.json`。
 
 ![Manifest in the Inspector](/vcc.docs.vrchat.com/images/package-maker/manifest-inspector.png)
 
-You can change the Display Name (ie VRChat - Worlds instead of com.vrchat.worlds), version, description, unity package dependencies, etc. here. If you change the 'Name' of the package, then your Assembly References might break, since they refer to the name of your package entered when it was migrated.
+您可以在这里更改显示名称（例如 VRChat - Worlds 而不是 com.vrchat.worlds）、版本、描述、unity 包依赖等。如果您更改了包的 'Name'，那么您的程序集引用可能会断裂，因为它们引用的是您在迁移时输入的包名。
 
-## Automation
+## 自动化
 
-Check out the [Readme in the Package Template Repo](https://github.com/vrchat-community/template-package/blob/main/README.md) to learn how to easily set up automation that builds and stores new versions of your package for you!
+查看 [Package Template Repo 中的 Readme](https://github.com/vrchat-community/template-package/blob/main/README.md) 学习如何轻松设置自动化操作，让系统自动为您构建和存储包的新版本！
 
-## Troubleshooting Migration Issues
+## 故障排除迁移问题
 
-### Converting Asset Paths
-If your package expects to find and load files from itself, those paths may need to be updated. For example, if you have an Editor Window which loads a stylesheet, you might have the following code :
+### 转换资源路径
+如果您的包预期从自身找到并加载文件，那么这些路径可能需要更新。例如，如果您有一个编辑器窗口加载样式表，它可能长这样：
 ```c#
 var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/MyPackage/Editor/MyPackageStyle.uss");
 ```
-This will no longer work because that file is no longer in the Assets folder. There are two ways to handle this - you can convert the item to a Resource, or convert the path to work from within your package. Here are examples of both approaches.
+这将不再起作用，因为该文件不再位于 Assets 文件夹中。有两种处理方式 - 您可以将项目转换为资源，或者将路径转换为在您的包内工作。以下是两种方法的示例。
 
-#### Converting to a Resource
+#### 转换为资源
 
-Resources can be loaded from any folder without knowing the actual path. Unity looks in every folder called "Resources" within both your Assets and Packages folders.
-1. Create a folder called "Resources" within our new Package folder, under the top-level "Editor" folder.
-2. Move the file "MyPackageStyle.uss" to this resources folder.
-3. Switch from `AssetDatabase.LoadAssetAtPath` to `Resources.Load` like this:
+资源可以从任何文件夹加载，无需知道实际路径。Unity 会在您的 Assets 和 Packages 文件夹中的每个名为 "Resources" 的文件夹中查找。
+1. 在我们的新包文件夹中，创建一个名为 "Resources" 的文件夹，放在顶级的 "Editor" 文件夹下。
+2. 将文件 "MyPackageStyle.uss" 移动到这个 resources 文件夹。
+3. 从 `AssetDatabase.LoadAssetAtPath` 切换到 `Resources.Load`，如下所示：
 
 ```c#
 var styleSheet = Resources.Load<StyleSheet>("MyPackageStyle");
 ```
-Note that the filename has the extension removed above - so if any of your resources share the same name with different extensions, you'll need to rename one of them.
+注意，上面的文件名已经去掉了扩展名 - 所以如果您的任何资源有相同的名字但扩展名不同，您需要重命名其中一个。
 
-#### Using GUIDs
+#### 使用 GUID
 
-Figure out the GUID of your asset and then ask the AssetDatabase to convert from GUID to AssetPath like this:
+找出您的资源的 GUID，然后让 AssetDatabase 将 GUID 转换为 AssetPath，如下所示：
 ```c#
 string styleSheetPath = AssetDatabase.GUIDToAssetPath("de965059f7f21034b8c112bfc7a0dc5f");
 var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>(styleSheetPath);
 ```
 
-### Other Issues
-If you come across a change needed due to the migration, [file an issue here](https://github.com/vrchat-community/vpm-package-maker/issues) so we can add the information to this page!
+### 其他问题
+如果您遇到了因迁移而需要进行的手动更改，[在这里提交一个issues](https://github.com/vrchat-community/vpm-package-maker/issues)，这样我们就可以将信息添加到这个页面！

@@ -1,47 +1,52 @@
-# Curated Community Packages
-The Creator Companion allows you to add some of the community's best world and avatar packages directly to your VRChat projects.
+# 精选社区包
+创作者助手允许您将社区中最好的世界和虚拟形象包直接添加到您的 VRChat 项目中。
 
-Currently, all of the packages listed here are open source! Visit their GitHub repositories to suggest features, report bugs or - if you're a developer - make improvements yourself.
-# Installing Community Packages
-To add a Curated Package to one of your projects, follow these steps:
-1. Open the Creator Companion
-2. Add your VRChat project
-3. Browse the list of Curated Packages
-4. Click "Add" or "Update" to add the newest version of the package to your project
+目前，这里列出的所有包都是开源的！访问他们的 GitHub 仓库来建议功能，报告错误，或者 - 如果您是开发者 - 自己进行改进。
+
+# 安装精选社区包
+要将包添加到您的项目中，请按照以下步骤操作：
+1. 打开创作者助手
+2. 添加您的 VRChat 项目
+3. 浏览精选包的列表
+4. 点击 "添加" 或 "更新"，将包的最新版本添加到您的项目中
 
 ::: warning
-When you migrate a project for the first time, the Creator Companion automatically looks for and removes old folders of Curated Community Packages. Make sure to move your files out of these folders before migrating!
+当您第一次迁移项目时，创作者助手会自动查找并移除社区包的旧文件夹。在迁移之前，请确保将您的文件移出这些文件夹！
 :::
+如果您需要社区包的帮助，请通过他们的 GitHub 或 Discord 社区联系作者。
 
-For help with a Community Packages, please contact its authors via their GitHub or Discord community.
-# List of Curated Community Packages
+# 精选社区包列表
 ## AudioLink
->"AudioLink is a system that analyzes and processes in-world audio into many different highly reactive data streams and exposes the data to VRChat Udon, world shaders, and avatar shaders."<br />
->*Authors: [llealloo](https://twitter.com/llealloo), [cnlohr](https://twitter.com/cnlohr), [Pema99](https://twitter.com/pemathedev), [float3](https://twitter.com/float3x3) and lox9973_<br />
->[GitHub repository](https://github.com/llealloo/vrc-udon-audio-link), [AudioLink Discord Server](https://discord.gg/d5wjNwZBR3)*
+>"AudioLink 是一个系统，它分析和处理世界中的音频，将其转化为许多不同的高灵敏度数据流，并将相关数据暴露给 VRChat Udon，世界着色器和虚拟形象着色器。"<br />
+>*作者：[llealloo](https://twitter.com/llealloo)，[cnlohr](https://twitter.com/cnlohr)，[Pema99](https://twitter.com/pemathedev)，[float3](https://twitter.com/float3x3) 和 lox9973_<br />
+>[GitHub 仓库](https://github.com/llealloo/vrc-udon-audio-link)，[AudioLink Discord 服务器](https://discord.gg/d5wjNwZBR3)*
 
-AudioLink allows creators to make VRChat worlds that react to music in real time. This makes it a great fit for DJ events, club worlds, or other music events. If you're on PC, it can be used on avatars, animating them in sync with a world's audio source.
-## Avatars 3.0 Manager
->"A tool for managing playable layers and parameters for Avatars 3.0. This tool merges animator controllers to your avatar's playable layer controllers and syncs to your avatar's expression parameters."<br />
->*Author: [VRLabs](https://twitter.com/vrlabsdev)<br />
-[GitHub repository](https://github.com/VRLabs/Avatars-3.0-Manager) ,[VRLabs Discord](https://t.co/gP9HZT6EKB)*
+AudioLink 允许创作者制作实时反应音乐的 VRChat 世界。这使得它非常适合 DJ 活动，俱乐部世界或其他音乐活动。如果您在 PC 上，它可以用于虚拟形象，使他们与世界的音频源同步动画和动作。
 
-VRChat avatars have [five playable layers](https://docs.vrchat.com/docs/playable-layers), each with its own animator. Avatars 3.0 Manager allows using more than one animator per layer by merging the animator and its parameters. This can be useful for controlling accessories or other separate animators. 
+## Avatars 3.0 管理器
+>"用于管理 Avatars 3.0 的可播放层和参数的工具。此工具将动画控制器合并到您的虚拟形象的可播放层控制器，并同步到您的虚拟形象的表达参数。"<br />
+>*作者：[VRLabs](https://twitter.com/vrlabsdev)<br />
+[GitHub 仓库](https://github.com/VRLabs/Avatars-3.0-Manager)，[VRLabs Discord](https://t.co/gP9HZT6EKB)*
+
+VRChat Avatars 有[五个可播放层](https://docs.vrchat.com/docs/playable-layers)，每个层都有自己的动画器。Avatars 3.0 管理器允许在每个层中使用多个动画器，通过合并动画器及其参数。这对于控制配饰或其他独立的动画器很有用。
+
 ## EasyQuestSwitch
-> "EasyQuestSwitch is a Unity editor tool developed for VRChat world creators, it can automate changes to components within a scene as soon as the build platform is changed from PC to Android (for Oculus Quest) or vice versa."<br />
-> *Author: [Jordo](https://twitter.com/JordoVR)<br />
-> [GitHub repository](https://github.com/JordoVR/EasyQuestSwitch)*
+>"EasyQuestSwitch 是为 VRChat 世界创作者开发的 Unity 编辑器工具，它可以在从 PC 切换到 Android（用于 Oculus Quest）（反之亦然）时自动更改场景中的组件。"<br />
+>*作者：[Jordo](https://twitter.com/JordoVR)<br />
+[GitHub 仓库](https://github.com/JordoVR/EasyQuestSwitch)*
 
-Cross-platform VRChat worlds or avatars often use the same Unity project for their PC and Quest versions. This often requires making platform-specific changes, such as changing materials to use mobile-friendly shaders. EasyQuestSwitch helps automate these changes, automatically applying when switching between platforms.
+跨平台的 VRChat 世界或虚拟形象通常使用相同的 Unity 项目作为他们的 PC 和 Quest 版本。这通常需要进行平台特定的更改，例如更改材质以使用对移动设备友好的着色器。EasyQuestSwitch 可以帮助自动化这些更改，在切换平台时自动应用。
+
 ## Gesture Manager
-> "A tool that will help you preview and edit your avatar animation directly in Unity."<br />
-> *Author: [BlackStartx](https://twitter.com/BlackStartxVRC)<br />
-> [GitHub repository](https://github.com/BlackStartx/VRC-Gesture-Manager)*
+>"一个工具，可以帮助您直接在 Unity 中预览和编辑您的虚拟形象动画。"<br />
+>*作者：[BlackStartx](https://twitter.com/BlackStartxVRC)<br />
+[GitHub 仓库](https://github.com/BlackStartx/VRC-Gesture-Manager)*
 
-Gesture Avatars allows testing an avatar's animations in Unity without using [Build & Test](https://docs.vrchat.com/docs/using-build-test). This includes a recreation of VRChat's expressions menu, a debug menu, and various other tools for testing and improving your avatar. 
+Gesture Avatars 允许在不使用 [Build & Test](https://docs.vrchat.com/docs/using-build-test) 的情况下在 Unity 中测试虚拟形象的动画。这包括 VRChat 表情菜单的复刻、一个非常有用的调试菜单，以及用于测试和改进您的虚拟形象的各种其他工具。
+
 ## VRWorld Toolkit
->"VRWorld Toolkit is a Unity Editor extension made to make VRChat world creation more accessible and lower the entry-level to make a good performing world."<br />
->*Author: [1](https://twitter.com/oneVRdev)<br />
->[GitHub repository](https://github.com/oneVR/VRWorldToolkit)*
+>"VRWorld Toolkit 是一个 Unity 编辑器扩展，旨在使 VRChat 世界创建更加易于访问，并降低创建良好性能世界的入门门槛。"<br />
+>*作者：[1](https://twitter.com/oneVRdev)<br />
+>[GitHub 仓库](https://github.com/oneVR/VRWorldToolkit)*
 
-VRWorld Toolkit analyzes VRChat worlds by looking for common mistakes related to the SDK, optimization, lighting, or post-processing. It also includes a 'Build Report' feature, making it easy to spot large or uncompressed files in your project. These features help both novice and expert creators make functioning and optimized worlds.
+VRWorld Toolkit 通过寻找与 SDK、优化、光照或后处理相关的常见错误来分析 VRChat 世界。它还包括一个 'Build Report' 功能，使得在您的项目中发现大文件或未压缩文件变得容易。这些功能帮助新手和专家创作者制作功能完善和经过性能优化的世界。

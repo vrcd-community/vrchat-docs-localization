@@ -36,7 +36,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: '指南',
       items: [
-        { text: '两步身份验证', link: '/docs.vrchat.com/GUIDES/setup-2fa' },
+        { text: '两步验证', link: '/docs.vrchat.com/GUIDES/setup-2fa' },
         { text: '提出本地化修改建议', link: '/docs.vrchat.com/GUIDES/suggesting-localization-changes' },
         { text: '调整您的模型身高', link: '/docs.vrchat.com/GUIDES/adjusting-your-avatars-height' },
       ],
@@ -50,7 +50,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: 'VRCHAT QUEST',
       items: [
-        { text: '为 Oculus Quest 创建 VRChat 内容', link: '/creators.vrchat.com/platforms/android/' },
+        { text: '为 Oculus Quest 创建内容', link: '/creators.vrchat.com/platforms/android/' },
       ],
     },
     {
@@ -151,7 +151,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
       items: [
         { text: '构建管线回调 (Pipeline Callbacks) 和接口 (Interfaces)', link: '/creators.vrchat.com/sdk/build-pipeline-callbacks-and-interfaces' },
         { text: '当前支持的 Unity 版本', link: '/creators.vrchat.com/sdk/current-unity-version' },
-        { text: '迁移到更新的 Unity 大版本', link: '/creators.vrchat.com/sdk/migrating-to-a-newer-minor-unity-version' },
+        { text: '迁移到新的 Unity 大版本', link: '/creators.vrchat.com/sdk/migrating-to-a-newer-minor-unity-version' },
         { text: '公开 SDK API', link: '/creators.vrchat.com/sdk/public-sdk-api' },
         { text: 'SDK 疑难解答', link: '/creators.vrchat.com/sdk/sdk-troubleshooting' },
         { text: '升级 SDK', link: '/creators.vrchat.com/sdk/updating-the-sdk' },
@@ -344,7 +344,7 @@ export function udonSharpDocsSidebar(): DefaultTheme.SidebarItem[] {
   return [
     { text: 'UdonSharp', link: '/udonsharp.docs.vrchat.com/' },
     {
-      text: 'Getting Started',
+      text: '开始使用',
       collapsed: true,
       items: [
         { text: 'Setup', link: '/udonsharp.docs.vrchat.com/setup' },
@@ -352,16 +352,16 @@ export function udonSharpDocsSidebar(): DefaultTheme.SidebarItem[] {
         { text: 'Community Resources', link: '/udonsharp.docs.vrchat.com/community-resources' },
         { text: 'Configuration', link: '/udonsharp.docs.vrchat.com/configuration' },
         { text: 'Migration', link: '/udonsharp.docs.vrchat.com/migration' },
-        { text: 'Frequently Asked Questions', link: '/udonsharp.docs.vrchat.com/frequently-asked-questions' },
+        { text: '常见问题', link: '/udonsharp.docs.vrchat.com/frequently-asked-questions' },
       ]
     },
     {
-      text: 'Documentation',
+      text: '文档',
       collapsed: true,
       items: [
         { text: 'UdonSharp', link: '/udonsharp.docs.vrchat.com/udonsharp' },
         { text: 'VRChat API', link: '/udonsharp.docs.vrchat.com/vrchat-api' },
-        { text: 'Events', link: '/udonsharp.docs.vrchat.com/events' },
+        { text: '事件', link: '/udonsharp.docs.vrchat.com/events' },
         { text: 'Editor Scripting', link: '/udonsharp.docs.vrchat.com/editor-scripting' },
       ]
     },
@@ -382,58 +382,58 @@ export function udonSharpDocsSidebar(): DefaultTheme.SidebarItem[] {
 
 export function vccDocsSidebar(): DefaultTheme.SidebarItem[] {
   return [
-    { text: 'Creator Companion', link: '/vcc.docs.vrchat.com/' },
+    { text: '创作者助手', link: '/vcc.docs.vrchat.com/' },
     {
-      text: 'Guides',
+      text: '指南',
       collapsed: true,
       items: [
-        { text: 'Getting Started', link: '/vcc.docs.vrchat.com/guides/getting-started' },
-        { text: 'Frequently Asked Questions', link: '/vcc.docs.vrchat.com/guides/faq' },
-        { text: 'Finding the Samples', link: '/vcc.docs.vrchat.com/guides/finding-the-samples' },
-        { text: 'Glossary', link: '/vcc.docs.vrchat.com/guides/glossary' },
-        { text: 'Using Project Template Repos', link: '/vcc.docs.vrchat.com/guides/using-project-template-repos' },
-        { text: 'Bugs and Feature Requests', link: '/vcc.docs.vrchat.com/guides/bugs-features' },
-        { text: 'Converting Assets to a VPM Package', link: '/vcc.docs.vrchat.com/guides/convert-unitypackage' },
-        { text: 'Version Matching', link: '/vcc.docs.vrchat.com/guides/version-matching' },
-        { text: 'Community Repositories', link: '/vcc.docs.vrchat.com/guides/community-repositories' },
-        { text: 'Creating a Package Listing', link: '/vcc.docs.vrchat.com/guides/create-listing' },
+        { text: '准备开始', link: '/vcc.docs.vrchat.com/guides/getting-started' },
+        { text: '常见问题', link: '/vcc.docs.vrchat.com/guides/faq' },
+        { text: '查找示例资源', link: '/vcc.docs.vrchat.com/guides/finding-the-samples' },
+        { text: '术语表', link: '/vcc.docs.vrchat.com/guides/glossary' },
+        { text: '使用项目模板', link: '/vcc.docs.vrchat.com/guides/using-project-template-repos' },
+        { text: '错误报告和功能请求', link: '/vcc.docs.vrchat.com/guides/bugs-features' },
+        { text: '将现有资源转换为 VPM 包', link: '/vcc.docs.vrchat.com/guides/convert-unitypackage' },
+        { text: '版本匹配', link: '/vcc.docs.vrchat.com/guides/version-matching' },
+        { text: '社区仓库', link: '/vcc.docs.vrchat.com/guides/community-repositories' },
+        { text: '创建包列表', link: '/vcc.docs.vrchat.com/guides/create-listing' },
       ]
     },
     {
-      text: 'Package Manager',
+      text: '包管理器',
       collapsed: true,
       items: [
-        { text: 'Package Manager', link: '/vcc.docs.vrchat.com/vpm/' },
-        { text: 'Templates', link: '/vcc.docs.vrchat.com/vpm/templates' },
-        { text: 'Packages', link: '/vcc.docs.vrchat.com/vpm/packages' },
-        { text: 'Migrating Projects', link: '/vcc.docs.vrchat.com/vpm/migrating' },
-        { text: 'Repos', link: '/vcc.docs.vrchat.com/vpm/repos' },
+        { text: '概述', link: '/vcc.docs.vrchat.com/vpm/' },
+        { text: '模板', link: '/vcc.docs.vrchat.com/vpm/templates' },
+        { text: '包', link: '/vcc.docs.vrchat.com/vpm/packages' },
+        { text: '迁移项目', link: '/vcc.docs.vrchat.com/vpm/migrating' },
+        { text: '仓库', link: '/vcc.docs.vrchat.com/vpm/repos' },
         { text: 'CLI', link: '/vcc.docs.vrchat.com/vpm/cli' },
-        { text: 'Resolver', link: '/vcc.docs.vrchat.com/vpm/resolver' },
-        { text: 'Using Source Control with the VPM', link: '/vcc.docs.vrchat.com/vpm/source-control' },
-        { text: 'Curated Community Packages', link: '/vcc.docs.vrchat.com/vpm/curated-community-packages' },
+        { text: '包解析器', link: '/vcc.docs.vrchat.com/vpm/resolver' },
+        { text: '在 VPM 中使用版本控制', link: '/vcc.docs.vrchat.com/vpm/source-control' },
+        { text: '精选社区包', link: '/vcc.docs.vrchat.com/vpm/curated-community-packages' },
       ]
     },
     {
-      text: 'Tools',
+      text: '实用工具',
       collapsed: true,
       items: [
-        { text: 'VRC Quick Launcher', link: '/vcc.docs.vrchat.com/tools/vrc-quick-launcher' },
+        { text: 'VRC 快捷启动工具', link: '/vcc.docs.vrchat.com/tools/vrc-quick-launcher' },
       ]
     },
-    { text: 'Legacy SDK', link: '/vcc.docs.vrchat.com/legacy-sdk' },
-    { text: 'Roadmap', link: '/vcc.docs.vrchat.com/roadmap' },
+    { text: '旧版 SDK', link: '/vcc.docs.vrchat.com/legacy-sdk' },
+    { text: '路线图', link: '/vcc.docs.vrchat.com/roadmap' },
   ]
 }
 
 export function clientSimDocsSidebar(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: "Guides",
+      text: "指南",
       collapsed: true,
       link: '/clientsim.docs.vrchat.com/guides/index.md',
       items: [
-        { text: "Getting Started", link: "/clientsim.docs.vrchat.com/guides/getting-started.md" },
+        { text: "开始使用", link: "/clientsim.docs.vrchat.com/guides/getting-started.md" },
       ]
     },
     {
@@ -450,7 +450,7 @@ export function clientSimDocsSidebar(): DefaultTheme.SidebarItem[] {
           items: [
             { text: "Editor Runtime Linker", link: "/clientsim.docs.vrchat.com/systems/editor/editor-runtime-linker.md" },
             { text: "Helper Editors", link: "/clientsim.docs.vrchat.com/systems/editor/helper-editors.md" },
-            { text: "Settings Window", link: "/clientsim.docs.vrchat.com/systems/editor/settings-window.md" }
+            { text: "设置界面", link: "/clientsim.docs.vrchat.com/systems/editor/settings-window.md" }
           ]
         },
         {

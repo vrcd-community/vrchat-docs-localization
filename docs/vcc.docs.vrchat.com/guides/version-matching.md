@@ -1,78 +1,78 @@
-# Version Matching
+# 版本匹配
 
-We use [Semantic Versioning](https://semver.org/) for SDK packages managed by the VRChat Package Manager (VPM) instead of the date-based format used in the `.unitypackage` format. This document shows the matches between the two versions for the latest SDK releases.
+我们使用 [语义化版本](https://semver.org/) 来管理 VRChat 包管理器 (VPM) 中的 SDK 包，而不是 `.unitypackage` 格式中使用的基于日期的格式。本文档显示了最新 SDK 版本的两种版本之间的匹配。
 
 ## 3.2.0
 
-### Summary
+### 概述
 
-Adds DataContainers, PhysBones 1.1 ('Squishy PhysBones'), AsyncGPUReadback, and more.
+添加 DataContainers，PhysBones 1.1 ('Squishy PhysBones')，AsyncGPUReadback 等。
 
-### Features
+### 特性
 
-- **DataContainers!** Lists, Dictionaries and JSON for Udon!
-  - Added DataLists and DataDictionaries, giving Udon functionality similar to Lists and Dictionaries.
-    - Lists and dictionaries typically need to support Generics, and Udon does not support them, so this is being done by putting your data into DataTokens first, which are able to store any value.
-  - Added VRCJSON, a helper class that can convert JSON strings (such as those received from [Remote String Loading](https://docs.vrchat.com/docs/string-loading) to and from DataLists and DataDictionaries.
-  - [Read the Data Containers / VRCJSON docs page](https://docs.vrchat.com/v2023.2.2/docs/data-containers-vrcjson) to learn more.
+- **DataContainers！** 为 Udon 提供列表，字典和 JSON！
+  - 添加了 DataLists 和 DataDictionaries，为 Udon 提供了类似于 Lists 和 Dictionaries 的功能。
+    - 列表和字典通常需要支持泛型，而 Udon 不支持它们，所以这是通过首先将您的数据放入 DataTokens 中来完成的，这些 DataTokens 能够存储任何值。
+  - 添加了 VRCJSON，一个帮助类，可以将 JSON 字符串（例如从 [远程字符串加载](https://docs.vrchat.com/docs/string-loading) 接收到的）转换为 DataLists 和 DataDictionaries，反之亦然。
+  - [阅读 Data Containers / VRCJSON 文档页面](https://docs.vrchat.com/v2023.2.2/docs/data-containers-vrcjson) 以了解更多。
 
-- **AsyncGPUReadback!** This allows you to read back data from GPU and shaders without a heavy performance cost
-  - Adds the `VRCAsyncGPUReadback.Request` function and corresponding `OnAsyncGpuReadbackComplete` event
-  - These read data from the GPU into CPU memory without too much of a performance impact, at the expense of delaying the data for one or more frames
-  - Check the [ASyncGPUReadback](https://docs.vrchat.com/v2023.2.2/docs/asyncgpureadback) docs for more info.
+- **AsyncGPUReadback！** 这允许您从 GPU 和着色器读取数据，而不会产生重大的性能损失
+  - 添加了 `VRCAsyncGPUReadback.Request` 函数和相应的 `OnAsyncGpuReadbackComplete` 事件
+  - 这些可以在不产生太大性能影响的情况下，将数据从 GPU 读取到 CPU 内存中，但需要延迟一帧或更多帧的数据
+  - 查看 [ASyncGPUReadback](https://docs.vrchat.com/v2023.2.2/docs/asyncgpureadback) 的文档以获取更多信息。
 
-### Improvements
+### 改进
 
-- **Squishy PhysBones!** You can now implement PhysBones that can "squish" or compress instead of stretch!
-  - To set up a Squishy PhysBone, swap your PhysBone component to version 1.1 and adjust the "Max Squish" value.
-  - **All PhysBones are now versioned!** You can change the version in the PhysBone component. This is being done to allow us to add new features safely.
-    - Old PhysBones are on Version 1.0 automatically. 1.0 includes SquishyBones.
-    - Gravity and Stiffness changes are on Version 1.1. There are some other changes documented below.
-    - **All versions will be maintained.** 1.0 is not being deprecated but it is feature-locked and will not have new features added. Any time we add a new "breaking" feature, we will increment the version.
-  - PhysBones 1.1: **Gravity and Stiffness act differently and require new values if you are upgrading from 1.0.**
-    - Gravity is now the ratio of how much the bones should point straight up/down in world space when at rest.
-    - Stiffness is now the ratio of how much a bone attempts to stay in its previous orientation.
-    - Previously, these values were direct forces that you needed to balance with the Pull factor. We believe this should be more direct and easier to use.
-    - These changes were also necessary to support the new functionality added to the component.
-  - **Max Squish value has been added.** This is a percentage of how much a bone can shrink.
-    - The `_Squish` parameter has been added. It works similarly to the `_Stretch` parameter.
-  - PhysBones 1.1: **Stretch Motion value has been added.** This is a ratio of how much motion affects a bone stretching or squishing.
-  - Categories of values in the VRCPhysBone component UI can now be collapsed.
-    - Categories also include a Help button which will take you to the online documentation for that subject.
-  - [PhysBones](https://docs.vrchat.com/v2023.2.2/docs/physbones) documentation will be updated during the Open Beta for PhysBones 1.1 and Squishy PhysBones.
-- The Network ID Utility now works for PhysBones in avatar projects
-  - This tool allows syncing PhysBones between avatars on different platforms, even if they have different GameObject hierarchies
-    - This advanced tool is only useful if your PC and Quest avatars have different hierarchies!
-    - You don't need to worry about this tool if you don't know why you'd do that.
-  - [See the full docs for more info](https://docs.vrchat.com/v2023.2.2/docs/network-id-utility)
+- **Squishy PhysBones！** 您现在可以实现 PhysBones，它们可以 "squish" 或压缩，而不是拉伸！
+  - 要设置 Squishy PhysBone，将您的 PhysBone 组件切换到版本 1.1 并调整 "Max Squish" 值。
+  - **所有的 PhysBones 现在都有版本了！** 您可以在 PhysBone 组件中更改版本。这样做是为了让我们能够安全地添加新功能。
+    - 旧的 PhysBones 自动在版本 1.0 上。1.0 包括 SquishyBones。
+    - 重力和刚度的变化在版本 1.1 上。下面还有一些其他的变化。
+    - **所有版本都将得到维护。** 1.0 不会被弃用，但它是功能锁定的，不会添加新功能。每次我们添加一个新的 "破坏性" 功能，我们都会增加版本。
+  - PhysBones 1.1：**重力和刚度的行为不同，如果您从 1.0 升级，需要新的值。**
+    - 重力现在是骨头在静止时应该直接指向世界空间上/下的比例。
+    - 刚度现在是骨头试图保持在其先前方向的比例。
+    - 以前，这些值是您需要与拉力因子平衡的直接力。我们认为这应该更直接，更容易使用。
+    - 这些变化也是为了支持添加到组件的新功能所必需的。
+  - **已添加 Max Squish 值。** 这是骨头可以缩小的百分比。
+    - 已添加 `_Squish` 参数。它的工作方式类似于 `_Stretch` 参数。
+  - PhysBones 1.1：**已添加 Stretch Motion 值。** 这是运动影响骨头拉伸或压缩的比例。
+  - 现在可以折叠 VRCPhysBone 组件 UI 中的值类别。
+    - 类别还包括一个帮助按钮，它将带您到该主题的在线文档。
+  - [PhysBones](https://docs.vrchat.com/v2023.2.2/docs/physbones) 文档将在 PhysBones 1.1 和 Squishy PhysBones 的公开测试期间更新。
+  - 网络 ID 工具现在适用于 Avatar 项目中的 PhysBones
+    - 这个工具允许在不同平台上的虚拟形象之间同步 PhysBones，即使它们有不同的 GameObject 层次结构
+      - 这个高级工具只有在您的 PC 和 Quest 虚拟形象有不同的层次结构时才有用！
+      - 如果您不知道为什么要这样做，您不需要担心这个。
+    - [查看完整文档以获取更多信息](https://docs.vrchat.com/v2023.2.2/docs/network-id-utility)
 
-### Changes since 3.2.0-beta.1
-- Re-added some public methods that got removed, including `GetOrAddComponent`
-  - These are marked as `[Obsolete]` now, make sure to migrate away from using them as they will be removed properly at a later date
-- Fixed some issues with grabbing PhysBones in Unity
-- PhysBone stretch is no longer clamped
-  - This restores previous behaviour
-- DataContainers: Fixed `GetKeys` and `GetValues` returning incorrect values after using `Add`
+### 自 3.2.0-beta.1 以来的变化
+- 重新添加了一些被移除的公共方法，包括 `GetOrAddComponent`
+  - 这些现在被标记为 `[Obsolete]`，请确保迁移不再使用它们，因为它们将在以后的日期被正确地移除
+- 修复了在 Unity 中抓取 PhysBones 的一些问题
+- PhysBone 的拉伸不再被限制
+  - 这恢复了之前的行为
+- DataContainers：修复了在使用 `Add` 后 `GetKeys` 和 `GetValues` 返回错误值的问题
 
-### SDK API Changes
-We're working on documenting the "Public API" of the SDK, which will be guaranteed not to change between minor and patch versions. In the meantime, here are things that have changed since 3.1.13:
+### SDK API 变化
+我们正在努力记录 SDK 的 "公共 API"，这将保证在小版本和补丁版本之间不会改变。与此同时，这里有一些自 3.1.13 以来发生的变化：
 
-#### Extension Methods
-We've moved some extension methods into the VRC.Core namespace.
-If you're using the `Transform.Reset()` method, you should instead use `VRC.Core.ExtensionMethods.Reset(Transform t)`.
-Here are the other similar changes you should make:
+#### 扩展方法
+我们已经将一些扩展方法移动到 VRC.Core 命名空间。
+如果您正在使用 `Transform.Reset()` 方法，您应该改用 `VRC.Core.ExtensionMethods.Reset(Transform t)`。
+以下是您应该做的其他类似的变化：
 - `Transform.GetHierarchyPath` > `VRC.Core.ExtensionMethods.GetHierarchyPath(Transform t, Transform relativeTransform)`
 - `Transform.GetShortHierarchyPath` > `VRC.Core.ExtensionMethods.GetShortHierarchyPath(Transform t, Transform relativeTransform)`
 - `GameObject.GetOrAddComponent` > `VRC.Core.ExtensionMethods.GetOrAddComponent(GameObject go)`
 - `Type.GetFriendlyGenericTypeName` > `VRC.Core.ExtensionMethods.GetFriendlyGenericTypeName(Type t, bool includeNamespaces)`
 
-#### Assembly Move
+#### 程序集移动
 
-PhysBoneGrabHelper moved assemblies, you may need to reference the `VRC.SDK3A` assembly now from your code. [Here is an example fix](https://github.com/BlackStartx/VRC-Gesture-Manager/pull/22).
+PhysBoneGrabHelper 已经移动到其他程序集，您可能需要在您的代码中现在引用 `VRC.SDK3A` 程序集。[这里有一个修复示例](https://github.com/BlackStartx/VRC-Gesture-Manager/pull/22)。
 
-#### Changes not meant for public use
-Additionally, we've made some changes to the following classes, which are _not_ considered part of the Public API for the SDK, and you should move away from using them as soon as possible.
-We will publish a document listing all the exclusions from our SDK before the end of May.
+#### 不适用于公共使用的变更
+此外，我们对以下类进行了一些更改，这些类并不被视为 SDK 的公共 API 的一部分，您应尽快停止使用它们。
+我们将在五月底前发布一份列出我们 SDK 中所有排除项的文档。
 - `ApiCacheEditor`
 - `VRC.Core.ApiCache`
 - `VRC.Core.ApiCache.CachedResponse`
@@ -90,150 +90,147 @@ We will publish a document listing all the exclusions from our SDK before the en
 - `VRC.SDK3.Dynamics.PhysBone.VRCPhysBoneEditor`
 - `VRC.Udon.ClientBindings.UdonClientInterface`
 - `VRC.Udon.Security.UnityEngineObjectSecurityBlacklist`
-  The UdonManager will have parts that are part of the Public SDK API, but changes were made to 'blacklisted' methods which are not meant to be used directly.
+  UdonManager 将有部分属于公共 SDK API 的部分，但对 '黑名单' 方法进行了更改，这些方法不应直接使用。
 
 ## 3.1.13
 
-### Summary
+### 概述
 
-Fixes compatibility with Avatars 3.0 Manager.
+修复了与 Avatars 3.0 Manager 的兼容性问题。
 
-### Bug Fixes
+### Bug 修复
 
-* Reverts name of 'hasInitialized' field in VRC_AvatarParameterDriver to 'initialized' to avoid breaking any existing packages which expect this field name.
+* 将 VRC_AvatarParameterDriver 中的 'hasInitialized' 字段名称恢复为 'initialized'，以避免破坏任何期望此字段名称的现有包。
 
 ## 3.1.12
 
-### Summary
+### 概述
 
-New VRCGraphics features for Udon, new avatar performance metrics, and bug fixes. Now up-to-date with VRChat 2023.1.2p4.
+为 Udon 提供了新的 VRCGraphics 功能，新的虚拟形象性能指标和 bug 修复。现已与 VRChat 2023.1.2p4 同步。
 
-### New Features
+### 新功能
 
-* Constraints are now counted in Avatar Stats. They do not currently affect your performance ranking.
-* Added support for "VelocityMagnitude" animator property for avatars.
-* Added "Snap To Hand" option for VRCPhysBone. When enabled, grabbing a bone will have it snap to the user's hand, otherwise the grab is offset so it won't initially move unless dragged around.
-* Added "Reset When Disabled" option for VRCPhysBones. When enabled, bones will reset to their rest position when the component becomes disabled.
-* Added Self/Other filtering to various permissions in VRCPhysBones.
-	* Allow Collision
-	* Allow Grabbing
-	* Allow Posing
-* Texture VRAM usage now counts towards your avatar's overall performance rating.
-* Added ability to set avatar parameters to not sync, addressing [Control the not sync parameters from Expressions Menu](https://vrchat.canny.io/avatar-30/p/feedback-control-the-not-sync-parameters-from-expressions-menu).
-* Udon now has access to temporary RenderTextures as well as constructors for RenderTexture, Texture2D, Texture3D, and Sprite via [VRCGraphics](https://docs.vrchat.com/docs/vrcgraphics).
+* 约束现在在虚拟形象的性能统计中被计数。它们目前不会影响您的性能排名。
+* 为虚拟形象添加了对 "VelocityMagnitude" 动画属性的支持。
+* 为 VRCPhysBone 添加了 "Snap To Hand" 选项。启用后，抓取骨骼时，它会对准用户的手，否则抓取会有偏移，除非被拖动，否则不会初始移动。
+* 为 VRCPhysBones 添加了 "Reset When Disabled" 选项。启用后，当组件被禁用时，骨骼将重置到它们的休息位置。
+* 在 VRCPhysBones 的各种权限中添加了自我/他人过滤。
+  * 允许碰撞
+  * 允许抓取
+  * 允许摆姿势
+* 纹理 VRAM 使用现在计入您的虚拟形象的总体性能评级。
+* 添加了设置虚拟形象参数以不同步的能力，解决了 [从表达菜单控制不同步参数](https://vrchat.canny.io/avatar-30/p/feedback-control-the-not-sync-parameters-from-expressions-menu) 的问题。
+* Udon 现在可以访问临时 RenderTextures，以及通过 [VRCGraphics](https://docs.vrchat.com/docs/vrcgraphics) 为 RenderTexture，Texture2D，Texture3D 和 Sprite 提供构造函数。
 
 
-### Bug Fixes
+### Bug 修复
 
-* GraphicsSettings are only saved to disk when changes are made, to prevent unnecessary cache busting.
-* Fixes issues that could cause jittering in PhysBones when isAnimated was enabled.
-* Reconnects to the Creator Companion when the connection is lost.
-* Ensures that the UdonEvent is called from the main thread. This avoids unexpected threading errors when the image download fails and the UdonBehaviour tries to use Unity API methods.
+* GraphicsSettings 只在进行更改时保存到磁盘，以防止不必要的缓存破坏。
+* 修复了在启用 isAnimated 时可能导致 PhysBones 抖动的问题。
+* 当连接丢失时，重新连接到 Creator Companion。
+* 确保 UdonEvent 从主线程调用。这避免了当图像下载失败并且 UdonBehaviour 尝试使用 Unity API 方法时出现的意外线程错误。
 
-### Other Changes
+### 其他更改
 
-* OnDeserializationResult parameter added to OnDeserialization() method of UdonBehaviours. This enables you to see the time at which this data was sent and received.
+* 在 UdonBehaviours 的 OnDeserialization() 方法中添加了 OnDeserializationResult 参数。这使您能够查看此数据发送和接收的时间。
 
 ## 3.1.11
 
-Starting with this version, we will no longer be releasing the legacy `.unitypackage` files that extract into your `Assets` folder. This page will serve as a changelog for the SDK moving forward!
+从这个版本开始，我们将不再发布解压到您的 `Assets` 文件夹的传统 `.unitypackage` 文件。此页面将作为 SDK 的更新日志！
 
-### Summary
+### 概述
 
-Adds Remote String Loading, Remote Image Loading, MIDI Playback, and Simulation Time!
+添加了远程字符串加载、远程图像加载、MIDI 播放和模拟时间功能！
 
-### New Features
+### 新功能
 
-* Udon can now [load remote images](https://docs.vrchat.com/docs/image-loading). Closes [this Canny](https://feedback.vrchat.com/feature-requests/p/hey-when-will-dynamic-image-be-implemented)
-* Udon can now [load remote strings](https://docs.vrchat.com/docs/string-loading). Closes [this Canny](https://feedback.vrchat.com/vrchat-udon-closed-alpha-feedback/p/vrchat-udon-web-api)
-* Udon can [play back MIDI data](https://docs.vrchat.com/docs/midi-playback) in time with audio.
-* Udon can now access the simulation time of [Players](https://docs.vrchat.com/docs/players#simulationtime) and [GameObjects with networking](https://docs.vrchat.com/docs/network-components#networking-properties).
-* OnDeserialization now contains DeserializationResult [DeserializationResult](https://docs.vrchat.com/docs/network-components#ondeserializationdeserializationresult).
+* Udon 现在可以[加载远程图像](https://docs.vrchat.com/docs/image-loading)。关闭了[这个 Canny](https://feedback.vrchat.com/feature-requests/p/hey-when-will-dynamic-image-be-implemented)
+* Udon 现在可以[加载远程字符串](https://docs.vrchat.com/docs/string-loading)。关闭了[这个 Canny](https://feedback.vrchat.com/vrchat-udon-closed-alpha-feedback/p/vrchat-udon-web-api)
+* Udon 可以[播放 MIDI 数据](https://docs.vrchat.com/docs/midi-playback)，与音频同步。
+* Udon 现在可以访问[玩家](https://docs.vrchat.com/docs/players#simulationtime)和[具有网络功能的 GameObjects](https://docs.vrchat.com/docs/network-components#networking-properties)的模拟时间。
+* OnDeserialization 现在包含 [DeserializationResult](https://docs.vrchat.com/docs/network-components#ondeserializationdeserializationresult)。
 
-### Bug Fixes
+### Bug 修复
 ![UdonBehaviour Inspector With Warning](https://user-images.githubusercontent.com/737888/218818072-92616039-c135-4c6c-86f0-02195bddffcd.png)
-* The Unity Inspector for UdonBehaviours will now detect missing `VRCUrlInputField` variables and offer to reload the SDK in case this component did not load correctly. Closes [this Canny](https://feedback.vrchat.com/sdk-bug-reports/p/vrc-url-input-field-component-missing-from-project-randomly). (This is a known issue, will be fixed when we can upgrade to Unity 2020 or newer.)
-* Fixes duplication of FX layer in Avatar Descriptor when switching rig from generic to humanoid.
-* Fixes issue where Unity gets stuck infinitely reloading assemblies.
-* Clamps the number of clients you can Build & Test from the SDK Window to a minimum of 0 and a maximum of 8.
+* UdonBehaviours 的 Unity 检查器现在会检测缺失的 `VRCUrlInputField` 变量，并提供重新加载 SDK 的选项，以防这个组件没有正确加载。关闭了[这个 Canny](https://feedback.vrchat.com/sdk-bug-reports/p/vrc-url-input-field-component-missing-from-project-randomly)。（这是一个已知问题，将在我们可以升级到 Unity 2020 或更高版本时修复。）
+* 修复了在从通用切换到人形骨架时，虚拟形象描述符中 FX 层重复的问题。
+* 修复了 Unity 无限重载程序集卡住的问题。
+* 将您可以从 SDK 窗口进行构建和测试的客户端数量限制在最少 0 个和最多 8 个。
 
-### Other Changes
+### 其他更改
 
-* Adds `MidiPlaybackExampleScene.scene` and related assets to demonstrate Midi Playback.
-* Adds a simple Remote Image Loader to the `UdonExampleScene.scene`.
-* Speeds up loading of Udon Programs.
-* Removes old SDK updater window.
+* 添加了 `MidiPlaybackExampleScene.scene` 和相关资源以演示 Midi 播放。
+* 在 `UdonExampleScene.scene` 中添加了一个简单的远程图像加载器。
+* 加快了 Udon 程序的加载速度。
+* 移除了旧的 SDK 更新窗口。
 
-### Known Issues
+### 已知问题
 
-* If you change the midi track in a Midi Player while the visualizer is open, the visualizer doesn’t update to the new track until it is closed and then reopened.
+* 如果您在 Midi 播放器中更改 midi 轨道，而可视化器是打开的，那么可视化器不会更新到新的轨道，除非它被关闭然后重新打开。
 
 ## 3.1.9
-* Worlds - VRCSDK3-WORLD-2022.10.18.19.47_Public.unitypackage
-* Avatars - VRCSDK3-AVATAR-2022.10.18.19.47_Public.unitypackage
+* 世界 - VRCSDK3-WORLD-2022.10.18.19.47_Public.unitypackage
+* 虚拟形象 - VRCSDK3-AVATAR-2022.10.18.19.47_Public.unitypackage
 
-* Udon Node Graph: Added lots of hotkeys!
-    * Press and hold one of the following keys, then click anywhere on the graph to create the corresponding node:
-        * `1` : float
-        * `2` : Vector2
-        * `3` : Vector3
-        * `4` : Vector4
-        * `b` : Branch
-        * `+` : float addition
-        * `-` : float subtraction
-        * `=` : float equality comparison
-        * `Shift+B` : Block
-    * Press and hold `C`, then click on a constant to convert it into a variable
-        * You can also do this by right-clicking the constant
-    * `Ctrl+G` for quick grouping
-    * `L+Click` logs the value of the selected node
-    * `Shift+A` for aligning nodes
-    * Press and hold `Shift+F`, then click on a node that outputs an array type, to generate a ForEach loop automatically
-    * Most of the above are also available via the right-click menu
-* Added a new topbar that shows the currently open graph and opens new "tabs" to it when you open more graphs
-    * You can close each tab with the X button
-* Events/Groups entries are clickable in the sidebar for fast navigation
-* Added search bar at the top which allows you to search through your active graph
-    * Press `Ctrl+F` to move focus to the searc hbar
-    * Search activates after entering at least 3 letters
-    * Pressing Enter while having multiple search results will jump between them
-* There is a new "Highlight flow" toggle on the topbar, which, when enabled, will highlight the nodes connected via the flow edges
-    * Use this to quickly see how the program arrives at the particular node
-    * If the node doesn't have any flow connections - nothing will happen
+* Udon 节点图：添加了大量的热键！
+  * 按住以下键之一，然后在图上任意位置点击以创建相应的节点：
+    * `1` : float
+    * `2` : Vector2
+    * `3` : Vector3
+    * `4` : Vector4
+    * `b` : Branch
+    * `+` : float addition
+    * `-` : float subtraction
+    * `=` : float equality comparison
+    * `Shift+B` : Block
+  * 按住 `C`，然后点击一个常量将其转换为变量
+    * 您也可以通过右键点击常量来做到这一点
+  * `Ctrl+G` 快速分组
+  * `L+Click` 记录选定节点的值
+  * `Shift+A` 对齐节点
+  * 按住 `Shift+F`，然后点击一个输出数组类型的节点，自动生成 ForEach 循环
+  * 上述大多数操作也可以通过右键菜单完成
+* 添加了一个新的顶部栏，显示当前打开的图，并在您打开更多图时向其打开新的 "标签"
+  * 您可以使用 X 按钮关闭每个标签
+* 侧边栏中的事件/组条目可点击，便于快速导航
+* 在顶部添加了搜索栏，允许您搜索您的活动图
+  * 按 `Ctrl+F` 将焦点移动到搜索栏
+  * 输入至少 3 个字母后激活搜索
+  * 当有多个搜索结果时，按 Enter 将在它们之间跳转
+* 顶部栏上有一个新的 "高亮流" 切换，启用后，将高亮通过流边缘连接的节点
+  * 使用此功能快速查看程序如何到达特定节点
+  * 如果节点没有任何流连接 - 什么都不会发生
       
-### Changes
-* Changes video link in UdonSyncPlayer example to point to new location
+### 变更
+* 在 UdonSyncPlayer 示例中更改视频链接，指向新的位置
 
 ---
 
 ## 3.1.8
-* Worlds - VRCSDK3-WORLD-2022.10.12.21.07_Public.unitypackage
-* Avatars - VRCSDK3-AVATAR-2022.10.12.21.07_Public.unitypackage
+* 世界 - VRCSDK3-WORLD-2022.10.12.21.07_Public.unitypackage
+* 虚拟形象 - VRCSDK3-AVATAR-2022.10.12.21.07_Public.unitypackage
 
-Added 3 shader globals that can be accessed by any avatar or world shader:
+添加了3个可以被任何虚拟形象或世界着色器访问的着色器全局变量：
 * float _VRChatCameraMode:
-  * 0 - Rendering normally
-  * 1 - Rendering in VR handheld camera
-  * 2 - Rendering in Desktop handheld camera
-  * 3 - Rendering for a screenshot
+  * 0 - 正常渲染
+  * 1 - 在 VR 手持相机中渲染
+  * 2 - 在桌面手持相机中渲染
+  * 3 - 为截图渲染
 
 * float _VRChatMirrorMode:
-  * 0 - Rendering normally, not in a mirror
-  * 1 - Rendering in a mirror viewed in VR
-  * 2 - Rendering in a mirror viewed in desktop mode
+  * 0 - 正常渲染，不在镜像中
+  * 1 - 在 VR 中查看的镜像中渲染
+  * 2 - 在桌面模式下查看的镜像中渲染
 
+* float3 _VRChatMirrorCameraPos - 镜像相机的世界空间位置（独立于眼睛，"居中"在 VR 中）
 
-* float3 _VRChatMirrorCameraPos - World space position of mirror camera (eye independent, "centered" in VR)
-
----
-
-* World InputFields will now open the keyboard modal when interacted with. If this behavior is not desired, add the newly created `VRCInputFieldKeyboardOverride` component to specify how to override this behavior.  Setting its setting to `Default` will open the touch modal while `Override` will not.
-* New option `cameraClearFlags` on VRCMirrorReflection that overrides the camera clear flags used in the mirror
-  * The default is `MirrorClearFlags.FromReferenceCamera` which retains the current behaviour of rendering the same as the active camera
-* Options `customSkybox` and `customClearColor` allow mirror-specific skyboxes and clear colors
-* You can now set gravity in a world to 0 or negative values
-* Fixed: user-supplied masks on the FX layer were ignored, and prevented Gesture transform animations from working. [Docs updated](https://docs.vrchat.com/docs/playable-layers#fx).
-* Added several new Udon nodes related to graphics and shader manipulation:
+* 世界中的 InputFields 现在在与之交互时会打开键盘模式。如果不希望这种行为，可以添加新创建的 `VRCInputFieldKeyboardOverride` 组件来指定如何覆盖此行为。将其设置为 `Default` 将打开触摸模式，而 `Override` 则不会。
+* VRCMirrorReflection 上的新选项 `cameraClearFlags`，可以覆盖镜像中使用的相机清除标志
+  * 默认值是 `MirrorClearFlags.FromReferenceCamera`，保留当前的行为，即与活动相机一样渲染
+* 选项 `customSkybox` 和 `customClearColor` 允许镜像特定的天空盒和清除颜色
+* 现在可以在世界中将重力设置为 0 或负值
+* 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。[文档已更新](https://docs.vrchat.com/docs/playable-layers#fx)。
+* 添加了几个与图形和着色器操作相关的新 Udon 节点：
   * VRCGraphics.DrawMeshInstanced
   * VRCShader.SetGlobalFloat
   * VRCShader.SetGlobalFloatArray
@@ -244,31 +241,29 @@ Added 3 shader globals that can be accessed by any avatar or world shader:
   * VRCShader.SetGlobalInteger
   * VRCShader.SetGlobalTexture
   * VRCShader.SetGlobalColor
-* VRCShader functions accept string input in some cases (for texture names, mostly). You must use the _Udon prefix for these inputs
-  * There is one exception. VRCShader functions will also accept the exact string _AudioTexture to accommodate for the existing widespread community-created AudioLink system
+* VRCShader 函数在某些情况下接受字符串输入（主要是纹理名称）。对于这些输入，您必须使用 _Udon 前缀
+  * 有一个例外。VRCShader 函数也会接受精确的字符串 _AudioTexture，以适应现有的广泛使用的社区创建的 AudioLink 系统
 
 ## 3.1.7
 
-No matching .unitypackage versions
+没有匹配的 .unitypackage 版本
 
-* Checks Scene Descriptor for null spawns object before trying to get length, fixing issue when adding a Scene Descriptor to your world manually.
-* Prompts user to save their scene before loading a Sample Scene, fixing [this Canny issue](https://feedback.vrchat.com/sdk-bug-reports/p/switching-to-the-example-scene-deletes-unsaved-changes.
-
----
+* 在尝试获取长度之前，检查场景描述符是否有空的生成对象，修复了手动向您的世界添加场景描述符时的问题。
+* 在加载示例场景之前提示用户保存他们的场景，修复了[这个 Canny 问题](https://feedback.vrchat.com/sdk-bug-reports/p/switching-to-the-example-scene-deletes-unsaved-changes)。
 
 ## 3.1.6
-* Worlds - VRCSDK3-WORLD-2022.08.29.20.48_Public.unitypackage
-* Avatars - VRCSDK3-AVATAR-2022.08.29.20.48_Public.unitypackage
+* 世界 - VRCSDK3-WORLD-2022.08.29.20.48_Public.unitypackage
+* 虚拟形象 - VRCSDK3-AVATAR-2022.08.29.20.48_Public.unitypackage
 
 ---
 
-* World InputFields will now open the keyboard modal when interacted with.  If this behavior is not desired, add the newly created `VRCInputFieldKeyboardOverride` component to specify how to override this behavior.  Setting its setting to `Default` will open the touch modal while `Override` will not.
-* New option `cameraClearFlags` on VRCMirrorReflection that overrides the camera clear flags used in the mirror
-  * The default is `MirrorClearFlags.FromReferenceCamera` which retains the current behaviour of rendering the same as the active camera
-* Options `customSkybox` and `customClearColor` allow mirror-specific skyboxes and clear colors
-* You can now set gravity in a world to 0 or negative values
-* Fixed: user-supplied masks on the FX layer were ignored, and prevented Gesture transform animations from working. [Docs updated](https://docs.vrchat.com/docs/playable-layers#fx).
-* Added several new Udon nodes related to graphics and shader manipulation:
+* 世界中的 InputFields 现在在与之交互时会打开键盘模式。如果不希望这种行为，可以添加新创建的 `VRCInputFieldKeyboardOverride` 组件来指定如何覆盖此行为。将其设置为 `Default` 将打开触摸模式，而 `Override` 则不会。
+* VRCMirrorReflection 上的新选项 `cameraClearFlags`，可以覆盖镜像中使用的相机清除标志
+  * 默认值是 `MirrorClearFlags.FromReferenceCamera`，保留当前的行为，即与活动相机一样渲染
+* 选项 `customSkybox` 和 `customClearColor` 允许镜像特定的天空盒和清除颜色
+* 现在可以在世界中将重力设置为 0 或负值
+* 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。[文档已更新](https://docs.vrchat.com/docs/playable-layers#fx)。
+* 添加了几个与图形和着色器操作相关的新 Udon 节点：
   * VRCGraphics.DrawMeshInstanced
   * VRCShader.SetGlobalFloat
   * VRCShader.SetGlobalFloatArray
@@ -279,71 +274,71 @@ No matching .unitypackage versions
   * VRCShader.SetGlobalInteger
   * VRCShader.SetGlobalTexture
   * VRCShader.SetGlobalColor
-* VRCShader functions accept string input in some cases (for texture names, mostly). You must use the _Udon prefix for these inputs
-  * There is one exception. VRCShader functions will also accept the exact string _AudioTexture to accommodate for the existing widespread community-created AudioLink system
+* VRCShader 函数在某些情况下接受字符串输入（主要是纹理名称）。对于这些输入，您必须使用 _Udon 前缀
+  * 有一个例外。VRCShader 函数也会接受精确的字符串 _AudioTexture，以适应现有的广泛使用的社区创建的 AudioLink 系统
 
 ## 3.1.6-beta.1
 
-* Worlds - VRCSDK3-WORLD-2022.08.12.22.39_Public.unitypackage
-* Avatars - VRCSDK3-AVATAR-2022.08.12.22.39_Public.unitypackage
+* 世界 - VRCSDK3-WORLD-2022.08.12.22.39_Public.unitypackage
+* 虚拟形象 - VRCSDK3-AVATAR-2022.08.12.22.39_Public.unitypackage
 
 ---
 
-- Fixed: user-supplied masks on the FX layer were ignored, and prevented Gesture transform animations from working. Docs updated: https://docs.vrchat.com/docs/playable-layers#fx
-- All input fields will pop up the keyboard, and we've added a component that'll disable that feature if you don't want it on a field
-- Added in the ability to customize mirror skyboxes and clear flags
-- Added several new Udon nodes related to graphics and shader manipulation:
-    - `VRCGraphics.DrawMeshInstanced`
-    - `VRCShader.SetGlobalFloat`
-    - `VRCShader.SetGlobalFloatArray`
-    - `VRCShader.SetGlobalVector`
-    - `VRCShader.SetGlobalVectorArray`
-    - `VRCShader.SetGlobalMatrix`
-    - `VRCShader.SetGlobalMatrixArray`
-    - `VRCShader.SetGlobalInteger`
-    - `VRCShader.SetGlobalTexture`
-    - `VRCShader.SetGlobalColor`
-- You can now set gravity in a world to 0 or negative values
+- 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。文档已更新：https://docs.vrchat.com/docs/playable-layers#fx
+- 所有输入字段都将弹出键盘，我们添加了一个组件，如果您不希望在字段上使用这个功能，可以禁用它
+- 添加了自定义镜像天空盒和清除标志的能力
+- 添加了几个与图形和着色器操作相关的新 Udon 节点：
+  - `VRCGraphics.DrawMeshInstanced`
+  - `VRCShader.SetGlobalFloat`
+  - `VRCShader.SetGlobalFloatArray`
+  - `VRCShader.SetGlobalVector`
+  - `VRCShader.SetGlobalVectorArray`
+  - `VRCShader.SetGlobalMatrix`
+  - `VRCShader.SetGlobalMatrixArray`
+  - `VRCShader.SetGlobalInteger`
+  - `VRCShader.SetGlobalTexture`
+  - `VRCShader.SetGlobalColor`
+- 现在可以在世界中将重力设置为 0 或负值
 
 ## 3.1.5
 
-No matching .unitypackage versions
+没有匹配的 .unitypackage 版本
 
 ---
 
-* Switches to writing a "canary file" into a project's Library folder after reimporting a given SDK (so it's only auto-reloaded again if the Library is rebuilt).
-* Uses EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo() instead of my homegrown detection method
-* Uses Async Task instead of EditorCoroutine to wait for compilation to finish
+* 在重新导入给定的 SDK 后，将 "canary file" 写入项目的 Library 文件夹（所以只有在 Library 重建时才会再次自动重新加载）。
+* 使用 EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo() 替代我自己编写的检测方法
+* 使用 Async Task 替代 EditorCoroutine 来等待编译完成
 
 ## 3.1.4
 
-No matching .unitypackage versions
+没有匹配的 .unitypackage 版本
 
 ---
 
-* Now waits until a scene is loaded to run SDK3ImportFix
-* Writes a file to the Assets dir explaining how to find samples instead of popping up a window and writing to the registry.
-* Uses the cross-platform `Path.DirectorySeparatorChar` when checking protected file paths instead of `/`.
+* 现在会等到场景加载完毕后再运行 SDK3ImportFix
+* 将一个文件写入 Assets 目录时解释如何找到样本，而不是弹出一个窗口并写入项目注册表。
+* 在检查受保护的文件路径时，使用跨平台的 `Path.DirectorySeparatorChar` 而不是 `/`。
 
 ## 3.1.3
 
-No matching .unitypackage versions
+没有匹配的 .unitypackage 版本
 
 ---
 
-* Automatically reloads current scene after reloading SDKs, which should fix broken VRCUrlInputFields and other missing scripts automatically.
-* Clears the console after reloading the SDK to help users see if any errors are persisting.
-* Shows message about Samples being moved when a project is first opened.
+* 在重新加载 SDK 后自动重新加载当前场景，这应该可以自动修复损坏的 VRCUrlInputFields 和其他缺失的脚本。
+* 在重新加载 SDK 后清除控制台，以帮助用户查看是否有任何错误持续存在。
+* 当项目首次打开时，显示关于样本被移动的消息。
 
 ## 3.1.2
 
-* Worlds - VRCSDK3-WORLD-2022.07.26.21.44_Public
-* Avatars - VRCSDK3-AVATAR-2022.07.26.21.45_Public
+* 世界 - VRCSDK3-WORLD-2022.07.26.21.44_Public
+* 虚拟形象 - VRCSDK3-AVATAR-2022.07.26.21.45_Public
 
 ---
 
-* Adds pause between launching multiple local clients to avoid triggering EAC
-* Always reloads SDK once on project load
-- Converted DB components will now match enabled / disabled state in-app and in the SDK
-- A short delay has been added between multiple local test client launches to account for some issues that would occur with simultaneous launch
-- Fixed Left / Right foot swap during Avatar setup
+* 在启动多个本地客户端之间添加暂停，以避免触发 EAC
+* 项目加载时总是重新加载 SDK
+- 转换后的 DB 组件现在将在应用程序和 SDK 中匹配启用/禁用状态
+- 在多个本地测试客户端启动之间添加了短暂的延迟，以解决同时启动时可能出现的一些问题
+- 修复了在虚拟形象设置过程中左/右脚交换的问题

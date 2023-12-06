@@ -1,31 +1,31 @@
-# Creator Companion
+# 创作者助手
 
-## What Is It?
-The VRChat Creator Companion (VCC) is the new Entry Point for creating things for VRChat! It currently includes our new [VRChat Package Manager (VPM)](vpm/), and houses official packages, community packages, learning resources, tools, and more!
+## 它是什么？
+VRChat 创作者助手（VCC）是为 VRChat 创建内容的新工具！它目前包括我们新的 [VRChat 包管理器（VPM）](vpm/)，并包含官方包、社区包、学习资源、工具等等！
 
 @[youtube](https://www.youtube.com/watch?v=0u1g0TYoJsU)
 
-## Download It
-The Creator Companion is available at [https://vrchat.com/home/download](https://vrchat.com/home/download). You can always download the latest version from this direct url as well: [https://vrchat.com/download/vcc](https://vrchat.com/download/vcc).
+## 如何下载它
+创作者助手可以在 [https://vrchat.com/home/download](https://vrchat.com/home/download) 下载。您也可以通过这个直接的 URL 下载最新版本：[https://vrchat.com/download/vcc](https://vrchat.com/download/vcc)。
 
-## Installer
-The Creator Companion will be installed into your "%LOCALAPPDATA%\Programs" folder by default (e.g. `C:\Users\UserName\AppData\Local\Programs`). You can change this during installation if you like. You can delete the installer once the installation is complete.
+## 安装
+创作者助手默认会被安装到您的 "%LOCALAPPDATA%\Programs" 文件夹中（例如 `C:\Users\UserName\AppData\Local\Programs`）。如果您愿意，可以在安装过程中更改这个设置。安装完成后，您可以删除安装器。
 
-## Requirements
-The Creator Companion will check that Unity and Unity Hub are installed on launch. If it is needed, you will be guided through how to install both. If you follow these instructions, you will get the latest version of the Unity Hub and the current VRChat-SDK-Compatible version of Unity.
+## 要求
+创作者助手会在启动时检查 Unity 和 Unity Hub 是否已安装。如果需要，它会指导您如何安装这两者。如果您按照这些指示操作，您将获得最新版本的 Unity Hub 和当前兼容 VRChat-SDK 的 Unity 版本。
 
-The Creator Companion is only fully-supported on Windows 10 (Windows 11 might work but it's not fully tested). The [CLI has some functionality on Mac and Linux](vpm/cli#mac-and-linux-support).
+创作者助手只在 Windows 10 上得到正式支持（Windows 11 可能可以工作，但尚未完全测试）。[在 Mac 和 Linux 上的 CLI 有一些功能也被支持](vpm/cli#mac-and-linux-support)。
 
-### Unity Editor Versions
-The Creator Companion requires our currently supported Unity Version. It will automatically try to find it on your hard drive, or it can help you install it.
+### Unity 编辑器版本
+创作者助手需要使用我们当前支持的 Unity 版本才能正常工作。它会尝试在您的电脑上找到合适的版本，如果没有，它会帮助您安装合适的。
 
-### Suggesting changes
-Our documentation is public on GitHub, and we appreciate contributions from our community! Click 'Edit this page' at the bottom of any page to suggest changes.
+### 建议更改
+我们的文档在 GitHub 上是公开的，我们非常欢迎社区的贡献！点击任一页面底部的 'Edit this page' 来提出更改建议。
 
-When suggesting changes, GitHub will ask you to
-1. [Sign up](https://github.com/join) for a free GitHub account,
-2. [Create a fork](https://github.com/vrchat-community/creator-companion/fork) of this repository,
-3. [Edit the page](https://github.com/vrchat-community/creator-companion/edit/main/Docs/docs/index.md) with GitHub's built-in Markdown editor,
-4. And [submit a Pull Request](https://github.com/vrchat-community/creator-companion/compare) to have your changes reviewed and merged into our documentation.
+当您提出更改建议时，GitHub 会要求您
+1. [注册](https://github.com/join)一个免费的 GitHub 账户，
+2. [创建一个 fork](https://github.com/vrchat-community/creator-companion/fork) 仓库，
+3. 使用 GitHub 的内置 Markdown 编辑器[编辑页面](https://github.com/vrchat-community/creator-companion/edit/main/Docs/docs/index.md)，
+4. 修改完成后，[提交一个 Pull Request](https://github.com/vrchat-community/creator-companion/compare) 以便让我们审查您的更改。
 
-Thank you for your help!
+感谢您的帮助！

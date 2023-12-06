@@ -1,11 +1,11 @@
-# Architecture
+# 架构
 
-The architecture of ClientSim has a focus on small components with an event based observer pattern, mixed with manual dependency injection where each class is initialized only with the dependencies it needs. The included player controller is based on generic dependency providers, which allows for the eventual extension to using VR without rewriting the core systems.
+ClientSim的架构主要侧重于小组件，采用基于事件的观察者模式，混合手动依赖注入，每个类只初始化其所需的依赖项。包含的玩家控制器基于通用依赖提供者，这允许最终扩展到使用VR，而无需重写核心系统。
 
-## Observer Pattern
+## 观察者模式
 
-ClientSim uses the observer pattern to send events within the system that anything can listen to without knowing what handles them. Events help decouple the different systems, improving testability as one system does not need to directly depend on another just to send messages when something happens. See [EventDispatcher](runtime/event-dispatcher.md) for specific details.
+ClientSim使用观察者模式在系统内发送事件，任何东西都可以在不知道谁处理它们的情况下监听这些事件。事件有助于解耦不同的系统，提高可测试性，因为一个系统不需要直接依赖另一个系统，只是在发生某事时发送消息。具体细节请参见[EventDispatcher](runtime/event-dispatcher.md)。
 
-## Dependency Injection
+## 依赖注入
 
-ClientSim’s architecture uses a manually-handled dependency injection. On creation of a system, all dependencies are passed to it, either through its constructor or through an initialization method. Dependencies are structured as providers, and must extend an interface that declares what methods it provides. When a class needs a specific item, it depends on the provider interface instead of the class that implements it. This allows for different implementations of the provider without the dependent code needing to change. The provider pattern allows for dependencies to easily be mocked in tests.
+ClientSim的架构使用手动处理的依赖注入。在创建系统时，所有依赖项都传递给它，要么通过其构造函数，要么通过初始化方法。依赖项被构造为提供者，并且必须扩展一个声明其提供哪些方法的接口。当一个类需要一个特定的项目时，它依赖于提供者接口，而不是实现它的类。这允许提供者的不同实现，而无需更改依赖代码。提供者模式允许依赖项在测试中轻松模拟。
