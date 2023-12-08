@@ -1,7 +1,16 @@
 import { defineConfig } from 'vitepress'
 import { vrcahtDocsSidebars, vrchatCreatorsDocsSidebar, vccDocsSidebar, udonSharpDocsSidebar, clientSimDocsSidebar } from './sidebars'
 
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import viteImagemin from '@vheemstra/vite-plugin-imagemin'
+
+// @ts-expect-error
+import imageminWebp from 'imagemin-webp' // @ts-expect-error
+import imageminGifWebp from 'imagemin-gif2webp' // @ts-expect-error
+import imageminMozJpeg from 'imagemin-mozjpeg'
+import imageminPngQuant from 'imagemin-pngquant'
+import imageminGifSicle from 'imagemin-gifsicle'
+
+import imageminSvgo from 'imagemin-svgo'
 import { withPwa } from '@vite-pwa/vitepress'
 
 // @ts-expect-error
@@ -189,7 +198,35 @@ export default withPwa(defineConfig({
 
   vite: {
     plugins: [
-      ViteImageOptimizer(),
+      viteImagemin({
+        plugins: {
+          svg: imageminSvgo(),
+          jpg: imageminMozJpeg(),
+          gif: imageminGifSicle({
+            optimizationLevel: 3,
+            interlaced: true,
+            colors: 256
+          }),
+          png: imageminPngQuant(),
+          jpeg: imageminMozJpeg()
+        },
+        makeWebp: {
+          plugins: {
+            jpg: imageminWebp(),
+            jpeg: imageminWebp(),
+            png: imageminWebp(),
+            gif: imageminGifWebp({
+              lossy: true,
+              minimize: true,
+              multiThreading: true,
+              quality: 10,
+              filter: 0,
+              method: 6,
+            }),
+          },
+          skipIfLargerThan: 'smallest'
+        }
+      }),
     ],
   },
 
