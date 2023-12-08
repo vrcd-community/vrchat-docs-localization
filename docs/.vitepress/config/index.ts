@@ -238,7 +238,7 @@ export default withPwa(defineConfig({
       enabled: true
     },
     workbox: {
-      globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,mp4,webp,woff2}']
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,mp4,woff2}']
     },
     experimental: {
       includeAllowlist: true,
