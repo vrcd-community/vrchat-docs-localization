@@ -1,11 +1,13 @@
 <a name="readme-top"></a>
 
 
-[![贡献者][contributors-shield]][contributors-url]
-[![复刻][forks-shield]][forks-url]
-[![标星用户][stars-shield]][stars-url]
-[![议题][issues-shield]][issues-url]
-[![许可证待定][license-shield]][license-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Starts][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![Code License][code-license-shield]][code-license-url]
+[![Doc License][doc-license-shield]][doc-license-url]
+[![GitHub Workflow Status][workflow-status-shield]][workflow-status-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -117,15 +119,37 @@
 <p align="right"><a href="#readme-top">返回顶部</a></p>
 
 <!-- LICENSE -->
-## 许可证
+## 许可证、商标与版权
 
 在 VRChat 汉化文档页面中提及、使用或引用的所有商标、服务商标、集体商标、版权、人格权或类似权利均归其各自的拥有者所有。VRChat 汉化文档中心与上述权利的所有者之间不存在任何认可（endorse）、附属（affiliate）或其他形式的关联。
 
 本项目中使用的所有图片，媒体源均来自于 VRChat .Inc 及其出品的游戏软件 VRChat 中，版权和所有权均为其拥有者所有。
 
-汉化后文档文本在 许可证待定 下分发，详细请见仓库内 `LICENSE` 文件。代码在 MIT 许可证下分发，详细请见仓库内 `LICENSE-CODE` 文件
+汉化后文档文本在 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) 下分发，详细请见仓库内 `LICENSE` 文件。代码在 MIT 许可证下分发，详细请见仓库内 `LICENSE-CODE` 文件
+
+All trademarks, service marks, collective marks, copyrights, personality rights, or similar rights mentioned, used, or referenced on the VRChat 汉化文档中心 are the property of their respective owners, and VRChat 汉化文档中心 is not endorsed, affiliated, or otherwise associated with the owners of such rights.
+
+All images and media sources used in this project are from VRChat Inc. and its game software VRChat, and are copyrighted and owned by their respective owners.
+
+The translated text is distributed under the [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, see the `LICENSE` file in the repository for details. The code is distributed under the MIT license, see the `LICENSE-CODE` file in the repository.
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][doc-license-url]
 
 <p align="right"><a href="#readme-top">返回顶部</a></p>
+
+## 免责声明
+
+本项目是一个无条件的公益项目。
+
+本项目是一个翻译至 VRChat 官方文档汉化中心。请注意，VRChat .Inc、利益相关方不一定核实了本网站上的文章与信息。
+
+所有本项目上的信息是源于独立的志愿玩家或团体的工作，藉以为 VRChat 中文社区的玩家与创作者们提供便于利用的信息源。
+
+This project is an unconditional public service project.
+
+This project is a translation to the VRChat Official Documentation Chinese Language Centre. Please note that VRChat.Inc, the stakeholders have not necessarily verified the articles and information on this website.
+
+All information on this project is the result of work done by independent volunteer players or groups to provide an easily accessible source of information for players and creators in the VRChat Chinese community.
 
 <!-- CONTACT -->
 ## 联系我们
@@ -146,35 +170,29 @@
 * **[Best-README-Template](https://github.com/othneildrew/Best-README-Template)** - 该文档的 README 基于该模板编写，为我们节省了大量的时间。
 * **你，和其他同样对 VRChat 中文社区做出贡献的创作者/玩家们** - 没有你们，也不会有该文档的出现
 
-## 免责声明
-
-本项目是一个无条件的公益项目。
-
-本项目是一个翻译至 VRChat 官方文档汉化中心。请注意，VRChat .Inc、利益相关方不一定核实了本网站上的文章与信息。
-
-所有本项目上的信息是源于独立的志愿玩家或团体的工作，藉以为 VRChat 中文社区的玩家与创作者们提供便于利用的信息源。
-
-### 商标与版权
-
-在 VRChat 汉化文档页面中提及、使用或引用的所有商标、服务商标、集体商标、版权、人格权或类似权利均归其各自的拥有者所有。VRChat 汉化文档中心与上述权利的所有者之间不存在任何认可（endorse）、附属（affiliate）或其他形式的关联。
-
-本项目中使用的所有图片，媒体源均来自于 VRChat .Inc 及其出品的游戏软件 VRChat 中，版权和所有权均为其拥有者所有。
-
-[VRChat 官方文档页](https://docs.vrchat.com/)
-
-<p align="right"><a href="#readme-top">返回顶部</a></p>
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/vrcd-community/vrchat-docs-localization.svg?style=for-the-badge
 [contributors-url]: https://github.com/vrcd-community/vrchat-docs-localization/graphs/contributors
+
 [forks-shield]: https://img.shields.io/github/forks/vrcd-community/vrchat-docs-localization.svg?style=for-the-badge
 [forks-url]: https://github.com/vrcd-community/vrchat-docs-localization/network/members
+
 [stars-shield]: https://img.shields.io/github/stars/vrcd-community/vrchat-docs-localization.svg?style=for-the-badge
 [stars-url]: https://github.com/vrcd-community/vrchat-docs-localization/stargazers
+
 [issues-shield]: https://img.shields.io/github/issues/vrcd-community/vrchat-docs-localization.svg?style=for-the-badge
 [issues-url]: https://github.com/vrcd-community/vrchat-docs-localization/issues
-[license-shield]: https://img.shields.io/github/license/vrcd-community/vrchat-docs-localization.svg?style=for-the-badge
-[license-url]: https://github.com/vrcd-community/vrchat-docs-localization/blob/master/LICENSE.txt
+
+[code-license-shield]: https://img.shields.io/badge/CODE%20License-MIT-green.svg?style=for-the-badge
+[code-license-url]: https://github.com/vrcd-community/vrchat-docs-localization/blob/master/LICENSE-CODE
+
+[doc-license-shield]: https://img.shields.io/badge/DOC%20License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=for-the-badge
+[doc-license-url]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+[workflow-status-shield]: https://img.shields.io/github/actions/workflow/status/vrcd-community/vrchat-docs-localization/deploy-pages.yml?style=for-the-badge
+[workflow-status-url]: https://github.com/vrcd-community/vrchat-docs-localization/actions/workflows/deploy-pages.yml
+
 [product-screenshot]: screenshot.png
 [Poster]: poster.png
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
