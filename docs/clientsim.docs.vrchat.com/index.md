@@ -8,7 +8,7 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直
 
 - 在 Unity 中调试所有内容。
 - 在 Play 模式下检查 Udon 变量。
-- 桌面玩家控制
+- 模拟桌面客户端的控制方式
 - 抓取 Pickups，使用 Interacts，UI 和 Stations。
 - 在 Play 上删除 EditorOnly 对象。
 
@@ -50,7 +50,7 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直
 - 与 Android 匹配的网格突出显示。
 - 更新工具提示位置以匹配客户端。
 - 更好的游戏手柄支持。
-- 支持禁用域重载以无延迟进入播放模式 - 注意，Unity 有一个 bug，如果它们没有设置为 "Editor and Runtime"，则会导致 UI 事件失败。
+- 支持禁用域重载，并以无延迟进入播放模式 - 注意，Unity 有一个 bug，如果它们没有设置为 "Editor and Runtime"，则会导致 UI 事件失败。
 - 自动化测试 - 您需要特别启用这个功能，所以它不会影响您的项目。文档即将发布。
 
 ### 已知问题
@@ -58,11 +58,12 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直
 - 手动更改 Unity 项目设置以启用新的输入系统可能无法正确允许输入。用户应使用 ClientSim 设置窗口中的按钮。
 - Physics.RaycastNonAlloc 有时不返回已移动且没有刚体的碰撞器。
 - 退出播放模式可能会偶尔抛出异常，因为对象被销毁的顺序。
-- 高亮着色器在 Mac（Metal）上无法工作。
+- “Highlights”着色器在 Mac（Metal）上无法工作。
 
 ## 版权
 
 版权所有 (c) 2021 VRChat
+
 查看 License.md 以获取完整的版权信息
 
 ## 致谢
