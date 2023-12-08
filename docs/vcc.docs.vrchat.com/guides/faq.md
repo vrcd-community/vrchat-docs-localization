@@ -10,7 +10,7 @@
 * 或者，[在您的 Windows 设置中启用 Win32 长路径](https://learn.microsoft.com/zh-cn/windows/win32/fileio/maximum-file-path-limitation?tabs=registry#enable-long-paths-in-windows-10-version-1607-and-later)。（这个设置在 Windows 中默认是禁用的，可能会导致旧软件出现问题。）
 
 ## 创作者助手有什么好处？
-创作者助手使 VRChat 世界或头像创建更加容易和快速。它可以自动安装 Unity 编辑器和 Hub，下载 VRChat SDK 并创建和更新您的项目。
+创作者助手使 VRChat 世界或模型创建更加容易和快速。它可以自动安装 Unity 编辑器和 Hub，下载 VRChat SDK 并创建和更新您的项目。
 从 2023 年开始，新的 [VRChat SDK](https://docs.vrchat.com/docs/choosing-your-sdk) 更新将只通过创作者助手提供。如果您想在新的或现有的项目中使用 VRChat 的最新 SDK 功能，[使用 VCC](https://vcc.docs.vrchat.com/guides/getting-started/)。
 
 ## 我的场景去哪了？为什么是空白的？
