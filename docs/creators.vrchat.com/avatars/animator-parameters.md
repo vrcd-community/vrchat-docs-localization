@@ -14,42 +14,43 @@ This is a list of Parameters (**case-sensitive**) that can be added to any Playa
 
 You'll need to add these to your Playable Layer animators to use them. **They are case-sensitive!**
 
-> ❗️ Don't Dead-End!
-> 
-> You should assume that parameter values may change. If you "dead-end" your animators-- as in, you don't have an "exit" in any particular branch-- you may end up having a broken avatar.
+::: danger Don't Dead-End!
+You should assume that parameter values may change. If you "dead-end" your animators-- as in, you don't have an "exit" in any particular branch-- you may end up having a broken avatar.
+:::
 
-## Parameters
+## 一般参数
 
-| Name                                                                                                 | Description                                                                                                                                                                        | Type        | Sync           |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------- |
-| IsLocal                                                                                              | True if the avatar is being worn locally, false otherwise                                                                                                                          | Bool        | None           |
-| [Viseme](/creators.vrchat.com/avatars/animator-parameters#viseme-values)                             | [Oculus viseme index](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference) (`0-14`). When using Jawbone/Jawflap, range is `0-100` indicating volume | Int         | Speech         |
-| Voice                                                                                                | Microphone volume (`0.0-1.0`)                                                                                                                                                      | Float       | Speech         |
-| [GestureLeft](/creators.vrchat.com/avatars/animator-parameters#gestureleft-and-gestureright-values)  | Gesture from L hand control (0-7)                                                                                                                                                  | Int         | IK             |
-| [GestureRight](/creators.vrchat.com/avatars/animator-parameters#gestureleft-and-gestureright-values) | Gesture from R hand control (0-7)                                                                                                                                                  | Int         | IK             |
-| GestureLeftWeight                                                                                    | Analog trigger L (0.0-1.0)†                                                                                                                                                        | Float       | Playable       |
-| GestureRightWeight                                                                                   | Analog trigger R (0.0-1.0)†                                                                                                                                                        | Float       | Playable       |
-| AngularY                                                                                             | Angular velocity on the Y axis                                                                                                                                                     | Float       | IK             |
-| VelocityX                                                                                            | Lateral move speed in m/s                                                                                                                                                          | Float       | IK             |
-| VelocityY                                                                                            | Vertical move speed in m/s                                                                                                                                                         | Float       | IK             |
-| VelocityZ                                                                                            | Forward move speed in m/s                                                                                                                                                          | Float       | IK             |
-| VelocityMagnitude                                                                                    | Total magnitude of velocity                                                                                                                                                        | Float       | IK             |
-| Upright                                                                                              | How "upright" you are. 0 is prone, 1 is standing straight up                                                                                                                       | Float       | IK             |
-| Grounded                                                                                             | True if player touching ground                                                                                                                                                     | Bool        | IK             |
-| Seated                                                                                               | True if player in station                                                                                                                                                          | Bool        | IK             |
-| AFK                                                                                                  | Is player unavailable (HMD proximity sensor / End key)                                                                                                                             | Bool        | IK             |
-| Expression1 - Expression16                                                                           | User defined param, Int (`0`-`255`) or Float (`-1.0`-`1.0`)                                                                                                                        | Int / Float | IK or Playable |
-| [TrackingType](/creators.vrchat.com/avatars/animator-parameters#trackingtype-parameter)              | See description below                                                                                                                                                              | Int         | Playable       |
-| VRMode                                                                                               | Returns `1` if the user is in VR, `0` if they are not                                                                                                                              | Int         | IK             |
-| MuteSelf                                                                                             | Returns `true` if the user has muted themselves, `false` if unmuted                                                                                                                | Bool        | Playable       |
-| InStation                                                                                            | Returns `true` if the user is in a station, `false` if not                                                                                                                         | Bool        | IK             |
-| Earmuffs                                                                                             | Returns `true` if the user's Earmuff feature is on, `false` if not                                                                                                                 | Bool        | Playable       |
+| Name                                                                             | Description                                                                                                                                                                        | Type        | Sync           |
+| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------- |
+| IsLocal                                                                          | True if the avatar is being worn locally, false otherwise                                                                                                                          | Bool        | None           |
+| [Viseme](/avatars/animator-parameters#viseme-values)                             | [Oculus viseme index](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference) (`0-14`). When using Jawbone/Jawflap, range is `0-100` indicating volume | Int         | Speech         |
+| Voice                                                                            | Microphone volume (`0.0-1.0`)                                                                                                                                                      | Float       | Speech         |
+| [GestureLeft](/avatars/animator-parameters#gestureleft-and-gestureright-values)  | Gesture from L hand control (0-7)                                                                                                                                                  | Int         | IK             |
+| [GestureRight](/avatars/animator-parameters#gestureleft-and-gestureright-values) | Gesture from R hand control (0-7)                                                                                                                                                  | Int         | IK             |
+| GestureLeftWeight                                                                | Analog trigger L (0.0-1.0)†                                                                                                                                                        | Float       | Playable       |
+| GestureRightWeight                                                               | Analog trigger R (0.0-1.0)†                                                                                                                                                        | Float       | Playable       |
+| AngularY                                                                         | Angular velocity on the Y axis                                                                                                                                                     | Float       | IK             |
+| VelocityX                                                                        | Lateral move speed in m/s                                                                                                                                                          | Float       | IK             |
+| VelocityY                                                                        | Vertical move speed in m/s                                                                                                                                                         | Float       | IK             |
+| VelocityZ                                                                        | Forward move speed in m/s                                                                                                                                                          | Float       | IK             |
+| VelocityMagnitude                                                                | Total magnitude of velocity                                                                                                                                                        | Float       | IK             |
+| Upright                                                                          | How "upright" you are. 0 is prone, 1 is standing straight up                                                                                                                       | Float       | IK             |
+| Grounded                                                                         | True if player touching ground                                                                                                                                                     | Bool        | IK             |
+| Seated                                                                           | True if player in station                                                                                                                                                          | Bool        | IK             |
+| AFK                                                                              | Is player unavailable (HMD proximity sensor / End key)                                                                                                                             | Bool        | IK             |
+| Expression1 - Expression16                                                       | User defined param, Int (`0`-`255`) or Float (`-1.0`-`1.0`)                                                                                                                        | Int / Float | IK or Playable |
+| [TrackingType](/avatars/animator-parameters#trackingtype-parameter)              | See description below                                                                                                                                                              | Int         | Playable       |
+| VRMode                                                                           | Returns `1` if the user is in VR, `0` if they are not                                                                                                                              | Int         | IK             |
+| MuteSelf                                                                         | Returns `true` if the user has muted themselves, `false` if unmuted                                                                                                                | Bool        | Playable       |
+| InStation                                                                        | Returns `true` if the user is in a station, `false` if not                                                                                                                         | Bool        | IK             |
+| Earmuffs                                                                         | Returns `true` if the user's Earmuff feature is on, `false` if not                                                                                                                 | Bool        | Playable       |
+| IsOnFriendsList                                                                  | Returns `true` if the user viewing the avatar is friends with the user wearing it. `false` locally.                                                                                | Bool        | Other          |
 
 "Supine" and "GroundProximity" are visible in the Debug display, but are not implemented yet. They currently do nothing and never change values.
 
 † GestureLeftWeight and GestureRightWeight go from 0.0 to 1.0 in various gestures depending on the trigger pull. For example, if you make a fist but don't pull the trigger on the left hand, GestureLeft will be 1, but GestureLeftWeight will be 0.0. When you start pulling the trigger, it will climb from 0.0 towards 1.0. This can be used to create "analog" gestures or conditionally detect various things.
 
-### Avatar Scaling Parameters
+## Avatar Scaling Parameters
 
 | Name               | Description                                                                                                                                                                                     | Type  | Sync     |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | -------- |
@@ -61,7 +62,7 @@ You'll need to add these to your Playable Layer animators to use them. **They ar
 
 All of these parameters are read-only.
 
-### Parameter Types
+## Parameter Types
 
 You have access to three types of variable when defining your parameters in your Parameters object.
 
@@ -75,7 +76,7 @@ You can use up to a total of 256 bits of "memory". This isn't strictly memory in
 
 † Remotely synced `float` values have 255 possible values, giving a precision of `1/127` over the network, and can store `-1.0`, `0.0`, and `1.0` precisely. When updated locally, such as with [OSC](https://docs.vrchat.com/docs/osc-overview), float values are stored as native (32-bit) floating-point values in animators. 
 
-### GestureLeft and GestureRight Values
+## GestureLeft and GestureRight Values
 
 GestureLeft and GestureRight use these as their values:
 
@@ -90,7 +91,7 @@ GestureLeft and GestureRight use these as their values:
 | 6     | HandGun     |
 | 7     | ThumbsUp    |
 
-### Viseme Values
+## Viseme Values
 
 We use the [Oculus viseme index](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference), top to bottom, where `sil` is 0. For reference:
 
@@ -112,7 +113,7 @@ We use the [Oculus viseme index](https://developer.oculus.com/documentation/unit
 | 13               | `o`    |
 | 14               | `u`    |
 
-### Sync Types
+## Sync Types
 
 - **Speech** - Only used for visemes, is driven by the Oculus Lipsync output parameters depending on your speech. Updated locally, not directly synced (because its driven by audio)
 - **Playable** - A slower sync mode meant to synchronize longer-running animation states. Updates every 0.1 to 1 seconds as needed based on parameter changes (1 to 10 updates per second), but you shouldn't rely on it for fast sync.
@@ -120,11 +121,11 @@ We use the [Oculus viseme index](https://developer.oculus.com/documentation/unit
 
 When an Expression Parameter is in-use in a Puppet menu, it automatically swaps from Playable to IK sync so you get the continuous update rate and smooth interpolation. When the menu is closed, it returns to Playable sync.
 
-### Driving Expression Parameters
+## Driving Expression Parameters
 
 In addition, Expression parameters can be "driven" to a value via State Behaviors. They can be set using the `Avatar Parameter Driver` State Behavior on a state in an animator.
 
-### AFK State
+## AFK State
 
 The AFK state is triggered by:
 
@@ -132,7 +133,7 @@ The AFK state is triggered by:
 - A system menu is open. This depends on how the platform you're using delivers data when system menus are up-- for example, the Oculus Dash doesn't register as AFK, but SteamVR's menu **does** register as AFK. This is kind of a knock-on, and not a designed behavior.
 - The user has pressed the End key, toggling the AFK state.
 
-### TrackingType Parameter
+## TrackingType Parameter
 
 `TrackingType` indicates a few pieces of information. 
 
@@ -140,9 +141,11 @@ If the value is 3, 4, or 6 while `VRMode` is 1, the value is indicating how many
 
 If the value is 0, 1, or 2 while `VRMode` is 1, the value indicates that the avatar is still initializing. You should not design animators to branch based off this combination of values, and it should instead wait for a "valid" value of 3, 4, or 6.
 
-> 🚧 Account for Changes
-> 
-> During avatar initialization, this value may change! Ensure that your animator accounts for possible changes, and that it doesn't "dead-end" into any branch.
+:::caution Account for changes
+
+During avatar initialization, this value may change! Ensure that your animator accounts for possible changes, and that it doesn't "dead-end" into any branch.
+
+:::
 
 | Parameter | Description                                                                                                                                                                                                                                                                                                                                                             |
 | --------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,15 +157,15 @@ If the value is 0, 1, or 2 while `VRMode` is 1, the value indicates that the ava
 | 6         | Full Body Tracking VR user. Head, hands, hip, and feet tracked.                                                                                                                                                                                                                                                                                                         |
 
 
-### Expression Parameter Aliasing
+## Expression Parameter Aliasing
 
-You **must** create names (or "aliases") for Expression parameters. **You cannot (and shouldn't!) use the default ExpressionN name for the parameters. **
+You **must** create names (or "aliases") for Expression parameters. **You cannot (and shouldn't!) use the default Expression name for the parameters. **
 
 Once you have created names for any Expression parameter you want to use, you can use that name directly in your Controller. This means can come up with your own standard naming for your parameters. This _also_ means that Menu definitions and Controllers can be mixed and matched as long as they use the same names. You can get prefab controllers from others and create your own menu styles based on your preferences, without worrying about Expression parameter conflicts.
 
 When naming your own parameters, using forward slashes (`/`) will cause parameters to automatically organize in various selection dropdowns. For example, naming a parameter `Toggles/Hat` will make the menu selection show up as Toggles -> Hat when selecting parameters for things like Animator transitions and Expression Menus, while keeping the underlying parameter the same name. This doesn't change how parameters behave, it just makes it easier to work with large parameter lists. 
 
-### Default AV3 Aliasing
+## Default AV3 Aliasing
 
 There's a few "defaults" in use by the template AV3 VRChat controllers that you can use if you don't want to build out your own controllers. These won't collide with your own use (as long as you don't name them the same thing) thanks to aliasing.
 
@@ -176,7 +179,7 @@ To restate, if you have an avatar that you upload as an Avatar3 avatar without a
 
 If you also have an `eyes_closed` blendshape, it'll close them when you use the default Die emote or go AFK.
 
-### Cross-Platform Parameter Sync
+## Cross-Platform Parameter Sync
 
 When using an avatar that has both Quest and PC versions uploaded, parameters are synced by their position in the parameters list and their parameter type, **not** by the names of the parameters. For a given parameter to sync between PC and Quest, it has to be in the same position in the parameter list, and have the same parameter type. 
 

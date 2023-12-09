@@ -146,12 +146,21 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
   return [
     { text: '欢迎!', link: '/creators.vrchat.com/getting-started' },
     {
-      text: '安装 SDK', link: '/creators.vrchat.com/sdk/',
+      text: 'Getting Started', link: '/creators.vrchat.com/sdk/',
       collapsed: true,
       items: [
+        {
+          text: 'Managing Unity',
+          link: '/creators.vrchat.com/sdk/upgrade/',
+          collapsed: true,
+          items: [
+            { text: '当前支持的 Unity 版本', link: '/creators.vrchat.com/sdk/upgrade/current-unity-version' },
+            { text: 'Upgrading Projects to 2022', link: '/creators.vrchat.com/sdk/upgrade/unity-2022' },
+            { text: 'New Worlds and Avatars in 2022', link: '/creators.vrchat.com/sdk/upgrade/worlds-and-avatars-in-2022' },
+            { text: 'Minor Unity Upgrades', link: '/creators.vrchat.com/sdk/upgrade/migrating-to-a-newer-minor-unity-version' },
+          ],
+        },
         { text: '构建管线回调 (Pipeline Callbacks) 和接口 (Interfaces)', link: '/creators.vrchat.com/sdk/build-pipeline-callbacks-and-interfaces' },
-        { text: '当前支持的 Unity 版本', link: '/creators.vrchat.com/sdk/current-unity-version' },
-        { text: '迁移到新的 Unity 大版本', link: '/creators.vrchat.com/sdk/migrating-to-a-newer-minor-unity-version' },
         { text: '公开 SDK API', link: '/creators.vrchat.com/sdk/public-sdk-api' },
         { text: 'SDK 疑难解答', link: '/creators.vrchat.com/sdk/sdk-troubleshooting' },
         { text: '升级 SDK', link: '/creators.vrchat.com/sdk/updating-the-sdk' },
@@ -165,12 +174,14 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
         { text: 'Creating Your First Avatar', link: '/creators.vrchat.com/avatars/creating-your-first-avatar' },
         {
           text: 'Avatar Dynamics', link: '/creators.vrchat.com/avatars/avatar-dynamics/',
+          collapsed: true,
           items: [
             { text: 'Contacts', link: '/creators.vrchat.com/avatars/avatar-dynamics/contacts' },
             { text: 'Debugging Avatar Dynamics', link: '/creators.vrchat.com/avatars/avatar-dynamics/debugging-avatar-dynamics' },
             { text: 'PhysBones', link: '/creators.vrchat.com/avatars/avatar-dynamics/physbones' },
           ],
         },
+        { text: 'Impostors', link: '/creators.vrchat.com/avatars/avatar-impostors' },
         { text: 'Animator Parameters', link: '/creators.vrchat.com/avatars/animator-parameters' },
         { text: 'Avatar Optimization Tips', link: '/creators.vrchat.com/avatars/avatar-optimizing-tips' },
         { text: 'Performance Ranks', link: '/creators.vrchat.com/avatars/avatar-performance-ranking-system' },

@@ -4,7 +4,7 @@ title: "VRC Object Sync"
 
 # VRC Object Sync
 
-Syncs the transform of a GameObject with all players in the instance.
+Syncs the position and rotation of a GameObject's transform with all players in the instance.
 
 It has one option.
 

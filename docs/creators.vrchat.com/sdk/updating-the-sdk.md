@@ -85,4 +85,4 @@
 
 ## 更新 Unity
 
-如果您要从旧版本的 Unity 更新，我们提供了如何更新到我们支持的最新版本 Unity 的[指南](./migrating-to-a-newer-minor-unity-version.md)！
+如果您要从旧版本的 Unity 更新，我们提供了如何更新到我们支持的最新版本 Unity 的[指南](./upgrade/)！

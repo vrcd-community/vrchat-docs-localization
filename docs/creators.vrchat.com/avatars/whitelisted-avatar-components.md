@@ -41,6 +41,15 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/crea
 - [Rigidbody](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Rigidbody.html)
 - [Joints](https://docs.unity3d.com/2019.4/Documentation/Manual/Joints.html)
 - [Camera](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Camera.html)
+  - For avatars worn by the local user, Camera components are fully whitelisted.
+  - For avatars worn by remote users, the following rules apply:
+    - In all cases, the Camera components of remote users are disabled when the avatar is loaded.
+      - You can use animations to enable Camera components.
+    - If the local user and remote user are friends, Camera components are not removed.
+      - Note that becoming friends with a user does not automatically reload their avatar.
+    - If the local user has selected "Show Avatar" for the remote user in VRChat's quick menu, Camera components are not removed.
+    - If neither of the above is true, Camera components are removed and cannot be enabled.
+
 - [FlareLayer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-FlareLayer.html)
 - [AudioSource](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioSource.html)
 - [AimConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AimConstraint.html)

@@ -75,6 +75,7 @@ Android 移动端通常不如 PC 强大，请阅读我们的 [Quest 内容优化
 - 本地化文本。与其他平台相比，移动端玩家使用的语言范围要广泛得多。
 - 避免依赖需要 VR 设备或复杂相机移动的交互。
 - 尝试使用[屏幕空间 UI 界面](https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/UICanvas.html)。在触控屏上，它们比世界空间画布更容易交互。考虑添加一个 UI 界面，这样玩家就可以从任何地方打开该界面，而无需转到世界的菜单面板。
+- Use the `OnScreenUpdateEvent` to get the orientation and resolution of the player's screen. This will trigger once when they first load into the world, and whenever the orientation of their device changes.
 
 ## 结论：给玩家一个流畅的游玩体验
 

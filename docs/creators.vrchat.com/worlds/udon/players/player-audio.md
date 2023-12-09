@@ -5,6 +5,7 @@ title: "Player Audio"
 # Player Audio
 
 Players have two sources of audio: the voice coming through their microphone, and sounds attached to their Avatar. With Udon, you can change how a Player hears *other* players' voices and avatar sounds. For example, this graph makes a player quieter by setting their gain to 5 dB (which is lower than the default of 15 dB):
+
 ![player-audio-8e50220-setvoicegain.png](/creators.vrchat.com/images/worlds/player-audio-8e50220-setvoicegain.png)
 
 Here are all the properties you can access:

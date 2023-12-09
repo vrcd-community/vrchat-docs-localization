@@ -47,25 +47,25 @@ Version 1.1:
 
  If set to **Average**, the motion of the root bone will be the average of all of the other chains. This means that the base of each chain will be able to move. 
 
-> 🚧 
-> 
-> If you are using a single root bone, or a single root bone with several children (but no grandchildren), you **must** define an endpoint position!
-> 
-> For example, if you put the PhysBone component on any of the `RootBone`s below, you **must** define an **Endpoint Position** in order for PhysBones to work. This is different from Dynamic Bones!
-> 
-> Single Bone
-> 
-> - `RootBone`
-> 
-> Multiple Children, Single Root
-> 
-> - `RootBone`
->   - `ChildBone1`
->   - `ChildBone2`
->   - `ChildBone3`
->   - `ChildBone4`
-> 
-> You can also address this by adding "end bones" after each `ChildBone`, but that involves editing the armature.
+: danger
+If you are using a single root bone, or a single root bone with several children (but no grandchildren), you **must** define an endpoint position!
+
+For example, if you put the PhysBone component on any of the `RootBone`s below, you **must** define an **Endpoint Position** in order for PhysBones to work. This is different from Dynamic Bones!
+
+Single Bone
+
+- `RootBone`
+
+Multiple Children, Single Root
+
+- `RootBone`
+  - `ChildBone1`
+  - `ChildBone2`
+  - `ChildBone3`
+  - `ChildBone4`
+
+You can also address this by adding "end bones" after each `ChildBone`, but that involves editing the armature.
+:::
 
 ## Forces
 
@@ -75,11 +75,11 @@ Version 1.1:
 - `Advanced` is less stable, but allows more complicated configurations, and tends to be more reactive to external impulses and forces.  
   With default settings, both of these modes act fairly similarly, but adjusting the settings and testing them out will quickly reveal how they differ.
 
-> 📘 
-> 
-> Most (if not all) of the options below allow for Curves by pressing the C button next to the slider. Curves let you adjust the value over the length of the bone chain, and allow for VERY complicated setups within bone chains!
-> 
-> In fact, most PhysBones settings allow for the use of Curves! Learn how to use them and your PhysBones will look amazing!
+::: info
+Most (if not all) of the options below allow for Curves by pressing the C button next to the slider. Curves let you adjust the value over the length of the bone chain, and allow for VERY complicated setups within bone chains!
+
+In fact, most PhysBones settings allow for the use of Curves! Learn how to use them and your PhysBones will look amazing!
+:::
 
 ![physbones-054e326-2022-04-19_11-32-12_Unity.png](/creators.vrchat.com/images/avatars/physbones-054e326-2022-04-19_11-32-12_Unity.png)
 
@@ -141,7 +141,7 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 ## Stretch & Squish
 
 `Stretch Motion` - The amount motion will affect the stretch/squish of the bones.  A value of zero means bones will only stretch/squish as a result of grabbing or collisions.  
-`Max Stretch` - Maximum amount the bones can stretch.  This value is a multiple of the original bone length. [Note: Maximum Bounds](/creators.vrchat.com/avatars/avatar-dynamics/physbones#maximum-bounds)  
+`Max Stretch` - Maximum amount the bones can stretch.  This value is a multiple of the original bone length. [Note: Maximum Bounds](/avatars/avatar-dynamics/physbones#maximum-bounds)  
 `Max Squish` - Maximum amount the bones can shrink.  This value is a multiple of the original bone length.
 
 ## Grab & Pose
@@ -153,23 +153,13 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 
 ## Options
 
-`Parameter` - Prefix used to provide multiple parameters to the avatar controller. In the following items, setting Parameter to `Tail` would replace `{parameter}` with `Tail`
-
-`{parameter}_IsGrabbed`  
- [Bool] Are the bones currently being grabbed.
-
-`{parameter}_IsPosed`  
- [Bool] Are the bones been posed.
-
-`{parameter}_Angle`  
-[Float] Range of 0.0-1.0. Normalized 180 angle made between the end bone's is from its original rest position. In other words, if you twist a bone completely opposite of its start direction, this param will have a value of 1.0.
-
-`{parameter}_Stretch`  
-[Float] Range of 0.0-1.0. How close the bones are to their maximum stretch length.
-
-`Is Animated` - Allows bone transforms to be animated. Each frame bone rest position will be updated according to what was animated. This must be enabled in order for any bone in the PhysBone chain (Root bone included!) to respect animations applied to it.
-
-`Reset When Disabled` - When this component becomes disabled, the bones will automatically reset to their default position.
+- `Parameter` - Prefix used to provide multiple parameters to the avatar controller. In the following items, setting Parameter to `Tail` would replace `{parameter}` with `Tail`
+- `{parameter}_IsGrabbed` - [Bool] Are the bones currently being grabbed.
+- `{parameter}_IsPosed` - [Bool] Are the bones been posed.
+- `{parameter}_Angle` - [Float] Range of 0.0-1.0. Normalized 180 angle made between the end bone's is from its original rest position. In other words, if you twist a bone completely opposite of its start direction, this param will have a value of 1.0.
+- `{parameter}_Stretch` - [Float] Range of 0.0-1.0. How close the bones are to their maximum stretch length.
+- `Is Animated` - Allows bone transforms to be animated. Each frame bone rest position will be updated according to what was animated. This must be enabled in order for any bone in the PhysBone chain (Root bone included!) to respect animations applied to it.
+- `Reset When Disabled` - When this component becomes disabled, the bones will automatically reset to their default position.
 
 ## Important Notes, Usage Tips, etc
 
@@ -177,11 +167,13 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 
 Put the Constraint on the parent game object instead. You can still have the target of the Constraint set to the original GameObject.
 
-> ❗️ 
-> 
-> **PhysBones have a hard limit on the Meta Quest.** This is done to prevent a reduction in performance on the Meta Quest devices, which are often already low on CPU resources. 
-> 
-> You can view those limits as the Very Poor limits for Quest described in the [Minimum Displayed Performance Rank](/creators.vrchat.com/avatars/avatar-performance-ranking-system#quest-limits) documentation.
+::: warning Quest limitations 
+
+**PhysBones have a hard limit on the Meta Quest.** This is done to prevent a reduction in performance on the Meta Quest devices, which are often already low on CPU resources. 
+
+You can view those limits as the Very Poor limits for Quest described in the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#quest-limits) documentation.
+
+:::
 
 ### Per-Component Limitations
 
@@ -233,14 +225,14 @@ Defines a collider that will affect PhysBones that are configured correctly.
 
 ![](/creators.vrchat.com/images/avatars/physbones-ac38f46-2022-05-04_18-35-11_Unity.png)
 
-`Root Transform` - Transform where this collider is placed. If empty, we use this game object's transform.  
-`Shape Type` - Type of collision shape used by this collider. You can choose between a Sphere, Capsule, or Plane collider.  
-`Radius` - Size of the collider extending from its origin.  
-`Height` - Height of the capsule along the Y axis.  
-`Position` - Position offset from the root transform.  
-`Rotation` - Rotation offset from the root transform.  
-`Inside Bounds` - When enabled, this collider will contain bones within its bounds instead of keeping them out.  
-`Bones As Sphere` - When enabled, this collider will treat PhysBone collision radii as spheres centered on the bone's position rather than capsules running the length of the bone.
+- `Root Transform` - Transform where this collider is placed. If empty, we use this game object's transform.  
+- `Shape Type` - Type of collision shape used by this collider. You can choose between a Sphere, Capsule, or Plane collider.  
+- `Radius` - Size of the collider extending from its origin.  
+- `Height` - Height of the capsule along the Y axis.  
+- `Position` - Position offset from the root transform.  
+- `Rotation` - Rotation offset from the root transform.  
+- `Inside Bounds` - When enabled, this collider will contain bones within its bounds instead of keeping them out.  
+- `Bones As Sphere` - When enabled, this collider will treat PhysBone collision radii as spheres centered on the bone's position rather than capsules running the length of the bone.
 
 ## Standard Colliders
 
@@ -256,7 +248,7 @@ A set of "Standard Colliders" are defined in the Avatar Descriptor, in a new sec
   - Ring
   - Little
 
-These colliders act primarily as [Contact](/creators.vrchat.com/avatars/avatar-dynamics/contacts) Senders that other people can detect with their avatars. However, the finger and hand colliders are also used to create global [PhysBone](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Colliders that can be used to affect other people’s PhysBones.
+These colliders act primarily as [Contact](/avatars/avatar-dynamics/contacts) Senders that other people can detect with their avatars. However, the finger and hand colliders are also used to create global [PhysBone](/avatars/avatar-dynamics/physbones) Colliders that can be used to affect other people’s PhysBones.
 
 ## Automatic Dynamic Bone Conversion
 
