@@ -7,7 +7,7 @@ title: "Impostors"
 An impostor is your avatar's body double. It's what others will see when your avatar can't load for whatever reason, like if your avatar was uploaded for PC only but your friend is using a Quest. Typically, you'd show as a fallback avatar or robot, but creating an impostor will let you keep your unique style.
 
 ## Creating an Impostor
-You can only generate impostors for avatars you [own and have uploaded](/avatars/creating-your-first-avatar), and impostors currently only support humanoid avatars.
+You can only generate impostors for avatars you [own and have uploaded](/creators.vrchat.com/avatars/creating-your-first-avatar), and impostors currently only support humanoid avatars.
 
 To create your first impostor:
 

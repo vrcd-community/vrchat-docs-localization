@@ -9,7 +9,7 @@ Looking to make a new project in Unity 2022? Luckily it's pretty easy: The Creat
 ### Download the Creator Companion
 **If you don't already have the VCC**, you'll need to download it! 
 
-Follow the steps on our [Getting Started](/sdk/) page.
+Follow the steps on our [Getting Started](/creators.vrchat.com/sdk/) page.
 
 This is the easiest way to create a new project with the correct Unity version. The Creator Companion will automatically install Unity 2022.3.6, the world SDK, and the avatar SDK for you.
 

@@ -32,13 +32,13 @@ If the state is exited mid-blend duration, the target layer is immediately set t
 
 The layer weight will remain until some other state runs this State Behavior again and resets it.
 
-| Property Name  | Purpose                                                                                       |
-| -------------- | -------------------------------------------------------------------------------------------- |
-| Playable       | Allows you to select which Playable Layer you're affecting.                                  |
+| Property Name  | Purpose                                                                                                                                   |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Playable       | Allows you to select which Playable Layer you're affecting.                                                                               |
 | Layer          | The Index of the Playable Layer you wish to affect. You can't change the weight of the 0th (base) layer-- it is always set to 1.0 weight. |
-| Goal Weight    | Define the weight you want to blend to.                                                      |
-| Blend Duration | Define the time period (in seconds) that you want the blend to take. 0 means instant.        |
-| Debug String   | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging. |
+| Goal Weight    | Define the weight you want to blend to.                                                                                                   |
+| Blend Duration | Define the time period (in seconds) that you want the blend to take. 0 means instant.                                                     |
+| Debug String   | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.                                        |
 
 
 ## Animator Locomotion Control
@@ -48,10 +48,10 @@ The Animator Locomotion Control allows you to disable locomotion in a given stat
 
 In Desktop mode, this disables translational movement, and restricts rotational (view) movement to the vertical axis. In VR, this disables translational and rotational controller movement and restricts half-body IK (full-body IK is unaffected). In both modes, the player's capsule is frozen in place.
 
-| Parameter | Description |
-| - | - |
+| Parameter          | Description                                                                                                                                                 |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Disable Locomotion | If set to True, locomotion (moving with the controls) will be disabled. Roomscale movement will still be possible. If set to False, will enable locomotion. |
-| Debug String | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging. |
+| Debug String       | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.                                                          |
 
 ## Animator Temporary Pose Space
 ![state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png](/creators.vrchat.com/images/avatars/state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png)
@@ -68,12 +68,12 @@ Animator Temporary Pose Space should **only** be used when the view height needs
 This state behavior **will not execute** if the state this behavior is on is exited or interrupted before `Delay Time` elapses!
 :::
 
-| Property Name | Purpose                                                                                                                                                   |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pose Space    | Enter or exit. Enter sets the pose space, exit will clear it to default.                                                                                    |
-| Fixed Delay   | Should the delay time be a fixed period of time, or a percentage of the state's duration?                                                                   |
-| Delay Time    | If given a value, the viewpoint will be set after a delay. Useful if you're blending into an animation over a certain time.                                |
-| Debug String  | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.                                                          |
+| Property Name | Purpose                                                                                                                     |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Pose Space    | Enter or exit. Enter sets the pose space, exit will clear it to default.                                                    |
+| Fixed Delay   | Should the delay time be a fixed period of time, or a percentage of the state's duration?                                   |
+| Delay Time    | If given a value, the viewpoint will be set after a delay. Useful if you're blending into an animation over a certain time. |
+| Debug String  | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.                          |
 
 
 ## Animator Tracking Control
@@ -100,10 +100,10 @@ Setting Mouth and Jaw to Animation will disable visemes, and viseme parameters w
 :::
 The Tracking setting will be kept until some other state runs this State Behavior again and resets it.
 
-| Parameter | Description                                                                                         |
-| :-- |:----------------------------------------------------------------------------------------------------|
+| Parameter        | Description                                                                                         |
+| :--------------- | :-------------------------------------------------------------------------------------------------- |
 | Tracking Control | See description above.                                                                              |
-| Debug String | When this State Behavior runs, this string will be printed to the output log. Useful for debugging. |
+| Debug String     | When this State Behavior runs, this string will be printed to the output log. Useful for debugging. |
 
 ## Avatar Parameter Driver
 
@@ -119,7 +119,7 @@ If modifying a synced parameter (anything defined in the VRCExpressionParameters
 
 However, Parameters only defined in the Animation Controller (aka, "local parameters") can still be modified by a parameter driver. Those values aren't clamped.
 
-You also cannot drive any of the [VRChat-defined Animator Parameters](/avatars/animator-parameters).
+You also cannot drive any of the [VRChat-defined Animator Parameters](/creators.vrchat.com/avatars/animator-parameters).
 
 Set, Add, Random, and Copy work for `float` and `int`. Set, Random, and Copy work for `bool`.
 
@@ -173,9 +173,9 @@ The Action Playable layer will use this State Behavior often, as the Action laye
 
 If the state is exited mid-blend duration, the playable layer is immediately set to the goal weight.
 
-| Property Name  | Purpose                                                                                                        |
-| -------------- | -------------------------------------------------------------------------------------------------------------- |
-| Layer          | The Playable Layer to affect.                                                                                   |
-| Goal Weight    | The Playable layer weight to target after blending is complete.                                                 |
-| Blend Duration | The amount of time to take to blend to the layer. Zero is instant.                                              |
-| Debug String   | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.             |
+| Property Name  | Purpose                                                                                            |
+| -------------- | -------------------------------------------------------------------------------------------------- |
+| Layer          | The Playable Layer to affect.                                                                      |
+| Goal Weight    | The Playable layer weight to target after blending is complete.                                    |
+| Blend Duration | The amount of time to take to blend to the layer. Zero is instant.                                 |
+| Debug String   | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging. |

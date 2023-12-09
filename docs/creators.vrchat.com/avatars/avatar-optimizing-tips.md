@@ -121,7 +121,7 @@ For example, check out [Pumkin's Avatar Tools](https://github.com/rurre/PumkinsA
 
 The following software has not been authored by VRChat. Please read and respect the licensing provided with each individual product.
 
-- [Unity](/creators.vrchat.com/sdk/current-unity-version) 
+- [Unity](/creators.vrchat.com/sdk/upgrade/current-unity-version) 
 - [Blender](https://blender.org)
 - [Cats Blender Plugin](https://github.com/absolute-quantum/cats-blender-plugin)
 - [Shotariya's Material Combiner](https://github.com/Grim-es/material-combiner-addon)

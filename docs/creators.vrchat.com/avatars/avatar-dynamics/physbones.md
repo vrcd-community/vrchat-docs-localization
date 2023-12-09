@@ -141,7 +141,7 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 ## Stretch & Squish
 
 `Stretch Motion` - The amount motion will affect the stretch/squish of the bones.  A value of zero means bones will only stretch/squish as a result of grabbing or collisions.  
-`Max Stretch` - Maximum amount the bones can stretch.  This value is a multiple of the original bone length. [Note: Maximum Bounds](/avatars/avatar-dynamics/physbones#maximum-bounds)  
+`Max Stretch` - Maximum amount the bones can stretch.  This value is a multiple of the original bone length. [Note: Maximum Bounds](#maximum-bounds)  
 `Max Squish` - Maximum amount the bones can shrink.  This value is a multiple of the original bone length.
 
 ## Grab & Pose
@@ -171,7 +171,7 @@ Put the Constraint on the parent game object instead. You can still have the tar
 
 **PhysBones have a hard limit on the Meta Quest.** This is done to prevent a reduction in performance on the Meta Quest devices, which are often already low on CPU resources. 
 
-You can view those limits as the Very Poor limits for Quest described in the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#quest-limits) documentation.
+You can view those limits as the Very Poor limits for Quest described in the [Minimum Displayed Performance Rank](/creators.vrchat.com/avatars/avatar-performance-ranking-system#quest-limits) documentation.
 
 :::
 
@@ -248,7 +248,7 @@ A set of "Standard Colliders" are defined in the Avatar Descriptor, in a new sec
   - Ring
   - Little
 
-These colliders act primarily as [Contact](/avatars/avatar-dynamics/contacts) Senders that other people can detect with their avatars. However, the finger and hand colliders are also used to create global [PhysBone](/avatars/avatar-dynamics/physbones) Colliders that can be used to affect other people’s PhysBones.
+These colliders act primarily as [Contact](/creators.vrchat.com/avatars/avatar-dynamics/contacts) Senders that other people can detect with their avatars. However, the finger and hand colliders are also used to create global [PhysBone](physbones) Colliders that can be used to affect other people’s PhysBones.
 
 ## Automatic Dynamic Bone Conversion
 

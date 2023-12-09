@@ -20,7 +20,7 @@ For our first project, we'll assume you're building content for Windows PC.
     - You can check out Creator Companion docs [here](https://vcc.docs.vrchat.com/). 
 
 :::note
-If you're looking for the process to build content for VRChat on Quest, check out [Setting up Unity for Creating Quest Content](/platforms/android/setting-up-unity-for-creating-quest-content).
+If you're looking for the process to build content for VRChat on Quest, check out [Setting up Unity for Creating Quest Content](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content).
 :::
 
 2. Continue in the installation window. The install location will default to `:\Users\UserName\AppData\Local\Programs`, but you can change this as you'd like.
@@ -52,7 +52,7 @@ If your project isn't listed, click the dropdown menu next to **Create New Proje
     - You must have a VRChat account of at least "New User" [Trust Rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system) to upload content. You cannot use a Steam, Oculus, or Viveport account to upload content.
 
 ## Using Unity Hub instead
-Though we don't recommend this, if you'd like to install Unity yourself without the VCC, check the [Current Supported Unity Version](/sdk/upgrade/current-unity-version) page and install the version of Unity that VRChat currently supports using the Unity Hub.
+Though we don't recommend this, if you'd like to install Unity yourself without the VCC, check the [Current Supported Unity Version](/creators.vrchat.com/sdk/upgrade/current-unity-version) page and install the version of Unity that VRChat currently supports using the Unity Hub.
 
 If you didn't use the VCC to set up your project, you'll also need to install the SDK. Do so via the [VRChat Creator Companion](https://vcc.docs.vrchat.com/guides/getting-started).
 
@@ -66,7 +66,7 @@ To open projects using just the Unity Hub:
 
 ## 小贴士
 
-- If you're building content for VRChat for Meta Quest, you should also be building for Android. Check our [Android documentation](/platforms/android/index.md) for more details.
+- If you're building content for VRChat for Meta Quest, you should also be building for Android. Check our [Android documentation](/creators.vrchat.com/platforms/android/) for more details.
 - 将项目保存在空间较大的大容量硬盘中。Unity 项目可能会很大，尤其是在使用版本管理软件的情况下。
 - 不要将一个项目用于大量不同的虚拟形象或世界。这样做会让未来的迁移工作变得非常麻烦！
 - 如果您知道如何使用版本控制软件，如 [Git](https://git-scm.com/) 或 [Plastic SCM](https://www.plasticscm.com/)，请使用它们！它们能让您很容易地回滚那些破坏您项目的更改。
