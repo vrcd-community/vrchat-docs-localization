@@ -1,0 +1,56 @@
+<svg width="1600.000000" height="400.000000" viewBox="0 0 1600 400" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_319_58_dd" x="-611.000977" y="-1414.000000" width="1563.000000" height="1568.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="200" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_319_59_dd" x="-736.060547" y="-551.584473" width="1917.305664" height="1701.308105" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="200" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_319_60_dd" x="529.113281" y="-503.883057" width="1784.601562" height="1397.506226" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="200" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_319_61_dd" x="599.960938" y="-1175.332397" width="1644.486328" height="1606.183472" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="200" result="effect_layerBlur_1"/>
+		</filter>
+		<filter id="filter_319_62_dd" x="213.615234" y="-656.335449" width="1699.181641" height="1552.235718" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="200" result="effect_layerBlur_1"/>
+		</filter>
+		<clipPath id="clip319_55">
+			<rect id="宣传海报1600x900" width="1600.000000" height="400.000000" fill="white"/>
+		</clipPath>
+	</defs>
+	<rect id="宣传海报1600x900" width="1600.000000" height="400.000000" fill="#E4E4E2"/>
+	<g clip-path="url(#clip319_55)">
+		<rect id="矩形 63" width="1600.000000" height="900.000000" fill="#1B1B1B"/>
+		<g opacity="0.100000">
+			<g opacity="0.800000" filter="url(#filter_319_58_dd)">
+				<ellipse id="椭圆 2" rx="181.500000" ry="184.000000" transform="matrix(1 0 0 1 170.499 -630)" fill="#FF3D67"/>
+			</g>
+			<g filter="url(#filter_319_59_dd)">
+				<ellipse id="Ellipse 14" rx="367.270447" ry="237.684204" transform="matrix(0.958956 0.283553 -0.283553 0.958956 222.592 299.07)" fill="#0025CE"/>
+			</g>
+			<g filter="url(#filter_319_60_dd)">
+				<path id="Vector 10" d="M1129.22 174.236C1133.22 135.815 1161.37 109.941 1214.96 115.511C1262.56 120.458 1327.77 158.872 1382.15 149.914C1440.25 140.342 1501.38 117.279 1554.7 104.31C1618.59 88.7672 1614.98 94.4927 1674.8 128.773C1727.74 159.108 1727.3 228.996 1669.55 272.659C1590.97 332.072 1120.89 254.406 1129.22 174.236Z" fill-rule="evenodd" fill="#BADAFF"/>
+			</g>
+			<g filter="url(#filter_319_61_dd)">
+				<ellipse id="Ellipse 13" rx="222.427933" ry="202.854050" transform="matrix(0.994643 0.103368 -0.103368 0.994643 1422.2 -372.241)" fill="#4D3589"/>
+			</g>
+			<g filter="url(#filter_319_62_dd)">
+				<path id="Vector 11" d="M899.735 -56.3076C985.226 -54.0333 1036.45 183.523 1278.98 221.732C1443.33 247.626 960.146 356.937 867.951 249.525C789.736 158.4 792.269 -59.1666 899.735 -56.3076Z" fill-rule="evenodd" fill="#00EAFF"/>
+			</g>
+		</g>
+	</g>
+</svg>

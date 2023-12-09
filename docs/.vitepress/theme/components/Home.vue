@@ -1,5 +1,5 @@
 <template>
-    <Banner title="VRChat 汉化文档中心" subtitle="本公益文档由 星宿悦游社 X VRCD 提供翻译" />
+    <HomeBanner />
 
     <div class="links-group links-group-first">
         <HomeLinkButton text="VRChat 文档枢纽" link="/docs.vrchat.com/"
@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import Banner from './Banner.vue'
+import HomeBanner from './HomeBanner.vue'
 import HomeLinkButton from './HomeLinkButton.vue';
 </script>
 
