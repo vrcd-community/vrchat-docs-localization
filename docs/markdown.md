@@ -54,6 +54,12 @@ HTML 规范是由 W3C 维护的。
 HTML 规范是由 W3C 维护的。
 ```
 
+## 标记
+
+> 由 [markdown-it-mark](https://www.npmjs.com/package/markdown-it-mark) 包提供。
+
+这是==很重要==的东西喵！
+
 ## 脚注
 
 > 由 [markdown-it-footnote](https://www.npmjs.com/package/markdown-it-footnote) 包提供
@@ -64,12 +70,6 @@ HTML 规范是由 W3C 维护的。
 
 这是一个脚注引用[^1]， 这是另一个[^longnote]。
 
-[^1]: 这是一个脚注。
-
-[^longnote]: 这是个更长的脚注
-
-    随后的段落被缩进，以表明它们属于前一个脚注。
-
 ```markdown
 [^1]: 这是一个脚注。
 
@@ -78,8 +78,9 @@ HTML 规范是由 W3C 维护的。
     随后的段落被缩进，以表明它们属于前一个脚注。
 ```
 
-## 标记
 
-> 由 [markdown-it-mark](https://www.npmjs.com/package/markdown-it-mark) 包提供。
+[^1]: 这是一个脚注。
 
-这是==很重要==的东西喵！
+[^longnote]: 这是个更长的脚注
+
+    随后的段落被缩进，以表明它们属于前一个脚注。
