@@ -31,6 +31,11 @@ export default withPwa(defineConfig({
   cleanUrls: true,
 
   themeConfig: {
+    footer: {
+      message: '本项目是一个无条件的公益项目。本项目是一个翻译 VRChat 官方文档的文档本地化项目。请注意，VRChat .Inc 和其他利益相关方不一定核实了本网站上的文章与信息。所有本项目上的信息是源于独立的志愿玩家或团体的工作，藉以为 VRChat 中文社区的玩家与创作者们提供便于利用的信息源。<br/>This project is an unconditional public service project. This project is a translation to the VRChat 汉化文档中心. Please note that VRChat.Inc and other stakeholders have not necessarily verified the articles and information on this website. All information on this project is the result of work done by independent volunteer players or groups to provide an easily accessible source of information for players and creators in the VRChat Chinese community.',
+      copyright: '<br/>文档汉化文本在 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可下分发，文档软件代码在 <a href="https://github.com/vrcd-community/vrchat-docs-localization/blob/main/LICENSE-CODE">MIT 许可证</a>下分发。<br/>The translated text is distributed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> license. The code is distributed under the <a href="https://github.com/vrcd-community/vrchat-docs-localization/blob/main/LICENSE-CODE">MIT license</a>.<br/><br/>在 VRChat 汉化文档页面中提及、使用或引用的所有商标、服务商标、集体商标、版权、人格权或类似权利均归其各自的拥有者所有。VRChat 汉化文档中心与上述权利的所有者之间不存在任何认可（endorse）、附属（affiliate）或其他形式的关联。<br/>本项目中使用的所有图片，媒体源均来自于 VRChat .Inc 及其出品的游戏软件 VRChat 中，版权和所有权均为其拥有者所有。<br/>All trademarks, service marks, collective marks, copyrights, personality rights, or similar rights mentioned, used, or referenced on the VRChat 汉化文档中心 are the property of their respective owners, and VRChat 汉化文档中心 is not endorsed, affiliated, or otherwise associated with the owners of such rights.<br/>All images and media sources used in this project are from VRChat Inc. and its game software VRChat, and are copyrighted and owned by their respective owners.',
+    },
+
     docFooter: {
       prev: '上一页',
       next: '下一页'
@@ -40,7 +45,7 @@ export default withPwa(defineConfig({
 
     outlineTitle: '该页目录',
     darkModeSwitchLabel: '外观',
-    sidebarMenuLabel: '侧边栏',
+    sidebarMenuLabel: '文档目录',
     returnToTopLabel: '返回顶部',
     langMenuLabel: '语言',
 
