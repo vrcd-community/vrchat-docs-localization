@@ -10,7 +10,7 @@ Occasionally, VRChat will update within minor Unity versions. For example, VRCha
 
 1. Close all of your open Unity projects.
 
-2. Check the [Currently Supported Unity Version](/sdk/upgrade/current-unity-version) and install the new version of Unity via Unity Hub. 
+2. Check the [Currently Supported Unity Version](/creators.vrchat.com/sdk/upgrade/current-unity-version) and install the new version of Unity via Unity Hub. 
     - Although we list the standalone installer on that page, we strongly recommend using the Hub. For this doc, we're assuming you're using it.
 
 ## Copy your project

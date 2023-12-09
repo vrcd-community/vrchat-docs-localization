@@ -23,7 +23,7 @@ There are 2 mechanisms of grabbing where the Proximity value will be in play:
 - **Hover (VR only):** If your hands are close enough to an object, pickups will be highlighted even if a ray in the direction of the UI laser would not intersect the object. This allows more natural "grabbing" of objects. The distance of reach is a sphere centered on your hands with a radius of 0.4 meters times your avatar scale (note that this value is not directly comparable to the "avatar scaling" system available to users, although changing the avatar scale that way can affect the reach). 
     - The "Proximity" value is still compared against the raw distance between your hand and the collider on the pickup, meaning the "reach distance" described is only an upper bound for the closeness at which "Hover" mode will engage.
     - For example, setting the Proximity to 0 will require the hand to be _inside_ the collider for the pickup to be highlighted (it will still be grabbable in Desktop mode however, because of the "extra reach" desktop users get to compensate).
-    - As an advanced technique, you may want to adjust the Proximity value based on the data provided via the [avatar scaling system](/worlds/udon/players/player-avatar-scaling).
+    - As an advanced technique, you may want to adjust the Proximity value based on the data provided via the [avatar scaling system](/creators.vrchat.com/worlds/udon/players/player-avatar-scaling).
 
 ## Requires:
 

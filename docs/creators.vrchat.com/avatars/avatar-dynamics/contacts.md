@@ -8,7 +8,7 @@ title: "触发器"
 
 它们与标准的 Unity 碰撞器是不同的。触发器分为发送端和接收端。发送端只是为了被检测而存在。接收端会检测发送端，然后相应地更新参数。
 
-The amount of contacts on your avatar affect its [performance rank](/avatars/avatar-performance-ranking-system#pc-limits).
+The amount of contacts on your avatar affect its [performance rank](/creators.vrchat.com/avatars/avatar-performance-ranking-system#pc-limits).
 
 # VRCContactSender
  VRCContactSender 组件定义了一个空间体积，当它与 VRCContactReceiver 接触时，将发送一个触发器信号。

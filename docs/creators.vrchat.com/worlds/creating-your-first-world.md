@@ -15,7 +15,7 @@
 ![Adding a scene descriptor automatically via the VRChat SDK build panel.](/creators.vrchat.com/images/worlds/build-panel-add-vrc-scene-descriptor.png)
 
 1. Click **VRChat SDK** > **Show Control Panel**.
-	- If you do not see this menu at the top of your Unity window, your SDK may not be installed correctly. Try clicking **Assets** > **Reimport All**, and check our [SDK troubleshooting guide](/sdk/sdk-troubleshooting).
+	- If you do not see this menu at the top of your Unity window, your SDK may not be installed correctly. Try clicking **Assets** > **Reimport All**, and check our [SDK troubleshooting guide](/creators.vrchat.com/sdk/sdk-troubleshooting).
 2. In the **Authentication**, log into your VRChat account.
 3. Switch to the **Builder** tab and click **Add a VRCSceneDescriptor**.
 

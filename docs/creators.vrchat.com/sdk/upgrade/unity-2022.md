@@ -5,7 +5,7 @@ title: Upgrading Projects to 2022
 # Upgrading Projects to 2022
 
 This page explains how to upgrade your VRChat project from version 2019.4.31f1 to Unity 2022.3.6f1.
-Unity 2022 is required to use the latest version of the VRChat SDK. You can check out the [benefits to upgrading here](/sdk/upgrade/current-unity-version).
+Unity 2022 is required to use the latest version of the VRChat SDK. You can check out the [benefits to upgrading here](/creators.vrchat.com/sdk/upgrade/current-unity-version).
 
 If you're using the Creator Companion, upgrading your project is easy! But first, make sure you create backups of your projects.
 
@@ -93,4 +93,4 @@ If you are trying to add packages to your 2022 project, please keep in mind:
 	- After successfully uploading a world with Unity 2022, you won't be able to upload that same world with Unity 2019.
 - [Make sure to activate your Unity Personal license](https://support.unity.com/hc/en-us/articles/211438683-How-do-I-activate-my-license-) before using VRChat's SDK. Unity is free for personal use.
 - To learn more about the Unity Hub, visit [Unity's documentation](https://docs.unity3d.com/hub/manual/index.html).
-- If you're experiencing issues related to the SDK itself, please read our [SDK Troubleshooting](/sdk/sdk-troubleshooting) page.
+- If you're experiencing issues related to the SDK itself, please read our [SDK Troubleshooting](/creators.vrchat.com/sdk/sdk-troubleshooting) page.
