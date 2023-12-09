@@ -36,10 +36,10 @@ Fired when a VRChat player joins the instance. Outputs the `player` that joined.
 `Event_OnPlayerLeft`
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 Fired when a VRChat player leaves the instance. Outputs the `player` that left.
- 
+
 ### OnSpawn
 `Event_OnSpawn`
-Fired when this object spawns for the local player. Unbuffered, so late joiners do not get this event. Only fires when the object is spawned via network instantiation. Will not fire if the object is present in the base scene.
+Deprecated. OnSpawn serves no function in VRChat's SDK3. In SDK2, this event was triggered when spawning an object for the local player.
  
 ### OnStationEntered
 `Event_OnStationEntered`
@@ -117,6 +117,14 @@ Fired when a particle collides with a player's capsule, assuming that Particle S
 `Event_OnPlayerRespawn`
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 Fired when a player respawns using their menu.
+
+### OnScreenUpdate
+`Event_OnScreenUpdate`
+Outputs: `data` - `VRC.SDK3.Platform.ScreenUpdateData`
+Triggered when a player first enters the world on a Mobile Device, and whenever the orientation of their device changes. Outputs a `ScreenUpdateData` struct with the following values:
+* `type` - `ScreenUpdateType` - only `OrientationChanged` for now, can be expanded in the future.
+* `orientation` - `VRCOrientation` - the orientation of the player's device, as a `VRC.SDKBase.Platform.VRCOrientation` enum, which is `Landscape` or `Portrait`.
+* `resolution` - `Vector2` - the resolution of the player's device, as a `Vector2` struct. 
 
 ### Advanced Notes
 All nodes in this list have the type `System.Void`.

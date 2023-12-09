@@ -45,9 +45,6 @@ Notably if you are using Cats Blender Plugin, it merges meshes automatically whe
 
 @[youtube](https://www.youtube.com/watch?v=1fco-G2j0Jg)
 
-### ... except when you're using shapekeys!
-**There is an exception here!** Calculating shape keys can be expensive, especially on avatars with higher polygon counts (>32,000) or when running on lower-spec hardware (Quest). If all your shape keys are on your face, it can be beneficial to split your face mesh from your body mesh, and delete all shape keys from your body mesh. This can be a more advanced technique. Because you have more meshes, it may negatively affect your [Avatar Performance Rank](/creators.vrchat.com/avatars/avatar-performance-ranking-system), but in reality you'll be slightly more optimized. Remember, *the Perf Rank system isn't perfect*-- it is just a surface-level recommendation system.
-
 ## Reduce the amount of material slots you use
 Each additional material slot is also a draw call, which eats more processor time! If you have a lot of materials (more than 10), look into Texture Atlasing. With Community-created tools, atlasing is exceedingly easy. Check out the Materials video for more details.
 
@@ -57,11 +54,15 @@ This is due to the way that Unity splits meshes into submeshes. What really matt
 
 @[youtube](http://www.youtube.com/watch?v=5LwRi26RxSQ)
 
-## ... but also watch your VRAM usage!
+## Watch your VRAM usage!
 
-Textures eat up VRAM. If you create an inefficient atlas, you might end up using more VRAM than you did before!
+Even if you use texture atlases, you might end end up using more VRAM than you did before!
 
-Check out [Poiyomi's Texture Optimization guide](https://www.poiyomi.com/blog/2022-10-17-texture-optimization). It's excellent and quite comprehensive. 
+Textures eat up VRAM. The higher the resolution of each texture, the more VRAM it consumes. Avoid using several high-resolution textures, or reduce their size by reducing the "Max Size" parameter in [Unity's import settings](https://docs.unity3d.com/Manual/class-TextureImporter.html). 
+
+For example: A 30 MB avatar *can* use 3 GB of VRAM if it uses inefficient high-resolution textures. Don't be fooled by an avatar's download size.
+
+Check out [Poiyomi's Texture Optimization guide](https://www.poiyomi.com/blog/2022-10-17-texture-optimization). It's an excellent and comprehensive guide on how to optimize your avatar's textures.
 
 ## Avoid expensive shaders
 Some shaders can cause excessive time spent rendering on the GPU. Try to stick with the Unity Standard shaders, or shaders that you know perform well. If you don't know how to tell if a shader is well-optimized, that's fine! Here are some examples-- these certainly aren't all the shaders available, but are all well-made and well-optimized with a variety of features.
@@ -120,9 +121,8 @@ For example, check out [Pumkin's Avatar Tools](https://github.com/rurre/PumkinsA
 
 The following software has not been authored by VRChat. Please read and respect the licensing provided with each individual product.
 
-[Unity](/creators.vrchat.com/sdk/current-unity-version) 
-[Blender](https://blender.org)
-[Cats Blender Plugin
-](https://github.com/absolute-quantum/cats-blender-plugin)
-[Shotariya's Material Combiner](https://github.com/Grim-es/material-combiner-addon)
-[Pumkin's Avatar Tools](https://github.com/rurre/PumkinsAvatarTools)
+- [Unity](/creators.vrchat.com/sdk/current-unity-version) 
+- [Blender](https://blender.org)
+- [Cats Blender Plugin](https://github.com/absolute-quantum/cats-blender-plugin)
+- [Shotariya's Material Combiner](https://github.com/Grim-es/material-combiner-addon)
+- [Pumkin's Avatar Tools](https://github.com/rurre/PumkinsAvatarTools)
