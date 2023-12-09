@@ -141,7 +141,7 @@ The translated text is distributed under the [CC BY-NC-SA 4.0](http://creativeco
 
 本项目是一个无条件的公益项目。
 
-本项目是一个翻译至 VRChat 官方文档汉化中心。请注意，VRChat .Inc、利益相关方不一定核实了本网站上的文章与信息。
+本项目是一个翻译 VRChat 官方文档的文档本地化项目。请注意，VRChat .Inc 和其他利益相关方不一定核实了本网站上的文章与信息。
 
 所有本项目上的信息是源于独立的志愿玩家或团体的工作，藉以为 VRChat 中文社区的玩家与创作者们提供便于利用的信息源。
 
