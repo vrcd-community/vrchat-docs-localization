@@ -1,5 +1,5 @@
 ---
-title: "Player API"
+title: "玩家 API"
 description: "Use Udon to retrieve information about players in your world"
 ---
 
