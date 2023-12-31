@@ -17,7 +17,7 @@ VRChat Avatar 3.0 SDK（以下简称 Avatar SDK）是 VRChat 为您提供的虚�
 
 **Avatar 3.0** 是我们为 "_VRChat虚拟形象_"  推出的全新特性。相比于已经淘汰的 Avatar 2.0，它可以为人物模型嵌入更加丰富的自定义特性，并带来更好的性能表现。
 
-Avatar 3.0 带来了全新功能：**模型功能菜单**！ 强烈建议您先在游戏中试用这个功能，体验其所提供的前所未有的个性化体验！(/docs.vrchat.com/OVERVIEW/controls/action-menu)
+Avatar 3.0 带来了全新功能：[**模型功能菜单**]((/docs.vrchat.com/OVERVIEW/controls/action-menu))！ 强烈建议您先在游戏中试用这个功能，体验其所提供的前所未有的个性化体验！
 
 ## 准备工作
 
