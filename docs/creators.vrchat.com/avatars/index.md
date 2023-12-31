@@ -21,7 +21,7 @@ VRChat Avatar 3.0 SDK（以下简称 Avatar SDK）是 VRChat 为您提供的虚�
 
 **Avatar 3.0** 是我们为 "_VRChat虚拟形象_"  推出的全新特性。相比于已经淘汰的 Avatar 2.0，它可以为人物模型嵌入更加丰富的自定义特性，并带来更好的性能表现。
 
-Avatar 3.0 与[模型功能菜单](/docs.vrchat.com/OVERVIEW/controls/action-menu)高度集成，用于控制您佩戴的虚拟形象并与之互动。在创建虚拟形象 3 虚拟形象之前，最好先进入并试用一下动作菜单！
+Avatar 3.0 带来了全新功能：[模型功能菜单](/docs.vrchat.com/OVERVIEW/controls/action-menu) ！强烈建议您先在游戏中试用这个功能！
 
 ## 准备工作
 
@@ -52,7 +52,7 @@ Avatar 3.0 与[模型功能菜单](/docs.vrchat.com/OVERVIEW/controls/action-men
 
 ### 基础功能
 
-至此，您可以尝试为一个人物模型赋予基本的眼动动画和自动嘴型效果。
+至此，您可以开始尝试为一个人物模型设置基本的眼动和嘴型效果。
 
 1. 导入您的人物模型，设置为人形。设置材质等。
 2. 添加 `Avatar Descriptor` 组件
