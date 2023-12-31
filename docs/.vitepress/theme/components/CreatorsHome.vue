@@ -6,7 +6,7 @@
             icon="/assets/getting-started.png" />
         <HomeLinkButton text="世界" link="/creators.vrchat.com/worlds/" description="构建从简单到复杂的体验和交流。"
             icon="/assets/worlds.png" />
-        <HomeLinkButton text="虚拟形象" link="/creators.vrchat.com/avatars/" description="通过广泛的定制功能展现自我。"
+        <HomeLinkButton text="虚拟形象" link="/creators.vrchat.com/avatars/" description="尽情挥洒创意，打造您专属的虚拟形象！"
             icon="/assets/avatars.png" />
     </div>
 </template>
