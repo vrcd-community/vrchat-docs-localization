@@ -21,7 +21,7 @@ VRChat Avatar 3.0 SDK（以下简称 Avatar SDK）是 VRChat 为您提供的虚�
 
 **Avatar 3.0** 是我们为 "_VRChat虚拟形象_"  推出的全新特性。相比于已经淘汰的 Avatar 2.0，它可以为人物模型嵌入更加丰富的自定义特性，并带来更好的性能表现。
 
-Avatar 3.0 与[操作菜单](/docs.vrchat.com/OVERVIEW/controls/action-menu)高度集成，用于控制您佩戴的虚拟形象并与之互动。在创建虚拟形象 3 虚拟形象之前，最好先进入并试用一下动作菜单！
+Avatar 3.0 与[模型功能菜单](/docs.vrchat.com/OVERVIEW/controls/action-menu)高度集成，用于控制您佩戴的虚拟形象并与之互动。在创建虚拟形象 3 虚拟形象之前，最好先进入并试用一下动作菜单！
 
 ## 准备工作
 
@@ -37,18 +37,18 @@ Avatar 3.0 与[操作菜单](/docs.vrchat.com/OVERVIEW/controls/action-menu)高�
 编写本文档时，我们假定您对 [Unity 动画系统](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html) 稍有了解。特别是，您应确保自己已了解以下方面的基本概念：
 
 - 动画器和动画
-- 动画层、层权重和混合
+- 动画层、层权重和混合方式
 - 动画状态和过渡
 - 动画参数
 - 状态行为
 - Avatar 遮罩
 
-了解以下内容也会有所帮助：
+进一步的，了解以下内容也会有所帮助：
 
 - 状态退出时间
 - 动画的循环时间
-- （进阶）图层间的时间同步
-- （高级）混合树
+- 图层间的时间同步
+- 混合树（BlendTree）
 
 ### 基础功能
 
