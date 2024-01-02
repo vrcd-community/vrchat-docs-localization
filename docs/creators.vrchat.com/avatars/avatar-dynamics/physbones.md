@@ -18,7 +18,7 @@ title: " Physbones"
 
 虽然 Physbones 并非专为此而设计，但它也可以作为合理的布料替代品，直到我们实现自己的布料组件为止。
 
-![](/creators.vrchat.com/images/avatars/Physbones-ca9ee06-2022-05-04_18-23-09_Unity.png)
+![](/creators.vrchat.com/images/avatars/physbones-ca9ee06-2022-05-04_18-23-09_Unity.png)
 
 ## 版本
 
@@ -81,7 +81,7 @@ title: " Physbones"
 事实上，大多数 Physbones 设置都可以使用曲线！学会使用它们，您的 Physbone s将看起来很棒！
 :::
 
-![Physbones-054e326-2022-04-19_11-32-12_Unity.png](./creators.vrchat.com/images/avatars/Physbones-054e326-2022-04-19_11-32-12_Unity.png)
+![physbones-054e326-2022-04-19_11-32-12_Unity.png](./creators.vrchat.com/images/avatars/physbones-054e326-2022-04-19_11-32-12_Unity.png)
 
 `Pull` - 用于将骨骼恢复到其静止位置的力量大小。
 `Spring` - 当骨骼试图达到其静止位置时，骨骼会摆动的程度。仅在简化的Integration Type中可用。
@@ -217,7 +217,7 @@ title: " Physbones"
 
 定义了一个会影响正确配置的 Physbones 的碰撞器。
 
-![](/creators.vrchat.com/images/avatars/Physbones-ac38f46-2022-05-04_18-35-11_Unity.png)
+![](/creators.vrchat.com/images/avatars/physbones-ac38f46-2022-05-04_18-35-11_Unity.png)
 
 - `Root Transform` - 此碰撞器所放置的变换。如果为空，我们使用此游戏对象的变换。
 - `Shape Type` - 此碰撞器使用的碰撞形状类型。您可以选择球体、胶囊体或平面碰撞器。
