@@ -81,7 +81,7 @@ title: " Physbones"
 事实上，大多数 Physbones 设置都可以使用曲线！学会使用它们，您的 Physbone s将看起来很棒！
 :::
 
-![Physbones-054e326-2022-04-19_11-32-12_Unity.png](/creators.vrchat.com/images/avatars/Physbones-054e326-2022-04-19_11-32-12_Unity.png)
+![Physbones-054e326-2022-04-19_11-32-12_Unity.png](./creators.vrchat.com/images/avatars/Physbones-054e326-2022-04-19_11-32-12_Unity.png)
 
 `Pull` - 用于将骨骼恢复到其静止位置的力量大小。
 `Spring` - 当骨骼试图达到其静止位置时，骨骼会摆动的程度。仅在简化的Integration Type中可用。
