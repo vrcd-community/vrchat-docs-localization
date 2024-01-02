@@ -3,7 +3,7 @@
 
     <div class="links-group links-group-first">
         <HomeLinkButton text="VRChat 帮助文档" link="/docs.vrchat.com/"
-            description="为您提供游玩入门的指导，让您能够快速上手并充分利用 VRChat 的各项功能。" icon="/assets/vrchat.svg" />
+            description="为您提供游玩入门的指导，上手并充分利用 VRChat 的各项功能。" icon="/assets/vrchat.svg" />
         <HomeLinkButton text="VRChat 创作者指南" link="/creators.vrchat.com/" description="理解并利用 VRChat 官方工具，学习、创作，实现您的大胆想法！"
             icon="/assets/creators-docs-icon.png" />
     </div>
