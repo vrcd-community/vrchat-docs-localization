@@ -242,7 +242,7 @@ title: " Physbones"
   - 无名指
   - 小指
 
-这些碰撞器主要作为 [Contact](/creators.vrchat.com/avatars/avatar-dynamics/contacts) 发送器，其他人可以用其角色检测到。但是，手指和手部碰撞器也用于创建全局的 [Physbone](Physbones) 碰撞器，可以用于影响其他人的 Physbones。
+这些碰撞器主要作为 [Contact](/creators.vrchat.com/avatars/avatar-dynamics/contacts) 发送器，其他人可以用其角色检测到。但是，手指和手部碰撞器也用于创建全局的 [Physbone](physbones) 碰撞器，可以用于影响其他人的 Physbones。
 
 ## 自动Dynamic Bone转换
 
