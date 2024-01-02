@@ -6,12 +6,12 @@ title: "触发器"
 
 触发器是 Avatar SDK 所提供的一类交互组件。它们可以用于联动动画器的参数，进而实现各种有趣的交互效果。
 
-不同于 Unity 自带的碰撞器，触发器从功能上分为发送端和接收端两种，它们分别是 `VRCContactSender`、`VRCContactReceiver`。发送端只是为了被检测而存在，而接收端会检测发送端的接触，然后相应地更新 `参数表` 中的数值。
+不同于 Unity 自带的碰撞器，SDK 提供的触发器从功能上被分为发送端和接收端，它们分别是 `VRCContactSender`、`VRCContactReceiver`。发送端只是为了被检测而存在，而接收端会检测发送端的接触，然后相应地更新 `参数表` 中的数值。
 
 出于性能考虑，触发器的数量受到[模型性能评级](/creators.vrchat.com/avatars/avatar-performance-ranking-system#pc-limits)的限制。通常来说，您可以为单个人物模型添加至多256个触发器。
 
-# 发送端：VRCContactSender
- VRCContactSender 组件定义了一个空间体积，当它与 VRCContactReceiver 接触时，将发送一个触发器信号。
+## 发送端：VRCContactSender
+ `VRCContactSender` 组件定义了一个空间体积，当它与 `VRCContactReceiver` 接触时，将发送一个触发器信号。
  
 ![contacts-59b6e82-2022-04-19_11-53-01_Unity.png](/creators.vrchat.com/images/avatars/contacts-59b6e82-2022-04-19_11-53-01_Unity.png)
 
@@ -38,8 +38,10 @@ title: "触发器"
 例如，当发送端与默认的头部[触发器接收端](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver) 或任何带有 `Face` 标签的自定义[触发器接收端](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver) （注意大写 F）接触时，下面的标签将导致发送端发送一个联系信号！
 ![contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png)
 
-## Standard Colliders
-一组在 Avatar Descriptor 中新增的  "Colliders" 部分定义的 "标准碰撞器"。通过该部分，您可以定义每个形象上都有的一些标准碰撞器。如果您没有改动这部分，它们会自动设置，但也可以根据您的形象进行调整。这些碰撞器不会影响性能评级。
+## 标准碰撞器 (Standard Colliders)
+“标准碰撞器”是一组特殊的触发器。它们特别的地方在于，可以作为发送端与其他人的模型产生互动，并且它们的存在不会影响模型的性能评级。
+
+您可以手动定义每个模型上的标准碰撞器，当然，您也可以选择让 Avatar SDK 自动设置它们。若您选择了自动，Avatar SDK 将在模型骨骼层级中的这些位置为您自动绑定它们：
 
 - Head
 - Torso
@@ -51,13 +53,13 @@ title: "触发器"
   - Ring
   - Little
   ::: info 译者注
-  这些标准碰撞器从上到下分别在头部，躯干，左右手，左右脚，左右手指（可单独设置食指，中指，无名指，小指）
+  这些标准碰撞器从上到下分别对应头部，躯干，左右手，左右脚，左右手指（可单独设置食指，中指，无名指，小指）
   :::
 
-这些碰撞器主要作为触发器发送端，且可以被其他人使用的形象探测到。不过，手指和手掌碰撞器也可用于创建全局[物理骨骼](/creators.vrchat.com/avatars/avatar-dynamics/physbones)碰撞器，从而影响其他人的物理骨骼。
+标准碰撞器主要作为触发器发送端，且可与其他玩家模型所带的触发器产生交互。不过，手指和手掌位置的碰撞器额外具备全局[物理骨骼 (PhysBones) ](/creators.vrchat.com/avatars/avatar-dynamics/physbones)碰撞器的功能，可影响其他玩家模型的物理骨骼(PhysBones)。
 
-# VRCContactReceiver
-VRCContactReceiver 组件定义了一个空间体积，该体积在与  VRCContactSender 接触后将接收到一个触发器信号。
+## 接收端：VRCContactReceiver
+`VRCContactReceiver` 组件定义了一个空间体积，该体积在与  `VRCContactSender` 接触后将接收到一个触发器信号。
 
 ![contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png)
 
