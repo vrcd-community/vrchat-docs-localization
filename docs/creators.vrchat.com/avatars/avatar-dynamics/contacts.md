@@ -4,13 +4,13 @@ title: "触发器"
 
 # 触发器
 
-触发器是一种可以让形象检测到与自己或其他形象的碰撞的系统。这些碰撞可以用来驱动动画控制器，产生各种有趣的效果。
+触发器是 Avatar SDK 所提供的一类交互组件。它们可以用于联动动画器的参数，进而实现各种有趣的交互效果。
 
-它们与标准的 Unity 碰撞器是不同的。触发器分为发送端和接收端。发送端只是为了被检测而存在。接收端会检测发送端，然后相应地更新参数。
+不同于 Unity 自带的碰撞器，触发器从功能上分为发送端和接收端两种，它们分别是 `VRCContactSender`、`VRCContactReceiver`。发送端只是为了被检测而存在，而接收端会检测发送端的接触，然后相应地更新 `参数表` 中的数值。
 
-The amount of contacts on your avatar affect its [performance rank](/creators.vrchat.com/avatars/avatar-performance-ranking-system#pc-limits).
+出于性能考虑，触发器的数量受到[模型性能评级](/creators.vrchat.com/avatars/avatar-performance-ranking-system#pc-limits)的限制。通常来说，您可以为单个人物模型添加至多256个触发器。
 
-# VRCContactSender
+# 发送端：VRCContactSender
  VRCContactSender 组件定义了一个空间体积，当它与 VRCContactReceiver 接触时，将发送一个触发器信号。
  
 ![contacts-59b6e82-2022-04-19_11-53-01_Unity.png](/creators.vrchat.com/images/avatars/contacts-59b6e82-2022-04-19_11-53-01_Unity.png)
