@@ -1,29 +1,30 @@
 ---
-title: "Udon Node Graph"
-description: "Learn how to use the Udon Node Graph to create Udon programs"
-
+title: "Udon 节点图（Udon Node Graph）"
+description: "学习如何使用 Udon 节点图（Udon Node Graph）创建 Udon 程序。"
 ---
 
-# Udon Node Graph
+# Udon 节点图（Udon Node Graph）
 
-## Interface
-The Udon Node Graph is the default interface for creation of Udon programs. This section goes over how to use it. If you want to dive right into examples, take a look at the [Udon Example Scene](/creators.vrchat.com/worlds/examples/udon-example-scene/).
+## 接口
 
-You can open up the Udon Graph window using the Menu Item under **VRChatSDK > Udon Graph**, or by clicking the **Open Udon Graph** button on an UdonBehaviour Component.
-![The Udon Window](/creators.vrchat.com/images/worlds/index-a1d7f43-open-graph.png)
+Udon 节点图（Udon Node Graph）是创建 Udon 程序的默认接口。本章节会说明如何使用它。如果你想直接查看示例，请参阅 [Udon 示例场景](/creators.vrchat.com/worlds/examples/udon-example-scene/)。
+
+你可以在菜单栏点击 **VRChatSDK > Udon Graph** 或直接点击 UdonBehaviour 组件上的 **Open Udon Graph** 按钮来打开 Udon 节点图窗口。
+
+![Udon 窗口](/creators.vrchat.com/images/worlds/index-a1d7f43-open-graph.png)
 
 ::: warning Minimap
-
-The minimap has been removed! Now that you can search your graph by Group Name and Event Name, we felt the minimap was more distracting than helpful.
+Minimap 已经被移除了！您现在可以通过组名称和事件名称来搜索您的节点图，我们觉得 Minimap 更多的是分散注意力而不是帮助作用。
 :::
-If you open the window through the Menu command, you'll see the welcome screen, which has a changelog and some settings.
 
+如果你是通过菜单栏打开的 Udon 窗口，您会看到欢迎页面，其会显示一些更新日志和其他设置。
 
-Multiple Graphs can be opened simultaneously, and you can switch between them using the tabs at the top of the Graph Window. 
+您可以同时打开多个节点图，并且通过在节点图窗口顶部的标签页来在不同的节点图之间切换。
 
-You can close tabs, by clicking the X in the corner of the tab you want to close. Graph Tabs are not "real" tabs, and simply reopen each tab as you select them. This means switching tabs takes as long as opening Graphs.
+你也可以通过点击标签一角的 X 来关闭标签页。请注意，节点图标签页并不是"真正的"的标签页，当你点击不同的标签页时，它只会重新加载节点图。
 
-## Flow
+## 流（Flow）
+
 The Flow of your graph defines which nodes will run, and the order in which they'll do it.
 ![](/creators.vrchat.com/images/worlds/index-f9c508c-simple-branching.png)
 
