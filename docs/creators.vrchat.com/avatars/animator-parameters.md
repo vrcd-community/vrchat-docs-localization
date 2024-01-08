@@ -1,186 +1,199 @@
 ---
-title: "Animator Parameters"
+title: "预设动画参数"
 ---
 
-# Animator Parameters
+# 预设动画参数
 
-::: warning Unity Knowledge Required
+::: warning 您需要了解动画控制器
 
-This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
-
-:::
-
-This is a list of Parameters (**case-sensitive**) that can be added to any Playable Layer (animation controller) and change across all Playable Layers that include this parameter. User created parameters that are not in this list will exist only locally within that animation controller and are not currently changeable by the avatar.
-
-You'll need to add these to your Playable Layer animators to use them. **They are case-sensitive!**
-
-::: danger Don't Dead-End!
-You should assume that parameter values may change. If you "dead-end" your animators-- as in, you don't have an "exit" in any particular branch-- you may end up having a broken avatar.
-:::
-
-## 一般参数
-
-| Name                                                 | Description                                                                                                                                                                        | Type        | Sync           |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------- |
-| IsLocal                                              | True if the avatar is being worn locally, false otherwise                                                                                                                          | Bool        | None           |
-| [Viseme](#viseme-values)                             | [Oculus viseme index](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference) (`0-14`). When using Jawbone/Jawflap, range is `0-100` indicating volume | Int         | Speech         |
-| Voice                                                | Microphone volume (`0.0-1.0`)                                                                                                                                                      | Float       | Speech         |
-| [GestureLeft](#gestureleft-and-gestureright-values)  | Gesture from L hand control (0-7)                                                                                                                                                  | Int         | IK             |
-| [GestureRight](#gestureleft-and-gestureright-values) | Gesture from R hand control (0-7)                                                                                                                                                  | Int         | IK             |
-| GestureLeftWeight                                    | Analog trigger L (0.0-1.0)†                                                                                                                                                        | Float       | Playable       |
-| GestureRightWeight                                   | Analog trigger R (0.0-1.0)†                                                                                                                                                        | Float       | Playable       |
-| AngularY                                             | Angular velocity on the Y axis                                                                                                                                                     | Float       | IK             |
-| VelocityX                                            | Lateral move speed in m/s                                                                                                                                                          | Float       | IK             |
-| VelocityY                                            | Vertical move speed in m/s                                                                                                                                                         | Float       | IK             |
-| VelocityZ                                            | Forward move speed in m/s                                                                                                                                                          | Float       | IK             |
-| VelocityMagnitude                                    | Total magnitude of velocity                                                                                                                                                        | Float       | IK             |
-| Upright                                              | How "upright" you are. 0 is prone, 1 is standing straight up                                                                                                                       | Float       | IK             |
-| Grounded                                             | True if player touching ground                                                                                                                                                     | Bool        | IK             |
-| Seated                                               | True if player in station                                                                                                                                                          | Bool        | IK             |
-| AFK                                                  | Is player unavailable (HMD proximity sensor / End key)                                                                                                                             | Bool        | IK             |
-| Expression1 - Expression16                           | User defined param, Int (`0`-`255`) or Float (`-1.0`-`1.0`)                                                                                                                        | Int / Float | IK or Playable |
-| [TrackingType](#trackingtype-parameter)              | See description below                                                                                                                                                              | Int         | Playable       |
-| VRMode                                               | Returns `1` if the user is in VR, `0` if they are not                                                                                                                              | Int         | IK             |
-| MuteSelf                                             | Returns `true` if the user has muted themselves, `false` if unmuted                                                                                                                | Bool        | Playable       |
-| InStation                                            | Returns `true` if the user is in a station, `false` if not                                                                                                                         | Bool        | IK             |
-| Earmuffs                                             | Returns `true` if the user's Earmuff feature is on, `false` if not                                                                                                                 | Bool        | Playable       |
-| IsOnFriendsList                                      | Returns `true` if the user viewing the avatar is friends with the user wearing it. `false` locally.                                                                                | Bool        | Other          |
-
-"Supine" and "GroundProximity" are visible in the Debug display, but are not implemented yet. They currently do nothing and never change values.
-
-† GestureLeftWeight and GestureRightWeight go from 0.0 to 1.0 in various gestures depending on the trigger pull. For example, if you make a fist but don't pull the trigger on the left hand, GestureLeft will be 1, but GestureLeftWeight will be 0.0. When you start pulling the trigger, it will climb from 0.0 towards 1.0. This can be used to create "analog" gestures or conditionally detect various things.
-
-## Avatar Scaling Parameters
-
-| Name               | Description                                                                                                                                                                                     | Type  | Sync     |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | -------- |
-| ScaleModified      | Returns `true` if the user is scaled using avatar scaling, `false` if the avatar is at its default size.                                                                                        | Bool  | Playable |
-| ScaleFactor        | Relation between the avatar's default height and the current height. An avatar with a default eye-height of 1m scaled to 2m will report `2`.                                                    | Float | Playable |
-| ScaleFactorInverse | Inverse relation (`1/x`) between the avatar's default height and the current height. An avatar with a default eye-height of 1m scaled to 2m will report `0.5`. Might be inaccurate at extremes. | Float | Playable |
-| EyeHeightAsMeters  | The avatar's eye height in meters.                                                                                                                                                              | Float | Playable |
-| EyeHeightAsPercent | Relation of the avatar's eye height in meters relative to the default scaling limits (`0.2`-`5.0`). An avatar scaled to 2m will report `(2.0 - 0.2) / (5.0 - 0.2)` = `0.375`.                   | Float | Playable |
-
-All of these parameters are read-only.
-
-## Parameter Types
-
-You have access to three types of variable when defining your parameters in your Parameters object.
-
-You can use up to a total of 256 bits of "memory". This isn't strictly memory in the sense of memory usage of the avatar, but has to do with the bandwidth you use when syncing parameters.
-
-| Parameter Type | Range             | Memory Usage | Notes                              |
-| :------------- | :---------------- | :----------- | :--------------------------------- |
-| `int`          | `0`-`255`         | 8 bits       | Unsigned 8-bit int.                |
-| `float`        | `-1.0` to `1.0`   | 8 bits       | Signed 8-bit fixed-point decimal†. |
-| `bool`         | `True` or `False` | 1 bit        |                                    |
-
-† Remotely synced `float` values have 255 possible values, giving a precision of `1/127` over the network, and can store `-1.0`, `0.0`, and `1.0` precisely. When updated locally, such as with [OSC](https://docs.vrchat.com/docs/osc-overview), float values are stored as native (32-bit) floating-point values in animators. 
-
-## GestureLeft and GestureRight Values
-
-GestureLeft and GestureRight use these as their values:
-
-| Index | Gesture     |
-| ----- | ----------- |
-| 0     | Neutral     |
-| 1     | Fist        |
-| 2     | HandOpen    |
-| 3     | FingerPoint |
-| 4     | Victory     |
-| 5     | RockNRoll   |
-| 6     | HandGun     |
-| 7     | ThumbsUp    |
-
-## Viseme Values
-
-We use the [Oculus viseme index](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference), top to bottom, where `sil` is 0. For reference:
-
-| Viseme Parameter | Viseme |
-| :--------------- | :----- |
-| 0                | `sil`  |
-| 1                | `pp`   |
-| 2                | `ff`   |
-| 3                | `th`   |
-| 4                | `dd`   |
-| 5                | `kk`   |
-| 6                | `ch`   |
-| 7                | `ss`   |
-| 8                | `nn`   |
-| 9                | `rr`   |
-| 10               | `aa`   |
-| 11               | `e`    |
-| 12               | `i`    |
-| 13               | `o`    |
-| 14               | `u`    |
-
-## Sync Types
-
-- **Speech** - Only used for visemes, is driven by the Oculus Lipsync output parameters depending on your speech. Updated locally, not directly synced (because its driven by audio)
-- **Playable** - A slower sync mode meant to synchronize longer-running animation states. Updates every 0.1 to 1 seconds as needed based on parameter changes (1 to 10 updates per second), but you shouldn't rely on it for fast sync.
-- **IK** - A faster sync mode meant to synchronize frequently-changing values. Updates continuously every 0.1 seconds (10 updates per second), and interpolates `float` values locally for remote users. Depending on the parameter, this may also just be calculated based on the avatar's locally rendered IK state.
-
-When an Expression Parameter is in-use in a Puppet menu, it automatically swaps from Playable to IK sync so you get the continuous update rate and smooth interpolation. When the menu is closed, it returns to Playable sync.
-
-## Driving Expression Parameters
-
-In addition, Expression parameters can be "driven" to a value via State Behaviors. They can be set using the `Avatar Parameter Driver` State Behavior on a state in an animator.
-
-## AFK State
-
-The AFK state is triggered by:
-
-- The user removing the headset and the HMD proximity sensor returning that the headset is not being worn
-- A system menu is open. This depends on how the platform you're using delivers data when system menus are up-- for example, the Oculus Dash doesn't register as AFK, but SteamVR's menu **does** register as AFK. This is kind of a knock-on, and not a designed behavior.
-- The user has pressed the End key, toggling the AFK state.
-
-## TrackingType Parameter
-
-`TrackingType` indicates a few pieces of information. 
-
-If the value is 3, 4, or 6 while `VRMode` is 1, the value is indicating how many tracked points the wearer of the avatar has enabled and currently tracked. **This value can change!** If a user in 6-point tracking removes their extra three points of tracking, they will go from a value of 6 to a value of 3. Take this into account when you design your animator. 
-
-If the value is 0, 1, or 2 while `VRMode` is 1, the value indicates that the avatar is still initializing. You should not design animators to branch based off this combination of values, and it should instead wait for a "valid" value of 3, 4, or 6.
-
-::: warning Account for changes
-
-During avatar initialization, this value may change! Ensure that your animator accounts for possible changes, and that it doesn't "dead-end" into any branch.
+本文假设您对 [Unity 动画控制器](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html) 有一定了解。
 
 :::
 
-| Parameter | Description                                                                                                                                                                                                                                                                                                                                                             |
-| --------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0         | Uninitialized. Usually only occurs when the user is switching avatars and their IK isn't sending yet.                                                                                                                                                                                                                                                                   |
-| 1         | Generic rig. The user might have tracking of any kind on, but the avatar is rigged as Generic,so tracking is ignored. _Might_ be a desktop user if `VRMode` is 0.                                                                                                                                                                                                       |
-| 2         | _Only occurs with AV2,and therefore isn't a state you should expect to be in for very long for AV3 controllers on avatars. May still occur with SDK3 stations._ <br />Hands-only tracking with no fingers. This will only occur in states that are transitions-- as in, you should expect `TrackingType` to change again, and the avatar should not stay in this state. |
-| 3         | Head and hands tracking. If `VRMode` is `1`, this user is in 3-point VR. If `VRMode` is `0`, this is a Desktop user in a humanoid avatar.                                                                                                                                                                                                                               |
-| 4         | 4-point VR user. Head, hands, and hip.                                                                                                                                                                                                                                                                                                                                  |
-| 6         | Full Body Tracking VR user. Head, hands, hip, and feet tracked.                                                                                                                                                                                                                                                                                                         |
+**预设动画参数**是一个预制的参数列表（**区分大小写**），这些参数可以被添加到任意可播放层（FX，Action等），它们的更改值会同步给它们所在的控制器。用户自创的参数仅在其所在的动画控制器内部存在，并且当前无法在模型层面上进行更改。
+
+您需要将这些参数添加到可播放层中才能使用它们。**注意，它们的名称区分大小写！**
+
+::: danger 不要让您的动画器卡死！！
+您应该假设参数值可能会发生变化。如果您的动画控制器“卡死”——也就是说，您没有为某个状态添加一个出口——您可能会获得一个出错的模型。
+:::
+
+## 通用参数
+
+| 名称                                                 | 描述                                                                                                                                                                              | 类型        | 同步           |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------- |
+| IsLocal                                              | 如果角色在本地使用，则为 True；否则为 False                                                                                                                                       | 布尔        | 无             |
+| [Viseme](#viseme-values)                             | [Oculus 面部表情索引](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference)（`0-14`）。使用 Jawbone/Jawflap 时，范围为 `0-100`，表示音量。 | 整数         | 语音           |
+| Voice                                                | 麦克风音量（`0.0-1.0`）                                                                                                                                                          | 浮点数       | 语音           |
+| [GestureLeft](#gestureleft-and-gestureright-values)  | 左手控制器的手势（0-7）                                                                                                                                                          | 整数         | IK             |
+| [GestureRight](#gestureleft-and-gestureright-values) | 右手控制器的手势（0-7）                                                                                                                                                          | 整数         | IK             |
+| GestureLeftWeight                                    | 左手的模拟触发器（0.0-1.0）†                                                                                                                                                     | 浮点数       | 可播放层       |
+| GestureRightWeight                                   | 右手的模拟触发器（0.0-1.0）†                                                                                                                                                     | 浮点数       | 可播放层       |
+| AngularY                                             | Y 轴上的角速度                                                                                                                                                                    | 浮点数       | IK             |
+| VelocityX                                            | 横向移动速度（米/秒）                                                                                                                                                            | 浮点数       | IK             |
+| VelocityY                                            | 纵向移动速度（米/秒）                                                                                                                                                            | 浮点数       | IK             |
+| VelocityZ                                            | 前向移动速度（米/秒）                                                                                                                                                            | 浮点数       | IK             |
+| VelocityMagnitude                                    | 速度的总大小                                                                                                                                                                      | 浮点数       | IK             |
+| Upright                                              | 您的“直立”程度。0 表示俯卧，1 表示完全直立                                                                                                                                       | 浮点数       | IK             |
+| Grounded                                             | 如果角色接触地面，则为 True                                                                                                                                                       | 布尔        | IK             |
+| Seated                                               | 如果角色处于座位上，则为 True                                                                                                                                                     | 布尔        | IK             |
+| AFK                                                  | 如果角色不可用（HMD 接近传感器/End 键），则为 True                                                                                                                                | 布尔        | IK             |
+| Expression1 - Expression16                           | 用户定义的参数，整数（`0`-`255`）或浮点数（`-1.0`-`1.0`）                                                                                                                         | 整数 / 浮点数 | IK 或可播放层 |
+| [TrackingType](#trackingtype-parameter)              | 请参阅下面的描述                                                                                                                                                                  | 整数         | 可播放层       |
+| VRMode                                               | 如果用户处于 VR 中，则返回 `1`；如果不在 VR 中，则返回 `0`                                                                                                                        | 整数         | IK             |
+| MuteSelf                                             | 如果用户已将自己静音，则返回 `true`；如果未静音，则返回 `false`                                                                                                                     | 布尔        | 可播放层       |
+| InStation                                            | 如果用户在站点中，则返回 `true`；如果不在站点中，则返回 `false`                                                                                                                     | 布尔        | IK             |
+| Earmuffs                                             | 如果用户的耳罩功能打开，则返回 `true`；如果关闭，则返回 `false`                                                                                                                     | 布尔        | 可播放层       |
+| IsOnFriendsList                                      | 如果查看角色的用户与佩戴角色的用户是好友，则返回 `true`。本地返回 `false`                                                                                                           | 布尔        | 其他           |
+
+“Supine” 和 “GroundProximity” 在调试窗口中可见，但尚未实现。它们目前没有任何功能，其值也不会发生改变。
+
+† 在不同的手势中，GestureLeftWeight 和 GestureRightWeight 的值根据扳机的按压程度中从 0.0 变化到 1.0。例如，如果您握拳但不按压左手的扳机，GestureLeft 的值将为 1，但 GestureLeftWeight 的值将为 0.0。当您开始按压扳机时，它的值将从 0.0 增加到 1.0。这可以用于创建“模拟”手势或有条件地检测各种情况。
+
+## 角色缩放参数
+
+| 名称               | 描述                                                                                                                                                                                                 | 类型  | 同步     |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | -------- |
+| ScaleModified      | 如果用户使用角色缩放进行缩放，则返回 `true`；如果角色处于默认大小，则返回 `false`                                                                                                                     | 布尔  | 可播放层 |
+| ScaleFactor        | 角色默认高度与当前高度之间的关系。默认眼高为 1 米的角色缩放到 2 米将报告 `2`                                                                                                                        | 浮点数 | 可播放层 |
+| ScaleFactorInverse | 角色默认高度与当前高度之间的倒数关系（`1/x`）。默认眼高为 1 米的角色缩放到 2 米将报告 `0.5`。在极端情况下可能不准确。                                                                                   | 浮点数 | 可播放层 |
+| EyeHeightAsMeters  | 角色的眼高（以米为单位）                                                                                                                                                                             | 浮点数 | 可播放层 |
+| EyeHeightAsPercent | 角色的眼高与默认缩放限制（`0.2`-`5.0`）之间的关系。缩放为 2 米的角色将报告 `(2.0 - 0.2) / (5.0 - 0.2)` = `0.375`                                                                                     | 浮点数 | 可播放层 |
+
+以上参数只能被读取，无法被手动写入。
+
+## 参数类型
+
+在定义参数时，您可以访问三种类型的变量。
+
+您可以使用总共 256 位的“内存”。“内存”的大小并不是因为模型的内存使用而被限制，而是因为同步参数时使用的带宽被限制。
+
+| 参数类型 | 范围             | 内存使用 | 备注                              |
+| :------- | :-------------- | :------- | :-------------------------------- |
+| `int`    | `0`-`255`       | 8 位     | 无符号 8 位整数。                |
+| `float`  | `-1.0` 到 `1.0` | 8 位     | 有符号 8 位定点小数†。           |
+| `bool`   | `True` 或 `False` | 1 位      |                                   |
+
+† 由远程同步来的 `float` 值有 255 个可能的值，其跨网络精度值为 `1/127`，可以精确存储 `-1.0`、`0.0` 和 `1.0`。当在本地更新时，例如使用 [OSC](https://docs.vrchat.com/docs/osc-overview)，浮点值以原生（32 位）浮点值存储在动画控制器中。
+
+<!--精度值的描述是否合适？-->
+
+## GestureLeft 和 GestureRight 的值
+
+GestureLeft 和 GestureRight 使用以下值：
+
+| 索引 | 手势       |
+| ---- | ----------- |
+| 0    | 中性       |
+| 1    | 握拳       |
+| 2    | 手张开     |
+| 3    | 指向       |
+| 4    | 胜利       |
+| 5    | 摇滚       |
+| 6    | 手枪       |
+| 7    | 点赞       |
+
+## Viseme 的值
+
+我们使用 [Oculus 面部表情目录](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference)，它们从上到下排列，其中 `sil` 为 0。以下供参考：
+
+| Viseme 参数 | Viseme |
+| :---------- | :----- |
+| 0           | `sil`  |
+| 1           | `pp`   |
+| 2           | `ff`   |
+| 3           | `th`   |
+| 4           | `dd`   |
+| 5           | `kk`   |
+| 6           | `ch`   |
+| 7           | `ss`   |
+| 8           | `nn`   |
+| 9           | `rr`   |
+| 10          | `aa`   |
+| 11          | `e`    |
+| 12          | `i`    |
+| 13          | `o`    |
+| 14          | `u`    |
+
+## 同步类型
+
+- **Speech** - 仅用于 viseme，这些参数由您的语音驱动，由 Oculus Lipsync 输出值。在本地更新，不会直接同步给其他用户（因为它由您的语音音频驱动，这个音频也会同步给其他人，在他们的本地完成更新参数的动作）。
+- **Playable** - 一种比 Speech 更慢的同步模式，用于同步运行时间较长的动画状态。根据参数更改的需要每 0.1 到 1 秒更新一次（也就是每秒 1 到 10 次更新），不建议您依赖它进行快速同步。
+- **IK** - 一种比 Speech 更快的同步模式，用于同步频繁更改的值。每 0.1 秒连续更新一次（也就是每秒 10 次），使用这个同步模式的参数一部分会在在远程用户的本地插值成 `float` 值，一部分会仅基于模型的本地渲染 IK 状态来计算。
+
+当 Expression 参数在 Puppet 菜单中被使用时，它会自动从 Playable 同步切换到 IK 同步，以获得连续的更新速率和平滑的插值。关闭菜单后，它将切换回 Playable 同步模式。
+
+<!--puppet后续需要注释-->
+
+## 驱动 Expression 参数
+
+此外，可以通过状态行为将 Expression 参数固定到某个值。可以使用动画控制器中的状态上的 `Avatar Parameter Driver` 状态行为来设置它们。
+
+## AFK 状态
+
+AFK 状态由以下情况触发：
+
+- 用户摘下头戴式显示器，HMD 近距传感器返回消息：未佩戴头戴式显示器
+- 打开系统菜单。这取决于在系统菜单打开时，您使用的平台如何传递对应数据——例如，打开 Oculus Dash 菜单不会被判定为 AFK，但打开 SteamVR 菜单会被判定为 AFK。这是一种间接的行为，并非预期设计行为。
+- 玩家按下 End 键，来切换 AFK 状态。
+
+## TrackingType 参数
 
 
-## Expression Parameter Aliasing
+如果 `VRMode` 为 1 时，`TrackingType`值为 3、4 或 6，这些值代表使用这个模型的玩家佩戴了多少个 VR 追踪设备。**此值可能会发生变化！** 如果处于 6 点跟踪的用户移除了额外的 3 个跟踪点，它的值将从 6 变为 3。您在设计动画控制器时要考虑到这一点。
 
-You **must** create names (or "aliases") for Expression parameters. **You cannot (and shouldn't!) use the default Expression name for the parameters. **
+如果 `VRMode` 为 1 时，`TrackingType`值为 0、1 或 2，这些值代表模型仍在初始化。您不应该使用这些值来组合设计动画控制器，而应该等待“有效”值，例如 3、4 或 6 。
 
-Once you have created names for any Expression parameter you want to use, you can use that name directly in your Controller. This means can come up with your own standard naming for your parameters. This _also_ means that Menu definitions and Controllers can be mixed and matched as long as they use the same names. You can get prefab controllers from others and create your own menu styles based on your preferences, without worrying about Expression parameter conflicts.
+::: warning 请考虑到，这些值可能会发生改变
 
-When naming your own parameters, using forward slashes (`/`) will cause parameters to automatically organize in various selection dropdowns. For example, naming a parameter `Toggles/Hat` will make the menu selection show up as Toggles -> Hat when selecting parameters for things like Animator transitions and Expression Menus, while keeping the underlying parameter the same name. This doesn't change how parameters behave, it just makes it easier to work with large parameter lists. 
+在模型初始化期间，这些值可能会发生变化！确保您的动画控制器考虑到可能的参数值变化，并且不会卡死到任某一个状态中。
 
-## Default AV3 Aliasing
+<!--branch考虑到实际情况，翻译成状态-->
 
-There's a few "defaults" in use by the template AV3 VRChat controllers that you can use if you don't want to build out your own controllers. These won't collide with your own use (as long as you don't name them the same thing) thanks to aliasing.
+:::
 
-In particular, the Default Action and FX layers use aliasing. You don't need to worry about using a Expression that is in these layers. 
+| 参数 | 描述                                                                                                                                                                                                                                 |
+| ---- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0    | 模型未初始化，该值一般仅在玩家切换模型且其 IK 数据尚未被发送时出现。                                                                                                                                                                                 |
+| 1    | 模型骨架类型为通用骨骼，该值一般在玩家启用了某种跟踪（例如来自 HMD 或追踪器），但由于模型骨架类型被设置为通用骨骼，导致追踪被忽略时出现。如果同时 `VRMode` 的值为 0，则表明玩家是桌面用户，而不是 VR 用户。<!--通用骨骼要不要翻译成generic？另外为了确保语意，加一个VR用户。-->                                                                                                                         |
+| 2    | 仅手部追踪，没有手指追踪，该值只会在过渡状态中发生——也就是说，此时您应该预期到 `TrackingType` 会转变到另一个值，模型不应停留在该值。 <br> *<font color="gray">一般适用于 AV2 模型，该值可能仍然在 SDK3 station 上发生，但您原则上不应让它在模型的 AV3 控制器上进行长时间使用。</font>* |
+| 3    | 头部和手部追踪，如果 `VRMode` 为 `1`，则用户处于 3 点 VR 中。如果 `VRMode` 为 `0`，则这是一个使用人形角色的桌面用户。                                                                                                                   |
+| 4    | 4 点 VR 用户，头部、手部和髋部跟踪。                                                                                                                                                                                                 |
+| 6    | 全身跟踪 VR 用户，头部、手部、髋部和脚部跟踪。                                                                                                                                                                                         |
 
-Actions use aliased parameters named `VRCEmote` , which is an Int with a range of 1 to 16.
 
-FX uses aliased Float parameters called `VRCFaceBlendH` (-1,1) and `VRCFaceBlendV` (-1,1), if you want to try out your own menus to use them. The default FX layer requires that you have a skinned mesh named `Body` with `mood_happy` , `mood_sad` , `mood_surprised` , and `mood_angry` blendshapes.
+## Expression 参数名称
 
-To restate, if you have an avatar that you upload as an Avatar3 avatar without any custom Playable layers, you'll be able to use some built-in emotes with them as long as you've got the above-named blendshapes.
+当您创建一个新的 Expression parameter 文件时，如果您需要在其列表新建一些参数，那么您**必须**给这些参数重命名。因为这些新建的参数名字会与列表中默认预留的参数名称相同，这可能会导致一些问题。
 
-If you also have an `eyes_closed` blendshape, it'll close them when you use the default Die emote or go AFK.
+<!--删掉了一些特定表述，确保一切ok-->
 
-## Cross-Platform Parameter Sync
+一旦为要使用的任何 Expression 参数创建了名称，您可以直接在控制器中使用该名称。这意味着您可以根据自己的标准，来给这些参数命名。所以只要它们使用相同的名称，菜单中定义的参数和控制器中的参数可以混合使用。您可以从其他人那里获取预制控制器，并根据自己的喜好创建自己的菜单样式，而不必担心 Expression 参数冲突。
 
-When using an avatar that has both Quest and PC versions uploaded, parameters are synced by their position in the parameters list and their parameter type, **not** by the names of the parameters. For a given parameter to sync between PC and Quest, it has to be in the same position in the parameter list, and have the same parameter type. 
+<!--菜单定义是什么-->
 
-Given this, it can be a good idea to use the same Expression Parameters asset for both the PC and Quest versions of an avatar, even if one version doesn't make use of all the parameters.
+在命名自己的参数时，使用斜杠（`/`）可以使参数在各种选择参数时的下拉菜单中自动归类。例如，将参数命名为 `Toggles/Hat` 将在选择参数时显示为层级： Toggles -> Hat，以便在选择参数时更容易使用，例如在动画控制器转换和 Expression 菜单中，同时保持底层参数的相同名称。这不会改变参数的工作方式，但是会使得管理大型参数列表更加方便。
+
+<!--尝试将alias替换为参数，名称，或命名-->
+
+## 默认 AV3 别名
+
+<!--alias(别名)到底是什么？-->
+
+模板 AV3 VRChat 控制器中预制了一些默认别名，如果您不想构建自己的控制器，那么就可以使用它们。这些别名不会与您自己的使用冲突（只要您不在您自创的参数上使用雷同名字），这要归功于别名。
+
+特别是，默认的 Action 和 FX 层使用了别名。您不需要担心使用这些层中的 Expression。 
+
+Action 使用的别名参数名为 `VRCEmote`，是一个范围为 1 到 16 的整数。
+
+FX 使用的别名浮点参数名为 `VRCFaceBlendH`（-1,1）和 `VRCFaceBlendV`（-1,1），如果您想尝试自己的菜单来使用它们。默认的 FX 层要求您有一个名为 `Body` 的蒙皮网格，其中包含 `mood_happy`、`mood_sad`、`mood_surprised` 和 `mood_angry` 等形态键。
+
+再次强调，如果您将一个模型作为 Avatar3 虚拟形象上传，而它没有自定义的可播放层，那么您将能够使用一些预置的表情，只要您的模型拥有上述命名的形态键。
+
+如果还有一个名为 `eyes_closed` 的形态键，当您使用默认的 Die 表情或进入 AFK 状态时，这个形态键会使得您的模型闭眼。
+
+## 跨平台参数同步
+
+当您使用 Quest 和 PC 双版本的模型时，参数**不是**通过参数的名称，而是通过它们在参数列表中的位置和参数类型进行同步的。要使给定参数在 PC 和 Quest 之间同步，它必须在参数列表中的相同位置，并且具有相同的参数类型。
+
+鉴于这一点，建议在 PC 和 Quest 版本的角色中使用相同的 Expression Parameters 资源，即使其中一个版本不会使用到全部的参数。
