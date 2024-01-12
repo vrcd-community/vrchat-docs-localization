@@ -82,21 +82,24 @@ title: "预设动画参数"
 
 GestureLeft 和 GestureRight 使用以下值：
 
-| 索引 | 手势名称       | 手势描述|
-| ---- | ----------- | ---|
-| 0    | Neutral       | 小拇指、无名指和中指闭合<br>食指放在扳机上<br>大拇指闭合 |
-| 1    | Fist       | 小拇指、无名指和中指闭合<br>食指放在扳机上<br>大拇指闭合 |
-| 2    | HandOpen     | 小拇指、无名指和中指抬起<br>食指离开扳机<br>大拇指抬起向 |
-| 3    | FingerPoint       |  小拇指、无名指和中指闭合<br>食指离开扳机<br>大拇指闭合 |
-| 4    | Victory       |  小拇指、无名指闭合，中指抬起<br>食指离开扳机<br>大拇指闭合 |
-| 5    | RockNRoll       |  小拇指抬起，无名指和中指闭合<br>食指离开扳机<br>大拇指闭合 |
-| 6    | HandGun       |  小拇指、无名指和中指闭合<br>食指离开扳机<br>大拇指抬起 |
-| 7    | ThumbsUp       | 小拇指、无名指和中指闭合<br>食指放在扳机上<br>大拇指抬起 |
+| 参数值 | 手势名称       | 
+| ---- | ----------- | 
+| 0    | Neutral       | 
+| 1    | Fist       | 
+| 2    | HandOpen     | 
+| 3    | FingerPoint       |  
+| 4    | Victory       |  
+| 5    | RockNRoll       |  
+| 6    | HandGun       |  
+| 7    | ThumbsUp       | 
 <!--难以翻译，加之 SDK 内大量引用，考虑现状，采用原文加注释，需要进一步解释-->
 <!--如果是手势描述的话。。。抱歉咱撤回一下咱刚刚的建议，可能更加生动形象的描述更加的合适-->
 <!--QmQ-->
-<!--等待手势描述修正为手指位置描述，并补充各手柄的手势操作表-->
-
+<!--由于手势在docs已经给出，给出跳转链接就好-->
+::: info
+您可以在了解这些手势及它们在不同平台上的触发方法：
+[Valve Index](/docs.vrchat.com/OVERVIEW/controls/valve-index.md) (描述了手势中手指的位置)，[Oculus Touch](/docs.vrchat.com/OVERVIEW/controls/touch.md)，[HTC Vive](/docs.vrchat.com/OVERVIEW/controls/vive.md)
+:::
 ## Viseme 的值
 
 我们使用 [Oculus 面部表情目录](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference)，它们从上到下排列，其中 `sil` 为 0。以下供参考：
@@ -119,7 +122,7 @@ GestureLeft 和 GestureRight 使用以下值：
 | 13          | `o`    |
 | 14          | `u`    |
 
-## 同步模式
+## 参数同步模式
 
 - **Speech** - 仅用于 viseme，这些参数由您的语音驱动，使用 Oculus Lipsync 标准输出值。在本地更新，不会直接同步给其他用户（因为它由您的语音音频驱动，这个音频也会同步给其他人，在他们的本地完成更新参数的动作）。
 - **Playable** - 一种比 Speech 更慢的同步模式，用于同步运行时间较长的动画状态。根据参数更改的需要每 0.1 到 1 秒更新一次（也就是每秒 1 到 10 次更新），不建议您依赖它进行快速同步。
