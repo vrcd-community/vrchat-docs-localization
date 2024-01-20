@@ -30,6 +30,10 @@ export default withPwa(defineConfig({
   lastUpdated: true,
   cleanUrls: true,
 
+  sitemap: {
+    hostname: 'https://docs.vrczh.org'
+  },
+
   themeConfig: {
     footer: {
       message: '本项目是一个无条件的公益项目。本项目是一个翻译 VRChat 官方文档的文档本地化项目。请注意，VRChat .Inc 和其他利益相关方不一定核实了本网站上的文章与信息。所有本项目上的信息是源于独立的志愿玩家或团体的工作，藉以为 VRChat 中文社区的玩家与创作者们提供便于利用的信息源。<br/>This project is an unconditional public service project. This project is a translation to the VRChat 汉化文档中心. Please note that VRChat.Inc and other stakeholders have not necessarily verified the articles and information on this website. All information on this project is the result of work done by independent volunteer players or groups to provide an easily accessible source of information for players and creators in the VRChat Chinese community.',
