@@ -1,242 +1,247 @@
 ---
-title: "PhysBones"
+title: "Physbones"
 ---
 
-# PhysBones
+# Physbones
 
-PhysBones is a set of components that lets you add secondary motion to avatars, permitting you to add motion to things like hair, tails, ears, clothing, and more! Using these well will make your avatar seem more dynamic and real.
+ Physbones 是一系列的，可以用来为模型的头发、尾巴、耳朵、服装等增加次要动作的组件，它们能使模型看起来更加动态和真实。
 
-PhysBones is a replacement for Dynamic Bones. While both systems share a lot of concepts, there are some major differences with PhysBones, so not all avatars may directly translate over to VRChat’s system.
+ Physbones 是 Dynamic Bones 的替代品。虽然这两个系统有很多共同点，但 Physbones 有一些重要的区别，因此不是所有的使用 Dynamic Bones 的模型都可以直接转换到 VRChat 的 Physbone 系统中。
 
-An example of how to use Avatar Dynamics can be found in the SDK under `VRCSDK\Examples3\Dynamics\Robot Avatar`.
+在SDK的`VRCSDK\Examples3\Dynamics\Robot Avatar`目录下可以找到使用 Avatar Dynamics 的示例。
 
-# VRCPhysBone
+# VRCPhysbone 
 
-Defines a chain of bones to be animated with PhysBones. These can be used to simulate soft-body and secondary motion like hair, tails, floppy ears, and more! It has many configuration options, and can be set up in many ways.
+它定义了一个使用 Physbones 动画化的骨骼链。这些骨骼链可以用于模拟例如头发、尾巴、耳朵等的软体和次要动作。VRCPhysbone有一些 可以用多种方式配置的选项。
 
-Additionally, PhysBones can be interacted with by you and other people! If you've given the other user permission, other people can grab PhysBones set up on your avatar, and pull the Trigger while holding the PhysBone to "Pose" it and hold it in position. You can also disable this in configuration to not allow posing, not allow grabbing, or allow no collisions at all. 
+此外，Physbones 还可以与您和其他人发生交互！如果您给予其他用户权限，那么其他人可以抓住您模型上设置的 Physbones ，并可以在抓住 Physbone 时按下扳机键来锁定它的位置。您也可以在配置选项中禁用此功能，例如不允许锁定、不允许抓取或不允许碰撞。
 
-Although not designed as such, PhysBones also serves as a reasonable cloth substitute until such time that we implement our own Cloth component.
+虽然 Physbones 并非专为布料效果而设计，但它也可以作为合理的布料组件替代品，直到我们实现自己的布料组件为止。
 
 ![](/creators.vrchat.com/images/avatars/physbones-ca9ee06-2022-05-04_18-23-09_Unity.png)
 
-## Versions
+## 版本选择
 
-You can now select the version of VRCPhysBone component you would like to use directly on the component.  By default the latest version will be chosen when creating a new component.  Existing avatars will continue to use their previous version unless manually updated and re-uploaded.
+您现在可以直接在组件上选择要使用的 VRCPhysbone 组件的版本。当您创建新组件时，将默认选择最新版本。现有的模型将继续使用旧版本 VRCPhysbone ，除非您手动更新它们并重新上传。
 
-Version 1.0:
+版本1.0：
 
-- The base version of the VRCPhysBone component.
+- VRCPhysbone 组件的初始版本。
 
-Version 1.1:
+版本1.1：
 
-- Squishy Bones update, allowing for bones to squish and length to be affected by motion.
-- Gravity now acts as a ratio of how far the bones will rotate when at rest.  A positive Pull is required for bones to move in the direction of gravity.
-- Stiffness now acts as a ratio which keeps a bone in it's previous orientation.
+- 弹性骨骼更新，允许骨骼被挤压与拥有受运动影响的长度。
+- 重力现在表现为影响骨骼在静止时旋转的程度系数。骨骼向重力方向移动需要一个正的拉力。
+- 刚度现在表现为影响骨骼停留在其先前方向的程度系数。
 
-## Transforms
+## 变换
 
-`Root Transform` - The transform where this component begins. If left blank, we assume we start at this game object.  
-`Ignore Transforms` - List of ignored transforms that shouldn't be affected by this component. Ignored transforms automatically include any of that transform's children.  
-`Endpoint Position` - Vector used to create additional bones at each endpoint of the chain. Only used if the value is non-zero. Usually you'll want to increase this along +Y, which points "up" the bone.  
-`Multi-Child Type` - Behavior of the root bone when multiple bone chains exist. This has three modes:
+`Root Transform` - 组件开始的变换。如果此处留空，则我们假设组件起点在此游戏对象上。
+`Ignore Transforms` - 不受此组件影响的变换列表。这个列表也会自动包括列表内变换的所有子级变换。
+`Endpoint Position` - 用于在链的每个末端点创建额外骨骼的向量。仅在值非零时使用。通常，您会希望沿着 +Y 增加此值，+Y 方向是由根部指向骨骼的末端。
+`Multi-Child Type` - 当定义了多个骨骼链时，根骨骼的运动模式。这包括三种模式：
 
- If set to **Ignore**, the root bone will not move, and will ignore physics. Useful for things like hair,   since you can use one Physbone component on the root to affect all of the hair bones!
+ 如果设置为 **Ignore** ，根骨骼将不移动，并忽略物理效果。这对于头发等物体非常有用，因为您可以只在根骨骼上设置一个 Physbone 组件来影响所有子级头发骨骼！
 
- If set to **First**, the root bone will form one continuous chain with the first bone chain in the hierarchy. Every other chain will still work, but they will start from the first bone in each respective chain rather than the root like the first chain.
+ 如果设置为 **First** ，根骨骼将与层次结构中的第一个骨骼链形成一个连续的链。其他所有链仍然有效，但它们将从每个相应链的第一个骨骼开始，而不是从根骨骼开始。
 
- If set to **Average**, the motion of the root bone will be the average of all of the other chains. This means that the base of each chain will be able to move. 
+ ::: info
+ 第一个骨骼指的是具有 VRCPhysbone 组件的根骨骼下的各个子级骨骼，它们就是根骨骼下不同骨骼链的第一个骨骼
+ :::
 
-: danger
-If you are using a single root bone, or a single root bone with several children (but no grandchildren), you **must** define an endpoint position!
+ 如果设置为 **Average** ，根骨骼的运动将是所有其他链的平均值。这意味着每个链的基部都可以移动。
 
-For example, if you put the PhysBone component on any of the `RootBone`s below, you **must** define an **Endpoint Position** in order for PhysBones to work. This is different from Dynamic Bones!
+ ::: info
+ 如果选择这个选项，VRCPhysbone 会以根骨骼为起点，生成一个不一定与子级骨骼重合的虚拟骨骼链，这个骨骼链的位置与大小受根骨骼下的各骨骼变换平均值影响，当这个骨骼链摆动时，会带动其他参与这个变换平均值的骨骼摆动。
+ :::
 
-Single Bone
+::: danger
+如果您要放置 VRCPhysbone 组件的目标骨骼是单个根骨骼，或着单个根骨骼及其多个子级（但没有孙级），则您 **必须** 定义一个末端点位置！
 
-- `RootBone`
+例如，如果您将 Physbone 组件放在下面的任何一个 `根骨骼` 上，那么为了使 Physbones 正常工作，您**必须**定义一个 **Endpoint Position** 。这与 Dynamic Bones 不同！
 
-Multiple Children, Single Root
+单个根骨骼：
 
-- `RootBone`
-  - `ChildBone1`
-  - `ChildBone2`
-  - `ChildBone3`
-  - `ChildBone4`
+- `根骨骼`
 
-You can also address this by adding "end bones" after each `ChildBone`, but that involves editing the armature.
+多个子骨骼，单个根骨骼：
+
+- `根骨骼`
+  - `子骨骼1`
+  - `子骨骼2`
+  - `子骨骼3`
+  - `子骨骼4`
+
+您还可以通过在每个`子骨骼`之后添加“末端骨骼”来解决此问题，但这涉及对骨架的编辑工作。
 :::
 
-## Forces
+## Forces (受力)
 
-**Integration Type** defines the type of math used to simulate the motion of any transform affected by this component. Depending on which you choose, your options available in the Forces section will change. You can choose between two:
+**Integration Type** 定义了用于模拟受此组件影响的任何变换运动的数学类型。根据您选择的类型，受力部分的可用选项将发生变化。您可以在以下两种类型之间选择：
 
-- `Simplified` is a more stable method that feels a bit slower and less reactive to external impulses and forces, but is easier to configure.
-- `Advanced` is less stable, but allows more complicated configurations, and tends to be more reactive to external impulses and forces.  
-  With default settings, both of these modes act fairly similarly, but adjusting the settings and testing them out will quickly reveal how they differ.
+- `Simplified` 是一种更稳定的方法，表现更慢，对外部冲击和外力反应不太敏感，但更容易配置。
+- `Advanced` 不太稳定，并且对外部冲击和外力反应更敏感，但允许更复杂的配置。
+  在默认设置下，这两种模式的表现非常相似，但调整设置并进行测试将很快揭示它们之间的差异。
 
 ::: info
-Most (if not all) of the options below allow for Curves by pressing the C button next to the slider. Curves let you adjust the value over the length of the bone chain, and allow for VERY complicated setups within bone chains!
+下面的大多数（不是全部）选项都可以通过在滑块旁边按下 C 按钮来使用曲线。曲线可以让您调整骨骼链的长度上的值，并允许在骨骼链内进行非常复杂的设置！
 
-In fact, most PhysBones settings allow for the use of Curves! Learn how to use them and your PhysBones will look amazing!
+事实上，大多数 Physbones 设置都可以使用曲线！学会使用它们，您的 Physbones 将看起来很棒！
 :::
 
 ![physbones-054e326-2022-04-19_11-32-12_Unity.png](/creators.vrchat.com/images/avatars/physbones-054e326-2022-04-19_11-32-12_Unity.png)
 
-`Pull` - Amount of force used to return bones to their rest position.  
-`Spring` - Amount bones will wobble when trying to reach their rest position. Only available in Simplified Integration Type.  
-`Momentum` - The amount bones will wobble when trying to reach their rest position. Only available in Advanced Integration Type. Despite the description being the same, the effect is slightly different than Spring.  
-`Stiffness` - The amount bones will try to stay at their resting position. Only available in Advanced Integration Type.  
-`Gravity` - Amount of gravity applied to bones. Positive value pulls bones down, negative pulls upwards.  
-`Gravity Falloff` - Only available if Gravity is non-zero. It controls how much Gravity is removed while in the rest position. A value of 1.0 means that Gravity will not affect the bone while in rest position at all. This allows you to have the effects of gravity when the bone is rotated off the initial position without affecting the bone's rest state.
+`Pull` - 用于将骨骼恢复到其静止位置的力量大小。
+`Spring` - 当骨骼试图达到其静止位置时，骨骼发生摆动的程度。仅在简化的 Integration Type 中可用。
+`Momentum` - 当骨骼试图达到其静止位置时，骨骼发生摆动的程度。仅在高级的 Integration Type 中可用。尽管这里的描述与 Spring 相同，但其实际效果与后者略有不同。
+`Stiffness` - 骨骼试图保持在其静止位置的程度。仅在高级的 Integration Type 中可用。
+`Gravity` - 影响骨骼的重力大小。是正值则向下拉动骨骼，是负值则向上拉动骨骼。
+`Gravity Falloff` - 仅在 Gravity 值非零时可用。它控制骨骼在静止位置时忽略重力影响的程度。值为 1.0 则表示在静止位置时完全不受重力影响。这样，当骨骼从初始位置旋转时，重力可以影响骨骼的运动状态，而不会影响骨骼的静止状态。
 
-One way to use the Gravity Falloff parameter is that if your hair is modeled as already being in the pose you want when standing up normally, you can use 1.0 gravity falloff. That way gravity won't affect you when you're just standing there, and your hair will rest in its modeled position. If your hair is modeled 45 degrees straight out and you want it to be affected by gravity enough to have a nice curve (but not completely straight out or completely straight down), the slider allows you to fiddle with it and use like 0.5-0.8 to only have a fraction of gravity at rest pose.
+使用 Gravity Falloff 参数的一种方法是，如果您的头发已经被建模为在正常站立时的形状，您可以使用 1.0 的重力衰减。这样，当您只是站立不动时，您的头发不会受到重力影响，并保持在其原始建模位置。如果您的头发被建模为 45 度向外伸展，并且您希望它受到足够的重力影响以形成漂亮的曲线（但不完全向外伸展或完全向下伸展），那么您可以调整滑块，来使用 0.5-0.8 之间的值，这只在静止姿势时对头发施加一部分重力。
 
-`Immobile Type` changes how `Immobile` works. 
+`Immobile Type`更改`Immobile`的工作模式。
 
- If set to **All Motion**, `Immobile` reduces any motion as calculated from the root transform's parent. This is the **default mode** for new PhysBones and converted Dynamic Bones. In this mode all PhysBone movement in either scene-space or playspace will be dampened by the `Immobile` factor.
+ 如果设置为**All Motion**，`Immobile` 会减少从根变换的父级计算出的任何运动的程度。这是新的 Physbones 和转换后的 Dynamic Bones 的**默认模式**。在此模式下，`Immobile` 系数将抑制场景空间或播放空间中的所有 Physbone 运动。
 
-If set to **World (Experimental)**, `Immobile` negates only positional movement from the reference of the scene root transform.  Motion via animation or IK still affects the bones normally. _This mode may change in the future!_
+如果设置为 **World (Experimental)** ， `Immobile` 仅从场景根变换的参考位置减少位置运动。动画或 IK 引起的运动仍会正常影响骨骼。_此模式可能会在将来更改！_
 
-This means that moving around in your playspace will still affect your PhysBones' movement as normal, but locomoting (pushing on your joystick to move) will have its movement dampened by the `Immobile` factor.
+这意味着在播放空间中移动仍会正常影响 Physbones 的运动，但是这时`Immobile` 系数也会同样抑制 Physbones 的运动。
 
-## Limits
+## Limits (限制)
 
-Setting Limits allows you to limit the amount that a PhysBone chain can move. This is useful when you don't want hair to clip into your head, and is **far** more performant than a collider!
+设置 Limits (限制)可以限制 Physbone 链的移动量。这种办法在当您不希望头发进入头部时非常有用，并且比碰撞器要来的**高效得多**！
 
-Additionally, when configuring options for Limits, a visualization of those limits will appear in the Scene view when you have the PhysBone chain selected. These can be extremely helpful when fine-tuning Limits!
+此外，在配置限制选项时，当您选择 Physbone 链时，场景视图中将可视化显示这些限制。在微调限制时，这些显示将非常有帮助！
 
-`Limit Type` has several modes. All of them allow for the adjustment of `Rotation` in terms of `Pitch`, `Yaw`, and `Roll`-- alternately, along the X, Y, and Z axes respectively.
+`Limit Type` 有多种模式。这些模式都允许在 `Pitch` 、`Yaw` 和 `Roll` 等方面对 `Rotation` 进行调整，或者分别沿 X、Y 和 Z 轴进行调整。
 
 ### None
 
-`None` means no limit is enabled on this bone chain. There are no configuration options.
+`None` 表示此骨骼链上没有启用限制。这个模式没有配置选项。
 
 ### Angle
 
-![physbones-b7abe1f-2022-04-19_11-49-26_Unity.png](/creators.vrchat.com/images/avatars/physbones-b7abe1f-2022-04-19_11-49-26_Unity.png)
-
-`Angle` means the bone chain will be limited to some `Max Angle`, centered on an axis as defined by `Rotation`. This is visualized as a Cone in the Scene view.
+`Angle` 表示骨骼链将以 `Rotation` 定义的轴为中心，限制在某个 `Max Angle` 上。在场景视图中，这被可视化为一个圆锥体。
 
 ### Hinge
 
-![physbones-b7723cc-2022-04-19_11-50-04_Unity.png](/creators.vrchat.com/images/avatars/physbones-b7723cc-2022-04-19_11-50-04_Unity.png)
-
-`Hinge` means that the bone chain will be limited to some `Max Angle` along the plane defined by the `Rotation`. This is visualized as a slice of a circle, similar to a pizza or a pie.
+ `Hinge` 表示骨骼链将仅在由 `Rotation` 定义的平面上，并被限制在某个 `Max Angle` 上。在场景视图中，这被可视化为一个圆片的切片，类似于比萨或馅饼。
 
 ### Polar
 
-![physbones-824db3c-2022-04-19_11-51-22_Unity.gif](/creators.vrchat.com/images/avatars/physbones-824db3c-2022-04-19_11-51-22_Unity.gif)
+`Polar` 有点复杂。如果您将 `Hinge` 沿 `Yaw` 扫过一定角度，您将得到 `Polar` 坐标中的一个球段。您可以配置 `Max Pitch` 和 `Max Yaw` 来调整球段的大小，并使用 `Rotation` 来定义该段在球体上的位置。`Polar` 的可视化特别有帮助。
 
-`Polar` is a bit more complicated. If you take a `Hinge` and sweep it across `Yaw` by some amount, you get a segment of a sphere in `Polar` coordinates. You can configure `Max Pitch` and `Max Yaw` to adjust the size of the segment, and use `Rotation` to define where that segment is located on the sphere. The visualization for `Polar` is especially helpful.
+不要过度使用 Polar 限制，因为它们会产生一定的性能成本。大量使用它（超过64个）可能会导致一些问题。如果您的 `Max Pitch` 和 `Max Yaw` 值相似或相同，则 `Angle` 限制就足够了，并且它在性能方面成本较低。
 
-Don't overuse Polar limits, as they have a non-zero performance cost. Using a huge amount (handwaving: more than 64) will probably cause some issues. If your `Max Pitch` and `Max Yaw` values are similar or the same, an `Angle` limit will suffice and costs less performance-wise.
+## 碰撞
 
-## Collision
+`Radius` - 骨骼周围的碰撞半径（以米为单位）。用于碰撞和抓取。
+`Allow Collision` - 允许骨骼与除此组件上指定的碰撞器以外的碰撞器发生碰撞。目前，唯一的其他碰撞器是每个玩家的手和手指，这些碰撞器由其模型定义。
+`Colliders` - 与这些骨骼发生碰撞的碰撞器列表。
 
-`Radius` - Collision radius around each bone in meters. Used for both collision and grabbing.  
-`Allow Collision` - Allows collision with colliders other than the ones specified on this component. Currently the only other colliders are each player's hands and fingers as defined by their avatar.  
-`Colliders` - List of colliders that specifically collide with these bones.
+## 伸缩和压缩
 
-## Stretch & Squish
+`Stretch Motion` - 运动对骨骼的伸展/压缩的影响程度。值为零意味着骨骼只会因抓取或碰撞而伸展/压缩。
+`Max Stretch` - 骨骼可以伸展的最大量。该值是原始骨骼长度的倍数。[注意：最大边界](#maximum-bounds)
+`Max Squish` - 骨骼可以压缩的最大量。该值是原始骨骼长度的倍数。
 
-`Stretch Motion` - The amount motion will affect the stretch/squish of the bones.  A value of zero means bones will only stretch/squish as a result of grabbing or collisions.  
-`Max Stretch` - Maximum amount the bones can stretch.  This value is a multiple of the original bone length. [Note: Maximum Bounds](#maximum-bounds)  
-`Max Squish` - Maximum amount the bones can shrink.  This value is a multiple of the original bone length.
+## 抓取和定位
 
-## Grab & Pose
+`Allow Grabbing` - 允许玩家抓取骨骼。
+`Allow Posing` - 允许玩家在抓取后锁定骨骼。
+`Grab Movement` - 控制被抓取的骨骼的移动速度。值为零时，骨骼使用 `Pull` 和 `String` 来达到抓取位置。值为 1 时，骨骼
+将立即移动到抓取位置。
+`Snap To Hand` - 当骨骼被抓取时，它是否将与抓取它的骨骼对齐。
 
-`Allow Grabbing` - Allows players to grab the bones.  
-`Allow Posing` - Allows players to pose the bones after grabbing.  
-`Grab Movement` - Controls how grabbed bones move. A value of zero results in bones using pull & spring to reach the grabbed position. A value of one results in bones immediately moving to the grabbed position.  
-`Snap To Hand` - When a bone is grabbed it will snap to the bone grabbing it.
+## 选项
 
-## Options
+- `Parameter` - 用于为模型控制器提供多个参数的前缀。在下面的项目中，将参数设置为`Tail`将使用`Tail`替换`{parameter}`。
+- `{parameter}_IsGrabbed` - [Bool] 骨骼当前是否被抓取。
+- `{parameter}_IsPosed` - [Bool] 骨骼是否被锁定。
+- `{parameter}_Angle` - [Float] 0.0-1.0 范围。从其原始静止位置到末端骨骼的 180 度角度的归一化值。换句话说，如果您完全扭曲一个骨骼，使其与起始方向相反，那么此参数的值将为 1.0。
+- `{parameter}_Stretch` - [Float] 0.0-1.0 范围。骨骼离其最大伸展长度的距离程度。
+- `Is Animated` - 允许对骨骼变换进行动画处理。每帧骨骼静止位置将根据动画进行更新。必须启用此选项，以使 Physbone 链中的任何骨骼（包括根骨骼！）遵守应用于它的动画。
+- `Reset When Disabled` - 当此组件被禁用时，骨骼将自动重置到其默认位置。
 
-- `Parameter` - Prefix used to provide multiple parameters to the avatar controller. In the following items, setting Parameter to `Tail` would replace `{parameter}` with `Tail`
-- `{parameter}_IsGrabbed` - [Bool] Are the bones currently being grabbed.
-- `{parameter}_IsPosed` - [Bool] Are the bones been posed.
-- `{parameter}_Angle` - [Float] Range of 0.0-1.0. Normalized 180 angle made between the end bone's is from its original rest position. In other words, if you twist a bone completely opposite of its start direction, this param will have a value of 1.0.
-- `{parameter}_Stretch` - [Float] Range of 0.0-1.0. How close the bones are to their maximum stretch length.
-- `Is Animated` - Allows bone transforms to be animated. Each frame bone rest position will be updated according to what was animated. This must be enabled in order for any bone in the PhysBone chain (Root bone included!) to respect animations applied to it.
-- `Reset When Disabled` - When this component becomes disabled, the bones will automatically reset to their default position.
+## 重要说明、使用技巧等
 
-## Important Notes, Usage Tips, etc
+**不要在同一个游戏对象上同时放置约束和 Physbone 组件**，因为这会导致执行顺序问题。
 
-**Do not have a Constraint and a PhysBone component on the same GameObject**, as this causes execution order issues.
+将约束放在父游戏对象上。您仍然可以将约束的目标设置为原始游戏对象。
 
-Put the Constraint on the parent game object instead. You can still have the target of the Constraint set to the original GameObject.
+::: warning Quest限制
 
-::: warning Quest limitations 
+** Physbones 在 Meta Quest 上有严格的限制。**这是为了防止 Meta Quest 设备的性能降低，这些设备的 CPU 资源通常已经很低。
 
-**PhysBones have a hard limit on the Meta Quest.** This is done to prevent a reduction in performance on the Meta Quest devices, which are often already low on CPU resources. 
-
-You can view those limits as the Very Poor limits for Quest described in the [Minimum Displayed Performance Rank](/creators.vrchat.com/avatars/avatar-performance-ranking-system#quest-limits) documentation.
+您可以将这些限制视为 Quest 的 Very Poor 的限制，详细信息请参阅[最低显示性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system#quest-limits)文档。
 
 :::
 
-### Per-Component Limitations
+### 每个组件的限制
 
-**A single PhysBone component cannot affect more than 256 transforms at a time.** This counts the root bone as well as all children. _This also affects Dynamic Bone conversions!_ 
+**单个 Physbone 组件不能同时影响超过 256 个变换。**这包括根骨骼以及其所有子级。_这也会影响 Dynamic Bone 的转换！_
 
-However, you should aim not to have that many transforms to animate in the first place. Try merging bones in the chain upward to their immediate parents. Community-created tools like Cat's Blender Plugin can do this for you.
+但是，您应该在最初就尽量避免有太多的变换。尝试将链中的骨骼向上合并到其直接父级。社区创建的工具（如Cat's Blender插件）可以为您完成此操作。
 
-### Animating Properties
+### 动画属性
 
-PhysBone properties like Spring, Pull, Stiffness, etc are set at initialization and **cannot be animated**.
+ Physbone 的属性，如 Spring、Pull、Stiffness 等，在初始化时就会被设置，**无法被动画处理**。
 
-However, if you animate a property of a PhysBone component and then animate the component off and then on, you _may_ get the behavior you want. Be aware that this is not a supported method of animating these properties, and will not be supported in future changes. (In other words, it might break. If it does, we're not going to try to fix it.)
+但是，如果您对 Physbone 组件的属性进行动画处理，然后将组件的动画处理为关闭再打开，您可能会得到所需的目的。请注意，这不是对这些属性进行动画处理的受支持方法，我们也会在将来的更改中不再支持这个办法。（换句话说，它可能会出错。如果出错，我们不会尝试修复它。）
 
-### Humanoid Bones
+### 人体骨骼
 
-**Do not set Humanoid bones as PhysBone Root bones.** In other words, do not set Hip, Spine, Chest, Upper Chest, Neck, Head, or any of the limb bones as Roots. This will cause major issues.
+**不要将人体骨骼设置为 Physbone 的根骨骼。**换句话说，不要将 Hip、Spine、Chest、Upper Chest、Neck、Head 或任何肢体骨骼设置为根骨骼。这将导致严重问题。
 
-Instead, duplicate the bone you want to use as root and re-parent all the children bones you want to animate to that new duplicate root. This should be done in Blender. Community-created tools like Cat's Blender Plugin can do this for you.
+相反，复制要用作根骨骼的骨骼，并将要动画的所有子骨骼重新连接到新的复制根骨骼。这应该在 Blender 中完成。社区创建的工具（如 Cat's Blender 插件）可以为您完成此操作。
 
-### PhysBone Rotation
+###  Physbone 旋转
 
-Unlike Dynamic Bones, **the root bone of a PhysBone chain is permitted to rotate.** It can't translate, though. This can have some consequences with certain setups-- try things out on your own to see how it behaves.
+与 Dynamic Bones 不同，** Physbone 链的根骨骼允许旋转**。但是它不能平移。这可能会对某些设置产生一些影响-请自行尝试以了解其表现。
 
-### PhysBone AV3 Parameters
+###  Physbone  AV3参数
 
-When affecting parameters, **there is no need to use Synced Parameters as defined by the `VRCExpressionParameters` object**. These parameters are already updated on both the local and remote machines, as both will be running PhysBones.
+在影响参数时，**无需使用由 `VRCExpressionParameters` 对象定义的同步参数**。这些参数已在本地和远程机器上更新，因为两者都将运行 Physbones。
 
-### PhysBone Immobile Behavior
+###  Physbone `Immobile` 行为
 
-Dynamic Bones bases its `Inert` value from where the component is placed, not the root transform. This is probably a Dynamic Bones bug. As such, PhysBones bases its `Immobile` value from the root transform. This may affect behavior in some cases.
+ Dynamic Bones 的 `Inert` 值基于组件的放置位置，而不是根变换。这可能是 Dynamic Bones 的一个错误。因此， Physbones 的 `Immobile` 值基于根变换。这可能会影响某些情况下的行为。
 
-### Optimal Component Usage
+### 最佳组件使用
 
-Because of the multi-threaded nature of PhysBones, it isn't always the most efficient to put all bones into a single chain. Multiple components allows us to break up the work across threads. However, you should still strive to have fewer components... but it's not as bad to have a few on your avatar as it was with Dynamic Bones. 
+由于 Physbones 的多线程特性，将所有骨骼放入单个链中并不总是最高效的。多个组件使我们能够在线程之间分解工作。但是，您仍然应该努力减少组件的数量...但是与 Dynamic Bones 相比，拥有几个组件并不会像以前那样糟糕。
 
-If you _really_ need a number, you should consider splitting sets of chains when you're getting over 128 transforms affected by a single component. If you have a dress with 256 bones and it splits at a root, splitting it into two or three components will work. 
+如果您*真的*需要一个良好帧数，当您的单个组件影响超过 128 个变换时，您应考虑将链集拆分。如果您有一个包含 256 个骨骼的裙子，并且它们在根处分里为骨骼链，那么将其分割为两个或三个组件将起到优化作用。
 
-However, if you're just dealing with something on the order of 32 bones...  don't worry about it. As you can probably tell, these aren't strict rules! We'll likely introduce some soft warnings later on when something looks like it should be set up a different way.
+但是，如果您只处理大约 32 个骨骼的情况...不要担心。正如您可能已经注意到的，这些都不是严格的规则！当某些东西看起来应该以不同的方式设置时，我们可能会在某些情况下引入一些软警告。
 
-### Maximum Bounds
+### 最大边界
 
-Each VRCPhysBone component has a bounding box that grows and shrinks as bones move around. These bounding boxes aid the collision detection for players touching and grabbing PhysBones. For efficiency, bounding boxes are forced to a maximum of 10×10×10 meters. PhysBones can go outside of this range and continue to work as expected. However, players may be unable to touch or grab those bones depending on their location.
+每个 VRCPhysbone 组件都有一个边界框，随着骨骼的移动而增长和收缩。这些边界框有助于检测触摸和抓取 Physbones 的玩家的碰撞。为了效率起见，边界框被强制为最大为 10×10×10 米。 Physbones 可以超出此范围并继续正常工作。但是玩家可能由于其遥远位置，无法触摸或抓取这些骨骼。
 
-The bounding box only accounts for bones with collision and a radius greater than zero. In situations where you want to provide extremely long stretching, as long as bones with collision exist past the stretching point, you can avoid hitting this maximum bounds limit.
+边界框仅考虑具有碰撞和半径大于零的骨骼。在需要提供非常长的伸展的情况下，只要在伸展点之后存在具有碰撞的骨骼，您就可以避免达到此最大边界限制。
 
-# VRCPhysBoneCollider
+# VRCPhysboneCollider
 
-Defines a collider that will affect PhysBones that are configured correctly.
+定义了一个会影响正确配置的 Physbones 的碰撞器。
 
 ![](/creators.vrchat.com/images/avatars/physbones-ac38f46-2022-05-04_18-35-11_Unity.png)
 
-- `Root Transform` - Transform where this collider is placed. If empty, we use this game object's transform.  
-- `Shape Type` - Type of collision shape used by this collider. You can choose between a Sphere, Capsule, or Plane collider.  
-- `Radius` - Size of the collider extending from its origin.  
-- `Height` - Height of the capsule along the Y axis.  
-- `Position` - Position offset from the root transform.  
-- `Rotation` - Rotation offset from the root transform.  
-- `Inside Bounds` - When enabled, this collider will contain bones within its bounds instead of keeping them out.  
-- `Bones As Sphere` - When enabled, this collider will treat PhysBone collision radii as spheres centered on the bone's position rather than capsules running the length of the bone.
+- `Root Transform` - 放置此碰撞器的变换。如果为空，我们使用此游戏对象的变换。
+- `Shape Type` - 此碰撞器使用的碰撞形状类型。您可以选择球体、胶囊体或平面碰撞器。
+- `Radius` - 从其原点延伸的碰撞器的大小。
+- `Height` - 沿 Y 轴的胶囊体高度。
+- `Position` - 相对于根变换的位置偏移量。
+- `Rotation` - 相对于根变换的旋转偏移量。
+- `Inside Bounds` - 启用时，此碰撞器将包含其边界内的骨骼，而不是将其排除在外。
+- `Bones As Sphere` - 启用时，此碰撞器将 Physbone 碰撞半径视为以骨骼位置为中心的球体，而不是沿骨骼长度的胶囊体。
 
-## Standard Colliders
+<!--需要保留而不是吗?-->
 
-A set of "Standard Colliders" are defined in the Avatar Descriptor, in a new section called “Colliders”. This section lets you define a number of standard colliders that exist on every avatar. These will be setup automatically if you don’t touch this, but they may also be tweaked to exactly fit your avatar. These colliders do not affect the performance rating.
+## 标准碰撞器
+
+在 Avatar Descriptor 中定义了一组“标准碰撞器”，这些碰撞器位于一个名为 “Colliders” 的新部分中。此部分允许您定义一些存在于每个模型上的标准碰撞器。如果您不进行任何更改，则将自动设置这些碰撞器，但也可以进行微调以完全适应您的模型。这些碰撞器不会影响性能评级。
 
 - Head
 - Torso
@@ -248,34 +253,34 @@ A set of "Standard Colliders" are defined in the Avatar Descriptor, in a new sec
   - Ring
   - Little
 
-These colliders act primarily as [Contact](/creators.vrchat.com/avatars/avatar-dynamics/contacts) Senders that other people can detect with their avatars. However, the finger and hand colliders are also used to create global [PhysBone](physbones) Colliders that can be used to affect other people’s PhysBones.
+这些碰撞器主要作为 [Contact](/creators.vrchat.com/avatars/avatar-dynamics/contacts) 发送器，其他人可以用其模型检测到。但是，手指和手部碰撞器也用于创建全局的 [Physbone](physbones) 碰撞器，可以用于影响其他人的 Physbones。
 
-## Automatic Dynamic Bone Conversion
+## 自动 Dynamic Bone 转换
 
-By default, the client will automatically convert Dynamic Bones over to PhysBones. This is done to increase overall performance and is also necessary for interactions between avatars. If desired, you can toggle this off in the Performance Options section of the Main Menu, but you will lose the performance gains and the ability for others to interact with you.
+默认情况下，客户端将自动将 Dynamic Bones 转换为 Physbones。这样做是为了提高整体性能，并且这对于模型之间的交互也是必要的。如果需要，您可以在主菜单的性能选项部分关闭此选项，但您将失去性能的提高和其他人与您交互的能力。
 
-By default, Dynamic Bone conversions use Advanced mode, as we're able to more precisely match DB behavior with the Advanced integration method. Additionally, DB conversions use Ignore for the Multi-Child type. This may cause issues with some edge-case DB setups, but using First or Average causes unwanted behavior in almost all cases during conversion.
+默认情况下，Dynamic Bone 转换使用 Advanced 模式，因为我们能够更精确地将 DB 行为与 Advanced 集成方法匹配。此外，DB 转换使用 Ignore 作为 Multi-Child 类型。这可能会导致某些特殊的 DB 设置出现问题，但在转换过程中使用 First 或 Average 也会导致几乎所有情况下的不良行为。
 
-Turning off the conversion means you will not have any interaction with avatar bones that are driven by Dynamic Bones.  However, avatars using PhysBones and Contacts natively will not be affected.
+关闭转换意味着您将无法与由 Dynamic Bones 驱动的模型骨骼进行任何交互。但是，原生使用 Physbones 和 Contacts 的模型将不受影响。
 
-**It is important to note that Dynamic Bones and PhysBones are not identical.** The in-program conversion process is not perfect, and we intend to update it more over time. However, keep in mind: the conversion process will never be perfect! The goal of the automatic conversion is to have most setups working decently well and not breaking, not to perfectly replicate behavior. _It is expected that all users will gradually transition to using PhysBones provided they want their avatars to be rendered accurately and future proof._
+**重要说明： Dynamic Bones 和 Physbones 并不相同。**程序中的转换过程并不完美，我们打算随着时间的推移对其进行更多更新。但请记住：转换过程永远不会完美！自动转换的目标是使大多数设置工作得相当好，而不是完全的复制粘贴。_预计所有用户都将逐渐过渡到使用 Physbones ，以确保其模型的准确渲染和未来兼容性。_
 
-## Manual Dynamic Bone Conversion
+## 手动 Dynamic Bone 转换
 
-You can choose to use the SDK to convert your avatar from Dynamic Bones to PhysBones. 
+您可以选择使用 SDK 将模型从 Dynamic Bones 转换为 Physbones。
 
-This process deletes the previous Dynamic Bone components from your avatar and can not be easily reversed. As a result, make a backup of your avatar before attempting this conversion.
+此过程将从模型中删除以前的 Dynamic Bone 组件，且它们无法轻易被恢复。因此，在尝试此转换之前，请备份您的模型。
 
-You can access this tool in the SDK by looking at the Build Control Panel, or by accessing it in the Unity menu under `VRChat SDK/Utilities/Convert DynamicBones to PhysBones`. You must select the avatar beforehand for this to work.
+您可以通过查看 Build Control Panel 或在 Unity 菜单中访问 `VRChat SDK/Utilities/Convert DynamicBones to  Physbones` 来访问此工具。在此之前，您必须先选择一个模型。
 
-## Unmigrated Dynamic Bone Components
+## 未迁移的 Dynamic Bone 组件
 
-Some features and behaviors in Dynamic Bones do not exist in PhysBones, and will not migrate.
+ Dynamic Bones 中的某些功能和行为在 Physbones 中不存在，因此不会迁移。
 
-`Force` - Dynamic Bone `Gravity` and `Force` values in the X or Z directions are ignored as they have no equivalent in PhysBones.
+`Force` - Dynamic Bone中 X 或 Z 方向的 `Gravity` 和 `Force` 值在 Physbones 中被忽略，因为在 Physbones 中没有相应的值。
 
-## Eventual Dynamic Bone Deprecation
+## Dynamic Bone 最终将被弃用
 
-Dynamic Bones will eventually be completely removed from VRChat. At that time, all older avatars still using Dynamic Bones will use the automatic conversion.
+ Dynamic Bones 最终将从 VRChat 中完全删除。到那时，所有旧模型的 Dynamic Bones 将被自动转换。
 
-At a later time, we will give a deprecation date with _plenty_ of time to allow for avatar authors to convert what they want to convert
+稍后，我们将提供一个弃用日期，以便允许模型作者有足够的时间进行转换。
