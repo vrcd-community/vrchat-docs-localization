@@ -30,6 +30,13 @@ export default withPwa(defineConfig({
   lastUpdated: true,
   cleanUrls: true,
 
+  head: [
+    [
+      'script',
+      { defer: '', src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "7291998cfdb3451c865dde8f653b24d2"}' }
+    ]
+  ],
+
   sitemap: {
     hostname: 'https://docs.vrczh.org'
   },
