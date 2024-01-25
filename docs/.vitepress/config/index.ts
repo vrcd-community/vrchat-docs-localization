@@ -30,6 +30,10 @@ export default withPwa(defineConfig({
   lastUpdated: true,
   cleanUrls: true,
 
+  rewrites: {
+    'docs.vrchat.com/(.+)/:name': 'docs.vrchat.com/docs/:name'
+  },
+
   head: [
     [
       'script',

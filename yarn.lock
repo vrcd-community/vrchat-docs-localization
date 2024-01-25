@@ -3223,6 +3223,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"connect-history-api-fallback@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "connect-history-api-fallback@npm:1.6.0"
+  checksum: 59f013870e987f2e921218b88ad99e6b469a058ee7dd35561a360968fd4260f236b5523b7387ddec8991f9f9fbddda098f830ddc701f12c1bfb1f49d5f4b13c1
+  languageName: node
+  linkType: hard
+
 "content-disposition@npm:^0.5.2":
   version: 0.5.4
   resolution: "content-disposition@npm:0.5.4"
@@ -7648,6 +7655,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"vite-plugin-rewrite-all@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "vite-plugin-rewrite-all@npm:1.0.2"
+  dependencies:
+    connect-history-api-fallback: "npm:^1.6.0"
+  peerDependencies:
+    vite: ^2.0.0 || ^3.0.0 || ^4.0.0
+  checksum: aa3f27309da1c1c84ff6f8de1838d7d1bf5089823ff5393873cf63aef3739eb3c291a3df28172af1945d5f86e9d530213aea08fce813282ab9ac47babcc680d2
+  languageName: node
+  linkType: hard
+
 "vite@npm:^5.0.12":
   version: 5.0.12
   resolution: "vite@npm:5.0.12"
@@ -7751,6 +7769,7 @@ __metadata:
     sharp: "npm:^0.33.2"
     svgo: "npm:^3.2.0"
     vite-plugin-pwa: "npm:^0.17.4"
+    vite-plugin-rewrite-all: "npm:^1.0.2"
     vitepress: "npm:^1.0.0-rc.40"
   languageName: unknown
   linkType: soft
