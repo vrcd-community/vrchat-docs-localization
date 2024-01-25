@@ -5,6 +5,7 @@ pnpm-lock.yaml
 cache
 dist
 dev-dist
+/.vitepress
 
 .pnp.*
 .yarn/*
