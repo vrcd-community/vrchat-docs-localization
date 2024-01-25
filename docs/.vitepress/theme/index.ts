@@ -6,9 +6,11 @@ import type { Theme } from 'vitepress'
 import Home from './components/Home.vue'
 import CreatorsHome from './components/CreatorsHome.vue'
 import RegisterSW from './components/RegisterSW.vue'
+import ToOfficialDocs from './components/ToOfficialDocs.vue'
 
 import './css/theme.css'
 import './css/components.css'
+import "vue-draggable-resizable/style.css"
 
 const customTheme: Theme = {
     extends: DefaultTheme,
@@ -18,7 +20,8 @@ const customTheme: Theme = {
     },
     Layout() {
         return h(DefaultTheme.Layout, null, {
-            'layout-bottom': () => h(RegisterSW)
+            'layout-bottom': () => h(RegisterSW),
+            'aside-outline-after': () => h(ToOfficialDocs)
         })
     }
 }
