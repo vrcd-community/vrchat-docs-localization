@@ -1,83 +1,107 @@
 ---
-title: "Video Players"
-description: "Play videos in your VRChat world"
+title: "视频播放器"
+description: "在您的 VRChat 世界中播放视频！"
 ---
 
-# Video Players
+# 视频播放器
 
-## Using the Prefabs
+## 使用预制件
 
-The easiest way to put a Video Player in your Udon world is by using one of the Prefabs, which you can find in `Packages/com.vrchat.worlds/Samples/UdonExampleScene/Prefabs/VideoPlayers`.
+在您的 Udon 世界中放置视频播放器的最简单方法是使用预制件，您可以在 `Packages/com.vrchat.worlds/Samples/UdonExampleScene/Prefabs/VideoPlayers` 中找到这些预制件。。
 
-![The two Video Player prefabs, ready to drop into your world.](/creators.vrchat.com/images/worlds/video-players-aae04e6-video-player-prefabs.png)
+![两种视频播放器预制件，已经准备好直接在您的世界中使用。](/creators.vrchat.com/images/worlds/video-players-aae04e6-video-player-prefabs.png)
 
-Both of these prefabs will play a video of your choosing, synchronized for everyone in your world. They won't loop - the graph turns off looping for now to get sync to work. If you want them to loop, turn on 'Loop' and remove the UdonBehaviour.
+这两个预制件都将播放您选择的视频，并与您世界中的每个人同步播放进度。它们不会循环播放--图中暂时关闭了循环播放功能，以便让同步正常工作。如果您想让它们循环播放，请打开 "循环 "并移除 UdonBehaviour。
 
-::: info These are Synced Player EXAMPLES
-
-You don't have to use the "UdonSyncPlayer" Udon Behaviours. You can use just the VRC Video Player component if you don't need the videos synced in your world. You can also make your own Sync Graphs using the provided one as a starting point or you can make one from scratch.
-
+::: info 这些都是**示例**同步播放器
+如果您不需要在您的世界中同步视频，您不必使用 "UdonSyncPlayer" Udon Behaviours。您可以只使用 VRC Video Player 组件。您也可以按住默认的同步程序制作一个自己的同步的节点图程序，或者从头开始制作一个。
 :::
-## Choosing AVPro or Unity Video Player
 
-Why would you choose one or the other?
-**AVPro** supports live streams on multiple platforms, like YouTube Live, Twitch, and some others! You'll need to make a graph that calls PlayURL on the Video Player to make this work. The **Unity Video** player does not support these live streams.
+## 选择 AVPro 或者 Unity Video Player
 
-In addition, **AVPro** does not play in the editor - you'll need to Build & Test your world to see it working. **Unity Video** works in Play Mode in the Editor when using links that point directly to supported video file types like 'mp4' and 'webm'. Hosted services like YouTube and Vimeo will only work in the client.
+为什么你需要在两者之间二选一？
 
-Notably, the AVPro speaker component implies support for 8 channel audio. This is not correct-- only 6 channel (usually 5.1 audio) can be played. [AVPro support EAC3 7.1 audio on PCVR only]
+**AVPro** 支持多个平台上的直播流，如 YouTube Live、Twitch 和其他一些平台！您需要在视频播放器上制作一个调用 PlayURL 的节点图来实现这一功能。**Unity Video Player** 不支持这些直播流。
 
-## Android / Quest Compatibility
+此外，**AVPro** 无法在编辑器中播放--您需要构建并测试您的世界才能调试它。当使用直接指向 "mp4" 和 "webm" 等支持的视频文件类型的链接时，**Unity Video**可以在编辑器的播放模式下运行。YouTube 和 Vimeo 等托管服务的解析只能在客户端运行。
 
-An application that VRChat uses to resolve links into videos is also available on Android now, so previous workarounds aren't needed.
-In the past, some workarounds existed for advanced users, because Quest had no URL resolver.
+值得注意的是，AVPro 扬声器组件暗示它支持 8 声道音频。这是不正确的--它只能播放 6 声道（通常是 5.1 音频）。（AVPro 仅在 PC VR 上支持 EAC3 7.1 音频）
 
-## Rate Limiting
+## 安卓 / Quest 兼容性
 
-A given user is only permitted to handle a new video player URL once every five seconds. This is a global limit across all video players. This applies to the default URLs as well as those set with LoadURL and PlayURL.
+VRChat 用于将链接解析为视频直链接的程序现在也可在 Android 上使用，因此不需要以前的变通方法。
 
-With a single video player, this isn't an issue-- but if you have multiple video players, you need to ensure that a request isn't sent too quickly after a previous request.
+过去，由于 Quest 没有 URL 解析器，高级用户需要使用一些变通方法。
 
-This also applies to late-joiners. If you have 2 video players running in your world, a late-joiner will see that they must send out two video requests. Unmanaged, they will attempt to do so simultaneously and will fail. In cases where you have more than one video player playing simultaneously in a world, you'll have to account for this.
+## 速率限制
 
-## Supported Video Hosts
-To play a video, you need to provide a URL in the Video URL field when you set up your Video Player in the editor, or you can paste a URL into the VRCUrlInputField provided in the prefabs.
+一个用户每五秒只能处理一次新的视频播放器 URL。这是一个适用于所有视频播放器的全局限制。这适用于默认 URL 以及使用 LoadURL 和通过 PlayURL 设置的 URL。
 
-A full list of our supported hosts is available at [Video Player Allowlist](/creators.vrchat.com/worlds/udon/video-players/www-whitelist). Some recommendations are below.
-::: info Disclaimer
+对于单个视频播放器，这不是问题，但如果有多个视频播放器，就需要确保在前一个请求发出后，请求不会过快发送。
 
-*The listings below do not constitute partnerships or endorsements*. These are services that are widely accessible and have been tested to work properly with VRChat video players.
+这也适用于后续加入世界的玩家。如果你的世界中有 2 个视频播放器在运行，那么后续加入世界的玩家就会发现他们必须发送两个视频请求。如果不在任何处理，则会尝试同时发送这些请求，但会失败。如果您的世界中时有多个视频播放器，您就必须考虑到这一点。
+
+## 支持的视频托管服务
+
+当你在编辑器内设置您的视频播放器时，你需要在 Video URL 输入框内提供一个 URL，或者粘贴一个 URL 到预制件内提供的 VRCUrlInputField。
+
+完整托管服务的支持列表在这个文档里：[Video Player Allowlist](/creators.vrchat.com/worlds/udon/video-players/www-whitelist)，以下是一些推荐。
+
+::: info 免责声明
+_以下列表并不构成合作或认可关系_。这些都是可以广泛使用的服务，并且经过测试可以与 VRChat 视频播放器正常工作。
 :::
-### Your Own Host
 
-- **Cost**: Paid - varies depending on your Provider
-- **Links**: Link directly to the .mp4 or .webm file
-- **Limitations**: If you have your own host outside of our allowlist, users must have the "Allow Untrusted URLs" option enabled in their Settings to see your content.
+::: warning 译者注：一些国家和地区的特殊网络条件
+如果您的世界面向的玩家在一些网络条件较为特殊的国家和地区，你会需要考虑其他的视频托管平台或者一些变通方法。
+:::
 
-You may want to consider looking into a "content delivery network" (CDN) to host your content. This is useful if you plan on your video being accessible for many users, or to be fast for many users across the world. CDNs will distribute your file across many servers worldwide to ensure that there is a source close to the viewer to ensure fast downloads.
+### 自托管服务
 
-We have tested *Amazon Cloudfront* and *BunnyCDN*. CDN services are usually paid services, but tend to be low-cost for bulk storage/transmission of data. However, due to their openness, they are not present in our allowlist and will require that users enable the "Allow Untrusted URLs" setting.
+- **花费**：往往需要付费 - 具体价格和收费标准取决于您的托管服务提供商。
+- **链接**：.mp4 或 .webm 文件的直链。
+- **限制**：如果您的自托管服务商吧在我们的白名单，则用户必须打开“允许不受信任的 URL（Allow Untrusted URLs）”设置才能看到您的内容。
+
+您可以考虑使用“内容交付网络（CDN）”来托管您的内容。如果您计划让许多用户都能访问您的视频，或让世界各地的许多用户都能快速访问您的视频，那么这将非常有用。CDN 会将您的文件分发到世界各地的许多服务器上，以确保有一个靠近观众的服务器保证用户可以快速下载您的视频。
+
+::: tip 译者注：适用于中国大陆地区的 CDN/托管 服务
+对于中国大陆地区，译者推荐以下方案：
+
+- 直接使用一家中国大陆的云服务提供商（如阿里云，腾讯云，UCloud 等）的 CDN/托管服务，但是一般需要付费且价格较为昂贵。
+- 使用 Cloudflare+IP 优选，但是这就超出了本文档的范畴了。请自行百度搜索。
+- 使用中国大陆的视频平台+视频直链解析服务，直链解析服务请自行寻找。
+- 其他方案请自行探索~
+:::
+
+::: warning 译者注：使用 CDN 服务导致破产的可能性
+如果您的家里没矿，且您用的服务商不提供较为廉价甚至免费的防 DDOS 服务。您可以会因为他人 DDOS 攻击您的 CDN 导致您收到天价账单。
+:::
+
+我们已经测试了 _Amazon Cloudfront_ 和 _BunnyCDN_。CDN 服务通常是付费服务，但对于批量存储/传输数据而言，成本往往较低 _（译者注：至少在中国大陆内，由于商业宽带的价格奇高，这一条对于中国大陆的服务商来说不适用）_。不过，由于其开放性，它们不在我们的允许列表中，需要用户启用"允许不受信任的 的 URL"设置。
 
 ### YouTube
-- **Cost**: Free
-- **Links**: Use the ['watch' url](https://www.youtube.com/watch?v=8yaQY0arCnc)
-- **Limitations**: Will not work on Quest or Linux
+
+- **花费**: 免费
+- **链接**: 使用 ['watch' URL](https://www.youtube.com/watch?v=8yaQY0arCnc)
+- **限制**: 无
 
 ### Vimeo Basic
-- **Cost**: Free
-- **Links**: Use the [basic video url](https://vimeo.com/383935156)
-- **Limitations**: Will not work on Quest or Linux
+
+- **花费**: 免费
+- **链接**: 使用 [基本视频 URL](https://vimeo.com/383935156)
+- **限制**: 无
 
 ### Vimeo Pro or Business
-- **Cost**: [Paid](https://vimeo.com/upgrade)
-- **Links**: Use the direct video links
-- **Limitations**: None
 
-### Optimizing your videos
-When encoding your videos, we strongly recommend uploading a web-optimized version. For `.MP4` files, this option is also known as 'fast start'. It is a one-tick setting that makes a huge difference in the streamability of a self-hosted video file. Without fast start, you generally have to download the entire video file for it to play. With fast start enabled, you can stream the video file in chunks, and streams will begin immediately.
+- **花费**: [Paid](https://vimeo.com/upgrade)
+- **链接**: 使用视频直链
+- **限制**: 无
 
-- In FFMPEG, use the parameter `-movflags +faststart`.
-- In HandBrake, tick the 'Web Optimized' checkbox.
-- Other software should have similar options for enabling fast start.
+### 优化您的视频
 
-![Enabling Fast Start](/creators.vrchat.com/images/worlds/video-players-dc8e54f-image.png)
+编码视频时，我们强烈建议上传网络优化版本。对于 `.MP4` 文件，该选项也称为“Fast Start”。这是一个一键设置，对自托管视频文件的流畅性有很大的影响。如果不启用“fast start，通常需要下载整个视频文件才能播放。启用“Fast Start后，您可以分块流式传输视频文件，流式传输将立即开始。
+
+- 在 FFMPEG 中，使用参数 `-movflags +faststart`。
+- 在 HandBrake 中，勾选 "Web 优化（Web Optimized）"复选框。
+- 其他软件应该也有类似的启用“Fast Start”的选项。
+
+![启用 Fast Start](/creators.vrchat.com/images/worlds/video-players-dc8e54f-image.png)
