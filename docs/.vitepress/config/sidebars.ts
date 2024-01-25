@@ -5,30 +5,30 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: '总览',
       items: [
-        { text: '欢迎来到VRChat', link: '/docs.vrchat.com/OVERVIEW/welcome-to-vrchat' },
-        { text: '准备开始', link: '/docs.vrchat.com/OVERVIEW/getting-started' },
-        { text: '常见问题', link: '/docs.vrchat.com/OVERVIEW/frequently-asked-questions' },
+        { text: '欢迎来到VRChat', link: '/docs.vrchat.com/docs/welcome-to-vrchat' },
+        { text: '准备开始', link: '/docs.vrchat.com/docs/getting-started' },
+        { text: '常见问题', link: '/docs.vrchat.com/docs/frequently-asked-questions' },
         {
-          text: '控制器', link: '/docs.vrchat.com/OVERVIEW/controls/controls',
+          text: '控制器', link: '/docs.vrchat.com/docs/controls',
           collapsed: true,
           items: [
-            { text: 'HTC Vive 手柄', link: '/docs.vrchat.com/OVERVIEW/controls/vive' },
-            { text: 'Oculus Touch', link: '/docs.vrchat.com/OVERVIEW/controls/touch' },
-            { text: 'Valve Index 控制器', link: '/docs.vrchat.com/OVERVIEW/controls/valve-index' },
-            { text: '键盘与鼠标', link: '/docs.vrchat.com/OVERVIEW/controls/keyboard-and-mouse' },
-            { text: '手柄控制器', link: '/docs.vrchat.com/OVERVIEW/controls/gamepad' },
-            { text: '圆盘菜单', link: '/docs.vrchat.com/OVERVIEW/controls/action-menu' },
+            { text: 'HTC Vive 手柄', link: '/docs.vrchat.com/docs/vive' },
+            { text: 'Oculus Touch', link: '/docs.vrchat.com/docs/touch' },
+            { text: 'Valve Index 控制器', link: '/docs.vrchat.com/docs/valve-index' },
+            { text: '键盘与鼠标', link: '/docs.vrchat.com/docs/keyboard-and-mouse' },
+            { text: '手柄控制器', link: '/docs.vrchat.com/docs/gamepad' },
+            { text: '圆盘菜单', link: '/docs.vrchat.com/docs/action-menu' },
           ],
         },
         {
-          text: '额外选项', link: '/docs.vrchat.com/OVERVIEW/additional-options/additional-options',
+          text: '额外选项', link: '/docs.vrchat.com/docs/additional-options',
           collapsed: true,
           items: [
-            { text: '手势切换', link: '/docs.vrchat.com/OVERVIEW/additional-options/gesture-toggle' },
-            { text: '启动选项', link: '/docs.vrchat.com/OVERVIEW/additional-options/launch-options' },
-            { text: '配置文件', link: '/docs.vrchat.com/OVERVIEW/additional-options/configuration-file' },
-            { text: 'VRChat 图像性能选项', link: '/docs.vrchat.com/OVERVIEW/additional-options/vrchat-configuration-window' },
-            { text: 'VRChat 本地存储', link: '/docs.vrchat.com/OVERVIEW/additional-options/local-vrchat-storage' },
+            { text: '手势切换', link: '/docs.vrchat.com/docs/gesture-toggle' },
+            { text: '启动选项', link: '/docs.vrchat.com/docs/launch-options' },
+            { text: '配置文件', link: '/docs.vrchat.com/docs/configuration-file' },
+            { text: 'VRChat 图像性能选项', link: '/docs.vrchat.com/docs/vrchat-configuration-window' },
+            { text: 'VRChat 本地存储', link: '/docs.vrchat.com/docs/local-vrchat-storage' },
           ],
         },
       ],
@@ -36,15 +36,15 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: '指南',
       items: [
-        { text: '两步验证', link: '/docs.vrchat.com/GUIDES/setup-2fa' },
-        { text: '提出本地化修改建议', link: '/docs.vrchat.com/GUIDES/suggesting-localization-changes' },
-        { text: '调整您的模型身高', link: '/docs.vrchat.com/GUIDES/adjusting-your-avatars-height' },
+        { text: '两步验证', link: '/docs.vrchat.com/docs/setup-2fa' },
+        { text: '提出本地化修改建议', link: '/docs.vrchat.com/docs/suggesting-localization-changes' },
+        { text: '调整您的模型身高', link: '/docs.vrchat.com/docs/adjusting-your-avatars-height' },
       ],
     },
     {
       text: '高阶指南',
       items: [
-        { text: '在虚拟机中使用 VRChat', link: '/docs.vrchat.com/ADVANCED-GUIDES/using-vrchat-in-a-virtual-machine' },
+        { text: '在虚拟机中使用 VRChat', link: '/docs.vrchat.com/docs/using-vrchat-in-a-virtual-machine' },
       ],
     },
     {
@@ -56,19 +56,19 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: '系统',
       items: [
-        { text: 'VRChat 社区实验室', link: '/docs.vrchat.com/SYSTEM/vrchat-community-labs' },
-        { text: 'VRChat 安全和信誉系统', link: '/docs.vrchat.com/SYSTEM/vrchat-safety-and-trust-system' },
-        { text: '模型的动态骨骼 (Dynamic Bones) 限制', link: '/docs.vrchat.com/SYSTEM/avatar-dynamic-bone-limits' },
-        { text: '模型互动权限和设置', link: '/docs.vrchat.com/SYSTEM/permissions-and-settings' },
-        { text: '公开模型克隆', link: '/docs.vrchat.com/SYSTEM/public-avatar-cloning' },
+        { text: 'VRChat 社区实验室', link: '/docs.vrchat.com/docs/vrchat-community-labs' },
+        { text: 'VRChat 安全和信誉系统', link: '/docs.vrchat.com/docs/vrchat-safety-and-trust-system' },
+        { text: '模型的动态骨骼 (Dynamic Bones) 限制', link: '/docs.vrchat.com/docs/avatar-dynamic-bone-limits' },
+        { text: '模型互动权限和设置', link: '/docs.vrchat.com/docs/permissions-and-settings' },
+        { text: '公开模型克隆', link: '/docs.vrchat.com/docs/public-avatar-cloning' },
         {
-          text: '全身追踪', link: '/docs.vrchat.com/SYSTEM/full-body-tracking/full-body-tracking',
+          text: '全身追踪', link: '/docs.vrchat.com/docs/full-body-tracking',
           collapsed: true,
           items: [
-            { text: 'IK 2.0 功能和选项', link: '/docs.vrchat.com/SYSTEM/full-body-tracking/ik-20-features-and-options' },
+            { text: 'IK 2.0 功能和选项', link: '/docs.vrchat.com/docs/ik-20-features-and-options' },
           ],
         },
-        { text: '备用模型系统', link: '/docs.vrchat.com/SYSTEM/avatar-fallback-system' },
+        { text: '备用模型系统', link: '/docs.vrchat.com/docs/avatar-fallback-system' },
 
       ],
     },
@@ -76,17 +76,17 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
       text: 'VRCHAT OSC API',
       items: [
         {
-          text: 'OSC 概览', link: '/docs.vrchat.com/VRCHAT-OSC-API/osc-overview/osc-overview',
+          text: 'OSC 概览', link: '/docs.vrchat.com/docs/osc-overview',
           collapsed: true,
           items: [
-            { text: 'OSC 模型参数', link: '/docs.vrchat.com/VRCHAT-OSC-API/osc-overview/osc-avatar-parameters' },
-            { text: 'OSC 调试', link: '/docs.vrchat.com/VRCHAT-OSC-API/osc-overview/osc-debugging' },
-            { text: 'OSC DIY', link: '/docs.vrchat.com/VRCHAT-OSC-API/osc-overview/osc-diy' },
-            { text: '将 OSC 作为输入控制器', link: '/docs.vrchat.com/VRCHAT-OSC-API/osc-overview/osc-as-input-controller' },
-            { text: 'OSC 追踪器', link: '/docs.vrchat.com/VRCHAT-OSC-API/osc-overview/osc-trackers' },
-            { text: 'OSC 眼动追踪', link: '/docs.vrchat.com/VRCHAT-OSC-API/osc-overview/osc-eye-tracking' },
-            { text: 'OSC 资源', link: '/docs.vrchat.com/VRCHAT-OSC-API/osc-overview/osc-resources' },
-            { text: 'OSCQuery', link: '/docs.vrchat.com/VRCHAT-OSC-API/osc-overview/osc-query' },
+            { text: 'OSC 模型参数', link: '/docs.vrchat.com/docs/osc-avatar-parameters' },
+            { text: 'OSC 调试', link: '/docs.vrchat.com/docs/osc-debugging' },
+            { text: 'OSC DIY', link: '/docs.vrchat.com/docs/osc-diy' },
+            { text: '将 OSC 作为输入控制器', link: '/docs.vrchat.com/docs/osc-as-input-controller' },
+            { text: 'OSC 追踪器', link: '/docs.vrchat.com/docs/osc-trackers' },
+            { text: 'OSC 眼动追踪', link: '/docs.vrchat.com/docs/osc-eye-tracking' },
+            { text: 'OSC 资源', link: '/docs.vrchat.com/docs/osc-resources' },
+            { text: 'OSCQuery', link: '/docs.vrchat.com/docs/oscquery' },
           ],
         },
       ],
@@ -106,15 +106,15 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: '世界',
       items: [
-        { text: '制作您的第一个世界', link: '/creators.vrchat.com/worlds/creating-your-first-world' },
+        { text: '制作您的第一个世界', link: '/creators.vrchat.com/docs/creating-your-first-world' },
         {
-          text: '升级 Unity 项目', link: '/docs.vrchat.com/WORLDS/upgrading-unity-projects/upgrading-unity-projects',
+          text: '升级 Unity 项目', link: '/docs.vrchat.com/docs/upgrading-unity-projects',
           collapsed: true,
           items: [
-            { text: '从 2018 LTS 迁移到 2019 LTS', link: '/docs.vrchat.com/WORLDS/upgrading-unity-projects/migrating-from-2018-lts-to-2019-lts' },
-            { text: '从 2017 LTS 迁移到 2018 LTS', link: '/docs.vrchat.com/WORLDS/upgrading-unity-projects/migrating-from-2017-lts-to-2018-lts' },
-            { text: '从 5.6 迁移到 2017 LTS', link: '/docs.vrchat.com/WORLDS/upgrading-unity-projects/migrating-from-56-to-20174x' },
-            { text: '迁移到更新的 Unity 大版本', link: '/docs.vrchat.com/WORLDS/upgrading-unity-projects/migrating-to-a-newer-minor-unity-version' },
+            { text: '从 2018 LTS 迁移到 2019 LTS', link: '/docs.vrchat.com/docs/migrating-from-2018-lts-to-2019-lts' },
+            { text: '从 2017 LTS 迁移到 2018 LTS', link: '/docs.vrchat.com/docs/migrating-from-2017-lts-to-2018-lts' },
+            { text: '从 5.6 迁移到 2017 LTS', link: '/docs.vrchat.com/docs/migrating-from-56-to-20174x' },
+            { text: '迁移到更新的 Unity 大版本', link: '/docs.vrchat.com/docs/migrating-to-a-newer-minor-unity-version' },
           ],
         },
       ],
@@ -128,15 +128,15 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: '最新版本',
       items: [
-        { text: 'VRChat 2023.4.1', link: '/docs.vrchat.com/LATEST-RELEASE/latest-release' },
-        { text: 'VRChat 2023.4.1p1', link: '/docs.vrchat.com/LATEST-RELEASE/vrchat-202341p1' },
+        // { text: 'VRChat 2023.4.1', link: '/docs.vrchat.com/LATEST-RELEASE/latest-release' },
+        // { text: 'VRChat 2023.4.1p1', link: '/docs.vrchat.com/LATEST-RELEASE/vrchat-202341p1' },
       ],
     },
     {
       text: '更新公告',
       items: [
-        { text: '最近更新', link: '/docs.vrchat.com/SYSTEM/vrchat-community-labs' },
-        { text: '存档', link: '/docs.vrchat.com/SYSTEM/vrchat-community-labs' },
+        // { text: '最近更新', link: '/docs.vrchat.com/SYSTEM/vrchat-community-labs' },
+        // { text: '存档', link: '/docs.vrchat.com/SYSTEM/vrchat-community-labs' },
       ],
     },
   ]
