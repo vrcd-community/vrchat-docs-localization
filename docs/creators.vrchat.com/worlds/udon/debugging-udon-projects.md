@@ -11,7 +11,7 @@ Debugging is how you learn about what's going on under the hood in the VRChat cl
 When you use the VRChat client, it saves logs about things that happen like worlds you visit, errors you encounter, and other behind-the-scenes info into text files on your machine.
 
 ## Viewing Your Logs In-Client
-When you launch VRChat with the Debug GUI enabled (see below), you can turn on special Debug overlays in both Desktop and VR modes. To view your log messages as they occur, press RShift + Backtick + 3. You can find all the shortcuts available for different debug overlays on the [Keyboard and Mouse](https://docs.vrchat.com/docs/keyboard-and-mouse) page.
+When you launch VRChat with the Debug GUI enabled (see below), you can turn on special Debug overlays in both Desktop and VR modes. To view your log messages as they occur, press RShift + Backtick + 3. You can find all the shortcuts available for different debug overlays on the [Keyboard and Mouse](/docs.vrchat.com/docs/keyboard-and-mouse) page.
 
 ## Viewing Your Logs in a Text Editor
 You can view these files during or after a VRChat session by finding them on your disk and opening them up. They are typically saved to the following folder, with your computer username instead of 'YourName':
@@ -32,7 +32,7 @@ To launch VRChat with some special options, you can use a batch file. This just 
 2. Add this line to the file: `VRChat.exe --no-vr --enable-debug-gui --enable-sdk-log-levels --enable-udon-debug-logging`
 3. Save the file and run it to test!
 
-This command turns on 3 flags for extra logging, and also forces VRChat to bypass VR for desktop testing. There are more options you can pass along - you can include any of the flags from the [VRChat Launch Options](https://docs.vrchat.com/docs/launch-options) page as well as the [Unity Standalone Player command line arguments](https://docs.unity3d.com/2019.4/Documentation/Manual/CommandLineArguments.html).
+This command turns on 3 flags for extra logging, and also forces VRChat to bypass VR for desktop testing. There are more options you can pass along - you can include any of the flags from the [VRChat Launch Options](/docs.vrchat.com/docs/launch-options) page as well as the [Unity Standalone Player command line arguments](https://docs.unity3d.com/2019.4/Documentation/Manual/CommandLineArguments.html).
 
 For example, this is a batch file I use that launches with my secondary VRChat profile and forces a screen width of 720p:
 `VRChat.exe --profile=1 --no-vr --enable-debug-gui --enable-sdk-log-levels --enable-udon-debug-logging -screen-width 1280 -screen-height 720`

@@ -42,7 +42,7 @@ UI有三个层级，分别是圆盘菜单、模型功能菜单和人偶菜单。
 
 这是整个圆盘菜单的起始位置。
 
-它当前包含了 [手势切换](../additional-options/gesture-toggle)，UI设置，表情符号，表情菜单和关闭按钮。
+它当前包含了 [手势切换](/docs.vrchat.com/docs/gesture-toggle)，UI设置，表情符号，表情菜单和关闭按钮。
 
 ### 模型功能菜单
 

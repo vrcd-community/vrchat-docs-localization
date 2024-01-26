@@ -4,11 +4,7 @@
 此部分正在计划更新！VRChat 名牌和安全系统界面最近发生了变化，因此例图可能不准确。但是功能保持不变。
 :::
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-1.png)
-
-</center>
 
 VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。它旨在保护玩家免受捣蛋鬼们的全屏特效着色器、烦人音效与糟糕的麦克风收音、视觉干扰或恶意粒子特效，或者其他用于搞毁您在 VRChat 中体验的种种手段。
 
@@ -28,11 +24,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 玩家的信任度转化为我们称之为“信誉级别”的东西，它衡量玩家在 VRChat 上花费了多少时间，他们贡献了多少内容，他们结交了多少朋友，以及许多其他因素。这些级别如下：
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-2.png)
-
-</center>
 
 您只需玩 VRChat 即可获得这些级别 - 随着您探索世界，结交朋友和创建内容，您将获得更多的信任，这决定了您的信誉级别。
 
@@ -48,11 +40,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 默认情况下，**知名**和**可信**玩家将显示其级别。使用级别切换会将您恢复为**玩家**。
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-3.png)
-
-</center>
 
 此外，还存在一个名为“**劣迹玩家**”的特殊级别。这些玩家给其他玩家带来了不少的困扰，当您打开快捷菜单时，他们的名牌上方会有一个标识。大多数时候，这些玩家的模型将被完全屏蔽。您很可能不会经常看到这些玩家 - 而这显而易见是一件喜事！
 
@@ -73,43 +61,23 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 - **粒子和光源** — 启用或禁用玩家模型上的粒子系统以及任何光源。这也会阻止线渲染器和轨迹渲染器组件。
 每个级别都有自己独特的设置预设。为了说明这一点，以下是安全菜单的屏幕截图：
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-4.png)
-
-</center>
 
 此菜单中有**四个主要元素**需要注意。
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-5.png)
-
-</center>
 
 顶部的一排叫“**防护强度**”，这是我们开发的安全系统的预设设置。这些预设应该可以满足大部分需求 —— 但是，您也可以在“个性化”预设中完全自定义它们，这是一种特殊的模式，您可以在其中创建适合自己的设置。
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-6.png)
-
-</center>
 
 中间是您选择的**防护强度**的**详细设置**。它们涵盖了安全系统的每个元素，如果您选择个性化强度，则可以根据需要自由切换它们。
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-7.png)
-
-</center>
 
 底部是**所有信誉级别的列表**。在您选择了某一个防护强度后，您可以选择每个级别，看看该级别的模型功能是如何被安全系统配置的。
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-8.png)
-
-</center>
 
 安全模式下方**蓝色区域**内的文本会随着您选择不同的模式而变化。**底部的文本**也会随着您浏览菜单而更改，并有助于提示您选中的 UI 元素。
 
@@ -135,7 +103,7 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 ## 安全模式
 
-根据您使用的[控制器](../OVERVIEW/controls/controls)，有一个快捷方式可以立即禁用您周围所有玩家的所有功能。这被称为“**安全模式**”。
+根据您使用的[控制器](/docs.vrchat.com/docs/controls)，有一个快捷方式可以立即禁用您周围所有玩家的所有功能。这被称为“**安全模式**”。
 
 在 VR 设备上，同时扣下两个扳机键(Trigger)并按下两个菜单按钮将会启用此模式。在 PC 上，同时按下 Shift 和 Esc 将启用此模式。
 
@@ -149,21 +117,13 @@ VRChat安全和信誉系统是目前实施的 VRChat 信誉系统的新扩展。
 
 ### 与玩家交互
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-9.png)
-
-</center>
 
 正如您在左上角看到的，当您使用扫描模式指向玩家时，面板将显示玩家的模型封面和名称。他们的信誉级别显示在他们模型缩略图的下方，并且缩略图会以适当的颜色突出显示。在右侧，您可以看到他们的当前状态。状态下方的文本框是一个“小提示”，它将根据您指向的内容为您提供有用的信息。
 
 选中玩家会弹出更详细的社交菜单。
 
-<center>
-
 ![img](/docs.vrchat.com/images/vrchat-safety-and-trust-system-10.png)
-
-</center>
 
 使用此菜单还可以向玩家发送好友请求，打开和关闭其语音，以及查看玩家的详细信息（这将显示该玩家的完整社交菜单）。单击“屏蔽”/“取消屏蔽”按钮将切换玩家的屏蔽状态。
 

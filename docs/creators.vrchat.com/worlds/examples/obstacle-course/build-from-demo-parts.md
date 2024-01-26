@@ -122,6 +122,6 @@ It's a good idea to set the **Number of Players** in your Obstacle Course world 
 Once you're ready to invite your friends to help test your world, you can **Build & Publish** it to make it available in VRChat. You'll set your world name, take a picture to share, and you can Submit to Community Labs once you're ready for more people to see it!
 ::: info Publishing & Trust Levels
 
-You need to be spend some time in VRChat before you can publish worlds. Learn more here: [FAQ](https://docs.vrchat.com/docs/frequently-asked-questions#why-cant-i-upload-content-yet)
+You need to be spend some time in VRChat before you can publish worlds. Learn more here: [FAQ](/docs.vrchat.com/docs/frequently-asked-questions#why-cant-i-upload-content-yet)
 :::
 If you want to explore more options for Customizing your Obstacle Course, you can read on to [Build From Custom Parts](/creators.vrchat.com/worlds/examples/obstacle-course/build-from-custom-parts)

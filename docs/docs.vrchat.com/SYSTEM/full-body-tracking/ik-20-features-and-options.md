@@ -4,13 +4,9 @@ IK 2.0 是对 VRChat 追踪系统的全面改进。这包括支持更多追踪�
 
 值得注意的是，这些变化不仅仅针对全身追踪用户——它们也会改善使用3点追踪的用户的体验！
 
-<center>
-
 ![img](/docs.vrchat.com/images/ik-20-features-and-options-1.png)
 
 *这是新的 IK 2.0 设置屏幕。您可以在下方看到对多出来的按钮的完整解释。*
-
-</center>
 
 ## 在传统 IK 和 IK 2.0 之间进行切换
 
@@ -24,11 +20,7 @@ IK 2.0 是对 VRChat 追踪系统的全面改进。这包括支持更多追踪�
 
 在旧版本的 VRChat 中，所有虚拟形象都是通过手臂跨度来测量的。但是，现在可以通过臂展或虚拟形象高度进行测量。
 
-<center>
-
 ![img](/docs.vrchat.com/images/ik-20-features-and-options-2.gif)
-
-</center>
 
 此测量值用于将虚拟形象与您的现实生活中的身体相匹配。只需在设置之间切换即可找到最适合您的设置。在我们的测试中，按高度测量的模式往往更适合全身追踪。
 
@@ -36,11 +28,7 @@ IK 2.0 是对 VRChat 追踪系统的全面改进。这包括支持更多追踪�
 
 这些选项定义了脊柱如何锁定到追踪器位置。
 
-<center>
-
 ![img](/docs.vrchat.com/images/ik-20-features-and-options-3.gif)
-
-</center>
 
 锁定髋关节将严格执行臀部跟踪，并允许头部位置漂移以避免奇怪的脊柱角度。在此模式下，可选的胸部追踪器只负责旋转。
 
@@ -50,11 +38,7 @@ IK 2.0 是对 VRChat 追踪系统的全面改进。这包括支持更多追踪�
 
 ## 运动动画
 
-<center>
-
 ![img](/docs.vrchat.com/images/ik-20-features-and-options-4.png)
-
-</center>
 
 此切换仅在全身和 IK 2.0 模式下显示（在旧版 IK 中不显示）。它可以禁用虚拟形象上的运动动画，以及可能导致全身追踪出现问题的基础层蹲伏和俯卧动画。
 
@@ -72,4 +56,4 @@ IK 2.0 是对 VRChat 追踪系统的全面改进。这包括支持更多追踪�
 
 **--freeze-tracking-on-disconnect** - 启用此功能将使追踪器在与玩家断开连接时相对于玩家冻结在原地。重新校准可以移除冻结的追踪器。如果您所有的追踪器都断开连接，以至于校准选项不再可见，切换虚拟形象测量选项也会解除冻结。
 
-有关 IK 2.0 引入的新行为、更改和修复的更多信息，请参阅此处的[说明](https://docs.vrchat.com/v2022.2.1/docs/latest-release)。
+有关 IK 2.0 引入的新行为、更改和修复的更多信息，请参阅此处的[说明](https://docs.vrchat.com/docs/v2022.2.1/latest-release)。

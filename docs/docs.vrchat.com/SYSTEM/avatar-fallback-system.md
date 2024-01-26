@@ -1,6 +1,6 @@
 # 备用模型系统
 
-备用模型系统是一种让用户选择在该模型不兼容系统时，或者因为模型超出了允许的[最低模型性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)时所显示的不同于“灰色机器人”占位符的备用模型，
+备用模型系统是一种让用户选择在该模型不兼容系统时，或者因为模型超出了允许的[最低模型性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system)时所显示的不同于“灰色机器人”占位符的备用模型，
 
 ## 备用模型有什么作用？
 
@@ -12,31 +12,23 @@
 
 #### 因性能屏蔽
 
-<center>
-
 ![img](/docs.vrchat.com/images/avatar-fallback-system-1.png)
 
 *此人的模型由于性能设置问题已被屏蔽。*
 
-</center>
-
-此人的模型超出了您设置的[最低模型性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)。模型的原始性能等级显示为内嵌图标。
+此人的模型超出了您设置的[最低模型性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system)。模型的原始性能等级显示为内嵌图标。
 
 在这种情况下，您可以通过“显示模型”按钮选择显示模型。
 
-该模型的作者可以通过优化模型来解决这个问题。[模型性能等级系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)文档页面包含性能等级的不同阈值的详细信息。
+该模型的作者可以通过优化模型来解决这个问题。[模型性能等级系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system)文档页面包含性能等级的不同阈值的详细信息。
 
 #### 文件大小屏蔽
-
-<center>
 
 ![img](/docs.vrchat.com/images/avatar-fallback-system-2.png)
 
 *此人的模型已被文件大小的相关设置屏蔽。*
 
-</center>
-
-此人的模型大小超出了您在性能选项中设置的[最大允许模型文件大小](../OVERVIEW/additional-options/vrchat-configuration-window.md)。
+此人的模型大小超出了您在性能选项中设置的[最大允许模型文件大小](/docs.vrchat.com/docs/vrchat-configuration-window)。
 
 在这种情况下，您可以通过“显示模型”按钮选择显示模型。
 
@@ -46,13 +38,9 @@
 
 #### 缺少对应平台版本
 
-<center>
-
 ![img](/docs.vrchat.com/images/avatar-fallback-system-3.png)
 
 *模型不适用于您的平台。*
-
-</center>
 
 此人的模型未显示，因为它不适用于您的平台。例如，由于平台构建过程和打包的差异，为 Windows 构建的模型无法在 Quest/Android 上显示。在这些情况下，您将看到备用模型！
 
@@ -60,25 +48,17 @@
 
 #### 意料之外的错误
 
-<center>
-
 ![img](/docs.vrchat.com/images/avatar-fallback-system-4.png)
 
 *由于某些错误，此人的模型未显示。*
-
-</center>
 
 由于某些错误，此人的模型未显示。这可能是由于您设备的问题，或者可能是模型的问题。您可以尝试隐藏并重新显示他们的模型！
 
 #### 通过安全系统屏蔽、手动隐藏、加载时被屏蔽
 
-<center>
-
 ![img](/docs.vrchat.com/images/avatar-fallback-system-5.png)
 
 *这个图标可能意味着一些神奇事情！*
-
-</center>
 
 这个图标有点不同！这里没有蓝色的羽毛图标。这个图标的使用场景为：尽管我们尽了最大努力，但您正在查看的用户模型仍处于灰色机器人占位模型中。
 
@@ -111,7 +91,7 @@
 这是一个快速上传可用的备用模型的过程，该模型将在所有当前可用的平台上正常显示。
 
 1. 创建您的备用模型。根据 Android/Quest 要求，它的性能等级必须为“良好”或“优秀”。
-2. 将此模型导入到安装了最新版本 VRCSDK 的新 Unity 项目中。此项目必须设置为上传到 Android/Quest。如果您不熟悉这些，请查看[设置 Unity 以创建 Quest 内容](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content.md)。
+2. 将此模型导入到安装了最新版本 VRCSDK 的新 Unity 项目中。此项目必须设置为上传到 Android/Quest。如果您不熟悉这些，请查看[设置 Unity 以创建 Quest 内容](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content)。
 3. 设置模型并上传！
 4. 当您进入上传界面时，将出现一个新的复选框，允许您将模型定义为备用模型。
 5. 上传模型！
@@ -154,13 +134,13 @@
 
 小刚使用着一个性能评级为 “非常差劲(Very Poor)” 的模型。翠花使用着一个评级为 “差(Poor)” 的模型。
 
-翠花进入他的 VRChat 性能选项，并将他的[最低模型性能等级](../OVERVIEW/additional-options/vrchat-configuration-window.md)设置为差。
+翠花进入他的 VRChat 性能选项，并将他的[最低模型性能等级](/docs.vrchat.com/docs/vrchat-configuration-window)设置为差。
 
 小刚的模型现在将作为备用模型出现，而不是一个写着 “Perf Block” 的机器人！她可以通过模型菜单选择自己的备用模型，或者从 VRChat 的推荐模型中选择一个备用模型。或者如果她想，也可以上传自己的模型。
 
 ### 上传备用模型
 
-小王决定要上传自己的自定义备用模型。他要么找到符合 Android/Quest [模型性能评级系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system.md)指标的良好模型，要么修改他当前的模型，使其与这些指标相匹配。
+小王决定要上传自己的自定义备用模型。他要么找到符合 Android/Quest [模型性能评级系统](/creators.vrchat.com/avatars/avatar-performance-ranking-system)指标的良好模型，要么修改他当前的模型，使其与这些指标相匹配。
 
 当小王上传他的模型时，他会将其导入到一个 Unity 项目中，其中已经安装了 VRCSDK，并设置为上传到 Android/Quest。他上传了模型。上传对话框中会出现一个复选框，允许他将模型设置为备用模型。**但是，还有一步！**
 

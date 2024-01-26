@@ -65,15 +65,15 @@
 `class VRC.SDK3.Components.VRCStation` / `class VRC.SDKBase.VRCStation`
 
 #### Properties
-| Type                                                                                                 | Name                       | Summary                                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Mobility](#mobility)                                                                                | PlayerMobility             | Determines if the player be able to move.  Default value is `VRCStation.Mobility.Immobilize`.                                                             |
-| bool                                                                                                 | canUseStationFromStation   | Determines if the user can switch stations when sitting in a station. Default value is `true`.                                                            |
-| [RuntimeAnimatorController](https://docs.unity3d.com/ScriptReference/RuntimeAnimatorController.html) | animatorController         | Used to override normal seating animations with a custom one.                                                                                             |
-| bool                                                                                                 | disableStationExit         | If the user cannot exit the station by usual means, use triggers to unseat the user                                                                       |
-| bool                                                                                                 | seated                     | Is this a station that the user should be sitting in? Default value is `true`. See [here](https://docs.vrchat.com/docs/vrc_station) for more information. |
-| [Transform](https://docs.unity3d.com/ScriptReference/Transform.html)                                 | stationEnterPlayerLocation | Transform used to define where the user should be transported to when seated                                                                              |
-| [Transform](https://docs.unity3d.com/ScriptReference/Transform.html)                                 | stationExitPlayerLocation  | Transform used to define where the user should be transported to when they are unseated                                                                   |
+| Type                                                                                                 | Name                       | Summary                                                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Mobility](#mobility)                                                                                | PlayerMobility             | Determines if the player be able to move.  Default value is `VRCStation.Mobility.Immobilize`.                                                                       |
+| bool                                                                                                 | canUseStationFromStation   | Determines if the user can switch stations when sitting in a station. Default value is `true`.                                                                      |
+| [RuntimeAnimatorController](https://docs.unity3d.com/ScriptReference/RuntimeAnimatorController.html) | animatorController         | Used to override normal seating animations with a custom one.                                                                                                       |
+| bool                                                                                                 | disableStationExit         | If the user cannot exit the station by usual means, use triggers to unseat the user                                                                                 |
+| bool                                                                                                 | seated                     | Is this a station that the user should be sitting in? Default value is `true`. See [here](/creators.vrchat.com/worlds/components/vrc_station) for more information. |
+| [Transform](https://docs.unity3d.com/ScriptReference/Transform.html)                                 | stationEnterPlayerLocation | Transform used to define where the user should be transported to when seated                                                                                        |
+| [Transform](https://docs.unity3d.com/ScriptReference/Transform.html)                                 | stationExitPlayerLocation  | Transform used to define where the user should be transported to when they are unseated                                                                             |
 
 #### Methods
 | Returns | Name                                              | Summary           |
@@ -516,7 +516,7 @@ A component used to create portals to other rooms.
 These variables are available for syncing across the network with the [UdonSynced](https://udonsharp.docs.vrchat.com/udonsharp/#udonsynced) attribute.
 ::: info
 In the lists below, 'size' refers to the **approximate** size in memory. When networked, the data is serialized, which may lead to more data being transmitted. For example, syncing a `bool` will send **at least** 1 byte of data (instead of 1 bit) in addition to any networking overhead.
-To find out how many bytes of serialized data were, use `byteCount` in the [`OnPostSerialization`](https://docs.vrchat.com/docs/network-components#onpostserialization) event. You can find more information about syncing on Udon's [Network Specs](https://docs.vrchat.com/docs/network-details#data-and-specs) page.
+To find out how many bytes of serialized data were, use `byteCount` in the [`OnPostSerialization`](/creators.vrchat.com/worlds/udon/networking/network-components#onpostserialization) event. You can find more information about syncing on Udon's [Network Specs](/creators.vrchat.com/worlds/udon/networking/network-details#data-and-specs) page.
 :::
 ### Boolean  types
 | Type | Size   |

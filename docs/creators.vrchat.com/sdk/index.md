@@ -49,7 +49,7 @@ If your project isn't listed, click the dropdown menu next to **Create New Proje
 2. Navigate to `VRChat SDK > Show Control Panel > Authentication`. 
 
 3. Sign into your VRChat account. You'll need to do this to upload any content you create.
-    - You must have a VRChat account of at least "New User" [Trust Rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system) to upload content. You cannot use a Steam, Oculus, or Viveport account to upload content.
+    - You must have a VRChat account of at least "New User" [Trust Rank](/docs.vrchat.com/docs/vrchat-safety-and-trust-system) to upload content. You cannot use a Steam, Oculus, or Viveport account to upload content.
 
 ## Using Unity Hub instead
 Though we don't recommend this, if you'd like to install Unity yourself without the VCC, check the [Current Supported Unity Version](/creators.vrchat.com/sdk/upgrade/current-unity-version) page and install the version of Unity that VRChat currently supports using the Unity Hub.

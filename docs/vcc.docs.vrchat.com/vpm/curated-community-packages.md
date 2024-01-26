@@ -28,7 +28,7 @@ AudioLink 允许创作者制作实时反应音乐的 VRChat 世界。这使得�
 >*作者：[VRLabs](https://twitter.com/vrlabsdev)<br />
 [GitHub 仓库](https://github.com/VRLabs/Avatars-3.0-Manager)，[VRLabs Discord](https://t.co/gP9HZT6EKB)*
 
-VRChat Avatars 有[五个可播放层](https://docs.vrchat.com/docs/playable-layers)，每个层都有自己的动画器。Avatars 3.0 管理器允许在每个层中使用多个动画器，通过合并动画器及其参数。这对于控制配饰或其他独立的动画器很有用。
+VRChat Avatars 有[五个可播放层](/creators.vrchat.com/worlds/udon/using-build-test)，每个层都有自己的动画器。Avatars 3.0 管理器允许在每个层中使用多个动画器，通过合并动画器及其参数。这对于控制配饰或其他独立的动画器很有用。
 
 ## EasyQuestSwitch
 >"EasyQuestSwitch 是为 VRChat 世界创作者开发的 Unity 编辑器工具，它可以在从 PC 切换到 Android（用于 Oculus Quest）（反之亦然）时自动更改场景中的组件。"<br />
@@ -42,7 +42,7 @@ VRChat Avatars 有[五个可播放层](https://docs.vrchat.com/docs/playable-lay
 >*作者：[BlackStartx](https://twitter.com/BlackStartxVRC)<br />
 [GitHub 仓库](https://github.com/BlackStartx/VRC-Gesture-Manager)*
 
-Gesture Avatars 允许在不使用 [Build & Test](https://docs.vrchat.com/docs/using-build-test) 的情况下在 Unity 中测试虚拟形象的动画。这包括 VRChat 表情菜单的复刻、一个非常有用的调试菜单，以及用于测试和改进您的虚拟形象的各种其他工具。
+Gesture Avatars 允许在不使用 [Build & Test](/creators.vrchat.com/worlds/udon/using-build-test) 的情况下在 Unity 中测试虚拟形象的动画。这包括 VRChat 表情菜单的复刻、一个非常有用的调试菜单，以及用于测试和改进您的虚拟形象的各种其他工具。
 
 ## VRWorld Toolkit
 >"VRWorld Toolkit 是一个 Unity 编辑器扩展，旨在使 VRChat 世界创建更加易于访问，并降低创建良好性能世界的入门门槛。"<br />

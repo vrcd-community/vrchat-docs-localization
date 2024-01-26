@@ -11,7 +11,7 @@
 
 ## 创作者助手有什么好处？
 创作者助手使 VRChat 世界或模型创建更加容易和快速。它可以自动安装 Unity 编辑器和 Hub，下载 VRChat SDK 并创建和更新您的项目。
-从 2023 年开始，新的 [VRChat SDK](https://docs.vrchat.com/docs/choosing-your-sdk) 更新将只通过创作者助手提供。如果您想在新的或现有的项目中使用 VRChat 的最新 SDK 功能，[使用 VCC](https://vcc.docs.vrchat.com/guides/getting-started/)。
+从 2023 年开始，新的 [VRChat SDK](/vcc.docs.vrchat.com/) 更新将只通过创作者助手提供。如果您想在新的或现有的项目中使用 VRChat 的最新 SDK 功能，[使用 VCC](https://vcc.docs.vrchat.com/guides/getting-started/)。
 
 ## 我的场景去哪了？为什么是空白的？
 迁移后，Unity 可能会显示一个空白场景（带有 `Main Camera` 和 `Directional Light`）。您的场景*可能*还在那里 - 浏览您的 `/Assets/` 文件夹找到它。

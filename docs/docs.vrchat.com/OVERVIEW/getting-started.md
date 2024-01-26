@@ -8,7 +8,7 @@
 
 如果您想看快速入门的教程，您可以访问我们的[博客文章](https://medium.com/vrchat/stuck-inside-a-quick-guide-for-using-vrchat-to-stay-connected-f71430cf8a11)以了解如何快速上手 VRChat。
 
-我们提供了一些用于了解各种[控制器](/docs.vrchat.com/OVERVIEW/controls/controls.md)的文档。如果您需要帮助或技术支持，请访问 [https://help.vrchat.com/](https://help.vrchat.com/)。
+我们提供了一些用于了解各种[控制器](/docs.vrchat.com/docs/controls)的文档。如果您需要帮助或技术支持，请访问 [https://help.vrchat.com/](https://help.vrchat.com/)。
 
 ## 创作内容
 

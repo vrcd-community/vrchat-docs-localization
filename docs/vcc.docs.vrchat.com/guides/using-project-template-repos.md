@@ -8,7 +8,7 @@
 
 ### Avatar
 
-这个模板包括基础和 Avatar SDK，准备好让您使用 [Avatars 3.0](https://docs.vrchat.com/docs/avatars-30) 构建和上传 Avatar。
+这个模板包括基础和 Avatar SDK，准备好让您使用 [Avatars 3.0](/creators.vrchat.com/avatars/) 构建和上传 Avatar。
 
 [仓库链接](https://github.com/vrchat-community/template-avatar) | [下载链接](https://github.com/vrchat-community/template-avatar/archive/refs/heads/main.zip)
 
@@ -39,7 +39,7 @@
 - 打开 Unity Hub 并点击 "Open"。
 - 导航到您的新项目文件夹并点击 "Select Folder"。
 - 这应该会打开 Unity 并开始包导入过程。
-  - 确保您已经安装了正确的 Unity 版本，查看[我们的文档](https://docs.vrchat.com/docs/current-unity-version)了解相关信息。
+  - 确保您已经安装了正确的 Unity 版本，查看[我们的文档](/creators.vrchat.com/sdk/upgrade/current-unity-version)了解相关信息。
   - 您可以使用 VCC 来确保您总是使用正确的 Unity 版本。
 - 当被要求下载所需的包时，点击 "OK"。
 - 您现在应该已经设置好并可以开始了！

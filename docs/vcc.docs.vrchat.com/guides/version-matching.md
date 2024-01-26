@@ -13,13 +13,13 @@
 - **DataContainers！** 为 Udon 提供列表，字典和 JSON！
   - 添加了 DataLists 和 DataDictionaries，为 Udon 提供了类似于 Lists 和 Dictionaries 的功能。
     - 列表和字典通常需要支持泛型，而 Udon 不支持它们，所以这是通过首先将您的数据放入 DataTokens 中来完成的，这些 DataTokens 能够存储任何值。
-  - 添加了 VRCJSON，一个帮助类，可以将 JSON 字符串（例如从 [远程字符串加载](https://docs.vrchat.com/docs/string-loading) 接收到的）转换为 DataLists 和 DataDictionaries，反之亦然。
-  - [阅读 Data Containers / VRCJSON 文档页面](https://docs.vrchat.com/v2023.2.2/docs/data-containers-vrcjson) 以了解更多。
+  - 添加了 VRCJSON，一个帮助类，可以将 JSON 字符串（例如从 [远程字符串加载](/creators.vrchat.com/worlds/udon/string-loading) 接收到的）转换为 DataLists 和 DataDictionaries，反之亦然。
+  - [阅读 Data Containers / VRCJSON 文档页面](https://creators.vrchat.com/worlds/udon/data-containers/) 以了解更多。
 
 - **AsyncGPUReadback！** 这允许您从 GPU 和着色器读取数据，而不会产生重大的性能损失
   - 添加了 `VRCAsyncGPUReadback.Request` 函数和相应的 `OnAsyncGpuReadbackComplete` 事件
   - 这些可以在不产生太大性能影响的情况下，将数据从 GPU 读取到 CPU 内存中，但需要延迟一帧或更多帧的数据
-  - 查看 [ASyncGPUReadback](https://docs.vrchat.com/v2023.2.2/docs/asyncgpureadback) 的文档以获取更多信息。
+  - 查看 [ASyncGPUReadback](/creators.vrchat.com/worlds/vrc-graphics/asyncgpureadback) 的文档以获取更多信息。
 
 ### 改进
 
@@ -39,12 +39,12 @@
   - PhysBones 1.1：**已添加 Stretch Motion 值。** 这是运动影响骨头拉伸或压缩的比例。
   - 现在可以折叠 VRCPhysBone 组件 UI 中的值类别。
     - 类别还包括一个帮助按钮，它将带您到该主题的在线文档。
-  - [PhysBones](https://docs.vrchat.com/v2023.2.2/docs/physbones) 文档将在 PhysBones 1.1 和 Squishy PhysBones 的公开测试期间更新。
+  - [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) 文档将在 PhysBones 1.1 和 Squishy PhysBones 的公开测试期间更新。
   - 网络 ID 工具现在适用于 Avatar 项目中的 PhysBones
     - 这个工具允许在不同平台上的虚拟形象之间同步 PhysBones，即使它们有不同的 GameObject 层次结构
       - 这个高级工具只有在您的 PC 和 Quest 虚拟形象有不同的层次结构时才有用！
       - 如果您不知道为什么要这样做，您不需要担心这个。
-    - [查看完整文档以获取更多信息](https://docs.vrchat.com/v2023.2.2/docs/network-id-utility)
+    - [查看完整文档以获取更多信息](/creators.vrchat.com/worlds/udon/networking/network-id-utility)
 
 ### 自 3.2.0-beta.1 以来的变化
 - 重新添加了一些被移除的公共方法，包括 `GetOrAddComponent`
@@ -120,7 +120,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，您可能需要在您的代�
   * 允许摆姿势
 * 纹理 VRAM 使用现在计入您的虚拟形象的总体性能评级。
 * 添加了设置虚拟形象参数以不同步的能力，解决了 [从表达菜单控制不同步参数](https://vrchat.canny.io/avatar-30/p/feedback-control-the-not-sync-parameters-from-expressions-menu) 的问题。
-* Udon 现在可以访问临时 RenderTextures，以及通过 [VRCGraphics](https://docs.vrchat.com/docs/vrcgraphics) 为 RenderTexture，Texture2D，Texture3D 和 Sprite 提供构造函数。
+* Udon 现在可以访问临时 RenderTextures，以及通过 [VRCGraphics](/creators.vrchat.com/worlds/vrc-graphics/#vrcgraphics) 为 RenderTexture，Texture2D，Texture3D 和 Sprite 提供构造函数。
 
 
 ### Bug 修复
@@ -144,11 +144,11 @@ PhysBoneGrabHelper 已经移动到其他程序集，您可能需要在您的代�
 
 ### 新功能
 
-* Udon 现在可以[加载远程图像](https://docs.vrchat.com/docs/image-loading)。关闭了[这个 Canny](https://feedback.vrchat.com/feature-requests/p/hey-when-will-dynamic-image-be-implemented)
-* Udon 现在可以[加载远程字符串](https://docs.vrchat.com/docs/string-loading)。关闭了[这个 Canny](https://feedback.vrchat.com/vrchat-udon-closed-alpha-feedback/p/vrchat-udon-web-api)
-* Udon 可以[播放 MIDI 数据](https://docs.vrchat.com/docs/midi-playback)，与音频同步。
-* Udon 现在可以访问[玩家](https://docs.vrchat.com/docs/players#simulationtime)和[具有网络功能的 GameObjects](https://docs.vrchat.com/docs/network-components#networking-properties)的模拟时间。
-* OnDeserialization 现在包含 [DeserializationResult](https://docs.vrchat.com/docs/network-components#ondeserializationdeserializationresult)。
+* Udon 现在可以[加载远程图像](/creators.vrchat.com/worlds/udon/image-loading)。关闭了[这个 Canny](https://feedback.vrchat.com/feature-requests/p/hey-when-will-dynamic-image-be-implemented)
+* Udon 现在可以[加载远程字符串](/creators.vrchat.com/worlds/udon/string-loading)。关闭了[这个 Canny](https://feedback.vrchat.com/vrchat-udon-closed-alpha-feedback/p/vrchat-udon-web-api)
+* Udon 可以[播放 MIDI 数据](/creators.vrchat.com/worlds/udon/midi/midi-playback)，与音频同步。
+* Udon 现在可以访问[玩家](/creators.vrchat.com/worlds/udon/players/#simulationtime)和[具有网络功能的 GameObjects](/creators.vrchat.com/worlds/udon/networking/network-components#networking-properties)的模拟时间。
+* OnDeserialization 现在包含 [DeserializationResult](/creators.vrchat.com/worlds/udon/networking/network-components#ondeserializationdeserializationresult)。
 
 ### Bug 修复
 ![UdonBehaviour Inspector With Warning](https://user-images.githubusercontent.com/737888/218818072-92616039-c135-4c6c-86f0-02195bddffcd.png)
@@ -229,7 +229,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，您可能需要在您的代�
   * 默认值是 `MirrorClearFlags.FromReferenceCamera`，保留当前的行为，即与活动相机一样渲染
 * 选项 `customSkybox` 和 `customClearColor` 允许镜像特定的天空盒和清除颜色
 * 现在可以在世界中将重力设置为 0 或负值
-* 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。[文档已更新](https://docs.vrchat.com/docs/playable-layers#fx)。
+* 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。[文档已更新](/creators.vrchat.com/worlds/udon/using-build-test#fx)。
 * 添加了几个与图形和着色器操作相关的新 Udon 节点：
   * VRCGraphics.DrawMeshInstanced
   * VRCShader.SetGlobalFloat
@@ -262,7 +262,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，您可能需要在您的代�
   * 默认值是 `MirrorClearFlags.FromReferenceCamera`，保留当前的行为，即与活动相机一样渲染
 * 选项 `customSkybox` 和 `customClearColor` 允许镜像特定的天空盒和清除颜色
 * 现在可以在世界中将重力设置为 0 或负值
-* 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。[文档已更新](https://docs.vrchat.com/docs/playable-layers#fx)。
+* 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。[文档已更新](/creators.vrchat.com/worlds/udon/using-build-test#fx)。
 * 添加了几个与图形和着色器操作相关的新 Udon 节点：
   * VRCGraphics.DrawMeshInstanced
   * VRCShader.SetGlobalFloat
@@ -284,7 +284,7 @@ PhysBoneGrabHelper 已经移动到其他程序集，您可能需要在您的代�
 
 ---
 
-- 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。文档已更新：https://docs.vrchat.com/docs/playable-layers#fx
+- 修复：用户提供的 FX 层上的遮罩被忽略，并阻止了 Gesture transform 动画的工作。文档已更新：/creators.vrchat.com/worlds/udon/using-build-test#fx
 - 所有输入字段都将弹出键盘，我们添加了一个组件，如果您不希望在字段上使用这个功能，可以禁用它
 - 添加了自定义镜像天空盒和清除标志的能力
 - 添加了几个与图形和着色器操作相关的新 Udon 节点：
