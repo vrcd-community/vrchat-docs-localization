@@ -24,9 +24,9 @@
 
 @[youtube](https://www.youtube.com/watch?v=_hK7FIJ1gTU)
 
-你也可以添加自己的模板，以便轻松地使用你喜欢的包、工具和预制开始项目。最简单的方法是从其中一个包含的模板构建。这是一个我们在世界模板中包含一个名为 `HypeGenerator` 的虚构工具的例子。
+您也可以添加自己的模板，以便轻松地使用您喜欢的包、工具和预制开始项目。最简单的方法是从其中一个包含的模板构建。这是一个我们在世界模板中包含一个名为 `HypeGenerator` 的虚构工具的例子。
 
-1. 将文件夹 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\VRCTemplates\World` 复制到 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\Templates`（如果实际的驱动器字母不是 C，使用你的实际驱动器字母）。
+1. 将文件夹 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\VRCTemplates\World` 复制到 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\Templates`（如果实际的驱动器字母不是 C，使用您的实际驱动器字母）。
 2. 将文件夹从 `World` 重命名为描述性的名称，如 `HypeWorld`。
 3. 修改 HypeWorld\package.json：
 

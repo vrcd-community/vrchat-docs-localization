@@ -1,6 +1,6 @@
 ---
 title: "Udon 中的 Midi"
-description: "在你的世界中使用来自文件或实时播放的 Midi 数据。"
+description: "在您的世界中使用来自文件或实时播放的 Midi 数据。"
 ---
 
 # Udon 中的 Midi
@@ -16,7 +16,7 @@ description: "在你的世界中使用来自文件或实时播放的 Midi 数据
 - [实时](realtime-midi) 数据来自连接到您的电脑上的乐器。
 - [回放](midi-playback) MIDI 文件数据。
 
-无论采用哪种方式，你都需要用的 Udon 的 MIDI 事件，详见下文。
+无论采用哪种方式，您都需要用的 Udon 的 MIDI 事件，详见下文。
 
 ## Midi 事件
 
