@@ -83,7 +83,7 @@ Some rigs split the hierarchy into two sections, upper and lower body. In this c
 ### Full-Body Tracking
 There are special considerations if you are using Full-Body tracking, ie. you have 3 HTC Tracking Pucks connected. There are several recommendations that will ensure that your avatar works well when using Full-Body tracking.
 
-To see more detailed information on Full-Body Tracking rigging requirements, see our [Full-Body Tracking system guide](https://docs.vrchat.com/docs/full-body-tracking).
+To see more detailed information on Full-Body Tracking rigging requirements, see our [Full-Body Tracking system guide](/docs.vrchat.com/docs/full-body-tracking).
 ::: warning The angle between pelvis and thigh bones should be close to 180 degrees (this avatar's angle is ___). Your avatar may not work well with full-body IK and Tracking.
 
 Full-body tracking is sensitive to the angle between the hip and upper leg bones. It's best to measure this angle when the AvatarTPoseController is applied to your avatar. Ideally, the hip bone is pointing straight up and the upper leg bones point straight down in the TPose, but slight divergence is okay. You can ignore this message if you are not going to use Full-Body Tracking.

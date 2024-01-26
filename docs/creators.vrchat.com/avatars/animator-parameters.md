@@ -74,7 +74,7 @@ You can use up to a total of 256 bits of "memory". This isn't strictly memory in
 | `float`        | `-1.0` to `1.0`   | 8 bits       | Signed 8-bit fixed-point decimal†. |
 | `bool`         | `True` or `False` | 1 bit        |                                    |
 
-† Remotely synced `float` values have 255 possible values, giving a precision of `1/127` over the network, and can store `-1.0`, `0.0`, and `1.0` precisely. When updated locally, such as with [OSC](https://docs.vrchat.com/docs/osc-overview), float values are stored as native (32-bit) floating-point values in animators. 
+† Remotely synced `float` values have 255 possible values, giving a precision of `1/127` over the network, and can store `-1.0`, `0.0`, and `1.0` precisely. When updated locally, such as with [OSC](/docs.vrchat.com/docs/osc-overview), float values are stored as native (32-bit) floating-point values in animators. 
 
 ## GestureLeft and GestureRight Values
 

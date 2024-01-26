@@ -27,7 +27,7 @@ You can test your MIDI events in the Unity Editor by selecting your device throu
 
 When you visit a world with MIDI events, VRChat will try to open the first MIDI device it can find on your machine. If you have multiple devices and want to specify which one to use, you can pass part of its name as a command-line argument. For example, if you have a device that appears in Windows as "SchneebleCo MidiKeySmasher 89", you can add this to your launch options/script:
 ``--midi=midikeysmasher`
-VRChat will match partial names and ignore capitalization. Learn about all other Launch Options: [Launch Options](https://docs.vrchat.com/docs/launch-options)
+VRChat will match partial names and ignore capitalization. Learn about all other Launch Options: [Launch Options](/docs.vrchat.com/docs/launch-options)
 
 ## Example Scene
 

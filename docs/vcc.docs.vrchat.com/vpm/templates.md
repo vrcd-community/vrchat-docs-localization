@@ -5,7 +5,7 @@
 创作者助手包含三个模板：
 
 ### Avatar
-此模板包括基础和 Avatar SDK，您可以使用 [Avatars 3.0](https://docs.vrchat.com/docs/avatars-30) 构建和上传 Avatar。
+此模板包括基础和 Avatar SDK，您可以使用 [Avatars 3.0](/creators.vrchat.com/avatars/) 构建和上传 Avatar。
 
 ### World
 此模板包括基础和 World SDK，您可以使用 Udon 程序和预设构建和上传 World。它还包括 [ClientSim](https://clientsim.docs.vrchat.com/)，以便您在开发过程中轻松测试您的 World。

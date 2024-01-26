@@ -6,11 +6,11 @@
 
 ## 那这个和 VRChat 有什么关系？
 
-我们正在 VRChat 中扩展对 OSC 的支持，这样您就可以用各种新方法控制 "形象 "和 "世界"，还可以将数据流从 VRChat 中导出来控制其他东西！我们将推出两个 API：[输入](https://docs.vrchat.com/docs/osc-as-input-controller)和[模型参数](https://docs.vrchat.com/docs/osc-avatar-parameters)。
+我们正在 VRChat 中扩展对 OSC 的支持，这样您就可以用各种新方法控制 "形象 "和 "世界"，还可以将数据流从 VRChat 中导出来控制其他东西！我们将推出两个 API：[输入](/docs.vrchat.com/docs/osc-as-input-controller)和[模型参数](/docs.vrchat.com/docs/osc-avatar-parameters)。
 
 ## 我怎么使用它？
 
-您可以[启用它](https://docs.vrchat.com/docs/osc-overview#enabling-it)，然后使用兼容 OSC 的应用程序或设备将数据流输入 VRChat，或读取来自 VRChat 的数据。本文档系列为想要制作这些应用程序的人提供了大量信息。我们将在这些信息发布足够长的时间后，为这些应用程序添加链接。
+您可以[启用它](/docs.vrchat.com/docs/osc-overview#enabling-it)，然后使用兼容 OSC 的应用程序或设备将数据流输入 VRChat，或读取来自 VRChat 的数据。本文档系列为想要制作这些应用程序的人提供了大量信息。我们将在这些信息发布足够长的时间后，为这些应用程序添加链接。
 
 ## VRChat 端口
 

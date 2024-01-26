@@ -30,6 +30,6 @@ VRChat 也支持类似于 XBOX 手柄的控制方案。
 
 我们还有一些输入方案和额外选项的文档。
 
-- [圆盘菜单](./action-menu)
-- [手势切换](../additional-options/gesture-toggle)
-- [启动选项](../additional-options/launch-options)
+- [圆盘菜单](/docs.vrchat.com/docs/action-menu)
+- [手势切换](/docs.vrchat.com/docs/gesture-toggle)
+- [启动选项](/docs.vrchat.com/docs/launch-options)

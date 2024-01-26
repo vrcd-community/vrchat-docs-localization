@@ -44,7 +44,7 @@ UdonSharp is a compiler that compiles C# to Udon assembly. UdonSharp is not curr
 - The latest [release](https://github.com/vrchat-community/UdonSharp/releases/latest) of UdonSharp
 
 ### Installation
-1. Read the getting started with Udon doc page https://docs.vrchat.com/docs/getting-started-with-udon this has basic installation instructions for Udon.
+1. Read the getting started with Udon doc page /docs.vrchat.com/docs/getting-started-with-udon this has basic installation instructions for Udon.
 2. Install the latest version of the VRCSDK3 linked on the getting started.
 3. Get the latest release of UdonSharp from [here](https://github.com/vrchat-community/UdonSharp/releases/latest) and install it to your project.
 

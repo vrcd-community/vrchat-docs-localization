@@ -10,7 +10,7 @@ There are a few things you should take into consideration before submitting your
 
 You can submit your world to Community Labs on VRChat.com (Edit World Info -> Danger Zone -> World Visibility -> Publish) or whenever you upload a new version in Unity.
 
-Publishing your world will make it immediately available to all users that opt-in for Community Labs. Eventually, your world will go public and become accessible to all users outside Community Labs! [Read more about Labs here.](https://docs.vrchat.com/docs/vrchat-community-labs)
+Publishing your world will make it immediately available to all users that opt-in for Community Labs. Eventually, your world will go public and become accessible to all users outside Community Labs! [Read more about Labs here.](/docs.vrchat.com/docs/vrchat-community-labs)
 
 ## Important Info
 
@@ -54,7 +54,7 @@ If you have any questions about the process, [visit our forum](https://ask.vrcha
 
 ## Submitting to Community Labs
 
-Once you've read everything above, submit your new world to Community Labs! If you're curious about how Community Labs works, check out our [VRChat Community Labs](https://docs.vrchat.com/docs/vrchat-community-labs) documentation.
+Once you've read everything above, submit your new world to Community Labs! If you're curious about how Community Labs works, check out our [VRChat Community Labs](/docs.vrchat.com/docs/vrchat-community-labs) documentation.
 
 ## Becoming a Game or Avatar World
 

@@ -219,32 +219,32 @@ You can choose to manage avatars based on their Avatar Performance Rank. This op
 
 When you choose a Performance Rank in this menu, all avatars that are below that level will have their components/display managed as described below.
 
-| Parameter                                                                        | Description                                                                              |
-| :------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
-| Polygons                                                                         | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
-| Bounds Size                                                                      | No change                                                                                |
-| Texture Memory                                                                   | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
-| Skinned Meshes                                                                   | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
-| Meshes                                                                           | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
-| Material Slots                                                                   | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
-| Physics Bone Components, Transforms, Colliders, CollisionCheckCount, or Contacts | All PhysBone, PhysBone Collider,and Contact components removed                           |
-| Dynamic Bone Components or Transforms                                            | All Dynamic Bones components removed                                                     |
-| Dynamic Bone Colliders or Collision Check Count                                  | All Dynamic Bone Collider components removed                                             |
-| Animators                                                                        | All animators (aside from root animator) removed                                         |
-| Bones                                                                            | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
-| Lights                                                                           | All Lights removed                                                                       |
-| Particle Systems                                                                 | All Particle Systems removed                                                             |
-| Total Particles Active                                                           | All Particle Systems removed                                                             |
-| Mesh Particle Active Polys                                                       | All Particle Systems removed                                                             |
-| Particle Trails Enabled                                                          | All Particle Systems removed                                                             |
-| Particle Collision Enabled                                                       | All Particle Systems removed                                                             |
-| Trail Renderers                                                                  | All Trail Renderers removed                                                              |
-| Line Renderers                                                                   | All Line Renderers removed                                                               |
-| Cloths                                                                           | All Cloth components removed                                                             |
-| Total Cloth Vertices                                                             | All Cloth components removed                                                             |
-| Physics Colliders                                                                | All Physics Colliders removed                                                            |
-| Physics Rigidbodies                                                              | All Physics Rigidbodies removed                                                          |
-| Audio Sources                                                                    | All Audio Sources removed                                                                |
+| Parameter                                                                        | Description                                                                       |
+| :------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| Polygons                                                                         | **Avatar replaced with [Fallback](/docs.vrchat.com/docs/avatar-fallback-system)** |
+| Bounds Size                                                                      | No change                                                                         |
+| Texture Memory                                                                   | **Avatar replaced with [Fallback](/docs.vrchat.com/docs/avatar-fallback-system)** |
+| Skinned Meshes                                                                   | **Avatar replaced with [Fallback](/docs.vrchat.com/docs/avatar-fallback-system)** |
+| Meshes                                                                           | **Avatar replaced with [Fallback](/docs.vrchat.com/docs/avatar-fallback-system)** |
+| Material Slots                                                                   | **Avatar replaced with [Fallback](/docs.vrchat.com/docs/avatar-fallback-system)** |
+| Physics Bone Components, Transforms, Colliders, CollisionCheckCount, or Contacts | All PhysBone, PhysBone Collider,and Contact components removed                    |
+| Dynamic Bone Components or Transforms                                            | All Dynamic Bones components removed                                              |
+| Dynamic Bone Colliders or Collision Check Count                                  | All Dynamic Bone Collider components removed                                      |
+| Animators                                                                        | All animators (aside from root animator) removed                                  |
+| Bones                                                                            | **Avatar replaced with [Fallback](/docs.vrchat.com/docs/avatar-fallback-system)** |
+| Lights                                                                           | All Lights removed                                                                |
+| Particle Systems                                                                 | All Particle Systems removed                                                      |
+| Total Particles Active                                                           | All Particle Systems removed                                                      |
+| Mesh Particle Active Polys                                                       | All Particle Systems removed                                                      |
+| Particle Trails Enabled                                                          | All Particle Systems removed                                                      |
+| Particle Collision Enabled                                                       | All Particle Systems removed                                                      |
+| Trail Renderers                                                                  | All Trail Renderers removed                                                       |
+| Line Renderers                                                                   | All Line Renderers removed                                                        |
+| Cloths                                                                           | All Cloth components removed                                                      |
+| Total Cloth Vertices                                                             | All Cloth components removed                                                      |
+| Physics Colliders                                                                | All Physics Colliders removed                                                     |
+| Physics Rigidbodies                                                              | All Physics Rigidbodies removed                                                   |
+| Audio Sources                                                                    | All Audio Sources removed                                                         |
 
 ### Minimum Displayed Performance Rank on PC
 On VRChat for PC, the Minimum Displayed Performance Rank is set to "Very Poor" by default. This means that, by default, no avatars will have their components or display affected for performance reasons on PC. If you wish to change this, you can choose between "Medium", "Poor", or "Very Poor" options.
