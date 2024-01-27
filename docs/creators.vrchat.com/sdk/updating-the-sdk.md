@@ -4,11 +4,11 @@
 
 ## 版本控制
 
-如果您知道如何使用，您可能会发现使用 [Git](https://git-scm.com/) 等版本控制软件来管理您的项目很有益处。您不需要将版本库上传到 Github 或类似服务，就能获得版本控制的好处。在升级 SDK 之前，请先创建一个提交，以确保万无一失。
+如果您知道如何使用 [Git](https://git-scm.com/) 等的版本控制器，您可能会发现使用此类软件对您的项目管理很有益处。您不需要将您的版本库上传到 Github 或类似的服务中也能体验版本控制的好处。在升级 SDK 之前，请先创建一个提交以确保万无一失。
 
-## VRChat 创作者伴侣
+## VRChat 创作者助手（VRChat Creator Companion）
 
-有了 VCC，更新 SDK 变得非常容易。请参阅 [VRChat Creator Companion 文档](../../vcc.docs.vrchat.com/guides/getting-started.md) 了解如何使用它！
+有了 VCC，更新 SDK 变得非常容易。请参阅 [VRChat 创作者助手文档](../../vcc.docs.vrchat.com/guides/getting-started.md) 了解如何使用它！
 
 ## 迁移到 VCC
 
