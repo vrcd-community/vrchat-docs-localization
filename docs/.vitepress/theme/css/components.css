@@ -3,20 +3,6 @@
   border: none !important;
 }
 
-.handle-br {
-  bottom: -50px !important;
-  right: -2px !important;
-}
-
-.handle-bl {
-  bottom: -50px !important;
-  left: -2px !important;
-}
-
-.handle-bm {
-  bottom: -50px !important;
-}
-
 .VPButton {
   border-radius: 0.4rem !important;
   line-height: 1.5 !important;
