@@ -22,7 +22,7 @@ VRChat SDK 从技术上讲只允许由 VRChat 分发，不应该提交到版本�
 * 所有 VPM 包（在 `Packages/` 中），除了解析器
 * 临时文件/缓存文件夹，如 `Library`，`Temp` 等。
 
-如果您的项目的 `Packages` 文件夹中没有 `.gitignore` 文件，VPM 将会自动为你添加一个，并排除所有以 `com.vrchat.*` 开头的文件夹，同时通过特别包含 `com.vrchat.core.*` 来添加对解析器的排除。
+如果您的项目的 `Packages` 文件夹中没有 `.gitignore` 文件，VPM 将会自动为您添加一个，并排除所有以 `com.vrchat.*` 开头的文件夹，同时通过特别包含 `com.vrchat.core.*` 来添加对解析器的排除。
 
 ## 在新克隆的项目中会发生什么
 当有人从版本控制系统获取您的项目时，如果创建者遵循了上述指南，项目将缺少一些必需的包。此时最好的做法就是简单地在 Unity 中打开项目，并在恢复缺失包的对话框中按 "OK" - 参见 [解析器](/vcc.docs.vrchat.com/vpm/resolver#using-it)。

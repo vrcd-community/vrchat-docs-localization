@@ -24,7 +24,7 @@
 @[youtube](https://www.youtube.com/watch?v=8gXzBTqlP6I)
 :::
 
-- 如果你更喜欢看文字教程，可以自己阅读我们的 [开始使用 Udon](https://creators.vrchat.com/worlds/udon/getting-started-with-udon) 页面。
+- 如果您更喜欢看文字教程，可以自己阅读我们的 [开始使用 Udon](https://creators.vrchat.com/worlds/udon/getting-started-with-udon) 页面。
 
 ## 反馈 Bugs 或者发起功能请求
 我们通常使用在 VRChat 中使用 Canny 来接收错误报告和功能请求。对于 Udon 请使用这些链接：

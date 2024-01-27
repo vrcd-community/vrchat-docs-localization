@@ -26,7 +26,7 @@
 1. 关闭 Unity。
 2. 按下 Windows 键并输入 `regedit`。按 Enter 键。UAC 会提示您允许管理员访问。
 3. 使用 `regedit` 时要非常小心！此应用程序包含电脑的所有设置。
-4. 找到以下键：`Computer\HKEY_CURRENT_USER\Software\Unity Technologies\Unity Editor 5.x`。你可以把它粘贴到 `regedit` 顶部的地址栏中，如果窗口顶部没有地址栏，也可以通过左侧的目录列表寻找。
+4. 找到以下键：`Computer\HKEY_CURRENT_USER\Software\Unity Technologies\Unity Editor 5.x`。您可以把它粘贴到 `regedit` 顶部的地址栏中，如果窗口顶部没有地址栏，也可以通过左侧的目录列表寻找。
 5. 删除目录中所有以 `VRC` 开头的键，包括 `VRCSDK2` 或其他相关键。
 6. 关闭 `regedit`。
 7. 重新打开 Unity。这样就可以正常运行了！

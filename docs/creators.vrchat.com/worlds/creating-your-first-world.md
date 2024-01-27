@@ -8,9 +8,9 @@
 
 ## 第一步 - 设置场景
 
-首先，您需要一个 Unity 场景。你可以创建一个新场景或者使用一个已有内容的已有场景。
+首先，您需要一个 Unity 场景。您可以创建一个新场景或者使用一个已有内容的已有场景。
 
-打开场景后，您需要添加一个 **VRC Scene Descriptor** 到你的场景里。你可以很轻松的使用 VRChat SDK 完成这件事：
+打开场景后，您需要添加一个 **VRC Scene Descriptor** 到您的场景里。您可以很轻松的使用 VRChat SDK 完成这件事：
 
 ![Adding a scene descriptor automatically via the VRChat SDK build panel.](/creators.vrchat.com/images/worlds/build-panel-add-vrc-scene-descriptor.png)
 
@@ -21,7 +21,7 @@
 
 ## 第二步 - 创建出生点
 
-您需要在场景中设置至少一个重生点。这是当玩家加入世界时他们会出现在的位置。默认情况下，玩家将在您的 VRCWorld 预制件的位置出现。你只需要简单地移动 VRCWorld 预制件到你想要玩家出现的地方。
+您需要在场景中设置至少一个重生点。这是当玩家加入世界时他们会出现在的位置。默认情况下，玩家将在您的 VRCWorld 预制件的位置出现。您只需要简单地移动 VRCWorld 预制件到您想要玩家出现的地方。
 
 ![Move your scene descriptor to change your spawn.](/creators.vrchat.com/images/worlds/vrc-scene-descriptor-gizmo.png)
 
