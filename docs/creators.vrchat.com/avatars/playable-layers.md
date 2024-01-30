@@ -1,164 +1,141 @@
 ---
-title: "可播放层"
-description: "为您的VRChat模型创建简单或复杂的动画"
+title: "Playable Layers"
+description: "Create simple or complex animations for your VRChat avatar"
 ---
 
-# Playable Layers （可播放层）
- 
-当您为 VRChat 模型创建动画时，您不可避免的会用到 VRChat 的 “Playable Layers” 。它们允许您将一些模型上的动画拆分为单一的特定部分，例如奔跑、跳跃、竖起大拇指、微笑、摇尾巴或是它们的组合。
-<!--小脑微缩，需要核对语意-->
-::: warning 您需要了解动画控制器
+# Playable Layers
 
-本文假设您对[ Unity 动画控制器](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html)有一定了解。
+When you create animations for your VRChat avatar, you'll utilize VRChat's 'Playable Layers.' They allow cleanly separate some things you might want to do with your avatar into their own animations - such as running, jumping, giving a thumbs-up, smiling, wagging your tail, and combinations of these.
+::: warning Unity Knowledge Required
+
+This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 :::
 
-在Avatars 3.0模型描述符中，有五个标签按钮：
-- Base（基础）
-- Additive （叠加）
-- Gesture （手势）
-- Action （动作）
-- FX （特效）
+In the Avatars 3.0 Avatar Descriptor, there are five buttons labeled :
+- Base
+- Additive
+- Gesture
+- Action
+- FX
 
-通用骨架的模型只有三个按钮：
+Generic avatars only have three buttons:
 - Base
 - Action
 - FX
-<!--这是html的注释格式uwu-->
-<!--对上面那些Base，我的打算是原文加括号翻译（因为SDK里有原文，权重蛮大的)-->
-<!--琉磷可以随意改动，只要觉得顺口uwu，如果有疑问可以直接用注释-->
-<!--我偏向于不去动这部分，保留原文并在第一次提及的时候使用括号翻译一下就可以了，因为括号越多的话，阅读体验也会下降越多嘛-->
-<!--hmm那就只在第一次加就好，反正大家迟早都会看习惯，vrc可不会本地化文件名字()-->
-<!--UWU-->
-<!--揉揉琉磷-->
-这些都是 **Playable Layers**。每个 Playable layer 都会使用一个 Unity 动画控制器，并且它们会层叠在一起。换句话说，您有五个根动画控制器可供使用，每个控制器都可以有多个**Animator Layers（动画层）**。
 
-这些层按顺序应用 —— 先应用 Base ，然后是 Additive ，然后是 Gesture 、 Action 和 FX 。例如，如果 Additive 中的某个动画影响到了某一个骨骼（权重为 1.0 ），然后 Action 中的某个动画也影响到了同一个骨骼（权重为 1.0 ），那么 Action 的动画将在 Additive 的动画的基础上生效。
-<!--有没有比进行了动画更顺口的表述？-->
-<!--稍微更改了一下表述--><!--nicenice-->
-我们在 SDK 中提供了 Playable layers 的示例。根据您的学习与迭代方式，您可以尝试使用和编辑这些默认的 layers 来帮助您更好的理解它们的工作原理！
+These are **Playable Layers**. Each of them takes a Unity Animator, and they layer on top of each other. In other words, you've got five root animators to play with, and each of them can have several **Animator Layers**.
 
-当您运行 VRChat 并且正在使用或预览一个 Avatars 3.0 模型时，所有的这些 Playable layers 都会移动并整合到另一个单独的动画控制器中。这个动画控制器是您模型的根动画控制器，而且您可以随意控制这个动画器的任意部分。**也就是说您没有必要在您的模型上添加任何额外的动画控制器。**
-<!--也对诶，这个东西是在根部上的Animator里-->
-<!--大概是说 这些层在进入游戏之后会统一按顺序的放在同一个新的动画器里面-->
-<!--okk，咱先去下面探探路了-->
-<!--OKOK-->
-另外，您不应该在多个 Playable layers 中使用相同的控制器。这在某些特定的应用场景中可能有效，但这是效率**非常低**的做法，并且会在扩展模型功能时引发严重问题。
-::: danger 请只使用动画控制器
+These layers apply in order-- in other words, Base gets applied, then Additive, then Gesture, Action, FX. For example, if something in Additive animates a bone (with 1.0 weight), and then something in Action animates that same bone (with 1.0 weight), the Action animation will take precedence.
 
-我们只支持在 Playable layers 插槽中使用动画控制器。不要使用除动画控制器以外的任何其他类型的控制器——否则您将遇到错误或无法上传内容。
+We have example Playable Layers available in the SDK. Depending on how you learn and iterate on things, it might be easier for you to use and edit these default layers to figure things out!
+
+When you are running VRChat and you're wearing (or viewing) an Avatar 3.0 avatar, all of these Playable Layers are put together into a combined Animator. This Animator is the root, main animator of your avatar, and you can control any part of it. **This means that there is no reason to add any additional animators on your avatar.** 
+
+As an aside, you should never use the same controller in multiple Playable Layers. This may work for some setups, but it is **very** poor practice and will cause major issues as you expand the functionality of your avatar.
+::: danger Only Use Animation Controllers
+
+We only support the use of Animation Controllers in Playable Layer slots. Do not use any other type of controller-- you will run into errors or will be unable to upload the content.
 :::
-<!--动画控制器有歧义，animation有controller，这个也叫animator controller，但unity也指定我们知道的那个控制器为animator controller。。。那要不要保持原文呢?-->
-<!--琉磷，一个小问题uwu,我发现动画控制器这边存在两种情况，Base,和Base里面的layer，都叫层，这个东西会混淆意思咩-->
-<!--感觉可能会 不过一个是Playable layers一个是Animation layers-->
-<!--然后到中文语境里都变成层了...至少大家都这么做，文档这边难处理诶...要不这么处理，Base如果需要搭配layer->Base 控制器，然后里面的层才叫层-->
-<!--或者把Playable layers的层抛掉，比如说Base 就叫他Base或者Base动画器-->
-<!--那就变成Base动画器吧，蛮贴合的-->
-<!--okok-->
-<!--接下来又遇到了动画器动画这样的表述，有点视觉疲劳...hmmm，我们是灵活一点儿，改掉这边的表述，还是换掉动画器这样的搭配-->
-<!--*动画器中的动画*或者在翻译的时候灵活一点 把动画器去掉 不过还是看怎么表达流畅吧 也不需要完全统一啦，最重要的就是能看懂就好啦-->
-<!--hmmm...确实，琉磷可以看看Additive那里-->
-这些 Playable layers 的功能是什么？以下是简短的说明：
+What do these Playable Layers do? Here's the short version:
 
-**Base：** 包括会长期生效于模型的动画，这些动画会对移动做出反应（如运动），或对模型的运动状态（奔跑、下落、蹲下等）做出反应。仅使用变换动画。
-**Additive：** 包括您想附加到 Base 动画器中的动画，比如呼吸动画。仅使用变换动画。
-**Gesture：** 包括由您的手部或表情菜单触发的，甚至常驻的状态动画，如摇尾巴、扇动翅膀或移动耳朵。仅使用变换动画。
-**Action：** 完全覆盖，类似于 AV2 表情。仅使用变换动画。
-**FX：** 与手势相同，但用于除变换位置、旋转或缩放动画之外的所有内容。
+**Base:** Stuff that should always play, react to movement (like locomotion), or the locomotion state of your avatar (running, falling, crouching, etc). Transform animations only.
+**Additive:** Stuff that Base is already using, but you want to "add" to it-- like a breathing animation. Transform animations only.
+**Gesture:** Things that get triggered by hand OR by the Expression menu. You can also use this for "idle animations" like a wagging tail, flapping wings, or moving ears. Transform animations only.
+**Action:** Full override, similar to AV2 emotes. Transform animations only.
+**FX:** Same as Gestures, but for everything that *isn't* a Transform position, rotation, or scale animation.
 
-下文会详细的讲解它们：
+That's great, but let's go into some more detail.
 
 ## Base
 
-Base 动画器包含运动动画，包括行走、奔跑、横向移动的混合树。它还包括跳跃、下落、快速下落、蹲下和爬行等动画状态。
+The Base layer contains locomotion animations, including blend trees for walking, running, strafing. It also includes animation states for jumping, falling, falling fast, crouching, and crawling, among other things.
 
-请记住，如果您将某些内容放在这里，您将需要重新定义您的运动动画状态。这非常复杂！您可以查看示例基础 Playable layers ，来了解它可以变得多么复杂。
+Keep in mind that if you put something in here, you'll have to redefine your locomotion animation states. This is pretty complex! Take a look at the example Base Playable Layer to see how complex it can get.
 
-Base 中的动画应仅影响变换，并且其中的所有层都应使用 Avatar Mask 来确保只影响适当的变换。
+Animations in Base should _only_ affect transforms, and all layers should be using Avatar Masks to ensure you're only affecting the appropriate transforms.
 
 ## Additive
 
- Additive 动画器用于在 Base 动画器上叠加变换移动，这些变换移动是作用在 Base 动画器中动画的人形骨骼上的——例如呼吸动画，可以“添加”到 Base 动画器上。<!--这里保留比较好-->
-<!--那这边就留着-->
-**如果您想要为非人形骨骼（如尾巴、耳朵等）添加常驻动画，请使用 Gesture 动画器！**  Additive 动画器*专门*用于人形骨骼。
-<!--由于是叠加，所以翻译成叠加了-->
- Additive 动画器很特殊，因为它总是设置为“叠加”混合模式。简而言之，如果在运动过程中有一个变换移动，Additive 里的动画将在其上“叠加”动画。如果在 Additive 动画器中对骨骼进行了可能离谱的操作，那么骨骼可能会表现得非常奇怪，因此请尽量保持该层的动画相对简单。
+The Additive layer is meant for additive transform movement on top of humanoid bones that are animated in Base-- things like breathing animations that can "add on" to the Base layer.
 
-::: warning Additive 动画器中首层的 Avatar Mask 会被忽略
+**If you want to add an idle animation to non-humanoid bones-- like a tail, ears, or etc-- use Gesture instead!** Additive is *specifically* for humanoid bones.
 
-Additive 动画器中的第一个层的 Avatar Mask 将被忽略。这是为了内部遮罩目的。您仍然可以对其他层进行遮罩，但是您应用于第一个层的任何遮罩都将被忽略。
+The Additive layer is special because it is _always_ set to "Additive" blending. In short, if you've got a transform that moves during locomotion, the Additive animation will "add" its animation on top. This can act really weirdly if you do crazy things to bones in Additive, so try to keep it pretty minimal.
+
+::: warning Additive First Layer Avatar Mask Ignored
+
+The first layer (base layer, 0th layer, etc)'s Avatar Mask is ignored. This is for internal masking purposes. You can still mask other layers, but any mask you apply to the first layer will be ignored.
 :::
 
- Additive 中的动画应仅影响变换。<!--这边感觉去掉动画器就比较合适-->
-<!--那就去掉吧--><!--那看来这样还行得通，这里暂时没啥疑问了uwu-->
+Animations in Additive should _only_ affect transforms.
+
 ## Gesture
 
-Gesture 动画器用于在剩余身体部分有基础动画时，对个别身体部位进行动画处理。这种工作方式有点像 AV2 手势，但适用于身体的任何部位。
+The Gesture layer is for animations that need to act on individual body parts while still playing the underlying animations for the rest of the body. Kind of like AV2 Gestures, but applied to any part of the body.
 
-利用 Avatar Masking，确保动画*仅*影响您想要动画化的模型部位！因此，如果您希望手势参数仅为左/右手制作手势形状，您将需要在每个层上屏蔽这些手部。
+Utilize Avatar Masking to ensure that the animations *only* affect the parts of the avatar you want to animate! So, if you want your gesture parameters to only make hand shapes for left/right hand, you'll want to mask out those hands on each of the layers.
 
-此外，如果您想要为非人形骨骼（如尾巴、翅膀、耳朵等）创建常驻动画，应将其放在 Gesture 动画器中。
+In addition, if you want to have an "idle" animation for non-humanoid bones like a tail, wings, ears, etc-- Gesture is where you should put it.
 
-Gesture 中的动画应仅影响变换。
+Animations in Gesture should _only_ affect transforms.
 
 ## Action
 
-动作层用于覆盖所有其他层的骨骼变换动画，当您需要完全控制模型时。基本上，就像 AV2 的“表情”。
+The Action layer is for bone animations that will override all other layers, when you need to take over total control of the character. Basically, think AV2 "Emotes".
 
-该层**默认情况下混合为零**。在动作层中做任何操作（也就是过渡到任何要执行的动作动画）之前，您需要使用[ Playable layers 控制状态行为](/creators.vrchat.com/avatars/state-behaviors#playable-layer-control)提升该层的权重值，并且确保在想执行的动画结束后将其权重值降低为 0 。
+This layer is **blended to zero by default.** Before you do anything in the action layer, you need to use the [Playable Layer Control State Behavior](/creators.vrchat.com/avatars/state-behaviors#playable-layer-control) to blend this layer up before transitioning to the actual action you're performing! Make sure you blend it back to zero when you're done.
 
-动作层中的动画应仅影响变换。
+Animations in Action should _only_ affect transforms.
 
 ## FX
-特效是一个**特殊的层**。在其他每个层中，您不应使用材质动画、着色器属性动画或形态键动画，因为它们不会复制到您的镜像克隆中。只有变换会被复制。<!--需要验证镜像是什么意思-->
+FX is a **special layer.** On every other layer, you should not be using material animations, shader property animations, or blend shape animations, because they aren't copied to your mirror clone. Only transforms are.
 
-然而，在特效层中，所有内容都会被复制！换句话说，***除了人形变换/肌肉动画之外的所有内容都应放在特效层中。*** 这包括（但不限于）启用/禁用游戏对象、组件、更换材质、着色器动画、粒子系统动画等。
+However, in the FX layer, everything is copied over! In other words, ***everything that isn't a humanoid transform/muscle animation should go into the FX layer.*** This includes (but is not limited to) things like enabling/disabling GameObjects, components, material swaps, shader animations, particle system animating, etc.
 
-第一个特效层中的遮罩默认为空，这将在模型初始化时创建一个默认遮罩，禁用对所有人形骨骼的，但启用对其他所有游戏对象的动画化。这意味着层次结构中的任何动画都应该正常工作，尽管在此处仍然**不建议**对变换进行动画处理。
+The mask in the first FX layer, by default is empty, this will (at avatar init) create a default mask that disables all humanoid muscles, but enables all GameObject animations. This means that any animations in the hierarchy should work, although it is still NOT RECOMMENDED to animate transforms here.
 
-如果您在手势中有非骨骼变换动画（例如，您的手势[遮罩](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AvatarMask.html)中在底部中有被勾选的变换），那么在 FX 动画器的遮罩中必须将这些变换禁用。这将使您的手势动画能够透过FX层显示。
-<!--很少接触到的情况-->
-::: info 示例
+If you have non-muscle animations in your gestures (eg. your Gesture [mask](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AvatarMask.html) has any transforms checked at the bottom) those same transforms must be DISABLED in your FX mask. This will allow your Gesture animations to "show through" the FX layer.
 
-假设您的模型具有以下设置：
-- 模型上有一个尾巴（一系列不属于人形层次结构的骨骼）。
-- 手势动画器中，动画化尾巴的一层动画层具有特殊的遮罩，遮罩中只启用了尾巴的骨骼。
-- 其他手势动画层具有“全部部位遮罩”，其中也包括了在控制器的其余部分中动画化的其他身体部位。
+::: info Example
 
-在这种情况下，您还需要在第一个 FX 层中创建一个自定义遮罩。这将在 FX 里禁用所有人体骨骼与尾巴中的所有骨骼。
-<!--禁用骨骼需要额外补充-->
-您还需要确保此遮罩对于您将要在 FX 动画器中处理的任何变换都打开了复选框。例如，用于动画化形态键或材质的身体蒙皮网格。
+Let's say your avatar has the following setup:
+- You have a tail on your avatar (a chain of bones not part of humanoid hierarchy).
+- Your Gesture animator layer for the tail has a special mask with only the chain of bones enabled.
+- Your other Gesture animator layer with an "all-parts mask" also has those bones checked (along with the other body parts animated in the rest of the controller).
+
+In this case, you'd also want to create a custom mask in the first FX layer. This would mask OFF all the muscles (human diagram all red) and mask OFF all the bones in the tail.
+You'd also want to make sure this mask has the checkboxes ON for any transforms that have components you will be animating for FX. E.g. a body skinned mesh for animating blend shapes or materials.
 
 :::
 
-请注意，如果您的层次结构中有一个游戏对象，它既有一个在手势中动画化的变换（例如，您在手势中动画化的尾巴）又有一个在特效中动画化的效果组件，这将无法满足遮罩的要求。如果您的层次结构中有一个简单的静态网格嵌入式游戏对象，您在手势中进行动画处理，但在特效中进行材质更改，就会出现这种情况。另一个例子是直接将粒子效果组件放在上述示例尾巴骨骼上。简单的解决方法是创建一个子游戏对象，并将静态网格或效果放在其中。您不会对子对象的变换进行动画处理，只对父对象进行动画处理。如果按照这些步骤操作，您就不需要在FX层中放置变换动画。
+Note that if you have a game object in your hierarchy that has both an animated transform (in Gesture) and an animated effect component (in FX), this will not work with the requirements for the masks. This can occur if you have a simple static-mesh embedded in your hierarchy that you are animating in Gesture, but also applying a material change to in FX. Another example, would be putting a particle effect component directly on the example tail bones above. The simple workaround is to make a child game object and put the static-mesh or effect on that. You would not animate the transform of the child, only the parent. If you follow these steps, you should not need to put transform animations in the FX layer.
 
-## Additional Poses（额外姿势）
-Avatars 3.0模型还提供了一些额外的姿势。这些按钮位于 Playable layers 下方。
+## Additional Poses
+There are some additional poses available for Avatars 3.0 avatars. The buttons for these are under the Playable Layers.
 
 ### T-Pose
-您现在可以提供自己的 T-Pose 动画器！
+You can now provide your own T-Pose!
 
-T-Pose 动画器用于测量您的模型的各种指标，尤其用来确定 viewpoint（视角球）的放置位置。viewpoint 完全取决于您的视角球在您提供的 T-Pose 动画中的位置。
+The T-Pose is used to determine various measurements of your avatar, especially for placement of your viewpoint (or view-ball). Viewpoint is dependent entirely on where your view-ball is when your avatar is in this T-Pose animation you provide.
 
-![标准 T-Pose  - [Mixamo](https://www.mixamo.com)](/creators.vrchat.com/images/avatars/playable-layers-1.png)
+![Standard T-Pose - [Mixamo](https://www.mixamo.com)](/creators.vrchat.com/images/avatars/playable-layers-1.png)
 
-其次，T-Pose 动画器对于手腕的对齐/扭转非常重要。手腕相对于向下的手掌的对齐方式将影响手柄在空间中扭转手腕和手臂的方式。
+Secondly, it is important for the wrist alignment/twist. The way your wrists are lined up in relation to the palm-down position will affect how your controller twisting in space will turn your wrist and arm.
 
-最后，您的 T-Pose 动画器决定了您的臂展——您在 T-Pose 下的两只手臂的完整长度。这还确定了您模型的瞳孔间距（IPD），即您模型眼睛之间的距离。手臂过长会使您的 IPD 变宽，让您的视野更大，视野里的物体更小。手臂过短会使您的 IPD 变窄，让您的视野更小，视野里的物体更大。
+Finally, your t-pose determines your wingspan-- your full length of your arms when in T-Pose. This also determines your avatar's interpupillary distance (IPD), or the distance between your avatars eyes. Having arms that are too long will make your IPD wider, making everything seem smaller. Having arms that are too short will make your IPD narrower, making everything seem larger.
 
-此外， T-Pose 中的（显著的）关节弯曲并不是一件好事。例如，如果您的 T-Pose 中的肘关节是弯曲的，这可能会影响与您的比例相关的模型的许多不同方面。
-<!--需要修正-->
-### IK Pose （IK 姿势）
-IK Pose 用于确定主要关节的弯曲。在 IK 姿势中，您的关节应该以其预期弯曲的方向，来稍微弯曲。
+In addition, (significant) joint bends in T-Pose aren't a good thing. As an example, if your elbows are bent in T-pose, this may affect many different things about your avatar that work off your proportions.
 
-例如，VRChat 将检查您的 IK 姿势中的肘关节，并确定其是否有在任一方向上有一个弯曲角度。您的肘关节可以在这个给定角度上进行弯曲。
+### IK Pose
+IK Pose is used to determine major joint bends. In the IK pose, your joints should be bent slightly in the direction they're intended to bend. 
 
-脚在 IK 姿势中的旋转将决定膝盖的弯曲方式。这是通过首先假设膝盖相对于模型将向前弯曲，然后将该方向保存在 IK 姿势中的脚的旋转中来设置的。例如，如果脚在 IK 姿势中指向外侧，这意味着脚的内侧边缘更朝前，因此膝盖会向脚的内侧边缘弯曲。相反，如果脚在 IK 姿势中更向内侧，脚的外侧边缘更朝前（相对于模型的正前方），因此膝盖会倾向于向脚的外侧边缘弯曲。
+As an example, VRChat will look at the elbow bend from your IK Pose and determine if there is a angle bend in any given direction. That bend determines how your elbow bends.
 
-简而言之：如果您希望膝盖向内侧弯曲更多，请在 IK 姿势中将脚向外旋转。如果您希望膝盖向外侧弯曲更多，请在IK姿势中将脚向内旋转。
-<!--绕口令，晕了-->
+The foot's rotation in IK Pose will determine how the knees will bend. This is set by first assuming the knee will bend straight forward relative to the avatar, then saving that direction against the foot's rotation in IK Pose. For example if the feet are pointed toes outward in IK Pose, that means the inside edge of the foot is more forward facing and therefore the knees will bend towards the inside edge of the foot. In the opposite case, if the feet are pointing more inward in IK Pose, the outside edge of the the foot is more forward facing (straight forward direction relative to the avatar) and so the knee will tend to bend towards the outside edge of the foot in that case.
 
-### Sitting Pose (坐姿)
-此控制器既用于固定动画，也用于您模型的特点姿势。当您坐下时，将使用您模型的 iewpoint 进行校准。播放动画，使您可以创建“坐下”动画以及“坐着”的空闲动画。
+In short: if you want your knees to bend more inward, rotate your feet outward in IK Pose. If you want your knees to bend more outward, rotate your feet inward in IK pose.
 
-如果您想要自己制作，需要注意：您需要大量的调整才能做到这一点！您可能需要使用一些过渡状态来改进您的模型在坐下时的外观。
+### Sitting Pose
+The controller used in this slot is used for both animation and posing. When you sit, the viewpoint of your avatar is used for calibration. The animation is played, allowing you to create a "sitting down" animation, as well as a "sitting" idle animation.
+
+If you want to make your own, fair warning: this can take some significant tweaking to get right! You may want to employ transition states for sitting down/standing up that will help a bit with how your avatar looks while sitting.
