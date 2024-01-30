@@ -1,181 +1,179 @@
----
-title: "State Behaviors"
----
+# State Behaviors （状态行为）
+ 
+::: warning 您需要了解 Unity 动画器
 
-# State Behaviors
-
-::: warning Unity Knowledge Required
-
-This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
+本文档假设您对[ Unity 动画器](https://docs.unity3d.com/cn/2019.4/Manual/class-AnimatorController.html)有一定了解。
 :::
-When you've got a specific state selected in the Animator view, you'll be able to add State Behaviors. They're a bit like components for states. They do different things. Try adding them, and you'll see what they can do!
+当您在动画器窗口中选择特定状态时，您可以给它添加状态行为。它们类似于"状态的组件"，可以执行很多操作。您可以通过添加它们来使用它们的功能！
 
-All state behaviors run on the first frame of the transition into that state. 
+所有状态行为都在转换到该状态的第一帧上运行。
 
-State behaviors *should* run no matter how long the state machine remains in the state containing the state behavior.
+状态行为*应该*可以在任意运行时间长度的状态的状态机上持续运行。
+<!--状态机是否要翻译？如果要翻译，对应的状态行为要怎么处理才显得自然？-->
 
 ::: warning
 
-The term "should" is deliberately used here, as in the [Unity documentation](https://docs.unity3d.com/2019.4/Documentation/Manual/StateMachineBehaviours.html) does not define any guarantee that state behaviors will execute given very small transition or state durations.
+这里故意使用了"应该"这个词，因为在对应的[ Unity 文档](https://docs.unity3d.com/2019.4/Documentation/Manual/StateMachineBehaviours.html)中，没有任何可以确保状态行为可以在非常短的过渡(或状态持续时间内)执行的办法。
 
-If you wanted to be **completely** safe, ensure the total time spent in the state containing the state behavior and any transitions directly to that state is a minimum of 0.02 seconds-- although in practice, this doesn't seem to be required.
+如果您想要一种**完全**稳定运行的办法，请确保在包含状态行为的状态，以及直接过渡到该状态的任何过渡中，花费的总时间至少为 0.02 秒，虽然实践证明这一预留时间不是很有必要。
 
 :::
 
-## Animator Layer Controller
+## Animator Layer Controller （动画层控制器）
 
 ![Unity_2020-07-08_12-50-04.png](/creators.vrchat.com/images/avatars/state-behaviors-e78eb77-Unity_2020-07-08_12-50-04.png)
 
-The Animator Layer Control allows you to blend the weight of a specific Animator Layer inside any given Playable Layer over any given time.
+动画层控制器允许您在任何给定的 (Playable Layer)[/creators.vrchat.com/avatars/playable-layers.md] 上在任何给定的时间内指定特定动画层的权重。
+<!--之后加一个引用-->
+如果状态在未完成指定权重时退出，那么目标层将立即设置为目标权重。
 
-If the state is exited mid-blend duration, the target layer is immediately set to the goal weight.
+运行结束后，被操作的层权重将保持不变，直到其他状态再次运行此状态行为并重置它。
 
-The layer weight will remain until some other state runs this State Behavior again and resets it.
-
-| Property Name  | Purpose                                                                                                                                   |
+| 属性名称       | 目的                                                                                                                                   |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Playable       | Allows you to select which Playable Layer you're affecting.                                                                               |
-| Layer          | The Index of the Playable Layer you wish to affect. You can't change the weight of the 0th (base) layer-- it is always set to 1.0 weight. |
-| Goal Weight    | Define the weight you want to blend to.                                                                                                   |
-| Blend Duration | Define the time period (in seconds) that you want the blend to take. 0 means instant.                                                     |
-| Debug String   | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.                                        |
+| 可播放层       | 允许您选择要影响的可播放层。                                                                               |
+| 层          | 您希望影响的可播放层的索引。您无法更改第0个（基本）层的权重--它始终设置为 1.0 权重。 |
+| 目标权重    | 定义您要混合到的权重。                                                                                                   |
+| 混合持续时间 | 定义混合所需的时间段（以秒为单位）。0表示即时。                                                     |
+| 调试字符串   | 当此状态行为在运行时，此字符串将打印到输出日志中。用于调试。                                        |
+<!--混合有更好的定义吗-->
 
-
-## Animator Locomotion Control
+## 动画器移动控制器
 
 ![state-behaviors-f6f3250-Unity_2020-07-08_13-16-13.png](/creators.vrchat.com/images/avatars/state-behaviors-f6f3250-Unity_2020-07-08_13-16-13.png)
-The Animator Locomotion Control allows you to disable locomotion in a given state of an animator. The Locomotion state will remain until some other state runs this State Behavior again and changes it.
+动画器移动控制器允许您在动画器的给定状态中禁用移动。移动状态将保持不变，直到其他状态再次运行此状态行为并更改它。
 
-In Desktop mode, this disables translational movement, and restricts rotational (view) movement to the vertical axis. In VR, this disables translational and rotational controller movement and restricts half-body IK (full-body IK is unaffected). In both modes, the player's capsule is frozen in place.
+在桌面模式下，这将禁用平移运动，并将旋转（视图）运动限制在垂直轴上。在 VR 中，这将禁用平移和旋转控制器运动，并限制半身 IK（全身 IK 不受影响）。在这两种模式下，玩家的胶囊体将被冻结在原地。
 
-| Parameter          | Description                                                                                                                                                 |
+| 参数          | 描述                                                                                                                                                 |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Disable Locomotion | If set to True, locomotion (moving with the controls) will be disabled. Roomscale movement will still be possible. If set to False, will enable locomotion. |
-| Debug String       | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.                                                          |
+| 禁用移动 | 如果设置为 True ，则禁用移动（使用控件进行移动）。仍然可以进行房间规模的移动。如果设置为False，则启用移动。 |
+| 调试字符串       | 当此状态行为运行时，此字符串将打印到输出日志中。用于调试。                                                          |
 
-## Animator Temporary Pose Space
+<!--roomscale需要更好的解释-->
+## 动画器临时姿势空间
 ![state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png](/creators.vrchat.com/images/avatars/state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png)
 
-The Animator Temporary Pose Space control allows you to move the viewpoint of the person wearing the avatar to the head at that given point of the animator state.
+动画器临时姿势空间控制器允许您将佩戴该动画人物的人的视点移动到动画器状态的给定点的头部。
 
-The view will remain set until some other state runs this State Behavior again and resets or clears it.
+视图将保持设置，直到其他状态再次运行此状态行为并重置或清除它。
 
-This behavior is executed when the delay time has elapsed.
+此行为在延迟时间到达后执行。
 
-Animator Temporary Pose Space should **only** be used when the view height needs to update due to a posture change, like sitting or laying on the ground. It cannot be used to "scale" the avatar being worn, and will cause major breaking problems if used in this manner.
+只有在视图高度需要由于姿势变化（如坐下或躺在地上）而更新时，才应**仅**使用动画器临时姿势空间。它不能用于"缩放"所穿戴的动画角色，并且如果以这种方式使用，将导致严重的问题。
 ::: danger
 
-This state behavior **will not execute** if the state this behavior is on is exited or interrupted before `Delay Time` elapses!
+如果在此行为所在的状态退出或中断之前`延迟时间`到达，此状态行为**不会执行**！
 :::
 
-| Property Name | Purpose                                                                                                                     |
+| 属性名称 | 目的                                                                                                                     |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Pose Space    | Enter or exit. Enter sets the pose space, exit will clear it to default.                                                    |
-| Fixed Delay   | Should the delay time be a fixed period of time, or a percentage of the state's duration?                                   |
-| Delay Time    | If given a value, the viewpoint will be set after a delay. Useful if you're blending into an animation over a certain time. |
-| Debug String  | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.                          |
+| 姿势空间    | 输入或退出。输入设置姿势空间，退出将将其清除为默认值。                                                    |
+| 固定延迟   | 延迟时间是否为固定时间段，还是状态持续时间的百分比？                                   |
+| 延迟时间    | 如果给定一个值，视点将在延迟后设置。如果您要在一定时间内混合到动画中，这将非常有用。 |
+| 调试字符串  | 当此状态行为运行时，此字符串将打印到输出日志中。用于调试。                          |
 
 
-## Animator Tracking Control
+## 动画器跟踪控制器
 
 ![state-behaviors-076baca-Unity_2020-07-08_13-26-00.png](/creators.vrchat.com/images/avatars/state-behaviors-076baca-Unity_2020-07-08_13-26-00.png)
 
-The Animator Tracking Control allows you to enable or disable IK or simulated movement on various different parts of the avatar body. Setting the option to "No Change" will not change the body part from its current value. "Tracking" will set it to following IK or simulated movement. "Animation" will force that body part to respect values as given by the avatar's Animator.
+动画器跟踪控制器允许您在动画角色身体的各个部位上启用或禁用IK或模拟运动。将选项设置为"无更改"将不会更改身体部位的当前值。"跟踪"将将其设置为跟随IK或模拟运动。"动画"将强制该身体部位遵守动画角色的给定值。
 
-If you set all IK tracking points to Animation, your animation will play as the Animation remotely, instead of being translated through Networked IK. For the various types of tracking, these "IK tracking points" are:
+如果将所有IK跟踪点设置为动画，则您的动画将作为远程动画播放，而不是通过网络IK进行平移。对于各种类型的跟踪，这些"IK跟踪点"是：
 
-- Desktop: Head, Left Hand, Right Hand
-- 3pt Tracking: Head, Left Hand, Right Hand
-- 6pt / FBT Tracking: Head, Left Hand, Right Hand, Hip, Left Foot, Right Foot
+- 桌面：头部、左手、右手
+- 3点跟踪：头部、左手、右手
+- 6点/全身跟踪：头部、左手、右手、臀部、左脚、右脚
 
 ::: tip
 
-All parts are IK-driven, aside from the Eyes and Eyelid, which are simulated. Mouth and Jaw are driven by visemes.
+除了眼睛和眼睑之外，所有部位都是由IK驱动的，眼睛和眼睑是模拟的。嘴巴和下颌由面部表情驱动。
 
-As an example, setting Left and Right Hand to Animation will ignore the position of the hands (and arms) as defined by IK, and will instead use any currently-active state's motion to define the position of the hands and arms. Setting them back to Tracking will use IK instead. 
+例如，将左手和右手设置为动画将忽略由IK定义的手（和手臂）的位置，并将使用当前活动状态的运动来定义手和手臂的位置。将它们设置回跟踪将使用IK。 
 
-Setting Eyes & Eyelid to Animation will disable eye movement and eyelid blinking. Setting Eyes & Eyelid to Tracking will re-enable the simulated eye movement and blinking.
+将眼睛和眼睑设置为动画将禁用眼睛运动和眼睑眨动。将眼睛和眼睑设置为跟踪将重新启用模拟的眼睛运动和眨眼。
 
-Setting Mouth and Jaw to Animation will disable visemes, and viseme parameters will stop being updated. Setting Mouth and Jaw will re-enable visemes and they will start updating again.
+将嘴巴和下颌设置为动画将禁用面部表情，面部表情参数将停止更新。将嘴巴和下颌设置为跟踪将重新启用面部表情，并且它们将重新开始更新。
 :::
-The Tracking setting will be kept until some other state runs this State Behavior again and resets it.
+跟踪设置将保持不变，直到其他状态再次运行此状态行为并重置它。
 
-| Parameter        | Description                                                                                         |
+| 参数        | 描述                                                                                         |
 | :--------------- | :-------------------------------------------------------------------------------------------------- |
-| Tracking Control | See description above.                                                                              |
-| Debug String     | When this State Behavior runs, this string will be printed to the output log. Useful for debugging. |
+| 跟踪控制 | 请参阅上面的描述。                                                                              |
+| 调试字符串     | 当此状态行为运行时，此字符串将打印到输出日志中。用于调试。                                                          |
 
-## Avatar Parameter Driver
+## 头像参数驱动器
 
 ![image](/creators.vrchat.com/images/avatars/state-behaviors-fa19a1d-2022-06-02_18-11-06_Unity.png)
 
-The Avatar Parameter Driver can manipulate Animator Parameters in a variety of ways. A single Avatar Parameter can perform multiple operations, and they are done in order from top to bottom. These operations are completed *once* upon entry to the State upon which the behavior resides.
+头像参数驱动器可以以各种方式操作动画器参数。单个头像参数可以执行多个操作，并且按照从上到下的顺序完成这些操作。这些操作在进入行为所在的状态时完成*一次*。
 
-`Local Only` will cause the driver to only operate locally, as a shortcut instead of detecting `isLocal`.
+`仅本地`将使驱动器仅在本地操作，作为检测`isLocal`的快捷方式。
 
-Clicking "Add" will add a new operation to the Driver. The first type (which is selected by default) is "Set".
+单击"添加"将向驱动器添加新操作。第一个类型（默认选择）是"设置"。
 
-If modifying a synced parameter (anything defined in the VRCExpressionParameters object) those values will be clamped to their maximum range. Int [0,255] Float [-1,1].
+如果修改同步参数（在VRCExpressionParameters对象中定义的任何内容），这些值将被限制在其最大范围内。Int [0,255] Float [-1,1]。
 
-However, Parameters only defined in the Animation Controller (aka, "local parameters") can still be modified by a parameter driver. Those values aren't clamped.
+但是，仅在动画控制器中定义的参数（即"本地参数"）仍然可以由参数驱动器修改。这些值不会被限制。
 
-You also cannot drive any of the [VRChat-defined Animator Parameters](/creators.vrchat.com/avatars/animator-parameters).
+您也不能驱动任何[VRChat定义的动画器参数](/creators.vrchat.com/avatars/animator-parameters)。
 
-Set, Add, Random, and Copy work for `float` and `int`. Set, Random, and Copy work for `bool`.
+设置、添加、随机和复制适用于`float`和`int`。设置、随机和复制适用于`bool`。
 
-### Set
-Set will simply set the Value to the named Parameter in Destination.
+### 设置
+设置将简单地将值设置为目标中的命名参数。
 
 ![state-behaviors-121fe2a-2022-06-02_18-11-13_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/state-behaviors-121fe2a-2022-06-02_18-11-13_NVIDIA_Share.png)
 
-### Add
-Add will add the Value to the named Parameter in Destination.
+### 添加
+添加将将值添加到目标中的命名参数。
 
-As the component points out, using Add may not produce the same result when run on a remote instance of the avatar. When using Add, it is suggested to use a synced Destination Parameter and only run the driver locally.
+正如组件指出的，使用添加可能在远程实例的动画角色上运行时产生不同的结果。使用添加时，建议使用同步的目标参数，并仅在本地运行驱动器。
 
 ![state-behaviors-e10bb6a-2022-06-02_18-11-17_Unity.png](/creators.vrchat.com/images/avatars/state-behaviors-e10bb6a-2022-06-02_18-11-17_Unity.png)
         
-### Random
-Random will set the Destination Parameter to a random number between Min Value and Max Value.
+### 随机
+随机将将目标参数设置为介于最小值和最大值之间的随机数。
 
-As the component points out, using Random may not produce the same result when run on a remote instance of the avatar. When using Random, it is suggested to use a synced Destination Parameter and only run the driver locally.
+正如组件指出的，使用随机可能在远程实例的动画角色上运行时产生不同的结果。使用随机时，建议使用同步的目标参数，并仅在本地运行驱动器。
 
 ![state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png](/creators.vrchat.com/images/avatars/state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png)
 
-### Copy
-Copy will set the value of the Source Parameter to the Destination Parameter. This can be used to set one float to match another float, to remap one float into a different range, or to convert between two different types entirely.
+### 复制
+复制将源参数的值设置为目标参数。这可以用于将一个浮点数设置为与另一个浮点数相匹配，将一个浮点数重新映射到不同的范围，或者在完全不同的类型之间进行转换。
 ::: warning
 
-VRChat's built-in parameters, such as `GestureLeftWeight`, **can** be specified but do not work as source parameters.
+VRChat的内置参数，如`GestureLeftWeight`，**可以**指定，但不起作用作为源参数。
 :::
 
 ![state-behaviors-bffdb10-2022-06-02_18-11-30_Unity.png](/creators.vrchat.com/images/avatars/state-behaviors-bffdb10-2022-06-02_18-11-30_Unity.png)
 
-#### Converting between types
-When converting from a `bool`, False counts as 0 and True counts as 1.
+#### 类型转换
+从`bool`转换时，False计为0，True计为1。
 
-When converting to a `bool`, 0 is False and *anything* else is True.
-When converting to an `int`, it will always round *down* to the nearest whole number.
-When converting to a `float`, it will directly copy the value, even if it goes outside the range that it is capable of syncing to other players.
+转换为`bool`时，0为False，*任何其他值*为True。
+转换为`int`时，它将始终向下舍入到最近的整数。
+转换为`float`时，它将直接复制值，即使超出了它能够与其他玩家同步的范围。
 
-#### Custom Ranges
-You can also use the `Convert Range` checkbox to enable some additional UI that allows you to set custom conversion ranges. This can be used to remap values or to have more control over exactly how it converts from one type to another type.
+#### 自定义范围
+您还可以使用`转换范围`复选框来启用一些额外的UI，以便您可以设置自定义转换范围。这可以用于重新映射值或更好地控制从一种类型转换为另一种类型的方式。
 
 ![state-behaviors-cab639b-2022-06-02_18-35-32_Unity.png](/creators.vrchat.com/images/avatars/state-behaviors-cab639b-2022-06-02_18-35-32_Unity.png)
 
-## Playable Layer Control
+## 可播放层控制器
 
 ![state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png](/creators.vrchat.com/images/avatars/state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png)
         
-The Playable Layer Control allows you to blend the weight of the entire Playable Layer to a specified value over specified duration. Very similar to Animator Layer Control, but instead controls the entire Playable Layer.
+可播放层控制器允许您在指定的时间内将整个可播放层的权重混合到指定的值。与动画器层控制器非常相似，但是控制整个可播放层。
 
-The Action Playable layer will use this State Behavior often, as the Action layer has weight zero by default, and should always be blended back to zero after the animation is complete.
+Action 可播放层通常会经常使用此状态行为，因为 Action 层默认情况下权重为零，并且在动画完成后应始终混合回零。
 
-If the state is exited mid-blend duration, the playable layer is immediately set to the goal weight.
+如果在混合持续时间中退出状态，可播放层将立即设置为目标权重。
 
-| Property Name  | Purpose                                                                                            |
+| 属性名称  | 目的                                                                                            |
 | -------------- | -------------------------------------------------------------------------------------------------- |
-| Layer          | The Playable Layer to affect.                                                                      |
-| Goal Weight    | The Playable layer weight to target after blending is complete.                                    |
-| Blend Duration | The amount of time to take to blend to the layer. Zero is instant.                                 |
-| Debug String   | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging. |
+| 层          | 要影响的可播放层。                                                                      |
+| 目标权重    | 混合完成后要达到的可播放层权重。                                    |
+| 混合持续时间 | 混合到层所需的时间。零表示即时。                                 |
+| 调试字符串   | 当此状态行为运行时，此字符串将打印到输出日志中。用于调试。 |
