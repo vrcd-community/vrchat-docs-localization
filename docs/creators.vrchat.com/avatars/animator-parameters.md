@@ -6,7 +6,7 @@ title: "预设动画参数"
 
 ::: warning 您需要了解动画控制器
 
-本文假设您对 [Unity 动画控制器](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html) 有一定了解。
+本文预设您对 [Unity 动画控制器](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html) 有一定了解。
 
 :::
 
@@ -20,40 +20,40 @@ title: "预设动画参数"
 
 ## 通用参数
 
-| 名称                                                 | 描述                                                                                                                                                                              | 类型        | 同步           |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------- |
-| IsLocal                                              | 如果该模型由本地玩家（您自己）使用，则为 True；否则为 False                                                                                                                                       | 布尔        | 无             |
-| [Viseme](#viseme-values)                             | 表示口型，大小范围为`0-14`，参考自 [Oculus 面部表情目录](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference)。当模型的 Viseme 模式使用 Jawbone/Jawflap 时，表示音量，大小范围为 `0-100`。 <!--暂时换回Speech，等待更合理的解释-->| 整数         | Speech           |
-| Voice                                                | 当前麦克风音量（`0.0-1.0`）                                                                                                                                                          | 浮点数       | Speech           |
-| [GestureLeft](#gestureleft-and-gestureright-values)  | 左手手柄感应的手势（0-7）                                                                                                                                                          | 整数         | IK             |
-| [GestureRight](#gestureleft-and-gestureright-values) | 右手手柄感应的手势<!--中文社区本地化-->（0-7）                                                                                                                                                          | 整数         | IK             |
-| GestureLeftWeight                                    | 左手的扳机按压幅度（0.0-1.0）†                                                                                                                                                     | 浮点数       | Playable       |
-| GestureRightWeight                                   | 右手的扳机按压幅度（0.0-1.0）†                                                                                                                                                     | 浮点数       | Playable       |
-| AngularY                                             | Y 轴上的角速度                                                                                                                                                                    | 浮点数       | IK             |
-| VelocityX                                            | 横向移动速度（米/秒）                                                                                                                                                            | 浮点数       | IK             |
-| VelocityY                                            | 纵向移动速度（米/秒）                                                                                                                                                            | 浮点数       | IK             |
-| VelocityZ                                            | 前向移动速度（米/秒）                                                                                                                                                            | 浮点数       | IK             |
-| VelocityMagnitude                                    | 总速度的大小                                                                                                                                                                      | 浮点数       | IK             |
-| Upright                                              | 您的身体直立程度。0 表示俯卧，1 表示完全直立                                                                                                                                       | 浮点数       | IK             |
-| Grounded                                             | 如果模型接触地面，则为 True                                                                                                                                                       | 布尔        | IK             |
-| Seated                                               | 如果模型已就座（姿态处于 Seated 状态），则为 True                                                                                                                                                     | 布尔        | IK             |
-| AFK                                                  | 如果玩家暂时不在游戏中（当 HMD 近距传感器未检测到人体或已按下 End 键时），则为 True                                                                                                                                | 布尔        | IK             |
-| Expression1 - Expression16                           | 玩家自定义的参数，可以是整数（`0`-`255`）或浮点数（`-1.0`-`1.0`）                                                                                                                         | 整数 / 浮点数 | IK 或Playable |
-| [TrackingType](#trackingtype-parameter)              | 请参阅下文描述                                                                                                                                                                  | 整数         | Playable       |
-| VRMode                                               | 如果玩家处于 VR 模式中，则返回 `1`；如果不在 VR 模式中，则返回 `0`                                                                                                                        | 整数         | IK             |
-| MuteSelf                                             | 如果玩家已将自己静音，则返回 `true`；如果未静音，则返回 `false`                                                                                                                     | 布尔        | Playable       |
-| InStation                                            | 如果玩家在 VRCStation 中，则返回 `true`；如果不在站点中，则返回 `false`                                                                                                                     | 布尔        | IK             |
-| Earmuffs                                             | 如果玩家已打开耳罩功能，则返回 `true`；如果已关闭，则返回 `false`                                                                                                                     | 布尔        | Playable       |
-| IsOnFriendsList                                      | 如果查看模型的用户与佩戴模型的用户是好友，则返回 `true`。是本地玩家则返回 `false`<!--需要更好的解释-->                                                                                                           | 布尔        | 其他           |
+| 名称 | 描述 | 类型 | 同步 |
+| -- | -- | -- | -- |
+| IsLocal | 如果该模型由本地玩家（您自己）使用，则为 True；否则为 False | 布尔 | 无同步 |
+| [Viseme](#viseme-values) | 表示口型，大小范围为`0-14`，参考自 [Oculus 面部表情目录](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference)。当模型的 Viseme 模式使用 Jawbone/Jawflap 时，表示音量，大小范围为 `0-100`。 <!--暂时换回Speech，等待更合理的解释-->| 整数 | Speech |
+| Voice | 当前麦克风音量（`0.0-1.0`）| 浮点数 | Speech |
+| [GestureLeft](#gestureleft-and-gestureright-values) | 左手手柄感应的手势（0-7）| 整数 | IK |
+| [GestureRight](#gestureleft-and-gestureright-values) | 右手手柄感应的手势<!--中文社区本地化-->（0-7）| 整数 | IK |
+| GestureLeftWeight | 左手的扳机按压幅度（0.0-1.0） | 浮点数 | Playable |
+| GestureRightWeight | 右手的扳机按压幅度（0.0-1.0） | 浮点数 | Playable |
+| AngularY | Y 轴上的角速度 | 浮点数 | IK |
+| VelocityX | 横向移动速度（米/秒） | 浮点数 | IK |
+| VelocityY | 纵向移动速度（米/秒） | 浮点数 | IK |
+| VelocityZ | 前向移动速度（米/秒） | 浮点数 | IK |
+| VelocityMagnitude | 总速度的大小 | 浮点数 | IK |
+| Upright | 您的身体直立程度。0 表示俯卧，1 表示完全直立 | 浮点数 | IK |
+| Grounded | 如果模型接触地面，则为 True | 布尔 | IK |
+| Seated | 如果模型已就座（姿态处于 Seated 状态），则为 True | 布尔 | IK |
+| AFK | 如果玩家暂时不在游戏中（当 HMD 近距传感器未检测到人体或已按下 End 键时），则为 True | 布尔 | IK |
+| Expression1 - Expression16 | 玩家自定义的参数，可以是整数（`0`-`255`）或浮点数（`-1.0`-`1.0`） | 整数 / 浮点数 | IK 或Playable |
+| [TrackingType](#trackingtype-parameter) | 请参阅下文描述 | 整数 | Playable |
+| VRMode | 如果玩家处于 VR 模式中，则返回 `1`；如果不在 VR 模式中，则返回 `0` | 整数 | IK |
+| MuteSelf | 如果玩家已将自己静音，则返回 `true`；如果未静音，则返回 `false` | 布尔 | Playable |
+| InStation | 如果玩家在 VRCStation 中，则返回 `true`；如果不在站点中，则返回 `false` | 布尔 | IK |
+| Earmuffs | 如果玩家已打开耳罩功能，则返回 `true`；如果已关闭，则返回 `false` | 布尔 | Playable |
+| IsOnFriendsList | 如果查看模型的用户与佩戴模型的用户是好友，则返回 `true`。是本地玩家则返回 `false`<!--需要更好的解释--> | 布尔 | 其他 |
 <!--考虑美观度，表示只在长句子中使用，短句易理解，不适用-->
-此外，还有两个参数，“Supine” 和 “GroundProximity” 在调试窗口中可见，但它们尚未实现，目前没有任何功能，其值也不会发生改变。
+此外，还有两个参数，“Supine” 和 “GroundProximity” 在调试窗口中可见，但它们目前没有任何功能，其值也不会发生改变。
 
 † 在不同的手势中，GestureLeftWeight 和 GestureRightWeight 的值根据扳机的按压程度中从 0.0 变化到 1.0。例如，如果您握拳但不按压左手的扳机，GestureLeft 的值将为 1，但 GestureLeftWeight 的值将为 0.0。当您开始按压扳机时，它的值将从 0.0 增加到 1.0。这可以用于创建“模拟”手势或有条件地检测各种情况。
 
 ## 模型缩放参数
 
-| 名称               | 描述                                                                                                                                                                                                 | 类型  | 同步     |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | -------- |
+| 名称 | 描述 | 类型 | 同步 |
+| -- | -- | -- | -- |
 | ScaleModified      | 如果玩家缩放了模型，则返回 `true`；如果模型处于默认大小，则返回 `false`                                                                                                                     | 布尔  | Playable |
 | ScaleFactor        | 模型当前高度与默认高度之间的比例。例如当默认眼高为 1 米的模型缩放到 2 米时，将表现为`2`                                                                                                                        | 浮点数 | Playable |
 | ScaleFactorInverse | 模型当前高度与默认高度之间的倒数比例（`1/x`）。例如当默认眼高为 1 米的模型缩放到 2 米时，将表现为 `0.5`。该值在极端情况下可能不准确。                                                                                   | 浮点数 | Playable |
@@ -68,11 +68,11 @@ title: "预设动画参数"
 
 您可以使用总共 256 位的“内存”。“内存”的大小并不是因为模型的内存使用而被限制，而是因为同步参数时使用的带宽被限制。
 
-| 参数类型 | 范围             | 内存使用 | 备注                              |
-| :------- | :-------------- | :------- | :-------------------------------- |
+| 参数类型 | 范围 | 内存使用 | 备注 |
+| :-- | :-- | :-- | :-- |
 | `int`    | `0`-`255`       | 8 位     | 无符号 8 位整数。                |
 | `float`  | `-1.0` 到 `1.0` | 8 位     | 有符号 8 位定点小数†。           |
-| `bool`   | `True` 或 `False` | 1 位      |                                   |
+| `bool`   | `True` 或 `False` | 1 位 | |
 
 † 由远程同步来的 `float` 值有 255 个可能的值，其跨网络精度值为 `1/127`，可以精确存储 `-1.0`、`0.0` 和 `1.0`。当在本地更新时，例如使用 [OSC](https://docs.vrchat.com/docs/osc-overview)，浮点值以原生（32 位）浮点值存储在动画控制器中。
 
@@ -82,16 +82,16 @@ title: "预设动画参数"
 
 GestureLeft 和 GestureRight 使用以下值：
 
-| 参数值 | 手势名称       | 
-| ---- | ----------- | 
+| 参数值 | 手势名称     | 
+| ---- | -----------   | 
 | 0    | Neutral       | 
-| 1    | Fist       | 
-| 2    | HandOpen     | 
-| 3    | FingerPoint       |  
+| 1    | Fist          | 
+| 2    | HandOpen      | 
+| 3    | FingerPoint   |  
 | 4    | Victory       |  
-| 5    | RockNRoll       |  
+| 5    | RockNRoll     |  
 | 6    | HandGun       |  
-| 7    | ThumbsUp       | 
+| 7    | ThumbsUp      | 
 <!--难以翻译，加之 SDK 内大量引用，考虑现状，采用原文加注释，需要进一步解释-->
 <!--如果是手势描述的话。。。抱歉咱撤回一下咱刚刚的建议，可能更加生动形象的描述更加的合适-->
 <!--QmQ-->
@@ -162,14 +162,15 @@ AFK 状态由以下情况触发：
 
 :::
 
-| 参数 | 描述                                                                                                                                                                                                                                 |
-| ---- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 参数 |
+ 描述                                                                                                                                                                                                                                 |
+| -- | :-- |
 | 0    | 模型未初始化，该值一般仅在玩家切换模型且其 IK 数据尚未被发送时出现。                                                                                                                                                                                 |
 | 1    | 模型骨架类型为通用骨骼，该值一般在玩家启用了某种追踪（例如来自 HMD 或追踪器），但由于模型骨架类型被设置为通用骨骼，导致追踪被忽略时出现。如果同时 `VRMode` 的值为 0，则表明玩家是桌面用户，而不是 VR 用户。<!--通用骨骼要不要翻译成generic？另外为了确保语意，加一个VR用户。-->                                                                                                                         |
 | 2    | 仅手部追踪，没有手指追踪，该值只会在过渡状态中发生——也就是说，此时您应该预期到 `TrackingType` 会转变到另一个值，模型不应停留在该值。 <br> *<font color="gray">一般适用于 AV2 模型，该值可能仍然在 SDK3 station 上发生，但您原则上不应让它在模型的 AV3 控制器上进行长时间使用。</font>* |
-| 3    | 头部和手部追踪，如果 `VRMode` 为 `1`，则玩家处于 3 点追踪的 VR 端中。如果 `VRMode` 为 `0`，则玩家处于桌面电脑端中。                                                                                                                   |
-| 4    | 4 点追踪 VR 用户，头部、手部和髋部追踪。                                                                                                                                                                                                 |
-| 6    | 全身追踪 VR 用户，头部、手部、髋部和脚部追踪。                                                                                                                                                                                         |
+| 3    | 头部和手部追踪，如果 `VRMode` 为 `1`，则玩家处于 3 点追踪的 VR 端中。如果 `VRMode` 为 `0`，则玩家处于桌面电脑端中。  |
+| 4    | 4 点追踪 VR 用户，头部、手部和髋部追踪。 |
+| 6    | 全身追踪 VR 用户，头部、手部、髋部和脚部追踪。 |
 
 
 ## Expression 参数名称
