@@ -13,7 +13,7 @@
 
 ::: warning
 
-这里故意使用了"应该"这个词，因为在对应的[ Unity 文档](https://docs.unity3d.com/2019.4/Documentation/Manual/StateMachineBehaviours.html)中，没有任何可以确保 State Behavior 可以在非常短的过渡(或状态持续时间内)执行的办法。
+这里故意使用了"应该"这个词，因为在对应的[ Unity 文档](https://docs.unity3d.com/cn/2019.4/Manual/StateMachineBehaviours.html)中，没有任何可以确保 State Behavior 可以在非常短的过渡(或状态持续时间内)执行的办法。
 
 如果您想要一种**完全**稳定运行的办法，请确保包含 State Behavior 的状态，以及直接过渡到该状态的任何过渡的总时间至少为 0.02 秒，虽然实践证明这一预留时间不是很有必要。
 
@@ -27,14 +27,14 @@ Animator Layer Controller 允许您在任何给定的 (Playable Layer)[/creators
 <!--之后加一个引用-->
 如果状态在未过渡到指定权重时退出，那么目标层将立即设置为目标权重。
 
-运行结束后，被操作的层权重将保持不变，直到其他状态再次运行此 State Behavior 并重置它。
+运行结束后，被操作的目标层权重将保持不变，直到其他状态再次运行此 State Behavior 并重置它。
 
 | 属性名称       | 目的                                                                                                                                   |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Playable (可播放层)       | 允许您选择要影响的可播放层。                                                                               |
-| Layer (层)          | 您希望影响的可播放层的索引。您无法更改第0个（基本）层的权重--它始终设置为 1.0 权重。 |
+| Layer (层)          | 您希望影响的可播放层的层数值。您无法更改第 0 个（基础）层的权重--因为其权重值始终保持为 1.0。 |
 | Goal Weight (目标权重)    | 定义您要过渡到的权重。                                                                                                   |
-| Blend Duration (混合持续时间) | 定义过渡所需的时间段（以秒为单位）。0表示即时。                                                     |
+| Blend Duration (混合持续时间) | 定义过渡所需的时间段（以秒为单位）。0 表示即时。                                                     |
 | Debug String (调试字符串)   | 当此 State Behavior 在运行时，此字符串将打印到输出日志中。用于调试。                                        |
 <!--混合有更好的定义吗-->
 <!--暂时使用过渡一词-->
@@ -81,7 +81,7 @@ Animator Temporary Pose Space 允许您将您当前使用的模型的头部视�
 
 Animator Tracking Control 允许您在动画角色身体的各个部位上启用或禁用 IK 或模拟运动。将选项设置为"No Change"将不会更改该身体部位的当前追踪控制模式。"Tracking" 将该身体部位设置为跟随 IK 或模拟运动。"Animation" 将该身体部位设置为跟随动画运动。
 
-如果将所有 IK 追踪点设置为跟随动画运动，则您的动画将作为远程动画播放，而不是通过网络同步的 IK 进行移动。对于各种类型的 IK 追踪，这些" IK 追踪点"是：
+如果将所有 IK 追踪点设置为跟随动画运动，则您的对应部位运动将作为动画在远端播放，而不是通过网络同步的 IK 来表现。对于各种类型的 IK 追踪，这些" IK 追踪点"是：
 
 - 桌面：头部、左手、右手
 - 3点追踪：头部、左手、右手
@@ -91,11 +91,11 @@ Animator Tracking Control 允许您在动画角色身体的各个部位上启用
 
 除了眼睛和眼睑之外，所有部位都是由 IK 驱动的，眼睛和眼睑是模拟的。嘴巴和下颌由面部表情驱动。
 
-例如，将左手和右手设置为 Animation 将忽略由 IK 定义的手（和手臂）的位置，并将使用当前的动画状态的运动来定义手和手臂的位置。将它们设置回 Tracking 将使用 IK 。 
+例如，将左手和右手设置为 Animation 将忽略由 IK 定义的手（和手臂）的位置，并将使用当前的动画状态的运动来定义手和手臂的位置。将它们设置回 Tracking 将重新使用 IK 定义的位置。 
 
 将眼睛和眼睑设置为 Animation 将禁用眼睛运动和眼睑眨动。将眼睛和眼睑设置为 Tracking 将重新启用模拟的眼睛运动和眨眼。
 
-将嘴巴和下颌设置为 Animation 将禁用面部表情，面部表情参数将停止更新。将嘴巴和下颌设置为 Tracking 将重新启用面部表情，并且它们将重新开始更新。
+将嘴巴和下颌设置为 Animation 将禁用面部表情，面部表情参数将停止更新。将嘴巴和下颌设置为 Tracking 将重新启用面部表情，面部表情参数将重新开始更新。
 :::
 追踪设置将保持不变，直到其他状态再次运行此 State Behavior 并重置它。
 
@@ -108,19 +108,19 @@ Animator Tracking Control 允许您在动画角色身体的各个部位上启用
 
 ![image](/creators.vrchat.com/images/avatars/state-behaviors-fa19a1d-2022-06-02_18-11-06_Unity.png)
 
-Avatar Parameter Driver 可以以各种方式操作动画器参数，也可针对单个模型参数执行多个操作，并且按照从上到下的顺序完成这些操作。这些操作在进入行为所在的状态时完成*一次*。
+Avatar Parameter Driver 可以以各种方式修改动画器参数，也可针对单个模型参数执行多个操作。这些操作将被按从上到下的界面顺序，在进入行为所在的状态时完成*一次*。
 
 `Local Only`将使该 State Behavior 仅在本地操作，作为检测`isLocal`的快捷方式。
 
-单击"Add (添加)"将向该 State Behavior添加新操作。第一个类型（默认选择）是"Set (设置)"。
+单击"Add (添加)"将向该 State Behavior 添加新操作。第一个类型（默认选择）是"Set (设置)"。
 
-如果修改同步参数（在 VRCExpressionParameters 对象中定义的任何内容），这些值将被限制在其最大范围内。Int [0,255] Float [-1,1]。
+如果修改同步参数（在 VRCExpressionParameters 对象中定义的任何内容），这些值将被限制在其可同步的最大范围内，例如对于 Int 是 [0,255]，对于 Float 是[-1,1]。
 
 但是，仅在动画控制器中定义的参数（即"本地参数"）仍然可以由 Avatar Parameter Driver 修改。这些值不会被限制。
 
-您也不能驱动任何[VRChat定义的动画器参数](/creators.vrchat.com/avatars/animator-parameters)。
+您也不能在这个 State Behavior 里修改任何[VRChat定义的动画器参数](/creators.vrchat.com/avatars/animator-parameters)。
 
-设置、添加、随机和复制适用于`float`和`int`。设置、随机和复制适用于`bool`。
+Set、Add、Random 和 Copy 适用于`float`和`int`。Set、Random 和 Copy 适用于`bool`。
 
 ### Set (设置) 
 Set 将简单地将目标中的命名参数设置到指定值。
@@ -155,7 +155,7 @@ VRChat的内置参数，如`GestureLeftWeight`，**可以**指定，但不起作
 
 转换为`bool`时，0 为 False ，*任何其他值*为 True。
 转换为`int`时，它将始终向下舍入到最近的整数。
-转换为`float`时，它将直接复制值，即使超出了它能够与其他玩家同步的范围。
+转换为`float`时，它将直接复制值，即使这个值超出了它能够同步给其他玩家的最大范围。
 
 #### Custom Ranges (自定义范围)
 您还可以使用`Custom Ranges`复选框来启用一些额外的 UI，以便您可以设置自定义转换范围。这可以用于重新映射值或更好地控制从一种类型转换为另一种类型的方式。
@@ -166,17 +166,17 @@ VRChat的内置参数，如`GestureLeftWeight`，**可以**指定，但不起作
 
 ![state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png](/creators.vrchat.com/images/avatars/state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png)
         
-Playable Layer Control 允许您在指定的时间内将整个可播放层的权重过渡到指定的值。与 Animator Layer Controller 非常相似，但是控制整个可播放层。
+Playable Layer Control 允许您在指定的时间内将整个可播放层的权重过渡到指定的值。它与 Animator Layer Controller 非常相似，但是前者控制整个可播放层。
 
-Action 可播放层通常会经常使用此 State Behavior ，因为 Action 层默认情况下权重为零，并且在动画完成后应始终过渡回零。
+Action 可播放层通常会使用该 State Behavior ，因为 Action 层默认情况下权重为零，并且在动画完成后，它的权重应始终过渡回零。
 
-如果在过渡持续时间中退出状态，可播放层将立即设置为目标权重。
+如果在过渡持续时间中退出状态，目标可播放层将立即设置为目标权重。
 
 | 属性名称  | 作用                                                             |
 | -------------- | -----------------------------------------------------------|
-| Layer（层）          | 要影响的可播放层。                                              |
-| Goal Weight（目标权重）    | 过渡完成后要达到的可播放层权重。                                  |
-| Blend Duration（混合持续时间） | 过渡到层所需的时间。零表示即时。                                 |
+| Layer（层）          | 要影响的目标可播放层。                                              |
+| Goal Weight（目标权重）    | 目标可播放层过渡完成后要达到的权重。                                  |
+| Blend Duration（混合持续时间） | 过渡到目标权重所需的时间。零表示即时。                                 |
 | Debug String（调试字符串）   | 当此 State Behavior 运行时，此字符串将打印到输出日志中。用于调试。 |
 
 <!--暂时使用过渡一词-->
