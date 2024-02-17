@@ -2302,12 +2302,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/markdown-it-footnote@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@types/markdown-it-footnote@npm:3.0.3"
+"@types/markdown-it-footnote@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@types/markdown-it-footnote@npm:3.0.4"
   dependencies:
     "@types/markdown-it": "npm:*"
-  checksum: 18c6c8e659d4b05bb5ca6661cbbcc2af95014e6696ea1061642bba4dcef301664a5c8e4e82a53c0c826f019877a6469e86493a2e9971e4e985148f2da1635f55
+  checksum: 84d38790e1911eaf94bd3418a8782de1dd2543963f282849fe3fde7089f3ed6c3f5d07defd2ba51ad8d1cf3b32eeddfb21262e230bf8baddce5154f6735ed9d6
   languageName: node
   linkType: hard
 
@@ -2337,12 +2337,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.11.6":
-  version: 20.11.6
-  resolution: "@types/node@npm:20.11.6"
+"@types/node@npm:^20.11.19":
+  version: 20.11.19
+  resolution: "@types/node@npm:20.11.19"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 375dfc75f0aa8b7fb99382d84c317e5dab2969dcc3f54d8490b119151060923eae6483839552347bc78262bbcefb2951ee131e15372f4e80b755be2dda9afe80
+  checksum: c7f4705d6c84aa21679ad180c33c13ca9567f650e66e14bcee77c7c43d14619c7cd3b4d7b2458947143030b7b1930180efa6d12d999b45366abff9fed7a17472
   languageName: node
   linkType: hard
 
@@ -2387,9 +2387,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vheemstra/vite-plugin-imagemin@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@vheemstra/vite-plugin-imagemin@npm:1.2.0"
+"@vheemstra/vite-plugin-imagemin@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@vheemstra/vite-plugin-imagemin@npm:1.2.1"
   dependencies:
     chalk: "npm:^5.2.0"
     fast-glob: "npm:^3.2.12"
@@ -2398,7 +2398,7 @@ __metadata:
     is-apng: "npm:^1.0.1"
   peerDependencies:
     vite: ^3.0.0 || ^4.0.0 || ^4.3.9 || ^5.0.0
-  checksum: 7130f46f7d4f7c05cd3c935e150d23b54d624ca4395dcac5f9925cf7a0f07f0689e995b31263d1e47f6ad2f01ab9ed9c131fa85e9ee6c816c96d9b760fd46d0c
+  checksum: decd565fc2a90530559e0bde9b7c5ae1da06cf11441bcfb11e708c0f14e000a504f4a47c8b8d2895c096332c9ef8d90c25ecdbcfd7adbfd9142f29c8c674859c
   languageName: node
   linkType: hard
 
@@ -7631,9 +7631,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:^0.17.4":
-  version: 0.17.4
-  resolution: "vite-plugin-pwa@npm:0.17.4"
+"vite-plugin-pwa@npm:^0.19.0":
+  version: 0.19.0
+  resolution: "vite-plugin-pwa@npm:0.19.0"
   dependencies:
     debug: "npm:^4.3.4"
     fast-glob: "npm:^3.3.2"
@@ -7641,10 +7641,14 @@ __metadata:
     workbox-build: "npm:^7.0.0"
     workbox-window: "npm:^7.0.0"
   peerDependencies:
+    "@vite-pwa/assets-generator": ^0.2.4
     vite: ^3.1.0 || ^4.0.0 || ^5.0.0
     workbox-build: ^7.0.0
     workbox-window: ^7.0.0
-  checksum: 4dc3764f074e523dbb620399d4c83637b3219be3fe9cb3dd18664eaa8a39c6aa8c639d83f14127876cae4c0cdb1c7ded7910c26546c38b066f4514e4b58d4849
+  peerDependenciesMeta:
+    "@vite-pwa/assets-generator":
+      optional: true
+  checksum: 32fa45621959924ac3122d55c6774f9f2937538c15452d07794b1d4720442d8fecf931798ba51ec1469d0a3c6bc26050d9800610fae098feb458032ec45d1713
   languageName: node
   linkType: hard
 
@@ -7730,9 +7734,9 @@ __metadata:
     "@tsconfig/node18": "npm:^18.2.2"
     "@types/imagemin-gifsicle": "npm:^7.0.4"
     "@types/imagemin-svgo": "npm:^10.0.5"
-    "@types/markdown-it-footnote": "npm:^3.0.3"
-    "@types/node": "npm:^20.11.6"
-    "@vheemstra/vite-plugin-imagemin": "npm:^1.2.0"
+    "@types/markdown-it-footnote": "npm:^3.0.4"
+    "@types/node": "npm:^20.11.19"
+    "@vheemstra/vite-plugin-imagemin": "npm:^1.2.1"
     "@vite-pwa/vitepress": "npm:^0.3.1"
     "@vrcd-community/markdown-it-video": "npm:^1.1.1"
     "@vue/tsconfig": "npm:^0.5.1"
@@ -7750,7 +7754,7 @@ __metadata:
     markdown-it-sup: "npm:^2.0.0"
     sharp: "npm:^0.33.2"
     svgo: "npm:^3.2.0"
-    vite-plugin-pwa: "npm:^0.17.4"
+    vite-plugin-pwa: "npm:^0.19.0"
     vitepress: "npm:^1.0.0-rc.40"
     vue-draggable-resizable: "npm:^3.0.0-beta.2"
   languageName: unknown
