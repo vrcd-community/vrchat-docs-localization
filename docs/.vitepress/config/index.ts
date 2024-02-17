@@ -277,7 +277,7 @@ export default withPwa(
     pwa: {
       outDir: ".vitepress/dist",
       strategies: "generateSW",
-      registerType: "autoUpdate",
+      registerType: "prompt",
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,jpg,mp4,woff2}"],
       },
