@@ -83,7 +83,7 @@ export default withPwa(
 
       editLink: {
         pattern:
-          "https://github.com/vrcd-community/vrchat-docs-localization/edit/main/:path",
+          "https://github.com/vrcd-community/vrchat-docs-localization/edit/main/docs/:path",
         text: "为此页提供修改建议",
       },
 
