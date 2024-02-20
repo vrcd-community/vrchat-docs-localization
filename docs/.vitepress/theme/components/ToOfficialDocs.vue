@@ -1,22 +1,24 @@
 <template>
   <VPButton text="查看原文" :href="link" style="margin-top: 1rem;" />
   <VPButton text="在浮动窗口中查看原文" @click="isWindowOpen = true" style="margin-top: 1rem;" />
-  <div>
-    <Teleport to="#app">
-      <div style="position: fixed;top: 0;left: 0;z-index: 100;">
-        <vue-draggable-resizable v-if="isWindowOpen" :w="500" :h="600" :resizable="true" :prevent-deactivation="true"
-          :active="true" classNameHandle="handle" class="floating-window">
-          <div class="floating-window-title-bar">
-            <span class="floating-window-title-bar-text">查看原文</span>
-            <button class="floating-window-close-button" @click="isWindowOpen = false">X</button>
-          </div>
-          <div class="floating-window-content">
-            <iframe :src="link"></iframe>
-          </div>
-        </vue-draggable-resizable>
-      </div>
-    </Teleport>
-  </div>
+  <ClientOnly>
+    <div>
+      <Teleport to="#app">
+        <div style="position: fixed;top: 0;left: 0;z-index: 100;">
+          <vue-draggable-resizable v-if="isWindowOpen" :w="500" :h="600" :resizable="true" :prevent-deactivation="true"
+            :active="true" classNameHandle="handle" class="floating-window">
+            <div class="floating-window-title-bar">
+              <span class="floating-window-title-bar-text">查看原文</span>
+              <button class="floating-window-close-button" @click="isWindowOpen = false">X</button>
+            </div>
+            <div class="floating-window-content">
+              <iframe :src="link"></iframe>
+            </div>
+          </vue-draggable-resizable>
+        </div>
+      </Teleport>
+    </div>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
