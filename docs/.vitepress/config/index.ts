@@ -97,7 +97,7 @@ export default withPwa(
       siteTitle: "VRChat 汉化文档中心",
 
       nav: [
-        { text: "VRChat 文档枢纽", link: "/docs.vrchat.com/" },
+        { text: "VRChat 帮助文档", link: "/docs.vrchat.com/" },
         {
           text: "VRChat 创作者文档",
           items: [
