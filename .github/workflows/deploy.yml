@@ -38,5 +38,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "vrchat-docs-localization"
-          entrypoint: ""
-          root: "dist"
+          entrypoint: "https://deno.land/std@0.220.1/http/file_server.ts"
+          root: "docs/.vitepress/dist"
