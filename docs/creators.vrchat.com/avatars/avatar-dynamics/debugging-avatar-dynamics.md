@@ -10,7 +10,7 @@ title: "调试动态化形象"
 
 @[youtube](8hqDquZWvhY)
 
-现在，您可以使用 "形象叠加显示层"（Avatar Overlay）选项在游戏中以可视化方式实时显示[物理骨骼](/creators.vrchat.com/avatars/avatar-dynamics/physbones)和[触发器](/creators.vrchat.com/avatars/avatar-dynamics/contacts)。这对于查看什么事情正在发生，或什么对象是否已正确设置非常有用。
+在游戏内，您可以使用 "模型调试"（Avatar Overlay）选项在游戏中以可视化方式实时显示[物理骨骼](/creators.vrchat.com/avatars/avatar-dynamics/physbones)和[触发器](/creators.vrchat.com/avatars/avatar-dynamics/contacts)。这对于查看什么事情正在发生，或什么对象是否已正确设置非常有用。
 
 ## 编辑器内
 [物理骨骼](/creators.vrchat.com/avatars/avatar-dynamics/physbones)和[触发器](/creators.vrchat.com/avatars/avatar-dynamics/contacts)在编辑器中的运行方式与在客户端中相同。进入游戏模式后，您就可以模拟这些系统，看看您的形象会有什么反应，而无需上传您的形象。
