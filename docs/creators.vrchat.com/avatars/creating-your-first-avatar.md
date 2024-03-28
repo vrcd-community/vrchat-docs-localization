@@ -1,24 +1,24 @@
-# 创建您的第一个形象
-## 要求：首先设置好 SDK !
-在开始之前，请确保已经有一个[已安装SDK的 Unity 项目](/creators.vrchat.com/sdk/)。
+# 创建您的第一个虚拟形象
+## 请首先设置好 SDK !
+在开始之前，请确保已经有一个[已安装 SDK 的 Unity 项目](/creators.vrchat.com/sdk/)。
 
-设置好 SDK 后，请查看我们的示例形象。打开形象项目，转到 `VRChat SDK > Samples > Avatar Dynamics Robot Avatar`。
+设置好 SDK 后，请查看我们的示例模型。打开模型项目，转到 `VRChat SDK > Samples > Avatar Dynamics Robot Avatar`。
 
-![这个示例虚拟形象可以帮助您理解一个完整的 VRChat 虚拟形象项目是什么样子的。](/creators.vrchat.com/images/avatars/creating-your-first-avatar-3dfc191-Unity_YrUFLEWWDe.png)
+![这个示例模型可以帮助您理解一个完整的 VRChat 虚拟形象项目是什么样子的。](/creators.vrchat.com/images/avatars/creating-your-first-avatar-3dfc191-Unity_YrUFLEWWDe.png)
 
 
 ::: info 需要帮助？
-制作您的第一个形象通常是个充满挑战的过程。如果您遇到了问题，您可以从以下几个渠道寻求帮助：
+制作您的第一个虚拟形象通常是个充满挑战的过程。如果您遇到了问题，您可以从以下几个渠道寻求帮助：
 
 - 阅读我们的文档（就是您现在正在做的事！）
 - 浏览我们的[官方论坛](https://ask.vrchat.com/)
 - 加入我们的 [Discord 服务器](https://discord.com/invite/vrchat)
 :::
 
-## 第 0 步 - 创建模型
-虽然大多数用户选择找一个模型来代替（详见 [步骤 1 - 找个模型](/creators.vrchat.com/avatars/creating-your-first-avatar#step-1-%E2%80%93-%E5%AF%BB%E6%89%BE%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9E%8B)），但从头开始创建一个形象模型也不是不行。您可以使用任何您喜欢的 3D 软件，只要它支持导出带有骨骼的 FBX！Blender 和 Maya 是非常常见的选择。
+## 第 0 步 - 制作模型
+虽然不少人会选择直接找个模型来继续（详见 [步骤 1 - 找个模型](/creators.vrchat.com/avatars/creating-your-first-avatar#step-1-%E2%80%93-%E5%AF%BB%E6%89%BE%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9E%8B)），但如果你想的话，您也可以从头开始制作一个模型。您可以使用任何您喜欢的 3D 软件，只要它支持导出带有骨骼的 FBX！您可以选择使用 Blender 和 Maya ,它们都是常见的选择。
 
-让我们明确一点：对于从未做过 3D 建模的人来说，这是一段漫长旅程的开始。学习 3D 建模很复杂，学习绑骨和贴图也很复杂。创建一个配置好的角色需要综合运用所有这些技能！
+首先要明确一点：对于从未做过 3D 建模的人来说，这是一段漫长旅程的开始。学习 3D 建模很复杂，学习绑骨和贴图也很复杂。创建一个配置好的角色需要综合运用所有这些技能！
 
 如果您选择创建自己的模型，我们建议您从简单的开始。即使它看起来不会像那些预制模型那么好看，但这是*您自己*的模型，您可以对它做任何您想做的事情。
 

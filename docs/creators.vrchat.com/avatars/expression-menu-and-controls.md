@@ -1,30 +1,53 @@
 # Expressions Menu 与 Controls
 <!--标题需要再修改-->
-::: warning 需要了解 Unity
+::: warning 阅读本篇文章需要特定的前置知识
 
-本文档的编写假定您对[Unity Animator](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html)有一定的了解。
+您需要先了解 [Unity 动画控制器](https://docs.unity3d.com/cn/2019.4/Manual/class-AnimatorController.html) ，这样能帮助您更好的了解本文。
 
 :::
 
 ## 创建 Expressions Menu (模型菜单)
 
-1. 在 Unity 项目窗口中右键单击，选择“Create/VRChat/Avatars/Expressions Menu”
-2. 在项目窗口中选择新创建的对象
+1. 在 Unity 项目窗口中，在 Assets 文件夹单击鼠标右键，选择`Create/VRChat/Avatars/Expressions Menu`
+2. 打开`Expressions Menu`文件以自定义它。（见步骤13）
 
-您还需要创建一个 ExpressionParameters 对象，在其中可以定义您使用的所有自定义参数。您可以在这里为它们命名并定义其类型。创建方法与上述相同：
+在继续之前，您需要创建一个**Expression Parameters**资源，您可以在其中您模型上使用的所有自定义参数。
 
-3. 在 Unity 项目窗口中右键单击，选择“Create/VRChat/Avatars/Expression Parameters”
-4. 在项目窗口中选择新创建的对象。
-5. 使用名称和类型设置您的自定义参数。 `Int` 的范围是0-255，`Float` 的范围是-1.0至1.0。您可以使用自定义名称访问参数，以便更轻松地进行管理。
+![默认情况下表情参数的外观。](/img/avatars/animator-parameters/params-default.png)
 
-完成上述操作后，您需要返回到表情菜单。
+3. 在Assets文件夹中右键单击，选择`Create > VRC Scriptable Objects > Expression Parameters`。
+4. 打开`Expression Parameters`文件以自定义它。
 
-6. 在检视器中点击“Add Control”。一个菜单中最多可以添加 8 个操作控件 (Controls)。
-7. 您还可以在此处命名状态、添加图标并更改操作控件(Controls)的顺序。
-8. 完成后，将此对象拖到 Avatar Descriptor 中的 “Expressions Menu” 属性中。
-9. 将 ExpressionParameters 对象拖到 Avatar Descriptor 中的 “Expressions Parameters” 属性中。
+    - 该资源默认包含[三个参数](https://creators.vrchat.com/avatars/animator-parameters/#default-av3-aliasing)（`VRCEmote`、`VRCFaceBlendH`、`VRCFaceBlendV`）。如果您用不到这些参数，则可以直接删除它们，
+5. 输入您的参数名称。
+    - 这些名称应与您的动画器中的参数匹配。
+    - 您可以使用`/`对参数进行分类。例如，`Clothing/Hoodie`和`Clothing/Hat`。
+    - VRChat 有一些[内置参数](https://creators.vrchat.com/avatars/animator-parameters/#parameters)。您可以直接在动画器中使用它们，无需添加它们到您的`Expression Parameters`文件。
+6. 为每个参数选择一个类型。
 
-提示：我们在 `Packages/VRChat SDK - Avatars/Samples/AV3 Demo Assets/Expression Menu/Icons/` 中包含了一些默认图标供您使用。
+    - `Int`范围为 0 - 255 。
+    - `Float`范围为 -1.0 至 1.0 。
+    - `Bool`为`True`（真）或`False`（假）。
+7. 更改`Default`值以设置每个参数的默认值。当模型被重置时，参数将恢复为此值。
+8. 如果您希望某个自定义参数的值不会随着切换世界或模型被重置，请启用`Saved`。
+9. 如果您希望此参数的值应同步给所有远端玩家，请启用`Synced`。
+
+接下来，您应将这两个资源添加到您的`VRCAvatarDescriptor`中。
+
+![默认情况下表情参数的外观。](/img/avatars/animator-parameters/avatar-descriptor-params.png)
+
+10. 选择您的`VRCAvatarDescriptor`并向下滚动到`Expressions`部分。
+11. 将“Menu”属性更改为您的表情菜单。
+12. 将“Parameters”属性更改为您的表情参数。
+
+在将这两个资源添加到您的`VRCAvatarDescriptor`之后，您可以在模型菜单中看见，并自定义所有模型参数。
+
+![默认情况下表情参数的外观。](/img/avatars/animator-parameters/menu-default.png)
+
+13. 在检查器中，单击`Add Control`。一个菜单最多可以添加 8 个控件。
+14. 选择一个名称和[类型](/avatars/expression-menu-and-controls#types-of-controls)。
+15. 您还可以在这里添加图标和子菜单，或更改控件的顺序。
+  - 您可以在`Packages\VRXhat SDK - Avatars\Samples\AV3 Demo Assets\Expressions Menu`中找到一些默认图标。
 
 ### Controls (操作控件)类型
 
@@ -41,13 +64,13 @@
 
 **Puppet** (圆盘)菜单在打开时使用[**IK** ](/creators.vrchat.com/avatars/animator-parameters#参数同步模式)同步模式。如果您希望同步速度能尽量匹配输入速度，以实现快速操作，可以使用 Puppet (圆盘)菜单。
 
-**Button**/**Toggle** 使用 **Playable**同步模式，它按需瞬时更新，而不是持续更新，适用于您“开启/关闭”但不需要高度精确同步的内容。
+**Button**/**Toggle** 使用 **Playable**同步模式，它按需瞬时更新，而不是持续更新，适用于不需要高度精确同步的内容，例如开关物体。
 
-Puppet (圆盘)菜单同步始终以最大速率更新，并且它平滑了远端玩家的值-当您十分需要定时同步时，这个菜单的表现效果更好。
+Puppet 菜单同步始终以最大速率更新，并且它平滑了远端玩家的值-当您十分需要定时同步时，这个菜单的表现效果更好。
 
 :::
 
-Puppet (圆盘)菜单还可以在进入菜单时设置参数。
+Puppet 菜单还可以在进入菜单时设置参数。
 
 如果使用摇杆按下退出，则被操作的参数的值将保持不变，直到您再次更改它们--无论是重新进入使用那些参数的 Puppet (圆盘)菜单，还是在其他地方使用它们。
 <!--是否替换需要再考虑-->

@@ -1,86 +1,90 @@
----
-title: "预设动画参数"
----
- 
-# 预设动画参数
+# 模型动画参数（Animator Parameters）
 
-::: warning 您需要了解动画控制器
+::: warning 阅读本篇文章需要特定的前置知识
 
-本文预设您对 [Unity 动画控制器](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html) 有一定了解。
+您需要先了解 [Unity 动画控制器](https://docs.unity3d.com/cn/2019.4/Manual/class-AnimatorController.html) ，这样能帮助您更好的了解本文。
 
 :::
 
-**预设动画参数**是一个预制的参数列表（**区分大小写**），这些参数可以被添加到任意可播放层（FX，Action等），它们的更改值会同步给它们所在的控制器。用户自创的参数仅在其所在的动画控制器内部存在，并且当前无法在模型层面上进行更改。
+**模型动画参数**是一个用于 VRChat 模型可播放层动画器的参数列表，参数名称**区分大小写**。
 
-您需要将这些参数添加到可播放层中才能使用它们。**注意，它们的名称区分大小写！**
+::: info **模型动画参数**包含**预设参数**与**玩家参数**
+**预设参数**，也就是 VRChat 已经预置好的参数，可以被添加到任意可播放层中（FX，Action等），当这些参数的值因 VRChat 内部机制发生变动时，对应的新值就会同步给包含它们的可播放层动画控制器。<br>
+**玩家参数**，也就是您自创的参数，其值不会被 VRChat 内部机制更改，根据您为它们安排的位置，其新值可能取决于：
+- 您在模型菜单中的按钮操作
+- 模型可播放层中的[状态机行为](/creators.vrchat.com/avatars/state-behaviors)。
+:::
+
+您需要将这些参数添加到可播放层动画控制器中才能使用它们。**注意，这些参数名称区分大小写！**
 
 ::: danger 不要让您的动画器卡死！！
-您应该假设参数值可能会发生变化。如果您的动画控制器“卡死”——也就是说，您没有为某个状态添加一个出口——您可能会获得一个出错的模型。
+您应该假设参数值可能会发生变化。如果您的动画控制器“卡死”——也就是说，您没有为某个特定状态添加一个出口，或者下一个过渡状态——那么您的模型就可能会出问题。
 :::
 
-## 通用参数
 
-| 名称 | 描述 | 类型 | 同步 |
-| -- | -- | -- | -- |
-| IsLocal | 如果该模型由本地玩家（您自己）使用，则为 True；否则为 False | 布尔 | 无同步 |
-| [Viseme](#viseme-values) | 表示口型，大小范围为`0-14`，参考自 [Oculus 面部表情目录](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference)。当模型的 Viseme 模式使用 Jawbone/Jawflap 时，表示音量，大小范围为 `0-100`。 <!--暂时换回Speech，等待更合理的解释-->| 整数 | Speech |
-| Voice | 当前麦克风音量（`0.0-1.0`）| 浮点数 | Speech |
-| [GestureLeft](#gestureleft-and-gestureright-values) | 左手手柄感应的手势（0-7）| 整数 | IK |
-| [GestureRight](#gestureleft-and-gestureright-values) | 右手手柄感应的手势<!--中文社区本地化-->（0-7）| 整数 | IK |
-| GestureLeftWeight | 左手的扳机按压幅度（0.0-1.0） | 浮点数 | Playable |
-| GestureRightWeight | 右手的扳机按压幅度（0.0-1.0） | 浮点数 | Playable |
-| AngularY | Y 轴上的角速度 | 浮点数 | IK |
-| VelocityX | 横向移动速度（米/秒） | 浮点数 | IK |
-| VelocityY | 纵向移动速度（米/秒） | 浮点数 | IK |
-| VelocityZ | 前向移动速度（米/秒） | 浮点数 | IK |
-| VelocityMagnitude | 总速度的大小 | 浮点数 | IK |
-| Upright | 您的身体直立程度。0 表示俯卧，1 表示完全直立 | 浮点数 | IK |
-| Grounded | 如果模型接触地面，则为 True | 布尔 | IK |
-| Seated | 如果模型已就座（姿态处于 Seated 状态），则为 True | 布尔 | IK |
-| AFK | 如果玩家暂时不在游戏中（当 HMD 近距传感器未检测到人体或已按下 End 键时），则为 True | 布尔 | IK |
-| Expression1 - Expression16 | 玩家自定义的参数，可以是整数（`0`-`255`）或浮点数（`-1.0`-`1.0`） | 整数 / 浮点数 | IK 或Playable |
-| [TrackingType](#trackingtype-parameter) | 请参阅下文描述 | 整数 | Playable |
-| VRMode | 如果玩家处于 VR 模式中，则返回 `1`；如果不在 VR 模式中，则返回 `0` | 整数 | IK |
-| MuteSelf | 如果玩家已将自己静音，则返回 `true`；如果未静音，则返回 `false` | 布尔 | Playable |
-| InStation | 如果玩家在 VRCStation 中，则返回 `true`；如果不在站点中，则返回 `false` | 布尔 | IK |
-| Earmuffs | 如果玩家已打开耳罩功能，则返回 `true`；如果已关闭，则返回 `false` | 布尔 | Playable |
-| IsOnFriendsList | 如果查看模型的用户与佩戴模型的用户是好友，则返回 `true`。是本地玩家则返回 `false`<!--需要更好的解释--> | 布尔 | 其他 |
+## 模型动画参数列表
+
+<!--暂时忽略 Expression1-16-->
+| 名称 | 描述 | 数值类型 | 同步类型 | 参数类型 |
+| -- | -- | -- | -- | -- |
+| VelocityX | 横向移动速度（米/秒） | Float | IK | 预设 |
+| VelocityY | 纵向移动速度（米/秒） | Float | IK | 预设 |
+| VelocityZ | 前向移动速度（米/秒） | Float | IK | 预设 |
+| AngularY | Y 轴（垂直于地面的轴）上的角速度 | Float | IK | 预设 |
+| Grounded | 如果模型的脚部接触到地面，则为 `True`，反之则为`false` | Bool | IK | 预设 |
+| AFK | 如果玩家暂时不在游戏中（当头显未检测到人体或您已按下 End 键时），则为 `True` | Bool | IK | 预设 |
+| Upright | 您的身体直立程度。0 表示卧倒，1 表示完全直立于地面 | Float | IK | 预设 |
+| [TrackingType](#trackingtype-parameter) | 请参阅下文描述 | Int | Playable | 预设 |
+| VRMode | 如果玩家处于 VR 模式中，则为 `1`；反之则为 `0` | Int | IK | 预设 |
+| MuteSelf | 如果玩家关闭了自己的语音开关，则为 `true`；反之则为 `false` | Bool | Playable | 预设 |
+| Voice | 当前麦克风音量（`0.0-1.0`）| Float | Speech | 预设 |
+| Earmuffs | 如果玩家已打开耳罩功能，则为 `true`；反之则为 `false` | Bool | Playable | 预设 |
+| VelocityMagnitude | 模型当前总移动速度（矢量）的大小 | Float | IK | 预设 |
+| ScaleFactor        | 当前模型高度与默认高度之间的比例。例如当默认视角球高度为 1 米的模型缩放到 2 米时，将表现为`2`                                            | Float | Playable | 预设 |
+| ScaleFactorInverse | 当前模型高度与默认高度之间的倒数比例（`1/x`）。例如当默认视角球高度为 1 米的模型缩放到 2 米时，这个参数的值为 `0.5`。该参数值在极端情况下可能不准确。  | Float | Playable | 预设 |
+| ScaleModified      | 如果玩家缩放了当前模型，则为 `true`；反之，则为 `false`                                                          | Bool  | Playable | 预设 |
+| EyeHeightAsPercent | 模型的视角球高度与默认缩放限制（`0.2`-`5.0`）之间的关系。例如当模型缩放为 2 米，那么这个参数的值是 `(2.0 - 0.2) / (5.0 - 0.2)` = `0.375`                  | Float | Playable | 预设 |
+| EyeHeightAsMeters  | 当前模型的视角球高度（以米为单位）。                                                                                | Float | Playable | 预设 |
+| IsOnFriendsList | 如果查看模型的玩家与使用模型的玩家互为好友，则为 `true`。如果是其他情况，则向模型为 `false`<!--需要更好的解释--> | Bool | 其他 | 预设 |<!--讨论：https://github.com/vrcd-community/vrchat-docs-localization/discussions/68-->
+| [Viseme](#viseme-参数值解释列表) | 表示口型，大小范围为`0-14`。当模型的 Viseme 模式使用 Jawbone/Jawflap 时，则表示您的当前麦克风音量，大小范围为 `0-100`。 <!--暂时换回Speech，等待更合理的解释-->| Int | Speech | 预设 |
+| [GestureLeft](#gestureLeft-和-gestureRight-参数值解释列表) | 左手当前手势，范围为 `0-7`| Int | IK | 预设 |
+| [GestureRight](#gestureLeft-和-gestureRight-参数值解释列表) | 右手当前手势，范围为 `0-7`| Int | IK | 预设 |
+| GestureLeftWeight | 左手手柄的扳机按压幅度，0.0 表示不按下扳机，1.0 表示完全按下扳机 | Float | Playable | 预设 |
+| GestureRightWeight | 右手手柄的扳机按压幅度，0.0 表示不按下扳机，1.0 表示完全按下扳机 | Float | Playable | 预设 |
+| Seated | 如果模型已就座（姿态处于 Seated 状态），则为 `True` | Bool | IK | 预设 |
+| InStation | 如果玩家在 VRCStation 中，则为 `True`；如果不在 VRCStation 中，则为 `false` | Bool | IK | 预设 |
+| IsLocal | 如果该模型是由本地玩家（您自己）使用的，则为 `True`；否则为 False | Bool | 无同步 | 预设 |
+| [AvatarVersion](/creators.vrchat.com/worlds/components/vrc_station#sdk3-station-with-sdk2sdk3-avatar) | 如果该模型上传时，SDK 版本在 2020.3.2 后，则为 `3`，反之则为 `0`  | Int | IK | 预设 |
+| 任意名称 | 玩家自定义模型参数(Expression Parameters) | Bool，Int 或 Float | IK 或 Playable | 玩家 |
 <!--考虑美观度，表示只在长句子中使用，短句易理解，不适用-->
-此外，还有两个参数，“Supine” 和 “GroundProximity” 在调试窗口中可见，但它们目前没有任何功能，其值也不会发生改变。
+::: info 关于部分参数的附加说明
+† `GestureLeftWeight` 和 `GestureRightWeight` 的值会根据扳机的按压力度从 0.0 变化到 1.0。
 
-† 在不同的手势中，GestureLeftWeight 和 GestureRightWeight 的值根据扳机的按压程度中从 0.0 变化到 1.0。例如，如果您握拳但不按压左手的扳机，GestureLeft 的值将为 1，但 GestureLeftWeight 的值将为 0.0。当您开始按压扳机时，它的值将从 0.0 增加到 1.0。这可以用于创建“模拟”手势或有条件地检测各种情况。
+举例来说，如果您使用左手握住了手柄，但大拇指不按压扳机，`GestureLeft` 的值将为 1，但 `GestureLeftWeight` 的值将为 0.0。当您开始按压扳机时，`GestureLeftWeight` 的值将从 0.0 逐渐增加到 1.0。您可以使用这种特性来条件性的检测某些东西。
+:::
+预设参数只能被读取，无法被玩家手动写入。
 
-## 模型缩放参数
+## 参数类型（Parameter Types）
 
-| 名称 | 描述 | 类型 | 同步 |
-| -- | -- | -- | -- |
-| ScaleModified      | 如果玩家缩放了模型，则返回 `true`；如果模型处于默认大小，则返回 `false`                                                                                                                     | 布尔  | Playable |
-| ScaleFactor        | 模型当前高度与默认高度之间的比例。例如当默认眼高为 1 米的模型缩放到 2 米时，将表现为`2`                                                                                                                        | 浮点数 | Playable |
-| ScaleFactorInverse | 模型当前高度与默认高度之间的倒数比例（`1/x`）。例如当默认眼高为 1 米的模型缩放到 2 米时，将表现为 `0.5`。该值在极端情况下可能不准确。                                                                                   | 浮点数 | Playable |
-| EyeHeightAsMeters  | 模型的眼高（以米为单位），例如模型的眼高为`1.5`。                                                                                                                                                                             | 浮点数 | Playable |
-| EyeHeightAsPercent | 模型的眼高与默认缩放限制（`0.2`-`5.0`）之间的关系。缩放为 2 米的模型将报告 `(2.0 - 0.2) / (5.0 - 0.2)` = `0.375`                                                                                     | 浮点数 | Playable |
+在定义参数时，您可以使用三种类型的变量。
 
-以上参数只能被读取，无法被手动写入。
+定义参数。在这里所指的“内存限制”为同步参数时使用的带宽限制，而不是模型的内存使用限制。
 
-## 参数类型
-
-在定义参数时，您可以访问三种类型的变量。
-
-您可以使用总共 256 位的“内存”。“内存”的大小并不是因为模型的内存使用而被限制，而是因为同步参数时使用的带宽被限制。
+<!--讨论：https://github.com/vrcd-community/vrchat-docs-localization/discussions/66-->
 
 | 参数类型 | 范围 | 内存使用 | 备注 |
 | :-- | :-- | :-- | :-- |
-| `int`    | `0`-`255`       | 8 位     | 无符号 8 位整数。                |
-| `float`  | `-1.0` 到 `1.0` | 8 位     | 有符号 8 位定点小数†。           |
-| `bool`   | `True` 或 `False` | 1 位 | |
+| `int`    | `0`-`255`       | 8 位     | 无符号 8 位整数。        |
+| `float`  | `-1.0` 到 `1.0` | 8 位     | 有符号 8 位定点小数。    |
+| `bool`   | `True`(1) 或 `False`(0) | 1 位   | 1 位逻辑数                        |
 
 † 由远程同步来的 `float` 值有 255 个可能的值，其跨网络精度值为 `1/127`，可以精确存储 `-1.0`、`0.0` 和 `1.0`。当在本地更新时，例如使用 [OSC](https://docs.vrchat.com/docs/osc-overview)，浮点值以原生（32 位）浮点值存储在动画控制器中。
 
 <!--精度值的描述是否合适？-->
 
-## GestureLeft 和 GestureRight 的值
+## `GestureLeft` 和 `GestureRight` 参数值解释列表
 
-GestureLeft 和 GestureRight 使用以下值：
+它们的值及这些值对应的手势名称如下：
 
 | 参数值 | 手势名称     | 
 | ---- | -----------   | 
@@ -92,17 +96,20 @@ GestureLeft 和 GestureRight 使用以下值：
 | 5    | RockNRoll     |  
 | 6    | HandGun       |  
 | 7    | ThumbsUp      | 
+
 <!--难以翻译，加之 SDK 内大量引用，考虑现状，采用原文加注释，需要进一步解释-->
 <!--如果是手势描述的话。。。抱歉咱撤回一下咱刚刚的建议，可能更加生动形象的描述更加的合适-->
 <!--QmQ-->
+<!--揉揉捏-->
 <!--由于手势在docs已经给出，给出跳转链接就好-->
-::: info
-您可以在了解这些手势及它们在不同平台上的触发方法：
-[Valve Index](/docs.vrchat.com/OVERVIEW/controls/valve-index.md) (描述了手势中手指的位置)，[Oculus Touch](/docs.vrchat.com/OVERVIEW/controls/touch.md)，[HTC Vive](/docs.vrchat.com/OVERVIEW/controls/vive.md)
-:::
-## Viseme 的值
 
-我们使用 [Oculus 面部表情目录](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference)，它们从上到下排列，其中 `sil` 为 0。以下供参考：
+::: info 译者注释
+您可以在[这里](/docs.vrchat.com/OVERVIEW/controls/controls.md)了解这些手势及它们在不同平台上的触发方法：
+:::
+
+## `Viseme` 参数值解释列表
+ 
+该参数的值遵照 [Oculus 口型标准](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference)，以下供参考：
 
 | Viseme 参数 | Viseme |
 | :---------- | :----- |
@@ -122,90 +129,75 @@ GestureLeft 和 GestureRight 使用以下值：
 | 13          | `o`    |
 | 14          | `u`    |
 
-## 参数同步模式
+## 同步模式
 
-
-- **Speech** - 仅用于 viseme，这些参数由您的语音驱动，使用 Oculus Lipsync 标准输出值。在本地更新，不会直接同步给其他用户（因为它由您的语音音频驱动，这个音频也会同步给其他人，在他们的本地完成更新参数的动作）。
-- **Playable** - 一种比 Speech 更慢的同步模式，用于同步运行时间较长的动画状态。根据参数更改的需要每 0.1 到 1 秒更新一次（也就是每秒 1 到 10 次更新），不建议您依赖它进行快速同步。
-- **IK** - 一种比 Speech 更快的同步模式，用于同步频繁更改的值。每 0.1 秒连续更新一次（也就是每秒 10 次），使用这个同步模式的参数一部分会在在远程用户的本地插值成 `float` 值，一部分会仅基于模型的本地渲染 IK 状态来计算。
+- **Speech** - 仅用于 `Viseme`，该参数由您的语音驱动，使用 Oculus Lipsync 标准输出值。参数值在本地更新，不直接同步给其他玩家（当您的音频同步到其他人后，它就会驱动参数，并在他们的本地完成更新值）。
+- **Playable** - 一种比 **Speech** 更慢的同步模式，适用于不频繁变动的参数。它会根据具体情况，每 0.1 到 1 秒更新一次值（也就是每秒 1 到 10 次更新）。不建议您依赖它进行快速同步。
+- **IK** - 一种比 **Speech** 更快的同步模式，适用于频繁变动的参数。每 0.1 秒更新一次。它会根据具体情况，将一部分的值在远端玩家的本地插值为 `float` ，一部分的值会仅基于模型的本地渲染 IK 状态来计算。
 
 <!--考虑Playable和可播放层之间的关系-->
 
-当 Expression 参数在 Puppet 菜单中被使用时，它会自动从 Playable 同步切换到 IK 同步，以获得连续的更新速率和平滑的插值。关闭菜单后，它将切换回 Playable 同步模式。
+当您在 Puppet 菜单中使用模型参数时，它会自动从 Playable 同步切换到 IK 同步，以保证快速的更新速率和平滑的插值。关闭操控轮盘后，数值将切换回 Playable 同步模式。
 
-<!--puppet后续需要注释-->
+## 驱动模型参数
 
-## 驱动 Expression 参数
-
-此外，可以通过状态行为将 Expression 参数固定到某个值。可以使用动画控制器中的状态上的 `Avatar Parameter Driver` 状态行为来设置它们。
+此外，在动画控制器中，可以通过状态行为中`Avatar Parameter Driver` 将模型参数固定到某个值，或进行一些其他的设置参数操作。
 
 ## AFK 状态
 
 AFK 状态由以下情况触发：
 
-- 用户摘下头戴式显示器，HMD 近距传感器返回消息：未佩戴头戴式显示器
-- 打开系统菜单。这取决于在系统菜单打开时，您使用的平台如何传递对应数据——例如，打开 Oculus Dash 菜单不会被判定为 AFK，但打开 SteamVR 菜单会被判定为 AFK。这是一种间接的行为，并非预期设计行为。
-- 玩家按下 End 键，来回切换 AFK 状态。
+- (VR) 玩家摘下头显，头显传感器未检测到用户
+- (VR) 打开 VR 系统菜单。这取决于您使用的具体头显平台 -- 例如，打开 Oculus Dash 菜单不会被判定为 AFK，但打开 SteamVR 菜单会被判定为 AFK。这个效果并非预期设计，而是一种间接的结果。
+- 玩家按下 End 键，切换 AFK 状态。
 
-## TrackingType 参数
+## `TrackingType` 参数值解释列表
 
-
-如果 `VRMode` 为 1 时，`TrackingType`值为 3、4 或 6，这些值代表使用这个模型的玩家佩戴了多少个 VR 追踪设备。**此值可能会发生变化！** 如果处于 6 点追踪的用户移除了额外的 3 个追踪点，它的值将从 6 变为 3。您在设计动画控制器时要考虑到这一点。
-
-如果 `VRMode` 为 1 时，`TrackingType`值为 0、1 或 2，这些值代表模型仍在初始化。您不应该使用这些值来组合设计动画控制器，而应该等待“有效”值，例如 3、4 或 6 。
-
-::: warning 请考虑到，这些值可能会发生改变
-
-在模型初始化期间，这些值可能会发生变化！确保您的动画控制器考虑到可能的参数值变化，并且不会卡死到任某一个状态中。
-
-<!--branch考虑到实际情况，翻译成状态-->
-
-:::
-
-| 参数 |
- 描述                                                                                                                                                                                                                                 |
+| 参数 | 描述 |
 | -- | :-- |
 | 0    | 模型未初始化，该值一般仅在玩家切换模型且其 IK 数据尚未被发送时出现。                                                                                                                                                                                 |
-| 1    | 模型骨架类型为通用骨骼，该值一般在玩家启用了某种追踪（例如来自 HMD 或追踪器），但由于模型骨架类型被设置为通用骨骼，导致追踪被忽略时出现。如果同时 `VRMode` 的值为 0，则表明玩家是桌面用户，而不是 VR 用户。<!--通用骨骼要不要翻译成generic？另外为了确保语意，加一个VR用户。-->                                                                                                                         |
-| 2    | 仅手部追踪，没有手指追踪，该值只会在过渡状态中发生——也就是说，此时您应该预期到 `TrackingType` 会转变到另一个值，模型不应停留在该值。 <br> *<font color="gray">一般适用于 AV2 模型，该值可能仍然在 SDK3 station 上发生，但您原则上不应让它在模型的 AV3 控制器上进行长时间使用。</font>* |
+| 1    | 模型骨架类型为通用骨骼，该值一般在玩家启用了某种追踪（例如头显或追踪器），但由于模型骨架类型被设置为通用骨骼，导致追踪被关闭时出现。如果同时 `VRMode` 的值为 0，则表明玩家是桌面用户，而不是 VR 用户。<!--通用骨骼要不要翻译成generic？另外为了确保语意，加一个VR用户。-->                                                                                                                         |
+| 2    |  <br> *<font color="gray">该值会出现在 AV2 模型，但也可能在您使用 SDK3 station 时出现。您原则上不应在模型的 AV3 控制器上将它用于长时间状态的过渡参数。</font>* 仅手部追踪，没有手指追踪，该值只会在过渡状态中临时出现—— `TrackingType` 可能马上会变化到另一个值，并不会恒为该值。|
 | 3    | 头部和手部追踪，如果 `VRMode` 为 `1`，则玩家处于 3 点追踪的 VR 端中。如果 `VRMode` 为 `0`，则玩家处于桌面电脑端中。  |
-| 4    | 4 点追踪 VR 用户，头部、手部和髋部追踪。 |
-| 6    | 全身追踪 VR 用户，头部、手部、髋部和脚部追踪。 |
+| 4    | 4 点追踪 VR 用户，头部、手部和腰部追踪。 |
+| 6    | 全身追踪 VR 用户，头部、手部、腰部和脚部追踪。 |
 
+因此，当 `VRMode` 为 1 时，请注意对 `TrackingType` 的值的使用：
+- 如其值为 3,4 或 6，则代表当前玩家佩戴的 VR 追踪设备数量。当设备数量发生变化，这个值也会发生变化，在设计动画控制器时您需要考虑到这一点。
+- 如其值为 0,1 或 2，则代表模型仍在初始化。请勿使用这些值来组合设计动画控制器，而是使用 3,4 或 6 等有效值来设计。
 
 ## Expression 参数名称
 
-当您创建一个新的 Expression parameter 文件时，如果您需要在其列表新建一些参数，那么您**必须**给这些参数重命名。因为这些新建的参数名字会与列表中默认预留的参数名称相同，这可能会导致一些问题。
-
+如果您在 `Expression Parameter` 文件中新建参数，请**务必**重命名这些新参数。因为新建的参数名会继承列表中最后一个已有参数的名字。
 <!--删掉了一些特定表述，确保一切ok-->
 
-一旦为要使用的任何 Expression 参数创建了名称，您可以直接在控制器中使用该名称。这意味着您可以根据自己的标准，来给这些参数命名。所以只要它们使用相同的名称，菜单中定义的参数和控制器中的参数可以混合使用。您可以从其他人那里获取预制控制器，并根据自己的喜好创建自己的菜单样式，而不必担心 Expression 参数冲突。
+您可根据自己的标准，来命名这些新参数。命名好后，您可直接在动画器中使用这个参数。此外，菜单中按钮名称与动画器中的参数名称不必一一对应。只要它们使用的 Expression 参数名称相同即可。因此您可以随意修改您的菜单按钮名字，而不必担心按钮名字和 Expression 参数冲突。
 
 <!--菜单定义是什么-->
 
-在命名自己的参数时，使用斜杠（`/`）可以使参数在各种选择参数时的下拉菜单中自动归类。例如，将参数命名为 `Toggles/Hat` 将在选择参数时显示为层级： Toggles -> Hat，以便在选择参数时更容易使用，例如在动画控制器转换和 Expression 菜单中，同时保持底层参数的相同名称。这不会改变参数的工作方式，但是会使得管理大型参数列表更加方便。
+在命名自己的参数时，您可加入斜杠符号（`/`）来归类它。<br>例如：将参数命名为 `Toggles/Hat` ，那么在动画器的过渡(Transitions)和 Expression 菜单中，选择该参数时将显示为： Toggles -(光标停留时展开下拉菜单)-> Hat，选择完毕后，参数的名字是`Toggles/Hat`。这种命名方式不会改变参数的工作方式，但是会使得管理大型参数列表更加方便。
 
 <!--尝试将alias替换为参数，名称，或命名-->
 
-## 默认 AV3 别名
+## VRChat 动画器默认参数
 
 <!--alias(别名)到底是什么？-->
 
-模板 AV3 VRChat 控制器中预制了一些默认别名，如果您不想构建自己的控制器，那么就可以使用它们。这些别名不会与您自己的使用冲突（只要您不在您自创的参数上使用雷同名字），这要归功于别名。
+VRChat Avatar(模型)模板动画器中预留了一些默认参数。如果您打算使用这些模板动画器，那么其中的预留参数不会与您自创的参数产生冲突，只要它们的名字不雷同。
 
-特别是，默认的 Action 和 FX 层使用了别名。您不需要担心使用这些层中的 Expression。 
+作为例子，Action 和 FX 层的模板动画器就包含了一些默认参数。您不需要担心怎么配置这些层里的模型功能。 
 
-Action 使用的别名参数名为 `VRCEmote`，是一个范围为 1 到 16 的整数。
+其中，Action 使用的默认参数名为 `VRCEmote`，是一个范围为 1 到 16 的整数。<br>
+而 FX 使用的默认浮点参数名为 `VRCFaceBlendH`（-1,1）和 `VRCFaceBlendV`（-1,1），如果您打算使用这些模板动画器，那么您可在模型菜单中使用这些参数。
+此外，默认的 FX 层动画器的表情动画要求您有一个名为 `Body` 的蒙皮网格，其中包含 `mood_happy`、`mood_sad`、`mood_surprised` 和 `mood_angry` 等形态键。
 
-FX 使用的别名浮点参数名为 `VRCFaceBlendH`（-1,1）和 `VRCFaceBlendV`（-1,1），如果您想尝试自己的菜单来使用它们。默认的 FX 层要求您有一个名为 `Body` 的蒙皮网格，其中包含 `mood_happy`、`mood_sad`、`mood_surprised` 和 `mood_angry` 等形态键。
-
-再次强调，如果您将一个模型作为 Avatar3 虚拟形象上传，而它没有自定义的可播放层，那么您将能够使用一些预置的表情，只要您的模型拥有上述命名的形态键。
+再次强调，如果您将一个模型上传为虚拟形象，而 ta 没有自定义的可播放层，那么只要您的模型拥有上述形态键，您就可以使用动画器的预制表情。
 <!--此处可播放层需要更好的解释-->
 
 如果还有一个名为 `eyes_closed` 的形态键，当您使用默认的 Die 表情或进入 AFK 状态时，这个形态键会使得您的模型闭眼。
 
 ## 跨平台参数同步
 
-当您使用 Quest 和 PC 双版本的模型时，参数**不是**通过参数的名称，而是通过它们在参数列表中的位置和参数类型进行同步的。要使给定参数在 PC 和 Quest 之间同步，它必须在参数列表中的相同位置，并且具有相同的参数类型。
+当您使用的模型同时有 PC 和 Quest 版时，那么对于这两个版本，参数**不是**通过参数的名称，而是通过它们在参数列表中的位置和参数类型进行同步的。要使给定参数在 PC 和 Quest 之间同步，它必须在参数列表中的相同位置，并且具有相同的参数类型。
 
-鉴于这一点，建议在 PC 和 Quest 版本的模型中使用相同的 Expression Parameters 资源，即使其中一个版本不会使用到全部的参数。
+鉴于这一点，建议在 PC 和 Quest 版本的模型中使用相同的 Expression Parameters 资源，即使其中某个版本不会使用所有参数。

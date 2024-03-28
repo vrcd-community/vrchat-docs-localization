@@ -58,7 +58,7 @@
 
 ### 目前的覆盖范围
 
-- [VRChat 文档枢纽 - The VRChat Documentation Hub](https://docs.vrchat.com/)
+- [VRChat 帮助文档 - The VRChat Documentation Hub](https://docs.vrchat.com/)
 - [VRChat 创作者文档 - VRChat Creators Docs](https://creator.vrchat.com/)
 - [ClientSim 文档](https://clientsim.docs.vrchat.com/)
 - [UdonSharp 文档](https://udonsharp.docs.vrchat.com/)

@@ -4,7 +4,7 @@ layout: home
 # hero:
 #   actions:
 #     - theme: brand
-#       text: VRChat 文档枢纽
+#       text: VRChat 帮助文档
 #       link: docs.vrchat.com/index
 #     - theme: brand
 #       text: VRChat 创作者文档

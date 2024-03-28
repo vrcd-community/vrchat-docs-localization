@@ -8,10 +8,10 @@
 :::
 <!--原文是运行时被删除，老黄历了，我直接加一个说明好了-->
 
-自定义脚本或组件同样会在上传和运行时被删除，这些组件不能在模型上使用。
+自定义脚本或组件同样会在上传和运行时被删除，您不能在游戏中时，在模型中使用它们。
 ::: warning Oculus Quest
 
-VRChat 的 Quest 版本在此列表的基础上减少了一些组件，这些组件因故无法在这个版本中使用。您可在[这里](/creators.vrchat.com/platforms/android/quest-content-limitations#组件)查看更多信息。
+VRChat 的 Quest 版本在此列表的基础上减少了一些组件，这些组件因故无法在 Quest 版本中使用。您可在[这里](/creators.vrchat.com/platforms/android/quest-content-limitations#组件)查看更多信息。
 :::
 ## VRChat
 
@@ -46,11 +46,11 @@ VRChat 的 Quest 版本在此列表的基础上减少了一些组件，这些组
   - 对于本地玩家使用的模型，相机组件不受任何限制。
   - 对于远端玩家使用的模型，适用以下限制：
     - 在所有情况下，当加载模型时，远端玩家的相机组件将被禁用。
-      - 您可以使用动画来启用相机组件。
-    - 如果不满足以下所有情况，则删除相机组件，且它们无法被重新启用。
+      - 上条中的相机组件可以被动画重新启用。
     - 如果本地玩家和远端玩家是好友，则不会删除相机组件。
-      - 请注意，与玩家成为好友不会自动重新加载他们的模型。
+      - 如果两者刚成为好友，则需要手动重载远端玩家模型来启用相机组件。
     - 如果本地玩家在 VRChat 的快捷菜单中为远端玩家选择了"显示模型"，则不会删除相机组件。
+    - 如果不满足以上任一情况，则删除相机组件，且它们无法被重新启用。
 
 - [FlareLayer](https://docs.unity3d.com/cn/2019.4/Manual/class-FlareLayer.html)
 - [AudioSource](https://docs.unity3d.com/cn/2019.4/Manual/class-AudioSource.html)
@@ -69,7 +69,7 @@ VRChat 的 Quest 版本在此列表的基础上减少了一些组件，这些组
 
 VRChat 对 FinalIK 的实现进行了高度修改。因此，这些组件的功能可能和源文档中描述的不同。
 
-我们不直接支持或测试自定义的 FinalIK 实现。即使如此，它们也*应该*能正常工作，如果我们不得不破坏其中一个或多个组件的运作，我们将尽力通知创作者。
+在模型上，我们不会官方维护，或测试自定义的 FinalIK 实现。即使如此，这些实现也*应该*能正常工作，如果我们因故对这些组件做出破坏性更改，我们将尽力通知创作者。
 
 如果您发现错误，请[告诉我们](https://feedback.vrchat.com)。
 :::
@@ -90,7 +90,7 @@ VRChat 对 FinalIK 的实现进行了高度修改。因此，这些组件的功�
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
 ::: danger Dynamic Bone 已弃用
 
-我们已不再支持 Dynamic Bone。您应该转而使用[PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones)。
+我们已不再官方支持 Dynamic Bone。您应该转而使用[PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones)。
   
 :::
 

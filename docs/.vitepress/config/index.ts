@@ -359,7 +359,7 @@ export default withPwa(
         ],
         shortcuts: [
           {
-            name: "VRChat 文档枢纽",
+            name: "VRChat 帮助文档",
             url: "/docs.vrchat.com/",
             description:
               "您可以找到全面的指南和文档，帮助您尽快开始玩 VRChat，如果遇到困难，还可以获得支持。",
