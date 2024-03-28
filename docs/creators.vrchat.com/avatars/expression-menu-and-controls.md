@@ -13,7 +13,7 @@
 
 在继续之前，您需要创建一个**Expression Parameters**资源，您可以在其中您模型上使用的所有自定义参数。
 
-![默认情况下表情参数的外观。](/img/avatars/animator-parameters/params-default.png)
+<!--![默认情况下表情参数的外观。](/img/avatars/animator-parameters/params-default.png)-->
 
 3. 在Assets文件夹中右键单击，选择`Create > VRC Scriptable Objects > Expression Parameters`。
 4. 打开`Expression Parameters`文件以自定义它。
@@ -34,7 +34,7 @@
 
 接下来，您应将这两个资源添加到您的`VRCAvatarDescriptor`中。
 
-![默认情况下表情参数的外观。](/img/avatars/animator-parameters/avatar-descriptor-params.png)
+<!--![默认情况下表情参数的外观。](/img/avatars/animator-parameters/avatar-descriptor-params.png)-->
 
 10. 选择您的`VRCAvatarDescriptor`并向下滚动到`Expressions`部分。
 11. 将“Menu”属性更改为您的表情菜单。
@@ -42,7 +42,7 @@
 
 在将这两个资源添加到您的`VRCAvatarDescriptor`之后，您可以在模型菜单中看见，并自定义所有模型参数。
 
-![默认情况下表情参数的外观。](/img/avatars/animator-parameters/menu-default.png)
+<!--![默认情况下表情参数的外观。](/img/avatars/animator-parameters/menu-default.png)-->
 
 13. 在检查器中，单击`Add Control`。一个菜单最多可以添加 8 个控件。
 14. 选择一个名称和[类型](/avatars/expression-menu-and-controls#types-of-controls)。

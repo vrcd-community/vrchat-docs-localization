@@ -131,6 +131,8 @@ title: "Physbones"
 
 #### Polar
 
+![](/creators.vrchat.com/images/avatars/physbones-824db3c-2022-04-19_11-51-22_Unity.gif)
+
 `Polar` 有点复杂。它就像用 `Hinge` 沿 `Yaw` 扫过一定角度得到的图形球段。您可以配置 `Max Pitch` 和 `Max Yaw` 来调整球段的大小，并使用 `Rotation` 来定义该段在球体上的位置。它的可视化可以帮助您更好的配置其选项。
 
 不要过度使用 `Polar` 限制，因为它们会产生一定的性能成本。大量使用它（超过64个）可能会导致一些问题。如果您的 `Max Pitch` 和 `Max Yaw` 值相似或相同，则考虑转用 `Angle` 限制，因为它在性能方面成本较低。
