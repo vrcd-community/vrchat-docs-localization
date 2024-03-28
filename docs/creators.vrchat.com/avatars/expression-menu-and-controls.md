@@ -2,7 +2,7 @@
 <!--标题需要再修改-->
 ::: warning 阅读本篇文章需要特定的前置知识
 
-您需要先了解 [Unity 动画控制器](https://docs.unity3d.com/cn/2019.4/Manual/class-AnimatorController.html) ，这样能帮助您更好的了解本文。
+您需要先了解 [Unity 动画控制器](https://.unity3d.com/cn/2019.4/Manual/class-AnimatorController.html) ，这样能帮助您更好的了解本文。
 
 :::
 
@@ -18,11 +18,11 @@
 3. 在Assets文件夹中右键单击，选择`Create > VRC Scriptable Objects > Expression Parameters`。
 4. 打开`Expression Parameters`文件以自定义它。
 
-    - 该资源默认包含[三个参数](https://creators.vrchat.com/avatars/animator-parameters/#default-av3-aliasing)（`VRCEmote`、`VRCFaceBlendH`、`VRCFaceBlendV`）。如果您用不到这些参数，则可以直接删除它们，
+    - 该资源默认包含[三个参数](/creators.vrchat.com/avatars/animator-parameters#vrchat-动画器默认参数)（`VRCEmote`、`VRCFaceBlendH`、`VRCFaceBlendV`）。如果您用不到这些参数，则可以直接删除它们，
 5. 输入您的参数名称。
     - 这些名称应与您的动画器中的参数匹配。
     - 您可以使用`/`对参数进行分类。例如，`Clothing/Hoodie`和`Clothing/Hat`。
-    - VRChat 有一些[内置参数](https://creators.vrchat.com/avatars/animator-parameters/#parameters)。您可以直接在动画器中使用它们，无需添加它们到您的`Expression Parameters`文件。
+    - VRChat 有一些[内置参数](/creators.vrchat.com/avatars/animator-parameters#模型动画参数列表)。您可以直接在动画器中使用它们，无需添加它们到您的`Expression Parameters`文件。
 6. 为每个参数选择一个类型。
 
     - `Int`范围为 0 - 255 。
@@ -45,9 +45,9 @@
 <!--![默认情况下表情参数的外观。](/img/avatars/animator-parameters/menu-default.png)-->
 
 13. 在检查器中，单击`Add Control`。一个菜单最多可以添加 8 个控件。
-14. 选择一个名称和[类型](/avatars/expression-menu-and-controls#types-of-controls)。
+14. 选择一个名称和[类型](/creators.vrchat.com/avatars/expression-menu-and-controls.md#controls-(操作控件)类型)。
 15. 您还可以在这里添加图标和子菜单，或更改控件的顺序。
-  - 您可以在`Packages\VRXhat SDK - Avatars\Samples\AV3 Demo Assets\Expressions Menu`中找到一些默认图标。
+  - 您可以在`Packages/VRXhat SDK - Avatars/Samples/AV3 Demo Assets/Expressions Menu`中找到一些默认图标。
 
 ### Controls (操作控件)类型
 
