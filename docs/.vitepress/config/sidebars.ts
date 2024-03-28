@@ -171,7 +171,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
       text: '虚拟形象', link: '/creators.vrchat.com/avatars/',
       collapsed: true,
       items: [
-        { text: 'Creating Your First Avatar', link: '/creators.vrchat.com/avatars/creating-your-first-avatar' },
+        { text: '创建您的第一个虚拟形象', link: '/creators.vrchat.com/avatars/creating-your-first-avatar' },
         {
           text: 'Avatar Dynamics', link: '/creators.vrchat.com/avatars/avatar-dynamics/',
           collapsed: true,
@@ -182,11 +182,12 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
           ],
         },
         { text: 'Impostors', link: '/creators.vrchat.com/avatars/avatar-impostors' },
-        { text: 'Animator Parameters', link: '/creators.vrchat.com/avatars/animator-parameters' },
+        { text: '动画器参数', link: '/creators.vrchat.com/avatars/animator-parameters' },
         { text: 'Avatar Optimization Tips', link: '/creators.vrchat.com/avatars/avatar-optimizing-tips' },
         { text: 'Performance Ranks', link: '/creators.vrchat.com/avatars/avatar-performance-ranking-system' },
         { text: 'Avatar Scaling', link: '/creators.vrchat.com/avatars/avatar-scaling' },
-        { text: 'Technical Considerations around Avatar Scaling', link: '/creators.vrchat.com/avatars/expression-menu-and-controls' },
+        { text: 'Technical Considerations around Avatar Scaling', link: '/creators.vrchat.com/avatars/avatar-scaling.md' },
+        { text: '模型菜单与控件', link:'/creators.vrchat.com/avatars/expression-menu-and-controls'},
         { text: 'Playable Layers', link: '/creators.vrchat.com/avatars/playable-layers' },
         { text: 'Rig Requirements', link: '/creators.vrchat.com/avatars/rig-requirements' },
         { text: 'Shader Blocking and Fallback System', link: '/creators.vrchat.com/avatars/shader-fallback-system' },

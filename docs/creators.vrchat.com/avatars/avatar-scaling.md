@@ -1,40 +1,35 @@
----
-title: "Avatar Scaling"
----
+# 模型缩放
 
-# Technical Considerations around Avatar Scaling
+模型缩放允许玩家通过缩放模型的大小，来更改其当前模型的高度。
 
-Avatar scaling allows players to change the height of their current avatar.
+本页面记录了 VRChat 模型缩放的工作原理，以便为开发社区资源提供有用的信息。
 
-This page documents how VRChat's avatar scaling works internally to the extent that may be useful for developing community resources around it.
+阅读[Avatar Events 文档](/creators.vrchat.com/worlds/udon/players/player-avatar-scaling) 或我们的[示例脚本](/creators.vrchat.com/worlds/examples/udon-example-scene/avatar-scaling-settings)以了解如何在 Udon 中使用模型缩放。
+阅读[模型动画参数](/creators.vrchat.com/avatars/animator-parameters#模型动画参数列表)页面，了解与缩放相关的可用模型参数。
 
-Read the [Avatar Events documentation](/creators.vrchat.com/worlds/udon/players/player-avatar-scaling) documentation or our [example script](/creators.vrchat.com/worlds/examples/udon-example-scene/avatar-scaling-settings) to learn how to use avatar scaling with Udon. 
-Read the [Avatar Parameters](/creators.vrchat.com/avatars/animator-parameters) page for available avatar parameters related to scaling.
+## 术语定义
 
+* **视角球高度**：模型姿势为 T-Pose 时，其视角球距离模型原点的 Y 轴垂直高度。
+* **预制体高度**：当缩放为默认值时，模型的视角球高度。您可以在 SDK 中 Avatar Descriptor 中的 Viewpoint 里更改这个值。
+* **目标视角球高度**：由玩家或 Udon 设置的，要缩放到的视角球高度。
+* **模型缩放比例**：目标视角球高度对预制体高度的比例。例如，如果目标视角球高度为 4.5 米，预制体高度为 1.5 米，则"模型缩放比例"为 3。
 
-## Term Definitions
+## 高度限制
 
-* **Eye Height**: The height above 0 (Y component in transform position) of an avatar's viewpoint while in a T-Pose.
-* **Prefab Height**: The eye height of an avatar when scaling is at its default value. This is what you configure in the SDK by placing the "View Position".
-* **Target Eye Height**: The eye height an avatar wants to be scaled to, as set by either the player or Udon.
-* **Avatar Scale**: The ratio between "Prefab Height" and "Target Eye Height". For example, if the target is 4.5 meters, and the prefab height is 1.5 meters, then "Avatar Scale" is 3.
+**预制体高度**不受限，因此您可以在 SDK 中，为模型视角球设置任意高度。但请注意，这种情况下您的**模型缩放比例**会影响您的性能等级。
 
-## Range of Values
+在 Udon 中，**目标视角球高度**高度限制的上下限分别为 100 米和 0.1 米，而在模型菜单中，它们分别为 5 米和 0.2 米。通过上传超出高度限制的模型 ，且*不在其菜单里使用*模型缩放功能，那么您的**目标视角球高度**不受限，且与您模型的**预制体高度**一致。
 
-The "Prefab Height" is not limited. You can put your avatar's "View Position" at any height in the SDK. Note, however, that your overall avatar scale will affect your performance rank.
+因此，您必须在世界的 Udon 脚本中的 “avatar eye height changed” 事件上重新应用缩放，以强制执行模型缩放。否则，玩家可以切换到上传时超出高度限制的模型，以绕过世界 Udon 的高度限制。
 
-The "Target Eye Height" is clamped between 0.1 and 100 meters for Udon, and the usable range of scaling in your Action Menu goes from 0.2 to 5.0 meters. But by uploading an avatar that is outside this range and _not_ using the scale dial, you can still exceed those limits. In that case, "Target Eye Height" will match "Prefab Height," which is not limited.
+您可以在 VRChat 网站中关闭世界的缩放功能，届时世界内玩家模型的**目标视角球高度**将始终与**预制体高度**一致。
 
-This restriction means that Udon _must_ re-apply scales on "avatar eye height changed" events to fully enforce scale. Otherwise, users can switch to shorter or taller avatars to bypass the limits put in place by the world.
+## 模型缩放的原理
 
-In worlds where scaling is disabled via the website, "Target Eye Height" will _always_ match "Prefab Height."
+模型缩放等同于更改玩家模型根变换的 "localScale（本地缩放）" 数值。**此类缩放是强制性的**。玩家除了利用模型缩放相关的 Udon 函数外，无法通过其他方式覆盖模型的根变换缩放。
 
-## How Scaling is Applied
+每当模型的缩放数值发生变化时（例如切换或重置/重新加载当前模型），将会重新定位您的视角球高度，并重新定位一些内部组件（例如您的声音位置）。
 
-Scaling an avatar works by changing the "localScale" of the avatar's root transform. **This scale is enforced**. There is no user-accessible way to override the scale of the root of an avatar other than the Udon functions relating to avatar scaling.
+定位完成后，您当前的视角球高度将作为 **EyeHeightAsMeters** 参数自动同步给每个远端玩家，精度为 3 个小数点。而当远端玩家接收到新的**EyeHeightAsMeters**参数时，会在短时间内将对应模型平滑缩放到**目标视角球高度**。
 
-Whenever the scale is changed (i.e., whenever you switch avatars, or reset/reload your current one), the avatar is "remeasured" locally. This process adjusts your viewpoint to match the new height and repositions a few internal components, such as your voice position.
-
-Scale is automatically synchronized for each player as "eye height", quantized to 3 decimal points. For remote users, scale changes are smoothed over a short period any time a new height is received.
-
-While using the scale dial in your Action Menu, your avatar is only scaled in mirrors. When confirming the scale on the dial, the new scale will instantly be applied to your avatar and then sent to remote users.
+当您在模型菜单中旋转模型高度转盘时，您的模型只在本地客户端的镜子中进行预览性的缩放。在确认目标缩放高度后，新的视角球高度将立即应用于您的玩家模型，并作为 **EyeHeightAsMeters** 参数同步给远端玩家。

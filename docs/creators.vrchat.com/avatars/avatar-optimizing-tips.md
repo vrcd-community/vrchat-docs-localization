@@ -1,128 +1,134 @@
----
-title: "Avatar Optimization Tips"
----
-
-# Avatar Optimization Tips
-
+# 模型优化技巧
+<!--考虑更换性能成本昂贵的说法-->
 ::: warning
 
-**This guide is not meant to be the end-all, be-all of avatar optimization!** Optimizing your avatar properly requires pretty wide knowledge of a ton of things. We don't expect everyone to know everything.
+本指南并不全面涵盖关于模型优化的全部内容！正确优化模型需要掌握广泛的，来自很多方面的知识。我们不指望每个人都了解这些全部的知识。
 
-However, we try our best to keep this document updated with the most common things people miss, and the most important targets to hit.
+当然，我们会尽力在这份文档中更新最常被忽视的优化事项和最重要的优化目标。
 
-If you have input on optimization tips, please use the **Suggest Edits** button in the top right and add your own!
+如果您有更多关于优化技巧的建议，请点击屏幕右侧的*查看原文*，并使用原官方页面的左下角的*编辑此页*按钮添加您自己的办法！
+<!--办法可能和VRC官网有出入，可能需要再更改-->
+<!--要不要换成到vrc官网的链接？-->
 :::
-Do you want your avatar to be efficient and be loved by everyone because of all the frames you're saving them? Follow these tips and you should be good!
+您想要您的模型性能高效，并因为提高了帧数而受大家喜欢吗？遵循以下技巧，您就可以做到这一点！
 
-Any recommended numbers or limits in this document are subject to change at any time. Although some of the descriptions provided below are not precise in a technical manner, this document is intended to assist novice users in learning how to optimize their avatars.
+本文档中的任何推荐数值或限制都可能随时更改。尽管下面提供的某些描述在技术上不够准确，但本文档旨在帮助新手玩家学习如何优化他们的模型。
 
-Community-created tools like [Cats Blender Plugin](https://github.com/michaeldegroot/cats-blender-plugin) (MIT license) allow users to very easily optimize their models and assist with common VRChat avatar problems. We strongly recommend using tools like this! It makes your job easier, and improves performance for all.
+像 [Cats Blender 插件](https://github.com/michaeldegroot/cats-blender-plugin)（MIT 许可证）这样的社区工具可以帮助玩家非常轻松地优化他们的模型，并帮助解决常见的 VRChat 模型问题。我们强烈推荐使用这样的工具！它可以让您的工作更轻松，并提高模型的性能表现。
 
-As a sidenote, the SDK's Build Control panel provides numbers of components on avatars to help with optimization.
+附注：SDK 的构建控制面板(Build panel)提供了有关模型组件数量的统计信息，以帮助进行优化。
 
-## Do not use Dynamic Bones!
-Dynamic Bones is a Unity Asset that you can purchase that allows you to define bones on your avatar's rig to move around as if they were hanging. You can also define static forces like gravity which can make hair fall more realistically. 
+## 避免使用 Dynamic Bones！
+Dynamic Bones （动态骨骼）是一种可购置的 Unity 资产，允许您在模型中定义可摆动的骨骼。您还可以对此赋予一些静态受力，如重力，以使头发下垂地更加逼真。
 
-Dynamic Bones is deprecated and will be removed eventually. Use [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) instead.
+Dynamic Bones 已被弃用，并会在将来被移除。请替用为 [PhysBones（物理骨骼）](/creators.vrchat.com/avatars/avatar-dynamics/physbones)。
 
-VRChat will automatically convert Dynamic Bones to PhysBones at runtime.
+VRChat 将在运行时自动将 Dynamic Bones 转换为 PhysBones。
 
-## Limit usage of Cloth
-Cloth is a default Unity component that has a similar cost to Dynamic Bones and is more difficult to set up. Limit your use of Cloth heavily, and do not apply it to meshes that have greater than 200 or so vertices.
+## 限制 Cloth（布料）使用量
+Cloth 是 Unity 的默认组件，其性能消耗与 Dynamic Bones 类似，但设置更加困难。请务必严格限制使用 Cloth 组件，且不要将其应用于有着 200 个或以上顶点的网格。
 
-## Reduce the amount of meshes on your avatar
-There's two types of Mesh Renderers that your avatar could have on it-- Static Mesh Renderers and Skinned Mesh Renderers. Static Meshes do not deform. Skinned Meshes, however, usually have rigs (bones) that tell the engine how to move and deform the mesh based on the position of the bones. These Skinned Meshes are significantly more expensive, and you should only have one skinned Mesh Renderer on your avatar. There is very little reason to have more than one-- most of the time, additional items can be built into the original model.
+## 限制模型上的网格数量
+您的模型上可能会有两种类型的网格渲染器 —— Static Mesh Renderer（静态网格渲染器） 和 Skinned Mesh Renderer（蒙皮网格渲染器）。Static Meshes （静态网格）不会形变。而 Skinned Meshes （蒙皮网格）通常配备有骨骼（bones），这些骨骼会告诉游戏引擎如何根据骨骼的位置移动和形变网格。这些 Skinned Meshes 的性能消耗更高，您的模型中应只配备一个带有 Skinned Mesh Renderer 的网格。您基本没有理由在模型上使用超过一个 Skinned Mesh Renderer —— 在大多数时候，新添加的其他物体网格可以被集成到初始模型网格中。
 
-On top of that, each additional mesh on your avatar incurs one or more additional "Draw Calls"-- essentially, time spent by your processor telling your graphics card to draw something on the screen.
+此外，您的模型上的每个额外网格都会产生一个或多个额外的“Draw calls（绘制调用）” —— 也就是处理器决定如何告诉显卡在屏幕上绘制内容 —— 这一过程所花费的时间。
 
-Therefore, **VRChat recommends that you have one Skinned Mesh Renderer at maximum, and 3 static mesh renderers at maximum.** Merging meshes together is very simple in Blender, and is shown in the Meshes video below.
+因此，**建议您最多只使用一个 Skinned Mesh Renderer 和最多 3 个 Static Mesh Renderer**。在 Blender 中将网格合并在一起非常简单，下面的网格优化视频会示范这个办法。
+<!--双人核对的目前位置-->
+最后，请确保模型中没有过多的三角面(Polygon)。如果您尝试上传的模型的三角面(Polygon)数超过 70,000（PC）或 20,000（Quest），SDK 会发出警告。通常情况下，即使对于十分细致的模型，您也很少需要这么多的多边形 —— 您可以尝试使用法线贴图进行烘焙，并通过简化或重拓扑来简化网格。
 
-Finally, ensure that you're not using an excessive amount of triangles. The SDK will warn you if you're trying to upload a model that exceeds 70,000 triangles for PC or 20,000 on Quest. It is very rare that you need even this many polygons for details-- look into baking a normal map and simplifying your mesh via decimation or retopology.
-
-Creating avatars for the Quest can be more challenging due to the reduced limits. The most effective optimization tends to occur during initial design and avatar creation. In other words, you're going to have problems if you try to take a 120,000 made-for-rendering model and squeeze it into 20,000 polygons. Don't make things harder than they have to be-- find a model that starts low! 20k is quite a large amount of leeway.
-
-Notably if you are using Cats Blender Plugin, it merges meshes automatically when you "Fix Model". **If you seperate meshes by Material or by Loose Parts using Cats to assist with decimation or editing, do not forget to merge the meshes again.** 
+由于限制较大，为 Quest 创建模型可能更具挑战性。最有效的优化往往发生在初始设计和创建模型过程中。换句话说，如果您尝试将一个为 3D 渲染用途而创建的， 有 120,000 个多边面的模型压缩到 20,000 个多边面中，您就会遇到问题。"如无必要，勿增实体" —— 您可以从一开始，就找一个面数相对没那么高的模型！
+<!--这里可以再优化-->
+需要注意的是，如果您使用的是 Cats Blender 插件，点击“修复模型”后，它会默认自动合并网格。**如果您使用 Cats ，并且您有根据材质或松散部件分离网格以辅助减面或编辑，请不要忘记在最后合并网格。**
 
 @[youtube](https://www.youtube.com/watch?v=1fco-G2j0Jg)
 
-## Reduce the amount of material slots you use
-Each additional material slot is also a draw call, which eats more processor time! If you have a lot of materials (more than 10), look into Texture Atlasing. With Community-created tools, atlasing is exceedingly easy. Check out the Materials video for more details.
+<!--需要替换成 B 站源-->
+## 减少模型上的材质槽(Material Slot)数量
+每个额外的材质槽也是一个 Drawcall，这将消耗更多的处理器时间！如果您有很多材质（超过 10 个），请考虑使用贴图集(Texture Atlases)。如果您使用社区创建的工具，就可以很容易地制作贴图集(Texture Atlases)。详细信息请参阅下文视频。
 
-As an aside, what is important is the number of **material slots on the Renderer components** in your avatar. If you have the same material in 20 slots, you still technically have 20 "materials". 
-
-This is due to the way that Unity splits meshes into submeshes. What really matters for performance is the number of submeshes created, which Unity creates based on Material slots.
+另外，重要的是您的模型中的渲染器组件上的 **材质槽数量**。如果您在 20 个槽位上使用用一个材质，那么这在代码层面上，仍然等同于使用 20 个“材质”，这是因为 Unity 会将网格拆分成不同的子网格，因此对于性能而言， Unity 基于材质槽而创建的子网格数量也是一个重要的影响方面。
 
 @[youtube](http://www.youtube.com/watch?v=5LwRi26RxSQ)
+<!--需要替换成 B 站源-->
+## 注意您的显存使用情况！
 
-## Watch your VRAM usage!
+即使您使用了贴图集(Texture Atlases)，您可能仍然会使用比之前更多的显存！
 
-Even if you use texture atlases, you might end end up using more VRAM than you did before!
+贴图占用显存。每个贴图的分辨率越高，它占用的显存就越多。不要使用多个高分辨率贴图，或通过减小 [Unity 的导入设置](https://docs.unity3d.com/cn/2019.4/Manual/class-TextureImporter.html) 中的最大尺寸(Max Size)参数来降低它们的尺寸。
 
-Textures eat up VRAM. The higher the resolution of each texture, the more VRAM it consumes. Avoid using several high-resolution textures, or reduce their size by reducing the "Max Size" parameter in [Unity's import settings](https://docs.unity3d.com/Manual/class-TextureImporter.html). 
+例如：不要被模型的下载大小所迷惑，如果使用效率低下的高分辨率贴图，一个 30 MB 的模型*可以*占用 3 GB 的显存！
 
-For example: A 30 MB avatar *can* use 3 GB of VRAM if it uses inefficient high-resolution textures. Don't be fooled by an avatar's download size.
+请查看 [Poiyomi 的贴图优化指南](https://www.poiyomi.com/blog/2022-10-17-texture-optimization)。这是一份关于如何优化您的模型贴图的，优秀而全面的指南。
 
-Check out [Poiyomi's Texture Optimization guide](https://www.poiyomi.com/blog/2022-10-17-texture-optimization). It's an excellent and comprehensive guide on how to optimize your avatar's textures.
+## 避免使用计算成本高的着色器
+一些着色器可能会导致 GPU 渲染时花费过多的时间。尽量使用 Unity 标准着色器或您知道的优化良好的着色器。如果您不知道如何判断着色器是否优化良好，没关系！以下是一些示例 —— 本文并非包含了所有可选择的着色器，但这些着色器都是经过精心制作和优化的，具有多种功能。
+  * [Xiexe 的“XSToon”Unity 着色器](https://github.com/Xiexe/Xiexes-Unity-Shaders)（MIT）- 用于 Unity 的一组 PBR 卡通着色器。
+  * [Silent 的着色器](https://gitlab.com/s-ilent/SCSS)（MIT）- 用于 Unity 的着色器，用于赛璐珞着色(cel shading)，最初是基于已停止更新的的 CubedParadox 的 Flat Lit Toon，具有许多有用的功能。
+  * [Poiyomi 的 Toon Shader](https://github.com/poiyomi/PoiyomiToonShader/releases)（MIT）- 功能非常强大的着色器，有很多选项。
 
-## Avoid expensive shaders
-Some shaders can cause excessive time spent rendering on the GPU. Try to stick with the Unity Standard shaders, or shaders that you know perform well. If you don't know how to tell if a shader is well-optimized, that's fine! Here are some examples-- these certainly aren't all the shaders available, but are all well-made and well-optimized with a variety of features.
-  * [Xiexe's "XSToon" Unity Shaders](https://github.com/Xiexe/Xiexes-Unity-Shaders) (MIT) - A collection of PBR 'Toon' shaders for Unity.
-  * [Silent's Shaders](https://gitlab.com/s-ilent/SCSS) (MIT) - Shaders for Unity for cel shading, originally based off the discontinued CubedParadox's Flat Lit Toon, featuring a number of handy features.
-  * [Poiyomi's Toon Shader](https://github.com/poiyomi/PoiyomiToonShader/releases) (MIT) - A very robust, powerful shader with a lot of options. 
+### 减少过多的着色器通道（Shader Passes）
+更技术性地说，您应当避免使用过多的着色器通道。这会产生额外的 Draw calls (绘制调用)。这一点可能会让大多数玩家担心过于繁琐，因此，如果您坚持使用常用的和经过验证的社区着色器，就基本足够了。
+::: info 译者注
+着色器通道是着色器程序的单独部分，它们在渲染管线的特定阶段执行，并可用于创建各种渲染效果,例如:
+- 阴影映射通道可用于给对象添加阴影。
+- 灯光通道可用于照亮对象。
+- 纹理通道可用于将纹理渲染到对象。
 
-### Minimize Excess Shader Passes
-Speaking more technically, you want to avoid shaders that have excess shader passes. This incurs additional draw calls. This might be a bit too much for most users to worry about, so if you stick with commonly used and proven community shaders, that should suffice.
+您也可参阅 [Unity 的 Pass 文档](https://docs.unity3d.com/cn/2019.4/Manual/SL-Pass.html)来进一步理解这个概念。
+:::
 
-### Avoid Tessellation
-**You should always avoid using shaders on avatars that use Tessellation.** This is very common in "fur" shaders. [Tessellation](https://en.wikipedia.org/wiki/Tessellation_%28computer_graphics%29) is a method by which your graphics card can take meshes and subdivide them for various effects. However, this effect is **extremely expensive** and will slow down even the most powerful of graphics cards. **Do not use shaders with tessellation effects.** If you want a fur effect, consider looking into shaders that reproduce the effect without tessellation, such as [XSFur](https://xiexe.booth.pm/items/1084711) and [Warren's Fast Fur Shader](https://warrenwolfy.gumroad.com/l/atntv).
+<!--需要专业认识-->
+### 避免使用曲面细分(Tessellation)
+**您应该始终避免在模型上使用需曲面细分的着色器。** 而这一功能在毛皮(Fur)着色器中非常常见。[曲面细分](https://en.wikipedia.org/wiki/Tessellation_%28computer_graphics%29) 是一种方法，您的显卡可以使用它来对网格进行细分以实现各种效果。然而，这种效果**计算成本十分巨大**，即使您使用旗舰级显卡，也难逃卡顿。**因此不要使用具有曲面细分效果的着色器。** 如果您想要毛皮效果，请考虑寻找不使用曲面细分的着色器，例如 [XSFur](https://xiexe.booth.pm/items/1084711) 和 [Warren 的 Fast Fur Shader](https://warrenwolfy.gumroad.com/l/atntv)。
+<!--tessellation优先级需要考量，wiki引用需要替代-->
+### Keywords (关键字)
+您还应避免使用过多的着色器关键字（Shader Keywords）。这会导致 VRChat 中的渲染画面出现严重且不可预测的问题，并在输出日志中填充大量冗余的错误消息。您的着色器中不需要包含过多的着色器关键字，所以请仅使用那些您所需的关键字。
 
-### Keywords
-You should also avoid shaders that use excessive amounts of shader keywords. This can cause serious and unpredictable issues with rendering your view in VRChat, and will fill your output log with a lot of redundant error messages. There is no need to include excessive shader keywords in your shader, so please only use the ones that are required for the features you are targeting.
+#### 清除 Keywords (关键字)
+当您更改或升级着色器时，请确保从材质中删除旧的未使用的关键字。使用过多的关键字对性能和优化非常不利。它不仅会导致您自己的模型出现问题，还可能阻止其他人正确地看见**所有的着色器**渲染的画面。
 
-#### Clearing Keywords
-When you change or upgrade your shader, ensure that you remove old, unused keywords from your materials. Having excessive keywords in use is very bad for performance and optimization. Not only will it cause issues with your own avatar, but it may prevent others from seeing **all shaders** properly.
+VRChat SDK 包含一个工具，可以删除模型上材质含有的关键字。这个工具也会删除您所需要的关键字，所以请谨慎使用！
 
-The VRChat SDK contains a tool to remove keywords from materials on your avatar. This tool can also remove keywords you need, so be careful!
+通常，最好使用这个工具检查关键字数量 —— **如果关键字太多，您可能需要换到另一个着色器。** 这种情况下吗，您需要将材质切换到标准着色器，清除关键字，然后再切换到新的着色器。
 
-Usually, it is best to check the keywords with this tool-- **if you've got too many keywords, you probably need to find another shader.** Swap to Standard, clear keywords, then swap to your new shader. 
+#### 着色器作者，请注意
+您可能希望使用标准着色器保留的关键字作为您自己的关键字。这些关键字已经被保留，因此如果您必须使用这些关键字，请使用标准着色器和后处理(Post Processing) V2 已定义的关键字。这是一个推荐使用的[关键字列表](https://pastebin.com/83fQvZ3n)。
 
-#### Note for Shader Authors
-You may want to consider using the keywords reserved by the Standard shader as your own keywords. These are essentially guaranteed to already be reserved, so if you must use keywords, use the ones already defined by Standard and Post Processing v2. Here's a [list of recommended keywords to use](https://pastebin.com/83fQvZ3n).
+### Alpha 透明度
+Alpha 透明度也是着色器中计算成本大的部分 —— 通常情况下，您希望在着色器上使用 Cutout 或 Opaque 模式。透明度可能会相当耗费性能，因此只有在您知道自己在做什么时才使用它！
 
-### Alpha Transparency
-Alpha transparency is also another expensive part of shaders-- typically you want to be using Cutout or Opaque modes on shaders. Transparency can be quite expensive, so only use it if you know what you're doing! 
+### 计算 Draw calls
+Unity Profiler 在评估您产生了多少 Draw calls 时非常有用 —— 您只需确保在 Directional Light (平行方向光)上关闭阴影，以保持公平竞争的环境。
+<!--需要重新确认一下这里的含义-->
+## 减少骨骼数量
+即使您的围巾、裙子或头发中有许多未被使用的骨骼，它们也会在调用并绘制蒙皮(Skinning calls)期间产生额外的性能成本，让您的 GPU 产生对应负担。如果您不打算使用某个骨骼，请考虑删除该骨骼并将其合并到父骨骼中。如果您想知道如何将骨骼的权重合并到其父骨骼中，请查看上面关于 Dynamic Bones 的视频，其中包含骨骼合并的部分。
 
-### Measuring Draw Calls
-The Unity Profiler can be very useful when judging for how many draw calls you're incurring-- just make sure you turn off shadows on your Directional Light for a level playing field.
+## 减少 Emission (发光)量/Particle System(粒子系统)数量
+尽管粒子系统可能会产生很多很酷的效果，但使用过多的粒子系统可能会导致某些电脑出现问题。你最好限制您使用的粒子系统数量，并限制在某一时刻最多发射的粒子数量。
 
-## Reduce the amount of bones
-Even if you have a bunch of bones sitting in a scarf, skirt, or your hair that you're not using for anything, they can incur additional costs during skinning calls that your GPU has to worry about. If you're not going to use a bone, consider deleting the bone and merging it into the parent bone. If you want to know how to merge the weights of a bone into its parent, check out the video on Dynamic Bones above, which includes a part on bone merging.
+当然，也有办法使用大量粒子的粒子系统同时保持性能。如果您对此感兴趣，请尝试了解关于 Sprite particle(精灵粒子)的动态批处理(dynamic batching)，不要开启碰撞(collision)功能，并确保您的粒子的移动轨迹不会过于复杂。
 
-## Reduce the emission amount/amount of particle systems
-Although particle systems can result in a lot of cool effects, having excessively large amounts of them can cause issues for some PCs. Limit the number of particle systems that you're using, and limit the maximum amount of particles emitting at any one given moment.
+如果您对技术方面较为了解，可以尝试查看 Unity 的 Profiler 窗口，以判断您的粒子模拟所花费的 CPU 时间有多少。一般来说，大尺寸的透明粒子比许多较小的不透明粒子性能消耗更糟糕。Unity 的 Particle System (粒子系统)实际上优化十分良好，如果**使用得当**，那么它的运行速度就会很快。
 
-There are ways to have particle systems with large numbers of particles and retain performance. If you are interested in this, look into dynamic batching for sprite particles, don't use collision, and ensure the movement of your particles is simplistic.
+## 限制模型使用的灯光 (Light 组件)数量
+模型上的灯光是实时的，因此性能成本非常昂贵。在模型上添加灯光意味着，您的灯光照射范围的所有物体渲染时会有**双倍的 Draw calls**。额外的灯光会导致 Draw calls 倍增。这显然*会显著影响性能*。不要使用一直开着的灯光。尝试使用一个动画来打开和关闭手电筒，或者干脆不使用灯光。
 
-If you're more technically inclined, you can try looking into Unity's Profiler view to judge how much CPU time your particle simulation is taking. Generally speaking, large transparent particles are worse than a lot of smaller, opaque ones. Unity's Particle System is actually quite optimized and runs quickly *if used well.*
+如果您确实要使用灯光，请关闭灯光的阴影。实时灯光上的阴影的性能成本非常昂贵，并且在移动的物体上表现效果不佳。
 
-## Limit the number of Lights your avatar uses
-Lights on avatars are real-time, and as such, are exceedingly expensive. Adding a light to your avatar means that everything that your Light touches will render with *double* the draw calls. Additional lights multiply the effect. This is obviously *very bad for performance.* Do not use Lights that are always on. Try using an Animation Override to turn a flashlight on and off, or alternately, do not use Lights at all.
+粒子系统可以配置成在一定数量的粒子上打开灯光。**但是请切勿这样做**！因为每个带有灯光的粒子都会计为实时灯光，带来严重的性能消耗。
 
-If you do use a Light, turn off Shadows for the Light. Shadows on Realtime lights are VERY expensive and often don't look that great on something that moves around.
+**总的来说，VRChat 建议您完全不要在模型上使用任何类型的灯光。**它们不仅会对您自己的模型的性能造成不利影响，还会将光线照射到的其他模型的性能开销乘以倍数。
 
-Particle Systems can be configured to have a light on for a number of particles. *Never do this!* Each particle with a light counts as a real-time light, which is (once again) extremely expensive.
+## 推荐的软件/插件
+有很多软件可供您优化模型，并使创建模型变得更容易。
 
-**In total, VRChat recommends that you do not use Lights of any type on avatars at all.** Not only do they adversely affect your own avatar's performance, they multiply performance cost of avatars the light is hitting as well.
-
-## Recommended Software/Plugins
-There's a large amount of software available to help you optimize your avatar and make it easier to build avatars. 
-
-For example, check out [Pumkin's Avatar Tools](https://github.com/rurre/PumkinsAvatarTools) (MIT) for the Unity Editor. Among other things, this Editor script allows you to quickly see stats on your avatars. This tool is in beta, and may have bugs-- please report any issues on Pumkin's GitHub.
-
-The following software has not been authored by VRChat. Please read and respect the licensing provided with each individual product.
+例如，使用 Unity 编辑器时，来看看 [Pumkin's Avatar Tools](https://github.com/rurre/PumkinsAvatarTools)（MIT）。此编辑器脚本可以让您快速查看模型的统计信息，以及有一些其他功能。此工具处于测试版，可能存在错误，如果有，请在 Pumkin 的 GitHub 上报告这些错误。
+<!--以下插件需要更新信息-->
+以下软件不由 VRChat 团队制作。请阅读并尊重每个个别产品附带的许可证。
 
 - [Unity](/creators.vrchat.com/sdk/upgrade/current-unity-version) 
 - [Blender](https://blender.org)
-- [Cats Blender Plugin](https://github.com/absolute-quantum/cats-blender-plugin)
-- [Shotariya's Material Combiner](https://github.com/Grim-es/material-combiner-addon)
+- [Cats Blender 插件](https://github.com/absolute-quantum/cats-blender-plugin)
+- [Shotariya 的 Material Combiner](https://github.com/Grim-es/material-combiner-addon)
 - [Pumkin's Avatar Tools](https://github.com/rurre/PumkinsAvatarTools)
