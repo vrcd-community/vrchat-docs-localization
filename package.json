@@ -12,11 +12,11 @@
   "devDependencies": {
     "@mdit/plugin-align": "^0.8.0",
     "@mdit/plugin-figure": "^0.8.0",
-    "@tsconfig/node18": "^18.2.2",
+    "@tsconfig/node18": "^18.2.4",
     "@types/imagemin-gifsicle": "^7.0.4",
     "@types/imagemin-svgo": "^10.0.5",
     "@types/markdown-it-footnote": "^3.0.4",
-    "@types/node": "^20.11.20",
+    "@types/node": "^20.12.4",
     "@vheemstra/vite-plugin-imagemin": "^2.0.0",
     "@vite-pwa/vitepress": "^0.4.0",
     "@vrcd-community/markdown-it-video": "^1.1.1",
@@ -33,10 +33,10 @@
     "markdown-it-mark": "^4.0.0",
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0",
-    "sharp": "^0.33.2",
+    "sharp": "^0.33.3",
     "svgo": "^3.2.0",
-    "vite-plugin-pwa": "^0.19.0",
-    "vitepress": "^1.0.0-rc.44",
+    "vite-plugin-pwa": "^0.19.7",
+    "vitepress": "^1.0.2",
     "vue-draggable-resizable": "^3.0.0"
   }
 }
