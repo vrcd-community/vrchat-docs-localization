@@ -1999,20 +1999,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdit/plugin-figure@npm:^0.8.0":
-  version: 0.8.0
-  resolution: "@mdit/plugin-figure@npm:0.8.0"
-  dependencies:
-    "@types/markdown-it": "npm:^13.0.7"
-  peerDependencies:
-    markdown-it: ^14.0.0
-  peerDependenciesMeta:
-    markdown-it:
-      optional: true
-  checksum: 4a3cd9595fed99deb07d0551e125b74e4c8266b172cb55c735ad82f5628bf285a4f98630d81c4a3eacc265ed3c912cf323e1a65b3750f50f904ab02345f827b3
-  languageName: node
-  linkType: hard
-
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -5588,6 +5574,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-it-image-figures@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "markdown-it-image-figures@npm:2.1.1"
+  peerDependencies:
+    markdown-it: "*"
+  checksum: e5f41d63427197d7d66101e484cfbf8b402c6498d47c6ecca4f52114e2630a48f43bbc4fb63e0de143fa6b8259a4d67fbf4ab18e989d702e5f784484c820fd56
+  languageName: node
+  linkType: hard
+
 "markdown-it-mark@npm:^4.0.0":
   version: 4.0.0
   resolution: "markdown-it-mark@npm:4.0.0"
@@ -5627,6 +5622,13 @@ __metadata:
   version: 2.0.30
   resolution: "mdn-data@npm:2.0.30"
   checksum: e4944322bf3e0461a2daa2aee7e14e208960a036289531e4ef009e53d32bd41528350c070c4a33be867980443fe4c0523518d99318423cffa7c825fe7b1154e2
+  languageName: node
+  linkType: hard
+
+"medium-zoom@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "medium-zoom@npm:1.1.0"
+  checksum: e27692851ce65f03877a1c9f56de16a2c10ea720278b47f06b8a0ff503cef91762e683790d2b7bd3e9136fff36bf4f583e677173f0f0c4070a391a5d849ebbcd
   languageName: node
   linkType: hard
 
@@ -7851,7 +7853,6 @@ __metadata:
   resolution: "vrchat-docs-localization@workspace:."
   dependencies:
     "@mdit/plugin-align": "npm:^0.8.0"
-    "@mdit/plugin-figure": "npm:^0.8.0"
     "@tsconfig/node18": "npm:^18.2.4"
     "@types/imagemin-gifsicle": "npm:^7.0.4"
     "@types/imagemin-svgo": "npm:^10.0.5"
@@ -7870,9 +7871,11 @@ __metadata:
     markdown-it-abbr: "npm:^2.0.0"
     markdown-it-block-embed: "npm:^0.0.3"
     markdown-it-footnote: "npm:^4.0.0"
+    markdown-it-image-figures: "npm:^2.1.1"
     markdown-it-mark: "npm:^4.0.0"
     markdown-it-sub: "npm:^2.0.0"
     markdown-it-sup: "npm:^2.0.0"
+    medium-zoom: "npm:^1.1.0"
     sharp: "npm:^0.33.3"
     svgo: "npm:^3.2.0"
     vite-plugin-pwa: "npm:^0.19.7"
