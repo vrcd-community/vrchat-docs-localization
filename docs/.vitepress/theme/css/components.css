@@ -43,3 +43,11 @@ figcaption {
 .vp-doc img {
   margin: 0 auto;
 }
+
+.medium-zoom-overlay {
+  z-index: 9990 !important;
+}
+
+.medium-zoom-image {
+  z-index: 9999 !important;
+}

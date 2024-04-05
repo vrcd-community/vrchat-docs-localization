@@ -20,3 +20,9 @@
   --vp-button-brand-hover-text: var(--vp-c-black);
   --vp-button-brand-active-text: var(--vp-c-black);
 }
+
+.vp-doc.container {
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
