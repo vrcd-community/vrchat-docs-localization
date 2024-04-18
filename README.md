@@ -121,15 +121,15 @@
 <!-- LICENSE -->
 ## 许可证、商标与版权
 
-在 VRChat 汉化文档页面中提及、使用或引用的所有商标、服务商标、集体商标、版权、人格权或类似权利均归其各自的拥有者所有。VRChat 汉化文档中心与上述权利的所有者之间不存在任何认可（endorse）、附属（affiliate）或其他形式的关联。
+在 VRChat 汉化文档页面中提及、使用或引用的所有商标、服务商标、集体商标、版权、人格权或类似权利均归其各自的拥有者所有。VRChat 汉化文档中心与上述权利的所有者之间不存在认可（endorse）、附属（affiliate）或任何其他形式的关联。
 
-本项目中使用的所有图片，媒体源均来自于 VRChat .Inc 及其出品的游戏软件 VRChat 中，版权和所有权均为其拥有者所有。
+本项目中使用的所有媒体文件(图片等)均来自于 VRChat .Inc 及其出品的游戏软件 VRChat 中，版权和所有权均为其拥有者所有。
 
 汉化后文档文本在 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) 下分发，详细请见仓库内 `LICENSE` 文件。代码在 MIT 许可证下分发，详细请见仓库内 `LICENSE-CODE` 文件
 
 All trademarks, service marks, collective marks, copyrights, personality rights, or similar rights mentioned, used, or referenced on the VRChat 汉化文档中心 are the property of their respective owners, and VRChat 汉化文档中心 is not endorsed, affiliated, or otherwise associated with the owners of such rights.
 
-All images and media sources used in this project are from VRChat Inc. and its game software VRChat, and are copyrighted and owned by their respective owners.
+All media sources used in this project are from VRChat Inc. and its game software VRChat, and are copyrighted and owned by their respective owners.
 
 The translated text is distributed under the [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, see the `LICENSE` file in the repository for details. The code is distributed under the MIT license, see the `LICENSE-CODE` file in the repository.
 
