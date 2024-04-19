@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: apperry/action-cached-lfs-checkout@c0616236fe56259b047ba97925bad9d8b644be88
 
       - name: Install Deno
         uses: denoland/setup-deno@v1
@@ -38,5 +38,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "vrchat-docs-localization"
-          entrypoint: "https://deno.land/std@0.220.1/http/file_server.ts"
+          entrypoint: "deno_server/deno_web_server.ts --no-dir-listing --no-cors --no-dotfiles"
           root: "docs/.vitepress/dist"
