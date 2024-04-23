@@ -20,14 +20,14 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
     - 您也可以在 [这里](https://vcc.docs.vrchat.com/) 查看 创作者助手 的文档
 
 :::note
-如果您想构建 Quest 上的内容，可以来看看这个： [在Unity中构建Quest内容](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content).
+如果您想构建 Quest 上的内容，可以来看看这个： [在Unity中构建Quest内容](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content)。
 :::
 
 2. 在安装窗口中继续。安装位置将默认为 `:\Users\UserName\AppData\Local\Programs` ，但您可以根据需要更改此位置。
 
-3. 创作者助手会在安装后自动启动. 如果没有启动，可以尝试在Windows的搜索栏中输入 **Creator Companion** 找到它。
+3. 创作者助手会在安装后自动启动。 如果没有启动，可以尝试在Windows的搜索栏中输入 **Creator Companion** 找到它。
 
-4. 点击 **Create New Project** 按钮.
+4. 点击 **Create New Project** 按钮。
 
 5. 选择您要创建 **虚拟形象** 还是 **世界**
 
@@ -39,7 +39,7 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 
 ## 打开您的项目
 
-现在，您可以打开您的项目了！在创建完项目后, 会跳转到一个新的页面，您可以点击 **Open Project** 按钮打开您的项目。也可以在左侧的侧边栏中点击 **Projects** 访问您的项目.
+现在，您可以打开您的项目了！在创建完项目后, 会跳转到一个新的页面，您可以点击 **Open Project** 按钮打开您的项目。也可以在左侧的侧边栏中点击 **Projects** 访问您的项目。
 
 如果您的项目没有被列出，您可以点击 **Create New Project** 旁边的下拉框，然后点击 **Add Existing Project**。
 
@@ -51,7 +51,7 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 2. 前往 `VRChat SDK > Show Control Panel > Authentication`。
 
 3. 登录您的 VRChat 账号。上传世界和虚拟形象必须登录账号。
-    - 您需要拥有一个等级至少为 "New User" [Trust Rank](/docs.vrchat.com/docs/vrchat-safety-and-trust-system) 的账号才可以上传内容。您不能使用 Steam、Oculus 或 Viveport 账号上传内容。
+    - 您需要拥有一个等级至少为 “New User” [Trust Rank](/docs.vrchat.com/docs/vrchat-safety-and-trust-system) 的账号才可以上传内容。您不能使用 Steam、Oculus 或 Viveport 账号上传内容。
 
 ## 改为使用 Unity Hub
 
@@ -61,8 +61,8 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 
 在 Unity Hub 中创建项目:
 <!-- 这里原文是 or just the editor, if you chose to go that route 没太看懂，that route 指的是什么？-->
-* 打开 Unity Hub (或者直接启动 Unity Editor).
-* 创建一个新项目, **选择 3D项目，然后保存它**.
+* 打开 Unity Hub (或者直接启动 Unity Editor)。
+* 创建一个新项目, **选择 3D项目，然后保存它**。
 * 不要使用 HDRP 或 URP，VRChat不使用它们。
 
 使用 Unity Hub 打开项目:
@@ -79,4 +79,4 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 
 您的项目已准备就绪！您可以查看 [创建世界](/creators.vrchat.com/worlds/) 或 [创建虚拟形象](/creators.vrchat.com/avatars/)。
 
-如果您遇到了任何问题, 即使是一个空项目, 也可以联系我们的 [支持团队](https://vrch.at/support).
+如果您遇到了任何问题, 即使是一个空项目, 也可以联系我们的 [支持团队](https://vrch.at/support)。
