@@ -53,7 +53,7 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 3. 登录你的 VRChat 账号。上传世界和虚拟形象必须登录账号。
     - 你需要拥有一个等级至少为 "New User" [Trust Rank](/docs.vrchat.com/docs/vrchat-safety-and-trust-system) 的账号才可以上传内容。你不能使用 Steam、Oculus 或 Viveport 账号上传内容。
 
-## 改为使用Unity Hub
+## 改为使用 Unity Hub
 
 虽然我们不推荐这样做，但如果你想自己安装 Unity 而不使用创作者助手，可以查看[当前支持的Unity版本](/creators.vrchat.com/sdk/upgrade/current-unity-version)页面，并使用 Unity Hub 安装 VRChat 当前支持的 Unity 版本。
 
