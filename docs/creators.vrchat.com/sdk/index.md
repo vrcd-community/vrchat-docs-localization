@@ -11,10 +11,10 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 
 **创作者助手** 会同时下载并安装虚拟形象和世界的SDK，并且还会安装和管理 Unity！Unity 是 VRChat 所使用的游戏引擎，也是您需要用来创建所有内容的引擎。
 
-这是创建一个项目的最简单方式，我们强烈推荐使用它！如果您不这样做，您将需要在后面进行更多步骤，而且您的项目可能会更加容易出错。
+这是当下创建一个项目最简单的方式，强烈推荐使用！不这样做则会让您在之后走更多的步骤，您的项目也可能会更加容易出错。
 
 ## 您的第一个项目
-对于我们的第一个项目，我们假设您正在为 Windows PC 构建内容。
+针对第一个项目，我们预先假设您正在构建一个 Windows PC 内容。
 
 1. 点击 [这里](https://vrchat.com/download/vcc) 下载创作者助手
     - 您也可以在 [这里](https://vcc.docs.vrchat.com/) 查看 创作者助手 的文档
@@ -39,7 +39,7 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 
 ## 打开您的项目
 
-现在，您可以打开您的项目了！在创建完项目后, 会跳转到一个新的页面，您可以点击 **Open Project** 按钮打开您的项目。也可以在左侧的侧边栏中点击 **Projects** 访问您的项目。
+现在您就可以打开这个新项目了！在创建完项目后，创作者助手会跳转到一个新的页面，您可以点击 **Open Project** 按钮打开您的项目。也可以在左侧的侧边栏中点击 **Projects** 浏览项目。
 
 如果您的项目没有被列出，您可以点击 **Create New Project** 旁边的下拉框，然后点击 **Add Existing Project**。
 
@@ -62,7 +62,7 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 在 Unity Hub 中创建项目:
 <!-- 这里原文是 or just the editor, if you chose to go that route 没太看懂，that route 指的是什么？-->
 * 打开 Unity Hub (或者直接启动 Unity Editor)。
-* 创建一个新项目, **选择 3D项目，然后保存它**。
+* 创建一个新项目, **选择 3D 模板，然后保存它**。
 * 不要使用 HDRP 或 URP，VRChat不使用它们。
 
 使用 Unity Hub 打开项目:
@@ -73,10 +73,10 @@ description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 - 如果您在为 Quest 平台构建内容，则需要选择目标平台为 Android，具体可以参考文档：[Android](/creators.vrchat.com/platforms/android/)。
 - 将项目保存在空间较大的大容量硬盘中。Unity 项目可能会很大，尤其是在使用版本管理软件的情况下。
 - 不要将一个项目用于大量不同的虚拟形象或世界。这样做会让未来的迁移工作变得非常麻烦！
-- 如果您知道如何使用版本控制软件，如 [Git](https://git-scm.com/) 或 [Plastic SCM](https://www.plasticscm.com/)，请使用它们！它们能让您很容易地回滚那些破坏您项目的更改。
+- 如果您知道如何使用版本控制软件，如 [Git](https://git-scm.com/) 或 [Plastic SCM](https://www.plasticscm.com/)，建议使用它们！这些软件能够帮您快速撤回那些破坏您项目的更改。
 
 ### 下一步是什么？
 
 您的项目已准备就绪！您可以查看 [创建世界](/creators.vrchat.com/worlds/) 或 [创建虚拟形象](/creators.vrchat.com/avatars/)。
 
-如果您遇到了任何问题, 即使是一个空项目, 也可以联系我们的 [支持团队](https://vrch.at/support)。
+如果您在此过程中遇到任何问题，即使问题出在空项目上，您也可以 联系我们的 [支持团队](https://vrch.at/support)。
