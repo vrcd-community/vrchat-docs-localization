@@ -1,6 +1,6 @@
 ---
-title: "Getting Started"
-description: "Learn how to create a Unity project for VRChat worlds or avatars"
+title: "快速开始"
+description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
 ---
 
 # 快速开始
