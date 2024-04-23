@@ -25,37 +25,37 @@
 ## 模型动画参数列表
 
 <!--暂时忽略 Expression1-16-->
-| 名称 | 描述 | 数值类型 | 同步类型 | 参数类型 |
-| -- | -- | -- | -- | -- |
-| VelocityX | 横向移动速度（米/秒） | Float | IK | 预设 |
-| VelocityY | 纵向移动速度（米/秒） | Float | IK | 预设 |
-| VelocityZ | 前向移动速度（米/秒） | Float | IK | 预设 |
-| AngularY | Y 轴（垂直于地面的轴）上的角速度 | Float | IK | 预设 |
-| Grounded | 如果模型的脚部接触到地面，则为 `True`，反之则为`false` | Bool | IK | 预设 |
-| AFK | 如果玩家暂时不在游戏中（当头显未检测到人体或您已按下 End 键时），则为 `True` | Bool | IK | 预设 |
-| Upright | 您的身体直立程度。0 表示卧倒，1 表示完全直立于地面 | Float | IK | 预设 |
-| [TrackingType](#trackingtype-parameter) | 请参阅下文描述 | Int | Playable | 预设 |
-| VRMode | 如果玩家处于 VR 模式中，则为 `1`；反之则为 `0` | Int | IK | 预设 |
-| MuteSelf | 如果玩家关闭了自己的语音开关，则为 `true`；反之则为 `false` | Bool | Playable | 预设 |
-| Voice | 当前麦克风音量（`0.0-1.0`）| Float | Speech | 预设 |
-| Earmuffs | 如果玩家已打开耳罩功能，则为 `true`；反之则为 `false` | Bool | Playable | 预设 |
-| VelocityMagnitude | 模型当前总移动速度（矢量）的大小 | Float | IK | 预设 |
-| ScaleFactor        | 当前模型高度与默认高度之间的比例。例如当默认视角球高度为 1 米的模型缩放到 2 米时，将表现为`2`                                            | Float | Playable | 预设 |
-| ScaleFactorInverse | 当前模型高度与默认高度之间的倒数比例（`1/x`）。例如当默认视角球高度为 1 米的模型缩放到 2 米时，这个参数的值为 `0.5`。该参数值在极端情况下可能不准确。  | Float | Playable | 预设 |
-| ScaleModified      | 如果玩家缩放了当前模型，则为 `true`；反之，则为 `false`                                                          | Bool  | Playable | 预设 |
-| EyeHeightAsPercent | 模型的视角球高度与默认缩放限制（`0.2`-`5.0`）之间的关系。例如当模型缩放为 2 米，那么这个参数的值是 `(2.0 - 0.2) / (5.0 - 0.2)` = `0.375`                  | Float | Playable | 预设 |
-| EyeHeightAsMeters  | 当前模型的视角球高度（以米为单位）。                                                                                | Float | Playable | 预设 |
-| IsOnFriendsList | 如果查看模型的玩家与使用模型的玩家互为好友，则为 `true`。如果是其他情况，则向模型为 `false`<!--需要更好的解释--> | Bool | 其他 | 预设 |<!--讨论：https://github.com/vrcd-community/vrchat-docs-localization/discussions/68-->
-| [Viseme](#viseme-参数值解释列表) | 表示口型，大小范围为`0-14`。当模型的 Viseme 模式使用 Jawbone/Jawflap 时，则表示您的当前麦克风音量，大小范围为 `0-100`。 <!--暂时换回Speech，等待更合理的解释-->| Int | Speech | 预设 |
-| [GestureLeft](#gestureLeft-和-gestureRight-参数值解释列表) | 左手当前手势，范围为 `0-7`| Int | IK | 预设 |
-| [GestureRight](#gestureLeft-和-gestureRight-参数值解释列表) | 右手当前手势，范围为 `0-7`| Int | IK | 预设 |
-| GestureLeftWeight | 左手手柄的扳机按压幅度，0.0 表示不按下扳机，1.0 表示完全按下扳机 | Float | Playable | 预设 |
-| GestureRightWeight | 右手手柄的扳机按压幅度，0.0 表示不按下扳机，1.0 表示完全按下扳机 | Float | Playable | 预设 |
-| Seated | 如果模型已就座（姿态处于 Seated 状态），则为 `True` | Bool | IK | 预设 |
-| InStation | 如果玩家在 VRCStation 中，则为 `True`；如果不在 VRCStation 中，则为 `false` | Bool | IK | 预设 |
-| IsLocal | 如果该模型是由本地玩家（您自己）使用的，则为 `True`；否则为 False | Bool | 无同步 | 预设 |
-| [AvatarVersion](/creators.vrchat.com/worlds/components/vrc_station#sdk3-station-with-sdk2sdk3-avatar) | 如果该模型上传时，SDK 版本在 2020.3.2 后，则为 `3`，反之则为 `0`  | Int | IK | 预设 |
-| 任意名称 | 玩家自定义模型参数(Expression Parameters) | Bool，Int 或 Float | IK 或 Playable | 玩家 |
+| 名称                                                                                                  | 描述                                                                                                                                                            | 数值类型           | 同步类型       | 参数类型 |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------- | -------- |
+| VelocityX                                                                                             | 横向移动速度（米/秒）                                                                                                                                           | Float              | IK             | 预设     |
+| VelocityY                                                                                             | 纵向移动速度（米/秒）                                                                                                                                           | Float              | IK             | 预设     |
+| VelocityZ                                                                                             | 前向移动速度（米/秒）                                                                                                                                           | Float              | IK             | 预设     |
+| AngularY                                                                                              | Y 轴（垂直于地面的轴）上的角速度                                                                                                                                | Float              | IK             | 预设     |
+| Grounded                                                                                              | 如果模型的脚部接触到地面，则为 `True`，反之则为`false`                                                                                                          | Bool               | IK             | 预设     |
+| AFK                                                                                                   | 如果玩家暂时不在游戏中（当头显未检测到人体或您已按下 End 键时），则为 `True`                                                                                    | Bool               | IK             | 预设     |
+| Upright                                                                                               | 您的身体直立程度。0 表示卧倒，1 表示完全直立于地面                                                                                                              | Float              | IK             | 预设     |
+| [TrackingType](#trackingtype-parameter)                                                               | 请参阅下文描述                                                                                                                                                  | Int                | Playable       | 预设     |
+| VRMode                                                                                                | 如果玩家处于 VR 模式中，则为 `1`；反之则为 `0`                                                                                                                  | Int                | IK             | 预设     |
+| MuteSelf                                                                                              | 如果玩家关闭了自己的语音开关，则为 `true`；反之则为 `false`                                                                                                     | Bool               | Playable       | 预设     |
+| Voice                                                                                                 | 当前麦克风音量（`0.0-1.0`）                                                                                                                                     | Float              | Speech         | 预设     |
+| Earmuffs                                                                                              | 如果玩家已打开耳罩功能，则为 `true`；反之则为 `false`                                                                                                           | Bool               | Playable       | 预设     |
+| VelocityMagnitude                                                                                     | 模型当前总移动速度（矢量）的大小                                                                                                                                | Float              | IK             | 预设     |
+| ScaleFactor                                                                                           | 当前模型高度与默认高度之间的比例。例如当默认视角球高度为 1 米的模型缩放到 2 米时，将表现为`2`                                                                   | Float              | Playable       | 预设     |
+| ScaleFactorInverse                                                                                    | 当前模型高度与默认高度之间的倒数比例（`1/x`）。例如当默认视角球高度为 1 米的模型缩放到 2 米时，这个参数的值为 `0.5`。该参数值在极端情况下可能不准确。           | Float              | Playable       | 预设     |
+| ScaleModified                                                                                         | 如果玩家缩放了当前模型，则为 `true`；反之，则为 `false`                                                                                                         | Bool               | Playable       | 预设     |
+| EyeHeightAsPercent                                                                                    | 模型的视角球高度与默认缩放限制（`0.2`-`5.0`）之间的关系。例如当模型缩放为 2 米，那么这个参数的值是 `(2.0 - 0.2) / (5.0 - 0.2)` = `0.375`                        | Float              | Playable       | 预设     |
+| EyeHeightAsMeters                                                                                     | 当前模型的视角球高度（以米为单位）。                                                                                                                            | Float              | Playable       | 预设     |
+| IsOnFriendsList                                                                                       | 如果查看模型的玩家与使用模型的玩家互为好友，则为 `true`。如果是其他情况，则向模型为 `false`<!--需要更好的解释-->                                                | Bool               | 其他           | 预设     | <!--讨论：https://github.com/vrcd-community/vrchat-docs-localization/discussions/68--> |
+| [Viseme](#viseme-参数值解释列表)                                                                      | 表示口型，大小范围为`0-14`。当模型的 Viseme 模式使用 Jawbone/Jawflap 时，则表示您的当前麦克风音量，大小范围为 `0-100`。 <!--暂时换回Speech，等待更合理的解释--> | Int                | Speech         | 预设     |
+| [GestureLeft](#gestureLeft-和-gestureRight-参数值解释列表)                                            | 左手当前手势，范围为 `0-7`                                                                                                                                      | Int                | IK             | 预设     |
+| [GestureRight](#gestureLeft-和-gestureRight-参数值解释列表)                                           | 右手当前手势，范围为 `0-7`                                                                                                                                      | Int                | IK             | 预设     |
+| GestureLeftWeight                                                                                     | 左手手柄的扳机按压幅度，0.0 表示不按下扳机，1.0 表示完全按下扳机                                                                                                | Float              | Playable       | 预设     |
+| GestureRightWeight                                                                                    | 右手手柄的扳机按压幅度，0.0 表示不按下扳机，1.0 表示完全按下扳机                                                                                                | Float              | Playable       | 预设     |
+| Seated                                                                                                | 如果模型已就座（姿态处于 Seated 状态），则为 `True`                                                                                                             | Bool               | IK             | 预设     |
+| InStation                                                                                             | 如果玩家在 VRCStation 中，则为 `True`；如果不在 VRCStation 中，则为 `false`                                                                                     | Bool               | IK             | 预设     |
+| IsLocal                                                                                               | 如果该模型是由本地玩家（您自己）使用的，则为 `True`；否则为 False                                                                                               | Bool               | 无同步         | 预设     |
+| [AvatarVersion](/creators.vrchat.com/worlds/components/vrc_station#sdk3-station-with-sdk2sdk3-avatar) | 如果该模型上传时，SDK 版本在 2020.3.2 后，则为 `3`，反之则为 `0`                                                                                                | Int                | IK             | 预设     |
+| 任意名称                                                                                              | 玩家自定义模型参数(Expression Parameters)                                                                                                                       | Bool，Int 或 Float | IK 或 Playable | 玩家     |
 <!--考虑美观度，表示只在长句子中使用，短句易理解，不适用-->
 ::: info 关于部分参数的附加说明
 † `GestureLeftWeight` 和 `GestureRightWeight` 的值会根据扳机的按压力度从 0.0 变化到 1.0。
@@ -72,11 +72,11 @@
 
 <!--讨论：https://github.com/vrcd-community/vrchat-docs-localization/discussions/66-->
 
-| 参数类型 | 范围 | 内存使用 | 备注 |
-| :-- | :-- | :-- | :-- |
-| `int`    | `0`-`255`       | 8 位     | 无符号 8 位整数。        |
-| `float`  | `-1.0` 到 `1.0` | 8 位     | 有符号 8 位定点小数。    |
-| `bool`   | `True`(1) 或 `False`(0) | 1 位   | 1 位逻辑数                        |
+| 参数类型 | 范围                    | 内存使用 | 备注                  |
+| :------- | :---------------------- | :------- | :-------------------- |
+| `int`    | `0`-`255`               | 8 位     | 无符号 8 位整数。     |
+| `float`  | `-1.0` 到 `1.0`         | 8 位     | 有符号 8 位定点小数。 |
+| `bool`   | `True`(1) 或 `False`(0) | 1 位     | 1 位逻辑数            |
 
 † 由远程同步来的 `float` 值有 255 个可能的值，其跨网络精度值为 `1/127`，可以精确存储 `-1.0`、`0.0` 和 `1.0`。当在本地更新时，例如使用 [OSC](https://docs.vrchat.com/docs/osc-overview)，浮点值以原生（32 位）浮点值存储在动画控制器中。
 
@@ -86,16 +86,16 @@
 
 它们的值及这些值对应的手势名称如下：
 
-| 参数值 | 手势名称     | 
-| ---- | -----------   | 
-| 0    | Neutral       | 
-| 1    | Fist          | 
-| 2    | HandOpen      | 
-| 3    | FingerPoint   |  
-| 4    | Victory       |  
-| 5    | RockNRoll     |  
-| 6    | HandGun       |  
-| 7    | ThumbsUp      | 
+| 参数值 | 手势名称    |
+| ------ | ----------- |
+| 0      | Neutral     |
+| 1      | Fist        |
+| 2      | HandOpen    |
+| 3      | FingerPoint |
+| 4      | Victory     |
+| 5      | RockNRoll   |
+| 6      | HandGun     |
+| 7      | ThumbsUp    |
 
 <!--难以翻译，加之 SDK 内大量引用，考虑现状，采用原文加注释，需要进一步解释-->
 <!--如果是手势描述的话。。。抱歉咱撤回一下咱刚刚的建议，可能更加生动形象的描述更加的合适-->
@@ -104,7 +104,7 @@
 <!--由于手势在docs已经给出，给出跳转链接就好-->
 
 ::: info 译者注释
-您可以在[这里](/docs.vrchat.com/OVERVIEW/controls/controls.md)了解这些手势及它们在不同平台上的触发方法：
+您可以在[这里](/docs.vrchat.com/docs/controls)了解这些手势及它们在不同平台上的触发方法：
 :::
 
 ## `Viseme` 参数值解释列表
@@ -153,14 +153,14 @@ AFK 状态由以下情况触发：
 
 ## `TrackingType` 参数值解释列表
 
-| 参数 | 描述 |
-| -- | :-- |
-| 0    | 模型未初始化，该值一般仅在玩家切换模型且其 IK 数据尚未被发送时出现。                                                                                                                                                                                 |
-| 1    | 模型骨架类型为通用骨骼，该值一般在玩家启用了某种追踪（例如头显或追踪器），但由于模型骨架类型被设置为通用骨骼，导致追踪被关闭时出现。如果同时 `VRMode` 的值为 0，则表明玩家是桌面用户，而不是 VR 用户。<!--通用骨骼要不要翻译成generic？另外为了确保语意，加一个VR用户。-->                                                                                                                         |
-| 2    |  <br> *<font color="gray">该值会出现在 AV2 模型，但也可能在您使用 SDK3 station 时出现。您原则上不应在模型的 AV3 控制器上将它用于长时间状态的过渡参数。</font>* 仅手部追踪，没有手指追踪，该值只会在过渡状态中临时出现—— `TrackingType` 可能马上会变化到另一个值，并不会恒为该值。|
-| 3    | 头部和手部追踪，如果 `VRMode` 为 `1`，则玩家处于 3 点追踪的 VR 端中。如果 `VRMode` 为 `0`，则玩家处于桌面电脑端中。  |
-| 4    | 4 点追踪 VR 用户，头部、手部和腰部追踪。 |
-| 6    | 全身追踪 VR 用户，头部、手部、腰部和脚部追踪。 |
+| 参数 | 描述                                                                                                                                                                                                                                                                             |
+| ---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0    | 模型未初始化，该值一般仅在玩家切换模型且其 IK 数据尚未被发送时出现。                                                                                                                                                                                                             |
+| 1    | 模型骨架类型为通用骨骼，该值一般在玩家启用了某种追踪（例如头显或追踪器），但由于模型骨架类型被设置为通用骨骼，导致追踪被关闭时出现。如果同时 `VRMode` 的值为 0，则表明玩家是桌面用户，而不是 VR 用户。<!--通用骨骼要不要翻译成generic？另外为了确保语意，加一个VR用户。-->       |
+| 2    | <br> *<font color="gray">该值会出现在 AV2 模型，但也可能在您使用 SDK3 station 时出现。您原则上不应在模型的 AV3 控制器上将它用于长时间状态的过渡参数。</font>* 仅手部追踪，没有手指追踪，该值只会在过渡状态中临时出现—— `TrackingType` 可能马上会变化到另一个值，并不会恒为该值。 |
+| 3    | 头部和手部追踪，如果 `VRMode` 为 `1`，则玩家处于 3 点追踪的 VR 端中。如果 `VRMode` 为 `0`，则玩家处于桌面电脑端中。                                                                                                                                                              |
+| 4    | 4 点追踪 VR 用户，头部、手部和腰部追踪。                                                                                                                                                                                                                                         |
+| 6    | 全身追踪 VR 用户，头部、手部、腰部和脚部追踪。                                                                                                                                                                                                                                   |
 
 因此，当 `VRMode` 为 1 时，请注意对 `TrackingType` 的值的使用：
 - 如其值为 3,4 或 6，则代表当前玩家佩戴的 VR 追踪设备数量。当设备数量发生变化，这个值也会发生变化，在设计动画控制器时您需要考虑到这一点。

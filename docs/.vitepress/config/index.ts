@@ -25,7 +25,8 @@ import markdownItMark from "markdown-it-mark" // @ts-expect-error
 import markdownItVideo from "@vrcd-community/markdown-it-video"
 import markdownItFootnote from "markdown-it-footnote"
 import { align } from "@mdit/plugin-align"
-import { figure } from "@mdit/plugin-figure"
+// @ts-expect-error
+import figure from "markdown-it-image-figures"
 
 // refer https://vitepress.dev/reference/site-config for details
 export default withPwa(
@@ -241,7 +242,12 @@ export default withPwa(
           })
           .use(markdownItFootnote)
           .use(align)
-          .use(figure)
+          .use(figure, {
+            lazy: true,
+            async: true,
+            classes: "doc-content-image",
+            figcaption: "alt",
+          })
       },
     },
 
