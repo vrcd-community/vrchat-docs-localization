@@ -4,12 +4,12 @@ title: "当前支持的 Unity 版本"
 
 # 当前支持的 Unity 版本
 
-VRChat 当前使用的 Unity 版本是 [**2022.3.6f1**](https://unity.com/releases/editor/whats-new/2022.3.6)。
+VRChat 当前推荐使用的 Unity 版本是 [**2022.3.6f1**](https://unity.com/releases/editor/whats-new/2022.3.6)。
 
-此版本是我们之前版本 **Unity 2019.4.31f1** 的更新，并包含许多改进，例如更快的迭代时间、改进的资源导入时间、更好的编辑器稳定性、功能齐全的 C# 8 支持、快速搜索功能、[以及更多！](https://unity.com/releases/lts)
+此版本是对我们之前使用的 **Unity 2019.4.31f1** 版本的重要更新，它带来了一系列改进，包括更快速的迭代周期、更高效的资源导入流程、更稳定的编辑器性能、全面支持 C# 8 语言特性、便捷的快速搜索功能，[以及更多新功能！](https://unity.com/releases/lts)
 
-**Unity 2022 is required to use the latest version of the VRChat SDK**, and we strongly recommend upgrading if you are still on Unity 2019. Without upgrading, you can't access any future SDK updates, and some previously made content might experience issues.
+**为了使用最新版的 VRChat SDK，必须升级至 Unity 2022**，如果您仍在使用 Unity 2019，我们强烈建议您进行升级。若不进行升级，您将无法获取未来的 SDK 更新，而且一些之前创建的内容可能会遇到兼容性问题。
 
-**您需要更新到 Unity 2022 才能使用最新版本的 VRChat SDK**，如果您仍在使用 Unity 2019，我们强烈建议您升级。如果不升级，您将无法获得未来的任何 SDK 更新，并且一些以前制作的内容可能会出现一些问题。
+**为了确保您能够使用最新版本的 VRChat SDK**，您需要将您的 Unity 版本更新至 Unity 2022。如果您目前还停留在 Unity 2019，我们强烈推荐您进行升级。否则，您可能无法接收到未来的 SDK 更新，而且一些旧的内容可能会遇到问题。
 
-有关如何升级的说明，请 [访问我们的 从 Unity 2019 升级至 Unity 2022 的文档](/creators.vrchat.com/sdk/upgrade/unity-2022)。
+有关如何从 Unity 2019 升级至 Unity 2022 的详细指南，请[查阅我们的文档](/creators.vrchat.com/sdk/upgrade/unity-2022)。
