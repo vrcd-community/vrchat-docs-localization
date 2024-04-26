@@ -9,7 +9,7 @@ description: 学习如何将 Unity 更新到新版本
 
 - [检查您已经安装的 Unity 版本](unity-2022.md#managing-unity-versions)。
 - 请阅读我们的 [Unity 2022 迁移指南](/creators.vrchat.com/sdk/upgrade/unity-2022)，了解如何将 Unity 2019 项目升级到 Unity 2022。
-- 了解如何执行 [Unity 次要版本升级](/creators.vrchat.com/sdk/upgrade/migration-to-a-newer-minor-unity-version)。
+- 了解如何执行 [Unity 次要版本升级](/creators.vrchat.com/sdk/upgrade/migrating-to-a-newer-minor-unity-version)。
 
 ::: info 开始一个新项目？
 
