@@ -1,18 +1,18 @@
 ---
-title: Managing Unity
-description: Learn how to update to a newer version of Unity
+title: Unity 管理指南
+description: 学习如何将 Unity 升级至最新版本
 ---
 
-# Managing Unity
+# Unity 管理指南
 
-If you've worked with the VRChat SDK in the past, your project may be using an old version of Unity and the VRChat SDK. To use the latest version of the VRChat SDK, you'll first need to update Unity.
+如果您之前使用过 VRChat SDK，您的项目可能基于较旧的 Unity 和 VRChat SDK 版本。为了使用最新版的 VRChat SDK，您需要先对 Unity 进行升级。
 
-- [Check which versions of Unity you already have installed](unity-2022.md#managing-unity-versions) on your PC that are VRChat compatible.
-- Read our [Unity 2022 migration guide](/creators.vrchat.com/sdk/upgrade/unity-2022) to learn how to upgrade your Unity 2019 project to Unity 2022.
-- Learn how to perform a [minor Unity version upgrade](/creators.vrchat.com/sdk/upgrade/migrating-to-a-newer-minor-unity-version).
+- **检查当前安装的 Unity 版本**：请参考我们的[Unity 版本管理](unity-2022.md#managing-unity-versions)部分了解详情。
+- **Unity 2022 迁移指南**：了解如何将 Unity 2019 项目升级至 Unity 2022，请阅读我们的[官方迁移指南](/creators.vrchat.com/sdk/upgrade/unity-2022)。
+- **次要版本升级**：了解如何进行[Unity 次要版本的升级](/creators.vrchat.com/sdk/upgrade/migrating-to-a-newer-minor-unity-version)。
 
-::: info Starting a new project?
+::: info 开始新项目？
 
-Read [Setting up the SDK](/creators.vrchat.com/sdk/) to learn how to create new projects with VRChat's latest Unity SDK.
+阅读 [设置 SDK](/creators.vrchat.com/sdk/) 部分，了解如何利用 VRChat 最新的 Unity SDK 开始您的新项目。
 
 :::
