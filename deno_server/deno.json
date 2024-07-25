@@ -1,8 +1,0 @@
-{
-    "imports": {
-        "$std/": "https://deno.land/std@0.223.0/"
-    },
-    "tasks": {
-        "dev": "deno run -A --node-modules-dir deno_web_server.ts ../docs/.vitepress/dist/"
-    }
-}

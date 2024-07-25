@@ -1,0 +1,3 @@
+[submodule "hosting-server"]
+	path = hosting-server
+	url = https://github.com/vrcd-community/deno-spa-hosting-server.git
