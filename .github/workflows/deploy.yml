@@ -34,11 +34,11 @@ jobs:
       - name: Build step
         run: "yarn run docs:build"
 
-      - run: "cp -r deno_server docs/.vitepress/dist"
+      - run: "cp -r docs/.vitepress/dist hosting-server/public"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "vrchat-docs-localization"
-          entrypoint: "deno_server/deno_web_server.ts"
-          root: "docs/.vitepress/dist"
+          entrypoint: "main.ts"
+          root: "hosting-server"
