@@ -18,6 +18,9 @@ jobs:
       - name: Clone repository
         uses: apperry/action-cached-lfs-checkout@c0616236fe56259b047ba97925bad9d8b644be88
 
+      - name: Checkout Submodules
+        run: git submodule init && git submodule update
+
       - name: Install Deno
         uses: denoland/setup-deno@v1
         with:
