@@ -1,4 +1,4 @@
-# Expressions Menu 与 Controls
+# 模型菜单与菜单选项
 <!--标题需要再修改-->
 ::: warning 阅读本篇文章需要特定的前置知识
 
@@ -9,13 +9,13 @@
 ## 创建 Expressions Menu (模型菜单)
 
 1. 在 Unity 项目窗口中，在 Assets 文件夹单击鼠标右键，选择`Create/VRChat/Avatars/Expressions Menu`
-2. 打开`Expressions Menu`文件以自定义它。（见步骤13）
+2. 打开`Expressions Menu`文件以自定义它。（见第 13 步）
 
 在继续之前，您需要创建一个**Expression Parameters**资源，您可以在其中您模型上使用的所有自定义参数。
 
-<!--![默认情况下表情参数的外观。](/img/avatars/animator-parameters/params-default.png)-->
+![默认情况下表情参数的外观。](/creators.vrchat.com/images/avatars/animator-parameters/avatar-descriptor-params.png)
 
-3. 在Assets文件夹中右键单击，选择`Create > VRC Scriptable Objects > Expression Parameters`。
+3. 在Assets文件夹中右键单击，选择**Create > VRC Scriptable Objects > Expression Parameters**。
 4. 打开`Expression Parameters`文件以自定义它。
 
     - 该资源默认包含[三个参数](/creators.vrchat.com/avatars/animator-parameters#vrchat-动画器默认参数)（`VRCEmote`、`VRCFaceBlendH`、`VRCFaceBlendV`）。如果您用不到这些参数，则可以直接删除它们，
@@ -34,31 +34,31 @@
 
 接下来，您应将这两个资源添加到您的`VRCAvatarDescriptor`中。
 
-<!--![默认情况下表情参数的外观。](/img/avatars/animator-parameters/avatar-descriptor-params.png)-->
+![默认情况下表情参数的外观。](/creators.vrchat.com/images/avatars/animator-parameters/avatar-descriptor-params.png)
 
 10. 选择您的`VRCAvatarDescriptor`并向下滚动到`Expressions`部分。
-11. 将“Menu”属性更改为您的表情菜单。
-12. 将“Parameters”属性更改为您的表情参数。
+11. 将“Menu”填选框更改为您的`Expressions Menu`文件。
+12. 将“Parameters”填选框更改为您的`Expression Parameters`文件。
 
-在将这两个资源添加到您的`VRCAvatarDescriptor`之后，您可以在模型菜单中看见，并自定义所有模型参数。
+在将这两个文件添加到您的`VRCAvatarDescriptor`之后，您就可以在模型菜单中自定义所有的模型参数。
 
-<!--![默认情况下表情参数的外观。](/img/avatars/animator-parameters/menu-default.png)-->
+![默认情况下表情参数的外观。](/creators.vrchat.com/images/avatars/animator-parameters/menu-default.png)
 
-13. 在检查器中，单击`Add Control`。一个菜单最多可以添加 8 个控件。
-14. 选择一个名称和[类型](/creators.vrchat.com/avatars/expression-menu-and-controls.md#controls-(操作控件)类型)。
-15. 您还可以在这里添加图标和子菜单，或更改控件的顺序。
-  - 您可以在`Packages/VRXhat SDK - Avatars/Samples/AV3 Demo Assets/Expressions Menu`中找到一些默认图标。
+13. 在检查器中，单击`Add Control`。一个菜单最多可以添加 8 个选项。
+14. 选择一个名称和[选项类型](/creators.vrchat.com/avatars/expression-menu-and-controls.md#controls-(操作选项)类型)。
+15. 您还可以在这里添加图标和子菜单，或更改选项的顺序。
+  - 您可以在`Packages/VRXhat SDK - Avatars/Samples/AV3 Demo Assets/Expressions Menu`中找到一些默认选项图标。
 
-### Controls (操作控件)类型
+### Controls (操作选项)类型
 
 * **Button** - 单击时设置参数，在发送同步值或重置模型的一秒钟后重置参数。不能长按。
 * **Toggle** - 打开开关时设置参数，关闭开关时重置参数。
 * **Sub-Menu** - 打开另一个模型菜单。此外，如果进入该菜单时设置了参数，则退出该菜单时将重置该参数。
   * **重要提示：** 您可以嵌套(套娃)设置子菜单！
 
-* **Two Axis Puppet** - 打开一个摇杆圆盘菜单，根据摇杆位置控制两个浮点参数。参数映射到垂直和水平方向。浮点值的范围是-1.0至1.0。
-* **Four Axis Puppet** - 打开一个摇杆圆盘菜单，根据摇杆位置控制四个浮点参数。参数按顺序映射为上、右、下、左。浮点值的范围是0.0至1.0。
-* **Radial Puppet** - 打开一个转盘圆盘菜单，控制单个浮点参数，就像一个您可以手动控制的进度条！浮点值的范围是 0.0 至 1.0。
+* **Two Axis Puppet** - 打开一个摇杆圆盘菜单，根据摇杆位置控制两个浮点参数。参数映射到垂直和水平方向。其可控制的浮点值的范围是-1.0至1.0。
+* **Four Axis Puppet** - 打开一个摇杆圆盘菜单，根据摇杆位置控制四个浮点参数。参数按顺序映射为上、右、下、左。其可控制的浮点值的范围是0.0至1.0。
+* **Radial Puppet** - 打开一个转盘圆盘菜单，控制单个浮点参数，类似一个可自行拖动的环形进度条！其可控制的浮点值的范围是 0.0 至 1.0。
 
 ::: info 圆盘菜单同步
 
@@ -72,6 +72,6 @@ Puppet 菜单同步始终以最大速率更新，并且它平滑了远端玩家�
 
 Puppet 菜单还可以在进入菜单时设置参数。
 
-如果使用摇杆按下退出，则被操作的参数的值将保持不变，直到您再次更改它们--无论是重新进入使用那些参数的 Puppet (圆盘)菜单，还是在其他地方使用它们。
+如果使用摇杆按下退出，那么之后无论是重新进入同样的 Puppet (圆盘)菜单，还是在其他地方使用这些参数，被操作的参数的值将保持不变，直到您再次更改其值。
 <!--是否替换需要再考虑-->
 <!--这里批量替换了control，考虑到control在中文社区不是一个常用的概念-->
