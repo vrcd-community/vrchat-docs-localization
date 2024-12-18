@@ -187,7 +187,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
         { text: 'Performance Ranks', link: '/creators.vrchat.com/avatars/avatar-performance-ranking-system' },
         { text: 'Avatar Scaling', link: '/creators.vrchat.com/avatars/avatar-scaling' },
         { text: 'Technical Considerations around Avatar Scaling', link: '/creators.vrchat.com/avatars/avatar-scaling.md' },
-        { text: '模型菜单与控件', link:'/creators.vrchat.com/avatars/expression-menu-and-controls'},
+        { text: '模型菜单与菜单选项', link:'/creators.vrchat.com/avatars/expression-menu-and-controls'},
         { text: 'Playable Layers', link: '/creators.vrchat.com/avatars/playable-layers' },
         { text: 'Rig Requirements', link: '/creators.vrchat.com/avatars/rig-requirements' },
         { text: 'Shader Blocking and Fallback System', link: '/creators.vrchat.com/avatars/shader-fallback-system' },
