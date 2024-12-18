@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/vrcd-community/vrchat-docs-localization">
-    <img src="docs/public/site-icons/icons/android-chrome-192x192.png" alt="Logo" width="80" height="80">
+    <img src="docs/public/site-icons/vrcd-locailzation-docs.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">VRChat 汉化文档中心</h3>
@@ -50,9 +50,9 @@
 <!-- ABOUT THE PROJECT -->
 ## 关于该项目
 
-[![文档首页截图][product-screenshot]](https://docs.vrczh.org/)
+<!-- [![文档首页截图][product-screenshot]](https://docs.vrczh.org/)
 
-![海报][Poster]
+![海报][Poster] -->
 
 我们正在铺设的是一条面向所有开发成员的极具吸引力的开发道路，以帮助具有语言困境的开发者获得更加便捷准确的汉化内容。不同于浏览器自带的翻译功能，我们对涉及开发，技术名词和语境有着更准确的把握和翻译准确度，包括图片/视频内容的全面本地化，与此同时也给各位提供更加包容多彩的开发者讨论环境。
 
@@ -190,8 +190,8 @@ All information on this project is the result of work done by independent volunt
 [doc-license-shield]: https://img.shields.io/badge/DOC%20License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=for-the-badge
 [doc-license-url]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-[workflow-status-shield]: https://img.shields.io/github/actions/workflow/status/vrcd-community/vrchat-docs-localization/deploy-pages.yml?style=for-the-badge
-[workflow-status-url]: https://github.com/vrcd-community/vrchat-docs-localization/actions/workflows/deploy-pages.yml
+[workflow-status-shield]: https://img.shields.io/github/actions/workflow/status/vrcd-community/vrchat-docs-localization/deploy.yml?style=for-the-badge
+[workflow-status-url]: https://github.com/vrcd-community/vrchat-docs-localization/actions/workflows/deploy.yml
 
 [product-screenshot]: screenshot.png
 [Poster]: poster.png
