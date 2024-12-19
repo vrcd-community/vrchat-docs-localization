@@ -1,9 +1,5 @@
 # OSC 资源
 
-::: warning 🧑‍💻译者警告
-当前版本文档内容有一部分无法使用，我们会将当前版本替代内容以引用形式编写进本文档中，同时保留当前版本文档内容。
-:::
-
 ## 可用于开发与使用的 OSC 工具和项目
 
 ### 警告：风险自负！
@@ -21,7 +17,7 @@
 - [BrainFlowsIntoVRChat](https://github.com/ChilloutCharles/BrainFlowsIntoVRChat)：BrainFlow 代码可通过 OSC 将大脑的放松和专注度指标发送至 vrchat 模型参数。（Python）
 - [bci-workshop](https://github.com/ChilloutCharles/bci-workshop)：用大脑控制您的模型（Python）
 - [OSC_To_keypress_Console](https://github.com/Salvesti/OSC_To_keypress_Console/)：将 OSC 转换为按按键，反之亦然。(C#)
-- [VRChat 热键 OSC](https://gitlab.com/ameliend/vrchat-hotkeys-osc)：通过键盘热键控制模型参数。（Python）
+- [VRChat Hotkeys OSC](https://gitlab.com/ameliend/vrchat-hotkeys-osc)：通过键盘热键控制模型参数。（Python）
 
 ### 脸部追踪
 
@@ -32,7 +28,7 @@
 
 ### 手部追踪
 
-- [Leapmotion-osc](https://github.com/philfiru/leapmotion-osc)：Leap Motion > Finger Tracking（C# / Unity 应用程序）
+- [leapmotion-osc](https://github.com/philfiru/leapmotion-osc)：Leap Motion > Finger Tracking（C# / Unity 应用程序）
 
 ### 触觉
 
@@ -41,6 +37,9 @@
 ### 心率
 
 - [HRPresence](https://github.com/Naraenda/HRPresence)：Windows GATT 心率监控工具，可将心率数据推送至 OpenSoundControl (OSC)，用于 VRChat 和 DiscordRPC。(C#)
+- [MagicChatBox](https://github.com/BoiHanny/vrcosc-magicchatbox)：使用支持 Pulsoid 的设备实时显示您的心率。提供“平滑心率”和“心率趋势指示器”等增强选项。 (C#)
+- [OyasumiVR](https://github.com/Raphiiko/OyasumiVR)：通过 Pulsoid 支持心率监测，使您能够使用心率数据启动睡眠模式。（Typescript，C#）
+- [Pulsoid](https://pulsoid.net/)：通过 MIDI 将心率数据发送到 VRChat 世界。
 - [miband-heartrate-os](https://github.com/mkc1370/miband-heartrate-osc)c：在 Windows 10 上使用小米手环设备启用和监测心率。(C#)
 - [Pulsoid-to-vrchat-osc](https://github.com/Sonic853/pulsoid-to-vrchat-osc)：使用 Pulsoid（NodeJS）通过 OSC 将每分钟心跳次数发送至 VRChat
 - [hr-osc](https://github.com/kamyu1537/hr-osc)：从 Stromno 向模型发送心率（Go语言）
@@ -48,13 +47,6 @@
 - [BluetoothHeartRateOSC](https://github.com/AkaiMage/BluetoothHeartRateOSC)：可写入 VRChat OSC 的用蓝牙传输的心率读取程序（C#）
 
 ### IRL 控制
-
-::: warning 🧑‍💻译者核对-1
-该项目地址无法访问
-:::
-
-- [mqtt2osc](https://github.com/asleeponduty/mqtt2osc)：订阅 MQTT 主题并发布到 OSC 话题。（Python）
-
 - [vrc-osc-audio-controls](https://github.com/uzair-ashraf/vrc-osc-audio-controls)：通过 OSC 控制系统音频播放（Go语言）
 - [vrcwatch](https://github.com/mezum/vrcwatch)：通过 OSC 发送时间（Python）
 - [HardwareStat2VRCha](https://github.com/Nifty255/HardwareStat2VRChat)：使用 OSC 在您的 VRChat 模型上显示 CPU 和内存使用情况！（Go语言）

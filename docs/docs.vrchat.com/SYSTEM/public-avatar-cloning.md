@@ -10,9 +10,9 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/public-avatar-cloning-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/public-avatar-cloning-1.webp)
 
-*别用那种眼神看我*
+*多酷的香蕉呀*
 
 </center>
 
@@ -21,7 +21,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/public-avatar-cloning-2.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/public-avatar-cloning-2.webp)
 
 *( o ∀ ° )ﾉﾞ*
 
@@ -30,6 +30,20 @@
 ## 禁用模型克隆
 有两种方法可以禁用模型克隆。
 
-要禁止用户克隆您使用的任何模型(无论其是公开还是私有)，请在设置中取消选中“允许克隆模型”。
+    1.要禁止用户克隆您使用的任何模型(无论其是公开还是私有)，请在设置中取消选中“允许克隆模型”。
+        i.如果您希望在离开一个世界时自动禁用模型克隆，请启用“自动禁用模型克隆”。
 
-对于单个模型，您可以通过使用 VRChat SDK 将模型设置为私有来在其上禁用克隆。
+<center>
+
+![img](https://cn-nb1.rains3.com/docs-image/controls/public-avatar-cloning-3.webp)
+
+</center>
+
+    2.在 VRChat 网站的 [“我的模型（My Avatars）”](https://vrchat.com/home/avatars) 下将您的模型设置为私密。您只能对自己上传的模型执行此操作。
+
+<center>
+
+![img](https://cn-nb1.rains3.com/docs-image/controls/public-avatar-cloning-4.webp)
+
+</center>
+

@@ -12,7 +12,7 @@
 
 #### 因性能屏蔽
 
-![img](/docs.vrchat.com/images/avatar-fallback-system-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/avatar-fallback-system-1.png)
 
 *此人的模型由于性能设置问题已被屏蔽。*
 
@@ -24,7 +24,7 @@
 
 #### 文件大小屏蔽
 
-![img](/docs.vrchat.com/images/avatar-fallback-system-2.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/avatar-fallback-system-2.png)
 
 *此人的模型已被文件大小的相关设置屏蔽。*
 
@@ -38,7 +38,7 @@
 
 #### 缺少对应平台版本
 
-![img](/docs.vrchat.com/images/avatar-fallback-system-3.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/avatar-fallback-system-3.png)
 
 *模型不适用于您的平台。*
 
@@ -48,15 +48,15 @@
 
 #### 意料之外的错误
 
-![img](/docs.vrchat.com/images/avatar-fallback-system-4.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/avatar-fallback-system-4.png)
 
 *由于某些错误，此人的模型未显示。*
 
 由于某些错误，此人的模型未显示。这可能是由于您设备的问题，或者可能是模型的问题。您可以尝试隐藏并重新显示他们的模型！
 
-#### 通过安全系统屏蔽、手动隐藏、加载时被屏蔽
+#### 通过安全系统屏蔽、手动隐藏、加载中
 
-![img](/docs.vrchat.com/images/avatar-fallback-system-5.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/avatar-fallback-system-5.png)
 
 *这个图标可能意味着一些神奇事情！*
 

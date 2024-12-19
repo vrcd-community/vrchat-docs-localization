@@ -12,6 +12,13 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
           text: '控制器', link: '/docs.vrchat.com/docs/controls',
           collapsed: true,
           items: [
+            {
+              text: 'SteamVR Input 2.0', link: '/docs.vrchat.com/docs/steamvr-input-2.0',
+              collapsed: true,
+              items: [
+                {text: 'Input 2.0 常见问题解答', link: '/docs.vrchat.com/docs/input-2.0-faq'},
+              ],
+            },
             { text: 'HTC Vive 手柄', link: '/docs.vrchat.com/docs/vive' },
             { text: 'Oculus Touch', link: '/docs.vrchat.com/docs/touch' },
             { text: 'Valve Index 控制器', link: '/docs.vrchat.com/docs/valve-index' },

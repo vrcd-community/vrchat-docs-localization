@@ -53,11 +53,15 @@ VRChat 现在支持通过 OSC 接收追踪器数据，以便与我们现有的�
 
 ## 自动回正 OSC 追踪器
 
+::: warning 🚧警告
+
+本节内容已过时:::
+
 这是一个新按钮，位于 VRC 快捷菜单"齿轮 "选项卡的动捕与 IK 部分。
 
 <center>
 
-![img](/docs.vrchat.com/images/osc-trackers-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/osc-trackers-1.png)
 
 </center>
 
@@ -86,7 +90,7 @@ VRChat 现在支持通过 OSC 接收追踪器数据，以便与我们现有的�
 
 <center>
 
-![img](/docs.vrchat.com/images/osc-trackers-2.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/osc-trackers-2.png)
 
 </center>
 

@@ -42,7 +42,7 @@ VRChat 现在支持通过 OSC 接收眼动追踪数据（眼动和眼睑）。
 
 <center>
 
-![img](/docs.vrchat.com/images/osc-eye-tracking-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/osc-eye-tracking-1.png)
 
 </center>
 

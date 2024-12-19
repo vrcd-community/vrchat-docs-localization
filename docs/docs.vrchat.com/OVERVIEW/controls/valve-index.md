@@ -32,7 +32,7 @@ SteamVR 控制器绑定页面可能有点 bug ，所以确保在您选择绑定�
 
 <center>
 
-![img](/docs.vrchat.com/images/valve-index-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/valve-index.png)
 
 *如果闭合您的小拇指/无名指/中指有点困难，您可以试着在握持绑定上的“保持力度（Force Hold）”和“释放力度（Force Release）”设置中将值调低。*
 
