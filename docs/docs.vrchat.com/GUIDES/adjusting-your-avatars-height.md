@@ -10,7 +10,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/adjusting-your-avatars-height-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/adjusting-your-avatars-height-1.png)
 
 </center>
 
