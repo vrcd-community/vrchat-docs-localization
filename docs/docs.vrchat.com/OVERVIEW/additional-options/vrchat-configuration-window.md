@@ -4,6 +4,7 @@
 在玩 VRChat 时，您可以从“设置菜单”中选择一些图形设置，该设置可以通过在快捷菜单中打开设置选项卡后按弹出按钮找到。
 
 ## 模型性能
+
 <center>
 
 ![img](https://cn-nb1.rains3.com/docs-image/controls/vrchat-configuration-window-1.png)
@@ -142,9 +143,7 @@ Oculus Quest，安卓，IOS，PICO只有一个图形配置文件。如下所示�
 
 <center>
 
-![img](https://cn-nb1.rains3.com/docs-image/controls/VRC-Mobile.png)
-
-*移动端设置*
+![移动端设置](https://cn-nb1.rains3.com/docs-image/controls/VRC-Mobile.png)
 
 </center>
 
