@@ -113,17 +113,7 @@ export function vrcahtDocsSidebars(): DefaultTheme.SidebarItem[] {
     {
       text: '世界',
       items: [
-        { text: '制作您的第一个世界', link: '/creators.vrchat.com/docs/creating-your-first-world' },
-        {
-          text: '升级 Unity 项目', link: '/docs.vrchat.com/docs/upgrading-unity-projects',
-          collapsed: true,
-          items: [
-            { text: '从 2018 LTS 迁移到 2019 LTS', link: '/docs.vrchat.com/docs/migrating-from-2018-lts-to-2019-lts' },
-            { text: '从 2017 LTS 迁移到 2018 LTS', link: '/docs.vrchat.com/docs/migrating-from-2017-lts-to-2018-lts' },
-            { text: '从 5.6 迁移到 2017 LTS', link: '/docs.vrchat.com/docs/migrating-from-56-to-20174x' },
-            { text: '迁移到更新的 Unity 大版本', link: '/docs.vrchat.com/docs/migrating-to-a-newer-minor-unity-version' },
-          ],
-        },
+        { text: '制作您的第一个世界', link: '/creators.vrchat.com/worlds/creating-your-first-world' },
       ],
     },
     {
@@ -180,12 +170,25 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
       items: [
         { text: '创建您的第一个虚拟形象', link: '/creators.vrchat.com/avatars/creating-your-first-avatar' },
         {
-          text: 'Avatar Dynamics', link: '/creators.vrchat.com/avatars/avatar-dynamics/',
+          text: '模型组件', link: '/creators.vrchat.com/avatars/avatar-componets/',
           collapsed: true,
           items: [
-            { text: 'Contacts', link: '/creators.vrchat.com/avatars/avatar-dynamics/contacts' },
-            { text: 'Debugging Avatar Dynamics', link: '/creators.vrchat.com/avatars/avatar-dynamics/debugging-avatar-dynamics' },
-            { text: 'PhysBones', link: '/creators.vrchat.com/avatars/avatar-dynamics/physbones' },
+            {
+              text: '约束', link: '/creators.vrchat.com/avatars/avatar-componets/constraints',
+              collasped: true,
+              items: [
+                {text: '指向约束', link: '/creators.vrchat.com/avatars/avatar-componets/constraints/aim-constraints'},
+                {text: '面向约束', link: '/creators.vrchat.com/avatars/avatar-componets/constraints/look-at-constraints'},
+                {text: '父约束', link: '/creators.vrchat.com/avatars/avatar-componets/constraints/parent-constraints'},
+                {text: '位置约束', link: '/creators.vrchat.com/avatars/avatar-componets/constraints/position-constraints'},
+                {text: '旋转约束', link: '/creators.vrchat.com/avatars/avatar-componets/constraints/rotation-constraints'},
+                {text: '缩放约束', link: '/creators.vrchat.com/avatars/avatar-componets/constraints/scale-constraints'},
+              ],
+            },
+            { text: '接触点', link: '/creators.vrchat.com/avatars/avatar-componets/contacts' },
+            { text: 'Debugging Avatar Componets', link: '/creators.vrchat.com/avatars/avatar-componets/debugging-avatar-componets' },
+            { text: 'PhysBones', link: '/creators.vrchat.com/avatars/avatar-componets/physbones' },
+            { text: 'Head Chop', link: '/creators.vrchat.com/avatar/avatar-componets/vrc-headchop'},
           ],
         },
         { text: 'Impostors', link: '/creators.vrchat.com/avatars/avatar-impostors' },
@@ -193,7 +196,7 @@ export function vrchatCreatorsDocsSidebar(): DefaultTheme.SidebarItem[] {
         { text: 'Avatar Optimization Tips', link: '/creators.vrchat.com/avatars/avatar-optimizing-tips' },
         { text: 'Performance Ranks', link: '/creators.vrchat.com/avatars/avatar-performance-ranking-system' },
         { text: 'Avatar Scaling', link: '/creators.vrchat.com/avatars/avatar-scaling' },
-        { text: 'Technical Considerations around Avatar Scaling', link: '/creators.vrchat.com/avatars/avatar-scaling.md' },
+        { text: '模型大小限制', link: '/creators.vrchat.com/avatars/avatar-size-limits' },
         { text: '模型菜单与控件', link:'/creators.vrchat.com/avatars/expression-menu-and-controls'},
         { text: 'Playable Layers', link: '/creators.vrchat.com/avatars/playable-layers' },
         { text: 'Rig Requirements', link: '/creators.vrchat.com/avatars/rig-requirements' },

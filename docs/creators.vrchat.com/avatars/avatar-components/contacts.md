@@ -13,7 +13,7 @@ title: "触发器"
 ## 发送端：VRCContactSender
  `VRCContactSender` 组件定义了一个空间体积，当它与 `VRCContactReceiver` 接触时，将发送一个触发器信号。
  
-![contacts-59b6e82-2022-04-19_11-53-01_Unity.png](/creators.vrchat.com/images/avatars/contacts-59b6e82-2022-04-19_11-53-01_Unity.png)
+![](https://cn-nb1.rains3.com/docs-image/controls/contacts-1.png)
 
 - `Root Transform` - 拥有该触发器组件的变换。如果为空，则使用此 GameObject 的变换。
 
@@ -36,7 +36,7 @@ title: "触发器"
 - `Collision Tags` - 一个字符串列表，用于指明什么触发器可影响/被影响。要成功发生碰撞， Sender 和 Receiver 都需要至少一对互相匹配的字符串。 Collision Tags 区分大小写。
 
 例如，当发送端与默认的头部[触发器接收端](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver) 或任何带有 `Face` 标签的自定义[触发器接收端](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver) （注意大写 F）接触时，下面的标签将导致发送端发送一个联系信号！
-![contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png)
+![](https://cn-nb1.rains3.com/docs-image/controls/contacts-2.png)
 
 ## 标准碰撞器 (Standard Colliders)
 “标准碰撞器”是一组特殊的触发器。它们特别的地方在于，可以作为发送端与其他人的模型产生互动，并且它们的存在不会影响模型的性能评级。
@@ -61,7 +61,7 @@ title: "触发器"
 ## 接收端：VRCContactReceiver
 `VRCContactReceiver` 组件定义了一个空间体积，该体积在与  `VRCContactSender` 接触后将接收到一个触发器信号。
 
-![contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png)
+![](https://cn-nb1.rains3.com/docs-image/controls/contacts-3.png)
 
 - `Root Transform` - 放置触点的变换。如果为空，则使用此 GameObject 的变换。
 
