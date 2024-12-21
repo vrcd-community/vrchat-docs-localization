@@ -18,10 +18,10 @@ VRChat 的 Quest 版本在此列表的基础上减少了一些组件，这些组
 - VRCAvatarDescriptor 
 - PipelineManager
 - [VRCStation](/creators.vrchat.com/worlds/components/vrc_station)
-- [VRCPhysBone](/creators.vrchat.com/avatars/avatar-dynamics/physbones#vrcphysbone)
-- [VRCPhysBoneCollider](/creators.vrchat.com/avatars/avatar-dynamics/physbones#vrcphysbonecollider)
-- [VRCContactSender](/creators.vrchat.com/avatars/avatar-dynamics/contacts#发送端：VRCContactSender)
-- [VRCContactReceiver](/creators.vrchat.com/avatars/avatar-dynamics/contacts#接收端：VRCContactReceiver)
+- [VRCPhysBone](/creators.vrchat.com/avatars/avatar-components/physbones#vrcphysbone)
+- [VRCPhysBoneCollider](/creators.vrchat.com/avatars/avatar-components/physbones#vrcphysbonecollider)
+- [VRCContactSender](/creators.vrchat.com/avatars/avatar-components/contacts#发送端：VRCContactSender)
+- [VRCContactReceiver](/creators.vrchat.com/avatars/avatar-components/contacts#接收端：VRCContactReceiver)
 - [VRCSpatialAudioSource](/creators.vrchat.com/worlds/components/vrc_spatialaudiosource#spatial-audio-on-avatars)
 - *VRC_IKFollower* - 此组件已废弃！您应改用约束来替代它。
 <!--我们在库里找不到这个东西，官网也没有直接的链接，我就去除链接了-->
@@ -90,7 +90,7 @@ VRChat 对 FinalIK 的实现进行了高度修改。因此，这些组件的功�
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
 ::: danger Dynamic Bone 已弃用
 
-我们已不再官方支持 Dynamic Bone。您应该转而使用[PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones)。
+我们已不再官方支持 Dynamic Bone。您应该转而使用[PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones)。
   
 :::
 

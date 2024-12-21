@@ -1,9 +1,5 @@
 # 模型互动权限和设置
 
-::: warning 🧑‍💻译者警告
-当前版本文档内容落后于当前版本的应用状态，我们会将当前版本的应用状态以引用形式编写进本文档中，同时保留当前版本的文档内容。
-:::
-
 在快捷菜单的“设置”选项卡下，您可以选择谁能够与您的模型进行互动。
 
 为了使某人能够与您的模型互动，**双方必须在快捷菜单中允许其他人的对自己模型的互动**。
@@ -12,7 +8,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/permissions-and-settings-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/permissions-and-settings-1.png)
 
 </center>
 
@@ -20,7 +16,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/permissions-and-settings-2.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/permissions-and-settings-2.png)
 
 </center>
 
@@ -30,21 +26,9 @@
 
 您可以随时单击“了解更多”以查看包含说明的弹出窗口。
 
-::: warning 🧑‍💻译者核对-1
-目前快捷导航的设置界面和当今文档的演示界面有着极大的差异，我们将附图做出解释。<br>
-“了解更多”按钮已被取消。
-
 <center>
 
-![img](/docs.vrchat.com/images/permissions-and-settings-proof-1.png)
-
-</center>
-
-:::
-
-<center>
-
-![img](/docs.vrchat.com/images/permissions-and-settings-3.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/permissions-and-settings-3.png)
 
 </center>
 
@@ -52,7 +36,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/permissions-and-settings-4.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/permissions-and-settings-4.png)
 
 </center>
 
@@ -60,7 +44,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/permissions-and-settings-5.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/permissions-and-settings-5.png)
 
 </center>
 
@@ -68,7 +52,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/permissions-and-settings-6.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/permissions-and-settings-6.png)
 
 </center>
 
@@ -76,7 +60,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/permissions-and-settings-7.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/permissions-and-settings-7.png)
 
 </center>
 

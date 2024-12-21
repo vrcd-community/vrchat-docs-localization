@@ -12,7 +12,7 @@ VRChat Avatar 3.0 SDK（以下简称 Avatar SDK）是 VRChat 为您提供的虚�
 
 技术上来说，VRChat虚拟形象本质上是一个游戏人物 3D 模型。在左侧的文档目录的“**虚拟形象**”类别中，您可以找到所有与此有关的知识。对于将模型转化为虚拟形象，我们提供以下重要内容供您参考：
 
-- **[角色绑定](/creators.vrchat.com/avatars/rig-requirements)**：将模型导入项目之后，为其指定身体骨骼和运动关节。
+- **[角色绑定](/creators.vrchat.com/avatars/rig-requirements)**：将模型导入项目之后，为其指定身体骨骼和运动关节，解释了如何为 VRChat 设置自定义 3D 模型的层次结构。
 - **[性能评级](/creators.vrchat.com/avatars/avatar-performance-ranking-system)**：不同的模型可能存在不同的性能评级，例如“Excellent”或“VeryPoor”，在这里您可以了解到哪些因素会导致较差的性能评级。
 - **[模型优化](/creators.vrchat.com/avatars/avatar-optimizing-tips)**：这里将会指导您如何改善和优化人物模型的性能表现。
 - **继续阅读本页**，以进一步了解 Avatar SDK 的特性。
@@ -21,7 +21,7 @@ VRChat Avatar 3.0 SDK（以下简称 Avatar SDK）是 VRChat 为您提供的虚�
 
 **Avatar 3.0** 是我们为 "_VRChat虚拟形象_"  推出的一系列全新特性的命名。相比于已经淘汰的 Avatar 2.0，它可以为人物模型嵌入更加丰富的自定义特性，并带来更好的性能表现。
 
-另外，Avatar 3.0 带来了全新功能：[**模型功能菜单**](/docs.vrchat.com/docs/action-menu)！ 强烈建议您先在游戏中试用这个功能，体验其所提供的前所未有的个性化体验！
+另外，Avatar 3.0 带来了全新功能：[**模型功能（圆盘）菜单**](/docs.vrchat.com/docs/action-menu)！ 强烈建议您先在游戏中试用这个功能，体验其所提供的前所未有的个性化体验！
 
 ## 准备工作
 
@@ -36,24 +36,24 @@ VRChat Avatar 3.0 SDK（以下简称 Avatar SDK）是 VRChat 为您提供的虚�
 
 编写本文档时，我们假定您对 [Unity 动画系统](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html) 稍有了解。特别是，您应确保自己已了解以下方面的基本概念：
 
-- 动画器和动画
-- 动画层、层权重、混合方式
-- 动画状态和过渡
-- 动画参数
-- 状态行为
-- Avatar 遮罩
+- 动画器和动画（Animators and animations）
+- 动画层、层权重、混合方式（Animator layers, layer weights, and blending）
+- 动画状态和过渡（States and transitions）
+- 动画参数（Animator parameters）
+- 状态行为（State behaviors）
+- Avatar 遮罩（Avatar masks）
 
 进阶内容：
-- 状态退出时间
-- 动画的循环时间
-- 动画层间的时间同步
-- 混合树（BlendTree）
+- 状态退出时间（State exit time）
+- 动画的循环时间（Loop Time for animations）
+- （高级）动画层间的时间同步（Time Sync between layers）
+- （高级）混合树（BlendTree）
 
 ### 二、SDK基础设置
 
 通过一些简单的设置，您可以快速地将一个人物模型转化并上传为 VRChat 虚拟形象。
 
-1. 导入您的人物模型，设置为人形。添加材质等。
+1. 导入您的人物模型，设置为人形（humannoid）。添加材质等。
 2. 添加 `Avatar Descriptor` 组件
 3. 如果想要模拟眼球运动效果，请定义眼球骨骼。
 4. 如果需要模拟说话嘴型，请定义嘴型效果类型。在 `Rigging 配置界面` 中指定下颏骨骨骼，或嘴型形态键。
@@ -129,7 +129,7 @@ VRChat 自带了一套运动系统，可模拟各种运动状态下的人物模�
 
 当然，**若您不打算使用这些功能，您需要避免将 Avatar Descriptor/Playable Layer中的Base Layer 和 Additive Layer 设为 Default 状态.**
 
-### 八、写回默认状态（Write Defaults，简称 WD）
+### 八、写入默认状态（Write Defaults，简称 WD）
 
 [写回默认状态](https://docs.unity3d.com/2019.4/Documentation/Manual/class-State.html) （以下简称：WD）是 Unity 动画器中的一个选项，您可以在点击了动画层中的动画状态（State）、子状态机（State Machine）之后，在检查器显示的选项中见到它。
 
@@ -143,7 +143,15 @@ VRChat 建议将 WD 设置为关闭，并在动画器中指定会受其影响的
 
 在动画层中创建新的动画状态（State）时，WD 的默认状态是**开启**，这是 Unity 系统自带的默认值。若您对于动画效果有较高的规划需求，这个选项是您应当重点关注的地方。
 
-***
+::: warning 叠加层和直接混合树 (Additive layers and direct blend trees)
+
+VRChat 的模型创建者社区建议将写入默认状态设置为 “开启” 以用于：
+
+- 使用叠加混合（additive blending）的图层
+
+- 使用直接混合（direct blending）的混合树
+
+即使您在模型中关闭其他部分的“写入默认状态”，您也应该为这些用途的“写入默认状态”设置为开启。在这些情况下，SDK 将避免生成关于同时使用两种写入默认状态的警告。
 
 #### 九、通用虚拟形象
 

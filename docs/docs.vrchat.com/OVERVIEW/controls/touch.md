@@ -4,7 +4,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/touch-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/touch.png)
 
 </center>
 

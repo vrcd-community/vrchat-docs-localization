@@ -29,7 +29,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-1.png)
 
 *如果您使用这种方法登录，那么这份文档就是为您准备的。*
 
@@ -43,7 +43,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-2.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-2.png)
 
 </center>
 
@@ -51,7 +51,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-3.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-3.png)
 
 </center>
 
@@ -59,7 +59,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-4.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-4.png)
 
 </center>
 
@@ -67,7 +67,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-5.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-5.png)
 
 </center>
 
@@ -79,7 +79,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-6.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-6.png)
 
 </center>
 
@@ -99,7 +99,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-7.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-7.png)
 
 </center>
 
@@ -120,7 +120,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-8.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-8.png)
 
 </center>
 
@@ -144,7 +144,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-9.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-9.png)
 
 </center>
 
@@ -154,7 +154,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-10.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-10.png)
 
 </center>
 
@@ -162,7 +162,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-11.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-11.png)
 
 </center>
 
@@ -172,7 +172,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-12.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-12.png)
 
 </center>
 
@@ -182,7 +182,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-13.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-13.png)
 
 </center>
 
@@ -194,7 +194,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-14.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-14.png)
 
 </center>
 
@@ -206,7 +206,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-15.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-15.png)
 
 </center>
 
@@ -214,7 +214,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-16.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-16.png)
 
 </center>
 
@@ -222,7 +222,7 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-17.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-17.png)
 
 </center>
 
@@ -254,6 +254,6 @@ VRChat 的两步验证仅为使用 VRChat 账号登录的用户提供。
 
 <center>
 
-![img](/docs.vrchat.com/images/setup-2fa-22.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/setup-2fa-22.png)
 
 </center>

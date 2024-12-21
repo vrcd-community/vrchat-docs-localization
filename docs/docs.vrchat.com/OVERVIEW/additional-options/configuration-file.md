@@ -85,7 +85,7 @@ VRChat默认并不会主动创建配置文件，您需要在 `%LocalAppdata%Low\
 ### [模型动态骨骼限制](/docs.vrchat.com/docs/avatar-dynamic-bone-limits.md)
 
 ::: warning
-🚧由于我们已经将动态骨骼替换为[物理骨骼](/creators.vrchat.com/avatars/avatar-dynamics/physbones.md)，因此这不再是一个相关的设置。
+🚧由于我们已经将动态骨骼替换为[物理骨骼](/creators.vrchat.com/avatars/avatar-components/physbones.md)，因此这不再是一个相关的设置。
 :::
 
 动态骨骼是一个非常影响性能的组件，而模型作者很容易过度使用该组件。VRChat 提供了一种方法，用户可以通过该方法限制模型上允许存在的动态骨骼数量。单击标题以查看描述此系统的文档页面。

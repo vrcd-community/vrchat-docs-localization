@@ -2,7 +2,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/osc-debugging-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/osc-debugging-1.png)
 
 </center>
 
