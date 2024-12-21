@@ -13,7 +13,7 @@ title: "触发器"
 ## 发送端：VRCContactSender
  `VRCContactSender` 组件定义了一个空间体积，当它与 `VRCContactReceiver` 接触时，将发送一个触发器信号。
  
-![](https://cn-nb1.rains3.com/docs-image/controls/contacts-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/contacts-1.png)
 
 - `Root Transform` - 拥有该触发器组件的变换。如果为空，则使用此 GameObject 的变换。
 
@@ -31,12 +31,12 @@ title: "触发器"
 `Rotation` - 从`Root Transform`偏移的旋转。
 
 ## Filtering
-本节包含允许您调整和定义此触发器发送端如何与[触发器接收端](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver)交互的设置。
+本节包含允许您调整和定义此触发器发送端如何与[触发器接收端](/creators.vrchat.com/avatars/avatar-components/contacts#VRCContactReceiver)交互的设置。
 
 - `Collision Tags` - 一个字符串列表，用于指明什么触发器可影响/被影响。要成功发生碰撞， Sender 和 Receiver 都需要至少一对互相匹配的字符串。 Collision Tags 区分大小写。
 
-例如，当发送端与默认的头部[触发器接收端](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver) 或任何带有 `Face` 标签的自定义[触发器接收端](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactReceiver) （注意大写 F）接触时，下面的标签将导致发送端发送一个联系信号！
-![](https://cn-nb1.rains3.com/docs-image/controls/contacts-2.png)
+例如，当发送端与默认的头部[触发器接收端](/creators.vrchat.com/avatars/avatar-components/contacts#VRCContactReceiver) 或任何带有 `Face` 标签的自定义[触发器接收端](/creators.vrchat.com/avatars/avatar-components/contacts#VRCContactReceiver) （注意大写 F）接触时，下面的标签将导致发送端发送一个联系信号！
+![img](https://cn-nb1.rains3.com/docs-image/controls/contacts-2.png)
 
 ## 标准碰撞器 (Standard Colliders)
 “标准碰撞器”是一组特殊的触发器。它们特别的地方在于，可以作为发送端与其他人的模型产生互动，并且它们的存在不会影响模型的性能评级。
@@ -56,12 +56,12 @@ title: "触发器"
   这些标准碰撞器从上到下分别对应头部，躯干，左右手，左右脚，左右手指（可单独设置食指，中指，无名指，小指）
   :::
 
-标准碰撞器主要作为触发器发送端，且可与其他玩家模型所带的触发器产生交互。不过，手指和手掌位置的碰撞器额外具备全局[物理骨骼 (PhysBones) ](/creators.vrchat.com/avatars/avatar-dynamics/physbones)碰撞器的功能，可影响其他玩家模型的物理骨骼(PhysBones)。
+标准碰撞器主要作为触发器发送端，且可与其他玩家模型所带的触发器产生交互。不过，手指和手掌位置的碰撞器额外具备全局[物理骨骼 (PhysBones) ](/creators.vrchat.com/avatars/avatar-components/physbones)碰撞器的功能，可影响其他玩家模型的物理骨骼(PhysBones)。
 
 ## 接收端：VRCContactReceiver
 `VRCContactReceiver` 组件定义了一个空间体积，该体积在与  `VRCContactSender` 接触后将接收到一个触发器信号。
 
-![](https://cn-nb1.rains3.com/docs-image/controls/contacts-3.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/contacts-3.png)
 
 - `Root Transform` - 放置触点的变换。如果为空，则使用此 GameObject 的变换。
 
@@ -79,7 +79,7 @@ title: "触发器"
 - `Collision Tags` - 一个字符串列表，用于指明什么触发器可影响或被影响。要成功发生碰撞，发送端和接收端都需要至少一对互相匹配的字符串。 Collision Tags 区分大小写。
 
 ## Filtering
-本节包含允许您调整和定义触发器接收端端与[触发器发送端](/creators.vrchat.com/avatars/avatar-dynamics/contacts#VRCContactSender)交互方式的设置。
+本节包含允许您调整和定义触发器接收端端与[触发器发送端](/creators.vrchat.com/avatars/avatar-components/contacts#VRCContactSender)交互方式的设置。
 
 - `Allow Self` - 允许此触发器受自己影响。
 - `Allow Others` - 允许此触发器受其他人影响。

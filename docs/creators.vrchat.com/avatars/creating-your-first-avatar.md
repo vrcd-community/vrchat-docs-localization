@@ -4,13 +4,13 @@ VRChat 拥有数千万个虚拟形象，而且任何人都可以创建它们！�
 
 - 您可以使用[模型创建工具](https://hello.vrchat.com/avatar-systems)在没有 Unity 的情况下创建简单的模型。
 
-- 您可以使用[创作者助手 (Vrchat Creator Companion)](/vcc.docs.vrchat.com) 安装 Unity，安装 VRChat 软件开发工具包（SDK），并上传自定义头像。
+- 您可以使用[创作者助手 (Vrchat Creator Companion)](/vcc.docs.vrchat.com/index) 安装 Unity，安装 VRChat 软件开发工具包（SDK），并上传自定义头像。
 
 ## 要求
 
 如果您要使用 Unity 和 VRChat SDK 上传自定义模型的话，您必须满足以下要求：
 
-- 您必须在 [ VRChat.com ](vrchat.com) 上拥有一个账户
+- 您必须在 [ VRChat.com ](https://vrchat.com) 上拥有一个账户
 
     - 如果您在 Steam ， Meta 或 Pico 账户上玩游戏的话，您需要先链接将您的账户链接至一个 VRChat 账户。
 
@@ -115,9 +115,9 @@ VRChat 拥有数千万个虚拟形象，而且任何人都可以创建它们！�
 
 ## 第 2 步 - 设置VRChat SDK
 
-恭喜你找到或自己构建了一个模型！在继续之前，你需要设置 [VRChat Creator Companion](/vcc.docs.vrchat.com)。它将帮助你安装 [Unity](https://unity.com/) 并使用 [VRChat SDK](creators.vrchat.com/sdk) 创建项目。
+恭喜你找到或自己构建了一个模型！在继续之前，你需要设置 [VRChat Creator Companion](/vcc.docs.vrchat.com/index)。它将帮助你安装 [Unity](https://unity.com/) 并使用 [VRChat SDK](/creators.vrchat.com/sdk/index) 创建项目。
 
-阅读[创作者助手](/vcc.docs.vrchat.com)的入门页面以了解更多信息。在设置好您的 Unity 项目后，您就可以继续了！
+阅读[创作者助手](/vcc.docs.vrchat.com/index)的入门页面以了解更多信息。在设置好您的 Unity 项目后，您就可以继续了！
 
 ::: info 你是 Unity 的新手吗？访问 [Unity Learn](https://learn.unity.com/)，去获取关于如何使用 Unity 的免费教程。
 :::

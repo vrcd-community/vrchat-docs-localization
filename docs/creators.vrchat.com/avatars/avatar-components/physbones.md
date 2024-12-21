@@ -259,7 +259,7 @@ title: "Physbones"
   - Ring
   - Little
 
-这些碰撞器主要作为 [接触点](/creators.vrchat.com/avatars/avatar-dynamics/contacts) 发送器，其他人可以用其模型检测到。但同时，手指和手部碰撞器也用于创建全局的 [Physbone](physbones) 碰撞器，它们可以与其他人的 Physbones 发生互动。
+这些碰撞器主要作为 [接触点](/creators.vrchat.com/avatars/avatar-components/contacts) 发送器，其他人可以用其模型检测到。但同时，手指和手部碰撞器也用于创建全局的 [Physbone](physbones) 碰撞器，它们可以与其他人的 Physbones 发生互动。
 
 ### 自动 Dynamic Bone 转换
 
