@@ -1,3 +1,7 @@
+---
+upstreamCommit: 4d76fd612a37de18fd85c39062bade59afffb7cf
+---
+
 # ClientSim
 
 ![ClientSim 在 Unity 编辑器中](/clientsim.docs.vrchat.com/images/editor-screenshot.png)

@@ -1,3 +1,7 @@
+---
+upstreamCommit: 4d76fd612a37de18fd85c39062bade59afffb7cf
+---
+
 # Player
 
 The ClientSim representation of a player has been split into many components compared to CyanEmu. Each component handles a different aspect of the player. Below you can see the hierarchy of both the Local and Remote player prefabs.

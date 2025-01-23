@@ -1,3 +1,7 @@
+---
+upstreamCommit: 4d76fd612a37de18fd85c39062bade59afffb7cf
+---
+
 # Helper Editors
 
 Some of the ClientSim SDK Helper components have specialized editors that offer insight into the VRC component.

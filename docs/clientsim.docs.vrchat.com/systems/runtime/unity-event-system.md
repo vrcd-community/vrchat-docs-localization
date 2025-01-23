@@ -1,3 +1,7 @@
+---
+upstreamCommit: 4d76fd612a37de18fd85c39062bade59afffb7cf
+---
+
 # Unity Event System
 
 ClientSim uses two classes to translate actions into Unity’s EventSystem. These classes decouple Unity’s old input system into values based on ClientSim’s current bindings and match VRChat’s interactive UI object filtering. 

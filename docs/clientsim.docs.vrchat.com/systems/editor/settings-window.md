@@ -1,3 +1,7 @@
+---
+upstreamCommit: 4d76fd612a37de18fd85c39062bade59afffb7cf
+---
+
 # Settings Window
 
 The Settings window displays all the [ClientSim Settings](../runtime/settings.md) that can be edited. Some of these values cannot be changed at runtime. There is also a button to spawn remote players and a text field to give those remote players a custom name.
