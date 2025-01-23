@@ -45,7 +45,7 @@
 
 <center>
 
-![img](/docs.vrchat.com/images/osc-overview-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/osc-overview-1.png)
 
 </center>
 

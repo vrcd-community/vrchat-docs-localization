@@ -1,73 +1,89 @@
 # VRChat 图像性能选项
 
-::: warning 🚧已过时
-下方的图片已全部过时。
 
-这些设置在 VRChat 中仍然可用。您可以在主菜单的“设置”选项卡中找到它们。
-:::
-
-在游玩 VRChat 时，您可以在安全菜单右上角的“性能选项”中调整图像设置。
-
-<center>
-
-![img](/docs.vrchat.com/images/vrchat-configuration-window-1.png)
-
-</center>
+在玩 VRChat 时，您可以从“设置菜单”中选择一些图形设置，该设置可以通过在快捷菜单中打开设置选项卡后按弹出按钮找到。
 
 ## 模型性能
 
 <center>
 
-![img](/docs.vrchat.com/images/vrchat-configuration-window-2.png)
-
-*您可以在这里调整模型的性能选项*
+![img](https://cn-nb1.rains3.com/docs-image/controls/vrchat-configuration-window-1.png)
 
 </center>
 
-### 显示的最低优化等级模型
 
-您希望屏蔽的最高模型性能等级。
+## 模型优化
 
-点击箭头可以切换不同的模型性能等级。将其设置为Don't Block将不会对任何优化等级的模型进行屏蔽。
+### 屏蔽优化较差的模型
+
+<center>
+
+![img](https://cn-nb1.rains3.com/docs-image/controls/vrchat-configuration-window-2.png)
+
+</center>
+
+这决定了您想要显示的最低的模型性能等级。
+
+点击箭头可以切换不同的模型性能等级。将其设置为“不隐藏”将不会对任何性能等级的模型进行屏蔽。
 
 ### 最大模型下载大小
 
-超过此大小的模型文件不会被下载，直到您点击“显示模型”。该值默认为200MB，点击左右箭头可每次调整5MB。
+超过此大小的模型文件不会被下载，直到您点击“显示模型”。该值最大为200MB，点击左右箭头可每次调整5MB。
 
-将此值设置为No Limit(0 MB)将忽略文件大小。
+将此值设置为 0 MB 将隐藏所有模型。
 
-## 动态骨骼
+超出此值的头像将显示为其后备模型或模型替身（如果有的话）。
+
+### 最大未压缩大小
+
+当一个模型被加载时，它们会被压缩。必须解压缩才能显示出来。
+
+模型的未压缩大小与其某些部分的优化程度有关，例如纹理大小。因此，限制这一点可能是有用的，特别是当你经常出现在有很多人的场合时。
+
+推荐的数值是 **300MB**。
+
+超出此值的头像将显示为其后备模型或模型替身（如果有的话）。
+
+## 模型显示数量限制
 
 <center>
 
-![img](/docs.vrchat.com/images/vrchat-configuration-window-3.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/vrchat-configuration-window-3.png)
 
 </center>
 
-此窗口允许您打开[模型动态骨骼限制](/docs.vrchat.com/docs/avatar-dynamic-bone-limits.md)系统。默认情况下，它处于打开状态。
+### 隐藏超出范围的模型
 
-此选项在 Quest 中不可用，因为 Quest 无法显示动态骨骼。
+此设置将隐藏超出指定距离的所有模型。例如，如果设置为 15 米，它将隐藏所有距离超过 15 米的模型。
 
-## 高级图像
+隐藏的模型将关闭所有渲染器，并用“幽灵钻石”符号替代。然而，一些组件将继续运行，以避免一致性问题（动画）或其他问题。
 
-<center>
-
-![img](/docs.vrchat.com/images/vrchat-configuration-window-4.png)
-
-</center>
-
-“高级图像”窗口允许您调整“图像品质”设置以及“多重采样抗锯齿”设置。
+在调整这个滑块时，您周围会出现一个环以指示距离。
 
 ### 多采样抗锯齿
 
 您可以在 VRChat 中调整抗锯齿强度 （“MSAA”）。它默认为 4x 。将其调高可以显着增加VRAM使用率，在某些情况下将其降低到2倍或将其关闭可以大大提高性能。
 
+### 模型数量上限
+
+此设置允许您选择同时显示的最大模型数量，按距离排序。
+
+例如，如果您将此选项设置为“10”，则将显示最近的 10 个模型。所有数量超过它们的模型将不显示。
+
+### 始终显示好友模型
+
+此切换确保好友的模型始终显示，无论距离或已显示的模型数量。
+
+### 设为“始终显示”的玩家除外
+
+此切换确保您选择“始终显示”的人无论距离或已显示的模型数量的多少都能被显示。
+
 ### Quest MSAA
 
 Quest MSAA 是一个单独的功能。根据 Oculus 的建议：
 
-Oculus Quest 1 应设置为 2x MSAA。
-Oculus Quest 2 应设置为 4x MSAA。
+Oculus Quest 1 设置为 2x MSAA。
+Oculus Quest 2，3,和 Pro 设置为 4x MSAA。
 
 此设置无法更改。
 
@@ -85,7 +101,7 @@ Oculus Quest 2 应设置为 4x MSAA。
 
 <center>
 
-![img](/docs.vrchat.com/images/vrchat-configuration-window-5.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/VRC-Low.png)
 
 *PC VR 中的低品质设置*
 
@@ -95,7 +111,7 @@ Oculus Quest 2 应设置为 4x MSAA。
 
 <center>
 
-![img](/docs.vrchat.com/images/vrchat-configuration-window-6.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/VRC-Medium.png)
 
 *PC VR 中的中等品质设置*
 
@@ -105,7 +121,7 @@ Oculus Quest 2 应设置为 4x MSAA。
 
 <center>
 
-![img](/docs.vrchat.com/images/vrchat-configuration-window-7.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/VRC-High.png)
 
 *PC VR 中的高品质设置*
 
@@ -115,7 +131,7 @@ Oculus Quest 2 应设置为 4x MSAA。
 
 <center>
 
-![img](/docs.vrchat.com/images/vrchat-configuration-window-8.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/Ultra.png)
 
 *PC VR 中的极致品质设置*
 
@@ -123,12 +139,41 @@ Oculus Quest 2 应设置为 4x MSAA。
 
 ### 移动端专用（VRC Mobile）
 
-Oculus Quest 只有一个图形配置文件。如下所示。
+Oculus Quest，安卓，IOS，PICO只有一个图形配置文件。如下所示。
 
 <center>
 
-![img](/docs.vrchat.com/images/vrchat-configuration-window-9.png)
-
-*Quest 设置*
+![移动端设置](https://cn-nb1.rains3.com/docs-image/controls/VRC-Mobile.png)
 
 </center>
+
+## 镜子分辨率
+
+镜子分辨率允许您设置在镜子中显示的反射分辨率，可以设置为：无限制、全分辨率、半分辨率或四分之一分辨率。无限制分辨率的镜子将显著影响您的性能。请自行承担风险。
+
+## 阴影质量
+
+阴影质量设置允许您调整实时光源产生的阴影质量，烘焙光阴影将不受影响，也不会影响性能。
+
+您可以将其设置为高、中或低。这里是阴影质量设置为高和低的示例，低阴影质量的图像更加像素化且粗糙，这在光滑区域如肩部和一些尖锐区域如耳朵周围非常明显。
+
+<center>
+
+![img](https://cn-nb1.rains3.com/docs-image/controls/vrchat-configuration-window-4.png)
+
+</center>
+
+## LOD 质量
+
+当一个对象位于两个 LOD 值之间时，它将根据此设置偏向选择更高或更低质量的模型。
+
+这可以在早期的图形质量配置文件中看到，称为 LOD Bias 。
+
+在高设置下，LOD Bias 为 2，偏向于更高质量的模型，而在低设置下，LOD Bias为 1，偏向于较低质量的模型。
+
+这些是仅基于您屏幕上物体的大小，因此您离物体越远，模型的质量就会越低。然而，并非所有世界都有 LOD 设置，因为世界的创建者必须亲自构建它们。
+
+## 粒子物理质量
+
+此设置会影响物理质量，影响重力或碰撞等粒子。降低此设置将提高在由模型或世界生成粒子时的性能。还有一个设置可以限制模型可以创建的粒子数量，详见模型粒子系统限制。
+

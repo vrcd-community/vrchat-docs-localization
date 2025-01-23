@@ -21,7 +21,7 @@
 ## 避免使用 Dynamic Bones！
 Dynamic Bones （动态骨骼）是一种可购置的 Unity 资产，允许您在模型中定义可摆动的骨骼。您还可以对此赋予一些静态受力，如重力，以使头发下垂地更加逼真。
 
-Dynamic Bones 已被弃用，并会在将来被移除。请替用为 [PhysBones（物理骨骼）](/creators.vrchat.com/avatars/avatar-dynamics/physbones)。
+Dynamic Bones 已被弃用，并会在将来被移除。请替用为 [PhysBones（物理骨骼）](/creators.vrchat.com/avatars/avatar-components/physbones)。
 
 VRChat 将在运行时自动将 Dynamic Bones 转换为 PhysBones。
 

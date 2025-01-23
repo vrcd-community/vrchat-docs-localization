@@ -6,6 +6,6 @@ VRChat 可以完全支持兼容 XInput 标准的控制器 (Xbox 360, Xbox One, X
 
 <center>
 
-![img](/docs.vrchat.com/images/gamepad-1.png)
+![img](https://cn-nb1.rains3.com/docs-image/controls/gamepad-1.png)
 
 </center>

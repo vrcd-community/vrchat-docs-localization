@@ -18,7 +18,7 @@ title: "Physbones"
 
 虽然 Physbones 没有专门为布料效果而优化，但它也可以作为布料组件的下位替代品，直到我们实现自己的布料组件为止。
 
-![](/creators.vrchat.com/images/avatars/physbones-ca9ee06-2022-05-04_18-23-09_Unity.png)
+![](https://cn-nb1.rains3.com/docs-image/controls/physbones-1.png)
 
 ### 版本选择
 
@@ -88,7 +88,7 @@ title: "Physbones"
 下方的大多数 Physbones 设置都可以使用曲线！
 :::
 
-![physbones-054e326-2022-04-19_11-32-12_Unity.png](/creators.vrchat.com/images/avatars/physbones-054e326-2022-04-19_11-32-12_Unity.png)
+![physbones-054e326-2022-04-19_11-32-12_Unity.png](https://cn-nb1.rains3.com/docs-image/controls/physbones-2.png)
 
 `Pull` - 用于将骨骼恢复到其静止位置的力量大小。
 `Spring` - 当骨骼试图达到其静止位置时，骨骼发生摆动的程度。仅在`Simplified`类型中可用。
@@ -105,7 +105,7 @@ title: "Physbones"
 
 如果设置为 **World (Experimental)** ， `Immobile` 仅从场景根变换的参考位置减少位置运动。动画或 IK 引起的运动仍会正常影响骨骼。_此模式可能会在将来更改！_
 <!--Immobile需要更多解释！-->
-这意味着在播放空间中移动仍会正常影响 Physbones 的运动，但是这时`Immobile` 系数也会同样抑制 Physbones 的运动。
+这意味着在游戏空间中移动仍会正常影响 Physbones 的运动，但是这时`Immobile` 系数也会同样抑制 Physbones 的运动。
 
 ### Limits (限制)
 
@@ -121,19 +121,19 @@ title: "Physbones"
 
 #### Angle
 
-![Angle](/creators.vrchat.com/images/avatars/physbones-b7abe1f-2022-04-19_11-49-26_Unity.png)
+![Angle](https://cn-nb1.rains3.com/docs-image/controls/physbones-3.png)
 
 `Angle` 表示骨骼链将以 `Rotation` 定义的轴为中心，限制在 `Max Angle` 内。在场景视图中，这被可视化为一个圆锥体。
 
 #### Hinge
 
-![Hinge](/creators.vrchat.com/images/avatars/physbones-b7723cc-2022-04-19_11-50-04_Unity.png)
+![Hinge](https://cn-nb1.rains3.com/docs-image/controls/physbones-4.png)
 
  `Hinge` 表示骨骼链将仅在由 `Rotation` 定义的平面上，并被限制在 `Max Angle` 内。在场景视图中，这被可视化为一个圆片的切片，类似于披萨或馕。
 
 #### Polar
 
-![](/creators.vrchat.com/images/avatars/physbones-824db3c-2022-04-19_11-51-22_Unity.gif)
+![](https://cn-nb1.rains3.com/docs-image/controls/physbones-5.gif)
 
 `Polar` 有点复杂。它就像用 `Hinge` 沿 `Yaw` 扫过一定角度得到的图形球段。您可以配置 `Max Pitch` 和 `Max Yaw` 来调整球段的大小，并使用 `Rotation` 来定义该段在球体上的位置。它的可视化可以帮助您更好的配置其选项。
 
@@ -166,6 +166,7 @@ title: "Physbones"
 - `{parameter}_IsPosed` - [Bool] 骨骼是否被锁定。
 - `{parameter}_Angle` - [Float] 值范围为 0.0-1.0。从其原始静止位置到末端骨骼的 180 度角度的归一化值。换句话说，如果您完全扭曲一个骨骼，使其与起始方向相反，那么此参数的值将为 1.0。
 - `{parameter}_Stretch` - [Float] 值范围为 0.0-1.0。骨骼被拉伸到其最大伸展长度的百分比量。
+- `{parameter}_Squish` - [Float] 值范围为 0.0-1.0。骨骼被压缩到其最大压缩率的百分比量。
 - `Is Animated` - 允许对骨骼变换进行动画处理。每帧骨骼静止位置将根据动画进行更新。如果您想让 Physbone 链中的任何骨骼（包括根骨骼！）的位置能被动画更新，则必须启用此选项。
 - `Reset When Disabled` - 如果启用该选项，则当此组件被禁用时，骨骼将自动重置到其默认位置。
 
@@ -177,9 +178,9 @@ title: "Physbones"
 
 ::: warning Quest限制
 
-** Physbones 在 Meta Quest （一体机 VR）上有严格的限制。**这是为了防止这些设备遇到性能问题，因为通常这些设备的 CPU 处理能力受限。
-<!--需句意重整-->
-您可以将这些限制视为 Quest 的 Very Poor 的限制，详细信息请参阅[最低显示性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system#quest-limits)文档。
+** Physbones 在 Meta Quest （一体机 VR）上有严格的限制。**这是为了防止这些设备遇到性能问题，因为通常这些设备的 CPU 处理能力有限。
+
+您可以将这些限制视为 Quest 的模型性能的限制，详细信息请参阅[最低显示性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system#quest-limits)文档。
 
 :::
 
@@ -231,7 +232,7 @@ title: "Physbones"
 
 定义了一个会影响 Physbones 的碰撞器（前提是对应的 Physbone 有正确地配置了碰撞选项）。
 
-![](/creators.vrchat.com/images/avatars/physbones-ac38f46-2022-05-04_18-35-11_Unity.png)
+![](https://cn-nb1.rains3.com/docs-image/controls/physbones-6.png)
 
 - `Root Transform` - 放置此碰撞器的变换。如果为空，则默认为含有该组件的游戏对象。
 - `Shape Type` - 此碰撞器使用的碰撞形状类型。您可以选择球体、胶囊体或平面碰撞器。
@@ -258,7 +259,7 @@ title: "Physbones"
   - Ring
   - Little
 
-这些碰撞器主要作为 [Contact](/creators.vrchat.com/avatars/avatar-dynamics/contacts) 发送器，其他人可以用其模型检测到。但同时，手指和手部碰撞器也用于创建全局的 [Physbone](physbones) 碰撞器，它们可以与其他人的 Physbones 发生互动。
+这些碰撞器主要作为 [接触点](/creators.vrchat.com/avatars/avatar-components/contacts) 发送器，其他人可以用其模型检测到。但同时，手指和手部碰撞器也用于创建全局的 [Physbone](physbones) 碰撞器，它们可以与其他人的 Physbones 发生互动。
 
 ### 自动 Dynamic Bone 转换
 

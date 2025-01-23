@@ -39,7 +39,7 @@
   - PhysBones 1.1：**已添加 Stretch Motion 值。** 这是运动影响骨头拉伸或压缩的比例。
   - 现在可以折叠 VRCPhysBone 组件 UI 中的值类别。
     - 类别还包括一个帮助按钮，它将带您到该主题的在线文档。
-  - [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) 文档将在 PhysBones 1.1 和 Squishy PhysBones 的公开测试期间更新。
+  - [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) 文档将在 PhysBones 1.1 和 Squishy PhysBones 的公开测试期间更新。
   - 网络 ID 工具现在适用于 Avatar 项目中的 PhysBones
     - 这个工具允许在不同平台上的虚拟形象之间同步 PhysBones，即使它们有不同的 GameObject 层次结构
       - 这个高级工具只有在您的 PC 和 Quest 虚拟形象有不同的层次结构时才有用！

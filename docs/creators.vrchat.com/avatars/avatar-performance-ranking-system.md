@@ -127,11 +127,11 @@ Triangles (polygons) are a somewhat special case-- if you are 32k or less, you a
 | Dynamic Bone Transforms                                                                   | 0                  | 16           | 32           | 256          |
 | Dynamic Bone Colliders                                                                    | 0                  | 0            | 4            | 32           |
 | Dynamic Bone Collision Check Count                                                        | 0                  | 0            | 8            | 256          |
-| [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Components            | 4                  | 8            | 16           | 32           |
-| [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Affected Transforms   | 16                 | 64           | 128          | 256          |
-| [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Colliders             | 4                  | 8            | 16           | 32           |
-| [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Collision Check Count | 32                 | 128          | 256          | 512          |
-| Avatar Dynamics [Contacts](/creators.vrchat.com/avatars/avatar-dynamics/contacts)         | 8                  | 16           | 24           | 32           |
+| [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) Components            | 4                  | 8            | 16           | 32           |
+| [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) Affected Transforms   | 16                 | 64           | 128          | 256          |
+| [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) Colliders             | 4                  | 8            | 16           | 32           |
+| [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) Collision Check Count | 32                 | 128          | 256          | 512          |
+| Avatar Dynamics [Contacts](/creators.vrchat.com/avatars/avatar-components/contacts)         | 8                  | 16           | 24           | 32           |
 | Animators                                                                                 | 1                  | 4            | 16           | 32           |
 | Bones                                                                                     | 75                 | 150          | 256          | 400          |
 | Lights                                                                                    | 0                  | 0            | 0            | 1            |
@@ -157,15 +157,15 @@ You can set your Performance Rank Block level to Poor to allow the display of Po
 
 For example, if an avatar on Quest exceeds 20,000 triangles (polygons), it will not display by default in the application. These avatars can be forced to show by clicking on each user and clicking "Show Avatar". 
 
-Notably, **there is a hard cap on [Avatar Dynamics](/creators.vrchat.com/avatars/avatar-dynamics/) systems on Quest.** It cannot be bypassed by using "Show Avatar". This is the hard cap:
+Notably, **there is a hard cap on [Avatar Dynamics](/creators.vrchat.com/avatars/avatar-components/) systems on Quest.** It cannot be bypassed by using "Show Avatar". This is the hard cap:
 
-- 8 [PhysBone](/creators.vrchat.com/avatars/avatar-dynamics/physbones) components
-- 64 [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) affected transforms
-- 16 [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) colliders
-- 64 [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) collider checks
-- 16 [Avatar Dynamics Contacts](/creators.vrchat.com/avatars/avatar-dynamics/contacts) 
+- 8 [PhysBone](/creators.vrchat.com/avatars/avatar-components/physbones) components
+- 64 [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) affected transforms
+- 16 [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) colliders
+- 64 [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) collider checks
+- 16 [Avatar Dynamics Contacts](/creators.vrchat.com/avatars/avatar-components/contacts) 
 
-If this cap is exceeded on Quest, all [Avatar Dynamics](/creators.vrchat.com/avatars/avatar-dynamics/) components will be removed from the avatar, even if Show Avatar is enabled.
+If this cap is exceeded on Quest, all [Avatar Dynamics](/creators.vrchat.com/avatars/avatar-components/) components will be removed from the avatar, even if Show Avatar is enabled.
 ::: danger
 
 **"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Quest entirely.** Please keep this in mind when creating avatars for VRChat on the Oculus Quest.
@@ -181,11 +181,11 @@ If this cap is exceeded on Quest, all [Avatar Dynamics](/creators.vrchat.com/ava
 | Material Slots                                                                                | 1                  | 1            | 2            | 4            |
 | Animators                                                                                     | 1                  | 1            | 1            | 2            |
 | Bones                                                                                         | 75                 | 90           | 150          | 150          |
-| [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Components[^2]            | 0                  | 4            | 6            | 8            |
-| [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Affected Transforms[^2]   | 0                  | 16           | 32           | 64           |
-| [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Colliders[^2]             | 0                  | 4            | 8            | 16           |
-| [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones) Collision Check Count[^2] | 0                  | 16           | 32           | 64           |
-| Avatar Dynamics [Contacts](/creators.vrchat.com/avatars/avatar-dynamics/contacts)[^2]         | 2                  | 4            | 8            | 16           |
+| [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) Components[^2]            | 0                  | 4            | 6            | 8            |
+| [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) Affected Transforms[^2]   | 0                  | 16           | 32           | 64           |
+| [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) Colliders[^2]             | 0                  | 4            | 8            | 16           |
+| [PhysBones](/creators.vrchat.com/avatars/avatar-components/physbones) Collision Check Count[^2] | 0                  | 16           | 32           | 64           |
+| Avatar Dynamics [Contacts](/creators.vrchat.com/avatars/avatar-components/contacts)[^2]         | 2                  | 4            | 8            | 16           |
 | Particle Systems                                                                              | 0                  | 0            | 0            | 2            |
 | Total Particles Active                                                                        | 0                  | 0            | 0            | 200          |
 | Mesh Particle Active Polys                                                                    | 0                  | 0            | 0            | 400          |
@@ -254,7 +254,7 @@ On VRChat for the Oculus Quest, the Avatar Performance Rank Block is set to "Med
 
 You cannot disable the Avatar Performance Rank Block system on Quest. In other words, avatars that are ranked as "Very Poor" will always have their display managed VRChat for the Oculus Quest, and may not display at all.
 
-No matter what setting you choose, if the [Avatar Dynamics](/creators.vrchat.com/avatars/avatar-dynamics/) component limits are exceeded on Quest, all of those components will be removed. In short, there is a hard cap for Avatar Dynamics components on Quest avatars.
+No matter what setting you choose, if the [Avatar Dynamics](/creators.vrchat.com/avatars/avatar-components/) component limits are exceeded on Quest, all of those components will be removed. In short, there is a hard cap for Avatar Dynamics components on Quest avatars.
 
 ### Overriding Individual Avatars
 ::: danger
