@@ -47,14 +47,9 @@
   </ol>
 </details>
 
-<!-- ABOUT THE PROJECT -->
 ## 关于该项目
 
-<!-- [![文档首页截图][product-screenshot]](https://docs.vrczh.org/)
-
-![海报][Poster] -->
-
-我们正在铺设的是一条面向所有开发成员的极具吸引力的开发道路，以帮助具有语言困境的开发者获得更加便捷准确的汉化内容。不同于浏览器自带的翻译功能，我们对涉及开发，技术名词和语境有着更准确的把握和翻译准确度，包括图片/视频内容的全面本地化，与此同时也给各位提供更加包容多彩的开发者讨论环境。
+[![文档首页截图][product-screenshot]](https://docs.vrczh.org/)
 
 ### 目前的覆盖范围
 
@@ -77,7 +72,6 @@
 
 <p align="right"><a href="#readme-top">返回顶部</a></p>
 
-<!-- USAGE EXAMPLES -->
 ## 使用方法
 
 - 直接访问汉化文档地址: [https://docs.vrczh.org/](https://docs.vrczh.org/)
@@ -85,7 +79,6 @@
 
 <p align="right"><a href="#readme-top">返回顶部</a></p>
 
-<!-- CONTRIBUTING -->
 ## 贡献
 
 有了您的贡献，开源社区才能成为学习、启发和创造的绝佳场所。我们对您的任何贡献**万分感激**。
@@ -154,20 +147,20 @@ All information on this project is the result of work done by independent volunt
 <!-- CONTACT -->
 ## 联系我们
 
-项目链接: [https://github.com/vrcd-community/vrchat-docs-localization](https://github.com/vrcd-community/vrchat-docs-localization)
+- QQ: https://qq.vrcd.org.cn
+- KOOK: https://kook.vrcd.org.cn
+- Discord: https://discord.vrcd.org.cn
+- 哔哩哔哩: https://bilibili.vrcd.org.cn
+- VRChat: https://vrchat.vrcd.org.cn
 
 <p align="right"><a href="#readme-top">返回顶部</a></p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## 鸣谢
 
-* **[VRC 中文翻译小组](https://vrc.group/VRCZH.0723)** - 感谢 VRC 中文翻译小组参与了 VRChat 游戏本体的本地化，其翻译指南和译文对该文档的翻译指南制定提供的巨大帮助。
+* **[VRChat 简体中文本地化小组](https://vrc.group/VRCZH.0723)** - 感谢 VRChat 简体中文本地化小组参与了 VRChat 游戏本体的本地化，其翻译指南和译文对该文档的翻译指南制定提供的巨大帮助。
 * **[参与该项目的贡献者][contributors-url]** - 如果没有这些贡献者的参与，就没有该文档。
 * **[VitePress](https://vitepress.dev)** - VitePress 是一个简单、强大、快速的静态网站 (SSG) 生成器，让我们可以将以 Markdown 编写的源内容，应用主题，并生成可轻松部署到任何地方的静态 HTML 页面。你所看到的文档站点便是在 VitePress 的基础上搭建而成的。
-* **[Vue.js](https://cn.vuejs.org)** - 易学易用，性能出色，适用场景丰富的 Web 前端框架。配合 VitePress 让我们可以做出令人眼前一亮的文档浏览体验。
-* **[Vite.js](https://cn.vitejs.dev)** - Vite.js 提供了闪电般的热重载和启动体验，其灵活的扩展性和对现有技术栈的广泛支持带来了文档优秀的开发体验。
-* **[VitePWA](https://vite-pwa-org.netlify.app/)** - 一个 Vite.js 的 PWA 插件，提供了开箱即用且易于配置的 PWA 体验，使用 PWA 让该文档具备了离线浏览的能力。
-* **[Best-README-Template](https://github.com/othneildrew/Best-README-Template)** - 该文档的 README 基于该模板编写，为我们节省了大量的时间。
 * **你，和其他同样对 VRChat 中文社区做出贡献的创作者/玩家们** - 没有你们，也不会有该文档的出现
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -194,5 +187,4 @@ All information on this project is the result of work done by independent volunt
 [workflow-status-url]: https://github.com/vrcd-community/vrchat-docs-localization/actions/workflows/deploy.yml
 
 [product-screenshot]: screenshot.png
-[Poster]: poster.png
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
