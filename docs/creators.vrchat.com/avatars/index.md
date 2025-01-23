@@ -1,3 +1,7 @@
+---
+upstreamCommit: 4e923502a3a87b7de290b3cf43347a47b9c3c30b
+---
+
 # 虚拟形象
 
 ::: danger 文档翻译未完成

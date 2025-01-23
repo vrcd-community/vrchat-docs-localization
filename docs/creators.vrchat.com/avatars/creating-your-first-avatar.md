@@ -1,3 +1,8 @@
+---
+title: "创建您的第一个虚拟形象"
+upstreamCommit: 6f545f4364a91073763e7f0bdf20784e2fb0e94d
+---
+
 # 创建您的第一个虚拟形象
 ## 请首先设置好 SDK !
 在开始之前，请确保已经有一个[已安装 SDK 的 Unity 项目](/creators.vrchat.com/sdk/)。

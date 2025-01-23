@@ -1,5 +1,6 @@
 ---
 title: "Shader Blocking and Fallback System"
+upstreamCommit: 98018dfbc6b421565a6cc4a75042737d1131504a
 ---
 
 # Shader Blocking and Fallback System

@@ -1,5 +1,6 @@
 ---
 title: "Avatar Dynamics 调试"
+upstreamCommit: 6f545f4364a91073763e7f0bdf20784e2fb0e94d
 ---
 
 # 通过不同的方式进行效果调整
