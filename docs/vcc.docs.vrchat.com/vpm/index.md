@@ -1,3 +1,7 @@
+---
+upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
+---
+
 # 包管理器
 
 VRChat 包管理器（VPM）目前是创作者伴侣的主要功能。它帮助您保持 VRChat SDK 和包的更新，并加速 VRChat 项目的创建和管理。

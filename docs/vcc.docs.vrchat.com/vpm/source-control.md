@@ -1,3 +1,7 @@
+---
+upstreamCommit: debe9345e160bd692d0a3fb2ca19116e40e753be
+---
+
 # 将版本控制功能与 VPM 一起使用
 
 我们非常喜欢版本控制工具，用于保存您的工作和协作内容。我们使用 [Git](https://git-scm.com/) 来管理我们自己的包，甚至 VRChat 客户端也是如此。VPM 被设计为与版本控制系统友好相处，以下是具体的工作方式。如果您使用其他系统，如 [Plastic](https://docs.unity3d.com/2019.4/Documentation/Manual/PlasticSCMPlugin.html)，您可以通过 [反馈](https://feedback.vrchat.com/creator-companion-beta) 向我们发送分享的提示。

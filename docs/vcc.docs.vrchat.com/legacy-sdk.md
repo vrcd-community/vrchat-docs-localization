@@ -1,3 +1,7 @@
+---
+upstreamCommit: d491f4f4580c5d337cc6959b586c7817b2012d51
+---
+
 # 旧版 SDK
 ::: warning
 从 2023 年开始，VRChat 对旧版 SDK（'`.unitypackage`' 形式的 SDK）的支持已经结束。
