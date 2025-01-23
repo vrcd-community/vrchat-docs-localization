@@ -1,3 +1,7 @@
+---
+upstreamCommit: 1830844e256f8ca87a1c0702e82e5876b81b7093
+---
+
 # Android
 
 想要在 Oculus Quest 上为 VRChat 制作内容？您来对地方了！此页面将带您了解有关Quest内容创作、跨平台设置和其他相关指南的各种页面。

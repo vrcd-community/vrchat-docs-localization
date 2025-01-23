@@ -1,3 +1,7 @@
+---
+upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
+---
+
 # Quest 内容限制
 本页将介绍 Oculus Quest 版本的 VRChat 的各种限制。这些限制是以性能、用户安全和阻止恶意行为考虑而设置的。
 
