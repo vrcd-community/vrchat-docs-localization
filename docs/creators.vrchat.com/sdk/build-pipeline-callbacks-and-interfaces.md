@@ -1,3 +1,8 @@
+---
+title: "构建管线回调和接口"
+upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
+---
+
 # 构建管线回调 (Pipeline Callbacks) 和接口 (Interfaces)
 
 VRChat SDK 中包含了多个可以通过编辑器脚本使用的接口，这些接口可以增强世界和模型的构建过程。

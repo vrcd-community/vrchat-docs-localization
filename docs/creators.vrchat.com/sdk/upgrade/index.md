@@ -1,6 +1,7 @@
 ---
 title: Unity 管理指南
 description: 学习如何将 Unity 升级至最新版本
+upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 ---
 
 # Unity 管理指南

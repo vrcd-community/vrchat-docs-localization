@@ -1,3 +1,7 @@
+---
+upstreamCommit: 95fb3a318173e7af4b2cb8453db50365df8d314e
+---
+
 # Public SDK API
 
 VRChat SDK 提供了一系列接口和方法，您可以使用它们来增强您的世界和虚拟形象构建过程。
