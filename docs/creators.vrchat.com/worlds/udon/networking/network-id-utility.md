@@ -19,25 +19,25 @@ This utility allows you to save and transfer network IDs between scenes or proje
 You should only need to use this utility if you are developing a cross-platform world and your different versions are in different scenes or projects.
 :::
 
-![network-id-utility-9936cee-image1.png](/img/worlds/network-id-utility-9936cee-image1.png)
+![network-id-utility-9936cee-image1.png](/creators.vrchat.com/images/worlds/network-id-utility-9936cee-image1.png)
 
 When using this tool, you will see a list of all your network IDs in the entire scene. If you don’t have this yet, you can click Regenerate Scene IDs.
-![network-id-utility-05130bf-image4.png](/img/worlds/network-id-utility-05130bf-image4.png)
+![network-id-utility-05130bf-image4.png](/creators.vrchat.com/images/worlds/network-id-utility-05130bf-image4.png)
 
 When you are ready to transfer network IDs from one scene to another, click on the **Export** button to save the file somewhere. Then go to the other scene and click **Import**, and select that file.
 
 **Network IDs in this format are saved as a path to the object.** As such, try to keep the path to each object the same between your scenes. Other objects in the scene that do not have any networking (such as meshes) do not matter and they can be different between your scenes, as long as they do not conflict with something that does need to be synced.
-![network-id-utility-3b30a4e-image5.png](/img/worlds/network-id-utility-3b30a4e-image5.png)
+![network-id-utility-3b30a4e-image5.png](/creators.vrchat.com/images/worlds/network-id-utility-3b30a4e-image5.png)
 
 If everything matches between your two scenes, you should see one big block with an **Accept All** button. Go ahead and click that, and you’re good to go!
 
 # Resolving Conflicts
 
 There are several conflict resolution tools within this utility.
-![network-id-utility-22a9bcf-image3.png](/img/worlds/network-id-utility-22a9bcf-image3.png)
+![network-id-utility-22a9bcf-image3.png](/creators.vrchat.com/images/worlds/network-id-utility-22a9bcf-image3.png)
 
 Here is an example of an object that exists in the file but does not exist in the scene. The file says that there is a network ID at this path, but it can’t find an object with that path. At this point, you can choose to either ignore it or specify a different object. If you know for sure that this is an object which doesn’t need to exist in this scene, then you can safely ignore it. However, if it is an object that should exist in your scene but simply has a different name, then you can select it. Once you’ve resolved this conflict, it will move down to the section where you can accept the network ID.
-![network-id-utility-c5175f8-image2.png](/img/worlds/network-id-utility-c5175f8-image2.png)
+![network-id-utility-c5175f8-image2.png](/creators.vrchat.com/images/worlds/network-id-utility-c5175f8-image2.png)
 
 Here's another example where an object says it has the network ID of 25, but the file says that a different path should have 25. 
 
