@@ -1,5 +1,6 @@
 ---
 title: "Player Avatar Scaling"
+upstreamCommit: b8d616fc4dd5ac66e2dc43182e25ae4dee27ff63
 ---
 
 # Player Avatar Scaling
