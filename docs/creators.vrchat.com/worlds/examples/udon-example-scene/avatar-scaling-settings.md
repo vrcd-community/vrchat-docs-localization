@@ -1,6 +1,7 @@
 ---
 title: "Avatar Scaling Settings"
 description: "Configure avatar scaling in your world"
+upstreamCommit: 198bd9e176af36c063016bd839781bd6445e942a
 ---
 
 # Avatar Scaling Settings

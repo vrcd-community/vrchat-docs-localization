@@ -1,5 +1,6 @@
 ---
 title: "Obstacle Course: Build From Demo Parts"
+upstreamCommit: 224d4af5b83123c0fd8d9d8ad28161f31b36954c
 ---
 
 # Obstacle Course: Build From Demo Parts

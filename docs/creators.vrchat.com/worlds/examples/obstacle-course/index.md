@@ -1,6 +1,8 @@
 ---
 title: "Obstacle Course"
+upstreamCommit: 224d4af5b83123c0fd8d9d8ad28161f31b36954c
 ---
+
 # Overview
 
 @[youtube](https://www.youtube.com/watch?v=id3VqPUy_rY)
