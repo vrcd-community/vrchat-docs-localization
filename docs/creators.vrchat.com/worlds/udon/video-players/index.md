@@ -1,6 +1,7 @@
 ---
 title: "视频播放器"
 description: "在您的 VRChat 世界中播放视频！"
+upstreamCommit: 6f545f4364a91073763e7f0bdf20784e2fb0e94d
 ---
 
 # 视频播放器
