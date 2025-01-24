@@ -1,5 +1,6 @@
 ---
 title: "ASyncGPUReadback"
+upstreamCommit: a3799deaca7cd590a0bde5bb142fb08044d4e5ba
 ---
 
 # ASyncGPUReadback

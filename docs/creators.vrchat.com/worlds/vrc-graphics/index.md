@@ -1,5 +1,6 @@
 ---
 title: "VRCGraphics"
+upstreamCommit: bfc8c1667223099a0acc2dc7bae91fd2ff0dd991
 ---
 
 # VRCGraphics
