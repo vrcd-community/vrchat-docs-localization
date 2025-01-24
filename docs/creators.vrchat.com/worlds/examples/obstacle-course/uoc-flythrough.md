@@ -1,6 +1,8 @@
 ---
 title: "Obstacle Course: Flythrough"
+upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 ---
+
 # Obstacle Course: Flythrough
 
 We included a Cinemachine system to easily generate a fly-through video of your course!

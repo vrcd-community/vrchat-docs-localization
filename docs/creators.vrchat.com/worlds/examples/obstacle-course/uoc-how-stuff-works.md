@@ -1,6 +1,7 @@
 ---
 title: "Obstacle Course: How Stuff Works"
 description: "How all the different programs and custom editor scripts work together in the Udon Obstacle Course"
+upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 ---
 
 # Obstacle Course: How Stuff Works

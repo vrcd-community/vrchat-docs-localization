@@ -1,6 +1,7 @@
 ---
 title: "Udon Video Sync Player"
 description: "Basic example of synced video"
+upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 ---
 
 # Udon Video Sync Player

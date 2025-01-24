@@ -1,3 +1,6 @@
+---
+upstreamCommit: 4e923502a3a87b7de290b3cf43347a47b9c3c30b
+---
 
 # 白名单模型组件
 

@@ -1,3 +1,7 @@
+---
+UpstreamCommit: c232baae74a772050a1a4be1a576f54ee98ad189
+---
+
 # Migration
 
 UdonSharp 0.x (the .unitypackage version) is deprecated and no longer supported. This new version is easy to get through the [Creator Companion](https://vcc.docs.vrchat.com), which will help you keep it up-to-date as well. We recommend you [Migrate your Projects using the Creator Companion](https://vcc.docs.vrchat.com/vpm/migrating). If you want to do the migration manually, read [Manual Migration](#manual-migration).

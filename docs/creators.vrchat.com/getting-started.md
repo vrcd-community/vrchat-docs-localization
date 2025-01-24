@@ -1,3 +1,7 @@
+---
+upstreamCommit: 67afe1890d3b8b1f2cd922ee2fe44b33500d73cc
+---
+
 # 欢迎！
 
 您的 VRChat 创作之旅从这里开始！

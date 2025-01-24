@@ -1,6 +1,8 @@
 ---
 title: "VRCJSON"
+upstreamCommit: 6f545f4364a91073763e7f0bdf20784e2fb0e94d
 ---
+
 # VRC JSON
 
 [Data Dictionaries](/creators.vrchat.com/worlds/udon/data-containers/data-dictionaries) and [Data Lists](/creators.vrchat.com/worlds/udon/data-containers/data-lists) include functions to convert to and from JSON. A Data List is equivalent to a JSON array, and a JSON object is equivalent to a Data Dictionary with string keys.

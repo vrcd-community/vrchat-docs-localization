@@ -1,3 +1,7 @@
+---
+upstreamCommit: 172159a3d649ac8c11feddcff986fc0adef4a7bb
+---
+
 # 设置 Unity 以创建 Quest 内容
 
 设置 Unity 用于创建 Quest 内容实际上非常简单。这张图片可以很好地解释它：

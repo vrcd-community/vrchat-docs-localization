@@ -1,6 +1,7 @@
 ---
 title: "玩家 API"
 description: "使用 Udon 来获取关于您的世界内玩家的信息"
+upstreamCommit: f6bfeb189f39dbb6af5034cbd4c30e4e72067da0
 ---
 
 <!-- 这寄吧文档写的寄吧烂 -->

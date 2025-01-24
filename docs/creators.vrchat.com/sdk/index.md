@@ -1,6 +1,7 @@
 ---
 title: "快速开始"
 description: "学习如何在Unity中创建VRChat的虚拟形象或世界项目"
+upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 ---
 
 # 快速开始

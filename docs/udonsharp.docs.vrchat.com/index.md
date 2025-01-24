@@ -1,3 +1,7 @@
+---
+upstreamCommit: 09a1b3172578b1a3b886bbe184ab6c4cb65943c7
+---
+
 # UdonSharp
 
 ## A compiler for compiling C# to Udon assembly

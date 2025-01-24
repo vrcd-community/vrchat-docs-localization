@@ -1,3 +1,7 @@
+---
+upstreamCommit: b30aec8ae69d86b6db951b628cbd3698f21766c9
+---
+
 # 模板
 模板用于创建预装了 VRChat 包和设置的新 Unity 项目。
 

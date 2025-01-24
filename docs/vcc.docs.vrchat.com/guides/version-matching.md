@@ -1,3 +1,7 @@
+---
+upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
+---
+
 # 版本匹配
 
 我们使用 [语义化版本](https://semver.org/) 来管理 VRChat 包管理器 (VPM) 中的 SDK 包，而不是 `.unitypackage` 格式中使用的基于日期的格式。本文档显示了最新 SDK 版本的两种版本之间的匹配。

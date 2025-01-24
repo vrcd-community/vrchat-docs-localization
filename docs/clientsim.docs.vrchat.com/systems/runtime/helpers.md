@@ -1,3 +1,7 @@
+---
+upstreamCommit: 4d76fd612a37de18fd85c39062bade59afffb7cf
+---
+
 # VRCSDK助手
 
 助手组件被添加到对象上，以帮助处理VRC SDK组件的行为。这些组件的角色与CyanEmu和Phase 2相比保持不变，尽管一些与对象功能本身无关的逻辑已被剥离出来。例如，在CyanEmu中，CyanEmuPickupHelper脚本处理了持有拾取物的逻辑。现在，这种行为已经从拾取助手类中移出，并移入拾取管理系统。PickupHelper代码现在只提供有关PlayerHand应如何处理拾取物的数据。
@@ -8,25 +12,25 @@
 
 可用接口通常以“able”结尾，代表在ClientSim中可以某种方式使用的项目。它们提供了如何使用它们的信息，但不包括使用它们的方法。
 
-| 名称                       | 描述                                                      |
-|----------------------------|------------------------------------------------------------------|
+| 名称                       | 描述                                   |
+| -------------------------- | -------------------------------------- |
 | IClientSimInteractable     | 代表可以与之交互的对象                 |
 | IClientSimPickupable       | 代表可以被拾取的对象，扩展Interactable |
-| IClientSimStation          | 代表玩家可以使用的坐下的对象              |
-| IClientSimSyncable         | 代表可以有所有者的对象                      |
-| IClientSimPositionSyncable | 代表同步其位置的对象，扩展Syncable   |
+| IClientSimStation          | 代表玩家可以使用的坐下的对象           |
+| IClientSimSyncable         | 代表可以有所有者的对象                 |
+| IClientSimPositionSyncable | 代表同步其位置的对象，扩展Syncable     |
 
 ## 处理器接口
 
 使用这两种接口类型，助手类是包装VRChat SDK组件信息以提供给ClientSim的方式。
 
-| 名称                       | 描述                                                      |
-|----------------------------|------------------------------------------------------------------|
-| PositionSyncedHelperBase   | VRCObjectSync的助手，扩展PositionSyncedHelperBase。Syncable，PositionSyncable，RespawnHandler |
-| ObjectSyncHelper| VRCObjectSync的助手，扩展PositionSyncedHelperBase。Syncable，PositionSyncable，RespawnHandler |
-| UdonHelper          | UdonBehaviour的助手，扩展PositionSyncedHelperBase。Syncable，PositionSyncable，RespawnHandler，Interactable，PickupHandler，StationHandler，SyncableHandler |
-| PickupHelper     | VRCPickup的助手。Pickupable |
-| StationHelper | VRCStation的助手。实现IClientSimStation |
-| ObjectPoolHelper| VRCObjectPool的助手。Syncable |
-| CombatSystemHelper | Udon CombatSetup的助手。实现IVRC_Destructible。初始化时直接添加到玩家对象的助手组件。 |
-| SpatialAudioHelper | VRCSpatialAudioSource的助手 |
+| 名称                     | 描述                                                                                                                                                        |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PositionSyncedHelperBase | VRCObjectSync的助手，扩展PositionSyncedHelperBase。Syncable，PositionSyncable，RespawnHandler                                                               |
+| ObjectSyncHelper         | VRCObjectSync的助手，扩展PositionSyncedHelperBase。Syncable，PositionSyncable，RespawnHandler                                                               |
+| UdonHelper               | UdonBehaviour的助手，扩展PositionSyncedHelperBase。Syncable，PositionSyncable，RespawnHandler，Interactable，PickupHandler，StationHandler，SyncableHandler |
+| PickupHelper             | VRCPickup的助手。Pickupable                                                                                                                                 |
+| StationHelper            | VRCStation的助手。实现IClientSimStation                                                                                                                     |
+| ObjectPoolHelper         | VRCObjectPool的助手。Syncable                                                                                                                               |
+| CombatSystemHelper       | Udon CombatSetup的助手。实现IVRC_Destructible。初始化时直接添加到玩家对象的助手组件。                                                                       |
+| SpatialAudioHelper       | VRCSpatialAudioSource的助手                                                                                                                                 |

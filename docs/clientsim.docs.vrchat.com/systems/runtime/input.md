@@ -1,3 +1,7 @@
+---
+upstreamCommit: 4d76fd612a37de18fd85c39062bade59afffb7cf
+---
+
 # Input
 
 In ClientSim, all input calls are in one class to handle input and send events. The ClientSimInputManager uses the new Input System, allowing for event-driven input. It uses the PlayerInput component to gain access to the specific input events based on the Input Bindings displayed below. Since the new Unity Input System package is not included by default, and Unity requires a special setting to enable, all references to the Input System are wrapped in define conditions, which prevents errors when importing into new projects.

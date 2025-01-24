@@ -1,3 +1,7 @@
+---
+upstreamCommit: 67afe1890d3b8b1f2cd922ee2fe44b33500d73cc
+---
+
 # VRCPipelineManager
 
 用于存储世界和模型的 ID 。

@@ -1,6 +1,8 @@
 ---
 title: "Data Dictionaries"
+upstreamCommit: bfc8c1667223099a0acc2dc7bae91fd2ff0dd991
 ---
+
 # Data Dictionaries
 
 Data Dictionaries store [Data Tokens](/creators.vrchat.com/worlds/udon/data-containers/data-tokens) by key-value pair, similarly to [C# Dictionaries](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-7.0). Most Data Dictionary functions are just wrappers for the underlying C# dictionary, so the C# dictionary documentation also applies if you are looking for more specific details.

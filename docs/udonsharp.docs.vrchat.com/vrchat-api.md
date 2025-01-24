@@ -1,3 +1,7 @@
+---
+upstreamCommit: 5fd0244260a22b7bed0e807ab14a9b24dae23c2a
+---
+
 # VRChat API
 
 ## API

@@ -1,3 +1,8 @@
+---
+title: "模型动画参数"
+upstreamCommit: 98018dfbc6b421565a6cc4a75042737d1131504a
+---
+
 # 模型动画参数（Animator Parameters）
 
 ::: warning 阅读本篇文章需要特定的前置知识

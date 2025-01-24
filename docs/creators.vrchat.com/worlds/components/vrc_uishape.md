@@ -1,6 +1,7 @@
 ---
 title: "VRC Ui Shape"
 description: "Allows players to interact with Unity UI in your world"
+upstreamCommit: 67afe1890d3b8b1f2cd922ee2fe44b33500d73cc
 ---
 
 # VRC Ui Shape

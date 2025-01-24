@@ -1,5 +1,6 @@
 ---
 title: "Obstacle Course: Build From Custom Parts"
+upstreamCommit: a9e15e6a10d96482800bb054e41d0ff36e235e0a
 ---
 
 # Obstacle Course: Build From Custom Parts

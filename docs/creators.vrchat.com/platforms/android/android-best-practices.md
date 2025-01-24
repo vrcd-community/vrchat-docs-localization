@@ -1,3 +1,7 @@
+---
+upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
+---
+
 # 移动端最佳实践
 
 跨平台发布您的 VRChat 世界是让更多玩家能够享受它的好方法。有许多 VRChat 玩家在使用 Andorid 设备游玩，因此值得您创建您的 VRChat 世界的 Android 版本。

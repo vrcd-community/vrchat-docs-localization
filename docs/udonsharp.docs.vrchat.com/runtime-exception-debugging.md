@@ -1,3 +1,7 @@
+---
+upstreamCommit: 66e5a0c1bb2b12b3de3d1341bb8de76083f7d070
+---
+
 # Runtime Exception Debugging
 
 You will often find yourself with programs that can only be debugged in-game. In order to catch these errors and make them easier to understand, U# includes a runtime exception watcher that will look for exceptions from VRChat's output log. The watcher will then output the script and line that threw that exception to your editor's log.

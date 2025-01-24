@@ -1,6 +1,8 @@
 ---
 title: "Data Tokens"
+upstreamCommit: 98018dfbc6b421565a6cc4a75042737d1131504a
 ---
+
 # Data Tokens
 
 Data Tokens store data. Each token stores one and only one variable. Data Tokens are used in [Data Dictionaries](/creators.vrchat.com/worlds/udon/data-containers/data-dictionaries) and [Data Lists](/creators.vrchat.com/worlds/udon/data-containers/data-lists).

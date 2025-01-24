@@ -1,3 +1,7 @@
+---
+upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
+---
+
 # SDK 疑难解答
 
 以下是您在使用 SDK 时可能遇到的常见问题及解决方法。您可以在我们的[帮助知识库](http://help.vrchat.com)中找到更多帮助。

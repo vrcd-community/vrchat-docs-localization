@@ -1,5 +1,6 @@
 ---
 title: "当前支持的 Unity 版本"
+upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 ---
 
 # 当前支持的 Unity 版本

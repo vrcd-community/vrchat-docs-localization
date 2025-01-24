@@ -1,5 +1,6 @@
 ---
 title: "World Creation, Optimization, and Community Labs Tips"
+upstreamCommit: d9330ab5a54eb689944b6a184c34f49b92c9eddc
 ---
 
 # World Creation, Optimization, and Community Labs Tips

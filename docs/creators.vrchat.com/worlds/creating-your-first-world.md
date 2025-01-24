@@ -1,3 +1,7 @@
+---
+upstreamCommit: 6f545f4364a91073763e7f0bdf20784e2fb0e94d
+---
+
 # 制作您的第一个世界
 
 ::: info

@@ -1,3 +1,7 @@
+---
+UpstreamCommit: cfabd93111e801d2c2279990a4c65a4be457e3c8
+---
+
 # 常见问题解答
 ## 'VCC' 是什么意思？
 **V**RChat **C**reator **C**ompanion。这是用于创建和更新 VRChat Unity 项目的官方工具。在我们的[术语表页面](https://vcc.docs.vrchat.com/guides/glossary/)上阅读更多关于创作者助手的信息。

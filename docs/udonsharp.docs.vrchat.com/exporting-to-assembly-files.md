@@ -1,3 +1,7 @@
+---
+upstreamCommit: 66e5a0c1bb2b12b3de3d1341bb8de76083f7d070
+---
+
 # Exporting to Assembly Files
 This will explain how to export your U# program source assets to assembly assets for sharing without sharing the actual U# scripts
 

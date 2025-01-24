@@ -1,3 +1,7 @@
+---
+upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
+---
+
 # 使用项目模板
 
 为了让您快速开始 VRChat 内容创建，我们提供了一套官方的 Unity 项目模板。

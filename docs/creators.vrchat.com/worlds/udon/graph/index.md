@@ -1,6 +1,7 @@
 ---
 title: "Udon 节点图（Udon Node Graph）"
 description: "学习如何使用 Udon 节点图（Udon Node Graph）创建 Udon 程序。"
+upstreamCommit: 98018dfbc6b421565a6cc4a75042737d1131504a
 ---
 
 # Udon 节点图（Udon Node Graph）

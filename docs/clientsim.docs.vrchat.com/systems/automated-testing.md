@@ -1,3 +1,7 @@
+---
+upstreamCommit: 4d76fd612a37de18fd85c39062bade59afffb7cf
+---
+
 # 自动化测试
 
 ClientSim有许多不同的测试来验证程序的行为。大多数测试是集成测试，但也支持单元测试。请查看Unity的TestRunner以查看所有测试。当将ClientSim作为包导入时，可以通过在`“dependencies” :{}`部分后面的项目包清单中添加以下行来启用测试：

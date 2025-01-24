@@ -1,7 +1,9 @@
 ---
 title: "Event Execution Order"
 description: "Udon and Unity events are executed in a specific order. Here's how!"
+upstreamCommit: a3799deaca7cd590a0bde5bb142fb08044d4e5ba
 ---
+
 Udon and Unity have built-in events that are automatically called if you include them in your scripts. For example, the `Start()` event runs once for every script, and the `Update()` event runs once per frame. When you're writing Udon scripts, it's helpful to know which of these events happen first.
 ::: info
 
