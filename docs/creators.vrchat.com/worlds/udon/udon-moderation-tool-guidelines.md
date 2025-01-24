@@ -1,5 +1,6 @@
 ---
 title: "Udon Moderation Tool Guidelines"
+upstreamCommit: 663cdadf1fe5f5c2258a96ee52a6d0d033ac19ac
 ---
 
 # Udon Moderation Tool Guidelines

@@ -1,6 +1,7 @@
 ---
 title: "Image Loading"
 description: "Display image files from the internet in your VRChat world"
+upstreamCommit: c80fc77441feb07487cf98d885bf724f4061d2cd
 ---
 
 # Image Loading

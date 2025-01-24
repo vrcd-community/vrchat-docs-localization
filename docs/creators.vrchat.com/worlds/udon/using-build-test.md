@@ -1,6 +1,7 @@
 ---
 title: "Using Build & Test"
 description: "Learn how to get set up to create Udon-powered Worlds in VRChat."
+upstreamCommit: 98018dfbc6b421565a6cc4a75042737d1131504a
 ---
 
 # Using Build & Test

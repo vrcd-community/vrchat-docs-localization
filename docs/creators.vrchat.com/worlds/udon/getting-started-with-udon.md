@@ -1,6 +1,7 @@
 ---
 title: "Getting Started with Udon"
 description: "Learn how to get set up to create Udon-powered Worlds in VRChat."
+upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 ---
 
 # Getting Started with Udon

@@ -1,6 +1,7 @@
 ---
 title: "String Loading"
 description: "Load text files from the internet in your VRChat worlds"
+upstreamCommit: 0c7d3e90118ae4bf4414b328132ce07106d74ba4
 ---
 
 # String Loading
