@@ -1,5 +1,6 @@
 ---
 title: "Special Nodes"
+upstreamCommit: d9330ab5a54eb689944b6a184c34f49b92c9eddc
 ---
 
 # Special Nodes
