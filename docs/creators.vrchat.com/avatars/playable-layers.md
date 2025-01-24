@@ -1,7 +1,7 @@
 ---
 title: "可播放层"
 description: "为您的VRChat模型创建简单或复杂的动画"
-upstreamCommit: https://github.com/vrchat-community/creator-docs/commit/d9330ab5a54eb689944b6a184c34f49b92c9eddc
+upstreamCommit: d9330ab5a54eb689944b6a184c34f49b92c9eddc
 ---
 
 # Playable Layers （可播放层）
