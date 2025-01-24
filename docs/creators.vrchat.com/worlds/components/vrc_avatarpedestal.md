@@ -1,5 +1,6 @@
 ---
 title: "VRC Avatar Pedestal"
+upstreamCommit: 67afe1890d3b8b1f2cd922ee2fe44b33500d73cc
 ---
 
 # VRC Avatar Pedestal

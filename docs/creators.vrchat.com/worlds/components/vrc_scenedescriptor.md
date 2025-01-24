@@ -1,5 +1,6 @@
 ---
 title: "VRC Scene Descriptor"
+upstreamCommit: 8a46de87b03abe89e1b162aa97a1b577b366c990
 ---
 
 # VRC Scene Descriptor
