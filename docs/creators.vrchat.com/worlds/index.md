@@ -1,3 +1,7 @@
+---
+upstreamCommit: 935789055c94d5f44077a15d6dca93c9ecd4b416
+---
+
 # 世界
 在 VRChat 中，您可以浏览和创建由 Udon 编程语言驱动的自定义世界。
 
