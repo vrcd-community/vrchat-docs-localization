@@ -6,12 +6,15 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "docs:compare-with-upstream": "tsx ./scripts/compare-with-upstream"
   },
   "packageManager": "yarn@4.0.1",
   "devDependencies": {
+    "@actions/core": "^1.11.1",
     "@mdit/plugin-align": "^0.16.0",
-    "@tsconfig/node18": "^18.2.4",
+    "@tsconfig/node-lts": "^22.0.1",
+    "@types/cli-color": "^2",
     "@types/imagemin-gifsicle": "^7.0.4",
     "@types/imagemin-svgo": "^10.0.5",
     "@types/markdown-it": "^14",
@@ -21,6 +24,8 @@
     "@vite-pwa/vitepress": "^0.5.3",
     "@vrcd-community/markdown-it-video": "^1.1.1",
     "@vue/tsconfig": "^0.7.0",
+    "cli-color": "^2.0.4",
+    "gray-matter": "^4.0.3",
     "imagemin-gif2webp": "^3.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^10.0.0",
@@ -37,7 +42,9 @@
     "markdown-it-sup": "^2.0.0",
     "medium-zoom": "^1.1.0",
     "sharp": "^0.33.5",
+    "simple-git": "^3.27.0",
     "svgo": "^3.3.2",
+    "tsx": "^4.19.2",
     "vite": "^6.0.11",
     "vite-plugin-pwa": "^0.21.1",
     "vitepress": "^1.6.3",

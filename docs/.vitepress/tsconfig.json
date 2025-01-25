@@ -1,6 +1,6 @@
 {
     "extends": [
-        "@tsconfig/node18/tsconfig.json",
+        "@tsconfig/node-lts/tsconfig.json",
         "@vue/tsconfig/tsconfig.json"
     ],
     "include": [

@@ -1,0 +1,30 @@
+name: Compare with Upstream
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+  pull_request:
+
+jobs:
+  compare-with-upstream:
+    name: Sync Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: apperry/action-cached-lfs-checkout@c0616236fe56259b047ba97925bad9d8b644be88
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Enable Corepack
+        run: "corepack enable"
+
+      - name: Install step
+        run: "yarn install"
+
+      - name: Compare with Upstream
+        run: "yarn run sync"

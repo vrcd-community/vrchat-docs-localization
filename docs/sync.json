@@ -1,0 +1,22 @@
+{
+  "docs/creators.vrchat.com": {
+    "upstream": "https://github.com/vrchat-community/creator-docs.git",
+    "root": "Docs/docs",
+    "ignoreFiles": [
+      "index.md"
+    ]
+  },
+  "docs/udonsharp.docs.vrchat.com": {
+    "upstream": "https://github.com/vrchat-community/UdonSharp.git",
+    "root": "Tools/Docusaurus/docs"
+  },
+  "docs/clientsim.docs.vrchat.com": {
+    "upstream": "https://github.com/vrchat-community/ClientSim.git",
+    "fixedCommit": "9cb6d71b064047a3b8ae9abfcad145e84fd9bb20",
+    "root": "Tools/Docusaurus/docs"
+  },
+  "docs/vcc.docs.vrchat.com": {
+    "upstream": "https://github.com/vrchat-community/creator-companion.git",
+    "root": "Docs/docs"
+  }
+}
