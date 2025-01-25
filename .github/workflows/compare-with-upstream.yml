@@ -9,7 +9,7 @@ on:
 
 jobs:
   compare-with-upstream:
-    name: Sync Check
+    name: Compare with Upstream
     runs-on: ubuntu-latest
 
     steps:
@@ -28,4 +28,4 @@ jobs:
         run: "yarn install"
 
       - name: Compare with Upstream
-        run: "yarn run sync"
+        run: "yarn run docs:compare-with-upstream"
