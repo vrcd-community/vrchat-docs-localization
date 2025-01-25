@@ -164,6 +164,8 @@ for (const [docsPath, docItems] of Object.entries(result)) {
   core.summary.addTable(tableItems)
 }
 
+core.summary.write()
+
 await rm(tempDir, { recursive: true, force: true })
 
 async function getDocUpstreamCommit(filePath: string): Promise<string | undefined> {
