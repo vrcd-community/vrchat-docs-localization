@@ -1,4 +1,4 @@
-import { glob, readFile, rm, mkdir } from "fs/promises";
+import { glob, readFile, rm, mkdir, readdir } from "fs/promises";
 import { existsSync } from "fs";
 import { tmpdir } from 'os'
 
@@ -48,16 +48,17 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
   const upstreamRoot = path.join(gitBaseDir, syncOptions.root ?? '/')
   const upstreamDocsFiles = await Array.fromAsync(glob(`${upstreamRoot}/**/*.md`));
 
-  async function compareDocsFile(docsFilePath: string, upstreamFilePath: string, upstreamFileRelativePath: string): Promise<DocItem> {
+  async function compareDocsFile(docsFilePathInput: string, upstreamFilePath: string, upstreamFileRelativePath: string): Promise<DocItem> {
     const latestUpstreamCommit = await getFileLatestCommit(git, upstreamFilePath)
 
-    if (!existsSync(docsFilePath)) {
+    const docsFilePath = await fileExistsCaseInsensitive(docsFilePathInput)
+    if (!docsFilePath) {
       console.warn(logFormat(`${clc.bold.red('[Not Found]')} ${clc.cyan('%s')}`), docsFilePath)
 
       return {
         status: 'not-found',
         upstreamPath: upstreamFileRelativePath,
-        path: docsFilePath,
+        path: docsFilePathInput,
         latestUpstreamCommit
       }
     }
@@ -115,10 +116,11 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
     docResults.push(await compareDocsFile(docsFilePath, upstreamFilePath, upstreamFilePath.replace(gitBaseDir, '')))
   }
 
+  const upstreamDocsFilesLowerCase = upstreamDocsFiles.map(file => file.toLowerCase())
   for (const docsFilePath of docsFiles) {
     const upstreamFilePath = path.join(upstreamRoot, docsFilePath.replace(docsRootPath, ''))
 
-    if (upstreamDocsFiles.includes(upstreamFilePath)) {
+    if (upstreamDocsFilesLowerCase.includes(upstreamFilePath.toLowerCase())) {
       continue
     }
 
@@ -167,6 +169,13 @@ for (const [docsPath, docItems] of Object.entries(result)) {
 core.summary.write()
 
 await rm(tempDir, { recursive: true, force: true })
+
+async function fileExistsCaseInsensitive(filePath: string): Promise<string | undefined> {
+  const dirPath = path.dirname(filePath);
+  const fileName = path.basename(filePath).toLowerCase();
+  const files = (await readdir(dirPath)).map(file => file.toLowerCase());
+  return files.includes(fileName) ? path.join(dirPath, files[files.indexOf(fileName)]) : undefined;
+}
 
 async function getDocUpstreamCommit(filePath: string): Promise<string | undefined> {
   const docContent = await readFile(filePath, 'utf-8')
