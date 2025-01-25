@@ -8,6 +8,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:compare-with-upstream": "tsx ./scripts/compare-with-upstream",
+    "docs:lint": "zhlint 'docs/**/*.md'",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
@@ -23,6 +24,7 @@
     "@types/node": "^22.10.9",
     "@vite-pwa/vitepress": "^0.5.3",
     "@vrcd-community/markdown-it-video": "^1.1.1",
+    "@vrcd-community/zhlint": "^0.8.2-hotfix",
     "@vue/eslint-config-typescript": "^14.3.0",
     "@vue/tsconfig": "^0.7.0",
     "cli-color": "^2.0.4",
