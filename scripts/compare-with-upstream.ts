@@ -48,7 +48,7 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
   const upstreamRoot = path.join(gitBaseDir, syncOptions.root ?? '/')
   const upstreamDocsFiles = await Array.fromAsync(glob(`${upstreamRoot}/**/*.md`));
 
-  async function compareDocsFile(docsFilePath: string, upstreamFilePath: string): Promise<DocItem> {
+  async function compareDocsFile(docsFilePath: string, upstreamFilePath: string, upstreamFileRelativePath: string): Promise<DocItem> {
     const latestUpstreamCommit = await getFileLatestCommit(git, upstreamFilePath)
 
     if (!existsSync(docsFilePath)) {
@@ -56,7 +56,7 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
 
       return {
         status: 'not-found',
-        upstreamPath: upstreamFilePath,
+        upstreamPath: upstreamFileRelativePath,
         path: docsFilePath,
         latestUpstreamCommit
       }
@@ -69,7 +69,7 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
 
       return {
         status: 'no-data',
-        upstreamPath: upstreamFilePath,
+        upstreamPath: upstreamFileRelativePath,
         path: docsFilePath,
         latestUpstreamCommit,
       }
@@ -86,7 +86,7 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
       return {
         status: 'outdated',
         path: docsFilePath,
-        upstreamPath: upstreamFilePath,
+        upstreamPath: upstreamFileRelativePath,
         latestUpstreamCommit,
         currentUpstreamCommit: upstreamCommit,
       }
@@ -97,7 +97,7 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
     return {
       status: 'up-to-date',
       path: docsFilePath,
-      upstreamPath: upstreamFilePath,
+      upstreamPath: upstreamFileRelativePath,
       currentUpstreamCommit: upstreamCommit,
       latestUpstreamCommit,
     }
@@ -112,7 +112,7 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
       continue
     }
 
-    docResults.push(await compareDocsFile(docsFilePath, upstreamFilePath))
+    docResults.push(await compareDocsFile(docsFilePath, upstreamFilePath, upstreamFilePath.replace(gitBaseDir, '')))
   }
 
   for (const docsFilePath of docsFiles) {
