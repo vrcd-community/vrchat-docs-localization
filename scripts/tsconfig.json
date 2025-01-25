@@ -1,0 +1,11 @@
+{
+    "extends": "@tsconfig/node-lts/tsconfig.json",
+    "include": [
+        "**/*"
+    ],
+    "compilerOptions": {
+        "lib": [
+            "esnext"
+        ],
+    }
+}
