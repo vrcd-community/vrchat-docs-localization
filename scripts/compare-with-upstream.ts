@@ -181,16 +181,16 @@ for (const [docsPath, docItems] of Object.entries(result)) {
     ]
   ]
 
-  const { upstream } = options[docsPath]
+  const { upstreamRepo } = options[docsPath]
 
   tableItems.push(...docItems.map(item => [
     {
       data: statusToBadge(item.status)
     },
     { data: `<code><a href="${getGithubLink(item.path, headSha)}">${item.path}</a></code>` },
-    { data: item.latestUpstreamCommit ? `<code><a href="${getGithubLink(item.upstreamPath, item.latestUpstreamCommit, 'blob', upstream)}">${item.latestUpstreamCommit}</a></code>` : '<code>none</code>' },
-    { data: item.currentUpstreamCommit ? `<code><a href="${getGithubLink('/', item.currentUpstreamCommit, 'blob', upstream)}">${item.currentUpstreamCommit}</a></code>` : '<code>none</code>' },
-    { data: item.latestUpstreamCommit ? `<code><a href="${getGithubLink('/', item.latestUpstreamCommit, 'blob', upstream)}">${item.latestUpstreamCommit}]</a></code>` : 'none' }
+    { data: item.latestUpstreamCommit ? `<code><a href="${getGithubLink(item.upstreamPath, item.latestUpstreamCommit, 'blob', upstreamRepo)}">${item.latestUpstreamCommit}</a></code>` : '<code>none</code>' },
+    { data: item.currentUpstreamCommit ? `<code><a href="${getGithubLink('/', item.currentUpstreamCommit, 'blob', upstreamRepo)}">${item.currentUpstreamCommit}</a></code>` : '<code>none</code>' },
+    { data: item.latestUpstreamCommit ? `<code><a href="${getGithubLink('/', item.latestUpstreamCommit, 'blob', upstreamRepo)}">${item.latestUpstreamCommit}]</a></code>` : 'none' }
   ] as SummaryTableCell[]))
 
   core.summary.addHeading(docsPath, 2)
@@ -237,6 +237,7 @@ async function getHeadSha() {
 
 interface SyncOptions {
   upstream: string
+  upstreamRepo: string
   root?: string
   fixedCommit?: string
   ignoreFiles?: string[]
