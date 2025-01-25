@@ -53,7 +53,7 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
 
     const docsFilePath = await fileExistsCaseInsensitive(docsFilePathInput)
     if (!docsFilePath) {
-      console.warn(logFormat(`${clc.bold.red('[Not Found]')} ${clc.cyan('%s')}`), docsFilePath)
+      console.warn(logFormat(`${clc.bold.red('[Not Found]')} ${clc.cyan('%s')}`), docsFilePathInput)
 
       return {
         status: 'not-found',
@@ -171,10 +171,14 @@ core.summary.write()
 await rm(tempDir, { recursive: true, force: true })
 
 async function fileExistsCaseInsensitive(filePath: string): Promise<string | undefined> {
-  const dirPath = path.dirname(filePath);
-  const fileName = path.basename(filePath).toLowerCase();
-  const files = (await readdir(dirPath)).map(file => file.toLowerCase());
-  return files.includes(fileName) ? path.join(dirPath, files[files.indexOf(fileName)]) : undefined;
+  try {
+    const dirPath = path.dirname(filePath);
+    const fileName = path.basename(filePath).toLowerCase();
+    const files = (await readdir(dirPath)).map(file => file.toLowerCase());
+    return files.includes(fileName) ? path.join(dirPath, files[files.indexOf(fileName)]) : undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 async function getDocUpstreamCommit(filePath: string): Promise<string | undefined> {
