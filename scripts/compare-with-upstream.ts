@@ -164,7 +164,7 @@ function statusToBadge(status: DocItemStatus) {
 }
 
 function getGithubLink(docPath: string, headSha: string, type: 'blob' | 'tree' = 'blob', repo: 'current' | string = 'current') {
-  const githubRepository = repo ?? (env['GITHUB_REPOSITORY'] ?? 'vrcd-community/vrchat-docs-localization')
+  const githubRepository = repo !== 'current' ? repo : (env['GITHUB_REPOSITORY'] ?? 'vrcd-community/vrchat-docs-localization')
   const githubServerUrl = env['GITHUB_SERVER_URL'] ?? 'https://github.com'
 
   return new URL(path.posix.join('/', githubRepository, type, headSha, docPath), githubServerUrl).href
