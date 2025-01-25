@@ -149,15 +149,15 @@ const headSha = await getHeadSha()
 function statusToBadge(status: DocItemStatus) {
   switch (status) {
     case 'up-to-date':
-      return '<img alt="Up To Dated" src="https://img.shields.io/badge/up%20to%20dated-%235d9140?style=for-the-badge&logo=checkmarx&logoColor=%23fff">'
+      return '<img style="max-width: none;" alt="Up To Dated" src="https://img.shields.io/badge/up%20to%20dated-%235d9140?style=for-the-badge&logo=checkmarx&logoColor=%23fff">'
     case 'outdated':
-      return '<img alt="Outdated" src="https://img.shields.io/badge/outdated-%23eeaf43?style=for-the-badge">'
+      return '<img style="max-width: none;" alt="Outdated" src="https://img.shields.io/badge/outdated-%23eeaf43?style=for-the-badge">'
     case 'not-found':
-      return '<img alt="Not Found" src="https://img.shields.io/badge/not%20found-%23b61c35?style=for-the-badge">'
+      return '<img style="max-width: none;" alt="Not Found" src="https://img.shields.io/badge/not%20found-%23b61c35?style=for-the-badge">'
     case 'no-data':
-      return '<img alt="No Data" src="https://img.shields.io/badge/no%20data-%23fd7975?style=for-the-badge">'
+      return '<img style="max-width: none;" alt="No Data" src="https://img.shields.io/badge/no%20data-%23fd7975?style=for-the-badge">'
     case 'deleted-or-moved':
-      return '<img alt="Deleted or Moved" src="https://img.shields.io/badge/deleted%20or%20moved-%236c2225?style=for-the-badge">'
+      return '<img style="max-width: none;" alt="Deleted or Moved" src="https://img.shields.io/badge/deleted%20or%20moved-%236c2225?style=for-the-badge">'
     default:
       return status
   }
