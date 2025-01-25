@@ -8,6 +8,7 @@ import { SimpleGit, simpleGit } from "simple-git"
 import clc from 'cli-color'
 import * as core from '@actions/core'
 import { SummaryTableCell, SummaryTableRow } from "@actions/core/lib/summary.js";
+import { env } from "process";
 
 const optionsJson = await readFile('./docs/sync.json', 'utf-8')
 const options = JSON.parse(optionsJson) as Record<string, SyncOptions>
@@ -143,6 +144,32 @@ for (const [docsPath, syncOptions] of Object.entries(options)) {
 
 core.summary.addHeading('Sync Summary')
 
+const headSha = await getHeadSha()
+
+function statusToBadge(status: DocItemStatus) {
+  switch (status) {
+    case 'up-to-date':
+      return '<img alt="Up To Dated" src="https://img.shields.io/badge/up%20to%20dated-%235d9140?style=for-the-badge&logo=checkmarx&logoColor=%23fff">'
+    case 'outdated':
+      return '<img alt="Outdated" src="https://img.shields.io/badge/outdated-%23eeaf43?style=for-the-badge">'
+    case 'not-found':
+      return '<img alt="Not Found" src="https://img.shields.io/badge/not%20found-%23b61c35?style=for-the-badge">'
+    case 'no-data':
+      return '<img alt="No Data" src="https://img.shields.io/badge/no%20data-%23fd7975?style=for-the-badge">'
+    case 'deleted-or-moved':
+      return '<img alt="Deleted or Moved" src="https://img.shields.io/badge/deleted%20or%20moved-%236c2225?style=for-the-badge">'
+    default:
+      return status
+  }
+}
+
+function getPathLink(docPath: string, headSha: string, type: 'blob' | 'tree' = 'blob') {
+  const githubRepository = env['GITHUB_REPOSITORY'] ?? 'vrcd-community/vrchat-docs-localization'
+  const githubServerUrl = env['GITHUB_SERVER_URL'] ?? 'https://github.com'
+
+  return new URL(path.posix.join('/', githubRepository, type, headSha, docPath), githubServerUrl).href
+}
+
 for (const [docsPath, docItems] of Object.entries(result)) {
   const tableItems: SummaryTableRow[] = [
     [
@@ -155,11 +182,13 @@ for (const [docsPath, docItems] of Object.entries(result)) {
   ]
 
   tableItems.push(...docItems.map(item => [
-    { data: item.status },
-    { data: item.path },
-    { data: item.upstreamPath },
-    { data: item.currentUpstreamCommit },
-    { data: item.latestUpstreamCommit }
+    {
+      data: statusToBadge(item.status)
+    },
+    { data: `<code><a href="${getPathLink(item.path, headSha)}">${item.path}</a></code>` },
+    { data: `<code><a href="${getPathLink(item.upstreamPath, item.latestUpstreamCommit ?? 'main', 'tree')}">${item.latestUpstreamCommit}</a></code>` },
+    { data: item.currentUpstreamCommit ? `<code><a href="${getPathLink('/', item.currentUpstreamCommit ?? 'main', 'tree')}">${item.currentUpstreamCommit}</a></code>` : '<code>none</code>' },
+    { data: item.latestUpstreamCommit ? `<code><a href="${getPathLink('/', item.latestUpstreamCommit ?? 'main', 'tree')}">${item.latestUpstreamCommit}]</a></code>` : 'none' }
   ] as SummaryTableCell[]))
 
   core.summary.addHeading(docsPath, 2)
@@ -199,6 +228,11 @@ function getUniqueId() {
   return Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
 }
 
+async function getHeadSha() {
+  const git = simpleGit()
+  return await git.revparse(['HEAD'])
+}
+
 interface SyncOptions {
   upstream: string
   root?: string
@@ -207,9 +241,11 @@ interface SyncOptions {
 }
 
 interface DocItem {
-  status: 'up-to-date' | 'outdated' | 'not-found' | 'no-data' | 'deleted-or-moved'
+  status: DocItemStatus
   path: string
   upstreamPath: string
   currentUpstreamCommit?: string
   latestUpstreamCommit?: string
 }
+
+type DocItemStatus = 'up-to-date' | 'outdated' | 'not-found' | 'no-data' | 'deleted-or-moved'
