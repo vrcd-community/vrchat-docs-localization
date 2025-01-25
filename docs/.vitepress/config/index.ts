@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { defineConfig } from "vitepress"
 import {
@@ -10,16 +8,6 @@ import {
   clientSimDocsSidebar,
 } from "./sidebars"
 
-import viteImagemin from "@vheemstra/vite-plugin-imagemin"
-
-// @ts-expect-error it don't have types
-import imageminWebp from "imagemin-webp" // @ts-expect-error it don't have types
-import imageminGifWebp from "imagemin-gif2webp" // @ts-expect-error it don't have types
-import imageminMozJpeg from "imagemin-mozjpeg"
-import imageminPngQuant from "imagemin-pngquant"
-import imageminGifSicle from "imagemin-gifsicle"
-
-import imageminSvgo from "imagemin-svgo"
 import { withPwa } from "@vite-pwa/vitepress"
 
 // @ts-expect-error it don't have types
@@ -243,6 +231,7 @@ export default withPwa(
               height: "auto",
             },
           })
+          // @ts-expect-error type definition error
           .use(markdownItFootnote)
           .use(align)
           .use(figure, {
@@ -254,46 +243,13 @@ export default withPwa(
       },
     },
 
-    vite: {
-      plugins: [
-        viteImagemin({
-          plugins: {
-            svg: imageminSvgo(),
-            jpg: imageminMozJpeg(),
-            gif: imageminGifSicle({
-              optimizationLevel: 3,
-              interlaced: true,
-              colors: 256,
-            }),
-            png: imageminPngQuant(),
-            jpeg: imageminMozJpeg(),
-          },
-          makeWebp: {
-            plugins: {
-              jpg: imageminWebp(),
-              jpeg: imageminWebp(),
-              png: imageminWebp(),
-              gif: imageminGifWebp({
-                lossy: true,
-                minimize: true,
-                multiThreading: true,
-                quality: 10,
-                filter: 0,
-                method: 6,
-              }),
-            },
-            skipIfLargerThan: "smallest",
-          },
-        }),
-      ],
-    },
-
     pwa: {
       outDir: ".vitepress/dist",
       strategies: "generateSW",
       registerType: "prompt",
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,jpg,mp4,woff2}"],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       },
       experimental: {
         includeAllowlist: true,
