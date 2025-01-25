@@ -4,7 +4,7 @@ import tseslint from 'typescript-eslint'
 import vueParser from 'vue-eslint-parser'
 
 export default tseslint.config([
-  eslint.configs['recommended'],
+  eslint.configs.recommended,
 
   {
     name: 'app/files-to-lint',
@@ -37,5 +37,13 @@ export default tseslint.config([
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
 
-  pluginVue.configs['flat/strongly-recommended']
+  pluginVue.configs['flat/strongly-recommended'],
+
+  {
+    name: 'app/disable-multi-word-component-names',
+    files: ['**/*.{vue,ts,js,mts,mjs}'],
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  },
 ])

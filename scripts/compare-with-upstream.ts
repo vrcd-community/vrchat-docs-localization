@@ -1,5 +1,4 @@
 import { glob, readFile, rm, mkdir, readdir } from "fs/promises";
-import { existsSync } from "fs";
 import { tmpdir } from 'os'
 
 import path from 'path'
@@ -163,9 +162,9 @@ function statusToBadge(status: DocItemStatus) {
   }
 }
 
-function getGithubLink(docPath: string, headSha: string, type: 'blob' | 'tree' = 'blob', repo: 'current' | string = 'current') {
-  const githubRepository = repo !== 'current' ? repo : (env['GITHUB_REPOSITORY'] ?? 'vrcd-community/vrchat-docs-localization')
-  const githubServerUrl = env['GITHUB_SERVER_URL'] ?? 'https://github.com'
+function getGithubLink(docPath: string, headSha: string, type: 'blob' | 'tree' = 'blob', repo = 'current') {
+  const githubRepository = repo !== 'current' ? repo : (env.GITHUB_REPOSITORY ?? 'vrcd-community/vrchat-docs-localization')
+  const githubServerUrl = env.GITHUB_SERVER_URL ?? 'https://github.com'
 
   return new URL(path.posix.join('/', githubRepository, type, headSha, docPath), githubServerUrl).href
 }
@@ -197,7 +196,7 @@ for (const [docsPath, docItems] of Object.entries(result)) {
   core.summary.addTable(tableItems)
 }
 
-core.summary.write()
+await core.summary.write()
 
 await rm(tempDir, { recursive: true, force: true })
 
@@ -215,7 +214,7 @@ async function fileExistsCaseInsensitive(filePath: string): Promise<string | und
 async function getDocUpstreamCommit(filePath: string): Promise<string | undefined> {
   const docContent = await readFile(filePath, 'utf-8')
   const docFrontmatter = matter(docContent)
-  const upstreamCommit = docFrontmatter.data.upstreamCommit
+  const upstreamCommit = docFrontmatter.data.upstreamCommit as string
 
   return typeof upstreamCommit === 'string' ? upstreamCommit : undefined
 }

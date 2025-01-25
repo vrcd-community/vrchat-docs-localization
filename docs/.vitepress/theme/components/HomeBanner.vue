@@ -1,9 +1,18 @@
 <template>
-    <div class="banner-container">
-        <img class="banner-background" src="/assets/banner/banner-background.svg" />
-        <img class="banner-shape" src="/assets/banner/shape.svg" />
-        <img class="banner-shape" src="/assets/banner/text-layer.svg" />
-    </div>
+  <div class="banner-container">
+    <img
+      class="banner-background"
+      src="/assets/banner/banner-background.svg"
+    >
+    <img
+      class="banner-shape"
+      src="/assets/banner/shape.svg"
+    >
+    <img
+      class="banner-shape"
+      src="/assets/banner/text-layer.svg"
+    >
+  </div>
 </template>
 
 <style scoped>
