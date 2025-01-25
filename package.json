@@ -9,6 +9,7 @@
     "docs:preview": "vitepress preview docs",
     "docs:compare-with-upstream": "tsx ./scripts/compare-with-upstream",
     "docs:lint": "zhlint 'docs/**/*.md'",
+    "docs:lint:fix": "zhlint 'docs/**/*.md' --fix",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
