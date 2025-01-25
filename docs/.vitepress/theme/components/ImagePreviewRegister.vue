@@ -14,6 +14,6 @@ onMounted(() => {
 })
 watch(
     () => route.path,
-    () => nextTick(() => initZoom())
+    () => nextTick(() => { initZoom(); })
 )
 </script>

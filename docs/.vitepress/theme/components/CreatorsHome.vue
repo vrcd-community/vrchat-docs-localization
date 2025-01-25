@@ -1,14 +1,29 @@
 <template>
-    <Banner title="成为一名 VRChat 创作者" subtitle="利用我们的工具和文档来学习，创作，分享。" />
+  <Banner
+    title="成为一名 VRChat 创作者"
+    subtitle="利用我们的工具和文档来学习，创作，分享。"
+  />
 
-    <div class="links-group">
-        <HomeLinkButton text="开始入门" link="/creators.vrchat.com/getting-started" description="我们鼓励创作与分享。欢迎您的到来！"
-            icon="/assets/getting-started.png" />
-        <HomeLinkButton text="世界" link="/creators.vrchat.com/worlds/" description="风景，故事，玩法，由您决定！"
-            icon="/assets/worlds.png" />
-        <HomeLinkButton text="虚拟形象" link="/creators.vrchat.com/avatars/" description="挥洒个性，打造您专属的虚拟形象！"
-            icon="/assets/avatars.png" />
-    </div>
+  <div class="links-group">
+    <HomeLinkButton
+      text="开始入门"
+      link="/creators.vrchat.com/getting-started"
+      description="我们鼓励创作与分享。欢迎您的到来！"
+      icon="/assets/getting-started.png"
+    />
+    <HomeLinkButton
+      text="世界"
+      link="/creators.vrchat.com/worlds/"
+      description="风景，故事，玩法，由您决定！"
+      icon="/assets/worlds.png"
+    />
+    <HomeLinkButton
+      text="虚拟形象"
+      link="/creators.vrchat.com/avatars/"
+      description="挥洒个性，打造您专属的虚拟形象！"
+      icon="/assets/avatars.png"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">

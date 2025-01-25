@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { defineConfig } from "vitepress"
 import {
   vrcahtDocsSidebars,
@@ -7,25 +8,15 @@ import {
   clientSimDocsSidebar,
 } from "./sidebars"
 
-import viteImagemin from "@vheemstra/vite-plugin-imagemin"
-
-// @ts-expect-error
-import imageminWebp from "imagemin-webp" // @ts-expect-error
-import imageminGifWebp from "imagemin-gif2webp" // @ts-expect-error
-import imageminMozJpeg from "imagemin-mozjpeg"
-import imageminPngQuant from "imagemin-pngquant"
-import imageminGifSicle from "imagemin-gifsicle"
-
-import imageminSvgo from "imagemin-svgo"
 import { withPwa } from "@vite-pwa/vitepress"
 
-// @ts-expect-error
-import markdownItAbbr from "markdown-it-abbr" // @ts-expect-error
-import markdownItMark from "markdown-it-mark" // @ts-expect-error
+// @ts-expect-error it don't have types
+import markdownItAbbr from "markdown-it-abbr" // @ts-expect-error it don't have types
+import markdownItMark from "markdown-it-mark" // @ts-expect-error it don't have types
 import markdownItVideo from "@vrcd-community/markdown-it-video"
 import markdownItFootnote from "markdown-it-footnote"
 import { align } from "@mdit/plugin-align"
-// @ts-expect-error
+// @ts-expect-error it don't have types
 import figure from "markdown-it-image-figures"
 
 // refer https://vitepress.dev/reference/site-config for details
@@ -240,6 +231,7 @@ export default withPwa(
               height: "auto",
             },
           })
+          // @ts-expect-error type definition error
           .use(markdownItFootnote)
           .use(align)
           .use(figure, {
@@ -251,46 +243,13 @@ export default withPwa(
       },
     },
 
-    vite: {
-      plugins: [
-        viteImagemin({
-          plugins: {
-            svg: imageminSvgo(),
-            jpg: imageminMozJpeg(),
-            gif: imageminGifSicle({
-              optimizationLevel: 3,
-              interlaced: true,
-              colors: 256,
-            }),
-            png: imageminPngQuant(),
-            jpeg: imageminMozJpeg(),
-          },
-          makeWebp: {
-            plugins: {
-              jpg: imageminWebp(),
-              jpeg: imageminWebp(),
-              png: imageminWebp(),
-              gif: imageminGifWebp({
-                lossy: true,
-                minimize: true,
-                multiThreading: true,
-                quality: 10,
-                filter: 0,
-                method: 6,
-              }),
-            },
-            skipIfLargerThan: "smallest",
-          },
-        }),
-      ],
-    },
-
     pwa: {
       outDir: ".vitepress/dist",
       strategies: "generateSW",
       registerType: "prompt",
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,jpg,mp4,woff2}"],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       },
       experimental: {
         includeAllowlist: true,

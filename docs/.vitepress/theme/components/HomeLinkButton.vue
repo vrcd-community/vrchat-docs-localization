@@ -1,18 +1,26 @@
 <template>
-    <div class="button-container">
-        <div class="button-title">
-            <img v-if="icon !== undefined" :src="icon" />
-            <h2>{{ text }}</h2>
-            <p>{{ description }}</p>
-        </div>
-        <VPButton class="button" theme="brand" text="了解更多" :href="link" />
+  <div class="button-container">
+    <div class="button-title">
+      <img
+        v-if="icon !== undefined"
+        :src="icon"
+      >
+      <h2>{{ text }}</h2>
+      <p>{{ description }}</p>
     </div>
+    <VPButton
+      class="button"
+      theme="brand"
+      text="了解更多"
+      :href="link"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
 import { VPButton } from 'vitepress/theme'
 
-const props = defineProps<{
+defineProps<{
     text: string,
     link: string,
     description: string,
