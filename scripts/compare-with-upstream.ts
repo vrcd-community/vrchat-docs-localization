@@ -188,7 +188,7 @@ for (const [docsPath, docItems] of Object.entries(result)) {
       data: statusToBadge(item.status)
     },
     { data: `<code><a href="${getGithubLink(item.path, headSha)}">${item.path}</a></code>` },
-    { data: item.latestUpstreamCommit ? `<code><a href="${getGithubLink(item.upstreamPath, item.latestUpstreamCommit, 'blob', upstreamRepo)}">${item.latestUpstreamCommit}</a></code>` : '<code>none</code>' },
+    { data: item.upstreamPath ? `<code><a href="${getGithubLink(item.upstreamPath, item.latestUpstreamCommit ?? 'main', 'blob', upstreamRepo)}">${item.latestUpstreamCommit}</a></code>` : '<code>none</code>' },
     { data: item.currentUpstreamCommit ? `<code><a href="${getGithubLink('/', item.currentUpstreamCommit, 'blob', upstreamRepo)}">${item.currentUpstreamCommit}</a></code>` : '<code>none</code>' },
     { data: item.latestUpstreamCommit ? `<code><a href="${getGithubLink('/', item.latestUpstreamCommit, 'blob', upstreamRepo)}">${item.latestUpstreamCommit}]</a></code>` : 'none' }
   ] as SummaryTableCell[]))
