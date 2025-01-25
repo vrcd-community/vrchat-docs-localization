@@ -163,7 +163,7 @@ function statusToBadge(status: DocItemStatus) {
   }
 }
 
-function getPathLink(docPath: string, headSha: string, type: 'blob' | 'tree' = 'blob') {
+function getGithubLink(docPath: string, headSha: string, type: 'blob' | 'tree' = 'blob', repo: 'current' | string = 'current') {
   const githubRepository = env['GITHUB_REPOSITORY'] ?? 'vrcd-community/vrchat-docs-localization'
   const githubServerUrl = env['GITHUB_SERVER_URL'] ?? 'https://github.com'
 
@@ -181,14 +181,16 @@ for (const [docsPath, docItems] of Object.entries(result)) {
     ]
   ]
 
+  const { upstream } = options[docsPath]
+
   tableItems.push(...docItems.map(item => [
     {
       data: statusToBadge(item.status)
     },
-    { data: `<code><a href="${getPathLink(item.path, headSha)}">${item.path}</a></code>` },
-    { data: `<code><a href="${getPathLink(item.upstreamPath, item.latestUpstreamCommit ?? 'main', 'tree')}">${item.latestUpstreamCommit}</a></code>` },
-    { data: item.currentUpstreamCommit ? `<code><a href="${getPathLink('/', item.currentUpstreamCommit ?? 'main', 'tree')}">${item.currentUpstreamCommit}</a></code>` : '<code>none</code>' },
-    { data: item.latestUpstreamCommit ? `<code><a href="${getPathLink('/', item.latestUpstreamCommit ?? 'main', 'tree')}">${item.latestUpstreamCommit}]</a></code>` : 'none' }
+    { data: `<code><a href="${getGithubLink(item.path, headSha)}">${item.path}</a></code>` },
+    { data: item.latestUpstreamCommit ? `<code><a href="${getGithubLink(item.upstreamPath, item.latestUpstreamCommit, 'blob', upstream)}">${item.latestUpstreamCommit}</a></code>` : '<code>none</code>' },
+    { data: item.currentUpstreamCommit ? `<code><a href="${getGithubLink('/', item.currentUpstreamCommit, 'blob', upstream)}">${item.currentUpstreamCommit}</a></code>` : '<code>none</code>' },
+    { data: item.latestUpstreamCommit ? `<code><a href="${getGithubLink('/', item.latestUpstreamCommit, 'blob', upstream)}">${item.latestUpstreamCommit}]</a></code>` : 'none' }
   ] as SummaryTableCell[]))
 
   core.summary.addHeading(docsPath, 2)
