@@ -14,7 +14,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: apperry/action-cached-lfs-checkout@c0616236fe56259b047ba97925bad9d8b644be88
+        uses: actions/checkout@v4
+        with:
+          submodules: "recursive"
 
       - name: Install Node.js
         uses: actions/setup-node@v4
