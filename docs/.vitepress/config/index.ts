@@ -18,6 +18,7 @@ import markdownItFootnote from "markdown-it-footnote"
 import { align } from "@mdit/plugin-align"
 // @ts-expect-error it don't have types
 import figure from "markdown-it-image-figures"
+import { fileURLToPath } from "node:url"
 
 // refer https://vitepress.dev/reference/site-config for details
 export default withPwa(
@@ -231,7 +232,6 @@ export default withPwa(
               height: "auto",
             },
           })
-          // @ts-expect-error type definition error
           .use(markdownItFootnote)
           .use(align)
           .use(figure, {
@@ -337,5 +337,18 @@ export default withPwa(
         ],
       },
     },
+
+    vite: {
+      resolve: {
+        alias: [
+          {
+            find: /^.*\/VPDocFooterLastUpdated\.vue$/,
+            replacement: fileURLToPath(
+              new URL('../theme/components/CustomFooterLastUpdated.vue', import.meta.url)
+            )
+          }
+        ]
+      }
+    }
   })
 )
