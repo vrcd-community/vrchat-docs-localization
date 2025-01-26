@@ -63,10 +63,10 @@ ps_trails_penalty | 在粒子系统上启用尾迹惩罚，结果值除以粒子
 
 `config.json`
 
-确保文件扩展名为`json`，而不是`txt`。最好使用 Notepad++ 等编辑器编辑配置文件。
+确保文件扩展名为 `json`，而不是 `txt`。最好使用 Notepad++ 等编辑器编辑配置文件。
 
-将此页面顶部默认配置的内容复制并粘贴到您的文件中，然后根据自己的心血来潮进行编辑！例如，您可以增加 `ps_max_particles` 以允许每个单独的系统使用更多粒子，或者从`beta`部分删除字符串 `ps_max_particles"particle_system_limiter"` 以完全禁用系统而不删除文件。
+将此页面顶部默认配置的内容复制并粘贴到您的文件中，然后根据自己的心血来潮进行编辑！例如，您可以增加 `ps_max_particles` 以允许每个单独的系统使用更多粒子，或者从 `beta` 部分删除字符串 `ps_max_particles"particle_system_limiter"` 以完全禁用系统而不删除文件。
 
 ## 预填充的默认配置文件
 
-您还可以在[此处](https://assets.vrchat.com/misc/vrchat%3Bconfig.json)下载预填充了默认配置的文件。如果单击文件时显示了文件内容而不是下载文件，请右键单击链接，单击“另存为”，然后下载它。必须将文件重命名为 `config.json` 。将文件放入上面指定的目录 （`%AppData%\..\LocalLow\VRChat\vrchat`），然后就可以使用了。请记住，必须命名文件为 `config.json`。**一个字都不能错！**
+您还可以在[此处](https://assets.vrchat.com/misc/vrchat%3Bconfig.json)下载预填充了默认配置的文件。如果单击文件时显示了文件内容而不是下载文件，请右键单击链接，单击 “另存为”，然后下载它。必须将文件重命名为 `config.json`。将文件放入上面指定的目录 (`%AppData%\..\LocalLow\VRChat\vrchat`)，然后就可以使用了。请记住，必须命名文件为 `config.json`。**一个字都不能错！**

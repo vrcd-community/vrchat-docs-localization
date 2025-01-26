@@ -6,7 +6,7 @@
 
 ## Avatar 2.0
 
-启用后，任何应用的手势动画都将会被播放。在[ Valve Index 控制器](/docs.vrchat.com/docs/valve-index.md)上，即使您为手部位置定义了动画，您的手势也不会改变。
+启用后，任何应用的手势动画都将会被播放。在 [Valve Index 控制器](/docs.vrchat.com/docs/valve-index.md)上，即使您为手部位置定义了动画，您的手势也不会改变。
 
 当您禁用手势切换时，VRChat 将不会尝试匹配手势。
 
@@ -16,4 +16,4 @@
 
 启用时，您的手势[动画器参数](/creators.vrchat.com/avatars/animator-parameters.md)会正常更新。
 
-禁用时，无论您进行什么输入，您的手势[动画器参数](/creators.vrchat.com/avatars/animator-parameters.md)都会“固定”在您禁用手势切换时的数值。
+禁用时，无论您进行什么输入，您的手势[动画器参数](/creators.vrchat.com/avatars/animator-parameters.md)都会 “固定” 在您禁用手势切换时的数值。

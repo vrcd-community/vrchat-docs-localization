@@ -6,37 +6,37 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 # 快速开始
 
-**[创作者助手](https://vcc.docs.vrchat.com/)** 是创建 VRChat 虚拟形象和世界的最简单和最快速的方式。
+**[创作者助手](https://vcc.docs.vrchat.com/)**是创建 VRChat 虚拟形象和世界的最简单和最快速的方式。
 
-在您开始创作之前, 您需要配置好 SDK。 SDK 就像是一套工具箱，需要用于在特定平台上构建程序。
+在您开始创作之前，您需要配置好 SDK。SDK 就像是一套工具箱，需要用于在特定平台上构建程序。
 
-**创作者助手** 会同时下载并安装虚拟形象和世界的SDK，并且还会安装和管理 Unity！Unity 是 VRChat 所使用的游戏引擎，也是您需要用来创建所有内容的引擎。
+**创作者助手**会同时下载并安装虚拟形象和世界的 SDK，并且还会安装和管理 Unity！Unity 是 VRChat 所使用的游戏引擎，也是您需要用来创建所有内容的引擎。
 
 这是当下创建一个项目最简单的方式，强烈推荐使用！不这样做则会让您在之后走更多的步骤，您的项目也可能会更加容易出错。
 
 ## 您的第一个项目
 针对第一个项目，我们预先假设您正在构建一个 Windows PC 内容。
 
-1. 点击 [这里](https://vrchat.com/download/vcc) 下载创作者助手
-    - 您也可以在 [这里](https://vcc.docs.vrchat.com/) 查看 创作者助手 的文档
+1. 点击[这里](https://vrchat.com/download/vcc)下载创作者助手
+    - 您也可以在[这里](https://vcc.docs.vrchat.com/)查看创作者助手的文档
 
 :::note
-如果您想构建 Quest 上的内容，可以来看看这个： [在Unity中构建Quest内容](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content)。
+如果您想构建 Quest 上的内容，可以来看看这个：[在 Unity 中构建 Quest 内容](/creators.vrchat.com/platforms/android/setting-up-unity-for-creating-quest-content)。
 :::
 
-2. 在安装窗口中继续。安装位置将默认为 `:\Users\UserName\AppData\Local\Programs` ，但您可以根据需要更改此位置。
+2. 在安装窗口中继续。安装位置将默认为 `:\Users\UserName\AppData\Local\Programs`，但您可以根据需要更改此位置。
 
-3. 创作者助手会在安装后自动启动。 如果没有启动，可以尝试在Windows的搜索栏中输入 **Creator Companion** 找到它。
+3. 创作者助手会在安装后自动启动。如果没有启动，可以尝试在 Windows 的搜索栏中输入 **Creator Companion** 找到它。
 
 4. 点击 **Create New Project** 按钮。
 
-5. 选择您要创建 **虚拟形象** 还是 **世界**
+5. 选择您要创建**虚拟形象**还是**世界**
 
 6. 给它起一个响亮的名字！
 
 7. 确保它保存在了正确的位置。
 
-8. 点击 **Create Project!**
+8. 点击 **Create Project！**
 
 ## 打开您的项目
 
@@ -56,18 +56,18 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 ## 改为使用 Unity Hub
 
-虽然我们不推荐这样做，但如果您想自己安装 Unity 而不使用创作者助手，可以查看[当前支持的Unity版本](/creators.vrchat.com/sdk/upgrade/current-unity-version)页面，并使用 Unity Hub 安装 VRChat 当前支持的 Unity 版本。
+虽然我们不推荐这样做，但如果您想自己安装 Unity 而不使用创作者助手，可以查看[当前支持的 Unity 版本](/creators.vrchat.com/sdk/upgrade/current-unity-version)页面，并使用 Unity Hub 安装 VRChat 当前支持的 Unity 版本。
 
-如果您没有使用创作者助手创建项目，您同样也可以通过 [创作者助手](https://vcc.docs.vrchat.com/guides/getting-started) 安装SDK。
+如果您没有使用创作者助手创建项目，您同样也可以通过[创作者助手](https://vcc.docs.vrchat.com/guides/getting-started)安装 SDK。
 
-在 Unity Hub 中创建项目:
+在 Unity Hub 中创建项目：
 <!-- 这里原文是 or just the editor, if you chose to go that route 没太看懂，that route 指的是什么？-->
 * 打开 Unity Hub (或者直接启动 Unity Editor)。
-* 创建一个新项目, **选择 3D 模板，然后保存它**。
-* 不要使用 HDRP 或 URP，VRChat不使用它们。
+* 创建一个新项目，**选择 3D 模板，然后保存它**。
+* 不要使用 HDRP 或 URP，VRChat 不使用它们。
 
-使用 Unity Hub 打开项目:
-* 点击右上角的 **Open** 按钮, 然后选择您的项目文件夹。
+使用 Unity Hub 打开项目：
+* 点击右上角的 **Open** 按钮，然后选择您的项目文件夹。
 
 ## 小贴士
 
@@ -78,6 +78,6 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 ### 下一步是什么？
 
-您的项目已准备就绪！您可以查看 [创建世界](/creators.vrchat.com/worlds/) 或 [创建虚拟形象](/creators.vrchat.com/avatars/)。
+您的项目已准备就绪！您可以查看[创建世界](/creators.vrchat.com/worlds/)或[创建虚拟形象](/creators.vrchat.com/avatars/)。
 
-如果您在此过程中遇到任何问题，即使问题出在空项目上，您也可以 联系我们的 [支持团队](https://vrch.at/support)。
+如果您在此过程中遇到任何问题，即使问题出在空项目上，您也可以联系我们的[支持团队](https://vrch.at/support)。

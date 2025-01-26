@@ -10,7 +10,7 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 出现这种情况有两个主要原因
 
-确保您使用的是 VRChat 的推荐 Unity 版本。（请参阅 [安装 SDK](/creators.vrchat.com/sdk/upgrade/current-unity-version)）。
+确保您使用的是 VRChat 的推荐 Unity 版本。(请参阅[安装 SDK](/creators.vrchat.com/sdk/upgrade/current-unity-version))。
 
 检查控制台选项卡，确保没有来自第三方脚本或组件的编译错误。如果有，您可能需要删除这些组件/脚本。
 
@@ -18,7 +18,7 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 出现这种情况有几个原因。以下是一些需要检查的事项：
 
-- 确保您使用的是 [正确的 Unity 版本](./upgrade/current-unity-version.md)。
+- 确保您使用的是[正确的 Unity 版本](./upgrade/current-unity-version.md)。
 - 确保您在游戏中使用的是正确的账号，而不是第三方平台账号。
 - 检查控制面板窗口中的 `Content Manager` 选项卡，查看是否有您的内容。
 - 检查编辑器控制台，查看上传时是否有任何错误。
@@ -44,4 +44,4 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 ## 我有一个问题知识库没有解决，也没有在这里列出
 
-我们对此表示非常抱歉！请浏览我们的 [官方知识库](http://help.vrchat.com/) 或 [提交支持请求](https://help.vrchat.com/hc/en-us/requests/new)。我们很乐意为您提供帮助。
+我们对此表示非常抱歉！请浏览我们的[官方知识库](http://help.vrchat.com/)或[提交支持请求](https://help.vrchat.com/hc/en-us/requests/new)。我们很乐意为您提供帮助。

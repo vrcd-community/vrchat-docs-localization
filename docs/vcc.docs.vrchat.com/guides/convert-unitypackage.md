@@ -6,21 +6,21 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 
 ## 开始之前
 
-您已经制作了一个编辑器工具、预制件或其他一些应与 VRChat SDK 一起使用的东西。您将其作为 .unitypackage 或 .zip 文件分发，您和其他用户在导入所有相关的 SDK 包（如 Worlds SDK 和 UdonSharp）后导入到他们的项目中。
+您已经制作了一个编辑器工具、预制件或其他一些应与 VRChat SDK 一起使用的东西。您将其作为。unitypackage 或。zip 文件分发，您和其他用户在导入所有相关的 SDK 包 (如 Worlds SDK 和 UdonSharp) 后导入到他们的项目中。
 
 ## 需要的更改
 
 为了转换成 VPM 包，您的代码和资源需要进行一些更改。[包制作器](#package-maker-tool)工具将处理其中的大部分内容，但并非所有：
-1. 相关资需要手动分离到 `Editor` 和 `Runtime`文件夹。使用 UnityEditor 类的任何内容都需要在 `Editor` 文件夹中。
+1. 相关资需要手动分离到 `Editor` 和 `Runtime` 文件夹。使用 UnityEditor 类的任何内容都需要在 `Editor` 文件夹中。
 2. 具有[兼容的包清单](/vcc.docs.vrchat.com/vpm/packages#package-format)，其中包括相关 VRChat SDK 包的 `vpmDependencies`。
-3. 将任何硬编码到 "Assets/YourPackageName" 路径的路径替换为使用您的包路径 - 请参见下面的[转换资源路径](#converting-asset-paths)。
+3. 将任何硬编码到 “Assets/YourPackageName” 路径的路径替换为使用您的包路径 - 请参见下面的[转换资源路径](#converting-asset-paths)。
 4. 为包中的所有脚本提供程序集定义文件。
 
 ## 包制作器工具
 
 我们提供这个工具来简化过渡。以下步骤将指导您如何创建一个新项目，以从现有资产创建和管理一个兼容 VPM 的包。
 
-1. 访问 [GitHub 上的 VPM 包模板仓库](https://github.com/vrchat-community/template-package)，并点击 "Use this Template" 在您自己的账户下创建一个新的包仓库。
+1. 访问 [GitHub 上的 VPM 包模板仓库](https://github.com/vrchat-community/template-package)，并点击 “Use this Template” 在您自己的账户下创建一个新的包仓库。
 2. 使用 git 克隆仓库，或从 Github 的 Code > Download zip 下载它。
 3. 在 Unity 中打开新项目。
 4. 将您的包导入到这个新项目的 Assets 文件夹中，就像它是一个 `.unitypackage` 样式的项目一样。
@@ -31,28 +31,28 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 
    ![包制作器窗口](/vcc.docs.vrchat.com/images/package-maker/window.png)
 
-6. 在 "Project" 面板中，找到所有您的包资产的父文件夹，从 Assets 文件夹中拖放到窗口的 "Target Folder" 字段中。
+6. 在 “Project” 面板中，找到所有您的包资产的父文件夹，从 Assets 文件夹中拖放到窗口的 “Target Folder” 字段中。
 
    ![拖放 Assets 文件夹](/vcc.docs.vrchat.com/images/package-maker/drag-drop-folder.png)
 
-7. 在包制作器的 "Package ID" 字段中为您的包输入一个 ID。标准做法是使用您拥有的域的反向域名表示法，如 com.vrchat.packagename。它需要在 VRChat 中是唯一的，以便与其他包友好相处，所以如果您没有域名，那么您可以尝试使用您的用户名。
-8. 如果您的包需要任何 VRChat SDK 包，从 "Related VRChat Package" 下拉菜单中选择最合适的一个。
-9. 一旦您选择了一个有效的目标文件夹和包 ID，"Convert Assets to Package" 按钮将被启用。现在按下它。
+7. 在包制作器的 “Package ID” 字段中为您的包输入一个 ID。标准做法是使用您拥有的域的反向域名表示法，如 com.vrchat.packagename。它需要在 VRChat 中是唯一的，以便与其他包友好相处，所以如果您没有域名，那么您可以尝试使用您的用户名。
+8. 如果您的包需要任何 VRChat SDK 包，从 “Related VRChat Package” 下拉菜单中选择最合适的一个。
+9. 一旦您选择了一个有效的目标文件夹和包 ID，“Convert Assets to Package” 按钮将被启用。现在按下它。
 10. 工具将显示一个关于它即将进行的永久性更改的确认对话框。阅读它们并确认执行迁移，或取消返回并更改某些内容。
 
    ![确认对话框](/vcc.docs.vrchat.com/images/package-maker/confirm.png)
 
-11. 确认后，迁移时将出现一个进度条。首先，工具将在您的项目的 "Packages" 目录中为您的包创建适当的文件和文件夹布局。然后它将把所有文件移动到相应的文件夹。您的 Assets 中的任何 "Editor" 文件夹中的内容，即使它是嵌套在几层下，也将被移动到您的包的顶级 Editor 文件夹中。所有其他文件将被移动到 Runtime 文件夹。
-12. 如果您在 Unity 中关闭了自动刷新，您需要在这个时候按 Ctrl-R 刷新。此时，您的包 _可能_ 已经全部迁移并正常工作。您可以安全地从您的项目中移除包制作器工具和相关的 "PackageMakerWindowData.asset" 文件。
+11. 确认后，迁移时将出现一个进度条。首先，工具将在您的项目的 “Packages” 目录中为您的包创建适当的文件和文件夹布局。然后它将把所有文件移动到相应的文件夹。您的 Assets 中的任何 “Editor” 文件夹中的内容，即使它是嵌套在几层下，也将被移动到您的包的顶级 Editor 文件夹中。所有其他文件将被移动到 Runtime 文件夹。
+12. 如果您在 Unity 中关闭了自动刷新，您需要在这个时候按 Ctrl-R 刷新。此时，您的包 _ 可能 _ 已经全部迁移并正常工作。您可以安全地从您的项目中移除包制作器工具和相关的 “PackageMakerWindowData.asset” 文件。
 
 如果您的项目在这个时候有错误，您可能需要做一些[故障排除](#troubleshooting-migration-issues)工作。
 
 ## 自定义您的包
-一旦您的包被创建，您可以通过在项目窗口中选择 'package.json' 文件来修改名称、描述等，路径为 `Packages/YourPackageName/package.json`。
+一旦您的包被创建，您可以通过在项目窗口中选择 ‘package.json’ 文件来修改名称、描述等，路径为 `Packages/YourPackageName/package.json`。
 
 ![Manifest in the Inspector](/vcc.docs.vrchat.com/images/package-maker/manifest-inspector.png)
 
-您可以在这里更改显示名称（例如 VRChat - Worlds 而不是 com.vrchat.worlds）、版本、描述、unity 包依赖等。如果您更改了包的 'Name'，那么您的程序集引用可能会断裂，因为它们引用的是您在迁移时输入的包名。
+您可以在这里更改显示名称 (例如 VRChat - Worlds 而不是 com.vrchat.worlds)、版本、描述、unity 包依赖等。如果您更改了包的 ‘Name’，那么您的程序集引用可能会断裂，因为它们引用的是您在迁移时输入的包名。
 
 ## 自动化
 
@@ -69,9 +69,9 @@ var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/MyPackage/Edi
 
 #### 转换为资源
 
-资源可以从任何文件夹加载，无需知道实际路径。Unity 会在您的 Assets 和 Packages 文件夹中的每个名为 "Resources" 的文件夹中查找。
-1. 在我们的新包文件夹中，创建一个名为 "Resources" 的文件夹，放在顶级的 "Editor" 文件夹下。
-2. 将文件 "MyPackageStyle.uss" 移动到这个 resources 文件夹。
+资源可以从任何文件夹加载，无需知道实际路径。Unity 会在您的 Assets 和 Packages 文件夹中的每个名为 “Resources” 的文件夹中查找。
+1. 在我们的新包文件夹中，创建一个名为 “Resources” 的文件夹，放在顶级的 “Editor” 文件夹下。
+2. 将文件 “MyPackageStyle.uss” 移动到这个 resources 文件夹。
 3. 从 `AssetDatabase.LoadAssetAtPath` 切换到 `Resources.Load`，如下所示：
 
 ```c#
@@ -88,4 +88,4 @@ var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>(styleSheetPath);
 ```
 
 ### 其他问题
-如果您遇到了因迁移而需要进行的手动更改，[在这里提交一个issues](https://github.com/vrchat-community/vpm-package-maker/issues)，这样我们就可以将信息添加到这个页面！
+如果您遇到了因迁移而需要进行的手动更改，[在这里提交一个 issues](https://github.com/vrchat-community/vpm-package-maker/issues)，这样我们就可以将信息添加到这个页面！

@@ -4,6 +4,8 @@ description: "Display image files from the internet in your VRChat world"
 upstreamCommit: c80fc77441feb07487cf98d885bf724f4061d2cd
 ---
 
+<!-- zhlint disabled -->
+
 # Image Loading
 
 Image Loading allows you to display images from the internet in your VRChat world. When a user visits your world, the image can be downloaded from the internet and used as a texture in your materials. Here are a few examples on how Image Loading can be used:

@@ -14,7 +14,7 @@
 
 ### Oculus PC / Meta Rift
 
-如果您使用的是 Oculus PC，您必须为VRChat创建一个快捷方式，然后右键快捷方式，点击属性，在“目标”栏位中的双引号外部添加这些启动参数。在您打开 Oculus Home 之后，您必须通过点击刚刚创建的快捷方式图标打开 VRChat 才能让启动选项生效。Oculus 启动器并不原生支持设置启动选项。
+如果您使用的是 Oculus PC，您必须为 VRChat 创建一个快捷方式，然后右键快捷方式，点击属性，在 “目标” 栏位中的双引号外部添加这些启动参数。在您打开 Oculus Home 之后，您必须通过点击刚刚创建的快捷方式图标打开 VRChat 才能让启动选项生效。Oculus 启动器并不原生支持设置启动选项。
 
 ### Oculus Quest
 
@@ -41,22 +41,22 @@ Oculus Quest 不支持以任何方式设置启动选项。
 ### AMD 的跨 CCX 延迟和核心亲和性
 
 ::: tip
-感谢 VRChat 社区中的 "Fallen Ninja" 写下这个建议！请注意，以下内容来自社区，VRChat 团队还没有直接验证可用性。
+感谢 VRChat 社区中的 “Fallen Ninja” 写下这个建议！请注意，以下内容来自社区，VRChat 团队还没有直接验证可用性。
 :::
 
-> 如果您正在使用多 CCX 的 AMD CPU(大多数1000/2000/3000系列和一部分5000/7000系列)，可以使用`--affinity`启动参数限制仅使用第一个 CCX 以减少核心间的通信延迟并获得不错的帧率提升。
+> 如果您正在使用多 CCX 的 AMD CPU (大多数 1000/2000/3000 系列和一部分 5000/7000 系列)，可以使用 `--affinity` 启动参数限制仅使用第一个 CCX 以减少核心间的通信延迟并获得不错的帧率提升。
 > 
-> 可以在[这里](https://en.wikipedia.org/wiki/List\_of\_AMD\_Ryzen\_processors)查看 CPU 的“核心配置”。如果x前的数字不是1（CCX 数量），您可能会从亲和性限制中受益。注意x后的数字（每个 CCX 中的核心数量）并在下面查找理想的亲和性字符串：
+> 可以在[这里](https://en.wikipedia.org/wiki/List\_of\_AMD\_Ryzen\_processors)查看 CPU 的 “核心配置”。如果 x 前的数字不是 1 (CCX 数量)，您可能会从亲和性限制中受益。注意 x 后的数字 (每个 CCX 中的核心数量) 并在下面查找理想的亲和性字符串：
 > 
-> 2: `--affinity=F` (建议换一个更好的 CPU，这个线程数设置亲和性可能帮助不大，因为仅限制两个物理核心)<br>
-> 3: `--affinity=3F`<br>
-> 4: `--affinity=FF`<br>
-> 6: `--affinity=FFF`<br>
-> 8: `--affinity=FFFF`<br>
+> 2：`--affinity=F` (建议换一个更好的 CPU，这个线程数设置亲和性可能帮助不大，因为仅限制两个物理核心)<br>
+> 3：`--affinity=3F`<br>
+> 4：`--affinity=FF`<br>
+> 6：`--affinity=FFF`<br>
+> 8：`--affinity=FFFF`<br>
 > 
-> 在低端机型上还有一些很少见的例外(假设您没有关闭SMT...如果您问了，那就表示您没有)，但这些例外最坏的情况便是使这种解决方案效果变差，而并不是有害的。
+> 在低端机型上还有一些很少见的例外 (假设您没有关闭 SMT...如果您问了，那就表示您没有)，但这些例外最坏的情况便是使这种解决方案效果变差，而并不是有害的。
 
-## Unity引擎的启动选项
+## Unity 引擎的启动选项
 
 在 Unity 2019 版本中移除了启动时按住 shift/alt 会弹出分辨率和画质选项框的功能，但您可以使用启动参数替代大部分。
 
@@ -67,8 +67,8 @@ Oculus Quest 不支持以任何方式设置启动选项。
 | `-screen-fullscreen N` | 覆盖默认全屏状态，`N` 必须是0或1                  |
 | -monitor N             | 在指定的显示器上运行，`N` 代表从1开始的显示器编号 |
 
-您可以在[这里](https://docs.unity3d.com/Manual/CommandLineArguments.html)“Unity Standalone Player command line arguments”下找到这些选项，该链接还包含其他的启动选项，但我们不建议您去使用它们。
+您可以在[这里](https://docs.unity3d.com/Manual/CommandLineArguments.html) “Unity Standalone Player command line arguments” 下找到这些选项，该链接还包含其他的启动选项，但我们不建议您去使用它们。
 
 如果您看到了这里。请确保您通过左上角选择器观察自己配置的是否是[当前支持的 Unity 版本](/creators.vrchat.com/sdk/upgrade/current-unity-version.md)。
 
-请注意，大多数 `Force`（强制）启动选项会导致无法使用 VRChat，请尽量不要使用它们，除非您知道自己在做什么。
+请注意，大多数 `Force` (强制) 启动选项会导致无法使用 VRChat，请尽量不要使用它们，除非您知道自己在做什么。

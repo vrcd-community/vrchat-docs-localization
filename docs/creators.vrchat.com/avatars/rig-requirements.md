@@ -3,6 +3,8 @@ title: "Rig Requirements"
 upstreamCommit: bfc8c1667223099a0acc2dc7bae91fd2ff0dd991
 ---
 
+<!-- zhlint disabled -->
+
 # Rig Requirements
 
 ::: warning

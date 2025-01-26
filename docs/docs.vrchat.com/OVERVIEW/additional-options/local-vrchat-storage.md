@@ -35,12 +35,12 @@ VRChat 在本地存储了许多不同的数据。这个并不太详尽的列表�
 
 ## 临时文件
 
-VRChat 及其依赖项可能会在设备上的各种“temp”文件夹中存储临时数据。以下的列表可能并不详尽。
+VRChat 及其依赖项可能会在设备上的各种 “temp” 文件夹中存储临时数据。以下的列表可能并不详尽。
 
 文件夹/文件名称 | 目的 | 注释
 -- | -- | --
 `%TEMP%\VRChat\VRChat` | 分析文件存储在此。 | VRChat 为开发目的收集的分析信息。<br>请查看我们的[隐私政策](https://hello.vrchat.com/privacy)以获取更多信息。
 
-## Windows注册表
+## Windows 注册表
 
-VRChat 通过[ Unity PlayerPrefs API ](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/PlayerPrefs.html)在 `HKCU\Software\VRChat\vrchat` 中存储玩家的各种设置项。
+VRChat 通过 [Unity PlayerPrefs API](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/PlayerPrefs.html) 在 `HKCU\Software\VRChat\vrchat` 中存储玩家的各种设置项。

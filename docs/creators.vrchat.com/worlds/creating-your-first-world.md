@@ -7,7 +7,7 @@ upstreamCommit: 6f545f4364a91073763e7f0bdf20784e2fb0e94d
 ::: info
 在开始之前，请确保您已经准备好了[一个安装好 SDK 的 Unity 项目](/creators.vrchat.com/sdk/)。
 
-如果您需要帮助，请访问我们的 [Discord](https://discord.gg/vrchat) 或 [官方论坛](https://ask.vrchat.com)。
+如果您需要帮助，请访问我们的 [Discord](https://discord.gg/vrchat) 或[官方论坛](https://ask.vrchat.com)。
 :::
 
 ## 第一步 - 设置场景
@@ -37,9 +37,9 @@ upstreamCommit: 6f545f4364a91073763e7f0bdf20784e2fb0e94d
 
 您可以设置 [VRC_SceneDescriptor](./components/vrc_scenedescriptor.md)，这些设置会改变世界中的行为。以下是一些更重要的选项。
 
-_Spawns_ - 这是一个坐标数组，决定玩家进入世界时的生成位置。默认情况下，玩家会在 "Scene Descriptor" 的位置生成。
+_Spawns_ - 这是一个坐标数组，决定玩家进入世界时的生成位置。默认情况下，玩家会在 “Scene Descriptor” 的位置生成。
 
-_Respawn Height_ - 这是玩家重生及其拾取物重置或被摧毁时的高度。任何在这个 Y 值以下的物体都会被重置（或者被销毁，取决于 "Object Behaviour At Respawn" 设置）。
+_Respawn Height_ - 这是玩家重生及其拾取物重置或被摧毁时的高度。任何在这个 Y 值以下的物体都会被重置 (或者被销毁，取决于 “Object Behaviour At Respawn” 设置)。
 
 _Reference Camera_ - 这个相机上的设置会在玩家进入房间时应用到玩家的相机上。通常用于调整相机裁切面及添加后处理效果。
 
@@ -88,12 +88,12 @@ The SDK will often give you the option to fix these issues automatically. If not
 
 ## 第六步 - 构建和发布您的世界
 
-接下来您需要构建世界！首先您需要决定您要做什么：您可以先构建测试版本，以在不上传的情况下测试您的世界，或者直接将您的世界发布到 VRChat 中。在 "Offline Testing" 和 "Online Publishing" 标题下，您会找到 "Build" 或 "Last Build" 的按钮。"Last Build" 会将此世界的最后一个成功构建的版本用于测试或上传。选择 "Build" 会将一个重新构建一个版本进行测试或上传。 
+接下来您需要构建世界！首先您需要决定您要做什么：您可以先构建测试版本，以在不上传的情况下测试您的世界，或者直接将您的世界发布到 VRChat 中。在 “Offline Testing” 和 “Online Publishing” 标题下，您会找到 “Build” 或 “Last Build” 的按钮。“Last Build” 会将此世界的最后一个成功构建的版本用于测试或上传。选择 “Build” 会将一个重新构建一个版本进行测试或上传。
 
 _(可选)_  
-如果您希望测试您的世界，请您在测试标题下按 "Build & Test New Build" 按钮。这将立即重新构建构建您的世界，自动启动 VRChat 客户端并进入构建完成的世界用于测试。客户端数量选项用于当您想打开多个客户端以测试网络同步相关的行为时。
+如果您希望测试您的世界，请您在测试标题下按 “Build & Test New Build” 按钮。这将立即重新构建构建您的世界，自动启动 VRChat 客户端并进入构建完成的世界用于测试。客户端数量选项用于当您想打开多个客户端以测试网络同步相关的行为时。
 
-现在，我们可以通过按下发布标题下的 "Build and Upload" 按钮来构建并上传您的世界！这将构建您的世界并准备上传。请记住，您不被允许上传违反我们的[社区指南](https://vrchat.com/community-guidelines)或[服务条款](https://vrchat.com/legal)的内容到 VRChat 中。如果您执意这样做将导致我们对您采取处罚措施。
+现在，我们可以通过按下发布标题下的 “Build and Upload” 按钮来构建并上传您的世界！这将构建您的世界并准备上传。请记住，您不被允许上传违反我们的[社区指南](https://vrchat.com/community-guidelines)或[服务条款](https://vrchat.com/legal)的内容到 VRChat 中。如果您执意这样做将导致我们对您采取处罚措施。
 
 上传您的世界后，它将立即在 VRChat 中可用！您应该能够在游戏中看到它，或者您可以通过 SDK 的内容管理器在 `VRChat SDK > Show Control Panel > Content Manager` 中看到它。
 
@@ -101,5 +101,5 @@ _(可选)_
 
 如果您的世界上传失败，请[检查 Unity 的控制台](https://docs.unity3d.com/Manual/Console.html)以查看是否有任何错误。如果有，请在尝试再次构建您的世界之前解决它们。确保您已经阅读了 Unity 日志中的全部内容，并点击错误以查看更多信息。
 
-如果您需要帮助，请查看我们的其他文档、在[论坛](https://ask.vrchat.com/)中或在[Discord](https://discord.com/invite/vrchat)上提问。确保提供尽可能多的信息，例如 Unity 控制台的错误信息。
+如果您需要帮助，请查看我们的其他文档、在[论坛](https://ask.vrchat.com/)中或在 [Discord](https://discord.com/invite/vrchat) 上提问。确保提供尽可能多的信息，例如 Unity 控制台的错误信息。
 :::

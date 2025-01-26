@@ -1,5 +1,7 @@
 # Markdown 语法扩展
 
+<!-- zhlint disabled -->
+
 除了[标准的 Markdown 语法](https://markdown.com.cn/)(如果您想直接看中文，可以移步[这里](https://markdown.com.cn/)) 和 [VitePress 默认的扩展语法](https://vitepress.dev/guide/markdown) 外，我们还支持以下扩展语法。
 
 ## 嵌入视频 / 音频 / 视频平台视频

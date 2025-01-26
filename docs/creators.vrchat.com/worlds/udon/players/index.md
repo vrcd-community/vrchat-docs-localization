@@ -14,8 +14,8 @@ upstreamCommit: f6bfeb189f39dbb6af5034cbd4c30e4e72067da0
 
 - [获取玩家](/creators.vrchat.com/worlds/udon/players/getting-players)
 - [玩家位置](/creators.vrchat.com/worlds/udon/players/player-positions)
-- [玩家物理（Player Forces）](/creators.vrchat.com/worlds/udon/players/player-forces)
-- [玩家碰撞体（Player Collisions）](/creators.vrchat.com/worlds/udon/players/player-collisions)
+- [玩家物理 (Player Forces)](/creators.vrchat.com/worlds/udon/players/player-forces)
+- [玩家碰撞体 (Player Collisions)](/creators.vrchat.com/worlds/udon/players/player-collisions)
 - [玩家语音](/creators.vrchat.com/worlds/udon/players/player-audio)
 - [玩家模型缩放](/creators.vrchat.com/worlds/udon/players/player-avatar-scaling)
 - [玩家事件](/creators.vrchat.com/worlds/udon/graph/event-nodes#player-events)
@@ -26,7 +26,7 @@ upstreamCommit: f6bfeb189f39dbb6af5034cbd4c30e4e72067da0
 
 > VRCPlayerApi, Boolean
 
-在您尝试玩家的获取或者修改任何东西，请确保 IsValid 返回 true。如果一个玩家已经离开了事件但是您依然在引用这个玩家对应的 VRCPlayerApi 对象，则会返回 false。为了更方便地在节点图中使用，请搜索通用的“IsValid”方法，该方法适用于任何对象，因为它为“true”和“false”提供了单独的流程。
+在您尝试玩家的获取或者修改任何东西，请确保 IsValid 返回 true。如果一个玩家已经离开了事件但是您依然在引用这个玩家对应的 VRCPlayerApi 对象，则会返回 false。为了更方便地在节点图中使用，请搜索通用的 “IsValid” 方法，该方法适用于任何对象，因为它为 “true” 和 “false” 提供了单独的流程。
 
 ![](/creators.vrchat.com/images/worlds/index-59fc2c8-player-isvalid.png)
 
@@ -40,7 +40,7 @@ upstreamCommit: f6bfeb189f39dbb6af5034cbd4c30e4e72067da0
 
 > VRCPlayerApi
 
-获取玩家显示的名字（可能和用户名不一样，用户名是用于登录 VRChat 的且不会被公开）
+获取玩家显示的名字 (可能和用户名不一样，用户名是用于登录 VRChat 的且不会被公开)
 
 ### Get isLocal
 
@@ -58,14 +58,14 @@ upstreamCommit: f6bfeb189f39dbb6af5034cbd4c30e4e72067da0
 
 ### GetPickupInHand
 
-> 输入：VRCPlayerApi，Hand (none, left, right)  
+> 输入：VRCPlayerApi，Hand (none，left，right)  
 > 输出：VRCPickup
 
 获取玩家正在拿着的 Pickup 对象。只能在本地玩家上工作。如果没有找到 VRCPickup 组件则会返回 null。
 
 ### IsOwner
 
-> 输入：VRCPlayerApi, GameObject
+> 输入：VRCPlayerApi，GameObject
 > 输出：Boolean
 
 告诉您一个玩家是不是所输入 GameObject 的 Owner，对于同步来说非常重要。
@@ -81,7 +81,7 @@ upstreamCommit: f6bfeb189f39dbb6af5034cbd4c30e4e72067da0
 
 > VRCPlayerApi, Hand, float, float, float
 
-振动玩家的手柄（如果有的话）。浮点数输入的范围应为 0-1。_duration_ 是手柄振动的时间，_amplitude_ 是手柄振动的强度，_frequency_是手柄振动的速度。不同手柄的感觉可能会有很大不同。
+振动玩家的手柄 (如果有的话)。浮点数输入的范围应为 0-1。_duration_ 是手柄振动的时间，_amplitude_ 是手柄振动的强度，_frequency_ 是手柄振动的速度。不同手柄的感觉可能会有很大不同。
 
 ### UseAttachedStation
 
