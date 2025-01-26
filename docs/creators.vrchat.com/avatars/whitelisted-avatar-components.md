@@ -52,7 +52,7 @@ VRChat 的 Quest 版本在此列表的基础上减少了一些组件，这些组
       - 上条中的相机组件可以被动画重新启用。
     - 如果本地玩家和远端玩家是好友，则不会删除相机组件。
       - 如果两者刚成为好友，则需要手动重载远端玩家模型来启用相机组件。
-    - 如果本地玩家在 VRChat 的快捷菜单中为远端玩家选择了"显示模型"，则不会删除相机组件。
+    - 如果本地玩家在 VRChat 的快捷菜单中为远端玩家选择了 “显示模型”，则不会删除相机组件。
     - 如果不满足以上任一情况，则删除相机组件，且它们无法被重新启用。
 
 - [FlareLayer](https://docs.unity3d.com/cn/2019.4/Manual/class-FlareLayer.html)
@@ -93,7 +93,7 @@ VRChat 对 FinalIK 的实现进行了高度修改。因此，这些组件的功�
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
 ::: danger Dynamic Bone 已弃用
 
-我们已不再官方支持 Dynamic Bone。您应该转而使用[PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones)。
+我们已不再官方支持 Dynamic Bone。您应该转而使用 [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones)。
   
 :::
 

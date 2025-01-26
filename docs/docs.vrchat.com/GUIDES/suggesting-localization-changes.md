@@ -4,7 +4,8 @@
 
 VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也就是说我们可能会遗漏一些语法类的东西，而这些语法相关的东西会让内容看起来更自然一些。
 
-我们使用 Crowdin 进行本地化工作。目前支持的语言有法语:fr: 、德语:de: 、意大利语:it: 、日语:jp: 、韩语:kr: 和西班牙语:es:等 。
+<!-- zhlint ignore: :,: -->
+我们使用 Crowdin 进行本地化工作。目前支持的语言有法语:fr: 、德语:de: 、意大利语:it: 、日语:jp: 、韩语:kr: 和西班牙语:es:等。
 
 ::: tip 📘⭐目前，我们只对登录屏幕、快速菜单和主菜单提示信息进行本地化。
 :::
@@ -27,7 +28,7 @@ VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也�
 </center>
 
 2. 通过您注册时使用的电子邮箱验证账号。
-3. 在 Crowdin 上的 "关于我 "中添加您的[VRChat user-id](https://help.vrchat.com/hc/en-us/articles/4408181867027-Account-Names-and-Identifiers-Usernames-Display-Names-and-User-IDs-)。
+3. 在 Crowdin 上的 “关于我” 中添加您的 [VRChat user-id](https://help.vrchat.com/hc/en-us/articles/4408181867027-Account-Names-and-Identifiers-Usernames-Display-Names-and-User-IDs-)。
 - 设置 > 简介 > 关于我
 
 <center>
@@ -43,7 +44,7 @@ VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也�
 
 账号设置完成后，您就可以提出第一个翻译建议了！
 
-1. 在项目界面或主页上的项目选项卡下选择 VRChat Application 。
+1. 在项目界面或主页上的项目选项卡下选择 VRChat Application。
 
 <center>
 
@@ -59,7 +60,7 @@ VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也�
 
 </center>
 
-3. 单击 "Translate all "按钮。
+3. 单击 “Translate all” 按钮。
 
 <center>
 
@@ -69,7 +70,7 @@ VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也�
 
 ## 添加建议
 
-Crowdin的翻译文本编辑器界面有四个分区：
+Crowdin 的翻译文本编辑器界面有四个分区：
 
 1. 左侧边栏
 2. 置中靠上栏
@@ -84,7 +85,7 @@ Crowdin的翻译文本编辑器界面有四个分区：
 
 #### 第 1 部分 - 左侧边栏
 
-在这里，您可以搜索 VRChat 快捷菜单和主菜单提示信息中当前可用的所有单词和短语，如 "Avatar "或 "World"。
+在这里，您可以搜索 VRChat 快捷菜单和主菜单提示信息中当前可用的所有单词和短语，如 “Avatar” 或 “World”。
 
 尝试找到没有打勾的字符串，这些字符串最需要翻译建议。
 
@@ -117,7 +118,7 @@ Crowdin的翻译文本编辑器界面有四个分区：
 
 #### 如果我的 VRChat 用户名在 Crowdin 被占用了怎么办？
 
-请务必在 Crowdin 的 "About Me" 部分输入您的 VRChat User ID，以便我们确认您的身份。
+请务必在 Crowdin 的 “About Me” 部分输入您的 VRChat User ID，以便我们确认您的身份。
 
 #### 我没有看到某个单词/短语！
 

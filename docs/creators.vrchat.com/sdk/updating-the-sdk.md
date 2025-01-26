@@ -10,9 +10,9 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 如果您知道如何使用 [Git](https://git-scm.com/) 等的版本控制器，您可能会发现使用此类软件对您的项目管理很有益处。您不需要将您的版本库上传到 Github 或类似的服务中也能体验版本控制的好处。在升级 SDK 之前，请先创建一个提交以确保万无一失。
 
-## VRChat 创作者助手（VRChat Creator Companion）
+## VRChat 创作者助手 (VRChat Creator Companion)
 
-有了 VCC，更新 SDK 变得非常容易。请参阅 [VRChat 创作者助手文档](../../vcc.docs.vrchat.com/guides/getting-started.md) 了解如何使用它！
+有了 VCC，更新 SDK 变得非常容易。请参阅 [VRChat 创作者助手文档](../../vcc.docs.vrchat.com/guides/getting-started.md)了解如何使用它！
 
 ## 迁移到 VCC
 
@@ -25,10 +25,10 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 ## 传统 SDK3
 
 ::: warning 注意
-这些说明仅适用于我们的传统 SDK (`Assets\VRCSDK`) 用户。如果您的 SDK 位于 "Packages "文件夹（"Packages\com.vrchat.base"）中，请勿按照以下说明操作。
+这些说明仅适用于我们的传统 SDK (`Assets\VRCSDK`) 用户。如果您的 SDK 位于 “Packages” 文件夹 (“Packages\com.vrchat.base”) 中，请勿按照以下说明操作。
 :::
 
-**这对 SDK3 - Avatars 尤为重要，因为如果更新错误，可能会丢失动画的状态行为！** 如果您想要格外小心，请在更新 SDK 之前备份您的项目。
+**这对 SDK3 - Avatars 尤为重要，因为如果更新错误，可能会丢失动画的状态行为！**如果您想要格外小心，请在更新 SDK 之前备份您的项目。
 
 ### SDK3 - Worlds
 
@@ -47,7 +47,7 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 ### SDK3 - Avatar
 
 ::: danger 对于 SDK3 虚拟形象项目，请勿执行 "删除重装" 操作！
-**如果您在关闭 Unity 的情况下删除 SDK 文件夹，然后在未安装 SDK 的情况下打开 Unity，您将丢失状态行为。** 请确保经常备份您的项目，并保存/记录您的状态行为设置。
+**如果您在关闭 Unity 的情况下删除 SDK 文件夹，然后在未安装 SDK 的情况下打开 Unity，您将丢失状态行为。**请确保经常备份您的项目，并保存/记录您的状态行为设置。
 
 如果您**必须**执行 SDK3 - Avatar 的完全删除重装，请先备份您的项目。您将不得不重新设置状态行为，因此请确保您已妥善记录。
 :::
@@ -71,7 +71,7 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 2. 新建一个空白项目。
 3. 将新的 SDK3 - Avatars 软件包导入该项目。
 4. 关闭该 Unity 项目。
-5. 使用资源管理器（先不要打开 Unity！）删除要升级的项目中的 VRCSDK3 文件夹。除非本指南另有说明，否则**不要打开 Unity**。
+5. 使用资源管理器 (先不要打开 Unity！) 删除要升级的项目中的 VRCSDK3 文件夹。除非本指南另有说明，否则**不要打开 Unity**。
 6. 将导入了 SDK 的新空白项目中的 VRCSDK3 文件夹复制到要升级的项目中。
 7. 复制完成后，打开 Unity 并打开升级后的项目。这时您可以删除空白项目了。
 
@@ -80,11 +80,11 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 如果您要在包含使用复杂触发器设置的世界的项目中重新安装 SDK，这里有一个更安全的更新 SDK 的方法。
 
 1. 关闭 Unity
-2. 将项目备份到另一个文件夹（不要备份库文件夹，这些文件由 Unity 自动生成）
-3. 删除 SDK 和 Plugins 文件夹以及相关的 .META 文件
+2. 将项目备份到另一个文件夹 (不要备份库文件夹，这些文件由 Unity 自动生成)
+3. 删除 SDK 和 Plugins 文件夹以及相关的。META 文件
 4. 创建一个新的临时 Unity 项目
 5. 在临时项目中安装最新的 SDK
-6. 将新添加的 SDK / 插件和相关 .META 文件从临时项目复制到原始项目中
+6. 将新添加的 SDK / 插件和相关。META 文件从临时项目复制到原始项目中
 7. 完成。现在，您可以打开升级后的项目，无论触发器多么复杂，都不会出现崩溃！
 
 ## 更新 Unity

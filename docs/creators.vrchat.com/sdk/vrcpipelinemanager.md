@@ -4,7 +4,7 @@ upstreamCommit: 67afe1890d3b8b1f2cd922ee2fe44b33500d73cc
 
 # VRCPipelineManager
 
-用于存储世界和模型的 ID 。
+用于存储世界和模型的 ID。
 
 ::: info 自动添加
 这个组件通常会随着它依赖的组件自动添加。您通常不需要手动添加这个组件。
@@ -23,7 +23,7 @@ Blueprint ID 只能使用以下格式，其中 0 被替换为 [0-9] [a-f]：
 
 `wrld_00000000-0000-0000-0000-000000000000`
 
-任何其他 ID 格式将不被接受。 Blueprint ID 通常是自动生成的，所以您不需要主动创建自己的 Blueprint ID ——只需点击 "Attach" ，就会自动为您生成一个独一无二的 Blueprint ID 。
+任何其他 ID 格式将不被接受。Blueprint ID 通常是自动生成的，所以您不需要主动创建自己的 Blueprint ID ——只需点击 “Attach”，就会自动为您生成一个独一无二的 Blueprint ID。
 :::
 
 ![img](/creators.vrchat.com/images/sdk/vrcpipelinemanager-7d57e76-Unity_2017-12-10_01-35-44.png)

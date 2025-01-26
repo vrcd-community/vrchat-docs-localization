@@ -30,7 +30,7 @@ upstreamCommit: b30aec8ae69d86b6db951b628cbd3698f21766c9
 
 您也可以添加自己的模板，以便轻松地使用您喜欢的包、工具和预制开始项目。最简单的方法是从其中一个包含的模板构建。这是一个我们在世界模板中包含一个名为 `HypeGenerator` 的虚构工具的例子。
 
-1. 将文件夹 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\VRCTemplates\World` 复制到 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\Templates`（如果实际的盘符不是 C，使用您的实际盘符）。
+1. 将文件夹 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\VRCTemplates\World` 复制到 `C:\Users\{username}\AppData\Local\VRChatCreatorCompanion\Templates` (如果实际的盘符不是 C，使用您的实际盘符)。
 2. 将文件夹从 `World` 重命名为描述性的名称，如 `HypeWorld`。
 3. 修改 HypeWorld\package.json：
 
@@ -45,7 +45,9 @@ upstreamCommit: b30aec8ae69d86b6db951b628cbd3698f21766c9
 	"dependencies" : {}
 }
 ```
-目前只需要 "name" 和 "displayName" 字段。请注意，"defaultScene" 是 Unity 规范的一部分，但似乎不起作用。
+目前只需要 `name` 和 `displayName` 字段。请注意，`defaultScene` 是 Unity 规范的一部分，但似乎不起作用。
+
+<!-- zhlint ignore: 4,. -->
 
 4a. 如果我的 Hype Generator 工具在 VCC 中作为一个 VPM 兼容的包可用，我可以将它添加到 HypeWorld\Packages\vpm-manifest.json 中的 vpmDependencies 列表中：
 ```json

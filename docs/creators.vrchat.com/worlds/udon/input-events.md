@@ -3,6 +3,8 @@ title: "Input Events"
 upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 ---
 
+<!-- zhlint disabled -->
+
 # title: "
 
 You can read the input of a Player's controller in a unified way across all platforms by using Udon Input Events. These events will work correctly even when the player has remapped their controls. 

@@ -12,6 +12,8 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 VRChat *尚不适用于* Android。它将计划于今年晚些时候发布。
 :::
 
+<!-- zhlint ignore: ##,. -->
+
 ## 1. 将您的 VRChat World 发布到 Android 平台
 
 在 PC 和 VRChat 支持的所有其他平台上发布您的世界一直都是一个好主意。
@@ -21,7 +23,7 @@ VRChat *尚不适用于* Android。它将计划于今年晚些时候发布。
 要了解如何将您的世界上传到 Android，请参阅我们的[跨平台设置](/creators.vrchat.com/platforms/android/cross-platform-setup.md)文档。
 
 ::: info 笔记
-如果您在 VRChat SDK 相关内容看到 "Quest" 一词，它通常也适用于 Android 平台。
+如果您在 VRChat SDK 相关内容看到 “Quest” 一词，它通常也适用于 Android 平台。
 
 例如：[EasyQuestSwitch](/vcc.docs.vrchat.com/vpm/curated-community-packages.md) 等现有工具非常适合跨平台开发。您并不真正需要一台 Meta Quest！
 :::
@@ -44,7 +46,7 @@ public bool IsUsingPhoneOrTablet()
 
 其工作原理如下：
 
-- 使用 [conditional compilation（条件编译）](https://docs.unity3d.com/2019.4/Documentation/Manual/PlatformDependentCompilation.html)检测当前平台
+- 使用 [conditional compilation (条件编译)](https://docs.unity3d.com/2019.4/Documentation/Manual/PlatformDependentCompilation.html) 检测当前平台
 - 使用 [Networking.LocalPlayer](/creators.vrchat.com/worlds/udon/players/index.md) 检索有关本地玩家的数据
 - 使用 [IsUserInVR](/creators.vrchat.com/worlds/udon/players/index.md) 检查本地玩家是否在 VR 中。
 
@@ -66,7 +68,7 @@ Android 移动端通常不如 PC 强大，请阅读我们的 [Quest 内容优化
 
 在 VRChat 世界中快速迭代时，在 Unity 编辑器或 Steam 版本的 VRChat 中测试它们可能很方便。操纵杆游戏手柄可以作为 VRChat 移动端触控屏的合适替代品。
 
-- 在触控屏上，玩家用 *虚拟* 操纵杆移动和控制相机。
+- 在触控屏上，玩家用*虚拟*操纵杆移动和控制相机。
 - 触控屏使屏幕空间界面更容易与其他输入设备进行交互。
 - 找一位移动平台玩家来测试您的世界
 

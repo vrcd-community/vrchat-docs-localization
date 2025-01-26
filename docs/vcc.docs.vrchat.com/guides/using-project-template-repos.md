@@ -30,7 +30,7 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 
 ::: tip
 
-我们强烈建议您使用 [VCC 应用程序](/vcc.docs.vrchat.com/guides/getting-started) 或 [CLI](/vcc.docs.vrchat.com/vpm/cli) 来自动使用官方模板设置新项目。
+我们强烈建议您使用 [VCC 应用程序](/vcc.docs.vrchat.com/guides/getting-started)或 [CLI](/vcc.docs.vrchat.com/vpm/cli) 来自动使用官方模板设置新项目。
 但是，如果您想手动操作，或者您无法使用这些方法 - 那么请按照以下说明操作
 
 :::
@@ -38,14 +38,14 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 每个模板仓库都包含使用说明，所以请使用上面的仓库链接查看。
 但这里有一个太长不看的概述：
 
-- 使用上面的链接下载模板代码，或者访问仓库页面并按 'Use This Template' 来建立一个新的 GitHub 仓库，这个仓库已经准备好了。如果您下载了一个 zip 文件，按照剩下的指示进行。
+- 使用上面的链接下载模板代码，或者访问仓库页面并按 ‘Use This Template’ 来建立一个新的 GitHub 仓库，这个仓库已经准备好了。如果您下载了一个 zip 文件，按照剩下的指示进行。
 - 将 ZIP 文件解压到您的系统上您想要新项目的文件夹。
-- 打开 Unity Hub 并点击 "Open"。
-- 导航到您的新项目文件夹并点击 "Select Folder"。
+- 打开 Unity Hub 并点击 “Open”。
+- 导航到您的新项目文件夹并点击 “Select Folder”。
 - 这应该会打开 Unity 并开始包导入过程。
   - 确保您已经安装了正确的 Unity 版本，查看[我们的文档](/creators.vrchat.com/sdk/upgrade/current-unity-version)了解相关信息。
   - 您可以使用 VCC 来确保您总是使用正确的 Unity 版本。
-- 当被要求下载所需的包时，点击 "OK"。
+- 当被要求下载所需的包时，点击 “OK”。
 - 您现在应该已经设置好并可以开始了！
 
 ::: info
@@ -56,4 +56,4 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 
 ## 用户模板
 
-除了官方模板，您也可以创建您自己的！[查看这个指南](/vcc.docs.vrchat.com/vpm/templates#user-templates) 来了解更多信息。
+除了官方模板，您也可以创建您自己的！[查看这个指南](/vcc.docs.vrchat.com/vpm/templates#user-templates)来了解更多信息。

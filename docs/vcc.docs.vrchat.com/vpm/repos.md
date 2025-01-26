@@ -9,7 +9,7 @@ upstreamCommit: a88b577f65cb4e3d78c09e94707344014d08a85b
 ## 格式
 仓库列表以 JSON 格式提供，包含名称、作者和包列表。
 
-由于每个 VPM 兼容的包都有一个包含所有信息的清单文件（package.json），我们在此列表中使用它。每个清单作为[版本号](https://semver.org/)的**值**包含在内，包名作为**packages**对象的一部分列出。
+由于每个 VPM 兼容的包都有一个包含所有信息的清单文件 (package.json)，我们在此列表中使用它。每个清单作为[版本号](https://semver.org/)的**值**包含在内，包名作为 **packages** 对象的一部分列出。
 
 了解更多关于[包清单格式](/vcc.docs.vrchat.com/vpm/packages#vpm-manifest-additions)。
 
@@ -48,6 +48,6 @@ upstreamCommit: a88b577f65cb4e3d78c09e94707344014d08a85b
   }
 }
 ```
-在上述示例中，每个版本清单的其余部分将按键值逐一列出，而不是使用 "例如" 等含糊不清的字眼。要查看带有完整数据的实时示例，请查看 [官方 VRChat 包仓库](https://packages.vrchat.com/official)。
+在上述示例中，每个版本清单的其余部分将按键值逐一列出，而不是使用 “例如” 等含糊不清的字眼。要查看带有完整数据的实时示例，请查看[官方 VRChat 包仓库](https://packages.vrchat.com/official)。
 
 请注意，如果您正在使用本地仓库列表文件并通过 [CLI](/vcc.docs.vrchat.com/vpm/cli) 添加包，您可以省略 URL 字段。

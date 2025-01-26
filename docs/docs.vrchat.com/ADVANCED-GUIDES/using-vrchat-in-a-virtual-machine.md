@@ -9,7 +9,7 @@
 
 **本文档的存在并不意味着我们支持直接在虚拟机中运行 VRChat。**本文或任何其他的方法都有可能随时失效。无论如何，我们都会努力保持本文档的更新。
 
-如果您发现本文档已过时或需要更新，请使用右上角的 "suggest edit"链接。
+如果您发现本文档已过时或需要更新，请使用右上角的 “suggest edit” 链接。
 :::
 
 在虚拟机环境中运行时，VRChat 的反作弊 Easy Anti-Cheat (EAC) 通常会失效。
@@ -20,7 +20,7 @@
 
 ### libvirt
 
-使用命令 `virsh edit VM_NAME` ，用您喜欢的编辑器打开虚拟机的 XML 配置。然后只需在 `features > hyperv` 下添加以下一行即可：
+使用命令 `virsh edit VM_NAME`，用您喜欢的编辑器打开虚拟机的 XML 配置。然后只需在 `features > hyperv` 下添加以下一行即可：
 
 
 ```xml
@@ -39,7 +39,7 @@
   </features>
 ```
 
-同样，这不会影响性能。您可以保留其他设置，如 `hypervisor` , `topoext` 和 `invtsccpuid` 标志或 `Hyper-V clock`（这些设置都有性能优势）。
+同样，这不会影响性能。您可以保留其他设置，如 `hypervisor`，`topoext` 和 `invtsccpuid` 标志或 `Hyper-V clock` (这些设置都有性能优势)。
 
 事实上，这里有一个小窍门：您可以将 Hyper-V 模式设置为直通模式，而无需添加 vendor_id 参数：
 
@@ -49,11 +49,11 @@
 </hyperv>
 ```
 
-这将启用您的当前版本的内核/QEMU *所有* 可用的 **Hyper-V enlightenments** 特性，包括vendor ID，这也意味着 EAC 不会发病然后拒绝启动，但这个操作也会启用以前可能没有启用的其他功能，也就是说这很可能会 *提高* 您的性能！
+这将启用您的当前版本的内核/QEMU *所有*可用的 **Hyper-V enlightenments** 特性，包括 vendor ID，这也意味着 EAC 不会发病然后拒绝启动，但这个操作也会启用以前可能没有启用的其他功能，也就是说这很可能会*提高*您的性能！
 
-*“enlightenments”* 是 Hyper-V 对 "准虚拟化扩展 "的一种说法，即 Linux 内核或 QEMU 为 Windows 客户端提供的，用于增强虚拟环境中的性能或功能的接口。
+*“enlightenments”* 是 Hyper-V 对 “准虚拟化扩展” 的一种说法，即 Linux 内核或 QEMU 为 Windows 客户端提供的，用于增强虚拟环境中的性能或功能的接口。
 
-2022 年 8 月 26 日之后，上述修复措施可能不足以让游戏正常启动（您仍应执行这些措施）。如果仍有问题，请尝试手动设置虚拟机的 SMBIOS 字符串。理论上，任何有效的硬件配置都可以正常工作，但最好的办法是通过 `dmidecode` 获取自己系统的硬件信息。
+2022 年 8 月 26 日之后，上述修复措施可能不足以让游戏正常启动 (您仍应执行这些措施)。如果仍有问题，请尝试手动设置虚拟机的 SMBIOS 字符串。理论上，任何有效的硬件配置都可以正常工作，但最好的办法是通过 `dmidecode` 获取自己系统的硬件信息。
 
 您应该可以从这些命令中推断出有关系统硬件的信息：
 
@@ -100,17 +100,17 @@ dmidecode --type system`
 
 `-cpu` 参数中可能已经包含了其他内容，在这种情况下，只需在最后添加 `,hv-vendor-id=0123756792CD` 即可，如上图所示。上述推荐设置不仅能实现 Hyper-V 的要求，还能确保 CPU L2/L3 缓存拓扑等更高阶的方法也能正确传递。
 
-在这里,也可以使用 Hyper-V 直通模式：
+在这里，也可以使用 Hyper-V 直通模式：
 
 ```
 -cpu host,migratable=off,hypervisor=on,invtsc=on,hv-time=on,hv-passthrough=on。
 ```
 
-不过，[不建议使用 `hv-passthrough`](https://www.qemu.org/docs/master/system/i386/hyperv.html#supplementary-features)，因为该选项会激活 KVM 本身支持的所有 Hyper-V 特性（而不仅仅是硬件支持的）。
+不过，[不建议使用 `hv-passthrough`](https://www.qemu.org/docs/master/system/i386/hyperv.html#supplementary-features)，因为该选项会激活 KVM 本身支持的所有 Hyper-V 特性 (而不仅仅是硬件支持的)。
 
-（注意：在这种情况下，（大概？）除了 `hv-time` 之外，您不需要任何其他 `hv-foo` 参数，直通将处理其余参数）
+(注意：在这种情况下，(大概？) 除了 `hv-time` 之外，您不需要任何其他 `hv-foo` 参数，直通将处理其余参数)
 
-如 QEMU 文档所述，QEMU 在所有类型的 SMBIOS 仿真处理中，支持使用多个 `-smbios type=#,...`条目。从头开始填写所有参数比较麻烦，不过这很容易实现自动化。建议使用脚本从自己的硬件获取真实参数值：[https://gist.github.com/kiler129/5d437a37c07ac6eb1cdf0e595e488fd2](https://gist.github.com/kiler129/5d437a37c07ac6eb1cdf0e595e488fd2)。这样可以确保参数值与真实硬件相对应，并且不会出现不同用户间有完全相同参数的情况。使用脚本生成的命令行参数示例如下：
+如 QEMU 文档所述，QEMU 在所有类型的 SMBIOS 仿真处理中，支持使用多个 `-smbios type=#,...` 条目。从头开始填写所有参数比较麻烦，不过这很容易实现自动化。建议使用脚本从自己的硬件获取真实参数值：[https://gist.github.com/kiler129/5d437a37c07ac6eb1cdf0e595e488fd2](https://gist.github.com/kiler129/5d437a37c07ac6eb1cdf0e595e488fd2)。这样可以确保参数值与真实硬件相对应，并且不会出现不同用户间有完全相同参数的情况。使用脚本生成的命令行参数示例如下：
 
 ```shell
 -smbios 'type=0,version=F31o,vendor=American Megatrends International,, LLC.,uefi=on,release=5.17,date=12/03/2020' \
@@ -124,19 +124,19 @@ dmidecode --type system`
 
 ### Proxmox/PVE
 
-确保在虚拟机的 "选项" 选项卡中将操作系统设置为 "Windows 7" 或更高版本。
+确保在虚拟机的 “选项” 选项卡中将操作系统设置为 “Windows 7” 或更高版本。
 
-虽然严格来说与 EAC 无关，但在 Proxmox（以及任何其他虚拟机）中运行 VR 游戏需要一致且可预测的性能。Proxmox 上专门针对游戏的性能调整教程可在 Proxmox 论坛上找到：[https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/](https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/)
+虽然严格来说与 EAC 无关，但在 Proxmox (以及任何其他虚拟机) 中运行 VR 游戏需要一致且可预测的性能。Proxmox 上专门针对游戏的性能调整教程可在 Proxmox 论坛上找到：[https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/](https://forum.proxmox.com/threads/hey-proxmox-community-lets-talk-about-resources-isolation.124256/)
 
 ### 技术说明
 
-您可能会注意到，其中有些内容与过去臭名昭著的 "NVIDIA 代码 43 "问题非常相似。这里唯一的区别是，隐藏 kvm 虚拟机监控程序（`kvm=off` 或 `<kvm><hidden state='on'/></kvm>` ）不是必需的（但这么做也无妨）。如果您以前曾使用过此类指南（如[https://passthroughpo.st/apply-error-43-workaround/](https://passthroughpo.st/apply-error-43-workaround/)）设置过虚拟机，那么带有 EAC 的 VRC 对您来说应该是可以直接运行的。
+您可能会注意到，其中有些内容与过去臭名昭著的 “NVIDIA 代码 43” 问题非常相似。这里唯一的区别是，隐藏 kvm 虚拟机监控程序 (`kvm=off` 或 `<kvm><hidden state='on'/></kvm>`) 不是必需的 (但这么做也无妨)。如果您以前曾使用过此类指南 (如 [https://passthroughpo.st/apply-error-43-workaround/](https://passthroughpo.st/apply-error-43-workaround/)) 设置过虚拟机，那么带有 EAC 的 VRC 对您来说应该是可以直接运行的。
 
-在技术层面上，Hyper-V vendor ID 的作用是将客户机 `cpuid` 信息的 `0x40000000`地址处设置为其所提供的任何信息。这里的默认值是 "Microsoft HV"，EAC 会直接拒绝这个值。使用 Hyper-V 直通模式时，此处将变成 "Linux KVM Hv"，它仍然会显示为一个虚拟机，但 EAC 不会对此作出任何反应。
+在技术层面上，Hyper-V vendor ID 的作用是将客户机 `cpuid` 信息的 `0x40000000` 地址处设置为其所提供的任何信息。这里的默认值是 “Microsoft HV”，EAC 会直接拒绝这个值。使用 Hyper-V 直通模式时，此处将变成 “Linux KVM Hv”，它仍然会显示为一个虚拟机，但 EAC 不会对此作出任何反应。
 
-由于这不需要更改 `hypervisor` 标志，客户机（Windows NT）中的操作系统内核仍会将环境识别为虚拟机，并应用相应的性能增强措施。这也意味着客户机中的任务管理器会报告其运行在虚拟机中。在 KVM 环境中测试 EAC 时，这不会有什么影响。
+由于这不需要更改 `hypervisor` 标志，客户机 (Windows NT) 中的操作系统内核仍会将环境识别为虚拟机，并应用相应的性能增强措施。这也意味着客户机中的任务管理器会报告其运行在虚拟机中。在 KVM 环境中测试 EAC 时，这不会有什么影响。
 
-### 一个*非常* 技术性的说明
+### 一个*非常*技术性的说明
 
 下面是一个小小的 windows c++ 程序，用于演示更改后的效果，代码为：
 

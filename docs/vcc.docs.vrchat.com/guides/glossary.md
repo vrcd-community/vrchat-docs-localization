@@ -13,7 +13,7 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 ## VCC
 VRChat 创作者助手
 
-创作者助手是 "在 VRChat 中创建内容的入口"。它是一个您可以下载和安装的独立应用程序。它可以帮助您：
+创作者助手是 “在 VRChat 中创建内容的入口”。它是一个您可以下载和安装的独立应用程序。它可以帮助您：
 * 安装 VRChat 开发所需的特定版本的 Unity。
 * 创建新项目
 * 管理您现有的项目
@@ -30,7 +30,7 @@ VRChat 包管理器
 
 包管理器是我们开发的一个库，用于管理您的 VRChat Unity 项目的包。
 
-**技术规格**：该库是针对 .NET Standard 2.0 构建的，因此它可以在使用 .NET Framework 4.x 的 Unity 项目，以及原生的 .NET Standard 和 Core 项目中运行，比如 [CLI](#cli)。
+**技术规格**：该库是针对。NET Standard 2.0 构建的，因此它可以在使用。NET Framework 4.x 的 Unity 项目，以及原生的。NET Standard 和 Core 项目中运行，比如 [CLI](#cli)。
 
 ## CLI
 VPM 命令行接口

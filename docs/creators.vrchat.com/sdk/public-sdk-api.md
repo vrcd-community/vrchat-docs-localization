@@ -34,7 +34,7 @@ VRChat SDK 提供了一系列接口和方法，您可以使用它们来增强您
 
 使用 `OnSdkPanelEnable` 事件可以确保 SDK 窗口被打开并且构建器已注册。然后您可以使用 `TryGetBuilder` 来获取您需要的构建器实例。
 
-> 您可以在任何时候调用 `VRCSdkControlPanel.TryGetBuilder`，但如果 SDK 窗口没有打开或您尝试访问的构建器不可用，它将返回 `false` 。
+> 您可以在任何时候调用 `VRCSdkControlPanel.TryGetBuilder`，但如果 SDK 窗口没有打开或您尝试访问的构建器不可用，它将返回 `false`。
 
 ```csharp
 [InitializeOnLoadMethod]

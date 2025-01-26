@@ -5,15 +5,17 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 # 命令行界面
 VRChat 包管理器提供了一个命令行界面应用程序，供高级用户和自动化使用。
 
+<!-- zhlint ignore: .NET -->
+
 ## 安装与更新
-您需要安装 [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)。
+您需要安装[.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)。
 然后只需打开一个终端并输入：
 
 ```console
 dotnet tool install --global vrchat.vpm.cli
 ```
 
-这将使得您在任何终端下只需输入 `vpm` 就可以使用它！您需要最新的模板来创建/迁移项目，因此在首次运行时推荐输入 `vpm install templates` 来安装模板体验更多功能 - 在 [安装模板](#install-templates) 部分有更多内容。
+这将使得您在任何终端下只需输入 `vpm` 就可以使用它！您需要最新的模板来创建/迁移项目，因此在首次运行时推荐输入 `vpm install templates` 来安装模板体验更多功能 - 在[安装模板](#install-templates)部分有更多内容。
 
 将工具更新到最新版本：
 ```console
@@ -25,7 +27,7 @@ dotnet tool update --global vrchat.vpm.cli
 dotnet tool uninstall --global vrchat.vpm.cli
 ```
 
-要了解更多信息，请阅读 [.NET 工具文档](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools#install-a-global-tool)。
+要了解更多信息，请阅读[.NET 工具文档](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools#install-a-global-tool)。
 
 ## 项目
 VRChat 项目是包含 VRChat SDK 的 Unity 项目。
@@ -40,8 +42,8 @@ vpm new <projectName> [template] [-p path]
 
 * **projectName**：新项目的名称。如果目标目录中已经存在具有此名称的其他项目，则会在其后添加数字。
 
-* **template**：可选的模板。如果您没有提供，将使用只包含 VRChat Base SDK 包的基础 "Base" 模板。您可以使用内置模板的名称，或者提供您自己模板的绝对路径。
-  **内置模板**："Base", "World", "Avatar", "UdonSharp"
+* **template**：可选的模板。如果您没有提供，将使用只包含 VRChat Base SDK 包的基础 “Base” 模板。您可以使用内置模板的名称，或者提供您自己模板的绝对路径。
+  **内置模板**：“Base”，“World”，“Avatar”，“UdonSharp”
 
 * **path**：创建项目时使用的可选绝对路径。如果未提供，将使用当前目录。
 
@@ -81,7 +83,7 @@ vpm resolve project [<name>]
 如果包成功恢复，返回 0，如果没有恢复，返回 1。
 
 ### 迁移项目
-如果他们使用 SDK3 Worlds 或 Avatars unitypackages（不支持 SDK2），将使用旧版 .unitypackage SDK 创建的项目迁移到新系统。他们可以是 Unity 2017、2018 或 2019 的项目。也将 UdonSharp 和 CyanEmu 迁移到新的基于包的版本。
+如果他们使用 SDK3 Worlds 或 Avatars unitypackages (不支持 SDK2)，将使用旧版。unitypackage SDK 创建的项目迁移到新系统。他们可以是 Unity 2017、2018 或 2019 的项目。也将 UdonSharp 和 CyanEmu 迁移到新的基于包的版本。
 
 ```console 
 vpm migrate project [projectPath]
@@ -98,7 +100,7 @@ vpm migrate project [projectPath]
 如果找到了项目并且可以迁移，返回 0；如果未找到或无法迁移，返回 1。
 
 ## 包
-[包](packages) 是以便携格式存储在 zip 文件中的代码和资产，由 VRChat 包管理器拉入您的项目。
+[包](packages)是以便携格式存储在 zip 文件中的代码和资产，由 VRChat 包管理器拉入您的项目。
 
 ### 检查包
 报告来自包的信息，或者告诉您它是否未找到/无效。
@@ -115,7 +117,7 @@ vpm check package <name>
 * `vpm check package com.vrchat.avatars`
   * 打印关于官方 Avatars 包的信息
 * `vpm check package "C:/MyPackages/MirrorExploder"`
-  * 打印关于本地包 "MirrorExploder" 的信息。
+  * 打印关于本地包 “MirrorExploder” 的信息。
 
 ### 添加包
 将 VPM 包添加到现有项目
@@ -134,7 +136,7 @@ vpm add package <packageName> [-p <project>]
 * `vpm add package com.vrchat.avatars`
   * 将官方 Avatars 包添加到当前目录中的项目。
 * `vpm add package "C:/MyPackages/MirrorExploder" "../MyProjectDir"`
-  * 将我的本地包 "MirrorExploder" 添加到当前工作目录上一级的项目。
+  * 将我的本地包 “MirrorExploder” 添加到当前工作目录上一级的项目。
 
 ### 移除包
 从现有项目中移除 VPM 包
@@ -157,7 +159,7 @@ vpm remove package <packageName> [-p <project>] [-f]
   * 即使这样做可能会破坏项目，也从当前工作目录上一级的项目中移除 VRChat Base 包。
 
 ## 模板
-[模板](templates) 是用作新项目起点的基础 VRChat 项目，可以快速拉取您喜欢的包、预制件和工具。
+[模板](templates)是用作新项目起点的基础 VRChat 项目，可以快速拉取您喜欢的包、预制件和工具。
 
 ::: 提示
 
@@ -192,7 +194,7 @@ vpm check template <template>
 
 * **template**：要检查的模板。这可以是任何内置模板的 displayName，或者是您自己的项目模板的绝对路径。
 
-**内置模板**："Base", "World", "Avatar", "UdonSharp"
+**内置模板**：“Base”，“World”，“Avatar”，“UdonSharp”
 
 ## 仓库
 仓库是包的列表。您总是可以访问官方和策划的仓库，您也可以添加您自己的社区仓库。
@@ -242,11 +244,11 @@ vpm new repo [path] [--name MyName] [--author email@domain.com]
 
 **参数**
 
-* **path**：创建文件的路径，可以是绝对路径，也可以是相对于当前目录的路径。如果未提供，它将在默认的源目录（~User/AppData/Local/VRChatCreatorCompanion/Sources）中创建，并给予一个 GUID 名称，如 `4d6ffbe7-fe91-449f-ae7e-c8688e315a83.json`。
+* **path**：创建文件的路径，可以是绝对路径，也可以是相对于当前目录的路径。如果未提供，它将在默认的源目录 (~User/AppData/Local/VRChatCreatorCompanion/Sources) 中创建，并给予一个 GUID 名称，如 `4d6ffbe7-fe91-449f-ae7e-c8688e315a83.json`。
 
 **选项**
-* **-n|--name**：源的名称，如 "VRChat Official Packages" 或 "Momo's Messy Mix"
-* **-a|--author**：人们可以通过此电子邮件地址联系您提问。
+* **`-n|--name`**：源的名称，如 “VRChat Official Packages” 或 “Momo's Messy Mix”
+* **`-a|--author`**：人们可以通过此电子邮件地址联系您提问。
 
 ### 移除单个仓库
 通过 id 从您的设置中移除仓库。
@@ -329,7 +331,7 @@ vpm list unity
 
 检查：
 * Windows 注册表
-* Unity Hub（通过使用参数 `-- --headless editors -i` 运行它）
+* Unity Hub (通过使用参数 `-- --headless editors -i` 运行它)
 * Unity Hub 的子目录
 
 ## Mac 和 Linux 支持
@@ -338,13 +340,13 @@ vpm list unity
 
 ::: tips
 
-如果您在非 Windows 平台上使用 CLI 遇到问题，您可以查看我们的 [项目模板](/vcc.docs.vrchat.com/guides/using-project-template-repos)，以便在不依赖 VCC 的情况下开始使用最新的 VRChat 包。
+如果您在非 Windows 平台上使用 CLI 遇到问题，您可以查看我们的[项目模板](/vcc.docs.vrchat.com/guides/using-project-template-repos)，以便在不依赖 VCC 的情况下开始使用最新的 VRChat 包。
 
 :::
 
 ### Mac 设置
 
-1. 按照上面的 [安装和更新](#installation--updating) 部分的指示进行操作。
+1. 按照上面的[安装和更新](#installation--updating)部分的指示进行操作。
 2. 安装 [Mac 版 Unity Hub](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg) 然后安装 [Unity 2019.4.31f1](unityhub://2019.4.31f1/bd5abf232a62)。
 3. 打开终端并运行 [vpm install templates](#install-templates) 来安装最新的 VRChat 项目模板。
 4. 运行 [vpm check hub](#check-hub) 来查找并保存 Unity Hub 的位置。目前，我们假设它已经安装到其默认位置 `/Applications/Unity Hub.app/Contents/MacOS/Unity Hub`。如果不是这样，您需要手动打开您的设置文件，并将 `pathToUnityHub` 设置为正确的绝对路径。确保目标是 UnityHub.app 内的可执行文件，如默认路径所示。

@@ -19,6 +19,6 @@ upstreamCommit: a88b577f65cb4e3d78c09e94707344014d08a85b
 
 - 将模板和工具分开，使它们可以单独更新
 - 更好的项目组织结构
-- 自动构建 Windows 和 Android 内容，无需手动切换项目内容的构建目标（需要等待 SDK 更新，以便在不进入 Play Mode 的情况下构建 assetbundles）
-- 按 Blueprint ID 组织您的内容 - 即在一个界面列出您的所有项目内容，而不是仅仅是您的项目路径（需要登录 VCC 才可以使用）
+- 自动构建 Windows 和 Android 内容，无需手动切换项目内容的构建目标 (需要等待 SDK 更新，以便在不进入 Play Mode 的情况下构建 assetbundles)
+- 按 Blueprint ID 组织您的内容 - 即在一个界面列出您的所有项目内容，而不是仅仅是您的项目路径 (需要登录 VCC 才可以使用)
 - 从 VCC 搜索所有文档
