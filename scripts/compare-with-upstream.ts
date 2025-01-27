@@ -9,6 +9,8 @@ import * as core from '@actions/core'
 import { SummaryTableCell, SummaryTableRow } from "@actions/core/lib/summary.js";
 import { env } from "process";
 
+// test labeler
+
 const optionsJson = await readFile('./docs/sync.json', 'utf-8')
 const options = JSON.parse(optionsJson) as Record<string, SyncOptions>
 
