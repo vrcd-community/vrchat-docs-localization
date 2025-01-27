@@ -1,0 +1,24 @@
+📄 文档:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/*'
+📑 文档枢纽:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/docs.vrchat.com/**/*'
+👩‍💻 创作者文档:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/creators.vrchat.com/**/*'
+VCC:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/vcc.docs.vrchat.com/**/*'
+💾 UdonSharp:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/udonsharp.docs.vrchat.com/**/*'
+🕹️ ClientSim:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/clientsim.docs.vrchat.com/**/*'
+
+💻 文档软件:
+  - changed-files:
+    - any-glob-to-any-file: '**/*.{ts,tsx,js,jsx,vue,css,json,yml,lock}'
+    - any-glob-to-any-file: 'docs/.vitepress/**/*'
+    - all-globs-to-all-files: '!docs/.vitepress/config/sidebars.ts'
