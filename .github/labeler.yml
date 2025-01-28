@@ -1,6 +1,7 @@
 📄 文档:
   - changed-files:
     - any-glob-to-any-file: 'docs/**/*'
+    - all-globs-to-all-files: '!docs/.vitepress/**/*'
 📑 文档枢纽:
   - changed-files:
     - any-glob-to-any-file: 'docs/docs.vrchat.com/**/*'
