@@ -92,7 +92,7 @@
 
 #### 准备工作
 
-1. 确保你的电脑安装了 [Node.js v18 或更新的版本](https://nodejs.org/)
+1. 确保你的电脑安装了 [Node.js v22 或更新的版本](https://nodejs.org/)
 2. 如果你之前没有开启过 Node.js 的 `Corepack` 功能，请在终端内运行 `corepack enable`
 3. 使用终端或编辑器打开该项目的目录，并输入 `yarn install` 安装依赖
 

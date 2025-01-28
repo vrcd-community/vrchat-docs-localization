@@ -7,7 +7,7 @@
 
 > 安装 Node.js 部分仅适用于 Windows 系统，但是如果你使用 Linux/Mac OS，那么我觉得你应该能自己解决。
 
-1. 安装 Node.js v18 或更新的版本，你可以打开[这个链接](https://mirrors.ustc.edu.cn/node/latest/)之后点击名字类似 `node-v**.*.*-x64.msi` 的链接下载最新版本的 Node.js
+1. 安装 Node.js v22 或更新的版本，你可以打开[这个链接](https://mirrors.ustc.edu.cn/node/latest/)之后点击名字类似 `node-v**.*.*-x64.msi` 的链接下载最新版本的 Node.js
 2. 下载完成之后，打开下载下来的文件。稍等一会安装程序初始化，如果一切顺利，那么你应该会看到如下界面。请点击 `Next` 按钮。
 
     ![Node.js Windows 安装程序欢迎界面](images/node-js-setup-welcome.png)
