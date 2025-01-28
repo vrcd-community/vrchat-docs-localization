@@ -9,6 +9,7 @@ import {
 } from "./sidebars"
 
 import { withPwa } from "@vite-pwa/vitepress"
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer"
 
 // @ts-expect-error it don't have types
 import markdownItAbbr from "markdown-it-abbr" // @ts-expect-error it don't have types
@@ -248,8 +249,7 @@ export default withPwa(
       strategies: "generateSW",
       registerType: "prompt",
       workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,jpg,mp4,woff2}"],
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,jpg,mp4,woff2}"]
       },
       experimental: {
         includeAllowlist: true,
@@ -339,6 +339,9 @@ export default withPwa(
     },
 
     vite: {
+      plugins: [
+        ViteImageOptimizer()
+      ],
       resolve: {
         alias: [
           {
