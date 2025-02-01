@@ -65,7 +65,7 @@ public class Example : UdonSharpBehaviour
 
 ## DefaultExecutionOrder
 
-指定 Update、LateUpdate 和 FixedUpdate 相对于其他 UdonSharpBehaviours 的执行顺序，以整数表示。默认情况下所有行为的顺序为0，数值越小，更新越早发生。整数可以是负数。
+指定 Update、LateUpdate 和 FixedUpdate 相对于其他 UdonSharpBehaviours 的执行顺序，以整数表示。默认情况下所有行为的顺序为 0，数值越小，更新越早发生。整数可以是负数。
 
 ### 示例
 ```cs
@@ -134,7 +134,7 @@ public class ExampleOfFieldChangeCallback: UdonSharpBehaviour
 
 请注意，在上述示例中，Interact 方法执行的是 ```SyncedToggle = !SyncedToggle;``` 而不是 ```_syncedToggle = !_syncedToggle```。
 
-后者将不会起作用（实际上不会触发 FieldChangeCallback）。FieldChangeCallback 仅在 SetProgramVariable 或网络同步更新 syncedToggle 的值时触发 SyncedToggle 的 setter。
+后者将不会起作用 (实际上不会触发 FieldChangeCallback)。FieldChangeCallback 仅在 SetProgramVariable 或网络同步更新 syncedToggle 的值时触发 SyncedToggle 的 setter。
 
 当变量直接从相同的 UdonBehaviour 内部设置时，它不会触发。建议始终直接使用该属性。
 
