@@ -1,11 +1,11 @@
-name: ZHLint Check
+name: Markdownlint Check
 
 on:
   push:
   pull_request:
 
 jobs:
-  zhlint-check:
+  markdownlint-check:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,5 +14,5 @@ jobs:
       - name: Install dependencies
         run: corepack enable && yarn install
 
-      - name: ZHLint Check
-        run: yarn run docs:zhlint
+      - name: Markdownlint Check
+        run: yarn run docs:markdownlint

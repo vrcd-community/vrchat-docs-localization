@@ -1,7 +1,9 @@
 {
   "recommendations": [
-    "Vue.volar",
     "dbaeumer.vscode-eslint",
-    "EditorConfig.EditorConfig"
+    "EditorConfig.EditorConfig",
+    "kkopite.zhlint",
+    "davidanson.vscode-markdownlint",
+    "ms-vsliveshare.vsliveshare"
   ]
 }
