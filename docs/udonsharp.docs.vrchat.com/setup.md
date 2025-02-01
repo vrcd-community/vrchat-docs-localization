@@ -14,12 +14,12 @@ upstreamCommit: 66e5a0c1bb2b12b3de3d1341bb8de76083f7d070
 
 ## 使用 VRChat Creator Companion 创建新的 UdonSharp 项目：
 1. 安装最新版本的[Creator Companion](https://vrchat.com/home/download)。
-2. 在主界面中，选择“新建”，然后选择 “UdonSharp”，并选择一个文件夹。
-3. 点击“打开项目”。就这样！
+2. 在主界面中，选择 “新建” ，然后选择 “UdonSharp”，并选择一个文件夹。
+3. 点击 “打开项目” 。就这样！
 
 ## 使用源代码控制创建新的 UdonSharp 项目：
 1. 访问[UdonSharp项目模板仓库](https://github.com/vrchat-community/template-udonsharp)。
-2. 使用“使用此模板”功能。
+2. 使用 “使用此模板” 功能。
 3. 使用你喜欢的 Git 客户端将项目克隆到你的电脑上。
 4. 直接在 Unity 中打开项目，或者将其添加到VCC以便稍后轻松访问和更新。
 
@@ -28,7 +28,7 @@ upstreamCommit: 66e5a0c1bb2b12b3de3d1341bb8de76083f7d070
 2. 从项目列表中选择项目。
 3. 在 Package 列表上方的 Repo 下拉菜单中，确保选择了 “Curated”。
    ![](/udonsharp.docs.vrchat.com/images/repos-official-curated.png)
-4. 在列出的包中找到 UdonSharp 并点击“添加”。
+4. 在列出的包中找到 UdonSharp 并点击 “添加”。
 
 ## 通过 CLI 创建或添加 UdonSharp
 CLI 是一个高级用户工具，目前是非 Windows 系统上管理 VPM 项目的最佳方式。
@@ -39,14 +39,14 @@ CLI 是一个高级用户工具，目前是非 Windows 系统上管理 VPM 项�
 
 1. 在你的场景中创建一个新的对象。
 2. 向你的对象添加一个 Udon 行为组件。
-3. 在“新建程序”按钮下方点击下拉菜单，选择 “Udon C# 程序资产”。
-4. 现在点击“新建程序”按钮，这将为你创建一个新的 UdonSharp 程序资产。
-5. 点击“创建脚本”按钮，选择保存脚本的目的地和名称。
+3. 在 “新建程序” 按钮下方点击下拉菜单，选择 “Udon C# 程序资产”。
+4. 现在点击 “新建程序” 按钮，这将为你创建一个新的 UdonSharp 程序资产。
+5. 点击 “创建脚本” 按钮，选择保存脚本的目的地和名称。
 6. 这将创建一个准备好开始工作的模板脚本，请在你选择的编辑器中打开该脚本并开始编程。
 
 **资源浏览器资产创建**
 
-除了从UdonBehaviour创建资产外，你还可以这样做：
+除了从 UdonBehaviour 创建资产外，你还可以这样做：
 1. 在你的项目资源浏览器中右键点击。
 2. 导航到 “创建” > “U# 脚本”。
 3. 点击 “U# 脚本”，这将打开一个创建文件对话框。
