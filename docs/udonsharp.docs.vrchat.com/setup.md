@@ -27,7 +27,7 @@ upstreamCommit: 66e5a0c1bb2b12b3de3d1341bb8de76083f7d070
 1. 将项目添加到VCC，如果需要的话进行迁移。
 2. 从项目列表中选择项目。
 3. 在Package列表上方的Repo下拉菜单中，确保选择了“Curated”。
-   ![](udonsharp.docs.vrchat.com/images/repos-official-curated.png)
+   ![](/udonsharp.docs.vrchat.com/images/repos-official-curated.png)
 4. 在列出的包中找到UdonSharp并点击“添加”。
 
 ## 通过CLI创建或添加UdonSharp
