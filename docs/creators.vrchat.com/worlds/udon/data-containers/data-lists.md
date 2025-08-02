@@ -85,7 +85,7 @@ As this function does not have a type check built in, you should pair this funct
 
 ### TryGetValue with TokenType
 
-If you want to get a value from a list and you don't know what type it could be, it is important to do type checks. You could do that yourself in your own code, but that can get messy. Instead, you can use the version of TryGetValue that includes a TokenType. When you do this, it indicates that you only want to retrieve the value if it is the type you expect. Otherwise, it returns false and that can be handled gracefully. 
+If you want to get a value from a list and you don't know what type it could be, it is important to do type checks. You could do that yourself in your own code, but that can get messy. Instead, you can use the version of TryGetValue that includes a TokenType. When you do this, it indicates that you only want to retrieve the value if it is the type you expect. Otherwise, it returns false and that can be handled gracefully.
 
 This method is good for when you want to get a specific value from a specific location, but the data is coming from an outside source so you are not confident that the source has the right data.
 

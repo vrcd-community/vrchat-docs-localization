@@ -21,6 +21,7 @@ The Pause page is displayed whenever the user opens the menu after accepting the
 ## Actions
 
 The actions section contains four buttons:
+
 1. Close Menu - Close the menu and allow player movement
 2. Respawn - Close the menu and teleport the player to the spawn point
 3. Settings Window - Open the ClientSim [Settings Window](../editor/settings-window.md)
@@ -29,6 +30,7 @@ The actions section contains four buttons:
 ## Player Info
 
 The Player Info section contains info regarding the local player.
+
 1. Player Name
 2. Player ID
 3. Is the local player the master
@@ -38,11 +40,12 @@ The Player Info section contains info regarding the local player.
 ## Settings
 
 The Settings section provides options to change the current ClientSim Runtime Settings. Changing these will save the values even after Playmode ends.
-* **Show Tooltips** - Toggle the display of interaction tooltips.
-* **Desktop Reticle** - Toggle the desktop reticle in the center of the screen. This does not disable the UI pointer if hovering over a UI interactive object.
-* **Invert Mouse Look** - Toggle whether the mouse Y should be inverted.
-* **Console Logging** - Toggle whether debug information should be logged to the console.
-* **Player Height** - A slider to set the player’s height. Default value is 1.9 Unity units tall. The slider is limited between 0.2 and 4 units. If the value in the ClientSim Unity Settings Window is set, then the height can be overridden up to 80 units. Toggling the menu will clamp the max value to keep the slider usable without exiting playmode. Note that PlayerHeight is different from TrackingScale, although the values are related.
+
+- **Show Tooltips** - Toggle the display of interaction tooltips.
+- **Desktop Reticle** - Toggle the desktop reticle in the center of the screen. This does not disable the UI pointer if hovering over a UI interactive object.
+- **Invert Mouse Look** - Toggle whether the mouse Y should be inverted.
+- **Console Logging** - Toggle whether debug information should be logged to the console.
+- **Player Height** - A slider to set the player’s height. Default value is 1.9 Unity units tall. The slider is limited between 0.2 and 4 units. If the value in the ClientSim Unity Settings Window is set, then the height can be overridden up to 80 units. Toggling the menu will clamp the max value to keep the slider usable without exiting playmode. Note that PlayerHeight is different from TrackingScale, although the values are related.
 
 ## Delay Start Page
 

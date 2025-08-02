@@ -18,19 +18,19 @@
 
 ```json
 {
-	"betas": [
-		"particle_system_limiter"
-	],
-	"ps_max_particles": 50000,
-	"ps_max_systems": 200,
-	"ps_max_emission": 5000,
-	"ps_max_total_emission": 40000,
-	"ps_mesh_particle_divider": 60,
-	"ps_mesh_particle_poly_limit": 50000,
-	"ps_collision_penalty_high": 50,
-	"ps_collision_penalty_med": 30,
-	"ps_collision_penalty_low": 10,
-	"ps_trails_penalty": 10
+ "betas": [
+  "particle_system_limiter"
+ ],
+ "ps_max_particles": 50000,
+ "ps_max_systems": 200,
+ "ps_max_emission": 5000,
+ "ps_max_total_emission": 40000,
+ "ps_mesh_particle_divider": 60,
+ "ps_mesh_particle_poly_limit": 50000,
+ "ps_collision_penalty_high": 50,
+ "ps_collision_penalty_med": 30,
+ "ps_collision_penalty_low": 10,
+ "ps_trails_penalty": 10
 }
 ```
 
@@ -38,12 +38,12 @@
 
 值名称 | 描述
 -- | --
-`betas` |	添加或删除字符串“particle_system_limiter”将启用/禁用粒子限制器
+`betas` | 添加或删除字符串“particle_system_limiter”将启用/禁用粒子限制器
 ps_max_particles | 单个粒子系统可以生成的最大粒子数
-`ps_max_emission`	| 单个粒子系统允许的最大发射量
+`ps_max_emission` | 单个粒子系统允许的最大发射量
 ps_max_total_emission | 模型上所有粒子系统之间允许的最大发射粒子量
 `ps_mesh_particle_divider` | 网格粒子惩罚结果的计算方法是：使用它们中的最高多边形网格除以此值，结果值除以粒子系统的最大粒子余量
-ps_mesh_particle_poly_limit	| 在粒子系统上网格的最大多边形数
+ps_mesh_particle_poly_limit | 在粒子系统上网格的最大多边形数
 `ps_collision_penalty_high` | 在粒子系统上的高质量碰撞惩罚参数，结果值除以粒子系统的最大粒子余量
 ps_collision_penalty_med | 在粒子系统上的中等质量碰撞惩罚参数，结果值除以粒子系统的最大粒子余量
 `ps_collision_penalty_low` | 在粒子系统上的低质量碰撞惩罚参数，结果值除以粒子系统的最大粒子余量

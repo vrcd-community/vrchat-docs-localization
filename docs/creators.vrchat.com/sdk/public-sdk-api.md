@@ -19,7 +19,7 @@ VRChat SDK 提供了一系列接口和方法，您可以使用它们来增强您
 
 但这里有一个可供参考的简短列表：
 
--  SDK 主面板的 OnEnable/OnDisable 事件
+- SDK 主面板的 OnEnable/OnDisable 事件
 - 构建开始/结束事件
 - 上传成功/错误事件
 - 构建、构建并测试 (Build & Test)，以及构建并上传 (Build & Upload) 的方法
@@ -91,7 +91,9 @@ public static async void BuildSelectedAvatar()
     }
 }
 ```
+
 ## 注意
+
 ::: warning 注意
 如果您目前使用反射来访问 SDK 内部，我们建议您尽快切换到 Public API。
 :::

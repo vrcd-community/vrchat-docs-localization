@@ -17,11 +17,13 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 [仓库链接](https://github.com/vrchat-community/template-avatar) | [下载链接](https://github.com/vrchat-community/template-avatar/archive/refs/heads/main.zip)
 
 ### World
+
 这个模板包括基础和 World SDK，准备好让您使用 Udon 程序和预制件构建和上传 World。它还包括 [ClientSim](https://clientsim.docs.vrchat.com/)，方便您在开发过程中测试您的 World。
 
 [仓库链接](https://github.com/vrchat-community/template-world) | [下载链接](https://github.com/vrchat-community/template-world/archive/refs/heads/main.zip)
 
 ### UdonSharp
+
 这个模板包括上面的 World 模板中的所有内容，再加上 [UdonSharp](https://github.com/vrchat-community/UdonSharp)，用于使用类似 C# 的语法编写您的程序。
 
 [仓库链接](https://github.com/vrchat-community/template-udonsharp) | [下载链接](https://github.com/vrchat-community/template-udonsharp/archive/refs/heads/main.zip)

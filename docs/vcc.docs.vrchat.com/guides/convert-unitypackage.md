@@ -11,6 +11,7 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 ## 需要的更改
 
 为了转换成 VPM 包，您的代码和资源需要进行一些更改。[包制作器](#package-maker-tool)工具将处理其中的大部分内容，但并非所有：
+
 1. 相关资需要手动分离到 `Editor` 和 `Runtime` 文件夹。使用 UnityEditor 类的任何内容都需要在 `Editor` 文件夹中。
 2. 具有[兼容的包清单](/vcc.docs.vrchat.com/vpm/packages#package-format)，其中包括相关 VRChat SDK 包的 `vpmDependencies`。
 3. 将任何硬编码到 “Assets/YourPackageName” 路径的路径替换为使用您的包路径 - 请参见下面的[转换资源路径](#converting-asset-paths)。
@@ -43,11 +44,12 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
    ![确认对话框](/vcc.docs.vrchat.com/images/package-maker/confirm.png)
 
 11. 确认后，迁移时将出现一个进度条。首先，工具将在您的项目的 “Packages” 目录中为您的包创建适当的文件和文件夹布局。然后它将把所有文件移动到相应的文件夹。您的 Assets 中的任何 “Editor” 文件夹中的内容，即使它是嵌套在几层下，也将被移动到您的包的顶级 Editor 文件夹中。所有其他文件将被移动到 Runtime 文件夹。
-12. 如果您在 Unity 中关闭了自动刷新，您需要在这个时候按 Ctrl-R 刷新。此时，您的包 _ 可能 _ 已经全部迁移并正常工作。您可以安全地从您的项目中移除包制作器工具和相关的 “PackageMakerWindowData.asset” 文件。
+12. 如果您在 Unity 中关闭了自动刷新，您需要在这个时候按 Ctrl-R 刷新。此时，您的包 _可能_ 已经全部迁移并正常工作。您可以安全地从您的项目中移除包制作器工具和相关的 “PackageMakerWindowData.asset” 文件。
 
 如果您的项目在这个时候有错误，您可能需要做一些[故障排除](#troubleshooting-migration-issues)工作。
 
 ## 自定义您的包
+
 一旦您的包被创建，您可以通过在项目窗口中选择 ‘package.json’ 文件来修改名称、描述等，路径为 `Packages/YourPackageName/package.json`。
 
 ![Manifest in the Inspector](/vcc.docs.vrchat.com/images/package-maker/manifest-inspector.png)
@@ -61,15 +63,19 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 ## 故障排除迁移问题
 
 ### 转换资源路径
+
 如果您的包预期从自身找到并加载文件，那么这些路径可能需要更新。例如，如果您有一个编辑器窗口加载样式表，它可能长这样：
+
 ```c#
 var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/MyPackage/Editor/MyPackageStyle.uss");
 ```
+
 这将不再起作用，因为该文件不再位于 Assets 文件夹中。有两种处理方式 - 您可以将项目转换为资源，或者将路径转换为在您的包内工作。以下是两种方法的示例。
 
 #### 转换为资源
 
 资源可以从任何文件夹加载，无需知道实际路径。Unity 会在您的 Assets 和 Packages 文件夹中的每个名为 “Resources” 的文件夹中查找。
+
 1. 在我们的新包文件夹中，创建一个名为 “Resources” 的文件夹，放在顶级的 “Editor” 文件夹下。
 2. 将文件 “MyPackageStyle.uss” 移动到这个 resources 文件夹。
 3. 从 `AssetDatabase.LoadAssetAtPath` 切换到 `Resources.Load`，如下所示：
@@ -77,15 +83,18 @@ var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/MyPackage/Edi
 ```c#
 var styleSheet = Resources.Load<StyleSheet>("MyPackageStyle");
 ```
+
 注意，上面的文件名已经去掉了扩展名 - 所以如果您的任何资源有相同的名字但扩展名不同，您需要重命名其中一个。
 
 #### 使用 GUID
 
 找出您的资源的 GUID，然后让 AssetDatabase 将 GUID 转换为 AssetPath，如下所示：
+
 ```c#
 string styleSheetPath = AssetDatabase.GUIDToAssetPath("de965059f7f21034b8c112bfc7a0dc5f");
 var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>(styleSheetPath);
 ```
 
 ### 其他问题
+
 如果您遇到了因迁移而需要进行的手动更改，[在这里提交一个 issues](https://github.com/vrchat-community/vpm-package-maker/issues)，这样我们就可以将信息添加到这个页面！

@@ -63,7 +63,7 @@ As this function does not have a type check built in, you should pair this funct
 
 ### TryGetValue with TokenType
 
-If you want to get a value from a dictionary and you don't know what type it could be, it is important to do type checks. You could do that yourself in your own code, but that can get messy. Instead, you can use the version of TryGetValue that includes a TokenType. When you do this, it indicates that you only want to retrieve the value if it is the type you expect. Otherwise, it returns false and that can be handled gracefully. 
+If you want to get a value from a dictionary and you don't know what type it could be, it is important to do type checks. You could do that yourself in your own code, but that can get messy. Instead, you can use the version of TryGetValue that includes a TokenType. When you do this, it indicates that you only want to retrieve the value if it is the type you expect. Otherwise, it returns false and that can be handled gracefully.
 
 This method is good for when you want to get a specific value from a specific location, but the data is coming from an outside source so you are not confident that the source has the right data.
 
@@ -84,7 +84,7 @@ if (dictionary.TryGetValue("key", TokenType.DataDictionary, out value)) {
 
 ### Shorthand Bracket syntax
 
-You can also set and get items from a Data Dictionary using bracket syntax such as `dictionary["key"] = "value";` in UdonSharp or `DataDictionary Get Item` node in Udon graph. This method is smaller and easier to use. However, be aware that this is not completely safe and may halt your udonbehaviour if you attempt to perform an invalid operation such as trying to get a value from a key that does not exist. 
+You can also set and get items from a Data Dictionary using bracket syntax such as `dictionary["key"] = "value";` in UdonSharp or `DataDictionary Get Item` node in Udon graph. This method is smaller and easier to use. However, be aware that this is not completely safe and may halt your udonbehaviour if you attempt to perform an invalid operation such as trying to get a value from a key that does not exist.
 
 This method is good for when you have complete control over your data, can guarantee that it exists, and that it is the type you expect. Otherwise, it is recommended to use some form of `TryGetValue`.
 
@@ -181,7 +181,7 @@ If you want to work with the values of the dictionary separately from the keys, 
 
 ## Syncing a Data Dictionary with other players over the network
 
-Data Dictionaries cannot be directly synced. However, they can be serialized to/from JSON strings using [VRCJson](/creators.vrchat.com/worlds/udon/data-containers/vrcjson). This is the current recommended method of syncing Data Dictionaries with UdonSync. 
+Data Dictionaries cannot be directly synced. However, they can be serialized to/from JSON strings using [VRCJson](/creators.vrchat.com/worlds/udon/data-containers/vrcjson). This is the current recommended method of syncing Data Dictionaries with UdonSync.
 
 One way to do this is to use OnPreSerialization and OnDeserialization to Serialize and Deserialize the json string. Using this method, you won't need to worry about the serialization within the rest of your code, and you can simply set values and forget.
 

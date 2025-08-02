@@ -16,6 +16,7 @@ There is a new parameter `InStation`, which can be used to indicate that an avat
 ## Stations used in Worlds
 
 ### SDK2 Station with SDK2 Avatar
+
 The Seated property is used to decide what kind of IK the occupant should get when playing the animation.
 
 **If Seated is checked**, the standard seated IK is applied to SDK2 avatars. This is where the hip and lower body is locked into place, and the head/hands are tracked.
@@ -23,20 +24,22 @@ The Seated property is used to decide what kind of IK the occupant should get wh
 **If Seated is unchecked**, the SDK2 avatar plays the animation with no IK applied.
 
 ### SDK2 Station with SDK3 Avatar
+
 The animation in the station will automatically have Tracking Control applied based on the Seated property of the station.
 
 Additionally, if Seated is checked, a Temporary Pose Space is applied to adjust the viewpoint.
 
 ### SDK3 Station with SDK2/SDK3 Avatar
+
 SDK3 stations support the `AvatarVersion` parameter. It is currently only set by SDK3 avatars (where `AvatarVersion` will have a value of `3`), so SDK2 avatars will remain at the default value (check for `AvatarVersion < 3`).
 
-Transitions to begin a seated animation should branch on `AvatarVersion` combined with `InStation` to begin the custom animation. 
+Transitions to begin a seated animation should branch on `AvatarVersion` combined with `InStation` to begin the custom animation.
 
 The SDK2 branch should apply a fixed seated pose (if Seated is enabled), or a full-body animation if Seated is not enabled.
 
 The SDK3 branch can choose to do any combination of animations, Tracking Control changes, and Pose Space changes that are available for SDK3 avatar. However, there will be no behind-the-scenes State Behaviors applied (which does occur in SDK2 stations).
 
-Note that since the creator decides what type of Tracking Control to apply, the Seated property on a SDK3 station does not necessarily indicate the tracking type on SDK3 avatars. 
+Note that since the creator decides what type of Tracking Control to apply, the Seated property on a SDK3 station does not necessarily indicate the tracking type on SDK3 avatars.
 
 Our example Seated controllers show this branching behavior and the proper transitions and State Behavior setup for applying a seated animation.
 
@@ -46,10 +49,12 @@ Parameter driver [State Behaviors](/creators.vrchat.com/avatars/state-behaviors)
 
 Generally speaking, using parameter drivers in station animators is not a supported use-case.
 :::
+
 ## Stations used on Avatars
+
 The default `VRCChair` prefab included in the SDK can be used on avatars to let other players "sit" on you. You can use this to make your avatar into a car, a dinner table that moves around, and more! An avatar can have up to 6 stations.
 
-When using stations on an avatar that you want to animate on or off, you need to toggle specific objects and components. 
+When using stations on an avatar that you want to animate on or off, you need to toggle specific objects and components.
 ![image](/creators.vrchat.com/images/worlds/vrc_station-0adc923-av-station-fix.png)
 **Do not animate or disable the toggle in the red box. Only animate the toggles in the green boxes.** Since this involves disabling/enabling components and objects, this **must** be done in the FX layer.
 

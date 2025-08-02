@@ -5,6 +5,7 @@ upstreamCommit: 66e5a0c1bb2b12b3de3d1341bb8de76083f7d070
 # UdonSharp
 
 # Attributes
+
 All supported attributes in UdonSharp
 
 |                                                                                 | Attribute                                                                             |                                                                                      |
@@ -15,13 +16,14 @@ All supported attributes in UdonSharp
 | [UdonSynced](#udonsynced)                                                       | [DefaultExecutionOrder](#defaultexecutionorder)                                       | [UdonBehaviourSyncMode](#udonbehavioursyncmode)                                      |
 | [RecursiveMethod](#recursivemethod)                                             | [FieldChangeCallback](#fieldchangecallback)                                           |
 
-
 ## UdonSynced
+
 `[UdonSynced]` / `[UdonSynced(UdonSyncMode)]`
 
 *See [Synced Variables](/udonsharp.docs.vrchat.com/vrchat-api#synced-variables) for variables that can be synced.*
 
 ### Example
+
 ```cs
 public class Example : UdonSharpBehaviour 
 {
@@ -35,6 +37,7 @@ public class Example : UdonSharpBehaviour
 ```
 
 ### UdonSyncMode
+
 `UdonSharp.UdonSyncMode`
 
 | Name      | Summary                         |
@@ -45,11 +48,13 @@ public class Example : UdonSharpBehaviour
 | Smooth    | *Some kind of smoothed syncing* |
 
 ## UdonBehaviourSyncMode
+
 `[UdonBehaviourSyncMode]` / `[UdonBehaviourSyncMode(BehaviourSyncMode)]`
 
 Enforces a chosen sync mode and performs additional validation on synced variables where appropriate.
 
 ### Example
+
 ```cs
 [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
 public class Example : UdonSharpBehaviour 
@@ -58,6 +63,7 @@ public class Example : UdonSharpBehaviour
 ```
 
 ### BehaviourSyncMode
+
 `UdonSharp.BehaviourSyncMode`
 
 | Name           | Summary                                                                                                                                                                                              |
@@ -73,6 +79,7 @@ public class Example : UdonSharpBehaviour
 Specifies the order that Update, LateUpdate, and FixedUpdate happen in relative to other UdonSharpBehaviours with an int. All behaviours are at 0 by default, the lower the int, the earlier their update happens. The int can be negative.
 
 ### Example
+
 ```cs
 [DefaultExecutionOrder(0)]
 public class Example : UdonSharpBehaviour 
@@ -81,11 +88,13 @@ public class Example : UdonSharpBehaviour
 ```
 
 ## RecursiveMethod
+
 `[RecursiveMethod]`
 
 Marks a method as callable recursively. This means the marked method can safely call itself on the same behaviour without issues. This does have a performance overhead, so only use it on methods that you know may be called recursively.
 
 ### Example
+
 ```cs
 [RecursiveMethod]
 int Factorial(int input)
@@ -98,11 +107,13 @@ int Factorial(int input)
 ```
 
 ## FieldChangeCallback
+
 `[FieldChangeCallback(string)]`
 
 This is an attribute that you may put on a field in order to receive Udon variable change events. This attribute takes a string parameter that points to a property name on the behaviour. When this attribute is set on a field, any modification to the field via network sync or SetProgramVariable will call the target property's setter instead of setting the field. The property is usually expected to set the field in this case.
 
 ### Example
+
 ```cs
 using UdonSharp;
 using UnityEngine;

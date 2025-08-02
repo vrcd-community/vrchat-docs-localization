@@ -7,16 +7,19 @@ upstreamCommit: 66e5a0c1bb2b12b3de3d1341bb8de76083f7d070
 You will often find yourself with programs that can only be debugged in-game. In order to catch these errors and make them easier to understand, U# includes a runtime exception watcher that will look for exceptions from VRChat's output log. The watcher will then output the script and line that threw that exception to your editor's log.
 
 ### Setup instructions
+
 #### Editor setup
-1. In your editor open the project settings menu 
+
+1. In your editor open the project settings menu
 
 ![Project Settings](/udonsharp.docs.vrchat.com/images/red-1.png)
 
-2. Enable `Listen for client exceptions` in the Udon Sharp settings 
+2. Enable `Listen for client exceptions` in the Udon Sharp settings
 
 ![Listen for Client Exceptions](/udonsharp.docs.vrchat.com/images/red-2.png)
 
 #### VRChat client setup
+
 1. Right-click on VRChat in your Steam library and click `Properties...`
 
 ![Steam VRChat Properties](/udonsharp.docs.vrchat.com/images/red-3.png)
@@ -28,7 +31,6 @@ You will often find yourself with programs that can only be debugged in-game. In
 3. Add the launch argument `--enable-udon-debug-logging` to the launch options and click OK
 
 ![Steam Launch Args](/udonsharp.docs.vrchat.com/images/red-5.png)
-
 
 ***
 

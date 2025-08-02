@@ -19,7 +19,9 @@ upstreamCommit: 6f545f4364a91073763e7f0bdf20784e2fb0e94d
 ![Adding a scene descriptor automatically via the VRChat SDK build panel.](/creators.vrchat.com/images/worlds/build-panel-add-vrc-scene-descriptor.png)
 
 1. Click **VRChat SDK** > **Show Control Panel**.
-	- If you do not see this menu at the top of your Unity window, your SDK may not be installed correctly. Try clicking **Assets** > **Reimport All**, and check our [SDK troubleshooting guide](/creators.vrchat.com/sdk/sdk-troubleshooting).
+
+- If you do not see this menu at the top of your Unity window, your SDK may not be installed correctly. Try clicking **Assets** > **Reimport All**, and check our [SDK troubleshooting guide](/creators.vrchat.com/sdk/sdk-troubleshooting).
+
 2. In the **Authentication**, log into your VRChat account.
 3. Switch to the **Builder** tab and click **Add a VRCSceneDescriptor**.
 
@@ -68,9 +70,9 @@ Click  `VRChat SDK > Show Control Panel`. Before you can upload your world, you 
 
 If you uploaded your VRChat world with an old VRChast SDK, without 'recommended capacity', player capacity works differently:
 
- - 'Recommended capacity' will be the same as your player capacity value
- - 'Player capacity' will be **twice** your player capacity value
- 
+- 'Recommended capacity' will be the same as your player capacity value
+- 'Player capacity' will be **twice** your player capacity value
+
  For example: If you set 'Player capacity' to 10 and did not set 'Recommended capacity', your _actual_ 'Player capacity' will be 20. 'Player capacity' was sometimes referred to as the 'soft cap' for this reason.
 :::
 

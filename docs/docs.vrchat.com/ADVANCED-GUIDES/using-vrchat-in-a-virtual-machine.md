@@ -22,7 +22,6 @@
 
 使用命令 `virsh edit VM_NAME`，用您喜欢的编辑器打开虚拟机的 XML 配置。然后只需在 `features > hyperv` 下添加以下一行即可：
 
-
 ```xml
 <vendor_id state='on' value='0123756792CD'/>
 ```
@@ -91,7 +90,9 @@ dmidecode --type system`
 ```xml
 <os><smbios mode="sysinfo"/> <!
 ```
+
 ### QEMU
+
 如果您使用 QEMU 命令行启动虚拟机，只需在 `-cpu` 标志中添加 vendor ID。比如像下面这样：
 
 ```

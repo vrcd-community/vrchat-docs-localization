@@ -10,13 +10,13 @@ You can play back MIDI data along with an audio track to control anything you wa
 ## Assets: MidiFile and AudioClip
 
 Files with the extension .mid are processed as MIDI assets. To get started with your own MIDI and Audio files:
+
 1. Drag and drop them somewhere into your Assets folder. The MIDI file must have the extension .mid, the audio file can be of any [type supported by Unity](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html) (.aif, .wav, .mp3, .ogg).
 2. Select the MIDI file and set its AudioClip to the matching audio file.
 
 ![image](/creators.vrchat.com/images/worlds/midi-playback-214464414-32af9c18-c003-49ed-bd12-dd431367db56.png)
 
 3. It's imperative that the BPM for your MIDI file is set correctly. If the data seems like it doesn't match the audio, this is likely the issue. You can override the BPM here by toggling on "Override Bpm" and supplying the right value. Even better would be to edit your MIDI file and add the correct BPM.
-
 
 ## Component: VRCMidiPlayer
 
@@ -57,7 +57,7 @@ This is the brains of the operation. It works similarly to an Audio Source but u
 
 ## Example: MidiPlaybackScene
 
-https://user-images.githubusercontent.com/737888/214626843-53a4c069-ea69-423a-926d-e2ce024c9819.mp4
+<https://user-images.githubusercontent.com/737888/214626843-53a4c069-ea69-423a-926d-e2ce024c9819.mp4>
 
 The SDK includes a simple MIDI playback example. You can load it from the menu bar under VRChat SDK > Samples > MidiPlayback.
 
@@ -91,7 +91,7 @@ If you load your own MIDI data file, you can check Unity's console to see the ch
 
 If you want to use a song with more than 4 channels, you can duplicate the grids and add them to the `grids` variable on the program. Make sure to add more `channels` as well!
 
-#### The Whole Program, Explained.
+#### The Whole Program, Explained
 
 Here's a breakdown of what happens in the MidiGrid Program.
 
@@ -106,8 +106,7 @@ It also waits 1 second after loading and then calls `Play()` on the VRCMidiPlaye
 
 ![image](/creators.vrchat.com/images/worlds/midi-playback-214465984-fea32000-04c3-42f3-bf7f-cef471d2b46f.png)
 
-
-When it receives a `Midi Note On` event, it will loop through each entry in the `channels` array and check if the incoming note's channel matches one of the entries. If a match is found, that number is used as the `index` for the `grids` array to find the matching grid. The incoming note is run through `int.Remainder()` to find its index in the octave - a C will be 0, a C# will be 1, etc. This index is used to find the right child of the grid, and then set `enabled` on the 'Image' to `true`. Finally, the note's channel and note number are logged to the console. 
+When it receives a `Midi Note On` event, it will loop through each entry in the `channels` array and check if the incoming note's channel matches one of the entries. If a match is found, that number is used as the `index` for the `grids` array to find the matching grid. The incoming note is run through `int.Remainder()` to find its index in the octave - a C will be 0, a C# will be 1, etc. This index is used to find the right child of the grid, and then set `enabled` on the 'Image' to `true`. Finally, the note's channel and note number are logged to the console.
 
 When the script receives a `Midi Note Off` event, it goes through a similar process as above. To hide the 'Image' component again, it sets `enabled` to `false`.
 

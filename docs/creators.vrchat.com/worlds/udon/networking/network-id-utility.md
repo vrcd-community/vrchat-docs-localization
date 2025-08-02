@@ -3,7 +3,7 @@ title: "Network ID Utility"
 upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 ---
 
-A network ID is the identifier that is used to determine which object is which when it comes to networking. In most cases, you don’t need to worry about this, but it can come up when working with cross-platform worlds where players are technically loading two different versions of your world. 
+A network ID is the identifier that is used to determine which object is which when it comes to networking. In most cases, you don’t need to worry about this, but it can come up when working with cross-platform worlds where players are technically loading two different versions of your world.
 
 Network IDs are the link between those different versions, to make sure that everybody is seeing the same thing and that the data is being transmitted to the correct objects.
 
@@ -13,7 +13,7 @@ To deal with these potential issues and to make sure that your different scenes 
 
 # Network ID Import and Export Utility
 
-This utility allows you to save and transfer network IDs between scenes or projects. It can be found in the Unity Editor, under `VRChat SDK/Utilities/Network ID Import and Export Utility`. 
+This utility allows you to save and transfer network IDs between scenes or projects. It can be found in the Unity Editor, under `VRChat SDK/Utilities/Network ID Import and Export Utility`.
 :::note
 
 You should only need to use this utility if you are developing a cross-platform world and your different versions are in different scenes or projects.
@@ -39,7 +39,7 @@ There are several conflict resolution tools within this utility.
 Here is an example of an object that exists in the file but does not exist in the scene. The file says that there is a network ID at this path, but it can’t find an object with that path. At this point, you can choose to either ignore it or specify a different object. If you know for sure that this is an object which doesn’t need to exist in this scene, then you can safely ignore it. However, if it is an object that should exist in your scene but simply has a different name, then you can select it. Once you’ve resolved this conflict, it will move down to the section where you can accept the network ID.
 ![network-id-utility-c5175f8-image2.png](/creators.vrchat.com/images/worlds/network-id-utility-c5175f8-image2.png)
 
-Here's another example where an object says it has the network ID of 25, but the file says that a different path should have 25. 
+Here's another example where an object says it has the network ID of 25, but the file says that a different path should have 25.
 
 This, and many other odd situations, can only happen if the scene has existing network IDs before you tried to import a new file on top. If you are copying IDs between scenes, then most likely you will want to clear IDs before importing so that you don’t get this issue. However, these options do exist in case you need to do something very specific like attempt to repair a scene without breaking some existing network IDs.
 

@@ -106,20 +106,20 @@
 
 ```json
 {
-	"betas": [
-		"particle_system_limiter"
-	],
-	"ps_max_particles": 50000,
-	"ps_max_systems": 200,
-	"ps_max_emission": 5000,
-	"ps_max_total_emission": 40000,
-	"ps_mesh_particle_divider": 60,
-	"ps_mesh_particle_poly_limit": 50000,
-	"ps_collision_penalty_high": 50,
-	"ps_collision_penalty_med": 30,
-	"ps_collision_penalty_low": 10,
-	"ps_trails_penalty": 10,
-	"dynamic_bone_max_affected_transform_count" : 0,
-	"dynamic_bone_max_collider_check_count" : 0
+ "betas": [
+  "particle_system_limiter"
+ ],
+ "ps_max_particles": 50000,
+ "ps_max_systems": 200,
+ "ps_max_emission": 5000,
+ "ps_max_total_emission": 40000,
+ "ps_mesh_particle_divider": 60,
+ "ps_mesh_particle_poly_limit": 50000,
+ "ps_collision_penalty_high": 50,
+ "ps_collision_penalty_med": 30,
+ "ps_collision_penalty_low": 10,
+ "ps_trails_penalty": 10,
+ "dynamic_bone_max_affected_transform_count" : 0,
+ "dynamic_bone_max_collider_check_count" : 0
 }
 ```

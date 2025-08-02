@@ -15,8 +15,10 @@ Manual synchronization is intended for data that changes infrequently and where 
 **Users should not expect high speed updates with manual serialization.**
 
 If you have multiple UdonBehaviours on an object, the sync method will default to the most restrictive settings - a Manual UdonBehaviour and a Continuous one on the same object will both act as manual.
+
 # Data and Specs
-Note: all specs subject to change, they will be updated here if they do. 
+
+Note: all specs subject to change, they will be updated here if they do.
 
 You can see some specific information about the data used per-object in Debug View 6.
 

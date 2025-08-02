@@ -11,5 +11,6 @@
   },
   "eslint.validate": [
     "javascript"
-  ]
+  ],
+  "markdown.extension.toc.updateOnSave": false
 }

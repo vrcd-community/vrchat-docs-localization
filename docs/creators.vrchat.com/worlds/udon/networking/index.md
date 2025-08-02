@@ -12,6 +12,7 @@ upstreamCommit: 93b4a5527ef7488f4591dfc27f78bcf30349d680
 - [网络组件 (Network Components)](https://creators.vrchat.com/worlds/udon/networking/network-components)
 - [网络系统限制和窍门 (Network Specs and Tips)](https://creators.vrchat.com/worlds/udon/networking/)
 :::
+
 ## 总览：Udon 的网络系统是怎么工作的
 
 ::: details Youtube 源视频
@@ -80,6 +81,7 @@ Udon Graph 里的变量 (Variables) 设置
 事件只会被触发一次。不像变量 (Variable) 只能被所有者更新，所有人都可以触发一个对象上的事件。您可以选择将事件发送给所有人或者只发送给对象的所有者。这可以通过在触发事件时设置 “target：All” 或者 “target：Owner” 来实现。
 
 ![](/creators.vrchat.com/images/worlds/udon-networking-c764485-scne.png)
+
 #### 例子：泡泡枪
 
 ![](/creators.vrchat.com/images/worlds/udon-networking-33702b1-bubble-gun-shooting.png)
@@ -97,6 +99,7 @@ Udon Graph 里的变量 (Variables) 设置
 在已经有同步发生后加入世界的玩家会发生什么？简单来说：变量会被更新同步，事件则不会。当有人加入您的世界时，OnDeserialization 事件会使用最新的数据在所有可以被网络同步的对象都触发一次，并会基于更新的数据执行您编写的用于更新物体的逻辑。在玩家加入前的事件则不会再发送给玩家，但是也没有理由在有人按下扳机的一个小时后继续发射气泡粒子。
 
 #### 摘要
+
 同步是通过变量和事件来完成的。
 
 对于变量来说：变量的所有者会更新一个可被网络同步对象上的变量并发送其数据给所有可以反序列化它的其他玩家。所有加入世界的玩家都会获取到最新的数据来进行反序列化。
@@ -132,6 +135,7 @@ Udon Graph 里的变量 (Variables) 设置
 使用自定义网络事件来触发当前实例内所有玩家或对象所有者的事件，事件一定会被触发，但是会有一定的延迟和开销。在事件发送后加入的玩家不会收到事件。[使用自定义事件](/creators.vrchat.com/worlds/udon/networking/#使用自定义事件)小节来了解更多信息。
 
 ::: info 译者注：简单来说就是
+
 - 可靠性：自定义网络事件 (Custom Network Events)> 手动同步变量 (Manual Variable)> 连续同步变量 (Continuous Variable)
 - 及时性：连续同步变量 (Continuous Variable)> 手动同步变量 (Manual Variable)> 自定义网络事件 (Custom Network Events)
 :::
@@ -169,23 +173,31 @@ Udon Graph 里的变量 (Variables) 设置
 5. 如果请求被接受了，`OnOwnershipTransferred(VRCPlayerApi player)` 会在**原始所有者**和**其他玩家**上被调用。
 
 ![](/creators.vrchat.com/images/worlds/udon-networking-813f99e-OnOwnershipRequest_Activity.svg)
+
 ## 使用变量 (Variables)
+
 ::: info 使用变量来同步数据可以分为三步
+
 1. 创建一个变量
 2. 在所有者那里更新这个成量
 3. 对从所有者那里接收到的值进行处理
 :::
 
 ### 创建变量
+
 1. 按下变量 (Variables) 窗口的 + 按钮
 2. 选择您的变量的类型
 3. 重命名您的变量 (虽然说是可选项，但是强烈建议这么做)
 4. 点击变量名旁边的箭头打开更多选项，打开 “synced (同步)”。(默认值为 “none” 是正常现象，只不过代表这个变量不会自动同步)(译者注：原文是 this just means the value is not automaticallysmoothed out，我也不确定具体怎么翻译)
+
 ### 在所有者侧更新变量
+
 1. 将您刚刚创建的变量拖进去您的蓝图里 (译者注：原文 Graph，此处借用 UE 的名词，因为我不知道怎么翻译比较好。这玩意就是您用 Udon Graph 里放和连接各种节点的地方)
 2. 将任意事件流程 (Flow) 连接到此节点上的流程端口 (Flow Port)，并将一个新值 (Value) 连接到数值端口 (Value Port)。
 3. 如果此 UdonBehaviour 使用的是持续同步 (Continuous Sync)(在检查器中的 UdonBehaviour 上选择)，那么更新值的工作就完成了。如果使用的是手动同步，则需要添加一个 “UdonBehaviourRequestSerialization” 节点，并将设置变量流程端口 (Variable Flow Port) 的输出连接到该节点的流程输入端口 (Flow Input port)。该节点上的 “实例 (instance)” 值端口 (Value Port) 可以留空，它将默认为当前的 UdonBehaviour，这正是我们想要的。
+
 ### 对从所有者那里接收到的值进行处理
+
 1. 在同一个蓝图添加一个 “OnDeserialization” 节点。
 2. 在不按住 Ctrl 键的情况下将变量 (Variable) 拖放到蓝图上，创建一个 “Get Variable” 节点。
 3. 使用来自 OnDeserialization 节点的流程 (Flow) 和来自 Get Variable 节点的值 (Value)，用这个新值更新另一个节点。
@@ -205,6 +217,7 @@ Udon Graph 里的变量 (Variables) 设置
 ## 使用自定义事件
 
 ::: info 使用一个事件来触发更改大致可以分为两步
+
 1. 添加一个自定义事件节点
 2. 使用一个 SendCustomNetworkEvent 节点来在目标上 (Target) 触发这个事件
 :::
@@ -237,6 +250,7 @@ SendCustomNetworkEvent 将作为编辑器中的 “SendCustomEvent” 节点运�
 
 ::: danger 已知问题
 现有 SDK 存在这些问题：
-- 玩家加入实例时 (译者注：就是触发 OnPlayerJoined 事件的时候) isInstanceOwner 返回 true (感谢 FSP 的反馈)：https://feedback.vrchat.com/udon-networking-update/p/unu-v5-isinstanceowner-returns-true-when-spawning
+
+- 玩家加入实例时 (译者注：就是触发 OnPlayerJoined 事件的时候) isInstanceOwner 返回 true (感谢 FSP 的反馈)：<https://feedback.vrchat.com/udon-networking-update/p/unu-v5-isinstanceowner-returns-true-when-spawning>
 - 在网络更新 (OnDeserialization) 期间传送玩家不会传送玩家的模型 (Avatar)。目前要解决这个问题，可使用 SendCustomEventDelayedFrames 将传送延迟 1 帧。
 :::

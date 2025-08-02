@@ -24,12 +24,12 @@ To learn how to write your own Udon script for avatar scaling, read our [avatar 
 ## Examples
 
 - I want players to use avatar scaling freely.
-	- You don't need to change any settings.
+  - You don't need to change any settings.
 - I don't want players to use avatar scaling.
-	- Turn on "disableAvatarScaling."
+  - Turn on "disableAvatarScaling."
 - I want players to use a specific avatar height.
-	- Set "minimumHeight" and "maximumHeight" how you prefer.
-	- If you want to prevent very tall or very short avatars, enable "alwaysEnforceHeight".
+  - Set "minimumHeight" and "maximumHeight" how you prefer.
+  - If you want to prevent very tall or very short avatars, enable "alwaysEnforceHeight".
 
 Here's what the Udon Graph for the example script looks like:
 

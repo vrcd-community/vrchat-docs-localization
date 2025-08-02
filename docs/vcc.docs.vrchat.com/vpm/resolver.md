@@ -7,11 +7,13 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 ![包解析器窗口](/vcc.docs.vrchat.com/images/resolver.png)
 
 ## 概述
+
 包解析器是一个 Unity 编辑器工具，可以在没有 VCC 的情况下下载并安装 VPM 项目所需的包。
 
 解析器在底层使用 [VPM 库](/vcc.docs.vrchat.com/guides/glossary#vpm) - 这是驱动 [VCC](/vcc.docs.vrchat.com/guides/glossary#vcc) 的同一库，因此它以完全相同的方式下载包并解析依赖项。
 
 ## 获取方式
+
 它被添加到每个 VPM 兼容的项目中，无论是在项目创建还是迁移期间。它被特别排除在您项目的 Packages 文件夹中的。gitignore 文件之外，以确保它存在于您的项目中，帮助恢复它。在 VCC 中，它没有 ‘remove’ 按钮，因为它不应该从您的项目中移除。但是，如果它被移除了 - 您可以使用 VCC 轻松地将其添加回来。
 
 ## 如何使用

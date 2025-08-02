@@ -6,7 +6,7 @@ upstreamCommit: b8d616fc4dd5ac66e2dc43182e25ae4dee27ff63
 
 # Unity Layers in VRChat
 
-[Layers](https://docs.unity3d.com/2019.4/Documentation/Manual/Layers.html) are used in Unity to organize your Game Objects, determine [collisions ](https://docs.unity3d.com/2019.4/Documentation/Manual/LayerBasedCollision.html) and [Raycasts](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Physics.Raycast.html) between Game Objects, selectively [render](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Camera-cullingMask.html) parts of the scene, and more.
+[Layers](https://docs.unity3d.com/2019.4/Documentation/Manual/Layers.html) are used in Unity to organize your Game Objects, determine [collisions](https://docs.unity3d.com/2019.4/Documentation/Manual/LayerBasedCollision.html) and [Raycasts](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Physics.Raycast.html) between Game Objects, selectively [render](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Camera-cullingMask.html) parts of the scene, and more.
 
 **You can freely use most Layers in your VRChat world.** Some Layers are shared and used by Unity and VRChat.
 
@@ -45,11 +45,12 @@ When you create a Unity project with VRChat's Worlds SDK, your project will auto
 ## Interaction Block and Passthrough on VRChat Layers
 
 Interaction (grabbing an item from a distance, toggling a UI element with the laser) is blocked by most VRChat layers. The following layers are transparent to interaction and allow you to interact through them:
- - UiMenu
- - UI
- - PlayerLocal
- - MirrorReflection
 
- ## Interaction Passthrough for User Layers
+- UiMenu
+- UI
+- PlayerLocal
+- MirrorReflection
+
+## Interaction Passthrough for User Layers
 
 Interaction through User layers is blocked by default. Use the "Interact Passthrough" mask to define layers that will be transparent to interaction (allow interactions to pass through). Note that collision test rays originate differently from Desktop/Mobile players (inside the player capsule) versus VR players (from the user's tracked hand). This means that VR players can penetrate colliders with their hand even when the player collider is blocked. Those same colliders will therefore not block interaction from the VR player, since the hand has penetrated.

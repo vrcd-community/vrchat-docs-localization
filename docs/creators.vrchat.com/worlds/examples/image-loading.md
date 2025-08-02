@@ -30,7 +30,7 @@ This repo publishes to [GitHub Pages](https://pages.github.com/) for free hostin
 
 1. [Fork the example repo](https://github.com/vrchat-community/examples-image-loading/fork) to your own GitHub account.
 
-2. Edit the images and captions in the "Web" directory. You can ignore or delete the `index.html` page, it's just there as an example to test the images and captions in a browser. You can keep the images named 1.jpg, etc to make it easier to use the prefab, or rename them and update the prefab URLs. 
+2. Edit the images and captions in the "Web" directory. You can ignore or delete the `index.html` page, it's just there as an example to test the images and captions in a browser. You can keep the images named 1.jpg, etc to make it easier to use the prefab, or rename them and update the prefab URLs.
 
 ::: tip
 When the files in the "Web" directory are edited, the website is re-published. As long as the filenames stay the same (images are 1.jpg, 2.jpg, etc.), the URLs in the world will point to the newly published files. Republishing happens automatically through [an included GitHub Action](https://github.com/vrchat-community/examples-image-loading/actions/workflows/static.yml).
@@ -59,18 +59,18 @@ If you're using GitHub to host the images and captions, make sure you've committ
 
 ## Important GameObjects
 
-The most important objects to inspect in the scene are [TheFrame](#theframe) and [SlideshowFrame](#slideshowframe). 
-
+The most important objects to inspect in the scene are [TheFrame](#theframe) and [SlideshowFrame](#slideshowframe).
 
 ![image](https://user-images.githubusercontent.com/737888/219288603-2fc2753b-27a1-4f61-ad22-a51df527907d.png)
 
 ### TheFrame
 
 TheFrame is a GameObject with a couple of important pieces:
-* **SlideshowFrame**: an `UdonBehaviour` which loads the images and captions from the web server.
-* **Mesh**: Is the black frame around the picture.
-* **Picture**: Is a `Mesh` which renders the downloaded textures.
-* **UI**: Is a World-Space `Canvas` which renders the captions.
+
+- **SlideshowFrame**: an `UdonBehaviour` which loads the images and captions from the web server.
+- **Mesh**: Is the black frame around the picture.
+- **Picture**: Is a `Mesh` which renders the downloaded textures.
+- **UI**: Is a World-Space `Canvas` which renders the captions.
 
 ### SlideshowFrame
 
@@ -79,11 +79,12 @@ The **SlideshowFrame** `UdonBehaviour` has all of the logic to download the imag
 ![image](https://user-images.githubusercontent.com/737888/219288738-ace09705-18d4-4f8e-bb45-792ff662bf7b.png)
 
 It has these public variables:
-* **Image Urls**: An `Array` of all the `VRCUrls` for the images to download.
-* **String Url**: Is a single `VRCUrl` where the caption text can be downloaded.
-* **Renderer**: This target `Renderer's` **sharedMaterial** will have its texture set from the downloaded textures.
-* **Field**: This `UI Element's` **text** property will be set from the downloaded caption for the matching texture.
-* **Slide Duration Seconds**: How long to show each image.
+
+- **Image Urls**: An `Array` of all the `VRCUrls` for the images to download.
+- **String Url**: Is a single `VRCUrl` where the caption text can be downloaded.
+- **Renderer**: This target `Renderer's` **sharedMaterial** will have its texture set from the downloaded textures.
+- **Field**: This `UI Element's` **text** property will be set from the downloaded caption for the matching texture.
+- **Slide Duration Seconds**: How long to show each image.
 
 The basic logic flow of the script is this:
 
@@ -97,7 +98,7 @@ The SDK includes a script to easily download images:
 2. Add an UdonBehaviour component.
 3. Select `ImageDownload` as the program source.
 4. Select a Material to apply the downloaded texture to
-5. (Optional) Customize `TextureInfo` to change the downloaded texture's settings. 
+5. (Optional) Customize `TextureInfo` to change the downloaded texture's settings.
 
 ### Create your own script for `VRCImageDownloader`
 
@@ -108,7 +109,7 @@ You can use `VRCImageDownloader` in your own Udon Graph scripts.
 3. Execute the `DownloadImage` function on the `VRCImageDownloader` instance.
 4. (Optional) Wait for the `OnImageLoadSuccess` or `OnImageLoadError` event to execute.
 
-#### The basic logic flow of the script is:
+#### The basic logic flow of the script is
 
 1. On Start, construct a `VRCImageDownloader` to reuse for downloading all the images. It's important to keep this around so the textures will persist.
 
@@ -163,7 +164,7 @@ View the full source code for [SlideshowFrame.cs on GitHub](https://github.com/v
 
 ## Known Issues
 
-* The first image doesn't have its caption loaded quickly enough, so it doesn't show until the first loop around.
+- The first image doesn't have its caption loaded quickly enough, so it doesn't show until the first loop around.
 
 ::: tip Udon
 

@@ -18,7 +18,7 @@
 
 ## 支持的输入
 
-<details> 
+<details>
 
 <summary>方向轴</summary>
 
@@ -42,7 +42,7 @@
 
 </details>
 
-<details> 
+<details>
 
 <summary>按钮</summary>
 
@@ -88,7 +88,7 @@
 
 </details>
 
-<details> 
+<details>
 
 <summary>聊天框</summary>
 

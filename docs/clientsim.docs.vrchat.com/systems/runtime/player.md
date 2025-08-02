@@ -25,7 +25,7 @@ The PlayerController now only controls the movement of the player. In CyanEmu, t
 
 ## PlayerStationManager
 
-The PlayerStationManager manages how players interact with stations. It stores the current station the player is in, as well if the player is locked to the station. While locked to a station, at the end of the frame, for all Update, LateUpdate, and FixedUpdate methods, the [PlayerController’s](#playercontroller) position is updated to the station’s. This happens at the end of the frame to ensure that any other script modifying the station’s position happens first. 
+The PlayerStationManager manages how players interact with stations. It stores the current station the player is in, as well if the player is locked to the station. While locked to a station, at the end of the frame, for all Update, LateUpdate, and FixedUpdate methods, the [PlayerController’s](#playercontroller) position is updated to the station’s. This happens at the end of the frame to ensure that any other script modifying the station’s position happens first.
 
 ## InteractManager
 
@@ -36,12 +36,15 @@ The InteractManager is responsible for determining if a given GameObject can be 
 ClientSim interact detection is handled through the Raycasters. This system will search for Interactables based on a provided ray used in Physics.Raycast. The [InteractiveLayerProvider](interactive-layer-provider.md) is used to know what layers to consider when raycasting. All the hit objects are then filtered based on the components found. Objects with UIShape are always prioritized first. The InteractManager is used to determine the components on the object which can be interacted with. For each raycast, a RaycastResult is returned. This contains information about the ray, the object hit, and the type of interactable, if there is one.
 
 ### RayProvider
+
 The Raycaster uses a RayProvider to know what direction and origin to raycast. RayProviders are a generic way to supply the ray without knowing exact detail. ClientSim implements two RayProviders:
 
 #### CameraRayProvider
+
 Given a camera and the current mouse position, create a ray that goes through the mouse from the camera. This is the RayProvider used when TrackingProvider is set to not VR.
 
 #### TransformRayProvider
+
 Given a transform, create a Ray based on the position of the transform and the forward direction. This is used to raycast from the hands when the TrackingProvider is set to VR.
 
 ## PlayerRaycaster
@@ -50,7 +53,7 @@ The PlayerRaycaster is responsible for searching the world for interacts and sen
 
 ## PlayerHand
 
-The PlayerHand system is responsible for managing Pickupable objects. The [PlayerRaycaster](#playerraycaster) will set the current hovered pickup. Then the PlayerHand will listen for the Grab Input Events on when to pickup the hovered Pickupable. PlayerHand will also listen to Use and Drop events to perform actions on the currently held pickup. If the pickup is kinematic, then the position of the pickup will be directly set every frame to match the PlayerHand’s rigidbody transform. If the pickup is non kinematic, it will be attached to the PlayerHand’s rigidbody using a fixed joint. When holding a pickup in the right hand, the pickup can be manipulated using the different Manipulate bindings. 
+The PlayerHand system is responsible for managing Pickupable objects. The [PlayerRaycaster](#playerraycaster) will set the current hovered pickup. Then the PlayerHand will listen for the Grab Input Events on when to pickup the hovered Pickupable. PlayerHand will also listen to Use and Drop events to perform actions on the currently held pickup. If the pickup is kinematic, then the position of the pickup will be directly set every frame to match the PlayerHand’s rigidbody transform. If the pickup is non kinematic, it will be attached to the PlayerHand’s rigidbody using a fixed joint. When holding a pickup in the right hand, the pickup can be manipulated using the different Manipulate bindings.
 
 ## PlayerAvatarManager
 

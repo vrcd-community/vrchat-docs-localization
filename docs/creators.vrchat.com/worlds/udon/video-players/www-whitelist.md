@@ -9,12 +9,12 @@ upstreamCommit: 04350c1ea1ca7583ee9e58393b3727cae47cc552
 
 ::: info
 
-VRChat on Quest can play videos from direct links to video files. These URLs typically end with a filename ending in a supported video type like http://something.com/video.mp4 or http://test.com/cats.webm. If you visit the link and see a whole website around a video, that link will probably not play on Android / Quest because the application that VRChat uses to resolve these links into videos does not run on Android.  Creators will need to move the video to a host that supports direct links, or find another way to work around this issue.
+VRChat on Quest can play videos from direct links to video files. These URLs typically end with a filename ending in a supported video type like <http://something.com/video.mp4> or <http://test.com/cats.webm>. If you visit the link and see a whole website around a video, that link will probably not play on Android / Quest because the application that VRChat uses to resolve these links into videos does not run on Android.  Creators will need to move the video to a host that supports direct links, or find another way to work around this issue.
 
 Some workarounds exist for advanced users. VRChat has not reviewed these methods, does not condone them, and cannot guarantee their continued operation, but they have been recommended by suggested edits to our documentation.
 
-* [Streamlink](https://streamlink.github.io)
-* [ArchiTechAnon's "Understanding URLs in VRChat" post](https://ask.vrchat.com/t/protv-by-architechanon-usage-guides-and-walkthroughs/7029/11)"
+- [Streamlink](https://streamlink.github.io)
+- [ArchiTechAnon's "Understanding URLs in VRChat" post](https://ask.vrchat.com/t/protv-by-architechanon-usage-guides-and-walkthroughs/7029/11)"
 
 Future updates may improve this functionality.
 
@@ -32,6 +32,7 @@ The example video player in the SDK will not handle cases in which the master ha
 :::
 
 ## Allowlisted Services
+
 The services listed below are inherently trusted and are permitted with our default URL allowlist. The resource being accessed (as in, the URL you enter into/use in the video player) must reside in the service domain listed next to the service name. This means that short-links may not work!
 
 ::: info

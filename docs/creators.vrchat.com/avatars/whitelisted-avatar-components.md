@@ -16,9 +16,10 @@ upstreamCommit: 4e923502a3a87b7de290b3cf43347a47b9c3c30b
 
 VRChat 的 Quest 版本在此列表的基础上减少了一些组件，这些组件因故无法在 Quest 版本中使用。您可在[这里](/creators.vrchat.com/platforms/android/quest-content-limitations#组件)查看更多信息。
 :::
+
 ## VRChat
 
-- VRCAvatarDescriptor 
+- VRCAvatarDescriptor
 - PipelineManager
 - [VRCStation](/creators.vrchat.com/worlds/components/vrc_station)
 - [VRCPhysBone](/creators.vrchat.com/avatars/avatar-dynamics/physbones#vrcphysbone)
@@ -66,8 +67,8 @@ VRChat 的 Quest 版本在此列表的基础上减少了一些组件，这些组
 
  <!--对于使用者及其好友，加载时相机组件被禁用。使用动画来启用该组件。对于使用者的非好友来说，加载时相机组件将被完全删除。--><!--这句话有点没必要，先注释掉-->
 
-
 ## [Root Motion（FinalIK）](http://www.root-motion.com/finalikdox/html/index.html)
+
 ::: warning FinalIK组件修改
 
 VRChat 对 FinalIK 的实现进行了高度修改。因此，这些组件的功能可能和源文档中描述的不同。
@@ -76,6 +77,7 @@ VRChat 对 FinalIK 的实现进行了高度修改。因此，这些组件的功�
 
 如果您发现错误，请[告诉我们](https://feedback.vrchat.com)。
 :::
+
 - [Aim IK](http://www.root-motion.com/finalikdox/html/page1.html)
 - [Biped IK](http://www.root-motion.com/finalikdox/html/page4.html)
 - [CCDIK](http://www.root-motion.com/finalikdox/html/page5.html)
@@ -91,6 +93,7 @@ VRChat 对 FinalIK 的实现进行了高度修改。因此，这些组件的功�
  在人形模型上使用此脚本将导致模型无法正常使用。
 
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
+
 ::: danger Dynamic Bone 已弃用
 
 我们已不再官方支持 Dynamic Bone。您应该转而使用 [PhysBones](/creators.vrchat.com/avatars/avatar-dynamics/physbones)。

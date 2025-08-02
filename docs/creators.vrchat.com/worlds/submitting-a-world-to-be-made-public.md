@@ -15,7 +15,7 @@ Publishing your world will make it immediately available to all users that opt-i
 
 ## Important Info
 
-- **You can only submit one world per user per seven days to Community Labs.** 
+- **You can only submit one world per user per seven days to Community Labs.**
 - **You can update your world as often as you like.** Just push an update! It won't change the status of your world.
 - **If your world is already Public, you don't need to re-submit the world if you update it.** It should update automatically and you will not lose your Public status.
 - If your world or any content in the world (videos, avatars, images) violates the VRChat Terms of Service or the Community Guidelines, your ability to submit worlds to Community Labs will be suspended for a period of time. Repeated suspensions may result in in-app moderation action.
@@ -29,14 +29,14 @@ Publishing your world will make it immediately available to all users that opt-i
   Avoid sharing very poor avatars. This applies to all worlds, not just avatar worlds. If avatars in your world have severe performance issues, your world may be removed from Public or Community Labs.
 - **If you upload a world with placeholder avatars and replace them with TOS-violating avatars after being made public, you will be suspended from submitting worlds for a month. You may be moderated in-app, depending on the offense severity.**
 - **If you have an avatar world, none of your avatars may violate TOS/Community Guidelines.**
-- Look into using [Cat's Blender Plugin](https://github.com/absolute-quantum/cats-blender-plugin) and Shotariya's Texture Combiner addons for Blender to optimize your models. 
+- Look into using [Cat's Blender Plugin](https://github.com/absolute-quantum/cats-blender-plugin) and Shotariya's Texture Combiner addons for Blender to optimize your models.
 
 ## Performance Tips
 
 - **Aim for at least 45 FPS with a single VR user at the spawn.** If you do not have VR, have a friend test the world for you. Having a badly performing world will mean people don't spend time in your world, and you probably won't make it out of Labs very easily.
 - **Don't use shaders that are not VR-compatible.**Shaders must support single-pass stereo rendering. If you are looking for a good water shader, [check out Silent's Water Shader](https://gitlab.com/s-ilent/clear-water).
 - **Use mobile shaders on Android.** Most shaders will _work_ on Android but usually take more processing power to render. Stick to mobile shaders if you can.
-- **Be very careful with post-processing effects.** Some screen-space post-processing effects cause major issues for VR users. In particular, be careful with chromatic aberration, screen-space reflection, and screen-space ambient occlusion. 
+- **Be very careful with post-processing effects.** Some screen-space post-processing effects cause major issues for VR users. In particular, be careful with chromatic aberration, screen-space reflection, and screen-space ambient occlusion.
 - **Bad things happen when you put more than 2 video players in a room.** It usually impacts performance negatively.
 - **Bad things also happen when you put more than 1 mirror in your room.**  Mirrors severely affect a world's performance. If you have 1 mirror in the room, make sure to set it to toggle.
 - **We** **_STRONGLY SUGGEST_** **not enabling mirrors by default.** Add a toggle that can be activated by players or activated automatically when players enter a certain area.
@@ -51,7 +51,7 @@ Publishing your world will make it immediately available to all users that opt-i
 - Want to make your world private again?  Edit your world on the website and you can set it to Private.
 - Avoid directly using `.blend` files. Exporting FBX files from Blender for use in VRChat usually causes fewer issues.
 
-If you have any questions about the process, [visit our forum](https://ask.vrchat.com/c/worlds/27) or email hello@vrchat.com with your question.  If you run an event or have a highly trafficked world in the app and need a world made public at a different time, please reach out to us via email at least 48 hours in advance.
+If you have any questions about the process, [visit our forum](https://ask.vrchat.com/c/worlds/27) or email <hello@vrchat.com> with your question.  If you run an event or have a highly trafficked world in the app and need a world made public at a different time, please reach out to us via email at least 48 hours in advance.
 
 ## Submitting to Community Labs
 
@@ -60,7 +60,6 @@ Once you've read everything above, submit your new world to Community Labs! If y
 ## Becoming a Game or Avatar World
 
 If you want your world to be categorized as an Avatar World or Game World, just add the appropriate tag during upload.
-
 
 ::: warning Don't abuse the world rows
 
@@ -74,7 +73,7 @@ VRChat reserves the right to action users who abuse our systems to unfairly or m
 
 An Avatar World is a world where sharing a variety of avatars is the primary focus. In an Avatar World, avatars are quick and easy to find. Avatars shouldn't be an afterthought or a late addition.
 
-To categorize your world as an Avatar World, its title must include one of the terms "avatar", "avatars", "avi", or "avis". 
+To categorize your world as an Avatar World, its title must include one of the terms "avatar", "avatars", "avi", or "avis".
 
 By including one of these terms in your world's title, it will show up in the "Avatar World" category in VRChat's menu, making it easier for users to discover.
 

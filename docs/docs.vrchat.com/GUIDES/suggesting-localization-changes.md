@@ -10,7 +10,7 @@ VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也�
 ::: tip 📘⭐目前，我们只对登录屏幕、快速菜单和主菜单提示信息进行本地化。
 :::
 
-## 加入社区！
+## 加入社区
 
 我们专门为 VRChat 本地化社区建立了一个 Discord 服务器。点击[此处](https://discord.gg/U2fzWPkfKc)加入服务器！
 
@@ -29,6 +29,7 @@ VRChat 目前已翻译到了其他语言，但尚未进行本地化处理。也�
 
 2. 通过您注册时使用的电子邮箱验证账号。
 3. 在 Crowdin 上的 “关于我” 中添加您的 [VRChat user-id](https://help.vrchat.com/hc/en-us/articles/4408181867027-Account-Names-and-Identifiers-Usernames-Display-Names-and-User-IDs-)。
+
 - 设置 > 简介 > 关于我
 
 <center>
@@ -120,10 +121,10 @@ Crowdin 的翻译文本编辑器界面有四个分区：
 
 请务必在 Crowdin 的 “About Me” 部分输入您的 VRChat User ID，以便我们确认您的身份。
 
-#### 我没有看到某个单词/短语！
+#### 我没有看到某个单词/短语
 
 如果缺少单词或短语，请待会再来看看。*请注意：我们目前只为快捷菜单和主菜单提示信息提供本地化，不针对 VRChat 的全部，因此可能会遗漏某些内容。*
 
-#### 我不清楚这个按钮在 Crowdin 上有什么作用。
+#### 我不清楚这个按钮在 Crowdin 上有什么作用
 
 更多问题请参阅 [Crowdin 文档](https://support.crowdin.com/online-editor/)。

@@ -7,7 +7,7 @@ upstreamCommit: a3799deaca7cd590a0bde5bb142fb08044d4e5ba
 Udon and Unity have built-in events that are automatically called if you include them in your scripts. For example, the `Start()` event runs once for every script, and the `Update()` event runs once per frame. When you're writing Udon scripts, it's helpful to know which of these events happen first.
 ::: info
 
-Unity provides an (incomplete) list of built-in events, many of which are also available in VRChat. https://docs.unity3d.com/2019.4/Documentation/Manual/ExecutionOrder.html
+Unity provides an (incomplete) list of built-in events, many of which are also available in VRChat. <https://docs.unity3d.com/2019.4/Documentation/Manual/ExecutionOrder.html>
 :::
 The following diagram shows the execution order of the most important events available in Udon and Unity.
 

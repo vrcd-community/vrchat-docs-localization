@@ -7,14 +7,17 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 如果您是从零开始，以下是您需要做的：
 
 ## 下载
+
 创作者助手可以在 [https://vrchat.com/home/download](https://vrchat.com/home/download) 下载。
 
 您也可以通过这个 URL 直接下载最新版本：[https://vrchat.com/download/vcc](https://vrchat.com/download/vcc)。
 
 ## 安装
+
 运行上一步中的安装程序，它将默认将创作者助手安装到您的 “%LOCALAPPDATA%\Programs” 文件夹中 (例如 `C:\Users\UserName\AppData\Local\Programs`)。如果您愿意，您可以在安装过程中更改这个设置。安装完成后，您可以删除安装程序。
 
 ## 设置
+
 创作者助手会在启动时检查 Unity 是否已安装。如果需要，它会提供一个按钮，方便您安装 Unity Hub 和 Unity 编辑器。按照创作者助手内的安装说明，您将获得最新版本的 Unity Hub 和当前兼容 VRChat SDK 的 Unity 版本。
 
 要安装 Unity Hub，请[按照这些步骤操作](https://learn.unity.com/tutorial/install-the-unity-hub-and-editor)。
@@ -32,6 +35,7 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 创作者助手仅在 Windows 10 上得到完全支持 (Windows 11 可能可以工作，但尚未完全测试)。[在 Mac 和 Linux 上的 CLI 有一些功能也被支持](/vcc.docs.vrchat.com/vpm/cli#mac-and-linux-support)。
 
 ### Unity 编辑器版本
+
 创作者助手需要使用我们当前支持的 Unity 版本才能正常工作。如果您已经安装了 Unity Hub，创作者助手可以自动为您安装。
 
 如果创作者助手无法自动找到您已安装的 Unity 编辑器，将显示错误消息。在创作者助手的设置页面，您可以使用 📁 按钮浏览您想要使用的 Unity 编辑器。
@@ -41,9 +45,10 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 ## 创建新项目
 
 要创建新项目，只需从左侧的导航栏中按 “新建”，然后选择您想要从哪个模板开始工作：
-* Avatar - 创建一个包含 Avatar 3.0 SDK 的新项目，用于创建 VRChat Avatar。
-* World - 创建一个包含 World 3.0 SDK 和 Udon 的新项目，以及 ClientSim，用于直接在编辑器中测试您的世界。
-* UdonSharp - 创建一个包含 World 模板中所有内容 PLUS UdonSharp 的新项目，用于以类似 C# 的语法编写 Udon 脚本。
+
+- Avatar - 创建一个包含 Avatar 3.0 SDK 的新项目，用于创建 VRChat Avatar。
+- World - 创建一个包含 World 3.0 SDK 和 Udon 的新项目，以及 ClientSim，用于直接在编辑器中测试您的世界。
+- UdonSharp - 创建一个包含 World 模板中所有内容 PLUS UdonSharp 的新项目，用于以类似 C# 的语法编写 Udon 脚本。
 
 ## 迁移现有项目
 

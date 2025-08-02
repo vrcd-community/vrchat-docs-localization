@@ -4,12 +4,14 @@ upstreamCommit: 30042b067fc3c64781b680cbf1d569005233ae1a
 
 # Events
 
-* [Udon Events](#udon-events)
-* [Unity Events](#unity-events)
+- [Udon Events](#udon-events)
+- [Unity Events](#unity-events)
 
 # Udon Events
+
 These are the method stubs you can override via `UdonSharpBehaviour`.
- - [VRChat Event Documentation](/creators.vrchat.com/worlds/udon/graph/event-nodes)
+
+- [VRChat Event Documentation](/creators.vrchat.com/worlds/udon/graph/event-nodes)
 
 These methods **have** to be public.
 
@@ -17,13 +19,14 @@ These methods **have** to be public.
 public override void <method>() {}
 ```
 
-
-
 ## Udon Update Events
+
 | Return type | Name             | Description                                                                                                                                                                        |
 | ----------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `void`      | PostLateUpdate() | Fired near the end of the frame after IK has been calculated. Getting bone positions at this time will give you the most up to date positions so that they are not a frame behind. |
+
 ## Udon Input Events
+
 | Return type | Name                                                                      | Description                                                                                        |
 | ----------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `void`      | Interact()                                                                | Fired when a user interacts with the object<br/>Will add a box collider if no collider is present. |
@@ -37,6 +40,7 @@ public override void <method>() {}
 | `void`      | InputLookVertical(float value, VRC.Udon.Common.UdonInputEventArgs args)   | See [Input Events](/creators.vrchat.com/worlds/udon/input-events) for more information.            |
 
 ## Udon Pickup Events
+
 | Return type | Name              | Description                                                              |
 | ----------- | ----------------- | ------------------------------------------------------------------------ |
 | `void`      | OnDrop()          | Requires [VRC_Pickup](/creators.vrchat.com/worlds/components/vrc_pickup) |
@@ -44,8 +48,8 @@ public override void <method>() {}
 | `void`      | OnPickupUseDown() | Requires [VRC_Pickup](/creators.vrchat.com/worlds/components/vrc_pickup) |
 | `void`      | OnPickupUseUp()   | Requires [VRC_Pickup](/creators.vrchat.com/worlds/components/vrc_pickup) |
 
-
 ## Udon Networking Events
+
 | Return type | Name                                                              | Description                                                                                                                                                             |
 | ----------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `bool`      | OnOwnershipRequest(VRCPlayerApi requester, VRCPlayerApi newOwner) | Fired when an UdonBehaviour is going to change owner.  Returning `true` will accept the change in ownership, and returning `false` will reject the change in ownership. |
@@ -55,6 +59,7 @@ public override void <method>() {}
 | `void`      | OnDeserialization()                                               | Fired when network data is received                                                                                                                                     |
 
 ## Udon Player Events
+
 | Return type | Name                                                           | Description                                |
 | ----------- | -------------------------------------------------------------- | ------------------------------------------ |
 | `void`      | OnPlayerJoined(VRCPlayerApi player)                            | Fired when a new player joins the instance |
@@ -70,12 +75,14 @@ public override void <method>() {}
 | `void`      | OnControllerColliderHitPlayer(ControllerColliderPlayerHit hit) | CharacterController collides with a player |
 
 ## Udon Station Events
+
 | Return type | Name                                  | Description                                                                |
 | ----------- | ------------------------------------- | -------------------------------------------------------------------------- |
 | `void`      | OnStationEntered(VRCPlayerApi player) | Requires [VRC_Station](/creators.vrchat.com/worlds/components/vrc_station) |
 | `void`      | OnStationExited(VRCPlayerApi player)  | Requires [VRC_Station](/creators.vrchat.com/worlds/components/vrc_station) |
 
 ## Udon Video Events
+
 | Return type | Name                                | Description                                      |
 | ----------- | ----------------------------------- | ------------------------------------------------ |
 | `void`      | OnVideoEnd()                        | When the video player ends playback              |
@@ -87,6 +94,7 @@ public override void <method>() {}
 | `void`      | OnVideoReady()                      | When the video player has loaded the url         |
 
 ## Udon MIDI Events
+
 | Return type | Name                                                  | Description                                                                                                                                                                                     |
 | ----------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `void`      | MidiNoteOn(int channel, int number, int velocity)     | Triggered when a Note On message is received, typically by pressing a key / pad on your device. See [Midi in Udon](/creators.vrchat.com/worlds/udon/midi/) for more information.                |
@@ -94,6 +102,7 @@ public override void <method>() {}
 | `void`      | MidiControlChange(int channel, int number, int value) | Triggered when a control change is received. These are typically sent by knobs and sliders on your Midi device. See [Midi Events](/creators.vrchat.com/worlds/udon/midi/) for more information. |
 
 ## Udon String/Image Loading Events
+
 | Return type | Name                                           | Description                                                                                                       |
 | ----------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | `void`      | OnImageLoadSuccess(IVRCImageDownload result)   | Triggered when an image download succeeds. See [Image Loading](/creators.vrchat.com/worlds/udon/image-loading).   |
@@ -102,6 +111,7 @@ public override void <method>() {}
 | `void`      | OnStringLoadError(IVRCStringDownload result)   | Triggered when a string download fails. See [String Loading](/creators.vrchat.com/worlds/udon/string-loading).    |
 
 # Unity Events
+
 These are the method stubs available for Unity events.
 [Unity MonoBehaviour Documentation](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)
 

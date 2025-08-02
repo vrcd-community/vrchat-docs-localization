@@ -19,6 +19,7 @@ The SDK includes an easy-to-use `ImageDownload` script, or you can make your own
 ::: tip
 You can [view our Image Loader example](/creators.vrchat.com/worlds/examples/image-loading) to get started quickly.
 :::
+
 ## Before You Begin
 
 There are a few Image Loader limits and parameters you should know:
@@ -79,7 +80,7 @@ Cleans up the `VRCImageDownloader`. Frees up downloaded textures from memory. Ca
 
 #### TextureInfo
 
-Contains settings to apply to a downloaded texture. 
+Contains settings to apply to a downloaded texture.
 
 - **GenerateMipmaps**: Enables Mipmap generation. (Default: `false`)
 - **FilterMode**: Sets the `FilterMode` of the texture. (Default: `Bilinear`)
@@ -95,12 +96,12 @@ Contains settings to apply to a downloaded texture.
 Contains information about the downloaded image. Returned by `VRCImageDownloader`'s `DownloadImage` function, by `OnImageLoadSuccess`, and by `OnImageLoadError`.  
 Note that many of these fields will be invalid until the download has completed or failed.
 
-- **Get Error**: Gets the `VRCImageDownloadError` associated with the event. 
+- **Get Error**: Gets the `VRCImageDownloadError` associated with the event.
 - **Get Errormessage**: Gets the error message as a `string`.  
 - **Get Material**: Gets the Material sent into the `DownloadImage` function.  
 - **Get Progress**:`Gets the progress of the image download as a`float\` between 0 and 1. Use this to track the progress of the download, i. e. for custom loading bars.
 - **Get Result**: The `Texture2d` of the downloaded image.  
-- **Get SizeInMemoryBytes**: Gets the size of the texture in bytes as an `int`. 
+- **Get SizeInMemoryBytes**: Gets the size of the texture in bytes as an `int`.
 - **Get State**: Gets the `VRCImageDownloadState` indicating the state of the image download.  
 - **Get TextureInfo**: The texture info given to the DownloadImage function (TextureInfo).  
 - **Get Udonbehavior**: Gets the given udonbehavior the events of the download image are being sent to (UdonBehavior).
@@ -128,6 +129,5 @@ When an image download fails, `OnImageLoadError` is called. `IVRCImageDownload`'
 
 ## Events
 
-* **OnImageLoadSuccess**: Returns `IVRCImageDownload`. Called when a `VRCImageDownloader` has successfully download an image.
-* **OnImageLoadError**: Returns `IVRCImageDownload`. Called when a `VRCImageDownloader` has failed to download an image.
-
+- **OnImageLoadSuccess**: Returns `IVRCImageDownload`. Called when a `VRCImageDownloader` has successfully download an image.
+- **OnImageLoadError**: Returns `IVRCImageDownload`. Called when a `VRCImageDownloader` has failed to download an image.

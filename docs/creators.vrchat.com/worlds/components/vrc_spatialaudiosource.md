@@ -13,6 +13,7 @@ When added, `VRC_SpatialAudioSource` will automatically add a Unity `Audio Sourc
 This component can be used on both avatars and worlds.
 
 ![image](/creators.vrchat.com/images/worlds/vrc_spatialaudiosource-1.png)
+
 ## Unity Editor Interface
 
 The component generates two [Unity Gizmos](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Gizmos.html) that show:
@@ -42,6 +43,7 @@ At ranges approaching the `Far` value, audio may fade out more quickly depending
 **You can use 2D avatar audio if you like** by disabling the `Use Spatialized Audio` option in the component. Unless you choose to use a different audio falloff curve, the intensity will still drop off over distance as before, it just won't be spatialized.
 
 All that being said, **we do not recommend using 2D audio.** All real-world sources of sound have distinct point or volumetric sources. If you wish to use 2D audio regardless, ensure that you:
+
 - Uncheck `Use Spatialized Audio` on the `VRC_SpatialAudioSource`
 - Adjust Spatial Blend on the `Audio Source` to be 100% 2D
 
@@ -83,6 +85,7 @@ On avatars, it is best to disable and enable the Audio Source components rather 
 | Advanced: Enable Spatialization        | Uncheck this to disable the default inverse-square falloff curve and instead use the Audio Source's spatialization settings. <br /><br /> Defaults to True.                                                                                                                                                                                                                                                                                                                                         |
 
 ## Avatar Limitations
+
 You are permitted to adjust the fall-off curve on avatar-based `Audio Sources`. Simply set `Use AudioSource Volume Curve` to True, adjust the curve in the `Audio Source`, and VRChat will use that fall-off curve instead of the default inverse-square.
 
 However, as noted above, there are some limitations on `VRC_SpatialAudioSource` components on avatars. These limits are enforced at run-time.
@@ -97,6 +100,7 @@ However, as noted above, there are some limitations on `VRC_SpatialAudioSource` 
 If you attempt to play avatar audio with a custom curve in a world with a shorter `Far` distance than normal, Unity "squashes" the curve. You can see what happens by adjusting the `maxDistance` range on the Audio Source.
 
 ### Avatar Audio Compressor
+
 There is a compressor on the Avatar audio channel that prevents sounds from being maliciously loud. This should not affect normal use of avatar audio sources that have reasonable volume levels.
 
 ### Tips for Avoiding the Compressor

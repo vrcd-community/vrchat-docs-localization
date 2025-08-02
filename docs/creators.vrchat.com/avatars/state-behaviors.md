@@ -3,7 +3,7 @@ upstreamCommit: d9330ab5a54eb689944b6a184c34f49b92c9eddc
 ---
 
 # State Behaviors (动画状态行为)
- 
+
 ::: warning 您需要了解 Unity 动画器
 
 本文档假设您对 [Unity 动画器](https://docs.unity3d.com/cn/2019.4/Manual/class-AnimatorController.html)有一定了解。
@@ -27,7 +27,7 @@ upstreamCommit: d9330ab5a54eb689944b6a184c34f49b92c9eddc
 
 ![Unity_2020-07-08_12-50-04.png](/creators.vrchat.com/images/avatars/state-behaviors-e78eb77-Unity_2020-07-08_12-50-04.png)
 
-Animator Layer Controller 允许您在任何给定的 (Playable Layer)[/creators.vrchat.com/avatars/playable-layers.md] 上在任何给定的时间内指定特定动画层的权重。
+Animator Layer Controller 允许您在任何给定的 [Playable Layer](/creators.vrchat.com/avatars/playable-layers.md) 上在任何给定的时间内指定特定动画层的权重。
 <!--之后加一个引用-->
 如果状态在未过渡到指定权重时退出，那么目标层将立即设置为目标权重。
 
@@ -57,6 +57,7 @@ Animator Locomotion Control 允许您在动画器的给定状态中禁用移动�
 
 <!--roomscale需要更好的解释-->
 ## Animator Temporary Pose Space (动画器临时姿势空间)
+
 ![state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png](/creators.vrchat.com/images/avatars/state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png)
 
 Animator Temporary Pose Space 允许您将您当前使用的模型的头部视角球移动到该动画状态的给定点位置。
@@ -77,7 +78,6 @@ Animator Temporary Pose Space 允许您将您当前使用的模型的头部视�
 | Fixed Delay（固定延迟 ）   | 延迟时间是否为固定时间段，还是状态持续时间的百分比？                                                               |
 | Delay Time（延迟时间）     | 如果给定一个值，视角球位置将在该值对应的延迟时间后设置。您可以使用这个设置，例如您要在一定时间后再设置到动画中时。 |
 | Debug String（调试字符串） | 当此 State Behavior 运行时，此字符串将打印到输出日志中。用于调试。                                                 |
-
 
 ## Animator Tracking Control (动画器追踪控制器)
 
@@ -127,18 +127,21 @@ Avatar Parameter Driver 可以以各种方式修改动画器参数，也可针�
 Set、Add、Random 和 Copy 适用于 `float` 和 `int`。Set、Random 和 Copy 适用于 `bool`。
 
 ### Set (设置)
+
 Set 将简单地将目标中的命名参数设置到指定值。
 
 ![state-behaviors-121fe2a-2022-06-02_18-11-13_NVIDIA_Share.png](/creators.vrchat.com/images/avatars/state-behaviors-121fe2a-2022-06-02_18-11-13_NVIDIA_Share.png)
 
 ### Add (添加)
+
 Add 将给目标中的命名参数添加指定值。
 
 正如该组件指出的，使用 Add 可能在远程实例的动画化模型上运行时产生不同的结果。使用 Add 时，建议使用同步的目标参数，并仅在本地运行该 State Behavior。
 
 ![state-behaviors-e10bb6a-2022-06-02_18-11-17_Unity.png](/creators.vrchat.com/images/avatars/state-behaviors-e10bb6a-2022-06-02_18-11-17_Unity.png)
-        
+
 ### Random (随机)
+
 Random 将目标参数设置到介于最小值和最大值之间的某一随机数。
 
 正如组件指出的，使用 Random 可能在远程实例的动画化模型上运行时产生不同的结果。使用 Random 时，建议使用同步的目标参数，并仅在本地运行该 State Behavior。
@@ -146,6 +149,7 @@ Random 将目标参数设置到介于最小值和最大值之间的某一随机�
 ![state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png](/creators.vrchat.com/images/avatars/state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png)
 
 ### Copy (复制)
+
 Copy 将目标参数设置到源参数的值。这可以用于例如将一个浮点数的值传递到另一个浮点数，使它们的数值完全相等，将一个浮点数重新映射到不同的大小范围，或者将某种数转换为其他完全不同的类型。
 ::: warning
 
@@ -155,6 +159,7 @@ VRChat 的内置参数，如 `GestureLeftWeight`，**可以**指定，但不起�
 ![state-behaviors-bffdb10-2022-06-02_18-11-30_Unity.png](/creators.vrchat.com/images/avatars/state-behaviors-bffdb10-2022-06-02_18-11-30_Unity.png)
 
 #### Converting between types (类型转换)
+
 从 `bool` 转换时，False 计为 0，True 计为 1。
 
 转换为 `bool` 时，0 为 False，*任何其他值*为 True。
@@ -162,6 +167,7 @@ VRChat 的内置参数，如 `GestureLeftWeight`，**可以**指定，但不起�
 转换为 `float` 时，它将直接复制值，即使这个值超出了它能够同步给其他玩家的最大范围。
 
 #### Custom Ranges (自定义范围)
+
 您还可以使用 `Custom Ranges` 复选框来启用一些额外的 UI，以便您可以设置自定义转换范围。这可以用于重新映射值或更好地控制从一种类型转换为另一种类型的方式。
 
 ![state-behaviors-cab639b-2022-06-02_18-35-32_Unity.png](/creators.vrchat.com/images/avatars/state-behaviors-cab639b-2022-06-02_18-35-32_Unity.png)
@@ -169,7 +175,7 @@ VRChat 的内置参数，如 `GestureLeftWeight`，**可以**指定，但不起�
 ## Playable Layer Control (可播放层控制器)
 
 ![state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png](/creators.vrchat.com/images/avatars/state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png)
-        
+
 Playable Layer Control 允许您在指定的时间内将整个可播放层的权重过渡到指定的值。它与 Animator Layer Controller 非常相似，但是前者控制整个可播放层。
 
 Action 可播放层通常会使用该 State Behavior，因为 Action 层默认情况下权重为零，并且在动画完成后，它的权重应始终过渡回零。

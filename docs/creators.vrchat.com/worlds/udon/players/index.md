@@ -72,8 +72,8 @@ upstreamCommit: f6bfeb189f39dbb6af5034cbd4c30e4e72067da0
 
 ### IsUserInVR
 
-> 输入：*VRCPlayerApi*
-> 输出：*Boolean*
+> 输入：_VRCPlayerApi_
+> 输出：_Boolean_
 
 告诉您一个玩家是否在使用 VR 头显。
 

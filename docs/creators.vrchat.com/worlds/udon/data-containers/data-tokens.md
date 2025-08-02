@@ -163,11 +163,11 @@ if (dictionary.TryGetValue("key", TokenType.Float out DataToken value)) {
 
 ### What is the difference between String and ToString?
 
-`DataToken.String` and `DataToken.ToString()` are similar but not quite the same, because `DataToken.String` is specifically accessing the string value inside the DataToken, while `DataToken.ToString()` is converting whatever exists into a string. 
+`DataToken.String` and `DataToken.ToString()` are similar but not quite the same, because `DataToken.String` is specifically accessing the string value inside the DataToken, while `DataToken.ToString()` is converting whatever exists into a string.
 
 As a result, `ToString` is always valid no matter what the DataToken contains and will never halt your UdonBehaviour. If it contains a bool, then it will give you either true or false. If it contains a number, it will create a string representation of that number using `ToString("G", CultureInfo.InvariantCulture)`.
 
-On the other hand, accessing `DataToken.String` is only valid if the DataToken contains a string. If the DataToken contains a float and you attempt to access `DataToken.String`, then an exception will be thrown and your UdonBehaviour will halt. 
+On the other hand, accessing `DataToken.String` is only valid if the DataToken contains a string. If the DataToken contains a float and you attempt to access `DataToken.String`, then an exception will be thrown and your UdonBehaviour will halt.
 
 DataErrors are unique in that they contain both an Error enum and a string. It is recommended to use `ToString()` on DataErrors simply because `ToString()` will combine the enum and the string together into a single message that contains both the error and the reason for the error.
 

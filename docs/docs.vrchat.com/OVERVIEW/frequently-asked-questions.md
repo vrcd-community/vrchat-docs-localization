@@ -6,7 +6,7 @@
 
 另外，您必须拥有 VRChat 账号才能上传内容。这意味着您不能使用通过 Steam，Oculus 或 Viveport 建立的账号上传世界或虚拟形象等内容。
 
-## 我已经有了通过 Steam 或 Oculus 注册的账号，我想把这些账号内的内容转移到我的 VRChat 账号中去以便于我上传内容！
+## 我已经有了通过 Steam 或 Oculus 注册的账号，我想把这些账号内的内容转移到我的 VRChat 账号中去以便于我上传内容
 
 如果您是通过 Steam 或 Oculus 账号注册的 VRChat，您可以很轻松的将这些账号中的所有内容 “转移” 到 VRChat 账号中。您可以在 VRChat 中打开设置，通过右下角的升级按钮开始转移操作！
 
@@ -28,7 +28,7 @@
 
 一旦您通过 SDK 创作并上传了您的世界，您便可以在世界菜单的 `Mine` 选项卡下找到您的世界。
 
-## 我遇到了程序相关的问题。
+## 我遇到了程序相关的问题
 
 这真是场噩梦！我们当然想要帮助您解决相关问题。请查看我们的[知识库](https://help.vrchat.com/)，看看是否能从那里找到解决方案。如果没有，请在[此处](https://help.vrchat.com/new)创建工单联系我们的技术团队。请确保您选择的是 “Support” 类别。
 
@@ -50,7 +50,7 @@ VRChat SDK 使用户能够利用 Unity 编辑器为 VRChat 创建可互动的世
 
 对于虚拟形象，您可以通过 [Avatars 3.0](/creators.vrchat.com/avatars/) 使用 Unity 的动画器。
 
-## 我在使用 VRChat 时遇到了问题！
+## 我在使用 VRChat 时遇到了问题
 
 您可以访问 [help.vrchat.com](https://help.vrchat.com/)，这是我们提供支持文档的地方。
 

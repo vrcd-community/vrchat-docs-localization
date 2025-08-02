@@ -6,9 +6,9 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 # Getting Started with Udon
 
-If you don't know what Udon is, read [What is Udon](/creators.vrchat.com/worlds/udon/) first. 
+If you don't know what Udon is, read [What is Udon](/creators.vrchat.com/worlds/udon/) first.
 
-There are two ways for you to get started with Udon. You can use our [Creator Companion](https://vcc.docs.vrchat.com) to do so. 
+There are two ways for you to get started with Udon. You can use our [Creator Companion](https://vcc.docs.vrchat.com) to do so.
 
 ## Using the Creator Companion
 
@@ -18,7 +18,7 @@ Here are all the steps to get you started with Udon using the Creator Companion.
 
 2. Login with your VRChat account or create it if you don't have one yet.
 
-3. Download the Creator Companion and follow its [installation steps](https://vcc.docs.vrchat.com/guides/getting-started). 
+3. Download the Creator Companion and follow its [installation steps](https://vcc.docs.vrchat.com/guides/getting-started).
 
 4. Create a new Project by opening the Creator Companion, going to Projects Tab and pressing "New", select the "World" Template.
 
@@ -27,6 +27,7 @@ Here are all the steps to get you started with Udon using the Creator Companion.
 From there, you're ready to start!
 
 ## Manual Setup
+
 ::: warning
 
 This method is deprecated! You should use the Creator Companion.

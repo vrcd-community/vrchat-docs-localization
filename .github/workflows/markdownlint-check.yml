@@ -1,0 +1,21 @@
+name: Markdownlint Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  markdownlint-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: corepack enable && yarn install
+
+      - name: Use Markdownlint Problem Matcher
+        uses: xt0rted/markdownlint-problem-matcher@1a5fabfb577370cfdf5af944d418e4be3ea06f27
+
+      - name: Markdownlint Check
+        run: yarn run docs:markdownlint

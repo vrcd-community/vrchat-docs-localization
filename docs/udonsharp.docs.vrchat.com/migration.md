@@ -7,14 +7,15 @@ UpstreamCommit: c232baae74a772050a1a4be1a576f54ee98ad189
 UdonSharp 0.x (the .unitypackage version) is deprecated and no longer supported. This new version is easy to get through the [Creator Companion](https://vcc.docs.vrchat.com), which will help you keep it up-to-date as well. We recommend you [Migrate your Projects using the Creator Companion](https://vcc.docs.vrchat.com/vpm/migrating). If you want to do the migration manually, read [Manual Migration](#manual-migration).
 
 ## New Features in UdonSharp 1.0
-* **More C# features** in your UdonSharp programs:
-	* `static` methods
-	* Generic `static` methods
-	* `params`, `out`, `ref`, and default parameters
-	* Extension methods
-	* Inheritance, virtual methods, and abstract classes
-	* Partial classes
-	* Enums
+
+- **More C# features** in your UdonSharp programs:
+  - `static` methods
+  - Generic `static` methods
+  - `params`, `out`, `ref`, and default parameters
+  - Extension methods
+  - Inheritance, virtual methods, and abstract classes
+  - Partial classes
+  - Enums
 - **Multi-edit** multiple UdonSharp scripts in the Unity inspector
 - **Prefab variants**, **instances**, and **nesting** are now fully supported
 - **Editor scripting** has been overhauled and simplified
@@ -38,9 +39,10 @@ UdonSharp 0.x (the .unitypackage version) is deprecated and no longer supported.
 **Symptoms**: An error like this: `[UdonSharp] Script 'Assets/MyScript.cs' does not belong to a U# assembly, have you made a U# assembly definition for the assembly the script is a part of?`
 
 **How to Fix**:
-1. Use the Project window to find the file ending in `.asmdef` in the same or a parent directory of the script in question. 
-2. Right-click in the folder which has this Assembly Definition and choose `Create > U# Assembly Definition`. 
-3. Select this new U# asmdef, and use the inspector to set its "Source Assembly" to the other Assembly Definition File. 
+
+1. Use the Project window to find the file ending in `.asmdef` in the same or a parent directory of the script in question.
+2. Right-click in the folder which has this Assembly Definition and choose `Create > U# Assembly Definition`.
+3. Select this new U# asmdef, and use the inspector to set its "Source Assembly" to the other Assembly Definition File.
 4. You may need to restart Unity after doing this.
 
 ### Newtonsoft.Json.Dll
@@ -52,6 +54,7 @@ UdonSharp 0.x (the .unitypackage version) is deprecated and no longer supported.
 **How to Fix**: Remove any copies of Newtonsoft.Json.dll from your Assets folder. The VRCSDK will provide it for any package that needs it through the Package Manager.
 
 ### Other breaking changes
+
 - Your U# behaviour name must match the .cs file name
 - Duplicate program assets may not reference the same `.cs` file
 - Program assets must point to a script and may not be empty

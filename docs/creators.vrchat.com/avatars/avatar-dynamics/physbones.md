@@ -11,7 +11,7 @@ upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 
 在 SDK 的 `VRCSDK/Examples3/Dynamics/Robot Avatar` 目录下可以找到使用 Avatar Dynamics 的示例。
 
-## VRCPhysbone 
+## VRCPhysbone
 
 它定义了一个通过 Physbones 的功能实现动画的骨骼链。这些骨骼链可以用于模拟例如头发、尾巴、耳朵等身体部位跟随躯干运动的效果。VRCPhysbone 提供了一些选项参数供您对其效果进行精细化调整。
 
@@ -31,7 +31,6 @@ upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 
 版本 1.1：
 
-
 - 弹性骨骼更新，允许骨骼被挤压、拉伸。
 - 重力现在表现为影响骨骼在静止时旋转的程度系数。骨骼向重力方向移动需要一个正的拉力。
 - 刚度现在表现为影响骨骼停留在其先前方向的程度系数。
@@ -43,7 +42,6 @@ upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 `Endpoint Position` - 用于在骨骼链的各个终点添加额外骨骼的向量，值非零时生效。通常，您会希望沿着 +Y 增加此值，即沿着起点指向骨骼终点的方向。
 `Multi-Child Type` - 当定义了多个骨骼链时，根骨骼的运动模式。这包括三种模式：
 
-
  如果设置为 **Ignore**，根骨骼将不会出现物理效果。这对于头发等物体非常有用，因为您可以只在根骨骼上设置一个 Physbone 组件即可作用于所有子级头发骨骼！
 
  如果设置为 **First**，根骨骼将与层级中的第一个骨骼连接形成一个连续的链。其他所有链仍然有效，但它们将从每个相应链的第一个骨骼开始，而不是从根骨骼开始。
@@ -53,7 +51,6 @@ upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
  :::
 
  如果设置为 **Average**，则 VRCPhysbone 会以根骨骼为起点，生成一个不一定与子级骨骼重合的虚拟骨骼链，这个虚拟链的位置与大小取根骨骼下的各骨骼变换平均值，其摆动时，会带动根骨骼下的各骨骼摆动。
-
 
 ::: danger
 如果您要放置 VRCPhysbone 组件的目标骨骼是单个根骨骼，或着单个根骨骼及其多个子级 (但没有孙级)，则您**必须**定义一个非零的 `Endpoint Position`！
@@ -178,7 +175,7 @@ upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 
 ::: warning Quest限制
 
-** Physbones 在 Meta Quest (一体机 VR) 上有严格的限制。**这是为了防止这些设备遇到性能问题，因为通常这些设备的 CPU 处理能力受限。
+**Physbones 在 Meta Quest (一体机 VR) 上有严格的限制。**这是为了防止这些设备遇到性能问题，因为通常这些设备的 CPU 处理能力受限。
 <!--需句意重整-->
 您可以将这些限制视为 Quest 的 Very Poor 的限制，详细信息请参阅[最低显示性能等级](/creators.vrchat.com/avatars/avatar-performance-ranking-system#quest-limits)文档。
 
@@ -202,15 +199,15 @@ upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 
 相反，复制要用作根骨骼的骨骼，并将要动画的所有子骨骼重新连接到新的复制根骨骼。这应该在 Blender 中完成。社区制作的工具 (如 Cat's Blender 插件) 可以为您完成此操作。
 
-####  Physbone 旋转
+#### Physbone 旋转
 
-与 Dynamic Bones 不同，** Physbone 链的根骨骼可以旋转**。但是它不能平移。这可能会对某些设置产生一些影响-请自行尝试以了解其表现。
+与 Dynamic Bones 不同，**Physbone 链的根骨骼可以旋转**。但是它不能平移。这可能会对某些设置产生一些影响-请自行尝试以了解其表现。
 
-####  Physbone AV3 参数
+#### Physbone AV3 参数
 
 您**无需出于需要同步的目的，在 `VRCExpressionParameters` 对象中定义 Physbone 的参数**，因为这些参数会自动在本地和远端机器间同步。
 
-####  Physbone `Immobile` 行为
+#### Physbone `Immobile` 行为
 
  Dynamic Bones 的 `Inert` 值基于组件的放置位置，而不是根变换。这可能是 Dynamic Bones 的一个错误。因此，Physbones 的 `Immobile` 值基于根变换。这可能会影响某些情况下的行为。
 
@@ -218,7 +215,7 @@ upstreamCommit: 2d28c6620b23edebd4c291dc4ab7af049ba0758c
 
 由于 Physbones 的多线程特性，不推荐将所有骨骼定义到同一个链中，因为这不会那么高效。多个组件使我们能够在线程之间分解工作。尽管如此，您仍然应该努力减少组件的数量...但是与 Dynamic Bones 相比，模型上拥有多个组件不会带来大量的性能代价。
 
-如果您*真的*需要提高帧数，那么当您的单个组件影响超过 128 个骨骼时，您应考虑拆分它，例如如果您有一个包含 256 个骨骼的裙子，并且它们从根出发，分为数条骨骼链，那么将其分割为两个或三个组件将起到优化作用。
+如果您_真的_需要提高帧数，那么当您的单个组件影响超过 128 个骨骼时，您应考虑拆分它，例如如果您有一个包含 256 个骨骼的裙子，并且它们从根出发，分为数条骨骼链，那么将其分割为两个或三个组件将起到优化作用。
 
 但是，如果单个组件只影响大约 32 个骨骼时...不用担心。正如您可能已经注意到的，这些都不是严格的限制！当它们看起来能被以更好的方式设置时，我们会提出一些软警告。
 

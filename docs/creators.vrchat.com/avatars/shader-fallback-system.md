@@ -8,20 +8,27 @@ upstreamCommit: 98018dfbc6b421565a6cc4a75042737d1131504a
 This page serves as a description of the Shader Blocking System, how it operates, and how shader authors can work with it so that their shader falls back gracefully when a user has Shaders blocked on an avatar using a given shader.
 
 ## VRChat 2021.4.2 Fallback System Upgrade
+
 Shader fallback improvements work by using the "Tags" field at the top of the shader.
+
 ```text
 Tags{"Queue"="Geometry"}
 ```
+
 The tags field might look like this by default.
 
 You can now add different tags, under the `VRCFallback` name, to specify which fallback shader to try to use:
+
 ```text
 Tags{"Queue"="Geometry" "VRCFallback"="Toon"}
 ```
+
 Some fallback tags are combine-able, you could for instance use `ToonCutout:`
+
 ```text
 Tags{"Queue"="Geometry" "VRCFallback"="ToonCutout"}
 ```
+
 The supported tags are as follows:
 
 ```text
@@ -38,6 +45,7 @@ MobileToon
 DoubleSided
 Hidden //(this will hide the mesh from view if the shader is blocked, useful for things like raymarching effects.)
 ```
+
 Toon and Unlit can also be combined with Transparent, Cutout, Fade, and DoubleSided tags for more granular control. With Toon supporting such variations as DoubleSided Cutout.
 ::: warning
 
@@ -48,6 +56,7 @@ Specifying any other tag will result in a Standard shader fallback.
 If no tag is provided, the old fallback system will be used, following the pattern shader name, keywords, etc.
 
 We now also copy ALL standard shader parameters to the fallback material, including the following:
+
 ```text
 _MainTex
 _MetallicGlossMap
@@ -81,8 +90,11 @@ _SrcBlend
 _DstBlend
 _ZWrite
 ```
+
 ## Old Fallback System
+
 When a shader is blocked by the Safety System, it is first checked for one of the internal pre-compiled shaders in this list:
+
 ```text title="Pre-Compiled Internal Shaders"
   "Standard",
   "Standard (Specular setup)",
@@ -160,9 +172,11 @@ When a shader is blocked by the Safety System, it is first checked for one of th
   "Unlit/FailShader",
   "VRChat/UI/Default"
 ```
+
 If an internal shader is matched, the fallback is a new shader of the same type, but using the internally compiled shader. All the parameters are copied. New versions or variants not included will not work, since they will be replaced.
 
 If the shader is not internally matched, The name of the shader (not the filename, but as provided in the top line of the shader source) is used to match some identifying features and replace with a fallback shader of similar type:
+
 ```text title="Fallback Shader Name Searches"
   "Unlit",
   "VertexLit",
@@ -175,14 +189,17 @@ If the shader is not internally matched, The name of the shader (not the filenam
   "Sprite",
   "MatCap"
 ```
+
 These names can fall anywhere within the full string of the shader name.
 
 Additionally, some shader properties are searched:
+
 ```text title="Shader Properties"
 "_Ramp" == "Toon"
 "_ALPHABLEND_ON" == "Transparent"
 "_ALPHATEST_ON" == "Cutout"
 ```
+
 All matching is case-sensitive.
 
 Attempts are made to create fallback material that approximate the matched names. For example, names containing "Sprite" fallback to the Unity built-in "Sprites/Default" shader.

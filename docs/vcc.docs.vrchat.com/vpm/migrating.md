@@ -7,8 +7,9 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 ## 概述
 
 如果使用 SDK3 世界或虚拟形象的 `.unitypackage` SDK 创建的项目，可以迁移到新系统 (不支持 SDK2)。它们可以是 Unity 2017、2018 或 2019 的项目。SDK 必须在其原始安装位置才能被检测到 - 具体来说，必须存在以下之一：
-* `Assets/Udon`
-* `VRCSDK/Plugins/VRCSDK3A.dll`
+
+- `Assets/Udon`
+- `VRCSDK/Plugins/VRCSDK3A.dll`
 
 ::: warning
 如果您的项目正在使用 [UdonSharp](https://udonsharp.docs.vrchat.com/)，请阅读我们的[已知问题](https://udonsharp.docs.vrchat.com/migration#known-issues)页面。
@@ -19,9 +20,11 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 1. 将您的项目添加到项目列表中，然后点击迁移。<br/>
 ![迁移项目](/vcc.docs.vrchat.com/images/migrate-button.png)
 2. 您有两种迁移项目的方式。
+
 - **迁移副本**：将您的项目复制到一个新文件夹，命名为 `ProjectName-Migrated`，末尾带有数字。您的旧文件夹保持不变。
 - **就地迁移**：您的文件夹将在不创建副本的情况下进行升级。这对于您已经做了自己的备份，或者您使用版本控制软件如 [Git](https://git-scm.com/) 或 [Plastic](https://docs.unity3d.com/2019.4/Documentation/Manual/PlasticSCMPlugin.html) 的情况非常有用。*除非您有备份，否则不要选择 ‘就地迁移’*！<br/>
 ![备份提示](/vcc.docs.vrchat.com/images/migrate-project-backup.png)
+
 3. 确认您想要开始迁移。
 ![备份提示](/vcc.docs.vrchat.com/images/migrate-project-backup-2.png)
 4. 您的项目中所有可见的文件都被复制到新文件夹，除了以下文件：

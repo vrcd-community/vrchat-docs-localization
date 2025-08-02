@@ -5,70 +5,79 @@ upstreamCommit: 5fd0244260a22b7bed0e807ab14a9b24dae23c2a
 # VRChat API
 
 ## API
+
 ### Methods
-* [VRCInstantiate](#vrcinstantiate)
+
+- [VRCInstantiate](#vrcinstantiate)
 
 ### Classes
-* [Utilities](#utilities)
-* [VRCStation](#vrcstation)
-* [Networking](#networking)
-* [TrackingData](#trackingdata)
-* [UdonBehaviour](#udonbehaviour)
-* [VRCPlayerApi](#vrcplayerapi)
-* [InputManager](#inputmanager)
-* [SerializationResult](#inputmanager)
-* [UdonInputEventArgs](#udoninputeventargs)
-* [VRCUrl](#vrcurl)
-* [VRCUrlInputField](#vrcurlinputfield)
-* [VRCMirrorReflection](#vrcmirrorreflection)
-* [VRCObjectPool](#vrcobjectpool)
-* [VRCObjectSync](#vrcobjectsync)
-* [VRCAvatarPedestal](#vrcavatarpedestal)
-* [VRCPickup](#vrcpickup)
-* [VRCPortalMarker](#vrcportalmarker)
+
+- [Utilities](#utilities)
+- [VRCStation](#vrcstation)
+- [Networking](#networking)
+- [TrackingData](#trackingdata)
+- [UdonBehaviour](#udonbehaviour)
+- [VRCPlayerApi](#vrcplayerapi)
+- [InputManager](#inputmanager)
+- [SerializationResult](#inputmanager)
+- [UdonInputEventArgs](#udoninputeventargs)
+- [VRCUrl](#vrcurl)
+- [VRCUrlInputField](#vrcurlinputfield)
+- [VRCMirrorReflection](#vrcmirrorreflection)
+- [VRCObjectPool](#vrcobjectpool)
+- [VRCObjectSync](#vrcobjectsync)
+- [VRCAvatarPedestal](#vrcavatarpedestal)
+- [VRCPickup](#vrcpickup)
+- [VRCPortalMarker](#vrcportalmarker)
 
 ### Enums
-* [EventTiming](#eventtiming)
-* [Mobility](#mobility)
-* [NetworkEventTarget](#networkeventtarget)
-* [SpawnOrientation](#spawnorientation)
-* [TrackingDataType](#trackingdatatype)
-* [VRCInputMethod](#vrcinputmethod)
-* [HandType](#handtype)
-* [UdonInputEventType](#udoninputeventtype)
-* [VideoError](#videoerror)
-* [AutoHoldMode](#autoholdmode)
-* [PickupOrientation](#pickuporientation)
-* [PickupHand](#pickuphand)
+
+- [EventTiming](#eventtiming)
+- [Mobility](#mobility)
+- [NetworkEventTarget](#networkeventtarget)
+- [SpawnOrientation](#spawnorientation)
+- [TrackingDataType](#trackingdatatype)
+- [VRCInputMethod](#vrcinputmethod)
+- [HandType](#handtype)
+- [UdonInputEventType](#udoninputeventtype)
+- [VideoError](#videoerror)
+- [AutoHoldMode](#autoholdmode)
+- [PickupOrientation](#pickuporientation)
+- [PickupHand](#pickuphand)
 
 ## Supported Features
-* [Synced Variables](#synced-variables)
+
+- [Synced Variables](#synced-variables)
 
 ---
 
 ## Methods
 
 ### VRCInstantiate
+
 | Static | Returns                                                                | Name                                                                                            | Summary                                                                                                                                           |
 | :----: | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 |   ✔️    | [GameObject](https://docs.unity3d.com/ScriptReference/GameObject.html) | VRCInstantiate([GameObject](https://docs.unity3d.com/ScriptReference/GameObject.html) original) | Creates a local, non-synced copy of an object. See [here](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html) for more information. |
 
-
 ## Classes
 
 ### Utilities
+
 `static class VRC.SDKBase.Utilities`
 
 #### Methods
+
 | Static | Returns | Name                      | Summary                                                                                                                                                                                                                                                                                                           |
 | :----: | ------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |   ✔️    | bool    | IsValid(object obj)       | Returns true if the specified object is valid and not a null reference, otherwise false.  This is typically used to check [VRCPlayerApi](#vrcplayerapi) objects after a player has left the instance, or [GameObject](https://docs.unity3d.com/ScriptReference/GameObject.html) objects that have been destroyed. |
 |   ✔️    | void    | ShuffleArray(int[] array) | Randomly shuffles each element in the array.                                                                                                                                                                                                                                                                      |
 
 ### VRCStation
+
 `class VRC.SDK3.Components.VRCStation` / `class VRC.SDKBase.VRCStation`
 
 #### Properties
+
 | Type                                                                                                 | Name                       | Summary                                                                                                                                                             |
 | ---------------------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Mobility](#mobility)                                                                                | PlayerMobility             | Determines if the player be able to move.  Default value is `VRCStation.Mobility.Immobilize`.                                                                       |
@@ -80,15 +89,18 @@ upstreamCommit: 5fd0244260a22b7bed0e807ab14a9b24dae23c2a
 | [Transform](https://docs.unity3d.com/ScriptReference/Transform.html)                                 | stationExitPlayerLocation  | Transform used to define where the user should be transported to when they are unseated                                                                             |
 
 #### Methods
+
 | Returns | Name                                              | Summary           |
 | ------- | ------------------------------------------------- | ----------------- |
 | void    | UseStation([VRCPlayerApi](#vrcplayerapi) player)  | Uses the station  |
 | void    | ExitStation([VRCPlayerApi](#vrcplayerapi) player) | Exits the station |
 
 ### Networking
+
 `static class VRC.SDKBase.Networking`
 
 #### Properties
+
 | Static | Type                          | Name             | Summary                                            |
 | :----: | ----------------------------- | ---------------- | -------------------------------------------------- |
 |   ✔️    | bool                          | isMaster         | Returns if the local player is the instance master |
@@ -96,6 +108,7 @@ upstreamCommit: 5fd0244260a22b7bed0e807ab14a9b24dae23c2a
 |   ✔️    | bool                          | IsNetworkSettled | Returns true if the network is ready               |
 
 #### Methods
+
 | Static | Returns                                                           | Name                                                                                                                       | Summary                                                                                             |
 | :----: | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 |   ✔️    | bool                                                              | IsOwner([VRCPlayerApi](#vrcplayerapi) player, [GameObject](https://docs.unity3d.com/ScriptReference/GameObject.html) obj)  | Returns if the given player is the owner over the object                                            |
@@ -111,29 +124,35 @@ upstreamCommit: 5fd0244260a22b7bed0e807ab14a9b24dae23c2a
 |   ✔️    | double                                                            | CalculateServerDeltaTime(double timeInSeconds, double previousTimeInSeconds)                                               | Calculates the difference between two server time stamps as returned by `GetServerTimeInSeconds()`. |
 
 ### TrackingData
+
 `struct VRC.SDKBase.VRCPlayerApi.TrackingData`
 
 #### Properties
+
 | Type                                                                   | Name     | Summary                                     |
 | ---------------------------------------------------------------------- | -------- | ------------------------------------------- |
 | [Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html)       | position | The position of the player's tracking point |
 | [Quaternion](https://docs.unity3d.com/ScriptReference/Quaternion.html) | rotation | The rotation of the player's tracking point |
 
 ### UdonBehaviour
+
 `class VRC.Udon.UdonBehaviour`
 
 A UdonBehaviour can be fetched with GetComponent.<br/>
 Currently *does not* support `GetComponent<T>()`
+
 ```cs
 UdonBehaviour behaviour = (UdonBehaviour)GetComponent(typeof(UdonBehaviour));
 ```
 
 #### Properties
+
 | Type | Name               | Summary                                                                                                                           |
 | ---- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | bool | DisableInteractive | Determines whether an object with an Interact event should accept pointer raycasts and show an interactable outline and tooltips. |
 
 #### Methods
+
 | Returns                                                   | Name                                                                                                         | Summary                                                                                                                                                            |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | void                                                      | SendCustomEvent(string eventName)                                                                            | Runs a public method on the behaviour                                                                                                                              |
@@ -146,9 +165,11 @@ UdonBehaviour behaviour = (UdonBehaviour)GetComponent(typeof(UdonBehaviour));
 | void                                                      | RequestSerialization()                                                                                       | Triggers the serialization and transmission of any synced variable data to remote clients.  This is typically used when a behaviour is set to manual syncing mode. |
 
 ### VRCPlayerApi
+
 `class VRC.SDKBase.VRCPlayerApi`
 
 #### Properties
+
 | Type   | Name        | Summary                                            |
 | ------ | ----------- | -------------------------------------------------- |
 | bool   | isLocal     | Returns if the given player is the local or remote |
@@ -157,6 +178,7 @@ UdonBehaviour behaviour = (UdonBehaviour)GetComponent(typeof(UdonBehaviour));
 | int    | playerId    | Returns the players instance id                    |
 
 #### Methods
+
 | Static | Returns                                                                | Name                                                                                                                                                                                                                                                       | Summary                                                                                                                                                                                                                                                                                                              |
 | :----: | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |        | bool                                                                   | IsPlayerGrounded()                                                                                                                                                                                                                                         | Returns if the player is on the ground or not                                                                                                                                                                                                                                                                        |
@@ -208,9 +230,11 @@ UdonBehaviour behaviour = (UdonBehaviour)GetComponent(typeof(UdonBehaviour));
 |        | [VRCPickup](#vrcpickup)                                                | GetPickupInHand([PickupHand](#pickuphand) hand)                                                                                                                                                                                                            | Returns the associated pickup object for the given hand.                                                                                                                                                                                                                                                             |
 
 ### InputManager
+
 `static class VRC.SDKBase.InputManager`
 
 #### Methods
+
 | Static | Returns                           | Name                                                                                                           | Summary                                                                                                        |
 | :----: | --------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 |   ✔️    | bool                              | IsUsingHandController()                                                                                        | Returns whether or not the user is using a hand controller.                                                    |
@@ -219,27 +243,32 @@ UdonBehaviour behaviour = (UdonBehaviour)GetComponent(typeof(UdonBehaviour));
 |   ✔️    | void                              | EnableObjectHighlight([Renderer](https://docs.unity3d.com/ScriptReference/Renderer.html) r, bool enable)       | Enables or disables object highlighting for the specified renderer.                                            |
 
 ### SerializationResult
+
 `struct VRC.Udon.Common`
 
 The results returned by the `OnPostSerialization` event.
 
 #### Constructor
+
 | Name                                             | Summary                                                         |
 | ------------------------------------------------ | --------------------------------------------------------------- |
 | SerializationResult(bool success, int byteCount) | Constructor.  Note that this can only be called at editor time. |
 
 #### Properties
+
 | Type | Name      | Summary                                           |
 | ---- | --------- | ------------------------------------------------- |
 | bool | success   | Whether the serialization attempt was successful. |
 | int  | byteCount | The number of bytes that were serialized.         |
 
 ### UdonInputEventArgs
+
 `struct VRC.Udon.Common.UdonInputEventArgs`
 
 Provides contextual data for an input event.
 
 #### Properties
+
 | Type                                      | Name       | Summary                                                                                                                                        |
 | ----------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | [UdonInputEventType](#udoninputeventtype) | eventType  | The type of input event that was fired.                                                                                                        |
@@ -248,42 +277,50 @@ Provides contextual data for an input event.
 | [HandType](#handtype)                     | handType   | The hand that the input event occurred on. For desktop users, the keyboard is the left hand and the mouse is the right hand.                   |
 
 ### VRCUrl
+
 `class VRC.SDKBase.VRCUrl`
 
 [VRCUrl](#vrcurl) objects currently cannot be constructed at runtime in Udon and are typically constructed at editor time via editor scripts, or retrieved from a [VRCUrlInputField](#vrcurlinputfield).
 
 #### Constructor
+
 | Name               | Summary                                                                                   |
 | ------------------ | ----------------------------------------------------------------------------------------- |
 | VRCUrl(string url) | Constructor that takes a URL as input.  Note that this can only be called at editor time. |
 
 #### Properties
+
 | Static | Type              | Name  | Summary       |
 | :----: | ----------------- | ----- | ------------- |
 |   ✔️    | [VRCUrl](#vrcurl) | Empty | An empty URL. |
 
 #### Methods
+
 | Returns | Name  | Summary                                 |
 | ------- | ----- | --------------------------------------- |
 | string  | Get() | Retrieves the current value of the URL. |
 
 ### VRCUrlInputField
+
 `class VRC.SDK3.Components.VRCUrlInputField`
 
 A UI component for end users to input a custom URL and output to Udon programs as a [VRCUrl](#vrcurl).
 
 #### Methods
+
 | Returns           | Name                          | Summary                                         |
 | ----------------- | ----------------------------- | ----------------------------------------------- |
 | [VRCUrl](#vrcurl) | GetUrl()                      | Retrieves the current value of the input field. |
 | void              | SetUrl([VRCUrl](#vrcurl) url) | Sets the URL displayed in the input field.      |
 
 ### VRCMirrorReflection
+
 `class VRC.SDK3.Components.VRCMirrorReflection` / `class VRC.SDKBase.VRC_MirrorReflection`
 
 A component that manages a mirror surface on an object.
 
 #### Properties
+
 | Type                                                                 | Name                   | Summary                                                                                                                              |
 | -------------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | bool                                                                 | m_DisablePixelLights   | Disables real-time pixel shaded point and spot lighting. Pixel shaded lights will fall-back to vertex lighting when this is enabled. |
@@ -291,6 +328,7 @@ A component that manages a mirror surface on an object.
 | [LayerMask](https://docs.unity3d.com/ScriptReference/LayerMask.html) | m_ReflectLayers        | Only objects on the selected layers will be rendered in the mirror. Objects on the Water layer are never rendered in mirrors.        |
 
 ### VRCObjectPool
+
 `class VRC.SDK3.Components.VRCObjectPool`
 
 VRC Object Pool provides a lightweight method of managing an array of game objects. The pool will manage and synchronize the active state of each object it holds.
@@ -302,27 +340,32 @@ When objects are enabled by the pool the OnSpawn event is fired, which an udon b
 Late joiners will have the objects automatically made active or inactive where appropriate.
 
 #### Properties
+
 | Type                                                                     | Name | Summary                                        |
 | ------------------------------------------------------------------------ | ---- | ---------------------------------------------- |
 | [GameObject[]](https://docs.unity3d.com/ScriptReference/GameObject.html) | Pool | The objects being managed by this object pool. |
 
 #### Methods
+
 | Returns                                                                | Name                                                                               | Summary                                                                                |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [GameObject](https://docs.unity3d.com/ScriptReference/GameObject.html) | TryToSpawn()                                                                       | Returns an unused object from the object pool where available, otherwise returns null. |
 | void                                                                   | Return([GameObject](https://docs.unity3d.com/ScriptReference/GameObject.html) obj) | Places the specified object back into the pool, freeing it up for future reuse.        |
 
 ### VRCObjectSync
+
 `class VRC.SDK3.Components.VRCObjectSync`
 
 This component will automatically sync the Transform (position, rotation scale) and Rigidbody (physics) of the object you put it on.
 
 #### Properties
+
 | Type | Name                            | Summary                                                                                    |
 | ---- | ------------------------------- | ------------------------------------------------------------------------------------------ |
 | bool | AllowCollisionOwnershipTransfer | Should ownership of object transfer if it collides with an object owned by another player. |
 
 #### Methods
+
 | Returns | Name                                                                                            | Summary                                                                                                                                                                                                  |
 | ------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | void    | SetKinematic(bool value)                                                                        | Changes the kinematic state, usually handled by the Rigidbody of the object but controlled here for sync purposes. When the kinematic state is on, this Rigidbody ignores forces, collisions and joints. |
@@ -332,11 +375,13 @@ This component will automatically sync the Transform (position, rotation scale) 
 | void    | Respawn()                                                                                       | Moves the object back to its original spawn location.                                                                                                                                                    |
 
 ### VRCAvatarPedestal
+
 `class VRC.SDK3.Components.VRCAvatarPedestal` / `class VRC.SDKBase.VRC_AvatarPedestal`
 
 A component used to display an avatar in a world, and allows users to switch to the associated avatar.
 
 #### Properties
+
 | Type                                                                 | Name               | Summary                                                                        |
 | -------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------ |
 | string                                                               | blueprintId        | Blueprint Id of the avatar to be shown.                                        |
@@ -345,17 +390,20 @@ A component used to display an avatar in a world, and allows users to switch to 
 | float                                                                | scale              | How big or small the avatar should be, only affects the pedestal avatar.       |
 
 #### Methods
+
 | Returns | Name                                                   | Summary                                                                                                                              |
 | ------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
 | void    | SwitchAvatar(string id)                                | Changes the blue print id associated with the pedestal and updates the view for all users.                                           |
 | void    | SetAvatarUse([VRCPlayerApi](#vrcplayerapi) instigator) | Causes the player to switch to the associated avatar. `instigator` must be the local player as returned by `Networking.LocalPlayer`. |
 
 ### VRCPickup
+
 `class VRC.SDK3.Components.VRCPickup` / `class VRC.SDKBase.VRC_Pickup`
 
 A component used to allow objects to be picked up and held.
 
 #### Properties
+
 | Type                                                                 | Name                          | Summary                                                                                                                                                                                               |
 | -------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [ForceMode](https://docs.unity3d.com/ScriptReference/ForceMode.html) | MomentumTransferMethod        | This defines how the collision force will be added to the other object which was hit, using `Rigidbody.AddForceAtPosition`. Note that the force will only be added if `AllowCollisionTransfer` is on. |
@@ -376,6 +424,7 @@ A component used to allow objects to be picked up and held.
 | [PickupHand](#pickuphand)                                            | currentHand                   | The hand that the player is holding the pickup with.                                                                                                                                                  |
 
 #### Methods
+
 | Returns | Name                                                                  | Summary                                                                                                                                        |
 | ------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | void    | Drop()                                                                | Drops the pickup if it is being held by a player.                                                                                              |
@@ -384,24 +433,27 @@ A component used to allow objects to be picked up and held.
 | void    | PlayHaptics()                                                         | Plays haptic feedback on the player's controller.                                                                                              |
 
 ### VRCPortalMarker
+
 `class VRC.SDK3.Components.VRCPortalMarker` / `class VRC.SDKBase.VRC_PortalMarker`
 
 A component used to create portals to other rooms.
 
 #### Properties
+
 | Type   | Name   | Summary                          |
 | ------ | ------ | -------------------------------- |
 | string | roomId | Room Id of the destination room. |
 
 #### Methods
+
 | Returns | Name            | Summary                                       |
 | ------- | --------------- | --------------------------------------------- |
 | void    | RefreshPortal() | Refreshes the portal displayed to the player. |
 
-
 ## Enums
 
 ### EventTiming
+
 `enum VRC.Udon.Common.Enums.EventTiming`
 
 | Name        | Summary                                                 |
@@ -411,6 +463,7 @@ A component used to create portals to other rooms.
 | FixedUpdate | The event is fired in during the `FixedUpdate()` event. |
 
 ### Mobility
+
 `enum VRC.SDKBase.VRCStation.Mobility`
 
 | Name                 | Summary                                               |
@@ -420,6 +473,7 @@ A component used to create portals to other rooms.
 | ImmobilizeForVehicle | Same as Immobilized but optimized for moving stations |
 
 ### NetworkEventTarget
+
 `enum VRC.Udon.Common.Interfaces.NetworkEventTarget`
 
 | Name  | Summary                     |
@@ -428,6 +482,7 @@ A component used to create portals to other rooms.
 | Owner | Owner of the game object    |
 
 ### SpawnOrientation
+
 `enum VRC.SDKBase.VRC_SceneDescriptor.SpawnOrientation`
 
 | Name                      | Summary                                                                                  |
@@ -437,6 +492,7 @@ A component used to create portals to other rooms.
 | AlignRoomWithSpawnPoint   | Aligns players room scale to be centered on spawn point                                  |
 
 ### TrackingDataType
+
 `enum VRC.SDKBase.VRCPlayerApi.TrackingDataType`
 
 | Name      | Summary                               |
@@ -447,6 +503,7 @@ A component used to create portals to other rooms.
 | Origin    | The player's playspace origin         |
 
 ### VRCInputMethod
+
 `enum VRC.SDKBase.VRCInputMethod`
 
 | Name       | Value | Summary                                    |
@@ -460,6 +517,7 @@ A component used to create portals to other rooms.
 | Count      | 7     | Maximum number of input methods available. |
 
 ### HandType
+
 `enum VRC.Udon.Common.HandType`
 
 | Name  | Summary    |
@@ -468,6 +526,7 @@ A component used to create portals to other rooms.
 | LEFT  | Left hand  |
 
 ### UdonInputEventType
+
 `enum VRC.Udon.Common.UdonInputEventType`
 
 | Name   | Summary      |
@@ -476,6 +535,7 @@ A component used to create portals to other rooms.
 | AXIS   | Axis event   |
 
 ### VideoError
+
 `enum VRC.SDK3.Components.Video.VideoError`
 
 | Name         | Summary       |
@@ -487,6 +547,7 @@ A component used to create portals to other rooms.
 | RateLimited  | Rate Limited  |
 
 ### AutoHoldMode
+
 `enum VRC.SDK3.Components.VRCPickup.AutoHoldMode` / `enum VRC.SDKBase.VRC_Pickup.AutoHoldMode`
 
 | Name       | Summary                                                                                                         |
@@ -496,6 +557,7 @@ A component used to create portals to other rooms.
 | No         | After the grab button is released the pickup is let go.                                                         |
 
 ### PickupOrientation
+
 `enum VRC.SDK3.Components.VRCPickup.PickupOrientation` / `enum VRC.SDKBase.VRC_Pickup.PickupOrientation`
 
 | Name | Summary          |
@@ -505,6 +567,7 @@ A component used to create portals to other rooms.
 | Gun  | Gun orientation  |
 
 ### PickupHand
+
 `enum VRC.SDK3.Components.VRCPickup.PickupHand` / `enum VRC.SDKBase.VRC_Pickup.PickupHand`
 
 | Name  | Summary    |
@@ -513,20 +576,24 @@ A component used to create portals to other rooms.
 | Left  | Left hand  |
 | Right | Right hand |
 
-
 # Supported Features
 
 ## Synced Variables
+
 These variables are available for syncing across the network with the [UdonSynced](https://udonsharp.docs.vrchat.com/udonsharp/#udonsynced) attribute.
 ::: info
 In the lists below, 'size' refers to the **approximate** size in memory. When networked, the data is serialized, which may lead to more data being transmitted. For example, syncing a `bool` will send **at least** 1 byte of data (instead of 1 bit) in addition to any networking overhead.
 To find out how many bytes of serialized data were, use `byteCount` in the [`OnPostSerialization`](/creators.vrchat.com/worlds/udon/networking/network-components#onpostserialization) event. You can find more information about syncing on Udon's [Network Specs](/creators.vrchat.com/worlds/udon/networking/network-details#data-and-specs) page.
 :::
+
 ### Boolean  types
+
 | Type | Size   |
 | ---- | ------ |
 | bool | 1 byte |
+
 ### Integral numeric types
+
 | Type   | Range                                                   | Size    |
 | ------ | ------------------------------------------------------- | ------- |
 | sbyte  | -128 to 127                                             | 1 byte  |
@@ -537,29 +604,39 @@ To find out how many bytes of serialized data were, use `byteCount` in the [`OnP
 | uint   | 0 to 4,294,967,295                                      | 4 bytes |
 | long   | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 8 bytes |
 | ulong  | 0 to 18,446,744,073,709,551,615                         | 8 bytes |
+
 ### Floating-point numeric types
+
 | Type   | Approximate range                   | Precision     | Size    |
 | ------ | ----------------------------------- | ------------- | ------- |
 | float  | ±1.5 x 10^(−45) to ±3.4 x 10^(38)   | ~6-9 digits   | 4 bytes |
 | double | ±5.0 × 10^(−324) to ±1.7 × 10^(308) | ~15-17 digits | 8 bytes |
+
 ### Vector mathematics types and structures (Unity)
+
 | Type                                                                   | Range         | Size     |
 | ---------------------------------------------------------------------- | ------------- | -------- |
 | [Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html)       | same as float | 8 bytes  |
 | [Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html)       | same as float | 12 bytes |
 | [Vector4](https://docs.unity3d.com/ScriptReference/Vector4.html)       | same as float | 16 bytes |
 | [Quaternion](https://docs.unity3d.com/ScriptReference/Quaternion.html) | same as float | 16 bytes |
+
 ### Color structures
+
 | Type                                                             | Range / Precision | Size     |
 | ---------------------------------------------------------------- | ----------------- | -------- |
 | [Color](https://docs.unity3d.com/ScriptReference/Color.html)     | same as float     | 16 bytes |
 | [Color32](https://docs.unity3d.com/ScriptReference/Color32.html) | same as byte      | 4 bytes  |
+
 ### Text types and structures
+
 | Type   | Range            | Size           |
 | ------ | ---------------- | -------------- |
 | char   | U+0000 to U+FFFF | 2 bytes        |
 | string | same as char     | 2 bytes / char |
+
 ### Other structures
+
 | Type              | Range            | Size           |
 | ----------------- | ---------------- | -------------- |
 | [VRCUrl](#vrcurl) | U+0000 to U+FFFF | 2 bytes / char |

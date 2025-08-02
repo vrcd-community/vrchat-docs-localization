@@ -1,0 +1,8 @@
+default: true
+
+MD033: false
+
+MD004:
+  style: dash
+
+MD020: false

@@ -8,7 +8,8 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 Looking to make a new project in Unity 2022? Luckily it's pretty easy: The Creator Companion will handle most of the work for you!
 
 ### Download the Creator Companion
-**If you don't already have the VCC**, you'll need to download it! 
+
+**If you don't already have the VCC**, you'll need to download it!
 
 Follow the steps on our [Getting Started](/creators.vrchat.com/sdk/) page.
 

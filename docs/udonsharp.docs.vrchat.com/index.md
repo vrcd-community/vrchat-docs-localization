@@ -9,8 +9,9 @@ upstreamCommit: 09a1b3172578b1a3b886bbe184ab6c4cb65943c7
 UdonSharp is a compiler that compiles C# to Udon assembly. UdonSharp is not currently conformant to any version of the C# language specification, so there are many things that are not implemented or will not work.
 
 ## C# features supported
+
 - Flow control
-    - Supports: `if` `else` `while` `for` `do` `foreach` `switch` `return` `break` `continue` `ternary operator (condition ? true : false)` `??`
+  - Supports: `if` `else` `while` `for` `do` `foreach` `switch` `return` `break` `continue` `ternary operator (condition ? true : false)` `??`
 - Implicit and explicit type conversions
 - Arrays and array indexers
 - All builtin arithmetic operators
@@ -29,6 +30,7 @@ UdonSharp is a compiler that compiles C# to Udon assembly. UdonSharp is not curr
 - Recursive method calls are supported via the `[RecursiveMethod]` attribute
 
 ## Differences from regular Unity C# to note
+
 - For the best experience making UdonSharp scripts, make your scripts inherit from `UdonSharpBehaviour` instead of `MonoBehaviour`
 - If you need to call `GetComponent<UdonBehaviour>()` you will need to use `(UdonBehaviour)GetComponent(typeof(UdonBehaviour))` at the moment since the generic get component is not exposed for UdonBehaviour yet. `GetComponent<T>()` works for other Unity component types though.
 - Udon currently only supports array `[]` collections and by extension UdonSharp only supports arrays at the moment. It looks like they might support `List<T>` at some point, but it is not there yet.
@@ -38,21 +40,25 @@ UdonSharp is a compiler that compiles C# to Udon assembly. UdonSharp is not curr
 - The internal type of variables returned by `.GetType()` will not always match what you may expect since U# abstracts some types in order to make them work in Udon. For instance, any jagged array type will return a type of `object[]` instead of something like `int[][]` for a 2D int jagged array.
 
 ## Udon bugs that affect U#
-- Mutating methods on structs do not modify the struct (this can be seen on things like calling Normalize() on a Vector3) https://vrchat.canny.io/vrchat-udon-closed-alpha-bugs/p/raysetorigin-and-raysetdirection-not-working
+
+- Mutating methods on structs do not modify the struct (this can be seen on things like calling Normalize() on a Vector3) <https://vrchat.canny.io/vrchat-udon-closed-alpha-bugs/p/raysetorigin-and-raysetdirection-not-working>
 
 ## Setup
 
 ### Requirements
+
 - Unity 2019.4.31f1
 - [VRCSDK3 + UdonSDK](https://vrchat.com/home/download)
 - The latest [release](https://github.com/vrchat-community/UdonSharp/releases/latest) of UdonSharp
 
 ### Installation
+
 1. Read the getting started with Udon doc page /docs.vrchat.com/docs/getting-started-with-udon this has basic installation instructions for Udon.
 2. Install the latest version of the VRCSDK3 linked on the getting started.
 3. Get the latest release of UdonSharp from [here](https://github.com/vrchat-community/UdonSharp/releases/latest) and install it to your project.
 
 ### Getting started
+
 1. Make a new object in your scene
 2. Add an `Udon Behaviour` component to your object
 3. Below the "New Program" button click the dropdown and select "Udon C# Program Asset"
@@ -63,6 +69,7 @@ UdonSharp is a compiler that compiles C# to Udon assembly. UdonSharp is not curr
 #### Asset explorer asset creation
 
 Instead of creating assets from an UdonBehaviour you can also do the following:
+
 1. Right-click in your project asset explorer
 2. Navigate to Create > U# script
 3. Click U# script, this will open a create file dialog
@@ -97,6 +104,4 @@ For more example scripts take a look at the wiki page for [examples](https://git
 - See [CONTRIBUTORS.md](https://github.com/vrchat-community/UdonSharp/blob/master/CONTRIBUTORS.md) for people who have helped provide improvments to UdonSharp
 - The open source project [Harmony](https://github.com/pardeike/Harmony) helps Udonsharp provide a better editor experience
 
-
-# 
 [![Discord](https://img.shields.io/badge/Discord-Merlin%27s%20Discord%20Server-blueviolet?logo=discord)](https://discord.gg/Ub2n8ZA)

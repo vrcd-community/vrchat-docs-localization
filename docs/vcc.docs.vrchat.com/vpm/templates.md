@@ -3,18 +3,23 @@ upstreamCommit: b30aec8ae69d86b6db951b628cbd3698f21766c9
 ---
 
 # 模板
+
 模板用于创建预装了 VRChat 包和设置的新 Unity 项目。
 
 ## 官方模板
+
 创作者助手包含三个模板：
 
 ### Avatar
+
 此模板包括基础和 Avatar SDK，您可以使用 [Avatars 3.0](/creators.vrchat.com/avatars/) 构建和上传 Avatar。
 
 ### World
+
 此模板包括基础和 World SDK，您可以使用 Udon 程序和预设构建和上传 World。它还包括 [ClientSim](https://clientsim.docs.vrchat.com/)，以便您在开发过程中轻松测试您的 World。
 
 ### UdonSharp
+
 此模板包括上述 World 模板中的所有内容，以及 [UdonSharp](https://github.com/vrchat-community/UdonSharp)，用于使用类似 C# 的语法编写您的程序。
 
 ::: tip
@@ -36,32 +41,35 @@ upstreamCommit: b30aec8ae69d86b6db951b628cbd3698f21766c9
 
 ```json
 {
-	"name" : "user.vrchat.template.hypeWorld",
-	"displayName" : "Hype World Project",
-	"description" : "Udon world with my auto-Hype-Generator tool",
-	"defaultScene" : "Assets/Hype.unity",
-	"version" : "1.0.0",
-	"category" : "ProjectTemplate",
-	"dependencies" : {}
+ "name" : "user.vrchat.template.hypeWorld",
+ "displayName" : "Hype World Project",
+ "description" : "Udon world with my auto-Hype-Generator tool",
+ "defaultScene" : "Assets/Hype.unity",
+ "version" : "1.0.0",
+ "category" : "ProjectTemplate",
+ "dependencies" : {}
 }
 ```
+
 目前只需要 `name` 和 `displayName` 字段。请注意，`defaultScene` 是 Unity 规范的一部分，但似乎不起作用。
 
 <!-- zhlint ignore: 4,. -->
 
 4a. 如果我的 Hype Generator 工具在 VCC 中作为一个 VPM 兼容的包可用，我可以将它添加到 HypeWorld\Packages\vpm-manifest.json 中的 vpmDependencies 列表中：
+
 ```json
 {
-	"dependencies" : {
-		"com.vrchat.worlds" : {
-			"version" : "^3.1.x"
-		},
-		"com.mydomain.hype" : {
-			"version" : "1.0.x"
-		}
-	}
+ "dependencies" : {
+  "com.vrchat.worlds" : {
+   "version" : "^3.1.x"
+  },
+  "com.mydomain.hype" : {
+   "version" : "1.0.x"
+  }
+ }
 }
 ```
+
 4b. 如果这个工具还没有迁移到 VPM，而是应该放在 Assets 文件夹中，您可以将它复制到 `HypeWorld\Assets` 中。Assets、Packages 和 ProjectSettings 文件夹中的所有内容都将被复制到您的新项目中。确保您*排除*文件 ProjectSettings/ProjectVersion.txt。这不包含在 World 模板中，但如果您从现有项目中复制文件，它将在您的 ProjectSettings 文件夹中。
 
 有了这个文件夹，当选择创建新项目时，您的模板现在应该会出现在模板功能界面的右侧：

@@ -34,7 +34,7 @@ VRChat Avatar 3.0 SDK (以下简称 Avatar SDK) 是 VRChat 为您提供的虚拟
 
 ## 基础概念
 
-为了更好地理解和利用 Avatar SDK 所提供的功能，您需要首先掌握一些基础概念。这些信息将有助于您理解一个 _VRChat 虚拟形象 _ 的基本构造、运作方式，以便更好地结合 Avatar SDK 所提供的功能，实现最佳效果。
+为了更好地理解和利用 Avatar SDK 所提供的功能，您需要首先掌握一些基础概念。这些信息将有助于您理解一个 _VRChat 虚拟形象_ 的基本构造、运作方式，以便更好地结合 Avatar SDK 所提供的功能，实现最佳效果。
 
 ### 一、Unity 系统
 
@@ -48,6 +48,7 @@ VRChat Avatar 3.0 SDK (以下简称 Avatar SDK) 是 VRChat 为您提供的虚拟
 - Avatar 遮罩
 
 进阶内容：
+
 - 状态退出时间
 - 动画的循环时间
 - 动画层间的时间同步

@@ -10,16 +10,17 @@ You can [call events from your Animations](https://docs.unity3d.com/2019.4/Docum
 ![animation-events-af04d2a-AnimationEventInspector.png](/creators.vrchat.com/images/worlds/animation-events-af04d2a-AnimationEventInspector.png)
 
 ## Allowed Animation Events
-* RunProgram
-* SendCustomEvent
-* Play
-* Pause
-* Stop
-* PlayInFixedTime
-* Rebind
-* SetBool
-* SetFloat
-* SetInteger
-* SetTrigger
-* ResetTrigger
-* SetActive
+
+- RunProgram
+- SendCustomEvent
+- Play
+- Pause
+- Stop
+- PlayInFixedTime
+- Rebind
+- SetBool
+- SetFloat
+- SetInteger
+- SetTrigger
+- ResetTrigger
+- SetActive

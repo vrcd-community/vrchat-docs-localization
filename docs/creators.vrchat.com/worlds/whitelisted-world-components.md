@@ -10,7 +10,9 @@ The following is the complete list of scripts usable within worlds. Components t
 
 The Quest version of VRChat has some exceptions to this list. Check [here](/creators.vrchat.com/platforms/android/quest-content-limitations#components) for more info.
 :::
+
 ## Unity Components
+
 - WindZone
 - VideoPlayer
 - Tilemap
@@ -88,6 +90,7 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/crea
 - MeshRenderer
 
 ### Unity Components
+
 - [ParticleSystemForceField](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParticleSystemForceField.html)
 - [AimConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AimConstraint.html)
 - [LookAtConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-LookAtConstraint.html)
@@ -97,21 +100,24 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/crea
 - [ScaleConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ScaleConstraint.html)
 
 ## VRChat Components
-- [*VRC_IKFollower*](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated. Use [Constraints](https://docs.unity3d.com/2019.4/Documentation/Manual/Constraints.html) instead! 
-- [VRC_AvatarPedestal](/creators.vrchat.com/worlds/components/vrc_avatarpedestal) 
-- [VRC_PortalMarker](/creators.vrchat.com/worlds/components/vrc_portalmarker) 
-- [VRC_MirrorReflection](/creators.vrchat.com/worlds/components/vrc_mirrorreflection) 
+
+- [*VRC_IKFollower*](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated. Use [Constraints](https://docs.unity3d.com/2019.4/Documentation/Manual/Constraints.html) instead!
+- [VRC_AvatarPedestal](/creators.vrchat.com/worlds/components/vrc_avatarpedestal)
+- [VRC_PortalMarker](/creators.vrchat.com/worlds/components/vrc_portalmarker)
+- [VRC_MirrorReflection](/creators.vrchat.com/worlds/components/vrc_mirrorreflection)
 - [VRC_SceneDescriptor](/creators.vrchat.com/worlds/components/vrc_scenedescriptor)  
-- [VRC_SpatialAudioSource](/creators.vrchat.com/worlds/components/vrc_spatialaudiosource) 
-- [VRC_Station](/creators.vrchat.com/worlds/components/vrc_station) 
-- [VRC_UiShape](/creators.vrchat.com/worlds/components/vrc_uishape) 
-- [VRCPipelineManager](/creators.vrchat.com/sdk/vrcpipelinemanager) 
+- [VRC_SpatialAudioSource](/creators.vrchat.com/worlds/components/vrc_spatialaudiosource)
+- [VRC_Station](/creators.vrchat.com/worlds/components/vrc_station)
+- [VRC_UiShape](/creators.vrchat.com/worlds/components/vrc_uishape)
+- [VRCPipelineManager](/creators.vrchat.com/sdk/vrcpipelinemanager)
 
 ## Dynamic Bone
+
 - DynamicBone
 - DynamicBoneCollider
 
 ## Text Mesh Pro
+
 - TMP_Dropdown
 - TMP_InputField
 - TMP_ScrollbarEventHandler
@@ -126,6 +132,7 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/crea
 - TMP_Dropdown
 
 ## Unity Event System
+
 - EventSystem
 - EventTrigger
 - UIBehaviour
@@ -138,6 +145,7 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/crea
 - PhysicsRaycaster
 
 ## Unity UI
+
 - Button
 - Dropdown
 - Dropdown
@@ -171,15 +179,18 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/crea
 - Shadow
 
 ## Post Processing Stack V2
+
 ::: warning Post Processing Stack v1
 
 PPSv1 is not supported in either VRCSDK2 or VRCSDK3. It has been deprecated by Unity.
 :::
+
 - PostProcessDebug
 - PostProcessLayer
 - PostProcessVolume
 
 ## AVPro
+
 - ApplyToMaterial
 - ApplyToMesh
 - AudioOutput
@@ -189,12 +200,14 @@ PPSv1 is not supported in either VRCSDK2 or VRCSDK3. It has been deprecated by U
 - SubtitlesUGUI
 
 ## Oculus Spatializer Unity
+
 - ONSPReflectionZone
 - OculusSpatializerUnity
 - ONSPAmbisonicsNative
 - ONSPAudioSource
 
 ## Final IK
+
 - BipedIK
 - FingerRig
 - Grounder

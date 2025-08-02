@@ -5,6 +5,7 @@ upstreamCommit: 4d76fd612a37de18fd85c39062bade59afffb7cf
 # 自动化测试
 
 ClientSim 有许多不同的测试来验证程序的行为。大多数测试是集成测试，但也支持单元测试。请查看 Unity 的 TestRunner 以查看所有测试。当将 ClientSim 作为包导入时，可以通过在 `“dependencies” :{}` 部分后面的项目包清单中添加以下行来启用测试：
+
 ```json
 "testables": [
   "com.unity.inputsystem",
@@ -32,9 +33,9 @@ ClientSim 现在有一个完整的集成测试框架，可以测试包含的大�
 
 两个集成测试夹具都带有帮助验证特定行为的方法。
 
-* **ClientSimTestHelpers** - 这个类包含了一些有用的方法，以及监听不同的 ClientSim 事件来验证是否发生了操作。
+- **ClientSimTestHelpers** - 这个类包含了一些有用的方法，以及监听不同的 ClientSim 事件来验证是否发生了操作。
 
-* **ClientSimTestInput** - 这个类允许用户设置任何基于桌面的输入事件的值。
+- **ClientSimTestInput** - 这个类允许用户设置任何基于桌面的输入事件的值。
 
 ### ClientSimTestBase
 
@@ -48,39 +49,51 @@ ClientSim 现在有一个完整的集成测试框架，可以测试包含的大�
 以下是集成测试的列表：
 
 #### 初始化测试
-* 测试 ClientSim 在不同设置和初始场景对象下的启动行为。
+
+- 测试 ClientSim 在不同设置和初始场景对象下的启动行为。
 
 #### 辅助测试
-* 测试各种 ClientSim SDK 辅助类的行为。AudioSpatializer，AVProVideoPlayer，ObjectPool，ObjectSync，没有程序的 Udon 组件，UIShape。
+
+- 测试各种 ClientSim SDK 辅助类的行为。AudioSpatializer，AVProVideoPlayer，ObjectPool，ObjectSync，没有程序的 Udon 组件，UIShape。
 
 #### 交互测试
-* 测试交互系统处理可交互对象的能力。请注意，由于 Udon 需要外部引用并且经常编译，因此无法在包中正确包含，此测试使用模拟可交互对象脚本。
+
+- 测试交互系统处理可交互对象的能力。请注意，由于 Udon 需要外部引用并且经常编译，因此无法在包中正确包含，此测试使用模拟可交互对象脚本。
 
 #### 拾取测试
-* 测试交互系统、玩家手和输入在不同拾取情况下的行为。
+
+- 测试交互系统、玩家手和输入在不同拾取情况下的行为。
 
 #### 玩家 API 测试
-* 测试所有与 VRCPlayerApi 相关的公开方法的行为。
+
+- 测试所有与 VRCPlayerApi 相关的公开方法的行为。
 
 #### 玩家控制器测试
-* 测试玩家的移动设置。
+
+- 测试玩家的移动设置。
 
 #### 站点测试
-* 测试使用站点和预期的站点行为。
+
+- 测试使用站点和预期的站点行为。
 
 #### UI 测试
-* 使用 VRC_UIShape 组件测试与 Unity UI 的交互。
+
+- 使用 VRC_UIShape 组件测试与 Unity UI 的交互。
 
 ### ClientSimWorldTestBase
 
 从这个类派生的测试夹具用于测试完整的世界，并验证给定世界的 ClientSim 的启动。测试需要在测试的设置阶段加载给定的世界，然后 ClientSim 将正常启动，就像在测试环境外通过进入播放模式一样。由于 ClientSim 正常启动，因此一次只能运行一个测试，因为所有测试只启动一次播放模式。如果同时运行多个测试，它们将立即失败，并显示警告，只能一次运行一个测试。
 
 默认提供了三个世界测试：
+
 #### 没有世界描述符
-* 如果加载了没有世界描述符的场景，测试 ClientSim 将无法启动。
+
+- 如果加载了没有世界描述符的场景，测试 ClientSim 将无法启动。
 
 #### 两个玩家
-* 在基本世界中正常启动 ClientSim，生成一个远程玩家，并验证两个玩家的所有数据。
+
+- 在基本世界中正常启动 ClientSim，生成一个远程玩家，并验证两个玩家的所有数据。
 
 #### WorldTestExample
-* 这是一个示例测试，展示了用户为他们的世界编写测试的情况。测试包含在 ClientSim 包的样本中，必须导入。测试展示了如何验证一个简单的 “谜题” 世界。
+
+- 这是一个示例测试，展示了用户为他们的世界编写测试的情况。测试包含在 ClientSim 包的样本中，必须导入。测试展示了如何验证一个简单的 “谜题” 世界。

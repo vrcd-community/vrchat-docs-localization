@@ -5,7 +5,7 @@ upstreamCommit: 85cb3e281463697dff436fdb034a8d4e1bc29eb3
 
 # Player Positions
 
-Here are the nodes relating to Players' positions. For nodes that deal with forces relating to Players, see [Player Forces](/creators.vrchat.com/worlds/udon/players/player-forces). 
+Here are the nodes relating to Players' positions. For nodes that deal with forces relating to Players, see [Player Forces](/creators.vrchat.com/worlds/udon/players/player-forces).
 
 ### GetPosition
 
@@ -49,7 +49,6 @@ Send a Player to a new spot and specified rotation, unless a Station does not al
 
 ::: info Teleporting other players
 
-TeleportTo only works with the [local player](/creators.vrchat.com/worlds/udon/players/getting-players#networkingget-localplayer). You can use [networking](/creators.vrchat.com/worlds/udon/networking/) to cause other players to teleport themselves. 
+TeleportTo only works with the [local player](/creators.vrchat.com/worlds/udon/players/getting-players#networkingget-localplayer). You can use [networking](/creators.vrchat.com/worlds/udon/networking/) to cause other players to teleport themselves.
 
 :::
-

@@ -4,17 +4,17 @@ upstreamCommit: 66e5a0c1bb2b12b3de3d1341bb8de76083f7d070
 
 # Examples
 
-* [Spinning Cube](#spinning-cube)
-* [Player Settings](#player-settings)
-* [Interact](#interact)
-* [Teleport Player](#teleport-player)
-* [Get Players](#get-players)
-* [UdonSharp Script Example](#udonsharp-script-example)
-
+- [Spinning Cube](#spinning-cube)
+- [Player Settings](#player-settings)
+- [Interact](#interact)
+- [Teleport Player](#teleport-player)
+- [Get Players](#get-players)
+- [UdonSharp Script Example](#udonsharp-script-example)
 
 ---
 
 ### Spinning Cube
+
 ```cs
 using UnityEngine;
 using UdonSharp;
@@ -29,6 +29,7 @@ public class RotatingCubeBehaviour : UdonSharpBehaviour
 ```
 
 ### Player Settings
+
 ```cs
 using UnityEngine;
 using UdonSharp;
@@ -54,9 +55,11 @@ public class PlayerModSettings : UdonSharpBehaviour
     }
 }
 ```
+
 A more advanced example is located in the [examples folder of UdonSharp](https://github.com/Merlin-san/UdonSharp/blob/master/Assets/UdonSharp/Examples/Utilities/PlayerModSetter.cs).
 
 ### Interact
+
 ```cs
 using UnityEngine;
 using UdonSharp;
@@ -71,6 +74,7 @@ public class ClickMe: UdonSharpBehaviour
 ```
 
 ### Teleport Player
+
 ```cs
 using UdonSharp;
 using UnityEngine;
@@ -91,7 +95,9 @@ public class TeleportPlayer : UdonSharpBehaviour
 ```
 
 ### Get Players
+
 Example on how to get all players in the instance.
+
 ```cs
 using UdonSharp;
 using UnityEngine;
@@ -115,7 +121,9 @@ public class GetPlayersExample : UdonSharpBehaviour
 ```
 
 ### UdonSharp Script Example
+
 This is an example class for UdonSharp and how it communicates with other UdonSharp behaviours.
+
 ```cs
 using UdonSharp;
 using UnityEngine;

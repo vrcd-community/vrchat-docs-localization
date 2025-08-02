@@ -11,27 +11,28 @@ Occasionally, VRChat will update within minor Unity versions. For example, VRCha
 
 1. Close all of your open Unity projects.
 
-2. Check the [Currently Supported Unity Version](/creators.vrchat.com/sdk/upgrade/current-unity-version) and install the new version of Unity via Unity Hub. 
+2. Check the [Currently Supported Unity Version](/creators.vrchat.com/sdk/upgrade/current-unity-version) and install the new version of Unity via Unity Hub.
     - Although we list the standalone installer on that page, we strongly recommend using the Hub. For this doc, we're assuming you're using it.
 
 ## Copy your project
 
 1. Copy or back up your project.
-	- If you're using the [VRChat Creator Companion](https://creators.vrchat.com/), it will automatically suggest copying your project before migrating it. You can create a backup of your project with the "Make Backup" button.
-	- Otherwise, duplicate the whole project folder and give it a new name.
-	- Export your entire project as a Unity Package. This takes a long time and may cause errors.
+
+- If you're using the [VRChat Creator Companion](https://creators.vrchat.com/), it will automatically suggest copying your project before migrating it. You can create a backup of your project with the "Make Backup" button.
+- Otherwise, duplicate the whole project folder and give it a new name.
+- Export your entire project as a Unity Package. This takes a long time and may cause errors.
 
 :::danger Don't skip this step!
 Upgrades can fail. If you keep your original project files safe, you can restore them, try again, and find out what went wrong.
 
 Without a backup, you don't get a second try. If you make a mistake or the upgrade fails, fixing it may be difficult or even impossible.
-::: 
+:::
 
 If you're an advanced user and know how to use version control like [Git](https://git-scm.com/), you should use that.
 
 ## Open your project
 
-1. Open the copy of your project in the new version. 
+1. Open the copy of your project in the new version.
     - You'll get some upgrade warnings. This is fine! Click the affirmative button.
 
 2. After some time, your migration will be complete. That's it!
@@ -64,6 +65,7 @@ If your project is large, migration might take a long time. There are a few fold
 /Logs/
 /UserSettings/
 ```
+
 #### Version warnings
 
 The SDK may warn you that you're on the wrong version, even though you _know_ you're on the correct one.

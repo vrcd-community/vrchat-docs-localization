@@ -21,9 +21,10 @@ Exposes a subset of Unity’s built-in \`Graphics\` class. See documented functi
 
 Copies source texture into destination RenderTexture with a shader. Note that we do not allow you to supply a null destination.
 
-See: https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Graphics.Blit.html
+See: <https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Graphics.Blit.html>
 
 #### Minimap Example
+
 The version of the SDK installed by [the Creator Companion](https://vcc.docs.vrchat.com) includes an example scene that provides a performant Minimap as an example use of Graphics.Blit. You can open it from the Unity Menu Bar under VRChat SDK > Samples > Minimap. This example uses the Udon Graph, it's also available as [an UdonSharp example](https://assets.vrchat.com/sdkExamples/com.vrchat-examples.minimap-1.0.0.unitypackage).
 
 ![index-aecb84d-minimap-example.png](/creators.vrchat.com/images/worlds/index-aecb84d-minimap-example.png)
@@ -42,7 +43,7 @@ Failing to do so will cause the operation to fail.
 
 Draw the same mesh multiple times using GPU instancing.
 
-See: https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Graphics.DrawMeshInstanced.html
+See: <https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Graphics.DrawMeshInstanced.html>
 
 ### VRCShader.PropertyToID()
 
@@ -50,7 +51,7 @@ Use PropertyToID to get an ID based on a shader property name. Call this functio
 
 Note that the property name must be prefixed with “\_Udon”, or be the literal string “\_AudioTexture” in order to be used with VRCShader.SetGlobal, however, will still return the ID regardless of this.
 
-See: https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Shader.PropertyToID.html
+See: <https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Shader.PropertyToID.html>
 
 ### VRCShader.SetGlobal()
 
@@ -58,12 +59,12 @@ Use the ID acquired with PropertyToID as a key and specify a value of the correc
 
 Available variants:
 
-  * VRCShader.SetGlobalColor()
-  * VRCShader.SetGlobalFloat()
-  * VRCShader.SetGlobalFloatArray()
-  * VRCShader.SetGlobalInteger() still sets the value as `float` for now, due to a Unity bug
-  * VRCShader.SetGlobalMatrix()
-  * VRCShader.SetGlobalMatrixArray()
-  * VRCShader.SetGlobalTexture()
-  * VRCShader.SetGlobalVector()
-  * VRCShader.SetGlobalVectorArray()
+- VRCShader.SetGlobalColor()
+- VRCShader.SetGlobalFloat()
+- VRCShader.SetGlobalFloatArray()
+- VRCShader.SetGlobalInteger() still sets the value as `float` for now, due to a Unity bug
+- VRCShader.SetGlobalMatrix()
+- VRCShader.SetGlobalMatrixArray()
+- VRCShader.SetGlobalTexture()
+- VRCShader.SetGlobalVector()
+- VRCShader.SetGlobalVectorArray()

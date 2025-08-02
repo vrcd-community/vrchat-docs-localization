@@ -28,9 +28,9 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直
 > 注意：可以试试使用即将推出的 VRChat 创作者助手公开 Beta 版本，安装将会更加简单。
 >
 - 在您的项目中，打开 Unity 包管理器，点击 + 按钮并选择 ‘从 git URL 添加包...’。
-    - 输入 `https://github.com/vrchat/packages.git?path=/packages/com.vrchat.base#vcc`。然后等待包导入，或者如果您关闭了自动刷新，按 Ctrl+R 刷新。
-    - 再次点击 + 按钮并添加此 git url：`https://github.com/vrchat/packages.git?path=/packages/com.vrchat.worlds#vcc`
-    - 最后再点一次 + 按钮并添加此 url：`https://github.com/vrchat-community/ClientSim.git?path=/ClientSim_UnityProject/Packages/com.vrchat.ClientSim#issue-12-make-docs`
+  - 输入 `https://github.com/vrchat/packages.git?path=/packages/com.vrchat.base#vcc`。然后等待包导入，或者如果您关闭了自动刷新，按 Ctrl+R 刷新。
+  - 再次点击 + 按钮并添加此 git url：`https://github.com/vrchat/packages.git?path=/packages/com.vrchat.worlds#vcc`
+  - 最后再点一次 + 按钮并添加此 url：`https://github.com/vrchat-community/ClientSim.git?path=/ClientSim_UnityProject/Packages/com.vrchat.ClientSim#issue-12-make-docs`
 
 ### 入门
 
@@ -38,10 +38,10 @@ VRChat 客户端模拟器，简称 ClientSim，是一个工具，使您能够直
 - 在 Unity 中按下播放按钮
 - 测试您的世界
 
-
 ## 在[系统](./systems/)部分了解所有系统的工作方式
 
 ### ClientSim 相比于 CyanEmu 的新特性
+
 - 通过 I、J、K、L、U、O、鼠标滚动和游戏手柄进行 Pickup 操作。
 - 输入基于键盘布局而不是特定键。
 - 本地和远程玩家现在都有类人形的模型，支持模型骨骼 (但不包括完整的 Avatar 系统)。

@@ -14,7 +14,6 @@ Similar to the [EventDispatcher](event-dispatcher.md), the InputManager also has
 
 The Input System also allows for different bindings for various control schemes. See below for the included bindings: KeyboardMouse, Gamepad, and Experimental XR Controller bindings. Note that XR input bindings within the InputSystem are very limited in Unity 2019. The InputManager will need to be expanded to properly support various VR Controllers
 
-
 ## UdonInput
 
 The UdonInput system is part of the InputManager Prefab, which subscribes to the proper events in the InputManager and also polls for updates on movement and look-based inputs. Due to the timing of when Unity sends input events, and when Udon should receive input events, all button-based input is queued and processed later in the frame at the same time as movement and look-based input. This queuing and processing allows input events to happen after Udon’s update method is called, similar to how it is in VRChat.

@@ -37,7 +37,7 @@ JSON is a small, simple, and strict specification. DataLists and DataDictionarie
 
 `VRCJson.TryDeserializeFromJson` is the function you should use when you want to go from Json to Data containers. It is recommended to use it as the condition for an `if` or `branch` so that you can choose what happens if it fails and what happens if it succeeds.
 
-If TryDeserializeFromJson returns true, then that means it has successfully turned your Json string into a DataList or DataDictionary. You should then do a type check on the result to determine what happens for each case. 
+If TryDeserializeFromJson returns true, then that means it has successfully turned your Json string into a DataList or DataDictionary. You should then do a type check on the result to determine what happens for each case.
 
 If this returns false, then the string you provided was not valid JSON. The DataToken you are given will be a DataError, and if you run DataToken.ToString on it, it will give you both the error and a string explaining more details about exactly what went wrong.
 

@@ -7,6 +7,7 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 Creates portals to other VRChat worlds.
 There are two main ways to use this component:
+
 1. Link to a public instance: Set the Room Id property to a specific world, and the portal will lead to an existing or new public instance of that world.
 2. Link to a somewhat-random world via search: Set the `Search Term`, `Sort Heading`, `Sort Order` and optionally the `Offset` to perform a search for worlds, and the portal will lead to the world at the specified offset in the search results. **Do NOT set the Room Id property if you want to use this method.**
 

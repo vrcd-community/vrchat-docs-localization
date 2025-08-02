@@ -5,32 +5,42 @@ upstreamCommit: 75cd9a85ccd1537326752c8cac33938b93fe9147
 # 包
 
 ## 概述
+
 VPM (VRChat 包管理器) 使用与 [Unity 包管理器](https://docs.unity3d.com/2019.4/Documentation/Manual/Packages.html)兼容的格式，以便更轻松地安装、更新和管理您用于制作 VRChat 内容的资产、工具和预制件。
 
 ## 包类型
+
 包可以来自各种来源，并一起管理。
+
 ### 官方包
+
 有三种官方包：
-* VRChat 基础
-  * 包括世界和模型 SDK 都需要的文件，如控制面板。
-* VRChat 世界
-  * 包括创建 VRChat 交互世界所需的所有文件，以前被称为 SDK3。
-* VRChat 模型
-  * 包括创建 VRChat 自定义模型所需的所有文件，以前被称为 SDK3A 或 Avatars 3.0。
+
+- VRChat 基础
+  - 包括世界和模型 SDK 都需要的文件，如控制面板。
+- VRChat 世界
+  - 包括创建 VRChat 交互世界所需的所有文件，以前被称为 SDK3。
+- VRChat 模型
+  - 包括创建 VRChat 自定义模型所需的所有文件，以前被称为 SDK3A 或 Avatars 3.0。
 
 ### 精选包
+
 这些包已经过 VRChat 的审查，被认为特别有用且相对安全。我们正在建立一个提交过程，以便您的包被审查并包含在内，目前是邀请制。
 
 ### 社区包
+
 我们将引入一种托管和分发社区包列表的方法。我们将包括可以分发的包的类型指南，以及提交您自己的社区列表的方式。它们并不能保证可用或安全。
 
 ### 用户包
+
 您可以创建自己的 VPM 兼容包库，用于您的项目。它们的可用性和安全性取决于您如何制作它们！这个功能在开发包时也很有帮助 - 将它从之前的预制件或。unitypackage 文件转变为可以通过 Creator Companion 分发的新格式。您可以使用这些包在发布前测试您的包的结构和清单。要添加用户包，导航到 ‘设置’ 屏幕，按下 ‘用户包’ 下的 ‘添加’ 按钮，并选择包含一个或多个包的文件夹。如果它们有效，它们将被添加到此处的列表和您向项目添加和删除包的屏幕上。
 
 这里有一个极其简单的包，您可以用作示例。将其解压到某个地方，然后您可以将其添加到您的 VCC：[com.mmmlabs.utilities.zip](https://github.com/vrchat/packages/releases/download/3.0.3/com.mmmlabs.utilities.zip)
 
 ### 预发布包
+
 如果您想测试 SDK 和包的最新版本，您可以选择在 VCC 中显示预发布版本。要做到这一点：
+
 1. 打开设置屏幕。
 2. 切换到 “Packages” 标签。
 3. 向下滚动到 “Pre-Release Packages” 标题，并勾选 “Show Pre-Release Packages” 旁边的框。
@@ -40,11 +50,13 @@ VPM (VRChat 包管理器) 使用与 [Unity 包管理器](https://docs.unity3d.co
 现在，您将能够在每个有 beta 版本的包的下拉菜单中看到它们。
 
 ## 包格式
+
 VPM 格式遵循 Unity 包格式，并进行了一些添加。我们建议您首先阅读关于[自定义包](https://docs.unity3d.com/2019.4/Documentation/Manual/CustomPackages.html)的官方文档，以熟悉这些内容。
 
 我们使用相同的必需[包清单](https://docs.unity3d.com/2019.4/Documentation/Manual/upm-manifestPkg.html)文件，但有一些重要的区别：
 
 ### VPM 包清单
+
 VPM 包清单与常规 Unity 清单有一些区别：
 
 1. `vpmDependencies` 属性列出了您的项目所需的基于 vpm 的依赖项。
@@ -98,6 +110,7 @@ VPM 包清单与常规 Unity 清单有一些区别：
 我们**强烈建议**在包清单中列出您的包的 `license`。如果您的项目中没有 LICENSE 文件，Unity 将需要这个字段，但即使您有 LICENSE 文件，我们也建议指定它。这个字段可能会在未来的 VCC 界面中显示。许可证应使用 [SPDX 格式](https://spdx.org/licenses/)。
 
 ### 版本和范围
+
 我们通过支持包的依赖项的依赖项，并将依赖项版本视为范围，改进了 Unity 包管理器提供的功能。我们使用 [SemanticVersioning](https://github.com/adamreeve/semver.net) 库来实现这一点，该库支持 [SemVer 2.0](https://semver.org/) 和[各种范围指定符](https://github.com/adamreeve/semver.net#ranges)。
 
 例如，我们在许多官方模板和 VRC SDK 包中使用 “^3.1.x” 格式。这种格式旨在匹配 3.1.0 之后的任何版本，但它限制了主版本号的更改。这是因为主版本号的更改表示可能与以前版本不兼容的重大更改。例如，如果一个包的版本为 3.5.2，它将匹配 “^3.1.x” 格式，而版本 4.1.0 则不会。

@@ -15,6 +15,7 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 这是当下创建一个项目最简单的方式，强烈推荐使用！不这样做则会让您在之后走更多的步骤，您的项目也可能会更加容易出错。
 
 ## 您的第一个项目
+
 针对第一个项目，我们预先假设您正在构建一个 Windows PC 内容。
 
 1. 点击[这里](https://vrchat.com/download/vcc)下载创作者助手
@@ -62,12 +63,13 @@ upstreamCommit: 053312380ab2e21888643212200e14eedbedcff9
 
 在 Unity Hub 中创建项目：
 <!-- 这里原文是 or just the editor, if you chose to go that route 没太看懂，that route 指的是什么？-->
-* 打开 Unity Hub (或者直接启动 Unity Editor)。
-* 创建一个新项目，**选择 3D 模板，然后保存它**。
-* 不要使用 HDRP 或 URP，VRChat 不使用它们。
+- 打开 Unity Hub (或者直接启动 Unity Editor)。
+- 创建一个新项目，**选择 3D 模板，然后保存它**。
+- 不要使用 HDRP 或 URP，VRChat 不使用它们。
 
 使用 Unity Hub 打开项目：
-* 点击右上角的 **Open** 按钮，然后选择您的项目文件夹。
+
+- 点击右上角的 **Open** 按钮，然后选择您的项目文件夹。
 
 ## 小贴士
 
